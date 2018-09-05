@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "D",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3604.jsonld#94483",
-              "@type": "tree:Node",
-              "token_string": "orlik"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3604.jsonld#94484",
-              "@type": "tree:Node",
-              "token_string": "reveken"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "orlik": [
+          "3604",
+          "94483"
+        ],
+        "reveken": [
+          "3604",
+          "94484"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment291.jsonld#5898",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Het Dorlik",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.544438387254295",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.430101335977376"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.121824262573275",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.212965484008954"
         },
         {
           "http://example.com/terms#name": "Het Dreveken",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.204258520826206",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.13757548076258"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.284154041785536",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.77810302725575"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3604.jsonld#94483"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3604.jsonld#94484"
+          ]
+        }
+      ]
     },
     {
       "token_string": "orlik",
       "triples": [
         {
           "http://example.com/terms#name": "Het Dorlik",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.544438387254295",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.430101335977376"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.121824262573275",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.212965484008954"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3604.jsonld#94482",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Het Dorlik",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.544438387254295",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.430101335977376"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.121824262573275",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.212965484008954"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Het Dorlik"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "reveken",
       "triples": [
         {
           "http://example.com/terms#name": "Het Dreveken",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.204258520826206",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.13757548076258"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.284154041785536",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.77810302725575"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3604.jsonld#94482",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Het Dreveken",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.204258520826206",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.13757548076258"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.284154041785536",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.77810302725575"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Het Dreveken"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

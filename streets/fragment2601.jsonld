@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "r",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2601.jsonld#68152",
-              "@type": "tree:Node",
-              "token_string": "ijk"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2601.jsonld#68153",
-              "@type": "tree:Node",
-              "token_string": "oos"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "ijk": [
+          "2601",
+          "68152"
+        ],
+        "oos": [
+          "2601",
+          "68153"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment445.jsonld#3882",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Veldrijk",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8452737735326656",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.83592780014845"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.661372630031624",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.86278684056913"
         },
         {
           "http://example.com/terms#name": "Veldroos",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.689917030655174",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.46969292454062"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7307575416181447",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.76788705212417"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2601.jsonld#68152"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2601.jsonld#68153"
+          ]
+        }
+      ]
     },
     {
       "token_string": "ijk",
       "triples": [
         {
           "http://example.com/terms#name": "Veldrijk",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8452737735326656",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.83592780014845"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.661372630031624",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.86278684056913"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2601.jsonld#68151",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Veldrijk",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8452737735326656",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.83592780014845"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.661372630031624",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.86278684056913"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Veldrijk"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "oos",
       "triples": [
         {
           "http://example.com/terms#name": "Veldroos",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.689917030655174",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.46969292454062"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7307575416181447",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.76788705212417"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2601.jsonld#68151",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Veldroos",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.689917030655174",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.46969292454062"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7307575416181447",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.76788705212417"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Veldroos"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

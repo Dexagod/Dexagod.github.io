@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "f",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4996.jsonld#158154",
-              "@type": "tree:Node",
-              "token_string": "kensweg"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4996.jsonld#158155",
-              "@type": "tree:Node",
-              "token_string": "oy"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4996.jsonld#181038",
-              "@type": "tree:Node",
-              "token_string": "ft"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "kensweg": [
+          "4996",
+          "158154"
+        ],
+        "oy": [
+          "4996",
+          "158155"
+        ],
+        "ft": [
+          "4996",
+          "181038"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment579.jsonld#12917",
         "@type": "tree:Node"
@@ -62,18 +44,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Trifkensweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3058781181866403",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.29912519843643"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8467361980512607",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.34541519717766"
         },
         {
           "http://example.com/terms#name": "Trifoy",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.563932632456962",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.99519983672358"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9155120794313536",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.228563698976664"
         },
         {
           "http://example.com/terms#name": "Trifft",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.962743017216233",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.37575922829894"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.269011322858938",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.35585683666405"
         }
       ],
       "total_children_count": 3,
@@ -99,17 +81,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4996.jsonld#158154"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4996.jsonld#158155"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4996.jsonld#181038"
+          ]
+        }
+      ]
     },
     {
       "token_string": "kensweg",
       "triples": [
         {
           "http://example.com/terms#name": "Trifkensweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3058781181866403",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.29912519843643"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8467361980512607",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.34541519717766"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4996.jsonld#158153",
         "@type": "tree:Node"
@@ -117,8 +120,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Trifkensweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3058781181866403",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.29912519843643"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8467361980512607",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.34541519717766"
         }
       ],
       "total_children_count": 0,
@@ -134,17 +137,19 @@
       ],
       "triples_metadata": [
         "Trifkensweg"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "oy",
       "triples": [
         {
           "http://example.com/terms#name": "Trifoy",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.563932632456962",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.99519983672358"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9155120794313536",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.228563698976664"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4996.jsonld#158153",
         "@type": "tree:Node"
@@ -152,8 +157,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Trifoy",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.563932632456962",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.99519983672358"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9155120794313536",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.228563698976664"
         }
       ],
       "total_children_count": 0,
@@ -169,17 +174,19 @@
       ],
       "triples_metadata": [
         "Trifoy"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "ft",
       "triples": [
         {
           "http://example.com/terms#name": "Trifft",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.962743017216233",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.37575922829894"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.269011322858938",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.35585683666405"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4996.jsonld#158153",
         "@type": "tree:Node"
@@ -187,8 +194,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Trifft",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.962743017216233",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.37575922829894"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.269011322858938",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.35585683666405"
         }
       ],
       "total_children_count": 0,
@@ -204,7 +211,8 @@
       ],
       "triples_metadata": [
         "Trifft"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

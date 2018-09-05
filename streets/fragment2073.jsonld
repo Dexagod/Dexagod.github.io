@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "B",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2073.jsonld#33059",
-              "@type": "tree:Node",
-              "token_string": "ertiliastraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2073.jsonld#33060",
-              "@type": "tree:Node",
-              "token_string": "arbarastraat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "ertiliastraat": [
+          "2073",
+          "33059"
+        ],
+        "arbarastraat": [
+          "2073",
+          "33060"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment34.jsonld#254",
         "@type": "tree:Node"
@@ -52,28 +40,28 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "StBertiliastraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.536182799591213",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.284338252738614"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.963426231772714",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.263103387213725"
         },
         {
           "http://example.com/terms#name": "StBarbarastraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0586473989346916",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.728593896486096"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.93825988228198",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.164344264841525"
         },
         {
           "http://example.com/terms#name": "StBarbarastraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.68617098170227",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.487911630315494"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2092356949690433",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.59172717071053"
         },
         {
           "http://example.com/terms#name": "StBarbarastraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.68617098170227",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.487911630315494"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2092356949690433",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.59172717071053"
         },
         {
           "http://example.com/terms#name": "StBarbarastraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.68617098170227",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.487911630315494"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2092356949690433",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.59172717071053"
         }
       ],
       "total_children_count": 2,
@@ -96,17 +84,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2073.jsonld#33059"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2073.jsonld#33060"
+          ]
+        }
+      ]
     },
     {
       "token_string": "ertiliastraat",
       "triples": [
         {
           "http://example.com/terms#name": "StBertiliastraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.536182799591213",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.284338252738614"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.963426231772714",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.263103387213725"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2073.jsonld#33058",
         "@type": "tree:Node"
@@ -114,8 +117,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "StBertiliastraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.536182799591213",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.284338252738614"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.963426231772714",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.263103387213725"
         }
       ],
       "total_children_count": 0,
@@ -131,32 +134,34 @@
       ],
       "triples_metadata": [
         "StBertiliastraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "arbarastraat",
       "triples": [
         {
           "http://example.com/terms#name": "StBarbarastraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0586473989346916",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.728593896486096"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.93825988228198",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.164344264841525"
         },
         {
           "http://example.com/terms#name": "StBarbarastraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.68617098170227",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.487911630315494"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2092356949690433",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.59172717071053"
         },
         {
           "http://example.com/terms#name": "StBarbarastraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.68617098170227",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.487911630315494"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2092356949690433",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.59172717071053"
         },
         {
           "http://example.com/terms#name": "StBarbarastraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.68617098170227",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.487911630315494"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2092356949690433",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.59172717071053"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2073.jsonld#33058",
         "@type": "tree:Node"
@@ -164,23 +169,23 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "StBarbarastraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0586473989346916",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.728593896486096"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.93825988228198",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.164344264841525"
         },
         {
           "http://example.com/terms#name": "StBarbarastraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.68617098170227",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.487911630315494"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2092356949690433",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.59172717071053"
         },
         {
           "http://example.com/terms#name": "StBarbarastraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.68617098170227",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.487911630315494"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2092356949690433",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.59172717071053"
         },
         {
           "http://example.com/terms#name": "StBarbarastraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.68617098170227",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.487911630315494"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2092356949690433",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.59172717071053"
         }
       ],
       "total_children_count": 0,
@@ -202,7 +207,8 @@
         "StBarbarastraat",
         "StBarbarastraat",
         "StBarbarastraat"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

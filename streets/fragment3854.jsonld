@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "-",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3854.jsonld#108984",
-              "@type": "tree:Node",
-              "token_string": "Gendarme"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3854.jsonld#108985",
-              "@type": "tree:Node",
-              "token_string": "Malgras"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3854.jsonld#171857",
-              "@type": "tree:Node",
-              "token_string": "B"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "Gendarme": [
+          "3854",
+          "108984"
+        ],
+        "Malgras": [
+          "3854",
+          "108985"
+        ],
+        "B": [
+          "3854",
+          "171857"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment3965.jsonld#108979",
         "@type": "tree:Node"
@@ -62,23 +44,23 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Chemin du Petit-Baulers",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0371391477304743",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.79802631789707"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.391295520776915",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.746789307185466"
         },
         {
           "http://example.com/terms#name": "Chemin du Petit-Gendarme",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2782094249276157",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.28976763852963"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6531639522288857",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.80987978332265"
         },
         {
           "http://example.com/terms#name": "Chemin du Petit-Malgras",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.697776804015599",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.66483162139979"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.518666193427589",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.21821913872733"
         },
         {
           "http://example.com/terms#name": "Chemin du Petit-Bois",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.255503601651935",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.7467372505953"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.151996161135686",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.282090181252535"
         }
       ],
       "total_children_count": 5,
@@ -110,17 +92,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3854.jsonld#108984"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3854.jsonld#108985"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3854.jsonld#171857"
+          ]
+        }
+      ]
     },
     {
       "token_string": "Gendarme",
       "triples": [
         {
           "http://example.com/terms#name": "Chemin du Petit-Gendarme",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2782094249276157",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.28976763852963"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6531639522288857",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.80987978332265"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3854.jsonld#108982",
         "@type": "tree:Node"
@@ -128,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Chemin du Petit-Gendarme",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2782094249276157",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.28976763852963"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6531639522288857",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.80987978332265"
         }
       ],
       "total_children_count": 0,
@@ -145,17 +148,19 @@
       ],
       "triples_metadata": [
         "Chemin du Petit-Gendarme"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "Malgras",
       "triples": [
         {
           "http://example.com/terms#name": "Chemin du Petit-Malgras",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.697776804015599",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.66483162139979"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.518666193427589",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.21821913872733"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3854.jsonld#108982",
         "@type": "tree:Node"
@@ -163,8 +168,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Chemin du Petit-Malgras",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.697776804015599",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.66483162139979"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.518666193427589",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.21821913872733"
         }
       ],
       "total_children_count": 0,
@@ -180,33 +185,22 @@
       ],
       "triples_metadata": [
         "Chemin du Petit-Malgras"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "B",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3854.jsonld#171858",
-              "@type": "tree:Node",
-              "token_string": "aulers"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3854.jsonld#171859",
-              "@type": "tree:Node",
-              "token_string": "ois"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "aulers": [
+          "3854",
+          "171858"
+        ],
+        "ois": [
+          "3854",
+          "171859"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment3854.jsonld#108982",
         "@type": "tree:Node"
@@ -214,13 +208,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Chemin du Petit-Baulers",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0371391477304743",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.79802631789707"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.391295520776915",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.746789307185466"
         },
         {
           "http://example.com/terms#name": "Chemin du Petit-Bois",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.255503601651935",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.7467372505953"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.151996161135686",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.282090181252535"
         }
       ],
       "total_children_count": 2,
@@ -240,17 +234,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3854.jsonld#171858"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3854.jsonld#171859"
+          ]
+        }
+      ]
     },
     {
       "token_string": "aulers",
       "triples": [
         {
           "http://example.com/terms#name": "Chemin du Petit-Baulers",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0371391477304743",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.79802631789707"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.391295520776915",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.746789307185466"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3854.jsonld#171857",
         "@type": "tree:Node"
@@ -258,8 +267,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Chemin du Petit-Baulers",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0371391477304743",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.79802631789707"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.391295520776915",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.746789307185466"
         }
       ],
       "total_children_count": 0,
@@ -275,17 +284,19 @@
       ],
       "triples_metadata": [
         "Chemin du Petit-Baulers"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "ois",
       "triples": [
         {
           "http://example.com/terms#name": "Chemin du Petit-Bois",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.255503601651935",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.7467372505953"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.151996161135686",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.282090181252535"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3854.jsonld#171857",
         "@type": "tree:Node"
@@ -293,8 +304,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Chemin du Petit-Bois",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.255503601651935",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.7467372505953"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.151996161135686",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.282090181252535"
         }
       ],
       "total_children_count": 0,
@@ -310,7 +321,8 @@
       ],
       "triples_metadata": [
         "Chemin du Petit-Bois"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

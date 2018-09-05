@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "s",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5926.jsonld#145125",
-              "@type": "tree:Node",
-              "token_string": "-Fanchon"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5926.jsonld#145126",
-              "@type": "tree:Node",
-              "token_string": "sin"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "-Fanchon": [
+          "5926",
+          "145125"
+        ],
+        "sin": [
+          "5926",
+          "145126"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4487.jsonld#108280",
         "@type": "tree:Node"
@@ -52,28 +40,28 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Dos-Fanchon",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6442782244667558",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.70797456102047"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2942267096096374",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.533597036455774"
         },
         {
           "http://example.com/terms#name": "Rue Dossin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6376605151003645",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.376957067501365"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.420491855209614",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.59781557502846"
         },
         {
           "http://example.com/terms#name": "Rue Dossin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6889227028641782",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.66139078880965"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8040766586559895",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.537606055679504"
         },
         {
           "http://example.com/terms#name": "Rue Dossin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6889227028641782",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.66139078880965"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8040766586559895",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.537606055679504"
         },
         {
           "http://example.com/terms#name": "Rue Dossin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6889227028641782",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.66139078880965"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8040766586559895",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.537606055679504"
         }
       ],
       "total_children_count": 2,
@@ -96,17 +84,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5926.jsonld#145125"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5926.jsonld#145126"
+          ]
+        }
+      ]
     },
     {
       "token_string": "-Fanchon",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Dos-Fanchon",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6442782244667558",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.70797456102047"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2942267096096374",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.533597036455774"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5926.jsonld#145124",
         "@type": "tree:Node"
@@ -114,8 +117,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Dos-Fanchon",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6442782244667558",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.70797456102047"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2942267096096374",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.533597036455774"
         }
       ],
       "total_children_count": 0,
@@ -131,32 +134,34 @@
       ],
       "triples_metadata": [
         "Rue Dos-Fanchon"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "sin",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Dossin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6376605151003645",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.376957067501365"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.420491855209614",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.59781557502846"
         },
         {
           "http://example.com/terms#name": "Rue Dossin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6889227028641782",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.66139078880965"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8040766586559895",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.537606055679504"
         },
         {
           "http://example.com/terms#name": "Rue Dossin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6889227028641782",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.66139078880965"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8040766586559895",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.537606055679504"
         },
         {
           "http://example.com/terms#name": "Rue Dossin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6889227028641782",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.66139078880965"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8040766586559895",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.537606055679504"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5926.jsonld#145124",
         "@type": "tree:Node"
@@ -164,23 +169,23 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Dossin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6376605151003645",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.376957067501365"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.420491855209614",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.59781557502846"
         },
         {
           "http://example.com/terms#name": "Rue Dossin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6889227028641782",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.66139078880965"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8040766586559895",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.537606055679504"
         },
         {
           "http://example.com/terms#name": "Rue Dossin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6889227028641782",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.66139078880965"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8040766586559895",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.537606055679504"
         },
         {
           "http://example.com/terms#name": "Rue Dossin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6889227028641782",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.66139078880965"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8040766586559895",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.537606055679504"
         }
       ],
       "total_children_count": 0,
@@ -202,7 +207,8 @@
         "Rue Dossin",
         "Rue Dossin",
         "Rue Dossin"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

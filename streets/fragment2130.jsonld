@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "f",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2130.jsonld#40493",
-              "@type": "tree:Node",
-              "token_string": "fen"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2130.jsonld#40494",
-              "@type": "tree:Node",
-              "token_string": "stichelstraat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "fen": [
+          "2130",
+          "40493"
+        ],
+        "stichelstraat": [
+          "2130",
+          "40494"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment474.jsonld#451",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Doffen",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.189303650769446",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.800528245581496"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.452287708105466",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.365840301733336"
         },
         {
           "http://example.com/terms#name": "Dofstichelstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5286402117925197",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.27670994846349"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1803961576731314",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.264767034369804"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2130.jsonld#40493"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2130.jsonld#40494"
+          ]
+        }
+      ]
     },
     {
       "token_string": "fen",
       "triples": [
         {
           "http://example.com/terms#name": "Doffen",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.189303650769446",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.800528245581496"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.452287708105466",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.365840301733336"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2130.jsonld#40492",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Doffen",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.189303650769446",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.800528245581496"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.452287708105466",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.365840301733336"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Doffen"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "stichelstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Dofstichelstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5286402117925197",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.27670994846349"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1803961576731314",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.264767034369804"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2130.jsonld#40492",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Dofstichelstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5286402117925197",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.27670994846349"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1803961576731314",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.264767034369804"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Dofstichelstraat"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

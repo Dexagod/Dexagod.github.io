@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "t",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3070.jsonld#92389",
-              "@type": "tree:Node",
-              "token_string": "moldlaan"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3070.jsonld#92390",
-              "@type": "tree:Node",
-              "token_string": "hystraat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "moldlaan": [
+          "3070",
+          "92389"
+        ],
+        "hystraat": [
+          "3070",
+          "92390"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment51.jsonld#198",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Detmoldlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.291825134138988",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.963110882398375"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4553577965711995",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.51884054612529"
         },
         {
           "http://example.com/terms#name": "Dethystraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9264840467142212",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.448637468172166"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8692708269902694",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.53053194579739"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3070.jsonld#92389"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3070.jsonld#92390"
+          ]
+        }
+      ]
     },
     {
       "token_string": "moldlaan",
       "triples": [
         {
           "http://example.com/terms#name": "Detmoldlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.291825134138988",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.963110882398375"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4553577965711995",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.51884054612529"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3070.jsonld#92388",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Detmoldlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.291825134138988",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.963110882398375"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4553577965711995",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.51884054612529"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Detmoldlaan"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "hystraat",
       "triples": [
         {
           "http://example.com/terms#name": "Dethystraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9264840467142212",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.448637468172166"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8692708269902694",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.53053194579739"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3070.jsonld#92388",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Dethystraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9264840467142212",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.448637468172166"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8692708269902694",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.53053194579739"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Dethystraat"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

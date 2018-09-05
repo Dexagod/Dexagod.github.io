@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "e",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3664.jsonld#93066",
-              "@type": "tree:Node",
-              "token_string": "mmensstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3664.jsonld#93067",
-              "@type": "tree:Node",
-              "token_string": "fèvrestraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3664.jsonld#103019",
-              "@type": "tree:Node",
-              "token_string": "naersdreef"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "mmensstraat": [
+          "3664",
+          "93066"
+        ],
+        "fèvrestraat": [
+          "3664",
+          "93067"
+        ],
+        "naersdreef": [
+          "3664",
+          "103019"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment405.jsonld#30185",
         "@type": "tree:Node"
@@ -62,18 +44,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Victor Lemmensstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9867818716007415",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.71220519366565"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.892961423245335",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.49139324900662"
         },
         {
           "http://example.com/terms#name": "Victor Lefèvrestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5206424810307024",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.71318261976757"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.997923477222423",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.60255630856355"
         },
         {
           "http://example.com/terms#name": "Victor Lenaersdreef",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0274296235254092",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.18408444214998"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.879696747303194",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.062958234242565"
         }
       ],
       "total_children_count": 3,
@@ -99,17 +81,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3664.jsonld#93066"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3664.jsonld#93067"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3664.jsonld#103019"
+          ]
+        }
+      ]
     },
     {
       "token_string": "mmensstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Victor Lemmensstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9867818716007415",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.71220519366565"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.892961423245335",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.49139324900662"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3664.jsonld#93065",
         "@type": "tree:Node"
@@ -117,8 +120,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Victor Lemmensstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9867818716007415",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.71220519366565"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.892961423245335",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.49139324900662"
         }
       ],
       "total_children_count": 0,
@@ -134,17 +137,19 @@
       ],
       "triples_metadata": [
         "Victor Lemmensstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "fèvrestraat",
       "triples": [
         {
           "http://example.com/terms#name": "Victor Lefèvrestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5206424810307024",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.71318261976757"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.997923477222423",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.60255630856355"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3664.jsonld#93065",
         "@type": "tree:Node"
@@ -152,8 +157,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Victor Lefèvrestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5206424810307024",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.71318261976757"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.997923477222423",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.60255630856355"
         }
       ],
       "total_children_count": 0,
@@ -169,17 +174,19 @@
       ],
       "triples_metadata": [
         "Victor Lefèvrestraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "naersdreef",
       "triples": [
         {
           "http://example.com/terms#name": "Victor Lenaersdreef",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0274296235254092",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.18408444214998"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.879696747303194",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.062958234242565"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3664.jsonld#93065",
         "@type": "tree:Node"
@@ -187,8 +194,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Victor Lenaersdreef",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0274296235254092",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.18408444214998"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.879696747303194",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.062958234242565"
         }
       ],
       "total_children_count": 0,
@@ -204,7 +211,8 @@
       ],
       "triples_metadata": [
         "Victor Lenaersdreef"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

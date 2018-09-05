@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "jes",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2665.jsonld#98343",
-              "@type": "tree:Node",
-              "token_string": "pad"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2665.jsonld#98344",
-              "@type": "tree:Node",
-              "token_string": "straat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "pad": [
+          "2665",
+          "98343"
+        ],
+        "straat": [
+          "2665",
+          "98344"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment260.jsonld#624",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Kruisjespad",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.57277528780935",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.377081569057445"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4776132627698932",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.28161276159863"
         },
         {
           "http://example.com/terms#name": "Kruisjesstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.145193728282874",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.82430594720301"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.179388109147047",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.79382258404797"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2665.jsonld#98343"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2665.jsonld#98344"
+          ]
+        }
+      ]
     },
     {
       "token_string": "pad",
       "triples": [
         {
           "http://example.com/terms#name": "Kruisjespad",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.57277528780935",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.377081569057445"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4776132627698932",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.28161276159863"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2665.jsonld#98342",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Kruisjespad",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.57277528780935",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.377081569057445"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4776132627698932",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.28161276159863"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Kruisjespad"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "straat",
       "triples": [
         {
           "http://example.com/terms#name": "Kruisjesstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.145193728282874",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.82430594720301"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.179388109147047",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.79382258404797"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2665.jsonld#98342",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Kruisjesstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.145193728282874",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.82430594720301"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.179388109147047",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.79382258404797"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Kruisjesstraat"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

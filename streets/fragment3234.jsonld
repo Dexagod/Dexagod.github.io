@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "d",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3234.jsonld#49235",
-              "@type": "tree:Node",
-              "token_string": "orpstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3234.jsonld#49236",
-              "@type": "tree:Node",
-              "token_string": "ekampstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3234.jsonld#63504",
-              "@type": "tree:Node",
-              "token_string": "am"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "orpstraat": [
+          "3234",
+          "49235"
+        ],
+        "ekampstraat": [
+          "3234",
+          "49236"
+        ],
+        "am": [
+          "3234",
+          "63504"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment87.jsonld#659",
         "@type": "tree:Node"
@@ -62,18 +44,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Opdorpstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.922757868349407",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.12698658165192"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1413403172415",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.73424727327361"
         },
         {
           "http://example.com/terms#name": "Opdekampstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.011495867164262",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.40956980965578"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4219591329362142",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.19713533931356"
         },
         {
           "http://example.com/terms#name": "Opdam",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2846751826749943",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.19820983582706"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2179250023335415",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.08252947136343"
         }
       ],
       "total_children_count": 3,
@@ -99,17 +81,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3234.jsonld#49235"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3234.jsonld#49236"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3234.jsonld#63504"
+          ]
+        }
+      ]
     },
     {
       "token_string": "orpstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Opdorpstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.922757868349407",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.12698658165192"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1413403172415",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.73424727327361"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3234.jsonld#49234",
         "@type": "tree:Node"
@@ -117,8 +120,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Opdorpstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.922757868349407",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.12698658165192"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1413403172415",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.73424727327361"
         }
       ],
       "total_children_count": 0,
@@ -134,17 +137,19 @@
       ],
       "triples_metadata": [
         "Opdorpstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "ekampstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Opdekampstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.011495867164262",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.40956980965578"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4219591329362142",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.19713533931356"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3234.jsonld#49234",
         "@type": "tree:Node"
@@ -152,8 +157,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Opdekampstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.011495867164262",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.40956980965578"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4219591329362142",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.19713533931356"
         }
       ],
       "total_children_count": 0,
@@ -169,17 +174,19 @@
       ],
       "triples_metadata": [
         "Opdekampstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "am",
       "triples": [
         {
           "http://example.com/terms#name": "Opdam",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2846751826749943",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.19820983582706"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2179250023335415",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.08252947136343"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3234.jsonld#49234",
         "@type": "tree:Node"
@@ -187,8 +194,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Opdam",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2846751826749943",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.19820983582706"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2179250023335415",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.08252947136343"
         }
       ],
       "total_children_count": 0,
@@ -204,7 +211,8 @@
       ],
       "triples_metadata": [
         "Opdam"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

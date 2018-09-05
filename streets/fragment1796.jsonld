@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "er",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1796.jsonld#41675",
-              "@type": "tree:Node",
-              "token_string": "kiezel"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1796.jsonld#41676",
-              "@type": "tree:Node",
-              "token_string": "straat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1796.jsonld#52274",
-              "@type": "tree:Node",
-              "token_string": "weg"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "kiezel": [
+          "1796",
+          "41675"
+        ],
+        "straat": [
+          "1796",
+          "41676"
+        ],
+        "weg": [
+          "1796",
+          "52274"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4465.jsonld#75592",
         "@type": "tree:Node"
@@ -62,18 +44,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Bocholterkiezel",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0770301011665335",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.665511990857745"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0966872432822723",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.58191097390589"
         },
         {
           "http://example.com/terms#name": "Bocholterstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4587443981900616",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.96887405761599"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0488284708168223",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.49045819654993"
         },
         {
           "http://example.com/terms#name": "Bocholterweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.336392749631877",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.92122365498878"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.32586575488437",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.89101332376025"
         }
       ],
       "total_children_count": 3,
@@ -99,17 +81,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1796.jsonld#41675"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1796.jsonld#41676"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1796.jsonld#52274"
+          ]
+        }
+      ]
     },
     {
       "token_string": "kiezel",
       "triples": [
         {
           "http://example.com/terms#name": "Bocholterkiezel",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0770301011665335",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.665511990857745"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0966872432822723",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.58191097390589"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1796.jsonld#41674",
         "@type": "tree:Node"
@@ -117,8 +120,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Bocholterkiezel",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0770301011665335",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.665511990857745"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0966872432822723",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.58191097390589"
         }
       ],
       "total_children_count": 0,
@@ -134,17 +137,19 @@
       ],
       "triples_metadata": [
         "Bocholterkiezel"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "straat",
       "triples": [
         {
           "http://example.com/terms#name": "Bocholterstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4587443981900616",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.96887405761599"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0488284708168223",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.49045819654993"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1796.jsonld#41674",
         "@type": "tree:Node"
@@ -152,8 +157,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Bocholterstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4587443981900616",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.96887405761599"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0488284708168223",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.49045819654993"
         }
       ],
       "total_children_count": 0,
@@ -169,17 +174,19 @@
       ],
       "triples_metadata": [
         "Bocholterstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "weg",
       "triples": [
         {
           "http://example.com/terms#name": "Bocholterweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.336392749631877",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.92122365498878"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.32586575488437",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.89101332376025"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1796.jsonld#41674",
         "@type": "tree:Node"
@@ -187,8 +194,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Bocholterweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.336392749631877",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.92122365498878"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.32586575488437",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.89101332376025"
         }
       ],
       "total_children_count": 0,
@@ -204,7 +211,8 @@
       ],
       "triples_metadata": [
         "Bocholterweg"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

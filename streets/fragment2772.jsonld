@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "B",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2772.jsonld#30627",
-              "@type": "tree:Node",
-              "token_string": "aarle"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2772.jsonld#30628",
-              "@type": "tree:Node",
-              "token_string": "orgloon"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2772.jsonld#79042",
-              "@type": "tree:Node",
-              "token_string": "uda"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "aarle": [
+          "2772",
+          "30627"
+        ],
+        "orgloon": [
+          "2772",
+          "30628"
+        ],
+        "uda": [
+          "2772",
+          "79042"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment717.jsonld#376",
         "@type": "tree:Node"
@@ -62,18 +44,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Steenweg Baarle",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8749254873249215",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.88443182690327"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.979849271841157",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.1420127920848"
         },
         {
           "http://example.com/terms#name": "Steenweg Borgloon",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.695968075348852",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.273319152470016"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3035983052312803",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.68680109546829"
         },
         {
           "http://example.com/terms#name": "Steenweg Buda",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7890816522726087",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.761460203393675"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4727514956532057",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.56886462570477"
         }
       ],
       "total_children_count": 3,
@@ -99,17 +81,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2772.jsonld#30627"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2772.jsonld#30628"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2772.jsonld#79042"
+          ]
+        }
+      ]
     },
     {
       "token_string": "aarle",
       "triples": [
         {
           "http://example.com/terms#name": "Steenweg Baarle",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8749254873249215",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.88443182690327"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.979849271841157",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.1420127920848"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2772.jsonld#30626",
         "@type": "tree:Node"
@@ -117,8 +120,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Steenweg Baarle",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8749254873249215",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.88443182690327"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.979849271841157",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.1420127920848"
         }
       ],
       "total_children_count": 0,
@@ -134,17 +137,19 @@
       ],
       "triples_metadata": [
         "Steenweg Baarle"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "orgloon",
       "triples": [
         {
           "http://example.com/terms#name": "Steenweg Borgloon",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.695968075348852",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.273319152470016"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3035983052312803",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.68680109546829"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2772.jsonld#30626",
         "@type": "tree:Node"
@@ -152,8 +157,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Steenweg Borgloon",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.695968075348852",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.273319152470016"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3035983052312803",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.68680109546829"
         }
       ],
       "total_children_count": 0,
@@ -169,17 +174,19 @@
       ],
       "triples_metadata": [
         "Steenweg Borgloon"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "uda",
       "triples": [
         {
           "http://example.com/terms#name": "Steenweg Buda",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7890816522726087",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.761460203393675"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4727514956532057",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.56886462570477"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2772.jsonld#30626",
         "@type": "tree:Node"
@@ -187,8 +194,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Steenweg Buda",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7890816522726087",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.761460203393675"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4727514956532057",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.56886462570477"
         }
       ],
       "total_children_count": 0,
@@ -204,7 +211,8 @@
       ],
       "triples_metadata": [
         "Steenweg Buda"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

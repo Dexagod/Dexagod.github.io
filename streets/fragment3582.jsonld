@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "G",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3582.jsonld#85842",
-              "@type": "tree:Node",
-              "token_string": "illardstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3582.jsonld#85843",
-              "@type": "tree:Node",
-              "token_string": "eversplein"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3582.jsonld#86747",
-              "@type": "tree:Node",
-              "token_string": "odtslaan"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "illardstraat": [
+          "3582",
+          "85842"
+        ],
+        "eversplein": [
+          "3582",
+          "85843"
+        ],
+        "odtslaan": [
+          "3582",
+          "86747"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment149.jsonld#2878",
         "@type": "tree:Node"
@@ -62,18 +44,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Pater Gillardstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.453873433437416",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.66046796923762"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8691871647305955",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.437179058210425"
         },
         {
           "http://example.com/terms#name": "Pater Geversplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6537070797230187",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.66476371019303"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2019801974574436",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.98008029660636"
         },
         {
           "http://example.com/terms#name": "Pater Godtslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4067230896800496",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.12598907339312"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1865026728462458",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.98414169661988"
         }
       ],
       "total_children_count": 3,
@@ -99,17 +81,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3582.jsonld#85842"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3582.jsonld#85843"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3582.jsonld#86747"
+          ]
+        }
+      ]
     },
     {
       "token_string": "illardstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Pater Gillardstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.453873433437416",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.66046796923762"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8691871647305955",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.437179058210425"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3582.jsonld#85841",
         "@type": "tree:Node"
@@ -117,8 +120,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Pater Gillardstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.453873433437416",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.66046796923762"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8691871647305955",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.437179058210425"
         }
       ],
       "total_children_count": 0,
@@ -134,17 +137,19 @@
       ],
       "triples_metadata": [
         "Pater Gillardstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "eversplein",
       "triples": [
         {
           "http://example.com/terms#name": "Pater Geversplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6537070797230187",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.66476371019303"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2019801974574436",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.98008029660636"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3582.jsonld#85841",
         "@type": "tree:Node"
@@ -152,8 +157,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Pater Geversplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6537070797230187",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.66476371019303"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2019801974574436",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.98008029660636"
         }
       ],
       "total_children_count": 0,
@@ -169,17 +174,19 @@
       ],
       "triples_metadata": [
         "Pater Geversplein"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "odtslaan",
       "triples": [
         {
           "http://example.com/terms#name": "Pater Godtslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4067230896800496",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.12598907339312"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1865026728462458",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.98414169661988"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3582.jsonld#85841",
         "@type": "tree:Node"
@@ -187,8 +194,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Pater Godtslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4067230896800496",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.12598907339312"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1865026728462458",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.98414169661988"
         }
       ],
       "total_children_count": 0,
@@ -204,7 +211,8 @@
       ],
       "triples_metadata": [
         "Pater Godtslaan"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

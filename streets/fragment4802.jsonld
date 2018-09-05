@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "II",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4802.jsonld#170435",
-              "@type": "tree:Node",
-              "token_string": "ème Dragons Français"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4802.jsonld#170436",
-              "@type": "tree:Node",
-              "token_string": " novembre"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "ème Dragons Français": [
+          "4802",
+          "170435"
+        ],
+        " novembre": [
+          "4802",
+          "170436"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4643.jsonld#105073",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Place du IIème Dragons Français",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.906507244540227",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.18662234544498"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.55664423279319",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.31527240601765"
         },
         {
           "http://example.com/terms#name": "Place du II novembre",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.299017885231883",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.13096496268332"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.503809494718954",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.05926498594675"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4802.jsonld#170435"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4802.jsonld#170436"
+          ]
+        }
+      ]
     },
     {
       "token_string": "ème Dragons Français",
       "triples": [
         {
           "http://example.com/terms#name": "Place du IIème Dragons Français",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.906507244540227",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.18662234544498"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.55664423279319",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.31527240601765"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4802.jsonld#170434",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Place du IIème Dragons Français",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.906507244540227",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.18662234544498"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.55664423279319",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.31527240601765"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Place du IIème Dragons Français"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": " novembre",
       "triples": [
         {
           "http://example.com/terms#name": "Place du II novembre",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.299017885231883",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.13096496268332"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.503809494718954",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.05926498594675"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4802.jsonld#170434",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Place du II novembre",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.299017885231883",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.13096496268332"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.503809494718954",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.05926498594675"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Place du II novembre"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

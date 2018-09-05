@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "pe",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2160.jsonld#61807",
-              "@type": "tree:Node",
-              "token_string": "rtingenstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2160.jsonld#72721",
-              "@type": "tree:Node",
-              "token_string": "l"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "rtingenstraat": [
+          "2160",
+          "61807"
+        ],
+        "l": [
+          "2160",
+          "72721"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment589.jsonld#784",
         "@type": "tree:Node"
@@ -52,23 +40,23 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Hoepertingenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.404824761326157",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.26474654312682"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5820408104914803",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.52523458972329"
         },
         {
           "http://example.com/terms#name": "Hoepelstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1555596225854887",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.61979828330249"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7201657140243185",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.148232966672865"
         },
         {
           "http://example.com/terms#name": "Hoepelsnijdersstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.053295405730523",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.165519568675315"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5774908401004986",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.17863106832768"
         },
         {
           "http://example.com/terms#name": "Hoepelpad",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9200246620083123",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.77719427337324"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.299700674021625",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.198352926452294"
         }
       ],
       "total_children_count": 6,
@@ -100,17 +88,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2160.jsonld#61807"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2160.jsonld#72721"
+          ]
+        }
+      ]
     },
     {
       "token_string": "rtingenstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Hoepertingenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.404824761326157",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.26474654312682"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5820408104914803",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.52523458972329"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2160.jsonld#61806",
         "@type": "tree:Node"
@@ -118,8 +121,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Hoepertingenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.404824761326157",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.26474654312682"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5820408104914803",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.52523458972329"
         }
       ],
       "total_children_count": 0,
@@ -135,17 +138,19 @@
       ],
       "triples_metadata": [
         "Hoepertingenstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "traat",
       "triples": [
         {
           "http://example.com/terms#name": "Hoepelstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1555596225854887",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.61979828330249"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7201657140243185",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.148232966672865"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2160.jsonld#72722",
         "@type": "tree:Node"
@@ -153,8 +158,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Hoepelstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1555596225854887",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.61979828330249"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7201657140243185",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.148232966672865"
         }
       ],
       "total_children_count": 0,
@@ -170,17 +175,19 @@
       ],
       "triples_metadata": [
         "Hoepelstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "nijdersstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Hoepelsnijdersstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.053295405730523",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.165519568675315"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5774908401004986",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.17863106832768"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2160.jsonld#72722",
         "@type": "tree:Node"
@@ -188,8 +195,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Hoepelsnijdersstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.053295405730523",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.165519568675315"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5774908401004986",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.17863106832768"
         }
       ],
       "total_children_count": 0,
@@ -205,33 +212,22 @@
       ],
       "triples_metadata": [
         "Hoepelsnijdersstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "l",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2160.jsonld#72722",
-              "@type": "tree:Node",
-              "token_string": "s"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2160.jsonld#72723",
-              "@type": "tree:Node",
-              "token_string": "pad"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "s": [
+          "2160",
+          "72722"
+        ],
+        "pad": [
+          "2160",
+          "72723"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment2160.jsonld#61806",
         "@type": "tree:Node"
@@ -239,18 +235,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Hoepelstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1555596225854887",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.61979828330249"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7201657140243185",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.148232966672865"
         },
         {
           "http://example.com/terms#name": "Hoepelsnijdersstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.053295405730523",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.165519568675315"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5774908401004986",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.17863106832768"
         },
         {
           "http://example.com/terms#name": "Hoepelpad",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9200246620083123",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.77719427337324"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.299700674021625",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.198352926452294"
         }
       ],
       "total_children_count": 4,
@@ -276,33 +272,35 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
-    },
-    {
-      "token_string": "s",
-      "triples": [],
-      "children": [
+      "triples_metadata": [],
+      "childlist": [
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment2160.jsonld#62518",
-              "@type": "tree:Node",
-              "token_string": "traat"
-            }
+            "/streets/fragment2160.jsonld#72722"
           ]
         },
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment2160.jsonld#62519",
-              "@type": "tree:Node",
-              "token_string": "nijdersstraat"
-            }
+            "/streets/fragment2160.jsonld#72723"
           ]
         }
-      ],
+      ]
+    },
+    {
+      "token_string": "s",
+      "triples": [],
+      "children": {
+        "traat": [
+          "2160",
+          "62518"
+        ],
+        "nijdersstraat": [
+          "2160",
+          "62519"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment2160.jsonld#72721",
         "@type": "tree:Node"
@@ -310,13 +308,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Hoepelstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1555596225854887",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.61979828330249"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7201657140243185",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.148232966672865"
         },
         {
           "http://example.com/terms#name": "Hoepelsnijdersstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.053295405730523",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.165519568675315"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5774908401004986",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.17863106832768"
         }
       ],
       "total_children_count": 2,
@@ -336,17 +334,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2160.jsonld#62518"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2160.jsonld#62519"
+          ]
+        }
+      ]
     },
     {
       "token_string": "pad",
       "triples": [
         {
           "http://example.com/terms#name": "Hoepelpad",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9200246620083123",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.77719427337324"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.299700674021625",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.198352926452294"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2160.jsonld#72721",
         "@type": "tree:Node"
@@ -354,8 +367,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Hoepelpad",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9200246620083123",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.77719427337324"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.299700674021625",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.198352926452294"
         }
       ],
       "total_children_count": 0,
@@ -371,7 +384,8 @@
       ],
       "triples_metadata": [
         "Hoepelpad"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

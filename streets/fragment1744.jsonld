@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -25,10 +25,11 @@
       "triples": [
         {
           "http://example.com/terms#name": "Graaf de Broquevillestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.250296252496727",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.82918428193014"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.104492410987989",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.42466391965538"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1744.jsonld#33791",
         "@type": "tree:Node"
@@ -36,8 +37,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Graaf de Broquevillestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.250296252496727",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.82918428193014"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.104492410987989",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.42466391965538"
         }
       ],
       "total_children_count": 0,
@@ -53,17 +54,19 @@
       ],
       "triples_metadata": [
         "Graaf de Broquevillestraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "igodestraat",
       "triples": [
         {
           "http://example.com/terms#name": "Graaf de Brigodestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.625213745496179",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.67029950650923"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8897549139242735",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.45163021444913"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1744.jsonld#33791",
         "@type": "tree:Node"
@@ -71,8 +74,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Graaf de Brigodestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.625213745496179",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.67029950650923"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8897549139242735",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.45163021444913"
         }
       ],
       "total_children_count": 0,
@@ -88,33 +91,22 @@
       ],
       "triples_metadata": [
         "Graaf de Brigodestraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "M",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1744.jsonld#25472",
-              "@type": "tree:Node",
-              "token_string": "ontblanclaan"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1744.jsonld#25473",
-              "@type": "tree:Node",
-              "token_string": "ûelenaerelaan"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "ontblanclaan": [
+          "1744",
+          "25472"
+        ],
+        "ûelenaerelaan": [
+          "1744",
+          "25473"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment1744.jsonld#32303",
         "@type": "tree:Node"
@@ -122,13 +114,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Graaf de Montblanclaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.345617124143899",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.39295256449496"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.434301547398084",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.70177042254724"
         },
         {
           "http://example.com/terms#name": "Graaf de Mûelenaerelaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7392332108147506",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.76136600502329"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.256667209597868",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.91430253365783"
         }
       ],
       "total_children_count": 2,
@@ -148,17 +140,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1744.jsonld#25472"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1744.jsonld#25473"
+          ]
+        }
+      ]
     },
     {
       "token_string": "ontblanclaan",
       "triples": [
         {
           "http://example.com/terms#name": "Graaf de Montblanclaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.345617124143899",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.39295256449496"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.434301547398084",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.70177042254724"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1744.jsonld#25471",
         "@type": "tree:Node"
@@ -166,8 +173,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Graaf de Montblanclaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.345617124143899",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.39295256449496"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.434301547398084",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.70177042254724"
         }
       ],
       "total_children_count": 0,
@@ -183,17 +190,19 @@
       ],
       "triples_metadata": [
         "Graaf de Montblanclaan"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "ûelenaerelaan",
       "triples": [
         {
           "http://example.com/terms#name": "Graaf de Mûelenaerelaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7392332108147506",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.76136600502329"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.256667209597868",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.91430253365783"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1744.jsonld#25471",
         "@type": "tree:Node"
@@ -201,8 +210,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Graaf de Mûelenaerelaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7392332108147506",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.76136600502329"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.256667209597868",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.91430253365783"
         }
       ],
       "total_children_count": 0,
@@ -218,37 +227,39 @@
       ],
       "triples_metadata": [
         "Graaf de Mûelenaerelaan"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "Smet de Naeyerlaan",
       "triples": [
         {
           "http://example.com/terms#name": "Graaf de Smet de Naeyerlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.924088441501453",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.44219808846725"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.076775711508961",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.12984272552151"
         },
         {
           "http://example.com/terms#name": "Graaf de Smet de Naeyerlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.339592222586236",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.75438103292533"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.924498007056045",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.543053911598676"
         },
         {
           "http://example.com/terms#name": "Graaf de Smet de Naeyerlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.339592222586236",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.75438103292533"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.924498007056045",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.543053911598676"
         },
         {
           "http://example.com/terms#name": "Graaf de Smet de Naeyerlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.339592222586236",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.75438103292533"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.924498007056045",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.543053911598676"
         },
         {
           "http://example.com/terms#name": "Graaf de Smet de Naeyerlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.339592222586236",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.75438103292533"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.924498007056045",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.543053911598676"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1744.jsonld#32303",
         "@type": "tree:Node"
@@ -256,28 +267,28 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Graaf de Smet de Naeyerlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.924088441501453",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.44219808846725"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.076775711508961",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.12984272552151"
         },
         {
           "http://example.com/terms#name": "Graaf de Smet de Naeyerlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.339592222586236",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.75438103292533"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.924498007056045",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.543053911598676"
         },
         {
           "http://example.com/terms#name": "Graaf de Smet de Naeyerlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.339592222586236",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.75438103292533"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.924498007056045",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.543053911598676"
         },
         {
           "http://example.com/terms#name": "Graaf de Smet de Naeyerlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.339592222586236",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.75438103292533"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.924498007056045",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.543053911598676"
         },
         {
           "http://example.com/terms#name": "Graaf de Smet de Naeyerlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.339592222586236",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.75438103292533"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.924498007056045",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.543053911598676"
         }
       ],
       "total_children_count": 0,
@@ -301,43 +312,26 @@
         "Graaf de Smet de Naeyerlaan",
         "Graaf de Smet de Naeyerlaan",
         "Graaf de Smet de Naeyerlaan"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "d",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1744.jsonld#32303",
-              "@type": "tree:Node",
-              "token_string": "e "
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1744.jsonld#32304",
-              "@type": "tree:Node",
-              "token_string": "u Parclaan"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1744.jsonld#76791",
-              "@type": "tree:Node",
-              "token_string": "'"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "e ": [
+          "1744",
+          "32303"
+        ],
+        "u Parclaan": [
+          "1744",
+          "32304"
+        ],
+        "'": [
+          "1744",
+          "76791"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment1981.jsonld#14660",
         "@type": "tree:Node"
@@ -345,53 +339,53 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Graaf de Fienneslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4885558162951478",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.34021531827827"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7637832570030167",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.47468689228207"
         },
         {
           "http://example.com/terms#name": "Graaf de Broquevillestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.250296252496727",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.82918428193014"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.104492410987989",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.42466391965538"
         },
         {
           "http://example.com/terms#name": "Graaf de Brigodestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.625213745496179",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.67029950650923"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8897549139242735",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.45163021444913"
         },
         {
           "http://example.com/terms#name": "Graaf de Granvellelaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0464803947097194",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.264721012724756"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1133977219937017",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.809243856808685"
         },
         {
           "http://example.com/terms#name": "Graaf de Bailletstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6964764100379655",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.35588104041649"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2179829893360843",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.10426750072061"
         },
         {
           "http://example.com/terms#name": "Graaf d'Ursellaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1600597569384794",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.44291038416037"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0708131210928236",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.12852992274505"
         },
         {
           "http://example.com/terms#name": "Graaf de Grunnelaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8252462255114668",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.1466710265072"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7409779001215875",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.685425732823965"
         },
         {
           "http://example.com/terms#name": "Graaf d'Urselstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9651181969731533",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.02128915082547"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2076197129163773",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.09191168694677"
         },
         {
           "http://example.com/terms#name": "Graaf d'Huststraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.67787744236696",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.289287545203955"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.56533033815336",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.73275890566747"
         },
         {
           "http://example.com/terms#name": "Graaf de Ferrarisgaarde",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.062068835299502",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.77409498315377"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1691856111704544",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.8863014631288"
         }
       ],
       "total_children_count": 33,
@@ -459,93 +453,65 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1744.jsonld#32303"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1744.jsonld#32304"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1744.jsonld#76791"
+          ]
+        }
+      ]
     },
     {
       "token_string": "e ",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1744.jsonld#25471",
-              "@type": "tree:Node",
-              "token_string": "M"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1744.jsonld#28935",
-              "@type": "tree:Node",
-              "token_string": "Smet de Naeyerlaan"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1744.jsonld#33790",
-              "@type": "tree:Node",
-              "token_string": "B"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1744.jsonld#52372",
-              "@type": "tree:Node",
-              "token_string": "Gr"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1744.jsonld#79545",
-              "@type": "tree:Node",
-              "token_string": "R"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1744.jsonld#83489",
-              "@type": "tree:Node",
-              "token_string": "T"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1744.jsonld#94460",
-              "@type": "tree:Node",
-              "token_string": "F"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1744.jsonld#97160",
-              "@type": "tree:Node",
-              "token_string": "Li"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "M": [
+          "1744",
+          "25471"
+        ],
+        "Smet de Naeyerlaan": [
+          "1744",
+          "28935"
+        ],
+        "B": [
+          "1744",
+          "33790"
+        ],
+        "Gr": [
+          "1744",
+          "52372"
+        ],
+        "R": [
+          "1744",
+          "79545"
+        ],
+        "T": [
+          "1744",
+          "83489"
+        ],
+        "F": [
+          "1744",
+          "94460"
+        ],
+        "Li": [
+          "1744",
+          "97160"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment1744.jsonld#32302",
         "@type": "tree:Node"
@@ -553,53 +519,53 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Graaf de Montblanclaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.345617124143899",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.39295256449496"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.434301547398084",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.70177042254724"
         },
         {
           "http://example.com/terms#name": "Graaf de Fienneslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4885558162951478",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.34021531827827"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7637832570030167",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.47468689228207"
         },
         {
           "http://example.com/terms#name": "Graaf de Broquevillestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.250296252496727",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.82918428193014"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.104492410987989",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.42466391965538"
         },
         {
           "http://example.com/terms#name": "Graaf de Brigodestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.625213745496179",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.67029950650923"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8897549139242735",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.45163021444913"
         },
         {
           "http://example.com/terms#name": "Graaf de Granvellelaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0464803947097194",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.264721012724756"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1133977219937017",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.809243856808685"
         },
         {
           "http://example.com/terms#name": "Graaf de Bailletstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6964764100379655",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.35588104041649"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2179829893360843",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.10426750072061"
         },
         {
           "http://example.com/terms#name": "Graaf de Limburg Stirumlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0314201984100717",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.59264661885285"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6606705747808626",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.73001767617233"
         },
         {
           "http://example.com/terms#name": "Graaf de Grunnelaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8252462255114668",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.1466710265072"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7409779001215875",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.685425732823965"
         },
         {
           "http://example.com/terms#name": "Graaf de Ferrarisgaarde",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.062068835299502",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.77409498315377"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1691856111704544",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.8863014631288"
         },
         {
           "http://example.com/terms#name": "Graaf de Liedekerkelaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7303987624073427",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.990472514501725"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.065260714113427",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.234033010029194"
         }
       ],
       "total_children_count": 26,
@@ -667,17 +633,68 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1744.jsonld#25471"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1744.jsonld#28935"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1744.jsonld#33790"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1744.jsonld#52372"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1744.jsonld#79545"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1744.jsonld#83489"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1744.jsonld#94460"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1744.jsonld#97160"
+          ]
+        }
+      ]
     },
     {
       "token_string": "u Parclaan",
       "triples": [
         {
           "http://example.com/terms#name": "Graaf du Parclaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3352174555165",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.64861195522512"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9883176554058815",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.18955756690453"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1744.jsonld#32302",
         "@type": "tree:Node"
@@ -685,8 +702,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Graaf du Parclaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3352174555165",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.64861195522512"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9883176554058815",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.18955756690453"
         }
       ],
       "total_children_count": 0,
@@ -702,33 +719,22 @@
       ],
       "triples_metadata": [
         "Graaf du Parclaan"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "B",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1744.jsonld#33791",
-              "@type": "tree:Node",
-              "token_string": "r"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1744.jsonld#33792",
-              "@type": "tree:Node",
-              "token_string": "ailletstraat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "r": [
+          "1744",
+          "33791"
+        ],
+        "ailletstraat": [
+          "1744",
+          "33792"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment1744.jsonld#32303",
         "@type": "tree:Node"
@@ -736,18 +742,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Graaf de Broquevillestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.250296252496727",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.82918428193014"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.104492410987989",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.42466391965538"
         },
         {
           "http://example.com/terms#name": "Graaf de Brigodestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.625213745496179",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.67029950650923"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8897549139242735",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.45163021444913"
         },
         {
           "http://example.com/terms#name": "Graaf de Bailletstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6964764100379655",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.35588104041649"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2179829893360843",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.10426750072061"
         }
       ],
       "total_children_count": 4,
@@ -773,33 +779,35 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
-    },
-    {
-      "token_string": "r",
-      "triples": [],
-      "children": [
+      "triples_metadata": [],
+      "childlist": [
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment1744.jsonld#20194",
-              "@type": "tree:Node",
-              "token_string": "oquevillestraat"
-            }
+            "/streets/fragment1744.jsonld#33791"
           ]
         },
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment1744.jsonld#20195",
-              "@type": "tree:Node",
-              "token_string": "igodestraat"
-            }
+            "/streets/fragment1744.jsonld#33792"
           ]
         }
-      ],
+      ]
+    },
+    {
+      "token_string": "r",
+      "triples": [],
+      "children": {
+        "oquevillestraat": [
+          "1744",
+          "20194"
+        ],
+        "igodestraat": [
+          "1744",
+          "20195"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment1744.jsonld#33790",
         "@type": "tree:Node"
@@ -807,13 +815,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Graaf de Broquevillestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.250296252496727",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.82918428193014"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.104492410987989",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.42466391965538"
         },
         {
           "http://example.com/terms#name": "Graaf de Brigodestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.625213745496179",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.67029950650923"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8897549139242735",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.45163021444913"
         }
       ],
       "total_children_count": 2,
@@ -833,17 +841,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1744.jsonld#20194"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1744.jsonld#20195"
+          ]
+        }
+      ]
     },
     {
       "token_string": "ailletstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Graaf de Bailletstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6964764100379655",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.35588104041649"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2179829893360843",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.10426750072061"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1744.jsonld#33790",
         "@type": "tree:Node"
@@ -851,8 +874,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Graaf de Bailletstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6964764100379655",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.35588104041649"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2179829893360843",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.10426750072061"
         }
       ],
       "total_children_count": 0,
@@ -868,33 +891,22 @@
       ],
       "triples_metadata": [
         "Graaf de Bailletstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "Gr",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1744.jsonld#52373",
-              "@type": "tree:Node",
-              "token_string": "anvellelaan"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1744.jsonld#52374",
-              "@type": "tree:Node",
-              "token_string": "unnelaan"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "anvellelaan": [
+          "1744",
+          "52373"
+        ],
+        "unnelaan": [
+          "1744",
+          "52374"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment1744.jsonld#32303",
         "@type": "tree:Node"
@@ -902,13 +914,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Graaf de Granvellelaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0464803947097194",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.264721012724756"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1133977219937017",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.809243856808685"
         },
         {
           "http://example.com/terms#name": "Graaf de Grunnelaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8252462255114668",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.1466710265072"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7409779001215875",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.685425732823965"
         }
       ],
       "total_children_count": 2,
@@ -928,17 +940,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1744.jsonld#52373"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1744.jsonld#52374"
+          ]
+        }
+      ]
     },
     {
       "token_string": "anvellelaan",
       "triples": [
         {
           "http://example.com/terms#name": "Graaf de Granvellelaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0464803947097194",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.264721012724756"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1133977219937017",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.809243856808685"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1744.jsonld#52372",
         "@type": "tree:Node"
@@ -946,8 +973,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Graaf de Granvellelaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0464803947097194",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.264721012724756"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1133977219937017",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.809243856808685"
         }
       ],
       "total_children_count": 0,
@@ -963,17 +990,19 @@
       ],
       "triples_metadata": [
         "Graaf de Granvellelaan"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "unnelaan",
       "triples": [
         {
           "http://example.com/terms#name": "Graaf de Grunnelaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8252462255114668",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.1466710265072"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7409779001215875",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.685425732823965"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1744.jsonld#52372",
         "@type": "tree:Node"
@@ -981,8 +1010,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Graaf de Grunnelaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8252462255114668",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.1466710265072"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7409779001215875",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.685425732823965"
         }
       ],
       "total_children_count": 0,
@@ -998,17 +1027,19 @@
       ],
       "triples_metadata": [
         "Graaf de Grunnelaan"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "laan",
       "triples": [
         {
           "http://example.com/terms#name": "Graaf d'Ursellaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1600597569384794",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.44291038416037"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0708131210928236",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.12852992274505"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1744.jsonld#76792",
         "@type": "tree:Node"
@@ -1016,8 +1047,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Graaf d'Ursellaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1600597569384794",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.44291038416037"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0708131210928236",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.12852992274505"
         }
       ],
       "total_children_count": 0,
@@ -1033,17 +1064,19 @@
       ],
       "triples_metadata": [
         "Graaf d'Ursellaan"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "straat",
       "triples": [
         {
           "http://example.com/terms#name": "Graaf d'Urselstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9651181969731533",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.02128915082547"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2076197129163773",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.09191168694677"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1744.jsonld#76792",
         "@type": "tree:Node"
@@ -1051,8 +1084,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Graaf d'Urselstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9651181969731533",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.02128915082547"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2076197129163773",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.09191168694677"
         }
       ],
       "total_children_count": 0,
@@ -1068,17 +1101,19 @@
       ],
       "triples_metadata": [
         "Graaf d'Urselstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "euxlaan",
       "triples": [
         {
           "http://example.com/terms#name": "Graaf de Theuxlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0488294883911085",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.858239706513615"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8762872077048516",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.66833888066601"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1744.jsonld#83490",
         "@type": "tree:Node"
@@ -1086,8 +1121,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Graaf de Theuxlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0488294883911085",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.858239706513615"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8762872077048516",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.66833888066601"
         }
       ],
       "total_children_count": 0,
@@ -1103,17 +1138,19 @@
       ],
       "triples_metadata": [
         "Graaf de Theuxlaan"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "ienneslaan",
       "triples": [
         {
           "http://example.com/terms#name": "Graaf de Thienneslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6020325384149077",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.378420691413794"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.654439865936586",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.18245975298217"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1744.jsonld#83490",
         "@type": "tree:Node"
@@ -1121,8 +1158,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Graaf de Thienneslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6020325384149077",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.378420691413794"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.654439865936586",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.18245975298217"
         }
       ],
       "total_children_count": 0,
@@ -1138,33 +1175,22 @@
       ],
       "triples_metadata": [
         "Graaf de Thienneslaan"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "'",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1744.jsonld#76792",
-              "@type": "tree:Node",
-              "token_string": "Ursel"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1744.jsonld#76793",
-              "@type": "tree:Node",
-              "token_string": "Huststraat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "Ursel": [
+          "1744",
+          "76792"
+        ],
+        "Huststraat": [
+          "1744",
+          "76793"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment1744.jsonld#32302",
         "@type": "tree:Node"
@@ -1172,18 +1198,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Graaf d'Ursellaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1600597569384794",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.44291038416037"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0708131210928236",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.12852992274505"
         },
         {
           "http://example.com/terms#name": "Graaf d'Urselstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9651181969731533",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.02128915082547"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2076197129163773",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.09191168694677"
         },
         {
           "http://example.com/terms#name": "Graaf d'Huststraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.67787744236696",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.289287545203955"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.56533033815336",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.73275890566747"
         }
       ],
       "total_children_count": 4,
@@ -1209,33 +1235,35 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
-    },
-    {
-      "token_string": "Ursel",
-      "triples": [],
-      "children": [
+      "triples_metadata": [],
+      "childlist": [
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment1744.jsonld#57980",
-              "@type": "tree:Node",
-              "token_string": "laan"
-            }
+            "/streets/fragment1744.jsonld#76792"
           ]
         },
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment1744.jsonld#57981",
-              "@type": "tree:Node",
-              "token_string": "straat"
-            }
+            "/streets/fragment1744.jsonld#76793"
           ]
         }
-      ],
+      ]
+    },
+    {
+      "token_string": "Ursel",
+      "triples": [],
+      "children": {
+        "laan": [
+          "1744",
+          "57980"
+        ],
+        "straat": [
+          "1744",
+          "57981"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment1744.jsonld#76791",
         "@type": "tree:Node"
@@ -1243,13 +1271,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Graaf d'Ursellaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1600597569384794",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.44291038416037"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0708131210928236",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.12852992274505"
         },
         {
           "http://example.com/terms#name": "Graaf d'Urselstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9651181969731533",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.02128915082547"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2076197129163773",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.09191168694677"
         }
       ],
       "total_children_count": 2,
@@ -1269,17 +1297,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1744.jsonld#57980"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1744.jsonld#57981"
+          ]
+        }
+      ]
     },
     {
       "token_string": "Huststraat",
       "triples": [
         {
           "http://example.com/terms#name": "Graaf d'Huststraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.67787744236696",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.289287545203955"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.56533033815336",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.73275890566747"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1744.jsonld#76791",
         "@type": "tree:Node"
@@ -1287,8 +1330,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Graaf d'Huststraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.67787744236696",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.289287545203955"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.56533033815336",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.73275890566747"
         }
       ],
       "total_children_count": 0,
@@ -1304,33 +1347,22 @@
       ],
       "triples_metadata": [
         "Graaf d'Huststraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "R",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1744.jsonld#79546",
-              "@type": "tree:Node",
-              "token_string": "ibeaucourtplein"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1744.jsonld#79547",
-              "@type": "tree:Node",
-              "token_string": "enessestraat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "ibeaucourtplein": [
+          "1744",
+          "79546"
+        ],
+        "enessestraat": [
+          "1744",
+          "79547"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment1744.jsonld#32303",
         "@type": "tree:Node"
@@ -1338,13 +1370,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Graaf de Ribeaucourtplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.906554271025566",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.99744685413373"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3322896833928914",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.59534478467224"
         },
         {
           "http://example.com/terms#name": "Graaf de Renessestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9059230315690585",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.78704581024758"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.664624036429281",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.43059015468621"
         }
       ],
       "total_children_count": 2,
@@ -1364,17 +1396,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1744.jsonld#79546"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1744.jsonld#79547"
+          ]
+        }
+      ]
     },
     {
       "token_string": "ibeaucourtplein",
       "triples": [
         {
           "http://example.com/terms#name": "Graaf de Ribeaucourtplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.906554271025566",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.99744685413373"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3322896833928914",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.59534478467224"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1744.jsonld#79545",
         "@type": "tree:Node"
@@ -1382,8 +1429,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Graaf de Ribeaucourtplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.906554271025566",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.99744685413373"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3322896833928914",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.59534478467224"
         }
       ],
       "total_children_count": 0,
@@ -1399,17 +1446,19 @@
       ],
       "triples_metadata": [
         "Graaf de Ribeaucourtplein"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "enessestraat",
       "triples": [
         {
           "http://example.com/terms#name": "Graaf de Renessestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9059230315690585",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.78704581024758"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.664624036429281",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.43059015468621"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1744.jsonld#79545",
         "@type": "tree:Node"
@@ -1417,8 +1466,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Graaf de Renessestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9059230315690585",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.78704581024758"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.664624036429281",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.43059015468621"
         }
       ],
       "total_children_count": 0,
@@ -1434,33 +1483,22 @@
       ],
       "triples_metadata": [
         "Graaf de Renessestraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "T",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1744.jsonld#83490",
-              "@type": "tree:Node",
-              "token_string": "h"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1744.jsonld#83491",
-              "@type": "tree:Node",
-              "token_string": "'Serclaesstraat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "h": [
+          "1744",
+          "83490"
+        ],
+        "'Serclaesstraat": [
+          "1744",
+          "83491"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment1744.jsonld#32303",
         "@type": "tree:Node"
@@ -1468,18 +1506,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Graaf de Theuxlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0488294883911085",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.858239706513615"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8762872077048516",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.66833888066601"
         },
         {
           "http://example.com/terms#name": "Graaf de Thienneslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6020325384149077",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.378420691413794"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.654439865936586",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.18245975298217"
         },
         {
           "http://example.com/terms#name": "Graaf de T'Serclaesstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2166217540497053",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.18590228467842"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3466226655228426",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.70199095126242"
         }
       ],
       "total_children_count": 4,
@@ -1505,33 +1543,35 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
-    },
-    {
-      "token_string": "h",
-      "triples": [],
-      "children": [
+      "triples_metadata": [],
+      "childlist": [
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment1744.jsonld#61266",
-              "@type": "tree:Node",
-              "token_string": "euxlaan"
-            }
+            "/streets/fragment1744.jsonld#83490"
           ]
         },
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment1744.jsonld#61267",
-              "@type": "tree:Node",
-              "token_string": "ienneslaan"
-            }
+            "/streets/fragment1744.jsonld#83491"
           ]
         }
-      ],
+      ]
+    },
+    {
+      "token_string": "h",
+      "triples": [],
+      "children": {
+        "euxlaan": [
+          "1744",
+          "61266"
+        ],
+        "ienneslaan": [
+          "1744",
+          "61267"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment1744.jsonld#83489",
         "@type": "tree:Node"
@@ -1539,13 +1579,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Graaf de Theuxlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0488294883911085",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.858239706513615"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8762872077048516",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.66833888066601"
         },
         {
           "http://example.com/terms#name": "Graaf de Thienneslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6020325384149077",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.378420691413794"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.654439865936586",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.18245975298217"
         }
       ],
       "total_children_count": 2,
@@ -1565,17 +1605,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1744.jsonld#61266"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1744.jsonld#61267"
+          ]
+        }
+      ]
     },
     {
       "token_string": "'Serclaesstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Graaf de T'Serclaesstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2166217540497053",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.18590228467842"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3466226655228426",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.70199095126242"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1744.jsonld#83489",
         "@type": "tree:Node"
@@ -1583,8 +1638,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Graaf de T'Serclaesstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2166217540497053",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.18590228467842"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3466226655228426",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.70199095126242"
         }
       ],
       "total_children_count": 0,
@@ -1600,33 +1655,22 @@
       ],
       "triples_metadata": [
         "Graaf de T'Serclaesstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "F",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1744.jsonld#94461",
-              "@type": "tree:Node",
-              "token_string": "ienneslaan"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1744.jsonld#94462",
-              "@type": "tree:Node",
-              "token_string": "errarisgaarde"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "ienneslaan": [
+          "1744",
+          "94461"
+        ],
+        "errarisgaarde": [
+          "1744",
+          "94462"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment1744.jsonld#32303",
         "@type": "tree:Node"
@@ -1634,13 +1678,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Graaf de Fienneslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4885558162951478",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.34021531827827"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7637832570030167",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.47468689228207"
         },
         {
           "http://example.com/terms#name": "Graaf de Ferrarisgaarde",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.062068835299502",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.77409498315377"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1691856111704544",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.8863014631288"
         }
       ],
       "total_children_count": 2,
@@ -1660,17 +1704,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1744.jsonld#94461"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1744.jsonld#94462"
+          ]
+        }
+      ]
     },
     {
       "token_string": "ienneslaan",
       "triples": [
         {
           "http://example.com/terms#name": "Graaf de Fienneslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4885558162951478",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.34021531827827"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7637832570030167",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.47468689228207"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1744.jsonld#94460",
         "@type": "tree:Node"
@@ -1678,8 +1737,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Graaf de Fienneslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4885558162951478",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.34021531827827"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7637832570030167",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.47468689228207"
         }
       ],
       "total_children_count": 0,
@@ -1695,17 +1754,19 @@
       ],
       "triples_metadata": [
         "Graaf de Fienneslaan"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "errarisgaarde",
       "triples": [
         {
           "http://example.com/terms#name": "Graaf de Ferrarisgaarde",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.062068835299502",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.77409498315377"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1691856111704544",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.8863014631288"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1744.jsonld#94460",
         "@type": "tree:Node"
@@ -1713,8 +1774,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Graaf de Ferrarisgaarde",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.062068835299502",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.77409498315377"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1691856111704544",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.8863014631288"
         }
       ],
       "total_children_count": 0,
@@ -1730,33 +1791,22 @@
       ],
       "triples_metadata": [
         "Graaf de Ferrarisgaarde"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "Li",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1744.jsonld#97161",
-              "@type": "tree:Node",
-              "token_string": "mburg Stirumlaan"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1744.jsonld#97162",
-              "@type": "tree:Node",
-              "token_string": "edekerkelaan"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "mburg Stirumlaan": [
+          "1744",
+          "97161"
+        ],
+        "edekerkelaan": [
+          "1744",
+          "97162"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment1744.jsonld#32303",
         "@type": "tree:Node"
@@ -1764,13 +1814,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Graaf de Limburg Stirumlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0314201984100717",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.59264661885285"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6606705747808626",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.73001767617233"
         },
         {
           "http://example.com/terms#name": "Graaf de Liedekerkelaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7303987624073427",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.990472514501725"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.065260714113427",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.234033010029194"
         }
       ],
       "total_children_count": 2,
@@ -1790,17 +1840,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1744.jsonld#97161"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1744.jsonld#97162"
+          ]
+        }
+      ]
     },
     {
       "token_string": "mburg Stirumlaan",
       "triples": [
         {
           "http://example.com/terms#name": "Graaf de Limburg Stirumlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0314201984100717",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.59264661885285"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6606705747808626",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.73001767617233"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1744.jsonld#97160",
         "@type": "tree:Node"
@@ -1808,8 +1873,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Graaf de Limburg Stirumlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0314201984100717",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.59264661885285"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6606705747808626",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.73001767617233"
         }
       ],
       "total_children_count": 0,
@@ -1825,17 +1890,19 @@
       ],
       "triples_metadata": [
         "Graaf de Limburg Stirumlaan"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "edekerkelaan",
       "triples": [
         {
           "http://example.com/terms#name": "Graaf de Liedekerkelaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7303987624073427",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.990472514501725"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.065260714113427",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.234033010029194"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1744.jsonld#97160",
         "@type": "tree:Node"
@@ -1843,8 +1910,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Graaf de Liedekerkelaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7303987624073427",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.990472514501725"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.065260714113427",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.234033010029194"
         }
       ],
       "total_children_count": 0,
@@ -1860,7 +1927,8 @@
       ],
       "triples_metadata": [
         "Graaf de Liedekerkelaan"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

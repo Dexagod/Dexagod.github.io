@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "g",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1886.jsonld#41393",
-              "@type": "tree:Node",
-              "token_string": "geleweg"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1886.jsonld#41394",
-              "@type": "tree:Node",
-              "token_string": "endreef"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "geleweg": [
+          "1886",
+          "41393"
+        ],
+        "endreef": [
+          "1886",
+          "41394"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment56.jsonld#1691",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Schaggeleweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3641569840039995",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.66288327603393"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0160171723473925",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.17436435577218"
         },
         {
           "http://example.com/terms#name": "Schagendreef",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1790399519278334",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.66875256262083"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.541070087206051",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.53797438508086"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1886.jsonld#41393"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1886.jsonld#41394"
+          ]
+        }
+      ]
     },
     {
       "token_string": "geleweg",
       "triples": [
         {
           "http://example.com/terms#name": "Schaggeleweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3641569840039995",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.66288327603393"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0160171723473925",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.17436435577218"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1886.jsonld#41392",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Schaggeleweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3641569840039995",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.66288327603393"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0160171723473925",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.17436435577218"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Schaggeleweg"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "endreef",
       "triples": [
         {
           "http://example.com/terms#name": "Schagendreef",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1790399519278334",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.66875256262083"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.541070087206051",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.53797438508086"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1886.jsonld#41392",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Schagendreef",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1790399519278334",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.66875256262083"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.541070087206051",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.53797438508086"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Schagendreef"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

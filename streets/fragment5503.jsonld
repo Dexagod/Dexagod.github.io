@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "Jardins d",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5503.jsonld#157078",
-              "@type": "tree:Node",
-              "token_string": "e L'Abbaye"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5503.jsonld#157079",
-              "@type": "tree:Node",
-              "token_string": "u Golf"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "e L'Abbaye": [
+          "5503",
+          "157078"
+        ],
+        "u Golf": [
+          "5503",
+          "157079"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment5442.jsonld#107306",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Les Jardins de L'Abbaye",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6594846944288237",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.59138787655732"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.414777728847622",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.16434865748819"
         },
         {
           "http://example.com/terms#name": "Les Jardins du Golf",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.517130496595248",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.825559488588624"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5910975460970347",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.727762944402066"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5503.jsonld#157078"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5503.jsonld#157079"
+          ]
+        }
+      ]
     },
     {
       "token_string": "e L'Abbaye",
       "triples": [
         {
           "http://example.com/terms#name": "Les Jardins de L'Abbaye",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6594846944288237",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.59138787655732"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.414777728847622",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.16434865748819"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5503.jsonld#157077",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Les Jardins de L'Abbaye",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6594846944288237",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.59138787655732"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.414777728847622",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.16434865748819"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Les Jardins de L'Abbaye"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "u Golf",
       "triples": [
         {
           "http://example.com/terms#name": "Les Jardins du Golf",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.517130496595248",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.825559488588624"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5910975460970347",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.727762944402066"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5503.jsonld#157077",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Les Jardins du Golf",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.517130496595248",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.825559488588624"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5910975460970347",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.727762944402066"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Les Jardins du Golf"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

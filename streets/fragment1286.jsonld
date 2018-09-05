@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "V",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1286.jsonld#81521",
-              "@type": "tree:Node",
-              "token_string": "ereeckestraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1286.jsonld#81522",
-              "@type": "tree:Node",
-              "token_string": "S-straat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "ereeckestraat": [
+          "1286",
+          "81521"
+        ],
+        "S-straat": [
+          "1286",
+          "81522"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment50.jsonld#228",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "AVereeckestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6818477746232974",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.66472736342157"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.299276222254709",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.25707874853407"
         },
         {
           "http://example.com/terms#name": "AVS-straat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1952738274660253",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.302463219021455"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.02611123636615",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.76316897655867"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1286.jsonld#81521"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1286.jsonld#81522"
+          ]
+        }
+      ]
     },
     {
       "token_string": "ereeckestraat",
       "triples": [
         {
           "http://example.com/terms#name": "AVereeckestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6818477746232974",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.66472736342157"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.299276222254709",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.25707874853407"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1286.jsonld#81520",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "AVereeckestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6818477746232974",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.66472736342157"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.299276222254709",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.25707874853407"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "AVereeckestraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "S-straat",
       "triples": [
         {
           "http://example.com/terms#name": "AVS-straat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1952738274660253",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.302463219021455"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.02611123636615",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.76316897655867"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1286.jsonld#81520",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "AVS-straat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1952738274660253",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.302463219021455"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.02611123636615",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.76316897655867"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "AVS-straat"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

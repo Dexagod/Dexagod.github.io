@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "O",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3384.jsonld#55265",
-              "@type": "tree:Node",
-              "token_string": "dradastraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3384.jsonld#55266",
-              "@type": "tree:Node",
-              "token_string": "maarsstraat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "dradastraat": [
+          "3384",
+          "55265"
+        ],
+        "maarsstraat": [
+          "3384",
+          "55266"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment337.jsonld#2163",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "St-Odradastraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.420912239177362",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.493065930963986"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4519462433574675",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.30693212446861"
         },
         {
           "http://example.com/terms#name": "St-Omaarsstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6860397612518923",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.47818049153822"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.930965709022628",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.93307681909418"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3384.jsonld#55265"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3384.jsonld#55266"
+          ]
+        }
+      ]
     },
     {
       "token_string": "dradastraat",
       "triples": [
         {
           "http://example.com/terms#name": "St-Odradastraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.420912239177362",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.493065930963986"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4519462433574675",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.30693212446861"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3384.jsonld#55264",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "St-Odradastraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.420912239177362",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.493065930963986"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4519462433574675",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.30693212446861"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "St-Odradastraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "maarsstraat",
       "triples": [
         {
           "http://example.com/terms#name": "St-Omaarsstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6860397612518923",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.47818049153822"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.930965709022628",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.93307681909418"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3384.jsonld#55264",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "St-Omaarsstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6860397612518923",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.47818049153822"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.930965709022628",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.93307681909418"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "St-Omaarsstraat"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

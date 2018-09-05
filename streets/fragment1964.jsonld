@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": " ",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1964.jsonld#17972",
-              "@type": "tree:Node",
-              "token_string": "Vrijstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1964.jsonld#17973",
-              "@type": "tree:Node",
-              "token_string": "Meistraat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "Vrijstraat": [
+          "1964",
+          "17972"
+        ],
+        "Meistraat": [
+          "1964",
+          "17973"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment1964.jsonld#49529",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Tiende Vrijstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.261753382659296",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.90592033321011"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5355330028168903",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.73918704402726"
         },
         {
           "http://example.com/terms#name": "Tiende Meistraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.147864626837148",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.972322212075184"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.086310355256317",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.183370961323384"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1964.jsonld#17972"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1964.jsonld#17973"
+          ]
+        }
+      ]
     },
     {
       "token_string": "Vrijstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Tiende Vrijstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.261753382659296",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.90592033321011"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5355330028168903",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.73918704402726"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1964.jsonld#17971",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Tiende Vrijstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.261753382659296",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.90592033321011"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5355330028168903",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.73918704402726"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Tiende Vrijstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "Meistraat",
       "triples": [
         {
           "http://example.com/terms#name": "Tiende Meistraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.147864626837148",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.972322212075184"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.086310355256317",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.183370961323384"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1964.jsonld#17971",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Tiende Meistraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.147864626837148",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.972322212075184"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.086310355256317",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.183370961323384"
         }
       ],
       "total_children_count": 0,
@@ -148,33 +153,22 @@
       ],
       "triples_metadata": [
         "Tiende Meistraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "s",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1964.jsonld#28896",
-              "@type": "tree:Node",
-              "token_string": "traat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1964.jsonld#44041",
-              "@type": "tree:Node",
-              "token_string": "chuur"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "traat": [
+          "1964",
+          "28896"
+        ],
+        "chuur": [
+          "1964",
+          "44041"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment1964.jsonld#49529",
         "@type": "tree:Node"
@@ -182,48 +176,48 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Tiendeschuurstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.706627686648653",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.12246580433868"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8996467524126417",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.847590355406595"
         },
         {
           "http://example.com/terms#name": "Tiendeschuurstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5647177862296804",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.79542247721845"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3154635667293606",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.028695995880284"
         },
         {
           "http://example.com/terms#name": "Tiendeschuurstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5647177862296804",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.79542247721845"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3154635667293606",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.028695995880284"
         },
         {
           "http://example.com/terms#name": "Tiendeschuurstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5647177862296804",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.79542247721845"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3154635667293606",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.028695995880284"
         },
         {
           "http://example.com/terms#name": "Tiendeschuurstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5647177862296804",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.79542247721845"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3154635667293606",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.028695995880284"
         },
         {
           "http://example.com/terms#name": "Tiendeschuurstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5647177862296804",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.79542247721845"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3154635667293606",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.028695995880284"
         },
         {
           "http://example.com/terms#name": "Tiendestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1516057512428124",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.10074250973024"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1175506018127246",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.122387020551734"
         },
         {
           "http://example.com/terms#name": "Tiendeschuurveld",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.984148669979327",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.817479110409316"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2164502356121023",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.170108130661056"
         },
         {
           "http://example.com/terms#name": "Tiendeschuur",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.547171891911855",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.055964984085065"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.660850303118507",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.361220153423226"
         }
       ],
       "total_children_count": 4,
@@ -260,17 +254,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1964.jsonld#28896"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1964.jsonld#44041"
+          ]
+        }
+      ]
     },
     {
       "token_string": "traat",
       "triples": [
         {
           "http://example.com/terms#name": "Tiendestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1516057512428124",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.10074250973024"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1175506018127246",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.122387020551734"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1964.jsonld#28894",
         "@type": "tree:Node"
@@ -278,8 +287,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Tiendestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1516057512428124",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.10074250973024"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1175506018127246",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.122387020551734"
         }
       ],
       "total_children_count": 0,
@@ -295,32 +304,34 @@
       ],
       "triples_metadata": [
         "Tiendestraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "rstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Tienderstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9537223021930306",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.468494078450156"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.347522869035881",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.881249852801595"
         },
         {
           "http://example.com/terms#name": "Tienderstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7056504355393978",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.390166153956585"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7791283217356146",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.17851722879895"
         },
         {
           "http://example.com/terms#name": "Tienderstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7056504355393978",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.390166153956585"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7791283217356146",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.17851722879895"
         },
         {
           "http://example.com/terms#name": "Tienderstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7056504355393978",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.390166153956585"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7791283217356146",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.17851722879895"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1964.jsonld#49529",
         "@type": "tree:Node"
@@ -328,23 +339,23 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Tienderstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9537223021930306",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.468494078450156"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.347522869035881",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.881249852801595"
         },
         {
           "http://example.com/terms#name": "Tienderstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7056504355393978",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.390166153956585"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7791283217356146",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.17851722879895"
         },
         {
           "http://example.com/terms#name": "Tienderstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7056504355393978",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.390166153956585"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7791283217356146",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.17851722879895"
         },
         {
           "http://example.com/terms#name": "Tienderstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7056504355393978",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.390166153956585"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7791283217356146",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.17851722879895"
         }
       ],
       "total_children_count": 0,
@@ -366,17 +377,19 @@
         "Tienderstraat",
         "Tienderstraat",
         "Tienderstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "meersstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Tiendemeersstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2464556571594145",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.96016824559642"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1905161297860842",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.399168544961555"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1964.jsonld#49529",
         "@type": "tree:Node"
@@ -384,8 +397,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Tiendemeersstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2464556571594145",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.96016824559642"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1905161297860842",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.399168544961555"
         }
       ],
       "total_children_count": 0,
@@ -401,39 +414,28 @@
       ],
       "triples_metadata": [
         "Tiendemeersstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "chuur",
       "triples": [
         {
           "http://example.com/terms#name": "Tiendeschuur",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.547171891911855",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.055964984085065"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.660850303118507",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.361220153423226"
         }
       ],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1964.jsonld#44042",
-              "@type": "tree:Node",
-              "token_string": "straat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1964.jsonld#44043",
-              "@type": "tree:Node",
-              "token_string": "veld"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "straat": [
+          "1964",
+          "44042"
+        ],
+        "veld": [
+          "1964",
+          "44043"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment1964.jsonld#28894",
         "@type": "tree:Node"
@@ -441,43 +443,43 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Tiendeschuurstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.706627686648653",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.12246580433868"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8996467524126417",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.847590355406595"
         },
         {
           "http://example.com/terms#name": "Tiendeschuurstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5647177862296804",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.79542247721845"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3154635667293606",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.028695995880284"
         },
         {
           "http://example.com/terms#name": "Tiendeschuurstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5647177862296804",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.79542247721845"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3154635667293606",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.028695995880284"
         },
         {
           "http://example.com/terms#name": "Tiendeschuurstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5647177862296804",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.79542247721845"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3154635667293606",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.028695995880284"
         },
         {
           "http://example.com/terms#name": "Tiendeschuurstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5647177862296804",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.79542247721845"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3154635667293606",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.028695995880284"
         },
         {
           "http://example.com/terms#name": "Tiendeschuurstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5647177862296804",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.79542247721845"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3154635667293606",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.028695995880284"
         },
         {
           "http://example.com/terms#name": "Tiendeschuurveld",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.984148669979327",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.817479110409316"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2164502356121023",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.170108130661056"
         },
         {
           "http://example.com/terms#name": "Tiendeschuur",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.547171891911855",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.055964984085065"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.660850303118507",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.361220153423226"
         }
       ],
       "total_children_count": 2,
@@ -510,6 +512,20 @@
       ],
       "triples_metadata": [
         "Tiendeschuur"
+      ],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1964.jsonld#44042"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1964.jsonld#44043"
+          ]
+        }
       ]
     },
     {
@@ -517,35 +533,36 @@
       "triples": [
         {
           "http://example.com/terms#name": "Tiendeschuurstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.706627686648653",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.12246580433868"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8996467524126417",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.847590355406595"
         },
         {
           "http://example.com/terms#name": "Tiendeschuurstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5647177862296804",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.79542247721845"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3154635667293606",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.028695995880284"
         },
         {
           "http://example.com/terms#name": "Tiendeschuurstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5647177862296804",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.79542247721845"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3154635667293606",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.028695995880284"
         },
         {
           "http://example.com/terms#name": "Tiendeschuurstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5647177862296804",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.79542247721845"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3154635667293606",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.028695995880284"
         },
         {
           "http://example.com/terms#name": "Tiendeschuurstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5647177862296804",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.79542247721845"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3154635667293606",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.028695995880284"
         },
         {
           "http://example.com/terms#name": "Tiendeschuurstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5647177862296804",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.79542247721845"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3154635667293606",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.028695995880284"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1964.jsonld#44041",
         "@type": "tree:Node"
@@ -553,33 +570,33 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Tiendeschuurstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.706627686648653",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.12246580433868"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8996467524126417",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.847590355406595"
         },
         {
           "http://example.com/terms#name": "Tiendeschuurstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5647177862296804",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.79542247721845"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3154635667293606",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.028695995880284"
         },
         {
           "http://example.com/terms#name": "Tiendeschuurstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5647177862296804",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.79542247721845"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3154635667293606",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.028695995880284"
         },
         {
           "http://example.com/terms#name": "Tiendeschuurstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5647177862296804",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.79542247721845"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3154635667293606",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.028695995880284"
         },
         {
           "http://example.com/terms#name": "Tiendeschuurstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5647177862296804",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.79542247721845"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3154635667293606",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.028695995880284"
         },
         {
           "http://example.com/terms#name": "Tiendeschuurstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5647177862296804",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.79542247721845"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3154635667293606",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.028695995880284"
         }
       ],
       "total_children_count": 0,
@@ -605,17 +622,19 @@
         "Tiendeschuurstraat",
         "Tiendeschuurstraat",
         "Tiendeschuurstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "veld",
       "triples": [
         {
           "http://example.com/terms#name": "Tiendeschuurveld",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.984148669979327",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.817479110409316"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2164502356121023",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.170108130661056"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1964.jsonld#44041",
         "@type": "tree:Node"
@@ -623,8 +642,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Tiendeschuurveld",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.984148669979327",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.817479110409316"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2164502356121023",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.170108130661056"
         }
       ],
       "total_children_count": 0,
@@ -640,43 +659,26 @@
       ],
       "triples_metadata": [
         "Tiendeschuurveld"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "d",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1964.jsonld#49529",
-              "@type": "tree:Node",
-              "token_string": "e"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1964.jsonld#94279",
-              "@type": "tree:Node",
-              "token_string": "agwand"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1964.jsonld#101968",
-              "@type": "tree:Node",
-              "token_string": "s"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "e": [
+          "1964",
+          "49529"
+        ],
+        "agwand": [
+          "1964",
+          "94279"
+        ],
+        "s": [
+          "1964",
+          "101968"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment2645.jsonld#11820",
         "@type": "tree:Node"
@@ -684,73 +686,73 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Tiende Vrijstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.261753382659296",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.90592033321011"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5355330028168903",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.73918704402726"
         },
         {
           "http://example.com/terms#name": "Tiende Meistraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.147864626837148",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.972322212075184"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.086310355256317",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.183370961323384"
         },
         {
           "http://example.com/terms#name": "Tiendemeersstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2464556571594145",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.96016824559642"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1905161297860842",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.399168544961555"
         },
         {
           "http://example.com/terms#name": "Tiendagwandstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1952915524772902",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.49015647495126"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.268391729790656",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.82507602185668"
         },
         {
           "http://example.com/terms#name": "Tiendagwandstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1530372275275553",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.66019371223587"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9823096870150385",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.211807090173956"
         },
         {
           "http://example.com/terms#name": "Tiendagwandstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1530372275275553",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.66019371223587"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9823096870150385",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.211807090173956"
         },
         {
           "http://example.com/terms#name": "Tiendagwandstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1530372275275553",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.66019371223587"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9823096870150385",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.211807090173956"
         },
         {
           "http://example.com/terms#name": "Tiendagwandstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1530372275275553",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.66019371223587"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9823096870150385",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.211807090173956"
         },
         {
           "http://example.com/terms#name": "Tiendenbergstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.111956734097654",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.85751521048036"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.345734652289811",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.02026859656753"
         },
         {
           "http://example.com/terms#name": "Tiendelaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0442960181356344",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.28370381732767"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.662500387133288",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.51642550270716"
         },
         {
           "http://example.com/terms#name": "Tiendehof",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.602871409735255",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.28891620207432"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1672016834592767",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.94015391366353"
         },
         {
           "http://example.com/terms#name": "Tiendagwandlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1755719815110433",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.71386095926704"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.682491294854706",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.32944557482835"
         },
         {
           "http://example.com/terms#name": "Tiendenbosplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1349609473573574",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.87750265639668"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.630440914010828",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.30525869005665"
         },
         {
           "http://example.com/terms#name": "Tiendenberg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.826961433068618",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.531397991957974"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9897171925734307",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.26306208452842"
         }
       ],
       "total_children_count": 31,
@@ -822,103 +824,69 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1964.jsonld#49529"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1964.jsonld#94279"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1964.jsonld#101968"
+          ]
+        }
+      ]
     },
     {
       "token_string": "e",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1964.jsonld#17971",
-              "@type": "tree:Node",
-              "token_string": " "
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1964.jsonld#28894",
-              "@type": "tree:Node",
-              "token_string": "s"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1964.jsonld#30647",
-              "@type": "tree:Node",
-              "token_string": "rstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1964.jsonld#38981",
-              "@type": "tree:Node",
-              "token_string": "meersstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1964.jsonld#59911",
-              "@type": "tree:Node",
-              "token_string": "n"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1964.jsonld#77632",
-              "@type": "tree:Node",
-              "token_string": "laan"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1964.jsonld#80351",
-              "@type": "tree:Node",
-              "token_string": "hof"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1964.jsonld#94832",
-              "@type": "tree:Node",
-              "token_string": "weg"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1964.jsonld#101059",
-              "@type": "tree:Node",
-              "token_string": "park"
-            }
-          ]
-        }
-      ],
+      "children": {
+        " ": [
+          "1964",
+          "17971"
+        ],
+        "s": [
+          "1964",
+          "28894"
+        ],
+        "rstraat": [
+          "1964",
+          "30647"
+        ],
+        "meersstraat": [
+          "1964",
+          "38981"
+        ],
+        "n": [
+          "1964",
+          "59911"
+        ],
+        "laan": [
+          "1964",
+          "77632"
+        ],
+        "hof": [
+          "1964",
+          "80351"
+        ],
+        "weg": [
+          "1964",
+          "94832"
+        ],
+        "park": [
+          "1964",
+          "101059"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment1964.jsonld#49528",
         "@type": "tree:Node"
@@ -926,53 +894,53 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Tiende Vrijstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.261753382659296",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.90592033321011"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5355330028168903",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.73918704402726"
         },
         {
           "http://example.com/terms#name": "Tiende Meistraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.147864626837148",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.972322212075184"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.086310355256317",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.183370961323384"
         },
         {
           "http://example.com/terms#name": "Tiendemeersstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2464556571594145",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.96016824559642"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1905161297860842",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.399168544961555"
         },
         {
           "http://example.com/terms#name": "Tiendenbergstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.111956734097654",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.85751521048036"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.345734652289811",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.02026859656753"
         },
         {
           "http://example.com/terms#name": "Tiendelaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0442960181356344",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.28370381732767"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.662500387133288",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.51642550270716"
         },
         {
           "http://example.com/terms#name": "Tiendenschuur",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.644694616792813",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.92871404647452"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.265787109189661",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.22223013528108"
         },
         {
           "http://example.com/terms#name": "Tiendehof",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.602871409735255",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.28891620207432"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1672016834592767",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.94015391366353"
         },
         {
           "http://example.com/terms#name": "Tiendenschuurdreef",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.791677912279843",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.813905826091364"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5870603849282365",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.32996729373879"
         },
         {
           "http://example.com/terms#name": "Tiendenbosplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1349609473573574",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.87750265639668"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.630440914010828",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.30525869005665"
         },
         {
           "http://example.com/terms#name": "Tiendenberg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.826961433068618",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.531397991957974"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9897171925734307",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.26306208452842"
         }
       ],
       "total_children_count": 24,
@@ -1040,33 +1008,77 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
-    },
-    {
-      "token_string": "n",
-      "triples": [],
-      "children": [
+      "triples_metadata": [],
+      "childlist": [
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment1964.jsonld#63435",
-              "@type": "tree:Node",
-              "token_string": "s"
-            }
+            "/streets/fragment1964.jsonld#17971"
           ]
         },
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment1964.jsonld#95847",
-              "@type": "tree:Node",
-              "token_string": "b"
-            }
+            "/streets/fragment1964.jsonld#28894"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1964.jsonld#30647"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1964.jsonld#38981"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1964.jsonld#59911"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1964.jsonld#77632"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1964.jsonld#80351"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1964.jsonld#94832"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1964.jsonld#101059"
           ]
         }
-      ],
+      ]
+    },
+    {
+      "token_string": "n",
+      "triples": [],
+      "children": {
+        "s": [
+          "1964",
+          "63435"
+        ],
+        "b": [
+          "1964",
+          "95847"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment1964.jsonld#49529",
         "@type": "tree:Node"
@@ -1074,83 +1086,83 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Tiendenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.206523383161217",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.84347900308613"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4992127515891105",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.173480789875796"
         },
         {
           "http://example.com/terms#name": "Tiendenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8683034188256085",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.859645553783906"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5122692389164176",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.31194961102229"
         },
         {
           "http://example.com/terms#name": "Tiendenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8683034188256085",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.859645553783906"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5122692389164176",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.31194961102229"
         },
         {
           "http://example.com/terms#name": "Tiendenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8683034188256085",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.859645553783906"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5122692389164176",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.31194961102229"
         },
         {
           "http://example.com/terms#name": "Tiendenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8683034188256085",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.859645553783906"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5122692389164176",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.31194961102229"
         },
         {
           "http://example.com/terms#name": "Tiendenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8683034188256085",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.859645553783906"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5122692389164176",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.31194961102229"
         },
         {
           "http://example.com/terms#name": "Tiendenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.501525321065499",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.9256935709832"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9218625148817106",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.86475196284708"
         },
         {
           "http://example.com/terms#name": "Tiendenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.767925580529273",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.67647900973353"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.063456367358417",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.061861460627625"
         },
         {
           "http://example.com/terms#name": "Tiendenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8757696767244694",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.81941069166235"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2091856401997414",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.23618524132217"
         },
         {
           "http://example.com/terms#name": "Tiendenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.740118786084019",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.38096047385603"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.039337138577005",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.208783076487244"
         },
         {
           "http://example.com/terms#name": "Tiendenbergstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.111956734097654",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.85751521048036"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.345734652289811",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.02026859656753"
         },
         {
           "http://example.com/terms#name": "Tiendenschuurstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.948782213683613",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.579150798650666"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.216073966503681",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.14357400358181"
         },
         {
           "http://example.com/terms#name": "Tiendenschuur",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.644694616792813",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.92871404647452"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.265787109189661",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.22223013528108"
         },
         {
           "http://example.com/terms#name": "Tiendenschuurdreef",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.791677912279843",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.813905826091364"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5870603849282365",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.32996729373879"
         },
         {
           "http://example.com/terms#name": "Tiendenbosplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1349609473573574",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.87750265639668"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.630440914010828",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.30525869005665"
         },
         {
           "http://example.com/terms#name": "Tiendenberg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.826961433068618",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.531397991957974"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9897171925734307",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.26306208452842"
         }
       ],
       "total_children_count": 9,
@@ -1209,33 +1221,35 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
-    },
-    {
-      "token_string": "s",
-      "triples": [],
-      "children": [
+      "triples_metadata": [],
+      "childlist": [
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment1964.jsonld#63436",
-              "@type": "tree:Node",
-              "token_string": "traat"
-            }
+            "/streets/fragment1964.jsonld#63435"
           ]
         },
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment1964.jsonld#79302",
-              "@type": "tree:Node",
-              "token_string": "chuur"
-            }
+            "/streets/fragment1964.jsonld#95847"
           ]
         }
-      ],
+      ]
+    },
+    {
+      "token_string": "s",
+      "triples": [],
+      "children": {
+        "traat": [
+          "1964",
+          "63436"
+        ],
+        "chuur": [
+          "1964",
+          "79302"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment1964.jsonld#59911",
         "@type": "tree:Node"
@@ -1243,68 +1257,68 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Tiendenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.206523383161217",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.84347900308613"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4992127515891105",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.173480789875796"
         },
         {
           "http://example.com/terms#name": "Tiendenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8683034188256085",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.859645553783906"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5122692389164176",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.31194961102229"
         },
         {
           "http://example.com/terms#name": "Tiendenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8683034188256085",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.859645553783906"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5122692389164176",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.31194961102229"
         },
         {
           "http://example.com/terms#name": "Tiendenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8683034188256085",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.859645553783906"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5122692389164176",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.31194961102229"
         },
         {
           "http://example.com/terms#name": "Tiendenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8683034188256085",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.859645553783906"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5122692389164176",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.31194961102229"
         },
         {
           "http://example.com/terms#name": "Tiendenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8683034188256085",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.859645553783906"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5122692389164176",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.31194961102229"
         },
         {
           "http://example.com/terms#name": "Tiendenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.501525321065499",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.9256935709832"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9218625148817106",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.86475196284708"
         },
         {
           "http://example.com/terms#name": "Tiendenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.767925580529273",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.67647900973353"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.063456367358417",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.061861460627625"
         },
         {
           "http://example.com/terms#name": "Tiendenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8757696767244694",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.81941069166235"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2091856401997414",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.23618524132217"
         },
         {
           "http://example.com/terms#name": "Tiendenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.740118786084019",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.38096047385603"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.039337138577005",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.208783076487244"
         },
         {
           "http://example.com/terms#name": "Tiendenschuurstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.948782213683613",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.579150798650666"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.216073966503681",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.14357400358181"
         },
         {
           "http://example.com/terms#name": "Tiendenschuur",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.644694616792813",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.92871404647452"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.265787109189661",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.22223013528108"
         },
         {
           "http://example.com/terms#name": "Tiendenschuurdreef",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.791677912279843",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.813905826091364"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5870603849282365",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.32996729373879"
         }
       ],
       "total_children_count": 4,
@@ -1345,62 +1359,77 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1964.jsonld#63436"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1964.jsonld#79302"
+          ]
+        }
+      ]
     },
     {
       "token_string": "traat",
       "triples": [
         {
           "http://example.com/terms#name": "Tiendenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.206523383161217",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.84347900308613"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4992127515891105",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.173480789875796"
         },
         {
           "http://example.com/terms#name": "Tiendenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8683034188256085",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.859645553783906"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5122692389164176",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.31194961102229"
         },
         {
           "http://example.com/terms#name": "Tiendenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8683034188256085",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.859645553783906"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5122692389164176",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.31194961102229"
         },
         {
           "http://example.com/terms#name": "Tiendenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8683034188256085",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.859645553783906"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5122692389164176",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.31194961102229"
         },
         {
           "http://example.com/terms#name": "Tiendenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8683034188256085",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.859645553783906"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5122692389164176",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.31194961102229"
         },
         {
           "http://example.com/terms#name": "Tiendenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8683034188256085",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.859645553783906"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5122692389164176",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.31194961102229"
         },
         {
           "http://example.com/terms#name": "Tiendenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.501525321065499",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.9256935709832"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9218625148817106",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.86475196284708"
         },
         {
           "http://example.com/terms#name": "Tiendenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.767925580529273",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.67647900973353"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.063456367358417",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.061861460627625"
         },
         {
           "http://example.com/terms#name": "Tiendenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8757696767244694",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.81941069166235"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2091856401997414",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.23618524132217"
         },
         {
           "http://example.com/terms#name": "Tiendenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.740118786084019",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.38096047385603"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.039337138577005",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.208783076487244"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1964.jsonld#63435",
         "@type": "tree:Node"
@@ -1408,53 +1437,53 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Tiendenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.206523383161217",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.84347900308613"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4992127515891105",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.173480789875796"
         },
         {
           "http://example.com/terms#name": "Tiendenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8683034188256085",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.859645553783906"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5122692389164176",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.31194961102229"
         },
         {
           "http://example.com/terms#name": "Tiendenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8683034188256085",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.859645553783906"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5122692389164176",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.31194961102229"
         },
         {
           "http://example.com/terms#name": "Tiendenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8683034188256085",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.859645553783906"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5122692389164176",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.31194961102229"
         },
         {
           "http://example.com/terms#name": "Tiendenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8683034188256085",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.859645553783906"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5122692389164176",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.31194961102229"
         },
         {
           "http://example.com/terms#name": "Tiendenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8683034188256085",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.859645553783906"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5122692389164176",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.31194961102229"
         },
         {
           "http://example.com/terms#name": "Tiendenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.501525321065499",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.9256935709832"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9218625148817106",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.86475196284708"
         },
         {
           "http://example.com/terms#name": "Tiendenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.767925580529273",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.67647900973353"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.063456367358417",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.061861460627625"
         },
         {
           "http://example.com/terms#name": "Tiendenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8757696767244694",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.81941069166235"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2091856401997414",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.23618524132217"
         },
         {
           "http://example.com/terms#name": "Tiendenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.740118786084019",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.38096047385603"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.039337138577005",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.208783076487244"
         }
       ],
       "total_children_count": 0,
@@ -1488,17 +1517,19 @@
         "Tiendenstraat",
         "Tiendenstraat",
         "Tiendenstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "laan",
       "triples": [
         {
           "http://example.com/terms#name": "Tiendelaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0442960181356344",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.28370381732767"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.662500387133288",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.51642550270716"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1964.jsonld#49529",
         "@type": "tree:Node"
@@ -1506,8 +1537,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Tiendelaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0442960181356344",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.28370381732767"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.662500387133288",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.51642550270716"
         }
       ],
       "total_children_count": 0,
@@ -1523,39 +1554,28 @@
       ],
       "triples_metadata": [
         "Tiendelaan"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "chuur",
       "triples": [
         {
           "http://example.com/terms#name": "Tiendenschuur",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.644694616792813",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.92871404647452"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.265787109189661",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.22223013528108"
         }
       ],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1964.jsonld#79303",
-              "@type": "tree:Node",
-              "token_string": "straat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1964.jsonld#94282",
-              "@type": "tree:Node",
-              "token_string": "dreef"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "straat": [
+          "1964",
+          "79303"
+        ],
+        "dreef": [
+          "1964",
+          "94282"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment1964.jsonld#63435",
         "@type": "tree:Node"
@@ -1563,18 +1583,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Tiendenschuurstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.948782213683613",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.579150798650666"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.216073966503681",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.14357400358181"
         },
         {
           "http://example.com/terms#name": "Tiendenschuur",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.644694616792813",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.92871404647452"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.265787109189661",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.22223013528108"
         },
         {
           "http://example.com/terms#name": "Tiendenschuurdreef",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.791677912279843",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.813905826091364"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5870603849282365",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.32996729373879"
         }
       ],
       "total_children_count": 2,
@@ -1602,6 +1622,20 @@
       ],
       "triples_metadata": [
         "Tiendenschuur"
+      ],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1964.jsonld#79303"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1964.jsonld#94282"
+          ]
+        }
       ]
     },
     {
@@ -1609,10 +1643,11 @@
       "triples": [
         {
           "http://example.com/terms#name": "Tiendenschuurstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.948782213683613",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.579150798650666"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.216073966503681",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.14357400358181"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1964.jsonld#79302",
         "@type": "tree:Node"
@@ -1620,8 +1655,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Tiendenschuurstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.948782213683613",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.579150798650666"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.216073966503681",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.14357400358181"
         }
       ],
       "total_children_count": 0,
@@ -1637,17 +1672,19 @@
       ],
       "triples_metadata": [
         "Tiendenschuurstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "hof",
       "triples": [
         {
           "http://example.com/terms#name": "Tiendehof",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.602871409735255",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.28891620207432"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1672016834592767",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.94015391366353"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1964.jsonld#49529",
         "@type": "tree:Node"
@@ -1655,8 +1692,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Tiendehof",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.602871409735255",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.28891620207432"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1672016834592767",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.94015391366353"
         }
       ],
       "total_children_count": 0,
@@ -1672,33 +1709,22 @@
       ],
       "triples_metadata": [
         "Tiendehof"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "agwand",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1964.jsonld#94280",
-              "@type": "tree:Node",
-              "token_string": "straat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1964.jsonld#94281",
-              "@type": "tree:Node",
-              "token_string": "laan"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "straat": [
+          "1964",
+          "94280"
+        ],
+        "laan": [
+          "1964",
+          "94281"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment1964.jsonld#49528",
         "@type": "tree:Node"
@@ -1706,33 +1732,33 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Tiendagwandstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1952915524772902",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.49015647495126"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.268391729790656",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.82507602185668"
         },
         {
           "http://example.com/terms#name": "Tiendagwandstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1530372275275553",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.66019371223587"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9823096870150385",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.211807090173956"
         },
         {
           "http://example.com/terms#name": "Tiendagwandstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1530372275275553",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.66019371223587"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9823096870150385",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.211807090173956"
         },
         {
           "http://example.com/terms#name": "Tiendagwandstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1530372275275553",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.66019371223587"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9823096870150385",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.211807090173956"
         },
         {
           "http://example.com/terms#name": "Tiendagwandstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1530372275275553",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.66019371223587"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9823096870150385",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.211807090173956"
         },
         {
           "http://example.com/terms#name": "Tiendagwandlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1755719815110433",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.71386095926704"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.682491294854706",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.32944557482835"
         }
       ],
       "total_children_count": 2,
@@ -1756,37 +1782,52 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1964.jsonld#94280"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1964.jsonld#94281"
+          ]
+        }
+      ]
     },
     {
       "token_string": "straat",
       "triples": [
         {
           "http://example.com/terms#name": "Tiendagwandstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1952915524772902",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.49015647495126"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.268391729790656",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.82507602185668"
         },
         {
           "http://example.com/terms#name": "Tiendagwandstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1530372275275553",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.66019371223587"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9823096870150385",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.211807090173956"
         },
         {
           "http://example.com/terms#name": "Tiendagwandstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1530372275275553",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.66019371223587"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9823096870150385",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.211807090173956"
         },
         {
           "http://example.com/terms#name": "Tiendagwandstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1530372275275553",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.66019371223587"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9823096870150385",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.211807090173956"
         },
         {
           "http://example.com/terms#name": "Tiendagwandstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1530372275275553",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.66019371223587"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9823096870150385",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.211807090173956"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1964.jsonld#94279",
         "@type": "tree:Node"
@@ -1794,28 +1835,28 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Tiendagwandstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1952915524772902",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.49015647495126"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.268391729790656",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.82507602185668"
         },
         {
           "http://example.com/terms#name": "Tiendagwandstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1530372275275553",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.66019371223587"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9823096870150385",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.211807090173956"
         },
         {
           "http://example.com/terms#name": "Tiendagwandstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1530372275275553",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.66019371223587"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9823096870150385",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.211807090173956"
         },
         {
           "http://example.com/terms#name": "Tiendagwandstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1530372275275553",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.66019371223587"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9823096870150385",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.211807090173956"
         },
         {
           "http://example.com/terms#name": "Tiendagwandstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1530372275275553",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.66019371223587"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9823096870150385",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.211807090173956"
         }
       ],
       "total_children_count": 0,
@@ -1839,17 +1880,19 @@
         "Tiendagwandstraat",
         "Tiendagwandstraat",
         "Tiendagwandstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "laan",
       "triples": [
         {
           "http://example.com/terms#name": "Tiendagwandlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1755719815110433",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.71386095926704"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.682491294854706",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.32944557482835"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1964.jsonld#94279",
         "@type": "tree:Node"
@@ -1857,8 +1900,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Tiendagwandlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1755719815110433",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.71386095926704"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.682491294854706",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.32944557482835"
         }
       ],
       "total_children_count": 0,
@@ -1874,17 +1917,19 @@
       ],
       "triples_metadata": [
         "Tiendagwandlaan"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "dreef",
       "triples": [
         {
           "http://example.com/terms#name": "Tiendenschuurdreef",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.791677912279843",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.813905826091364"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5870603849282365",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.32996729373879"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1964.jsonld#79302",
         "@type": "tree:Node"
@@ -1892,8 +1937,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Tiendenschuurdreef",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.791677912279843",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.813905826091364"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5870603849282365",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.32996729373879"
         }
       ],
       "total_children_count": 0,
@@ -1909,17 +1954,19 @@
       ],
       "triples_metadata": [
         "Tiendenschuurdreef"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "weg",
       "triples": [
         {
           "http://example.com/terms#name": "Tiendeweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0077962321572107",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.66655791875722"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2996422395865443",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.109036654688076"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1964.jsonld#49529",
         "@type": "tree:Node"
@@ -1927,8 +1974,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Tiendeweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0077962321572107",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.66655791875722"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2996422395865443",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.109036654688076"
         }
       ],
       "total_children_count": 0,
@@ -1944,33 +1991,22 @@
       ],
       "triples_metadata": [
         "Tiendeweg"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "b",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1964.jsonld#95849",
-              "@type": "tree:Node",
-              "token_string": "osplein"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1964.jsonld#99632",
-              "@type": "tree:Node",
-              "token_string": "erg"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "osplein": [
+          "1964",
+          "95849"
+        ],
+        "erg": [
+          "1964",
+          "99632"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment1964.jsonld#59911",
         "@type": "tree:Node"
@@ -1978,18 +2014,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Tiendenbergstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.111956734097654",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.85751521048036"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.345734652289811",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.02026859656753"
         },
         {
           "http://example.com/terms#name": "Tiendenbosplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1349609473573574",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.87750265639668"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.630440914010828",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.30525869005665"
         },
         {
           "http://example.com/terms#name": "Tiendenberg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.826961433068618",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.531397991957974"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9897171925734307",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.26306208452842"
         }
       ],
       "total_children_count": 3,
@@ -2015,17 +2051,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1964.jsonld#95849"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1964.jsonld#99632"
+          ]
+        }
+      ]
     },
     {
       "token_string": "osplein",
       "triples": [
         {
           "http://example.com/terms#name": "Tiendenbosplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1349609473573574",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.87750265639668"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.630440914010828",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.30525869005665"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1964.jsonld#95847",
         "@type": "tree:Node"
@@ -2033,8 +2084,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Tiendenbosplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1349609473573574",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.87750265639668"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.630440914010828",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.30525869005665"
         }
       ],
       "total_children_count": 0,
@@ -2050,29 +2101,24 @@
       ],
       "triples_metadata": [
         "Tiendenbosplein"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "erg",
       "triples": [
         {
           "http://example.com/terms#name": "Tiendenberg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.826961433068618",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.531397991957974"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9897171925734307",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.26306208452842"
         }
       ],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1964.jsonld#99633",
-              "@type": "tree:Node",
-              "token_string": "straat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "straat": [
+          "1964",
+          "99633"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment1964.jsonld#95847",
         "@type": "tree:Node"
@@ -2080,13 +2126,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Tiendenbergstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.111956734097654",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.85751521048036"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.345734652289811",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.02026859656753"
         },
         {
           "http://example.com/terms#name": "Tiendenberg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.826961433068618",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.531397991957974"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9897171925734307",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.26306208452842"
         }
       ],
       "total_children_count": 1,
@@ -2108,6 +2154,14 @@
       ],
       "triples_metadata": [
         "Tiendenberg"
+      ],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1964.jsonld#99633"
+          ]
+        }
       ]
     },
     {
@@ -2115,10 +2169,11 @@
       "triples": [
         {
           "http://example.com/terms#name": "Tiendenbergstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.111956734097654",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.85751521048036"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.345734652289811",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.02026859656753"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1964.jsonld#99632",
         "@type": "tree:Node"
@@ -2126,8 +2181,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Tiendenbergstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.111956734097654",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.85751521048036"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.345734652289811",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.02026859656753"
         }
       ],
       "total_children_count": 0,
@@ -2143,17 +2198,19 @@
       ],
       "triples_metadata": [
         "Tiendenbergstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "park",
       "triples": [
         {
           "http://example.com/terms#name": "Tiendepark",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5575680954668063",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.313189882788656"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.344709580748455",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.55231798186754"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1964.jsonld#49529",
         "@type": "tree:Node"
@@ -2161,8 +2218,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Tiendepark",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5575680954668063",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.313189882788656"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.344709580748455",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.55231798186754"
         }
       ],
       "total_children_count": 0,
@@ -2178,33 +2235,22 @@
       ],
       "triples_metadata": [
         "Tiendepark"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "s",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1964.jsonld#101969",
-              "@type": "tree:Node",
-              "token_string": "chuurstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1964.jsonld#101970",
-              "@type": "tree:Node",
-              "token_string": "traat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "chuurstraat": [
+          "1964",
+          "101969"
+        ],
+        "traat": [
+          "1964",
+          "101970"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment1964.jsonld#49528",
         "@type": "tree:Node"
@@ -2212,13 +2258,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Tiendschuurstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4585348744655406",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.1684932431134"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0879485423507176",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.29827919691166"
         },
         {
           "http://example.com/terms#name": "Tiendstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7273946737318497",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.399930515197745"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.430100222906322",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.18310247605141"
         }
       ],
       "total_children_count": 2,
@@ -2238,17 +2284,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1964.jsonld#101969"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1964.jsonld#101970"
+          ]
+        }
+      ]
     },
     {
       "token_string": "chuurstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Tiendschuurstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4585348744655406",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.1684932431134"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0879485423507176",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.29827919691166"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1964.jsonld#101968",
         "@type": "tree:Node"
@@ -2256,8 +2317,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Tiendschuurstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4585348744655406",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.1684932431134"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0879485423507176",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.29827919691166"
         }
       ],
       "total_children_count": 0,
@@ -2273,17 +2334,19 @@
       ],
       "triples_metadata": [
         "Tiendschuurstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "traat",
       "triples": [
         {
           "http://example.com/terms#name": "Tiendstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7273946737318497",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.399930515197745"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.430100222906322",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.18310247605141"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1964.jsonld#101968",
         "@type": "tree:Node"
@@ -2291,8 +2354,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Tiendstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7273946737318497",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.399930515197745"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.430100222906322",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.18310247605141"
         }
       ],
       "total_children_count": 0,
@@ -2308,7 +2371,8 @@
       ],
       "triples_metadata": [
         "Tiendstraat"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

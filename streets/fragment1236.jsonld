@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "zonder Vrees",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1236.jsonld#67520",
-              "@type": "tree:Node",
-              "token_string": "straat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1236.jsonld#67521",
-              "@type": "tree:Node",
-              "token_string": "laan"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "straat": [
+          "1236",
+          "67520"
+        ],
+        "laan": [
+          "1236",
+          "67521"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment468.jsonld#1696",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Jan zonder Vreesstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.672858413784268",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.409599508303444"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2787991235316554",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.47477776490248"
         },
         {
           "http://example.com/terms#name": "Jan zonder Vreeslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5322959221744092",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.44092949933743"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.292258687014302",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.622836706598044"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1236.jsonld#67520"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1236.jsonld#67521"
+          ]
+        }
+      ]
     },
     {
       "token_string": "straat",
       "triples": [
         {
           "http://example.com/terms#name": "Jan zonder Vreesstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.672858413784268",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.409599508303444"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2787991235316554",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.47477776490248"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1236.jsonld#67519",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Jan zonder Vreesstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.672858413784268",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.409599508303444"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2787991235316554",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.47477776490248"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Jan zonder Vreesstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "laan",
       "triples": [
         {
           "http://example.com/terms#name": "Jan zonder Vreeslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5322959221744092",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.44092949933743"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.292258687014302",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.622836706598044"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1236.jsonld#67519",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Jan zonder Vreeslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5322959221744092",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.44092949933743"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.292258687014302",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.622836706598044"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Jan zonder Vreeslaan"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

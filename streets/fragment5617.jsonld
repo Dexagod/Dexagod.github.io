@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "r",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5617.jsonld#167203",
-              "@type": "tree:Node",
-              "token_string": "affenplein"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5617.jsonld#167204",
-              "@type": "tree:Node",
-              "token_string": "embois"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "affenplein": [
+          "5617",
+          "167203"
+        ],
+        "embois": [
+          "5617",
+          "167204"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment690.jsonld#957",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Giraffenplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1508514640314376",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.55920656963759"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2122265906451153",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.270900082593364"
         },
         {
           "http://example.com/terms#name": "Girembois",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8372332900597117",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.86300517418826"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.443696174818749",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.02254539301361"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5617.jsonld#167203"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5617.jsonld#167204"
+          ]
+        }
+      ]
     },
     {
       "token_string": "affenplein",
       "triples": [
         {
           "http://example.com/terms#name": "Giraffenplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1508514640314376",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.55920656963759"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2122265906451153",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.270900082593364"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5617.jsonld#167202",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Giraffenplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1508514640314376",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.55920656963759"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2122265906451153",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.270900082593364"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Giraffenplein"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "embois",
       "triples": [
         {
           "http://example.com/terms#name": "Girembois",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8372332900597117",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.86300517418826"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.443696174818749",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.02254539301361"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5617.jsonld#167202",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Girembois",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8372332900597117",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.86300517418826"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.443696174818749",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.02254539301361"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Girembois"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

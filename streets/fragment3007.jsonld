@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "O",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3007.jsonld#99782",
-              "@type": "tree:Node",
-              "token_string": "lm"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3007.jsonld#99783",
-              "@type": "tree:Node",
-              "token_string": "udedreef"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "lm": [
+          "3007",
+          "99782"
+        ],
+        "udedreef": [
+          "3007",
+          "99783"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment180.jsonld#5073",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nieuwe Olm",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2719285572819405",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.2545193344699"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9399734454141098",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.82390262206983"
         },
         {
           "http://example.com/terms#name": "Nieuwe Oudedreef",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.598011031210992",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.011052331827706"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.086701178244719",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.46196695684451"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3007.jsonld#99782"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3007.jsonld#99783"
+          ]
+        }
+      ]
     },
     {
       "token_string": "lm",
       "triples": [
         {
           "http://example.com/terms#name": "Nieuwe Olm",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2719285572819405",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.2545193344699"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9399734454141098",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.82390262206983"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3007.jsonld#99781",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nieuwe Olm",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2719285572819405",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.2545193344699"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9399734454141098",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.82390262206983"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Nieuwe Olm"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "udedreef",
       "triples": [
         {
           "http://example.com/terms#name": "Nieuwe Oudedreef",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.598011031210992",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.011052331827706"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.086701178244719",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.46196695684451"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3007.jsonld#99781",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nieuwe Oudedreef",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.598011031210992",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.011052331827706"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.086701178244719",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.46196695684451"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Nieuwe Oudedreef"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

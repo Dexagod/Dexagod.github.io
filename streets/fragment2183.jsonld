@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "aut",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2183.jsonld#37619",
-              "@type": "tree:Node",
-              "token_string": "laan"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2183.jsonld#37620",
-              "@type": "tree:Node",
-              "token_string": "enlaan"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "laan": [
+          "2183",
+          "37619"
+        ],
+        "enlaan": [
+          "2183",
+          "37620"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment349.jsonld#195",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Herautlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.353517127609416",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.78831880886271"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.81573362060948",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.28373430072041"
         },
         {
           "http://example.com/terms#name": "Herautenlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.337229201483008",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.05121705878677"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4413686662121568",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.29463452984284"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2183.jsonld#37619"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2183.jsonld#37620"
+          ]
+        }
+      ]
     },
     {
       "token_string": "laan",
       "triples": [
         {
           "http://example.com/terms#name": "Herautlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.353517127609416",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.78831880886271"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.81573362060948",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.28373430072041"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2183.jsonld#37618",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Herautlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.353517127609416",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.78831880886271"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.81573362060948",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.28373430072041"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Herautlaan"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "enlaan",
       "triples": [
         {
           "http://example.com/terms#name": "Herautenlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.337229201483008",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.05121705878677"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4413686662121568",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.29463452984284"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2183.jsonld#37618",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Herautenlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.337229201483008",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.05121705878677"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4413686662121568",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.29463452984284"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Herautenlaan"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

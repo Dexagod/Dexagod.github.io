@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "j",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4967.jsonld#170029",
-              "@type": "tree:Node",
-              "token_string": "enrieux"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4967.jsonld#170030",
-              "@type": "tree:Node",
-              "token_string": "art Binamé"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "enrieux": [
+          "4967",
+          "170029"
+        ],
+        "art Binamé": [
+          "4967",
+          "170030"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4152.jsonld#105100",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Bajenrieux",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9814532618874052",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.0020308371034"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7874414307529483",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.53385360048359"
         },
         {
           "http://example.com/terms#name": "Rue Bajart Binamé",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.783206612142061",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.47041443362581"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1571007773557755",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.010656852132584"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4967.jsonld#170029"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4967.jsonld#170030"
+          ]
+        }
+      ]
     },
     {
       "token_string": "enrieux",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Bajenrieux",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9814532618874052",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.0020308371034"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7874414307529483",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.53385360048359"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4967.jsonld#170028",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Bajenrieux",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9814532618874052",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.0020308371034"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7874414307529483",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.53385360048359"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Rue Bajenrieux"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "art Binamé",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Bajart Binamé",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.783206612142061",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.47041443362581"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1571007773557755",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.010656852132584"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4967.jsonld#170028",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Bajart Binamé",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.783206612142061",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.47041443362581"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1571007773557755",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.010656852132584"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Rue Bajart Binamé"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

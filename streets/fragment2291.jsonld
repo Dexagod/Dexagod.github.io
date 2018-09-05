@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "m",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2291.jsonld#33179",
-              "@type": "tree:Node",
-              "token_string": "anstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2291.jsonld#33180",
-              "@type": "tree:Node",
-              "token_string": "lei"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2291.jsonld#82810",
-              "@type": "tree:Node",
-              "token_string": "erestraat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "anstraat": [
+          "2291",
+          "33179"
+        ],
+        "lei": [
+          "2291",
+          "33180"
+        ],
+        "erestraat": [
+          "2291",
+          "82810"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment40.jsonld#2141",
         "@type": "tree:Node"
@@ -62,18 +44,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Holmanstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4992168957960565",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.43003386763988"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.541461825236105",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.67676351744833"
         },
         {
           "http://example.com/terms#name": "Holmlei",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9114948128787947",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.642632028556484"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.710431556096065",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.44080950381794"
         },
         {
           "http://example.com/terms#name": "Holmerestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.467218698057353",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.95306409535354"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.16947922543123",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.88313851944235"
         }
       ],
       "total_children_count": 3,
@@ -99,17 +81,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2291.jsonld#33179"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2291.jsonld#33180"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2291.jsonld#82810"
+          ]
+        }
+      ]
     },
     {
       "token_string": "anstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Holmanstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4992168957960565",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.43003386763988"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.541461825236105",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.67676351744833"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2291.jsonld#33178",
         "@type": "tree:Node"
@@ -117,8 +120,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Holmanstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4992168957960565",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.43003386763988"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.541461825236105",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.67676351744833"
         }
       ],
       "total_children_count": 0,
@@ -134,17 +137,19 @@
       ],
       "triples_metadata": [
         "Holmanstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "lei",
       "triples": [
         {
           "http://example.com/terms#name": "Holmlei",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9114948128787947",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.642632028556484"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.710431556096065",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.44080950381794"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2291.jsonld#33178",
         "@type": "tree:Node"
@@ -152,8 +157,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Holmlei",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9114948128787947",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.642632028556484"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.710431556096065",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.44080950381794"
         }
       ],
       "total_children_count": 0,
@@ -169,17 +174,19 @@
       ],
       "triples_metadata": [
         "Holmlei"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "erestraat",
       "triples": [
         {
           "http://example.com/terms#name": "Holmerestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.467218698057353",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.95306409535354"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.16947922543123",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.88313851944235"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2291.jsonld#33178",
         "@type": "tree:Node"
@@ -187,8 +194,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Holmerestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.467218698057353",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.95306409535354"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.16947922543123",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.88313851944235"
         }
       ],
       "total_children_count": 0,
@@ -204,7 +211,8 @@
       ],
       "triples_metadata": [
         "Holmerestraat"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

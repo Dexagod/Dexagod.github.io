@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "rd",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6367.jsonld#164928",
-              "@type": "tree:Node",
-              "token_string": "eau"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6367.jsonld#164929",
-              "@type": "tree:Node",
-              "token_string": "-d'Ave"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6367.jsonld#177371",
-              "@type": "tree:Node",
-              "token_string": "ant"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "eau": [
+          "6367",
+          "164928"
+        ],
+        "-d'Ave": [
+          "6367",
+          "164929"
+        ],
+        "ant": [
+          "6367",
+          "177371"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4127.jsonld#117388",
         "@type": "tree:Node"
@@ -62,18 +44,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue du Sourdeau",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.001692141588556",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.9034599683325"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2070398012388135",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.85112051404561"
         },
         {
           "http://example.com/terms#name": "Rue du Sourd-d'Ave",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.902976214097488",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.55829825475729"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7736533883315557",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.66352441823114"
         },
         {
           "http://example.com/terms#name": "Rue du Sourdant",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5242482823731662",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.23743305780732"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.111725362615481",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.62851390979476"
         }
       ],
       "total_children_count": 3,
@@ -99,17 +81,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6367.jsonld#164928"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6367.jsonld#164929"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6367.jsonld#177371"
+          ]
+        }
+      ]
     },
     {
       "token_string": "eau",
       "triples": [
         {
           "http://example.com/terms#name": "Rue du Sourdeau",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.001692141588556",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.9034599683325"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2070398012388135",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.85112051404561"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6367.jsonld#164927",
         "@type": "tree:Node"
@@ -117,8 +120,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue du Sourdeau",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.001692141588556",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.9034599683325"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2070398012388135",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.85112051404561"
         }
       ],
       "total_children_count": 0,
@@ -134,17 +137,19 @@
       ],
       "triples_metadata": [
         "Rue du Sourdeau"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "-d'Ave",
       "triples": [
         {
           "http://example.com/terms#name": "Rue du Sourd-d'Ave",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.902976214097488",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.55829825475729"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7736533883315557",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.66352441823114"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6367.jsonld#164927",
         "@type": "tree:Node"
@@ -152,8 +157,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue du Sourd-d'Ave",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.902976214097488",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.55829825475729"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7736533883315557",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.66352441823114"
         }
       ],
       "total_children_count": 0,
@@ -169,17 +174,19 @@
       ],
       "triples_metadata": [
         "Rue du Sourd-d'Ave"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "ant",
       "triples": [
         {
           "http://example.com/terms#name": "Rue du Sourdant",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5242482823731662",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.23743305780732"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.111725362615481",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.62851390979476"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6367.jsonld#164927",
         "@type": "tree:Node"
@@ -187,8 +194,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue du Sourdant",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5242482823731662",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.23743305780732"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.111725362615481",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.62851390979476"
         }
       ],
       "total_children_count": 0,
@@ -204,7 +211,8 @@
       ],
       "triples_metadata": [
         "Rue du Sourdant"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

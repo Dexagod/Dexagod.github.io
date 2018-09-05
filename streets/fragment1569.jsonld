@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "A",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1569.jsonld#63673",
-              "@type": "tree:Node",
-              "token_string": "nnaertstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1569.jsonld#63674",
-              "@type": "tree:Node",
-              "token_string": "ertsstraat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "nnaertstraat": [
+          "1569",
+          "63673"
+        ],
+        "ertsstraat": [
+          "1569",
+          "63674"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment1029.jsonld#12277",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Pastoor Annaertstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.607132151727318",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.948353475481326"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9847831911190417",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.22109500958461"
         },
         {
           "http://example.com/terms#name": "Pastoor Aertsstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.021253995480884",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.50963577224416"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5104930257252334",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.40183126360603"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1569.jsonld#63673"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1569.jsonld#63674"
+          ]
+        }
+      ]
     },
     {
       "token_string": "nnaertstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Pastoor Annaertstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.607132151727318",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.948353475481326"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9847831911190417",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.22109500958461"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1569.jsonld#63672",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Pastoor Annaertstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.607132151727318",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.948353475481326"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9847831911190417",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.22109500958461"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Pastoor Annaertstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "ertsstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Pastoor Aertsstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.021253995480884",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.50963577224416"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5104930257252334",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.40183126360603"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1569.jsonld#63672",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Pastoor Aertsstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.021253995480884",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.50963577224416"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5104930257252334",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.40183126360603"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Pastoor Aertsstraat"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

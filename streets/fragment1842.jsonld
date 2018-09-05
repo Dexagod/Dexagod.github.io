@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "-",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1842.jsonld#82547",
-              "@type": "tree:Node",
-              "token_string": "Gistelhof"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1842.jsonld#82548",
-              "@type": "tree:Node",
-              "token_string": "Molenveld"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "Gistelhof": [
+          "1842",
+          "82547"
+        ],
+        "Molenveld": [
+          "1842",
+          "82548"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment1663.jsonld#11635",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "West-Gistelhof",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.057011858582124",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.7483871722551"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2557712672092816",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.25494505234945"
         },
         {
           "http://example.com/terms#name": "West-Molenveld",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.814986646321365",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.44425464439884"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8834470091058813",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.28358959735613"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1842.jsonld#82547"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1842.jsonld#82548"
+          ]
+        }
+      ]
     },
     {
       "token_string": "Gistelhof",
       "triples": [
         {
           "http://example.com/terms#name": "West-Gistelhof",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.057011858582124",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.7483871722551"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2557712672092816",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.25494505234945"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1842.jsonld#82546",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "West-Gistelhof",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.057011858582124",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.7483871722551"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2557712672092816",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.25494505234945"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "West-Gistelhof"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "Molenveld",
       "triples": [
         {
           "http://example.com/terms#name": "West-Molenveld",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.814986646321365",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.44425464439884"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8834470091058813",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.28358959735613"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1842.jsonld#82546",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "West-Molenveld",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.814986646321365",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.44425464439884"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8834470091058813",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.28358959735613"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "West-Molenveld"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "toren",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3565.jsonld#102162",
-              "@type": "tree:Node",
-              "token_string": "plein"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3565.jsonld#102163",
-              "@type": "tree:Node",
-              "token_string": "tunnel"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "plein": [
+          "3565",
+          "102162"
+        ],
+        "tunnel": [
+          "3565",
+          "102163"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment2237.jsonld#22470",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Blauwtorenplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3391607576013094",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.192373385218175"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.65764775647979",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.09051941792422"
         },
         {
           "http://example.com/terms#name": "Blauwtorentunnel",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4326722608450253",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.03877458701361"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1141227530047653",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.064785384382695"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3565.jsonld#102162"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3565.jsonld#102163"
+          ]
+        }
+      ]
     },
     {
       "token_string": "plein",
       "triples": [
         {
           "http://example.com/terms#name": "Blauwtorenplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3391607576013094",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.192373385218175"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.65764775647979",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.09051941792422"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3565.jsonld#102161",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Blauwtorenplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3391607576013094",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.192373385218175"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.65764775647979",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.09051941792422"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Blauwtorenplein"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "tunnel",
       "triples": [
         {
           "http://example.com/terms#name": "Blauwtorentunnel",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4326722608450253",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.03877458701361"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1141227530047653",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.064785384382695"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3565.jsonld#102161",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Blauwtorentunnel",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4326722608450253",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.03877458701361"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1141227530047653",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.064785384382695"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Blauwtorentunnel"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

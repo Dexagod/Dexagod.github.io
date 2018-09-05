@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "ïeur ",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4953.jsonld#127920",
-              "@type": "tree:Node",
-              "token_string": "Haniquelle"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4953.jsonld#127921",
-              "@type": "tree:Node",
-              "token_string": "Carlot"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "Haniquelle": [
+          "4953",
+          "127920"
+        ],
+        "Carlot": [
+          "4953",
+          "127921"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4187.jsonld#105470",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Maïeur Haniquelle",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.385047818706748",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.019777397398386"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7500345910720663",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.78821269736488"
         },
         {
           "http://example.com/terms#name": "Rue Maïeur Carlot",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8057003967703205",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.796960216973126"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8801617929746297",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.84017879779283"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4953.jsonld#127920"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4953.jsonld#127921"
+          ]
+        }
+      ]
     },
     {
       "token_string": "Haniquelle",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Maïeur Haniquelle",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.385047818706748",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.019777397398386"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7500345910720663",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.78821269736488"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4953.jsonld#127919",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Maïeur Haniquelle",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.385047818706748",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.019777397398386"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7500345910720663",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.78821269736488"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Rue Maïeur Haniquelle"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "Carlot",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Maïeur Carlot",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8057003967703205",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.796960216973126"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8801617929746297",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.84017879779283"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4953.jsonld#127919",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Maïeur Carlot",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8057003967703205",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.796960216973126"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8801617929746297",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.84017879779283"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Rue Maïeur Carlot"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

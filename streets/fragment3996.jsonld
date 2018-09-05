@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "dt-",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3996.jsonld#160433",
-              "@type": "tree:Node",
-              "token_string": "de-Foestraets"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3996.jsonld#160434",
-              "@type": "tree:Node",
-              "token_string": "Henri-Calvez"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "de-Foestraets": [
+          "3996",
+          "160433"
+        ],
+        "Henri-Calvez": [
+          "3996",
+          "160434"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment3712.jsonld#105115",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Cdt-de-Foestraets",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.253525716811629",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.09457244683425"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.349669689866524",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.12391222671155"
         },
         {
           "http://example.com/terms#name": "Rue Cdt-Henri-Calvez",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7350992106829235",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.527689263809684"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.37860553315446",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.26041892689157"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3996.jsonld#160433"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3996.jsonld#160434"
+          ]
+        }
+      ]
     },
     {
       "token_string": "de-Foestraets",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Cdt-de-Foestraets",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.253525716811629",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.09457244683425"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.349669689866524",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.12391222671155"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3996.jsonld#160432",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Cdt-de-Foestraets",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.253525716811629",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.09457244683425"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.349669689866524",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.12391222671155"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Rue Cdt-de-Foestraets"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "Henri-Calvez",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Cdt-Henri-Calvez",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7350992106829235",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.527689263809684"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.37860553315446",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.26041892689157"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3996.jsonld#160432",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Cdt-Henri-Calvez",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7350992106829235",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.527689263809684"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.37860553315446",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.26041892689157"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Rue Cdt-Henri-Calvez"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "e",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4776.jsonld#131375",
-              "@type": "tree:Node",
-              "token_string": "au-Site"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4776.jsonld#131376",
-              "@type": "tree:Node",
-              "token_string": "lvédère"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4776.jsonld#135813",
-              "@type": "tree:Node",
-              "token_string": "cquerelle"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "au-Site": [
+          "4776",
+          "131375"
+        ],
+        "lvédère": [
+          "4776",
+          "131376"
+        ],
+        "cquerelle": [
+          "4776",
+          "135813"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4803.jsonld#114002",
         "@type": "tree:Node"
@@ -62,18 +44,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Place du Beau-Site",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.08522699422414",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.486492569686185"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.398611757493495",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.05442670092161"
         },
         {
           "http://example.com/terms#name": "Place du Belvédère",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1479520547784925",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.633853063827274"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0332455988291662",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.45897272955897"
         },
         {
           "http://example.com/terms#name": "Place du Becquerelle",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.54809046352813",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.95536376272745"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4334118932156494",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.82309726673645"
         }
       ],
       "total_children_count": 3,
@@ -99,17 +81,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4776.jsonld#131375"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4776.jsonld#131376"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4776.jsonld#135813"
+          ]
+        }
+      ]
     },
     {
       "token_string": "au-Site",
       "triples": [
         {
           "http://example.com/terms#name": "Place du Beau-Site",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.08522699422414",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.486492569686185"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.398611757493495",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.05442670092161"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4776.jsonld#131374",
         "@type": "tree:Node"
@@ -117,8 +120,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Place du Beau-Site",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.08522699422414",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.486492569686185"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.398611757493495",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.05442670092161"
         }
       ],
       "total_children_count": 0,
@@ -134,17 +137,19 @@
       ],
       "triples_metadata": [
         "Place du Beau-Site"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "lvédère",
       "triples": [
         {
           "http://example.com/terms#name": "Place du Belvédère",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1479520547784925",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.633853063827274"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0332455988291662",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.45897272955897"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4776.jsonld#131374",
         "@type": "tree:Node"
@@ -152,8 +157,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Place du Belvédère",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1479520547784925",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.633853063827274"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0332455988291662",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.45897272955897"
         }
       ],
       "total_children_count": 0,
@@ -169,17 +174,19 @@
       ],
       "triples_metadata": [
         "Place du Belvédère"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "cquerelle",
       "triples": [
         {
           "http://example.com/terms#name": "Place du Becquerelle",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.54809046352813",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.95536376272745"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4334118932156494",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.82309726673645"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4776.jsonld#131374",
         "@type": "tree:Node"
@@ -187,8 +194,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Place du Becquerelle",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.54809046352813",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.95536376272745"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4334118932156494",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.82309726673645"
         }
       ],
       "total_children_count": 0,
@@ -204,7 +211,8 @@
       ],
       "triples_metadata": [
         "Place du Becquerelle"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

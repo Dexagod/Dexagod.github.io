@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "c",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5426.jsonld#100825",
-              "@type": "tree:Node",
-              "token_string": "qstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5426.jsonld#100826",
-              "@type": "tree:Node",
-              "token_string": "argo"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5426.jsonld#180502",
-              "@type": "tree:Node",
-              "token_string": "hstrasse"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "qstraat": [
+          "5426",
+          "100825"
+        ],
+        "argo": [
+          "5426",
+          "100826"
+        ],
+        "hstrasse": [
+          "5426",
+          "180502"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4707.jsonld#477",
         "@type": "tree:Node"
@@ -62,18 +44,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Brucqstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4091508363088088",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.00691520354608"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4094439943365313",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.87942659263667"
         },
         {
           "http://example.com/terms#name": "Brucargo",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9818727180657465",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.30979059109744"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0820103707677204",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.889324042624786"
         },
         {
           "http://example.com/terms#name": "Bruchstrasse",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.281325613922232",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.806213770532025"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.13124865253434",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.499152915788116"
         }
       ],
       "total_children_count": 3,
@@ -99,17 +81,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5426.jsonld#100825"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5426.jsonld#100826"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5426.jsonld#180502"
+          ]
+        }
+      ]
     },
     {
       "token_string": "qstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Brucqstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4091508363088088",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.00691520354608"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4094439943365313",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.87942659263667"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5426.jsonld#100824",
         "@type": "tree:Node"
@@ -117,8 +120,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Brucqstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4091508363088088",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.00691520354608"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4094439943365313",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.87942659263667"
         }
       ],
       "total_children_count": 0,
@@ -134,17 +137,19 @@
       ],
       "triples_metadata": [
         "Brucqstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "argo",
       "triples": [
         {
           "http://example.com/terms#name": "Brucargo",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9818727180657465",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.30979059109744"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0820103707677204",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.889324042624786"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5426.jsonld#100824",
         "@type": "tree:Node"
@@ -152,8 +157,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Brucargo",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9818727180657465",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.30979059109744"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0820103707677204",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.889324042624786"
         }
       ],
       "total_children_count": 0,
@@ -169,17 +174,19 @@
       ],
       "triples_metadata": [
         "Brucargo"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "hstrasse",
       "triples": [
         {
           "http://example.com/terms#name": "Bruchstrasse",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.281325613922232",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.806213770532025"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.13124865253434",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.499152915788116"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5426.jsonld#100824",
         "@type": "tree:Node"
@@ -187,8 +194,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Bruchstrasse",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.281325613922232",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.806213770532025"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.13124865253434",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.499152915788116"
         }
       ],
       "total_children_count": 0,
@@ -204,7 +211,8 @@
       ],
       "triples_metadata": [
         "Bruchstrasse"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

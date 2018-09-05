@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "g",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment324.jsonld#11189",
-              "@type": "tree:Node",
-              "token_string": "raafstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment324.jsonld#11190",
-              "@type": "tree:Node",
-              "token_string": "emlaan"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "raafstraat": [
+          "324",
+          "11189"
+        ],
+        "emlaan": [
+          "324",
+          "11190"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment324.jsonld#50832",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nedergraafstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.680743158215088",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.97957878931309"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.705568200642725",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.32464361201219"
         },
         {
           "http://example.com/terms#name": "Nedergemlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9536494492427825",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.48577607085659"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8696736118227384",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.22015849170958"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment324.jsonld#11189"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment324.jsonld#11190"
+          ]
+        }
+      ]
     },
     {
       "token_string": "raafstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Nedergraafstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.680743158215088",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.97957878931309"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.705568200642725",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.32464361201219"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment324.jsonld#11188",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nedergraafstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.680743158215088",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.97957878931309"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.705568200642725",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.32464361201219"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Nedergraafstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "emlaan",
       "triples": [
         {
           "http://example.com/terms#name": "Nedergemlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9536494492427825",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.48577607085659"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8696736118227384",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.22015849170958"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment324.jsonld#11188",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nedergemlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9536494492427825",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.48577607085659"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8696736118227384",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.22015849170958"
         }
       ],
       "total_children_count": 0,
@@ -148,33 +153,22 @@
       ],
       "triples_metadata": [
         "Nedergemlaan"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "st",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment324.jsonld#19044",
-              "@type": "tree:Node",
-              "token_string": "raat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment324.jsonld#78084",
-              "@type": "tree:Node",
-              "token_string": "e"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "raat": [
+          "324",
+          "19044"
+        ],
+        "e": [
+          "324",
+          "78084"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment324.jsonld#50832",
         "@type": "tree:Node"
@@ -182,78 +176,78 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nederstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.464464789297425",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.87875720868769"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8612205491585447",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.82000319271049"
         },
         {
           "http://example.com/terms#name": "Nederstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3594063238637766",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.54442269321718"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6469382958999894",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.05232746601108"
         },
         {
           "http://example.com/terms#name": "Nederstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3594063238637766",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.54442269321718"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6469382958999894",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.05232746601108"
         },
         {
           "http://example.com/terms#name": "Nederstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3594063238637766",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.54442269321718"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6469382958999894",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.05232746601108"
         },
         {
           "http://example.com/terms#name": "Nederstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3594063238637766",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.54442269321718"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6469382958999894",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.05232746601108"
         },
         {
           "http://example.com/terms#name": "Nederstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3594063238637766",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.54442269321718"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6469382958999894",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.05232746601108"
         },
         {
           "http://example.com/terms#name": "Nederstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7888332821220803",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.273838353971215"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.766385591083681",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.212656613630024"
         },
         {
           "http://example.com/terms#name": "Nederstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8298488412124225",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.91669209211315"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.985581645160937",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.69071290650105"
         },
         {
           "http://example.com/terms#name": "Nederstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3227694422131675",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.277187006468175"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3300090936447972",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.95713336011557"
         },
         {
           "http://example.com/terms#name": "Nederstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1869208854247018",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.72057963515549"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.133963454990986",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.170313096780106"
         },
         {
           "http://example.com/terms#name": "Nederstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8862946162572642",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.98504558369907"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.559504007591906",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.11871346584515"
         },
         {
           "http://example.com/terms#name": "Nederstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.059172840415749",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.80297704845697"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.661958499725358",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.46683717374378"
         },
         {
           "http://example.com/terms#name": "Nederstenkouter",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5287500177779987",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.14522900744019"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.098874385572206",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.43681753845744"
         },
         {
           "http://example.com/terms#name": "Nederstenberg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1387471995530314",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.48009825603085"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.205546607119855",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.37430361762427"
         },
         {
           "http://example.com/terms#name": "Nedersteenberg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.757746582541154",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.190462792352434"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7609212251080413",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.108888700719426"
         }
       ],
       "total_children_count": 6,
@@ -296,72 +290,87 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment324.jsonld#19044"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment324.jsonld#78084"
+          ]
+        }
+      ]
     },
     {
       "token_string": "raat",
       "triples": [
         {
           "http://example.com/terms#name": "Nederstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.464464789297425",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.87875720868769"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8612205491585447",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.82000319271049"
         },
         {
           "http://example.com/terms#name": "Nederstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3594063238637766",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.54442269321718"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6469382958999894",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.05232746601108"
         },
         {
           "http://example.com/terms#name": "Nederstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3594063238637766",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.54442269321718"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6469382958999894",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.05232746601108"
         },
         {
           "http://example.com/terms#name": "Nederstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3594063238637766",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.54442269321718"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6469382958999894",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.05232746601108"
         },
         {
           "http://example.com/terms#name": "Nederstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3594063238637766",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.54442269321718"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6469382958999894",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.05232746601108"
         },
         {
           "http://example.com/terms#name": "Nederstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3594063238637766",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.54442269321718"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6469382958999894",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.05232746601108"
         },
         {
           "http://example.com/terms#name": "Nederstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7888332821220803",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.273838353971215"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.766385591083681",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.212656613630024"
         },
         {
           "http://example.com/terms#name": "Nederstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8298488412124225",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.91669209211315"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.985581645160937",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.69071290650105"
         },
         {
           "http://example.com/terms#name": "Nederstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3227694422131675",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.277187006468175"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3300090936447972",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.95713336011557"
         },
         {
           "http://example.com/terms#name": "Nederstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1869208854247018",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.72057963515549"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.133963454990986",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.170313096780106"
         },
         {
           "http://example.com/terms#name": "Nederstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8862946162572642",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.98504558369907"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.559504007591906",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.11871346584515"
         },
         {
           "http://example.com/terms#name": "Nederstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.059172840415749",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.80297704845697"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.661958499725358",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.46683717374378"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment324.jsonld#19043",
         "@type": "tree:Node"
@@ -369,63 +378,63 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nederstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.464464789297425",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.87875720868769"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8612205491585447",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.82000319271049"
         },
         {
           "http://example.com/terms#name": "Nederstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3594063238637766",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.54442269321718"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6469382958999894",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.05232746601108"
         },
         {
           "http://example.com/terms#name": "Nederstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3594063238637766",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.54442269321718"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6469382958999894",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.05232746601108"
         },
         {
           "http://example.com/terms#name": "Nederstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3594063238637766",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.54442269321718"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6469382958999894",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.05232746601108"
         },
         {
           "http://example.com/terms#name": "Nederstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3594063238637766",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.54442269321718"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6469382958999894",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.05232746601108"
         },
         {
           "http://example.com/terms#name": "Nederstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3594063238637766",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.54442269321718"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6469382958999894",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.05232746601108"
         },
         {
           "http://example.com/terms#name": "Nederstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7888332821220803",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.273838353971215"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.766385591083681",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.212656613630024"
         },
         {
           "http://example.com/terms#name": "Nederstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8298488412124225",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.91669209211315"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.985581645160937",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.69071290650105"
         },
         {
           "http://example.com/terms#name": "Nederstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3227694422131675",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.277187006468175"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3300090936447972",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.95713336011557"
         },
         {
           "http://example.com/terms#name": "Nederstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1869208854247018",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.72057963515549"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.133963454990986",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.170313096780106"
         },
         {
           "http://example.com/terms#name": "Nederstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8862946162572642",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.98504558369907"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.559504007591906",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.11871346584515"
         },
         {
           "http://example.com/terms#name": "Nederstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.059172840415749",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.80297704845697"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.661958499725358",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.46683717374378"
         }
       ],
       "total_children_count": 0,
@@ -463,17 +472,19 @@
         "Nederstraat",
         "Nederstraat",
         "Nederstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": " Mosscher",
       "triples": [
         {
           "http://example.com/terms#name": "Neder Mosscher",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2948025683680604",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.75592551420984"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1028517616516487",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.67126570057322"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment324.jsonld#50832",
         "@type": "tree:Node"
@@ -481,8 +492,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Neder Mosscher",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2948025683680604",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.75592551420984"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1028517616516487",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.67126570057322"
         }
       ],
       "total_children_count": 0,
@@ -498,43 +509,26 @@
       ],
       "triples_metadata": [
         "Neder Mosscher"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "h",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment324.jsonld#23445",
-              "@type": "tree:Node",
-              "token_string": "olbeekstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment324.jsonld#71010",
-              "@type": "tree:Node",
-              "token_string": "e"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment324.jsonld#77780",
-              "@type": "tree:Node",
-              "token_string": "as"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "olbeekstraat": [
+          "324",
+          "23445"
+        ],
+        "e": [
+          "324",
+          "71010"
+        ],
+        "as": [
+          "324",
+          "77780"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment324.jsonld#50832",
         "@type": "tree:Node"
@@ -542,68 +536,68 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nederhasseltstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5205974309186927",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.04299809630077"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9415723907690534",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.19856022798633"
         },
         {
           "http://example.com/terms#name": "Nederholbeekstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1474887222351744",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.15915450676519"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.182163017948632",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.81522163421058"
         },
         {
           "http://example.com/terms#name": "Nederheirweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7742317101737397",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.783545178079464"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3467885182583617",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.884171790509754"
         },
         {
           "http://example.com/terms#name": "Nederheilbeekweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8479038843235576",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.556211930371106"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9012116895481825",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.039025188387996"
         },
         {
           "http://example.com/terms#name": "Nederheilbeekweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.262910143257372",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.895063009814905"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.960583989984587",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.6503482201688"
         },
         {
           "http://example.com/terms#name": "Nederheilbeekweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.262910143257372",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.895063009814905"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.960583989984587",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.6503482201688"
         },
         {
           "http://example.com/terms#name": "Nederheilbeekweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.262910143257372",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.895063009814905"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.960583989984587",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.6503482201688"
         },
         {
           "http://example.com/terms#name": "Nederheilbeekweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.262910143257372",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.895063009814905"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.960583989984587",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.6503482201688"
         },
         {
           "http://example.com/terms#name": "Nederheilbeekweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.262910143257372",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.895063009814905"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.960583989984587",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.6503482201688"
         },
         {
           "http://example.com/terms#name": "Nederhem",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.654130894603975",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.685793827340355"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2736758832912205",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.3323343405376"
         },
         {
           "http://example.com/terms#name": "Nederheide",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3374859865205813",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.18551334478113"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1987860588942696",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.12153969264822"
         },
         {
           "http://example.com/terms#name": "Nederhase",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.87099196558359",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.91657536897493"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.024048677918979",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.493231264657446"
         },
         {
           "http://example.com/terms#name": "Nederhemplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.573407633945199",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.63046365666283"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6368575878387324",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.57769542237609"
         }
       ],
       "total_children_count": 11,
@@ -664,17 +658,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment324.jsonld#23445"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment324.jsonld#71010"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment324.jsonld#77780"
+          ]
+        }
+      ]
     },
     {
       "token_string": "olbeekstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Nederholbeekstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1474887222351744",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.15915450676519"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.182163017948632",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.81522163421058"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment324.jsonld#23443",
         "@type": "tree:Node"
@@ -682,8 +697,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nederholbeekstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1474887222351744",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.15915450676519"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.182163017948632",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.81522163421058"
         }
       ],
       "total_children_count": 0,
@@ -699,33 +714,22 @@
       ],
       "triples_metadata": [
         "Nederholbeekstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "w",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment324.jsonld#25301",
-              "@type": "tree:Node",
-              "token_string": "ijk"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment324.jsonld#25302",
-              "@type": "tree:Node",
-              "token_string": "eg"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "ijk": [
+          "324",
+          "25301"
+        ],
+        "eg": [
+          "324",
+          "25302"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment324.jsonld#50832",
         "@type": "tree:Node"
@@ -733,33 +737,33 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nederwijk",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3177462255422454",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.71783663594306"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3076175076095713",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.5034860532993"
         },
         {
           "http://example.com/terms#name": "Nederweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5804322003727607",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.08711861381301"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.801747876795751",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.194918623935415"
         },
         {
           "http://example.com/terms#name": "Nederweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.661434046649257",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.731363785448565"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.849038261340837",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.77278271218294"
         },
         {
           "http://example.com/terms#name": "Nederweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.661434046649257",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.731363785448565"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.849038261340837",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.77278271218294"
         },
         {
           "http://example.com/terms#name": "Nederweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.661434046649257",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.731363785448565"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.849038261340837",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.77278271218294"
         },
         {
           "http://example.com/terms#name": "Nederwijk-Oost",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1832146490971116",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.597378695287034"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.822988433969998",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.654923936551974"
         }
       ],
       "total_children_count": 3,
@@ -788,29 +792,37 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment324.jsonld#25301"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment324.jsonld#25302"
+          ]
+        }
+      ]
     },
     {
       "token_string": "ijk",
       "triples": [
         {
           "http://example.com/terms#name": "Nederwijk",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3177462255422454",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.71783663594306"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3076175076095713",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.5034860532993"
         }
       ],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment324.jsonld#63356",
-              "@type": "tree:Node",
-              "token_string": "-Oost"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "-Oost": [
+          "324",
+          "63356"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment324.jsonld#25300",
         "@type": "tree:Node"
@@ -818,13 +830,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nederwijk",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3177462255422454",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.71783663594306"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3076175076095713",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.5034860532993"
         },
         {
           "http://example.com/terms#name": "Nederwijk-Oost",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1832146490971116",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.597378695287034"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.822988433969998",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.654923936551974"
         }
       ],
       "total_children_count": 1,
@@ -846,6 +858,14 @@
       ],
       "triples_metadata": [
         "Nederwijk"
+      ],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment324.jsonld#63356"
+          ]
+        }
       ]
     },
     {
@@ -853,25 +873,26 @@
       "triples": [
         {
           "http://example.com/terms#name": "Nederweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5804322003727607",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.08711861381301"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.801747876795751",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.194918623935415"
         },
         {
           "http://example.com/terms#name": "Nederweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.661434046649257",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.731363785448565"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.849038261340837",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.77278271218294"
         },
         {
           "http://example.com/terms#name": "Nederweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.661434046649257",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.731363785448565"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.849038261340837",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.77278271218294"
         },
         {
           "http://example.com/terms#name": "Nederweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.661434046649257",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.731363785448565"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.849038261340837",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.77278271218294"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment324.jsonld#25300",
         "@type": "tree:Node"
@@ -879,23 +900,23 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nederweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5804322003727607",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.08711861381301"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.801747876795751",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.194918623935415"
         },
         {
           "http://example.com/terms#name": "Nederweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.661434046649257",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.731363785448565"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.849038261340837",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.77278271218294"
         },
         {
           "http://example.com/terms#name": "Nederweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.661434046649257",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.731363785448565"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.849038261340837",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.77278271218294"
         },
         {
           "http://example.com/terms#name": "Nederweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.661434046649257",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.731363785448565"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.849038261340837",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.77278271218294"
         }
       ],
       "total_children_count": 0,
@@ -917,33 +938,22 @@
         "Nederweg",
         "Nederweg",
         "Nederweg"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "zw",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment324.jsonld#29690",
-              "@type": "tree:Node",
-              "token_string": "ijnaarde"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment324.jsonld#29691",
-              "@type": "tree:Node",
-              "token_string": "almsesteenweg"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "ijnaarde": [
+          "324",
+          "29690"
+        ],
+        "almsesteenweg": [
+          "324",
+          "29691"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment324.jsonld#50832",
         "@type": "tree:Node"
@@ -951,13 +961,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nederzwijnaarde",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4459478068043303",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.17120866516167"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.873858020179048",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.56842182589228"
         },
         {
           "http://example.com/terms#name": "Nederzwalmsesteenweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.316727863182506",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.72768620967708"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2450500951798595",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.65414332285605"
         }
       ],
       "total_children_count": 2,
@@ -977,17 +987,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment324.jsonld#29690"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment324.jsonld#29691"
+          ]
+        }
+      ]
     },
     {
       "token_string": "ijnaarde",
       "triples": [
         {
           "http://example.com/terms#name": "Nederzwijnaarde",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4459478068043303",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.17120866516167"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.873858020179048",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.56842182589228"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment324.jsonld#29689",
         "@type": "tree:Node"
@@ -995,8 +1020,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nederzwijnaarde",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4459478068043303",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.17120866516167"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.873858020179048",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.56842182589228"
         }
       ],
       "total_children_count": 0,
@@ -1012,17 +1037,19 @@
       ],
       "triples_metadata": [
         "Nederzwijnaarde"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "almsesteenweg",
       "triples": [
         {
           "http://example.com/terms#name": "Nederzwalmsesteenweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.316727863182506",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.72768620967708"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2450500951798595",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.65414332285605"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment324.jsonld#29689",
         "@type": "tree:Node"
@@ -1030,8 +1057,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nederzwalmsesteenweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.316727863182506",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.72768620967708"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2450500951798595",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.65414332285605"
         }
       ],
       "total_children_count": 0,
@@ -1047,17 +1074,19 @@
       ],
       "triples_metadata": [
         "Nederzwalmsesteenweg"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "rij",
       "triples": [
         {
           "http://example.com/terms#name": "Nederrij",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8156424863770164",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.146706131283885"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.035220533290092",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.04451842815451"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment324.jsonld#50832",
         "@type": "tree:Node"
@@ -1065,8 +1094,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nederrij",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8156424863770164",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.146706131283885"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.035220533290092",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.04451842815451"
         }
       ],
       "total_children_count": 0,
@@ -1082,33 +1111,22 @@
       ],
       "triples_metadata": [
         "Nederrij"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "k",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment324.jsonld#39217",
-              "@type": "tree:Node",
-              "token_string": "outer"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment324.jsonld#39218",
-              "@type": "tree:Node",
-              "token_string": "waadham"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "outer": [
+          "324",
+          "39217"
+        ],
+        "waadham": [
+          "324",
+          "39218"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment324.jsonld#50832",
         "@type": "tree:Node"
@@ -1116,43 +1134,43 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nederkouter",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.275186529297417",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.16587818001297"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2780428286221106",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.081439684479875"
         },
         {
           "http://example.com/terms#name": "Nederkouter",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3789277561498787",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.18431206657558"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.565767028666035",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.9666931401981"
         },
         {
           "http://example.com/terms#name": "Nederkouter",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3789277561498787",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.18431206657558"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.565767028666035",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.9666931401981"
         },
         {
           "http://example.com/terms#name": "Nederkouter",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3789277561498787",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.18431206657558"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.565767028666035",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.9666931401981"
         },
         {
           "http://example.com/terms#name": "Nederkouter",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3789277561498787",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.18431206657558"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.565767028666035",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.9666931401981"
         },
         {
           "http://example.com/terms#name": "Nederkouter",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3720601336926297",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.02487566008103"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.651451262132564",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.385437332841136"
         },
         {
           "http://example.com/terms#name": "Nederkwaadham",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.127817253337275",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.2310420131129"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8891704907868685",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.33848049308747"
         },
         {
           "http://example.com/terms#name": "Nederkouterweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.739956002694055",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.322913268617214"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.51532260375487",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.23836373167481"
         }
       ],
       "total_children_count": 3,
@@ -1183,54 +1201,62 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment324.jsonld#39217"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment324.jsonld#39218"
+          ]
+        }
+      ]
     },
     {
       "token_string": "outer",
       "triples": [
         {
           "http://example.com/terms#name": "Nederkouter",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.275186529297417",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.16587818001297"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2780428286221106",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.081439684479875"
         },
         {
           "http://example.com/terms#name": "Nederkouter",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3789277561498787",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.18431206657558"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.565767028666035",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.9666931401981"
         },
         {
           "http://example.com/terms#name": "Nederkouter",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3789277561498787",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.18431206657558"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.565767028666035",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.9666931401981"
         },
         {
           "http://example.com/terms#name": "Nederkouter",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3789277561498787",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.18431206657558"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.565767028666035",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.9666931401981"
         },
         {
           "http://example.com/terms#name": "Nederkouter",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3789277561498787",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.18431206657558"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.565767028666035",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.9666931401981"
         },
         {
           "http://example.com/terms#name": "Nederkouter",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3720601336926297",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.02487566008103"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.651451262132564",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.385437332841136"
         }
       ],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment324.jsonld#64105",
-              "@type": "tree:Node",
-              "token_string": "weg"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "weg": [
+          "324",
+          "64105"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment324.jsonld#39216",
         "@type": "tree:Node"
@@ -1238,38 +1264,38 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nederkouter",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.275186529297417",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.16587818001297"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2780428286221106",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.081439684479875"
         },
         {
           "http://example.com/terms#name": "Nederkouter",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3789277561498787",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.18431206657558"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.565767028666035",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.9666931401981"
         },
         {
           "http://example.com/terms#name": "Nederkouter",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3789277561498787",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.18431206657558"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.565767028666035",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.9666931401981"
         },
         {
           "http://example.com/terms#name": "Nederkouter",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3789277561498787",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.18431206657558"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.565767028666035",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.9666931401981"
         },
         {
           "http://example.com/terms#name": "Nederkouter",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3789277561498787",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.18431206657558"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.565767028666035",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.9666931401981"
         },
         {
           "http://example.com/terms#name": "Nederkouter",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3720601336926297",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.02487566008103"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.651451262132564",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.385437332841136"
         },
         {
           "http://example.com/terms#name": "Nederkouterweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.739956002694055",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.322913268617214"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.51532260375487",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.23836373167481"
         }
       ],
       "total_children_count": 1,
@@ -1301,6 +1327,14 @@
         "Nederkouter",
         "Nederkouter",
         "Nederkouter"
+      ],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment324.jsonld#64105"
+          ]
+        }
       ]
     },
     {
@@ -1308,10 +1342,11 @@
       "triples": [
         {
           "http://example.com/terms#name": "Nederkwaadham",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.127817253337275",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.2310420131129"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8891704907868685",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.33848049308747"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment324.jsonld#39216",
         "@type": "tree:Node"
@@ -1319,8 +1354,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nederkwaadham",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.127817253337275",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.2310420131129"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8891704907868685",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.33848049308747"
         }
       ],
       "total_children_count": 0,
@@ -1336,33 +1371,22 @@
       ],
       "triples_metadata": [
         "Nederkwaadham"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "v",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment324.jsonld#40744",
-              "@type": "tree:Node",
-              "token_string": "eld"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment324.jsonld#77428",
-              "@type": "tree:Node",
-              "token_string": "i"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "eld": [
+          "324",
+          "40744"
+        ],
+        "i": [
+          "324",
+          "77428"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment324.jsonld#50832",
         "@type": "tree:Node"
@@ -1370,43 +1394,43 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nederveld",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.390986267107266",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.765709670066116"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.277428717109459",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.640281689292316"
         },
         {
           "http://example.com/terms#name": "Nederviersel",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.827369231743798",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.717197642011065"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.362481361602379",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.17256488904036"
         },
         {
           "http://example.com/terms#name": "Nederviersel",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.584172826098048",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.78571414044236"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.110804705421362",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.73732789993928"
         },
         {
           "http://example.com/terms#name": "Nederviersel",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.584172826098048",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.78571414044236"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.110804705421362",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.73732789993928"
         },
         {
           "http://example.com/terms#name": "Nederviersel",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.584172826098048",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.78571414044236"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.110804705421362",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.73732789993928"
         },
         {
           "http://example.com/terms#name": "Nederviersel",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.584172826098048",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.78571414044236"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.110804705421362",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.73732789993928"
         },
         {
           "http://example.com/terms#name": "Nederveldstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0921942849361286",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.97936645600548"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4657706957392476",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.04528757254412"
         },
         {
           "http://example.com/terms#name": "Nedervijver",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.264330932656577",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.47528615718426"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.634063833644315",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.30670557087163"
         }
       ],
       "total_children_count": 5,
@@ -1442,29 +1466,37 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment324.jsonld#40744"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment324.jsonld#77428"
+          ]
+        }
+      ]
     },
     {
       "token_string": "eld",
       "triples": [
         {
           "http://example.com/terms#name": "Nederveld",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.390986267107266",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.765709670066116"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.277428717109459",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.640281689292316"
         }
       ],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment324.jsonld#43588",
-              "@type": "tree:Node",
-              "token_string": "straat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "straat": [
+          "324",
+          "43588"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment324.jsonld#40743",
         "@type": "tree:Node"
@@ -1472,13 +1504,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nederveld",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.390986267107266",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.765709670066116"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.277428717109459",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.640281689292316"
         },
         {
           "http://example.com/terms#name": "Nederveldstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0921942849361286",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.97936645600548"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4657706957392476",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.04528757254412"
         }
       ],
       "total_children_count": 1,
@@ -1500,6 +1532,14 @@
       ],
       "triples_metadata": [
         "Nederveld"
+      ],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment324.jsonld#43588"
+          ]
+        }
       ]
     },
     {
@@ -1507,10 +1547,11 @@
       "triples": [
         {
           "http://example.com/terms#name": "Nederveldstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0921942849361286",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.97936645600548"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4657706957392476",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.04528757254412"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment324.jsonld#40744",
         "@type": "tree:Node"
@@ -1518,8 +1559,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nederveldstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0921942849361286",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.97936645600548"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4657706957392476",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.04528757254412"
         }
       ],
       "total_children_count": 0,
@@ -1535,53 +1576,30 @@
       ],
       "triples_metadata": [
         "Nederveldstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "b",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment324.jsonld#43890",
-              "@type": "tree:Node",
-              "token_string": "osstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment324.jsonld#43891",
-              "@type": "tree:Node",
-              "token_string": "lok"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment324.jsonld#76468",
-              "@type": "tree:Node",
-              "token_string": "r"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment324.jsonld#84623",
-              "@type": "tree:Node",
-              "token_string": "eert"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "osstraat": [
+          "324",
+          "43890"
+        ],
+        "lok": [
+          "324",
+          "43891"
+        ],
+        "r": [
+          "324",
+          "76468"
+        ],
+        "eert": [
+          "324",
+          "84623"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment324.jsonld#50832",
         "@type": "tree:Node"
@@ -1589,33 +1607,33 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nederbosstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4984590930635515",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.7404530616817"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.176467928268835",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.677007415863955"
         },
         {
           "http://example.com/terms#name": "Nederblok",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2815505587384193",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.44808394992125"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1050835052569035",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.46557067667267"
         },
         {
           "http://example.com/terms#name": "Nederbeertstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5992264730359538",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.73566628878707"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3506975519669",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.63967348705173"
         },
         {
           "http://example.com/terms#name": "Nederbroekstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2912168813616995",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.67211101297867"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4719745795465777",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.83770208677863"
         },
         {
           "http://example.com/terms#name": "Nederbrugstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8448739034816435",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.10248647015821"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9530732730005056",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.395681371196225"
         },
         {
           "http://example.com/terms#name": "Nederbeert",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.618783618624391",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.98341855866987"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.683071588014771",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.29376364222323"
         }
       ],
       "total_children_count": 7,
@@ -1659,17 +1677,44 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment324.jsonld#43890"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment324.jsonld#43891"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment324.jsonld#76468"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment324.jsonld#84623"
+          ]
+        }
+      ]
     },
     {
       "token_string": "osstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Nederbosstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4984590930635515",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.7404530616817"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.176467928268835",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.677007415863955"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment324.jsonld#43889",
         "@type": "tree:Node"
@@ -1677,8 +1722,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nederbosstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4984590930635515",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.7404530616817"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.176467928268835",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.677007415863955"
         }
       ],
       "total_children_count": 0,
@@ -1694,17 +1739,19 @@
       ],
       "triples_metadata": [
         "Nederbosstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "lok",
       "triples": [
         {
           "http://example.com/terms#name": "Nederblok",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2815505587384193",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.44808394992125"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1050835052569035",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.46557067667267"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment324.jsonld#43889",
         "@type": "tree:Node"
@@ -1712,8 +1759,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nederblok",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2815505587384193",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.44808394992125"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1050835052569035",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.46557067667267"
         }
       ],
       "total_children_count": 0,
@@ -1729,33 +1776,22 @@
       ],
       "triples_metadata": [
         "Nederblok"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "d",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment324.jsonld#50832",
-              "@type": "tree:Node",
-              "token_string": "er"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment324.jsonld#50833",
-              "@type": "tree:Node",
-              "token_string": "rickxhoeveweg"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "er": [
+          "324",
+          "50832"
+        ],
+        "rickxhoeveweg": [
+          "324",
+          "50833"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment325.jsonld#312",
         "@type": "tree:Node"
@@ -1763,53 +1799,53 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nederbosstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4984590930635515",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.7404530616817"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.176467928268835",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.677007415863955"
         },
         {
           "http://example.com/terms#name": "Neder Mosscher",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2948025683680604",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.75592551420984"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1028517616516487",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.67126570057322"
         },
         {
           "http://example.com/terms#name": "Nederblok",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2815505587384193",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.44808394992125"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1050835052569035",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.46557067667267"
         },
         {
           "http://example.com/terms#name": "Nederbeertstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5992264730359538",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.73566628878707"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3506975519669",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.63967348705173"
         },
         {
           "http://example.com/terms#name": "Nederbroekstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2912168813616995",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.67211101297867"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4719745795465777",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.83770208677863"
         },
         {
           "http://example.com/terms#name": "Nederdellelaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.344193821502685",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.87045729148729"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0694375774260627",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.884567474624234"
         },
         {
           "http://example.com/terms#name": "Nederen Heirweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.417261916148768",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.82911037577502"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.841461034757",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.893385203839394"
         },
         {
           "http://example.com/terms#name": "Nederbrugstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8448739034816435",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.10248647015821"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9530732730005056",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.395681371196225"
         },
         {
           "http://example.com/terms#name": "Nederduin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.457142870601959",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.651905484644146"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.528965892238302",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.70380599773208"
         },
         {
           "http://example.com/terms#name": "Nederbeert",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.618783618624391",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.98341855866987"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.683071588014771",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.29376364222323"
         }
       ],
       "total_children_count": 72,
@@ -1877,173 +1913,91 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment324.jsonld#50832"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment324.jsonld#50833"
+          ]
+        }
+      ]
     },
     {
       "token_string": "er",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment324.jsonld#11188",
-              "@type": "tree:Node",
-              "token_string": "g"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment324.jsonld#19043",
-              "@type": "tree:Node",
-              "token_string": "st"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment324.jsonld#21569",
-              "@type": "tree:Node",
-              "token_string": " Mosscher"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment324.jsonld#23443",
-              "@type": "tree:Node",
-              "token_string": "h"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment324.jsonld#25300",
-              "@type": "tree:Node",
-              "token_string": "w"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment324.jsonld#29689",
-              "@type": "tree:Node",
-              "token_string": "zw"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment324.jsonld#38588",
-              "@type": "tree:Node",
-              "token_string": "rij"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment324.jsonld#39216",
-              "@type": "tree:Node",
-              "token_string": "k"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment324.jsonld#40743",
-              "@type": "tree:Node",
-              "token_string": "v"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment324.jsonld#43889",
-              "@type": "tree:Node",
-              "token_string": "b"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment324.jsonld#53916",
-              "@type": "tree:Node",
-              "token_string": "land"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment324.jsonld#59192",
-              "@type": "tree:Node",
-              "token_string": "okkerzeels"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment324.jsonld#62562",
-              "@type": "tree:Node",
-              "token_string": "en"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment324.jsonld#78304",
-              "@type": "tree:Node",
-              "token_string": "molen"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment324.jsonld#83758",
-              "@type": "tree:Node",
-              "token_string": "d"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment324.jsonld#100612",
-              "@type": "tree:Node",
-              "token_string": "p"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "g": [
+          "324",
+          "11188"
+        ],
+        "st": [
+          "324",
+          "19043"
+        ],
+        " Mosscher": [
+          "324",
+          "21569"
+        ],
+        "h": [
+          "324",
+          "23443"
+        ],
+        "w": [
+          "324",
+          "25300"
+        ],
+        "zw": [
+          "324",
+          "29689"
+        ],
+        "rij": [
+          "324",
+          "38588"
+        ],
+        "k": [
+          "324",
+          "39216"
+        ],
+        "v": [
+          "324",
+          "40743"
+        ],
+        "b": [
+          "324",
+          "43889"
+        ],
+        "land": [
+          "324",
+          "53916"
+        ],
+        "okkerzeels": [
+          "324",
+          "59192"
+        ],
+        "en": [
+          "324",
+          "62562"
+        ],
+        "molen": [
+          "324",
+          "78304"
+        ],
+        "d": [
+          "324",
+          "83758"
+        ],
+        "p": [
+          "324",
+          "100612"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment324.jsonld#50831",
         "@type": "tree:Node"
@@ -2051,53 +2005,53 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nederbosstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4984590930635515",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.7404530616817"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.176467928268835",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.677007415863955"
         },
         {
           "http://example.com/terms#name": "Neder Mosscher",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2948025683680604",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.75592551420984"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1028517616516487",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.67126570057322"
         },
         {
           "http://example.com/terms#name": "Nederblok",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2815505587384193",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.44808394992125"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1050835052569035",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.46557067667267"
         },
         {
           "http://example.com/terms#name": "Nederbeertstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5992264730359538",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.73566628878707"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3506975519669",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.63967348705173"
         },
         {
           "http://example.com/terms#name": "Nederbroekstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2912168813616995",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.67211101297867"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4719745795465777",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.83770208677863"
         },
         {
           "http://example.com/terms#name": "Nederdellelaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.344193821502685",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.87045729148729"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0694375774260627",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.884567474624234"
         },
         {
           "http://example.com/terms#name": "Nederen Heirweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.417261916148768",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.82911037577502"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.841461034757",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.893385203839394"
         },
         {
           "http://example.com/terms#name": "Nederbrugstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8448739034816435",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.10248647015821"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9530732730005056",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.395681371196225"
         },
         {
           "http://example.com/terms#name": "Nederduin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.457142870601959",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.651905484644146"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.528965892238302",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.70380599773208"
         },
         {
           "http://example.com/terms#name": "Nederbeert",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.618783618624391",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.98341855866987"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.683071588014771",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.29376364222323"
         }
       ],
       "total_children_count": 70,
@@ -2165,17 +2119,116 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment324.jsonld#11188"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment324.jsonld#19043"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment324.jsonld#21569"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment324.jsonld#23443"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment324.jsonld#25300"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment324.jsonld#29689"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment324.jsonld#38588"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment324.jsonld#39216"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment324.jsonld#40743"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment324.jsonld#43889"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment324.jsonld#53916"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment324.jsonld#59192"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment324.jsonld#62562"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment324.jsonld#78304"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment324.jsonld#83758"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment324.jsonld#100612"
+          ]
+        }
+      ]
     },
     {
       "token_string": "rickxhoeveweg",
       "triples": [
         {
           "http://example.com/terms#name": "Nedrickxhoeveweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5150871557320054",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.57263473726591"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.483995922844037",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.825942453528164"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment324.jsonld#50831",
         "@type": "tree:Node"
@@ -2183,8 +2236,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nedrickxhoeveweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5150871557320054",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.57263473726591"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.483995922844037",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.825942453528164"
         }
       ],
       "total_children_count": 0,
@@ -2200,43 +2253,26 @@
       ],
       "triples_metadata": [
         "Nedrickxhoeveweg"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "land",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment324.jsonld#53917",
-              "@type": "tree:Node",
-              "token_string": "laan"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment324.jsonld#53918",
-              "@type": "tree:Node",
-              "token_string": "plein"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment324.jsonld#67538",
-              "@type": "tree:Node",
-              "token_string": "straat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "laan": [
+          "324",
+          "53917"
+        ],
+        "plein": [
+          "324",
+          "53918"
+        ],
+        "straat": [
+          "324",
+          "67538"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment324.jsonld#50832",
         "@type": "tree:Node"
@@ -2244,58 +2280,58 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nederlandlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.713901292597062",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.064165339331005"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3190932803546946",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.48256505808644"
         },
         {
           "http://example.com/terms#name": "Nederlandlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.615547584730371",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.204370447979635"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.130193019785672",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.78011439729503"
         },
         {
           "http://example.com/terms#name": "Nederlandlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.615547584730371",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.204370447979635"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.130193019785672",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.78011439729503"
         },
         {
           "http://example.com/terms#name": "Nederlandlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.615547584730371",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.204370447979635"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.130193019785672",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.78011439729503"
         },
         {
           "http://example.com/terms#name": "Nederlandlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.615547584730371",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.204370447979635"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.130193019785672",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.78011439729503"
         },
         {
           "http://example.com/terms#name": "Nederlandlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5685166636546355",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.90076808705428"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.289108481967078",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.783470670140304"
         },
         {
           "http://example.com/terms#name": "Nederlandlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3715146609875895",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.13006163098238"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.662983164735097",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.70988862369462"
         },
         {
           "http://example.com/terms#name": "Nederlandlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9192663424865524",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.03785390259797"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4602338210600303",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.384374224522645"
         },
         {
           "http://example.com/terms#name": "Nederlandlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6727195969784385",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.53328398533717"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3801648580714363",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.16135777974009"
         },
         {
           "http://example.com/terms#name": "Nederlandplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0859046805153167",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.815069207785896"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.573534616306889",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.792716954913715"
         },
         {
           "http://example.com/terms#name": "Nederlandstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.627784199854908",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.55663678340571"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1952051448417658",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.22525308123234"
         }
       ],
       "total_children_count": 3,
@@ -2329,57 +2365,78 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment324.jsonld#53917"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment324.jsonld#53918"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment324.jsonld#67538"
+          ]
+        }
+      ]
     },
     {
       "token_string": "laan",
       "triples": [
         {
           "http://example.com/terms#name": "Nederlandlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.713901292597062",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.064165339331005"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3190932803546946",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.48256505808644"
         },
         {
           "http://example.com/terms#name": "Nederlandlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.615547584730371",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.204370447979635"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.130193019785672",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.78011439729503"
         },
         {
           "http://example.com/terms#name": "Nederlandlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.615547584730371",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.204370447979635"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.130193019785672",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.78011439729503"
         },
         {
           "http://example.com/terms#name": "Nederlandlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.615547584730371",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.204370447979635"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.130193019785672",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.78011439729503"
         },
         {
           "http://example.com/terms#name": "Nederlandlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.615547584730371",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.204370447979635"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.130193019785672",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.78011439729503"
         },
         {
           "http://example.com/terms#name": "Nederlandlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5685166636546355",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.90076808705428"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.289108481967078",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.783470670140304"
         },
         {
           "http://example.com/terms#name": "Nederlandlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3715146609875895",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.13006163098238"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.662983164735097",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.70988862369462"
         },
         {
           "http://example.com/terms#name": "Nederlandlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9192663424865524",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.03785390259797"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4602338210600303",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.384374224522645"
         },
         {
           "http://example.com/terms#name": "Nederlandlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6727195969784385",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.53328398533717"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3801648580714363",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.16135777974009"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment324.jsonld#53916",
         "@type": "tree:Node"
@@ -2387,48 +2444,48 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nederlandlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.713901292597062",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.064165339331005"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3190932803546946",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.48256505808644"
         },
         {
           "http://example.com/terms#name": "Nederlandlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.615547584730371",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.204370447979635"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.130193019785672",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.78011439729503"
         },
         {
           "http://example.com/terms#name": "Nederlandlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.615547584730371",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.204370447979635"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.130193019785672",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.78011439729503"
         },
         {
           "http://example.com/terms#name": "Nederlandlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.615547584730371",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.204370447979635"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.130193019785672",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.78011439729503"
         },
         {
           "http://example.com/terms#name": "Nederlandlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.615547584730371",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.204370447979635"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.130193019785672",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.78011439729503"
         },
         {
           "http://example.com/terms#name": "Nederlandlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5685166636546355",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.90076808705428"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.289108481967078",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.783470670140304"
         },
         {
           "http://example.com/terms#name": "Nederlandlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3715146609875895",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.13006163098238"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.662983164735097",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.70988862369462"
         },
         {
           "http://example.com/terms#name": "Nederlandlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9192663424865524",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.03785390259797"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4602338210600303",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.384374224522645"
         },
         {
           "http://example.com/terms#name": "Nederlandlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6727195969784385",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.53328398533717"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3801648580714363",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.16135777974009"
         }
       ],
       "total_children_count": 0,
@@ -2460,17 +2517,19 @@
         "Nederlandlaan",
         "Nederlandlaan",
         "Nederlandlaan"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "plein",
       "triples": [
         {
           "http://example.com/terms#name": "Nederlandplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0859046805153167",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.815069207785896"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.573534616306889",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.792716954913715"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment324.jsonld#53916",
         "@type": "tree:Node"
@@ -2478,8 +2537,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nederlandplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0859046805153167",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.815069207785896"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.573534616306889",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.792716954913715"
         }
       ],
       "total_children_count": 0,
@@ -2495,33 +2554,22 @@
       ],
       "triples_metadata": [
         "Nederlandplein"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "okkerzeels",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment324.jsonld#59193",
-              "@type": "tree:Node",
-              "token_string": "traat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment324.jsonld#59194",
-              "@type": "tree:Node",
-              "token_string": "esteenweg"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "traat": [
+          "324",
+          "59193"
+        ],
+        "esteenweg": [
+          "324",
+          "59194"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment324.jsonld#50832",
         "@type": "tree:Node"
@@ -2529,13 +2577,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nederokkerzeelstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5969226794146762",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.578107441261764"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.295728277995817",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.05591479454654"
         },
         {
           "http://example.com/terms#name": "Nederokkerzeelsesteenweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0648335979022696",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.13090093910442"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3294717385997323",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.265438725734505"
         }
       ],
       "total_children_count": 2,
@@ -2555,17 +2603,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment324.jsonld#59193"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment324.jsonld#59194"
+          ]
+        }
+      ]
     },
     {
       "token_string": "traat",
       "triples": [
         {
           "http://example.com/terms#name": "Nederokkerzeelstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5969226794146762",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.578107441261764"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.295728277995817",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.05591479454654"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment324.jsonld#59192",
         "@type": "tree:Node"
@@ -2573,8 +2636,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nederokkerzeelstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5969226794146762",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.578107441261764"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.295728277995817",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.05591479454654"
         }
       ],
       "total_children_count": 0,
@@ -2590,17 +2653,19 @@
       ],
       "triples_metadata": [
         "Nederokkerzeelstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "esteenweg",
       "triples": [
         {
           "http://example.com/terms#name": "Nederokkerzeelsesteenweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0648335979022696",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.13090093910442"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3294717385997323",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.265438725734505"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment324.jsonld#59192",
         "@type": "tree:Node"
@@ -2608,8 +2673,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nederokkerzeelsesteenweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0648335979022696",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.13090093910442"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3294717385997323",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.265438725734505"
         }
       ],
       "total_children_count": 0,
@@ -2625,43 +2690,26 @@
       ],
       "triples_metadata": [
         "Nederokkerzeelsesteenweg"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "en",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment324.jsonld#62563",
-              "@type": "tree:Node",
-              "token_string": "amestraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment324.jsonld#62564",
-              "@type": "tree:Node",
-              "token_string": " Heirweg"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment324.jsonld#65842",
-              "@type": "tree:Node",
-              "token_string": "heerweg"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "amestraat": [
+          "324",
+          "62563"
+        ],
+        " Heirweg": [
+          "324",
+          "62564"
+        ],
+        "heerweg": [
+          "324",
+          "65842"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment324.jsonld#50832",
         "@type": "tree:Node"
@@ -2669,18 +2717,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nederenamestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.378771625020486",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.4856614622799"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.940420767409098",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.14753975345548"
         },
         {
           "http://example.com/terms#name": "Nederen Heirweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.417261916148768",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.82911037577502"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.841461034757",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.893385203839394"
         },
         {
           "http://example.com/terms#name": "Nederenheerweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7635245249102356",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.08544351172419"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.951894353652648",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.89894946008082"
         }
       ],
       "total_children_count": 3,
@@ -2706,17 +2754,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment324.jsonld#62563"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment324.jsonld#62564"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment324.jsonld#65842"
+          ]
+        }
+      ]
     },
     {
       "token_string": "amestraat",
       "triples": [
         {
           "http://example.com/terms#name": "Nederenamestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.378771625020486",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.4856614622799"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.940420767409098",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.14753975345548"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment324.jsonld#62562",
         "@type": "tree:Node"
@@ -2724,8 +2793,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nederenamestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.378771625020486",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.4856614622799"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.940420767409098",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.14753975345548"
         }
       ],
       "total_children_count": 0,
@@ -2741,17 +2810,19 @@
       ],
       "triples_metadata": [
         "Nederenamestraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": " Heirweg",
       "triples": [
         {
           "http://example.com/terms#name": "Nederen Heirweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.417261916148768",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.82911037577502"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.841461034757",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.893385203839394"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment324.jsonld#62562",
         "@type": "tree:Node"
@@ -2759,8 +2830,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nederen Heirweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.417261916148768",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.82911037577502"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.841461034757",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.893385203839394"
         }
       ],
       "total_children_count": 0,
@@ -2776,17 +2847,19 @@
       ],
       "triples_metadata": [
         "Nederen Heirweg"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "-Oost",
       "triples": [
         {
           "http://example.com/terms#name": "Nederwijk-Oost",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1832146490971116",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.597378695287034"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.822988433969998",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.654923936551974"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment324.jsonld#25301",
         "@type": "tree:Node"
@@ -2794,8 +2867,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nederwijk-Oost",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1832146490971116",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.597378695287034"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.822988433969998",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.654923936551974"
         }
       ],
       "total_children_count": 0,
@@ -2811,17 +2884,19 @@
       ],
       "triples_metadata": [
         "Nederwijk-Oost"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "weg",
       "triples": [
         {
           "http://example.com/terms#name": "Nederkouterweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.739956002694055",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.322913268617214"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.51532260375487",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.23836373167481"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment324.jsonld#39217",
         "@type": "tree:Node"
@@ -2829,8 +2904,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nederkouterweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.739956002694055",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.322913268617214"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.51532260375487",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.23836373167481"
         }
       ],
       "total_children_count": 0,
@@ -2846,17 +2921,19 @@
       ],
       "triples_metadata": [
         "Nederkouterweg"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "heerweg",
       "triples": [
         {
           "http://example.com/terms#name": "Nederenheerweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7635245249102356",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.08544351172419"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.951894353652648",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.89894946008082"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment324.jsonld#62562",
         "@type": "tree:Node"
@@ -2864,8 +2941,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nederenheerweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7635245249102356",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.08544351172419"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.951894353652648",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.89894946008082"
         }
       ],
       "total_children_count": 0,
@@ -2881,17 +2958,19 @@
       ],
       "triples_metadata": [
         "Nederenheerweg"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "straat",
       "triples": [
         {
           "http://example.com/terms#name": "Nederlandstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.627784199854908",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.55663678340571"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1952051448417658",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.22525308123234"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment324.jsonld#53916",
         "@type": "tree:Node"
@@ -2899,8 +2978,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nederlandstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.627784199854908",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.55663678340571"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1952051448417658",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.22525308123234"
         }
       ],
       "total_children_count": 0,
@@ -2916,17 +2995,19 @@
       ],
       "triples_metadata": [
         "Nederlandstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "rweg",
       "triples": [
         {
           "http://example.com/terms#name": "Nederheirweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7742317101737397",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.783545178079464"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3467885182583617",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.884171790509754"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment324.jsonld#71011",
         "@type": "tree:Node"
@@ -2934,8 +3015,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nederheirweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7742317101737397",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.783545178079464"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3467885182583617",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.884171790509754"
         }
       ],
       "total_children_count": 0,
@@ -2951,42 +3032,44 @@
       ],
       "triples_metadata": [
         "Nederheirweg"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "lbeekweg",
       "triples": [
         {
           "http://example.com/terms#name": "Nederheilbeekweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8479038843235576",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.556211930371106"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9012116895481825",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.039025188387996"
         },
         {
           "http://example.com/terms#name": "Nederheilbeekweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.262910143257372",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.895063009814905"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.960583989984587",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.6503482201688"
         },
         {
           "http://example.com/terms#name": "Nederheilbeekweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.262910143257372",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.895063009814905"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.960583989984587",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.6503482201688"
         },
         {
           "http://example.com/terms#name": "Nederheilbeekweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.262910143257372",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.895063009814905"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.960583989984587",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.6503482201688"
         },
         {
           "http://example.com/terms#name": "Nederheilbeekweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.262910143257372",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.895063009814905"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.960583989984587",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.6503482201688"
         },
         {
           "http://example.com/terms#name": "Nederheilbeekweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.262910143257372",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.895063009814905"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.960583989984587",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.6503482201688"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment324.jsonld#71011",
         "@type": "tree:Node"
@@ -2994,33 +3077,33 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nederheilbeekweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8479038843235576",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.556211930371106"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9012116895481825",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.039025188387996"
         },
         {
           "http://example.com/terms#name": "Nederheilbeekweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.262910143257372",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.895063009814905"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.960583989984587",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.6503482201688"
         },
         {
           "http://example.com/terms#name": "Nederheilbeekweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.262910143257372",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.895063009814905"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.960583989984587",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.6503482201688"
         },
         {
           "http://example.com/terms#name": "Nederheilbeekweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.262910143257372",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.895063009814905"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.960583989984587",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.6503482201688"
         },
         {
           "http://example.com/terms#name": "Nederheilbeekweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.262910143257372",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.895063009814905"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.960583989984587",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.6503482201688"
         },
         {
           "http://example.com/terms#name": "Nederheilbeekweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.262910143257372",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.895063009814905"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.960583989984587",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.6503482201688"
         }
       ],
       "total_children_count": 0,
@@ -3046,33 +3129,22 @@
         "Nederheilbeekweg",
         "Nederheilbeekweg",
         "Nederheilbeekweg"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "e",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment324.jsonld#71011",
-              "@type": "tree:Node",
-              "token_string": "i"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment324.jsonld#71012",
-              "@type": "tree:Node",
-              "token_string": "m"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "i": [
+          "324",
+          "71011"
+        ],
+        "m": [
+          "324",
+          "71012"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment324.jsonld#23443",
         "@type": "tree:Node"
@@ -3080,53 +3152,53 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nederheirweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7742317101737397",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.783545178079464"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3467885182583617",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.884171790509754"
         },
         {
           "http://example.com/terms#name": "Nederheilbeekweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8479038843235576",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.556211930371106"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9012116895481825",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.039025188387996"
         },
         {
           "http://example.com/terms#name": "Nederheilbeekweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.262910143257372",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.895063009814905"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.960583989984587",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.6503482201688"
         },
         {
           "http://example.com/terms#name": "Nederheilbeekweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.262910143257372",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.895063009814905"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.960583989984587",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.6503482201688"
         },
         {
           "http://example.com/terms#name": "Nederheilbeekweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.262910143257372",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.895063009814905"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.960583989984587",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.6503482201688"
         },
         {
           "http://example.com/terms#name": "Nederheilbeekweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.262910143257372",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.895063009814905"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.960583989984587",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.6503482201688"
         },
         {
           "http://example.com/terms#name": "Nederheilbeekweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.262910143257372",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.895063009814905"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.960583989984587",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.6503482201688"
         },
         {
           "http://example.com/terms#name": "Nederhem",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.654130894603975",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.685793827340355"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2736758832912205",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.3323343405376"
         },
         {
           "http://example.com/terms#name": "Nederheide",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3374859865205813",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.18551334478113"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1987860588942696",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.12153969264822"
         },
         {
           "http://example.com/terms#name": "Nederhemplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.573407633945199",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.63046365666283"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6368575878387324",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.57769542237609"
         }
       ],
       "total_children_count": 6,
@@ -3169,43 +3241,39 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment324.jsonld#71011"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment324.jsonld#71012"
+          ]
+        }
+      ]
     },
     {
       "token_string": "i",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment324.jsonld#70621",
-              "@type": "tree:Node",
-              "token_string": "rweg"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment324.jsonld#70622",
-              "@type": "tree:Node",
-              "token_string": "lbeekweg"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment324.jsonld#73170",
-              "@type": "tree:Node",
-              "token_string": "de"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "rweg": [
+          "324",
+          "70621"
+        ],
+        "lbeekweg": [
+          "324",
+          "70622"
+        ],
+        "de": [
+          "324",
+          "73170"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment324.jsonld#71010",
         "@type": "tree:Node"
@@ -3213,43 +3281,43 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nederheirweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7742317101737397",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.783545178079464"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3467885182583617",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.884171790509754"
         },
         {
           "http://example.com/terms#name": "Nederheilbeekweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8479038843235576",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.556211930371106"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9012116895481825",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.039025188387996"
         },
         {
           "http://example.com/terms#name": "Nederheilbeekweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.262910143257372",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.895063009814905"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.960583989984587",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.6503482201688"
         },
         {
           "http://example.com/terms#name": "Nederheilbeekweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.262910143257372",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.895063009814905"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.960583989984587",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.6503482201688"
         },
         {
           "http://example.com/terms#name": "Nederheilbeekweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.262910143257372",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.895063009814905"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.960583989984587",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.6503482201688"
         },
         {
           "http://example.com/terms#name": "Nederheilbeekweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.262910143257372",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.895063009814905"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.960583989984587",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.6503482201688"
         },
         {
           "http://example.com/terms#name": "Nederheilbeekweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.262910143257372",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.895063009814905"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.960583989984587",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.6503482201688"
         },
         {
           "http://example.com/terms#name": "Nederheide",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3374859865205813",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.18551334478113"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1987860588942696",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.12153969264822"
         }
       ],
       "total_children_count": 3,
@@ -3280,29 +3348,43 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment324.jsonld#70621"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment324.jsonld#70622"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment324.jsonld#73170"
+          ]
+        }
+      ]
     },
     {
       "token_string": "m",
       "triples": [
         {
           "http://example.com/terms#name": "Nederhem",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.654130894603975",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.685793827340355"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2736758832912205",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.3323343405376"
         }
       ],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment324.jsonld#103687",
-              "@type": "tree:Node",
-              "token_string": "plein"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "plein": [
+          "324",
+          "103687"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment324.jsonld#71010",
         "@type": "tree:Node"
@@ -3310,13 +3392,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nederhem",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.654130894603975",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.685793827340355"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2736758832912205",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.3323343405376"
         },
         {
           "http://example.com/terms#name": "Nederhemplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.573407633945199",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.63046365666283"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6368575878387324",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.57769542237609"
         }
       ],
       "total_children_count": 1,
@@ -3338,6 +3420,14 @@
       ],
       "triples_metadata": [
         "Nederhem"
+      ],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment324.jsonld#103687"
+          ]
+        }
       ]
     },
     {
@@ -3345,10 +3435,11 @@
       "triples": [
         {
           "http://example.com/terms#name": "Nederstenkouter",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5287500177779987",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.14522900744019"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.098874385572206",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.43681753845744"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment324.jsonld#78085",
         "@type": "tree:Node"
@@ -3356,8 +3447,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nederstenkouter",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5287500177779987",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.14522900744019"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.098874385572206",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.43681753845744"
         }
       ],
       "total_children_count": 0,
@@ -3373,17 +3464,19 @@
       ],
       "triples_metadata": [
         "Nederstenkouter"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "berg",
       "triples": [
         {
           "http://example.com/terms#name": "Nederstenberg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1387471995530314",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.48009825603085"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.205546607119855",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.37430361762427"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment324.jsonld#78085",
         "@type": "tree:Node"
@@ -3391,8 +3484,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nederstenberg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1387471995530314",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.48009825603085"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.205546607119855",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.37430361762427"
         }
       ],
       "total_children_count": 0,
@@ -3408,17 +3501,19 @@
       ],
       "triples_metadata": [
         "Nederstenberg"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "de",
       "triples": [
         {
           "http://example.com/terms#name": "Nederheide",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3374859865205813",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.18551334478113"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1987860588942696",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.12153969264822"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment324.jsonld#71011",
         "@type": "tree:Node"
@@ -3426,8 +3521,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nederheide",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3374859865205813",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.18551334478113"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1987860588942696",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.12153969264822"
         }
       ],
       "total_children_count": 0,
@@ -3443,17 +3538,19 @@
       ],
       "triples_metadata": [
         "Nederheide"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "lder",
       "triples": [
         {
           "http://example.com/terms#name": "Nederpolder",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.113352077139699",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.749053992953414"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.574799627276361",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.14696638389731"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment324.jsonld#100613",
         "@type": "tree:Node"
@@ -3461,8 +3558,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nederpolder",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.113352077139699",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.749053992953414"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.574799627276361",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.14696638389731"
         }
       ],
       "total_children_count": 0,
@@ -3478,17 +3575,19 @@
       ],
       "triples_metadata": [
         "Nederpolder"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "orterij",
       "triples": [
         {
           "http://example.com/terms#name": "Nederpoorterij",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4318441278020457",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.80992950646779"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.142869508957451",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.50604763241347"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment324.jsonld#100613",
         "@type": "tree:Node"
@@ -3496,8 +3595,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nederpoorterij",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4318441278020457",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.80992950646779"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.142869508957451",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.50604763241347"
         }
       ],
       "total_children_count": 0,
@@ -3513,33 +3612,22 @@
       ],
       "triples_metadata": [
         "Nederpoorterij"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "r",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment324.jsonld#76469",
-              "@type": "tree:Node",
-              "token_string": "oekstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment324.jsonld#76470",
-              "@type": "tree:Node",
-              "token_string": "ugstraat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "oekstraat": [
+          "324",
+          "76469"
+        ],
+        "ugstraat": [
+          "324",
+          "76470"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment324.jsonld#43889",
         "@type": "tree:Node"
@@ -3547,13 +3635,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nederbroekstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2912168813616995",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.67211101297867"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4719745795465777",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.83770208677863"
         },
         {
           "http://example.com/terms#name": "Nederbrugstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8448739034816435",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.10248647015821"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9530732730005056",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.395681371196225"
         }
       ],
       "total_children_count": 2,
@@ -3573,17 +3661,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment324.jsonld#76469"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment324.jsonld#76470"
+          ]
+        }
+      ]
     },
     {
       "token_string": "oekstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Nederbroekstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2912168813616995",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.67211101297867"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4719745795465777",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.83770208677863"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment324.jsonld#76468",
         "@type": "tree:Node"
@@ -3591,8 +3694,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nederbroekstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2912168813616995",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.67211101297867"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4719745795465777",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.83770208677863"
         }
       ],
       "total_children_count": 0,
@@ -3608,17 +3711,19 @@
       ],
       "triples_metadata": [
         "Nederbroekstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "ugstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Nederbrugstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8448739034816435",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.10248647015821"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9530732730005056",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.395681371196225"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment324.jsonld#76468",
         "@type": "tree:Node"
@@ -3626,8 +3731,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nederbrugstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8448739034816435",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.10248647015821"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9530732730005056",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.395681371196225"
         }
       ],
       "total_children_count": 0,
@@ -3643,33 +3748,22 @@
       ],
       "triples_metadata": [
         "Nederbrugstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "i",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment324.jsonld#77429",
-              "@type": "tree:Node",
-              "token_string": "ersel"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment324.jsonld#77430",
-              "@type": "tree:Node",
-              "token_string": "jver"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "ersel": [
+          "324",
+          "77429"
+        ],
+        "jver": [
+          "324",
+          "77430"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment324.jsonld#40743",
         "@type": "tree:Node"
@@ -3677,33 +3771,33 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nederviersel",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.827369231743798",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.717197642011065"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.362481361602379",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.17256488904036"
         },
         {
           "http://example.com/terms#name": "Nederviersel",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.584172826098048",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.78571414044236"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.110804705421362",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.73732789993928"
         },
         {
           "http://example.com/terms#name": "Nederviersel",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.584172826098048",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.78571414044236"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.110804705421362",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.73732789993928"
         },
         {
           "http://example.com/terms#name": "Nederviersel",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.584172826098048",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.78571414044236"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.110804705421362",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.73732789993928"
         },
         {
           "http://example.com/terms#name": "Nederviersel",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.584172826098048",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.78571414044236"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.110804705421362",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.73732789993928"
         },
         {
           "http://example.com/terms#name": "Nedervijver",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.264330932656577",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.47528615718426"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.634063833644315",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.30670557087163"
         }
       ],
       "total_children_count": 2,
@@ -3727,37 +3821,52 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment324.jsonld#77429"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment324.jsonld#77430"
+          ]
+        }
+      ]
     },
     {
       "token_string": "ersel",
       "triples": [
         {
           "http://example.com/terms#name": "Nederviersel",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.827369231743798",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.717197642011065"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.362481361602379",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.17256488904036"
         },
         {
           "http://example.com/terms#name": "Nederviersel",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.584172826098048",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.78571414044236"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.110804705421362",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.73732789993928"
         },
         {
           "http://example.com/terms#name": "Nederviersel",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.584172826098048",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.78571414044236"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.110804705421362",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.73732789993928"
         },
         {
           "http://example.com/terms#name": "Nederviersel",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.584172826098048",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.78571414044236"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.110804705421362",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.73732789993928"
         },
         {
           "http://example.com/terms#name": "Nederviersel",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.584172826098048",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.78571414044236"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.110804705421362",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.73732789993928"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment324.jsonld#77428",
         "@type": "tree:Node"
@@ -3765,28 +3874,28 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nederviersel",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.827369231743798",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.717197642011065"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.362481361602379",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.17256488904036"
         },
         {
           "http://example.com/terms#name": "Nederviersel",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.584172826098048",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.78571414044236"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.110804705421362",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.73732789993928"
         },
         {
           "http://example.com/terms#name": "Nederviersel",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.584172826098048",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.78571414044236"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.110804705421362",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.73732789993928"
         },
         {
           "http://example.com/terms#name": "Nederviersel",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.584172826098048",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.78571414044236"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.110804705421362",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.73732789993928"
         },
         {
           "http://example.com/terms#name": "Nederviersel",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.584172826098048",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.78571414044236"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.110804705421362",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.73732789993928"
         }
       ],
       "total_children_count": 0,
@@ -3810,17 +3919,19 @@
         "Nederviersel",
         "Nederviersel",
         "Nederviersel"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "jver",
       "triples": [
         {
           "http://example.com/terms#name": "Nedervijver",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.264330932656577",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.47528615718426"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.634063833644315",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.30670557087163"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment324.jsonld#77428",
         "@type": "tree:Node"
@@ -3828,8 +3939,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nedervijver",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.264330932656577",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.47528615718426"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.634063833644315",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.30670557087163"
         }
       ],
       "total_children_count": 0,
@@ -3845,33 +3956,22 @@
       ],
       "triples_metadata": [
         "Nedervijver"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "as",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment324.jsonld#77781",
-              "@type": "tree:Node",
-              "token_string": "seltstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment324.jsonld#77782",
-              "@type": "tree:Node",
-              "token_string": "e"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "seltstraat": [
+          "324",
+          "77781"
+        ],
+        "e": [
+          "324",
+          "77782"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment324.jsonld#23443",
         "@type": "tree:Node"
@@ -3879,13 +3979,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nederhasseltstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5205974309186927",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.04299809630077"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9415723907690534",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.19856022798633"
         },
         {
           "http://example.com/terms#name": "Nederhase",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.87099196558359",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.91657536897493"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.024048677918979",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.493231264657446"
         }
       ],
       "total_children_count": 2,
@@ -3905,17 +4005,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment324.jsonld#77781"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment324.jsonld#77782"
+          ]
+        }
+      ]
     },
     {
       "token_string": "seltstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Nederhasseltstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5205974309186927",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.04299809630077"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9415723907690534",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.19856022798633"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment324.jsonld#77780",
         "@type": "tree:Node"
@@ -3923,8 +4038,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nederhasseltstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5205974309186927",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.04299809630077"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9415723907690534",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.19856022798633"
         }
       ],
       "total_children_count": 0,
@@ -3940,17 +4055,19 @@
       ],
       "triples_metadata": [
         "Nederhasseltstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "e",
       "triples": [
         {
           "http://example.com/terms#name": "Nederhase",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.87099196558359",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.91657536897493"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.024048677918979",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.493231264657446"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment324.jsonld#77780",
         "@type": "tree:Node"
@@ -3958,8 +4075,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nederhase",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.87099196558359",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.91657536897493"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.024048677918979",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.493231264657446"
         }
       ],
       "total_children_count": 0,
@@ -3975,33 +4092,22 @@
       ],
       "triples_metadata": [
         "Nederhase"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "e",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment324.jsonld#78085",
-              "@type": "tree:Node",
-              "token_string": "n"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment324.jsonld#78086",
-              "@type": "tree:Node",
-              "token_string": "enberg"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "n": [
+          "324",
+          "78085"
+        ],
+        "enberg": [
+          "324",
+          "78086"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment324.jsonld#19043",
         "@type": "tree:Node"
@@ -4009,18 +4115,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nederstenkouter",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5287500177779987",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.14522900744019"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.098874385572206",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.43681753845744"
         },
         {
           "http://example.com/terms#name": "Nederstenberg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1387471995530314",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.48009825603085"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.205546607119855",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.37430361762427"
         },
         {
           "http://example.com/terms#name": "Nedersteenberg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.757746582541154",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.190462792352434"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7609212251080413",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.108888700719426"
         }
       ],
       "total_children_count": 4,
@@ -4046,33 +4152,35 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
-    },
-    {
-      "token_string": "n",
-      "triples": [],
-      "children": [
+      "triples_metadata": [],
+      "childlist": [
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment324.jsonld#72837",
-              "@type": "tree:Node",
-              "token_string": "kouter"
-            }
+            "/streets/fragment324.jsonld#78085"
           ]
         },
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment324.jsonld#72838",
-              "@type": "tree:Node",
-              "token_string": "berg"
-            }
+            "/streets/fragment324.jsonld#78086"
           ]
         }
-      ],
+      ]
+    },
+    {
+      "token_string": "n",
+      "triples": [],
+      "children": {
+        "kouter": [
+          "324",
+          "72837"
+        ],
+        "berg": [
+          "324",
+          "72838"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment324.jsonld#78084",
         "@type": "tree:Node"
@@ -4080,13 +4188,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nederstenkouter",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5287500177779987",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.14522900744019"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.098874385572206",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.43681753845744"
         },
         {
           "http://example.com/terms#name": "Nederstenberg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1387471995530314",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.48009825603085"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.205546607119855",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.37430361762427"
         }
       ],
       "total_children_count": 2,
@@ -4106,17 +4214,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment324.jsonld#72837"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment324.jsonld#72838"
+          ]
+        }
+      ]
     },
     {
       "token_string": "enberg",
       "triples": [
         {
           "http://example.com/terms#name": "Nedersteenberg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.757746582541154",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.190462792352434"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7609212251080413",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.108888700719426"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment324.jsonld#78084",
         "@type": "tree:Node"
@@ -4124,8 +4247,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nedersteenberg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.757746582541154",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.190462792352434"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7609212251080413",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.108888700719426"
         }
       ],
       "total_children_count": 0,
@@ -4141,29 +4264,24 @@
       ],
       "triples_metadata": [
         "Nedersteenberg"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "molen",
       "triples": [
         {
           "http://example.com/terms#name": "Nedermolen",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9410109594685085",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.25790135100228"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4566284042253375",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.077892083556804"
         }
       ],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment324.jsonld#78305",
-              "@type": "tree:Node",
-              "token_string": "straat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "straat": [
+          "324",
+          "78305"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment324.jsonld#50832",
         "@type": "tree:Node"
@@ -4171,13 +4289,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nedermolenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6974607340331724",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.74195941337428"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.397809897357775",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.15543535878486"
         },
         {
           "http://example.com/terms#name": "Nedermolen",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9410109594685085",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.25790135100228"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4566284042253375",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.077892083556804"
         }
       ],
       "total_children_count": 1,
@@ -4199,6 +4317,14 @@
       ],
       "triples_metadata": [
         "Nedermolen"
+      ],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment324.jsonld#78305"
+          ]
+        }
       ]
     },
     {
@@ -4206,10 +4332,11 @@
       "triples": [
         {
           "http://example.com/terms#name": "Nedermolenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6974607340331724",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.74195941337428"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.397809897357775",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.15543535878486"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment324.jsonld#78304",
         "@type": "tree:Node"
@@ -4217,8 +4344,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nedermolenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6974607340331724",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.74195941337428"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.397809897357775",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.15543535878486"
         }
       ],
       "total_children_count": 0,
@@ -4234,33 +4361,22 @@
       ],
       "triples_metadata": [
         "Nedermolenstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "d",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment324.jsonld#83759",
-              "@type": "tree:Node",
-              "token_string": "ellelaan"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment324.jsonld#83760",
-              "@type": "tree:Node",
-              "token_string": "uin"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "ellelaan": [
+          "324",
+          "83759"
+        ],
+        "uin": [
+          "324",
+          "83760"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment324.jsonld#50832",
         "@type": "tree:Node"
@@ -4268,13 +4384,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nederdellelaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.344193821502685",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.87045729148729"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0694375774260627",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.884567474624234"
         },
         {
           "http://example.com/terms#name": "Nederduin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.457142870601959",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.651905484644146"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.528965892238302",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.70380599773208"
         }
       ],
       "total_children_count": 2,
@@ -4294,17 +4410,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment324.jsonld#83759"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment324.jsonld#83760"
+          ]
+        }
+      ]
     },
     {
       "token_string": "ellelaan",
       "triples": [
         {
           "http://example.com/terms#name": "Nederdellelaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.344193821502685",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.87045729148729"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0694375774260627",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.884567474624234"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment324.jsonld#83758",
         "@type": "tree:Node"
@@ -4312,8 +4443,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nederdellelaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.344193821502685",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.87045729148729"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0694375774260627",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.884567474624234"
         }
       ],
       "total_children_count": 0,
@@ -4329,17 +4460,19 @@
       ],
       "triples_metadata": [
         "Nederdellelaan"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "uin",
       "triples": [
         {
           "http://example.com/terms#name": "Nederduin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.457142870601959",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.651905484644146"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.528965892238302",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.70380599773208"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment324.jsonld#83758",
         "@type": "tree:Node"
@@ -4347,8 +4480,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nederduin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.457142870601959",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.651905484644146"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.528965892238302",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.70380599773208"
         }
       ],
       "total_children_count": 0,
@@ -4364,29 +4497,24 @@
       ],
       "triples_metadata": [
         "Nederduin"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "eert",
       "triples": [
         {
           "http://example.com/terms#name": "Nederbeert",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.618783618624391",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.98341855866987"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.683071588014771",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.29376364222323"
         }
       ],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment324.jsonld#84624",
-              "@type": "tree:Node",
-              "token_string": "straat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "straat": [
+          "324",
+          "84624"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment324.jsonld#43889",
         "@type": "tree:Node"
@@ -4394,13 +4522,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nederbeertstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5992264730359538",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.73566628878707"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3506975519669",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.63967348705173"
         },
         {
           "http://example.com/terms#name": "Nederbeert",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.618783618624391",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.98341855866987"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.683071588014771",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.29376364222323"
         }
       ],
       "total_children_count": 1,
@@ -4422,6 +4550,14 @@
       ],
       "triples_metadata": [
         "Nederbeert"
+      ],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment324.jsonld#84624"
+          ]
+        }
       ]
     },
     {
@@ -4429,10 +4565,11 @@
       "triples": [
         {
           "http://example.com/terms#name": "Nederbeertstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5992264730359538",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.73566628878707"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3506975519669",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.63967348705173"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment324.jsonld#84623",
         "@type": "tree:Node"
@@ -4440,8 +4577,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nederbeertstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5992264730359538",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.73566628878707"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3506975519669",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.63967348705173"
         }
       ],
       "total_children_count": 0,
@@ -4457,33 +4594,22 @@
       ],
       "triples_metadata": [
         "Nederbeertstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "p",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment324.jsonld#100613",
-              "@type": "tree:Node",
-              "token_string": "o"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment324.jsonld#100614",
-              "@type": "tree:Node",
-              "token_string": "ad"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "o": [
+          "324",
+          "100613"
+        ],
+        "ad": [
+          "324",
+          "100614"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment324.jsonld#50832",
         "@type": "tree:Node"
@@ -4491,18 +4617,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nederpolder",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.113352077139699",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.749053992953414"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.574799627276361",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.14696638389731"
         },
         {
           "http://example.com/terms#name": "Nederpoorterij",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4318441278020457",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.80992950646779"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.142869508957451",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.50604763241347"
         },
         {
           "http://example.com/terms#name": "Nederpad",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.139000551616059",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.09290923171522"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5824837847445568",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.309039243728556"
         }
       ],
       "total_children_count": 4,
@@ -4528,33 +4654,35 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
-    },
-    {
-      "token_string": "o",
-      "triples": [],
-      "children": [
+      "triples_metadata": [],
+      "childlist": [
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment324.jsonld#73200",
-              "@type": "tree:Node",
-              "token_string": "lder"
-            }
+            "/streets/fragment324.jsonld#100613"
           ]
         },
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment324.jsonld#73201",
-              "@type": "tree:Node",
-              "token_string": "orterij"
-            }
+            "/streets/fragment324.jsonld#100614"
           ]
         }
-      ],
+      ]
+    },
+    {
+      "token_string": "o",
+      "triples": [],
+      "children": {
+        "lder": [
+          "324",
+          "73200"
+        ],
+        "orterij": [
+          "324",
+          "73201"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment324.jsonld#100612",
         "@type": "tree:Node"
@@ -4562,13 +4690,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nederpolder",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.113352077139699",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.749053992953414"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.574799627276361",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.14696638389731"
         },
         {
           "http://example.com/terms#name": "Nederpoorterij",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4318441278020457",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.80992950646779"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.142869508957451",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.50604763241347"
         }
       ],
       "total_children_count": 2,
@@ -4588,17 +4716,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment324.jsonld#73200"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment324.jsonld#73201"
+          ]
+        }
+      ]
     },
     {
       "token_string": "ad",
       "triples": [
         {
           "http://example.com/terms#name": "Nederpad",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.139000551616059",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.09290923171522"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5824837847445568",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.309039243728556"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment324.jsonld#100612",
         "@type": "tree:Node"
@@ -4606,8 +4749,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nederpad",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.139000551616059",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.09290923171522"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5824837847445568",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.309039243728556"
         }
       ],
       "total_children_count": 0,
@@ -4623,17 +4766,19 @@
       ],
       "triples_metadata": [
         "Nederpad"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "plein",
       "triples": [
         {
           "http://example.com/terms#name": "Nederhemplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.573407633945199",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.63046365666283"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6368575878387324",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.57769542237609"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment324.jsonld#71012",
         "@type": "tree:Node"
@@ -4641,8 +4786,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nederhemplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.573407633945199",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.63046365666283"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6368575878387324",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.57769542237609"
         }
       ],
       "total_children_count": 0,
@@ -4658,7 +4803,8 @@
       ],
       "triples_metadata": [
         "Nederhemplein"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

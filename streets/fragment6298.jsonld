@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "s ",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6298.jsonld#162088",
-              "@type": "tree:Node",
-              "token_string": "Trous"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6298.jsonld#162089",
-              "@type": "tree:Node",
-              "token_string": "Jardins"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6298.jsonld#175204",
-              "@type": "tree:Node",
-              "token_string": "Hans"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "Trous": [
+          "6298",
+          "162088"
+        ],
+        "Jardins": [
+          "6298",
+          "162089"
+        ],
+        "Hans": [
+          "6298",
+          "175204"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment121.jsonld#162091",
         "@type": "tree:Node"
@@ -62,18 +44,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Au-dessus des Trous",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0022796876539335",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.550652522107335"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6820444973005695",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.80881856391502"
         },
         {
           "http://example.com/terms#name": "Au-dessus des Jardins",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1994985357462182",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.297150659660204"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8514128228816986",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.937766728042156"
         },
         {
           "http://example.com/terms#name": "Au-dessus des Hans",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5557792863901203",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.90834349802602"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.827438895441493",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.54543953927422"
         }
       ],
       "total_children_count": 3,
@@ -99,17 +81,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6298.jsonld#162088"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6298.jsonld#162089"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6298.jsonld#175204"
+          ]
+        }
+      ]
     },
     {
       "token_string": "Trous",
       "triples": [
         {
           "http://example.com/terms#name": "Au-dessus des Trous",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0022796876539335",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.550652522107335"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6820444973005695",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.80881856391502"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6298.jsonld#162087",
         "@type": "tree:Node"
@@ -117,8 +120,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Au-dessus des Trous",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0022796876539335",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.550652522107335"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6820444973005695",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.80881856391502"
         }
       ],
       "total_children_count": 0,
@@ -134,17 +137,19 @@
       ],
       "triples_metadata": [
         "Au-dessus des Trous"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "Jardins",
       "triples": [
         {
           "http://example.com/terms#name": "Au-dessus des Jardins",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1994985357462182",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.297150659660204"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8514128228816986",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.937766728042156"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6298.jsonld#162087",
         "@type": "tree:Node"
@@ -152,8 +157,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Au-dessus des Jardins",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1994985357462182",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.297150659660204"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8514128228816986",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.937766728042156"
         }
       ],
       "total_children_count": 0,
@@ -169,17 +174,19 @@
       ],
       "triples_metadata": [
         "Au-dessus des Jardins"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "Hans",
       "triples": [
         {
           "http://example.com/terms#name": "Au-dessus des Hans",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5557792863901203",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.90834349802602"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.827438895441493",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.54543953927422"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6298.jsonld#162087",
         "@type": "tree:Node"
@@ -187,8 +194,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Au-dessus des Hans",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5557792863901203",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.90834349802602"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.827438895441493",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.54543953927422"
         }
       ],
       "total_children_count": 0,
@@ -204,7 +211,8 @@
       ],
       "triples_metadata": [
         "Au-dessus des Hans"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

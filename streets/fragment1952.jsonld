@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "R",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1952.jsonld#86514",
-              "@type": "tree:Node",
-              "token_string": "eypenslei"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1952.jsonld#86515",
-              "@type": "tree:Node",
-              "token_string": "ottiestraat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "eypenslei": [
+          "1952",
+          "86514"
+        ],
+        "ottiestraat": [
+          "1952",
+          "86515"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment1578.jsonld#14063",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Pieter Reypenslei",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.267966572894011",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.259552353130424"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3530612586361226",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.149786415600495"
         },
         {
           "http://example.com/terms#name": "Pieter Rottiestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9994958236437492",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.40171121572458"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7434479578201",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.490472838159164"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1952.jsonld#86514"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1952.jsonld#86515"
+          ]
+        }
+      ]
     },
     {
       "token_string": "eypenslei",
       "triples": [
         {
           "http://example.com/terms#name": "Pieter Reypenslei",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.267966572894011",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.259552353130424"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3530612586361226",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.149786415600495"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1952.jsonld#86513",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Pieter Reypenslei",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.267966572894011",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.259552353130424"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3530612586361226",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.149786415600495"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Pieter Reypenslei"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "ottiestraat",
       "triples": [
         {
           "http://example.com/terms#name": "Pieter Rottiestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9994958236437492",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.40171121572458"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7434479578201",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.490472838159164"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1952.jsonld#86513",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Pieter Rottiestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9994958236437492",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.40171121572458"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7434479578201",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.490472838159164"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Pieter Rottiestraat"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

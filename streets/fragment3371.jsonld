@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "ns",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3371.jsonld#53193",
-              "@type": "tree:Node",
-              "token_string": "straat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3371.jsonld#53194",
-              "@type": "tree:Node",
-              "token_string": "veld"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3371.jsonld#94918",
-              "@type": "tree:Node",
-              "token_string": "weg"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "straat": [
+          "3371",
+          "53193"
+        ],
+        "veld": [
+          "3371",
+          "53194"
+        ],
+        "weg": [
+          "3371",
+          "94918"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment3667.jsonld#47208",
         "@type": "tree:Node"
@@ -62,18 +44,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Smiskensstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0751547793439227",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.09345827637928"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4836231295912414",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.44121288314692"
         },
         {
           "http://example.com/terms#name": "Smiskensveld",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.863273981417182",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.46113839323706"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.101445852050359",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.48483487259398"
         },
         {
           "http://example.com/terms#name": "Smiskensweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.829559929250207",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.17318435468211"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.512327195702646",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.183767118446724"
         }
       ],
       "total_children_count": 3,
@@ -99,17 +81,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3371.jsonld#53193"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3371.jsonld#53194"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3371.jsonld#94918"
+          ]
+        }
+      ]
     },
     {
       "token_string": "straat",
       "triples": [
         {
           "http://example.com/terms#name": "Smiskensstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0751547793439227",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.09345827637928"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4836231295912414",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.44121288314692"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3371.jsonld#53192",
         "@type": "tree:Node"
@@ -117,8 +120,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Smiskensstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0751547793439227",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.09345827637928"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4836231295912414",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.44121288314692"
         }
       ],
       "total_children_count": 0,
@@ -134,17 +137,19 @@
       ],
       "triples_metadata": [
         "Smiskensstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "veld",
       "triples": [
         {
           "http://example.com/terms#name": "Smiskensveld",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.863273981417182",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.46113839323706"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.101445852050359",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.48483487259398"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3371.jsonld#53192",
         "@type": "tree:Node"
@@ -152,8 +157,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Smiskensveld",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.863273981417182",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.46113839323706"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.101445852050359",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.48483487259398"
         }
       ],
       "total_children_count": 0,
@@ -169,17 +174,19 @@
       ],
       "triples_metadata": [
         "Smiskensveld"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "weg",
       "triples": [
         {
           "http://example.com/terms#name": "Smiskensweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.829559929250207",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.17318435468211"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.512327195702646",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.183767118446724"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3371.jsonld#53192",
         "@type": "tree:Node"
@@ -187,8 +194,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Smiskensweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.829559929250207",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.17318435468211"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.512327195702646",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.183767118446724"
         }
       ],
       "total_children_count": 0,
@@ -204,7 +211,8 @@
       ],
       "triples_metadata": [
         "Smiskensweg"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

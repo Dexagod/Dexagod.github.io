@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "Te",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3162.jsonld#67776",
-              "@type": "tree:Node",
-              "token_string": "mmermanstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3162.jsonld#67777",
-              "@type": "tree:Node",
-              "token_string": "rmotelaan"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "mmermanstraat": [
+          "3162",
+          "67776"
+        ],
+        "rmotelaan": [
+          "3162",
+          "67777"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment847.jsonld#2131",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Albert Temmermanstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.170572623319714",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.10097381636551"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3932508503497845",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.93753258450545"
         },
         {
           "http://example.com/terms#name": "Albert Termotelaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7690612650503237",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.96982899855083"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5551161054477376",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.169073020722955"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3162.jsonld#67776"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3162.jsonld#67777"
+          ]
+        }
+      ]
     },
     {
       "token_string": "mmermanstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Albert Temmermanstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.170572623319714",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.10097381636551"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3932508503497845",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.93753258450545"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3162.jsonld#67775",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Albert Temmermanstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.170572623319714",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.10097381636551"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3932508503497845",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.93753258450545"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Albert Temmermanstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "rmotelaan",
       "triples": [
         {
           "http://example.com/terms#name": "Albert Termotelaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7690612650503237",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.96982899855083"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5551161054477376",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.169073020722955"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3162.jsonld#67775",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Albert Termotelaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7690612650503237",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.96982899855083"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5551161054477376",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.169073020722955"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Albert Termotelaan"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

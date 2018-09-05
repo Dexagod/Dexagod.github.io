@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "d",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2554.jsonld#42432",
-              "@type": "tree:Node",
-              "token_string": "wig Burchardstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2554.jsonld#68400",
-              "@type": "tree:Node",
-              "token_string": "gardislei"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2554.jsonld#85012",
-              "@type": "tree:Node",
-              "token_string": "ovicus "
-            }
-          ]
-        }
-      ],
+      "children": {
+        "wig Burchardstraat": [
+          "2554",
+          "42432"
+        ],
+        "gardislei": [
+          "2554",
+          "68400"
+        ],
+        "ovicus ": [
+          "2554",
+          "85012"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment237.jsonld#66",
         "@type": "tree:Node"
@@ -62,23 +44,23 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Ludwig Burchardstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0579955556549807",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.421005640951485"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5487898785744543",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.98827322486714"
         },
         {
           "http://example.com/terms#name": "Ludovicus Zamenhofstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3953866158930786",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.74449577871701"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3055077440267815",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.65809712025959"
         },
         {
           "http://example.com/terms#name": "Ludgardislei",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0841070270157744",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.23603097121716"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4600834183553606",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.840766407288406"
         },
         {
           "http://example.com/terms#name": "Ludovicus Vandendriesscheplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3571369805135935",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.72006501771651"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9016810306560155",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.051220178931054"
         }
       ],
       "total_children_count": 5,
@@ -110,17 +92,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2554.jsonld#42432"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2554.jsonld#68400"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2554.jsonld#85012"
+          ]
+        }
+      ]
     },
     {
       "token_string": "wig Burchardstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Ludwig Burchardstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0579955556549807",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.421005640951485"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5487898785744543",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.98827322486714"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2554.jsonld#42431",
         "@type": "tree:Node"
@@ -128,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Ludwig Burchardstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0579955556549807",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.421005640951485"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5487898785744543",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.98827322486714"
         }
       ],
       "total_children_count": 0,
@@ -145,17 +148,19 @@
       ],
       "triples_metadata": [
         "Ludwig Burchardstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "gardislei",
       "triples": [
         {
           "http://example.com/terms#name": "Ludgardislei",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0841070270157744",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.23603097121716"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4600834183553606",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.840766407288406"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2554.jsonld#42431",
         "@type": "tree:Node"
@@ -163,8 +168,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Ludgardislei",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0841070270157744",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.23603097121716"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4600834183553606",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.840766407288406"
         }
       ],
       "total_children_count": 0,
@@ -180,33 +185,22 @@
       ],
       "triples_metadata": [
         "Ludgardislei"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "ovicus ",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2554.jsonld#85013",
-              "@type": "tree:Node",
-              "token_string": "Zamenhofstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2554.jsonld#85014",
-              "@type": "tree:Node",
-              "token_string": "Vandendriesscheplein"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "Zamenhofstraat": [
+          "2554",
+          "85013"
+        ],
+        "Vandendriesscheplein": [
+          "2554",
+          "85014"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment2554.jsonld#42431",
         "@type": "tree:Node"
@@ -214,13 +208,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Ludovicus Zamenhofstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3953866158930786",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.74449577871701"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3055077440267815",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.65809712025959"
         },
         {
           "http://example.com/terms#name": "Ludovicus Vandendriesscheplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3571369805135935",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.72006501771651"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9016810306560155",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.051220178931054"
         }
       ],
       "total_children_count": 2,
@@ -240,17 +234,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2554.jsonld#85013"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2554.jsonld#85014"
+          ]
+        }
+      ]
     },
     {
       "token_string": "Zamenhofstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Ludovicus Zamenhofstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3953866158930786",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.74449577871701"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3055077440267815",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.65809712025959"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2554.jsonld#85012",
         "@type": "tree:Node"
@@ -258,8 +267,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Ludovicus Zamenhofstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3953866158930786",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.74449577871701"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3055077440267815",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.65809712025959"
         }
       ],
       "total_children_count": 0,
@@ -275,17 +284,19 @@
       ],
       "triples_metadata": [
         "Ludovicus Zamenhofstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "Vandendriesscheplein",
       "triples": [
         {
           "http://example.com/terms#name": "Ludovicus Vandendriesscheplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3571369805135935",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.72006501771651"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9016810306560155",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.051220178931054"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2554.jsonld#85012",
         "@type": "tree:Node"
@@ -293,8 +304,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Ludovicus Vandendriesscheplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3571369805135935",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.72006501771651"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9016810306560155",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.051220178931054"
         }
       ],
       "total_children_count": 0,
@@ -310,7 +321,8 @@
       ],
       "triples_metadata": [
         "Ludovicus Vandendriesscheplein"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

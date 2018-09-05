@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "pp",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2722.jsonld#75683",
-              "@type": "tree:Node",
-              "token_string": "er"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3277.jsonld#75684",
-              "@type": "tree:Node",
-              "token_string": "aardstraat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "er": [
+          "2722",
+          "75683"
+        ],
+        "aardstraat": [
+          "3277",
+          "75684"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment804.jsonld#603",
         "@type": "tree:Node"
@@ -52,43 +40,43 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Dapperheidstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8426633278755022",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.84331315631581"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.798974516951661",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.70487428775558"
         },
         {
           "http://example.com/terms#name": "Dapperensquare",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.080334242486536",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.62511387427478"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.437543912035167",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.99882000203713"
         },
         {
           "http://example.com/terms#name": "Dappaardstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2304167247581304",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.78039836969785"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7280917091159145",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.841037751615474"
         },
         {
           "http://example.com/terms#name": "Dappersbroekelken",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8312740251836708",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.26902952698428"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.990532779226363",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.494404651842196"
         },
         {
           "http://example.com/terms#name": "Dapperheidsplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.502320280930395",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.30240108508834"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.437178417519332",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.443107814105346"
         },
         {
           "http://example.com/terms#name": "Dapperheidsstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9345532844056805",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.412376863988655"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.924493507994132",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.213680937310215"
         },
         {
           "http://example.com/terms#name": "Dapperenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.097871599484131",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.49957221223531"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.942083382163322",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.671629351329635"
         },
         {
           "http://example.com/terms#name": "Dapperenlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6363768304728477",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.200702129228844"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.300131686706913",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.92437197457882"
         }
       ],
       "total_children_count": 12,
@@ -144,17 +132,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2722.jsonld#75683"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3277.jsonld#75684"
+          ]
+        }
+      ]
     },
     {
       "token_string": "aardstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Dappaardstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2304167247581304",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.78039836969785"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7280917091159145",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.841037751615474"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3277.jsonld#75682",
         "@type": "tree:Node"
@@ -162,8 +165,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Dappaardstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2304167247581304",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.78039836969785"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7280917091159145",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.841037751615474"
         }
       ],
       "total_children_count": 0,
@@ -179,7 +182,8 @@
       ],
       "triples_metadata": [
         "Dappaardstraat"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

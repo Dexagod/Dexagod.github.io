@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "Nico",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3657.jsonld#100622",
-              "@type": "tree:Node",
-              "token_string": "ulaan"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3657.jsonld#100623",
-              "@type": "tree:Node",
-              "token_string": "laïstraat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "ulaan": [
+          "3657",
+          "100622"
+        ],
+        "laïstraat": [
+          "3657",
+          "100623"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment2729.jsonld#5779",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Paul Nicoulaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.367285131210848",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.28222673294551"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.953591657836378",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.77845051613365"
         },
         {
           "http://example.com/terms#name": "Paul Nicolaïstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.366967860557132",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.60562163946189"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.870275750391209",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.325857636560045"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3657.jsonld#100622"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3657.jsonld#100623"
+          ]
+        }
+      ]
     },
     {
       "token_string": "ulaan",
       "triples": [
         {
           "http://example.com/terms#name": "Paul Nicoulaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.367285131210848",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.28222673294551"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.953591657836378",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.77845051613365"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3657.jsonld#100621",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Paul Nicoulaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.367285131210848",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.28222673294551"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.953591657836378",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.77845051613365"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Paul Nicoulaan"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "laïstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Paul Nicolaïstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.366967860557132",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.60562163946189"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.870275750391209",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.325857636560045"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3657.jsonld#100621",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Paul Nicolaïstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.366967860557132",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.60562163946189"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.870275750391209",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.325857636560045"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Paul Nicolaïstraat"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "i",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6390.jsonld#170057",
-              "@type": "tree:Node",
-              "token_string": "ron"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6390.jsonld#170058",
-              "@type": "tree:Node",
-              "token_string": "ette"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6390.jsonld#178315",
-              "@type": "tree:Node",
-              "token_string": "not Duclos"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "ron": [
+          "6390",
+          "170057"
+        ],
+        "ette": [
+          "6390",
+          "170058"
+        ],
+        "not Duclos": [
+          "6390",
+          "178315"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4606.jsonld#125855",
         "@type": "tree:Node"
@@ -62,18 +44,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Charles Piron",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9624855176558187",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.894384227590244"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3506973785828906",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.84437502141692"
         },
         {
           "http://example.com/terms#name": "Rue Charles Piette",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.874032409757538",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.381018444959075"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7780211695486376",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.40629633372526"
         },
         {
           "http://example.com/terms#name": "Rue Charles Pinot Duclos",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.050392762699781",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.63964842432193"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9930812801374245",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.50079426200924"
         }
       ],
       "total_children_count": 3,
@@ -99,17 +81,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6390.jsonld#170057"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6390.jsonld#170058"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6390.jsonld#178315"
+          ]
+        }
+      ]
     },
     {
       "token_string": "ron",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Charles Piron",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9624855176558187",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.894384227590244"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3506973785828906",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.84437502141692"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6390.jsonld#170056",
         "@type": "tree:Node"
@@ -117,8 +120,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Charles Piron",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9624855176558187",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.894384227590244"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3506973785828906",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.84437502141692"
         }
       ],
       "total_children_count": 0,
@@ -134,17 +137,19 @@
       ],
       "triples_metadata": [
         "Rue Charles Piron"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "ette",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Charles Piette",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.874032409757538",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.381018444959075"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7780211695486376",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.40629633372526"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6390.jsonld#170056",
         "@type": "tree:Node"
@@ -152,8 +157,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Charles Piette",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.874032409757538",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.381018444959075"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7780211695486376",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.40629633372526"
         }
       ],
       "total_children_count": 0,
@@ -169,17 +174,19 @@
       ],
       "triples_metadata": [
         "Rue Charles Piette"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "not Duclos",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Charles Pinot Duclos",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.050392762699781",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.63964842432193"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9930812801374245",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.50079426200924"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6390.jsonld#170056",
         "@type": "tree:Node"
@@ -187,8 +194,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Charles Pinot Duclos",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.050392762699781",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.63964842432193"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9930812801374245",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.50079426200924"
         }
       ],
       "total_children_count": 0,
@@ -204,7 +211,8 @@
       ],
       "triples_metadata": [
         "Rue Charles Pinot Duclos"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

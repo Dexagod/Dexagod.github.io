@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "P",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5310.jsonld#151827",
-              "@type": "tree:Node",
-              "token_string": "erche"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5310.jsonld#151828",
-              "@type": "tree:Node",
-              "token_string": "rovidence"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5310.jsonld#157127",
-              "@type": "tree:Node",
-              "token_string": "ierre"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "erche": [
+          "5310",
+          "151827"
+        ],
+        "rovidence": [
+          "5310",
+          "151828"
+        ],
+        "ierre": [
+          "5310",
+          "157127"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment3977.jsonld#109073",
         "@type": "tree:Node"
@@ -62,18 +44,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Place de la Perche",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2470818884449337",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.24115862050738"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.533905677511732",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.775854207297115"
         },
         {
           "http://example.com/terms#name": "Place de la Providence",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7454577333184162",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.09668815969437"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.547746894821022",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.02436938225499"
         },
         {
           "http://example.com/terms#name": "Place de la Pierre",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.229711413210678",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.8303672081977"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1879104268823557",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.157947519150554"
         }
       ],
       "total_children_count": 3,
@@ -99,17 +81,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5310.jsonld#151827"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5310.jsonld#151828"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5310.jsonld#157127"
+          ]
+        }
+      ]
     },
     {
       "token_string": "erche",
       "triples": [
         {
           "http://example.com/terms#name": "Place de la Perche",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2470818884449337",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.24115862050738"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.533905677511732",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.775854207297115"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5310.jsonld#151826",
         "@type": "tree:Node"
@@ -117,8 +120,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Place de la Perche",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2470818884449337",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.24115862050738"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.533905677511732",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.775854207297115"
         }
       ],
       "total_children_count": 0,
@@ -134,17 +137,19 @@
       ],
       "triples_metadata": [
         "Place de la Perche"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "rovidence",
       "triples": [
         {
           "http://example.com/terms#name": "Place de la Providence",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7454577333184162",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.09668815969437"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.547746894821022",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.02436938225499"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5310.jsonld#151826",
         "@type": "tree:Node"
@@ -152,8 +157,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Place de la Providence",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7454577333184162",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.09668815969437"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.547746894821022",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.02436938225499"
         }
       ],
       "total_children_count": 0,
@@ -169,17 +174,19 @@
       ],
       "triples_metadata": [
         "Place de la Providence"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "ierre",
       "triples": [
         {
           "http://example.com/terms#name": "Place de la Pierre",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.229711413210678",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.8303672081977"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1879104268823557",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.157947519150554"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5310.jsonld#151826",
         "@type": "tree:Node"
@@ -187,8 +194,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Place de la Pierre",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.229711413210678",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.8303672081977"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1879104268823557",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.157947519150554"
         }
       ],
       "total_children_count": 0,
@@ -204,7 +211,8 @@
       ],
       "triples_metadata": [
         "Place de la Pierre"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

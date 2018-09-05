@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "Ki",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5036.jsonld#154624",
-              "@type": "tree:Node",
-              "token_string": "mpinaire"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5036.jsonld#154625",
-              "@type": "tree:Node",
-              "token_string": "nnart"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "mpinaire": [
+          "5036",
+          "154624"
+        ],
+        "nnart": [
+          "5036",
+          "154625"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4336.jsonld#109051",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Joseph Kimpinaire",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0278957189153304",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.581880172800375"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8439435576877994",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.11225776114624"
         },
         {
           "http://example.com/terms#name": "Rue Joseph Kinnart",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.161406222100445",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.04922243343762"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.675871928705891",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.47903627968226"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5036.jsonld#154624"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5036.jsonld#154625"
+          ]
+        }
+      ]
     },
     {
       "token_string": "mpinaire",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Joseph Kimpinaire",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0278957189153304",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.581880172800375"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8439435576877994",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.11225776114624"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5036.jsonld#154623",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Joseph Kimpinaire",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0278957189153304",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.581880172800375"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8439435576877994",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.11225776114624"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Rue Joseph Kimpinaire"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "nnart",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Joseph Kinnart",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.161406222100445",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.04922243343762"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.675871928705891",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.47903627968226"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5036.jsonld#154623",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Joseph Kinnart",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.161406222100445",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.04922243343762"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.675871928705891",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.47903627968226"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Rue Joseph Kinnart"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

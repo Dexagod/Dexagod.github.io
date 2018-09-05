@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "H",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2857.jsonld#54961",
-              "@type": "tree:Node",
-              "token_string": "aegensstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2857.jsonld#54962",
-              "@type": "tree:Node",
-              "token_string": "ofmanstraat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "aegensstraat": [
+          "2857",
+          "54961"
+        ],
+        "ofmanstraat": [
+          "2857",
+          "54962"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment2411.jsonld#34590",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Karel Haegensstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.89782555456299",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.6171058283032"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9997542836284854",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.15548542416581"
         },
         {
           "http://example.com/terms#name": "Karel Hofmanstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4013675728986192",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.5558705421244"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4411527301629983",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.97289520225422"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2857.jsonld#54961"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2857.jsonld#54962"
+          ]
+        }
+      ]
     },
     {
       "token_string": "aegensstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Karel Haegensstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.89782555456299",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.6171058283032"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9997542836284854",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.15548542416581"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2857.jsonld#54960",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Karel Haegensstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.89782555456299",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.6171058283032"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9997542836284854",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.15548542416581"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Karel Haegensstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "ofmanstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Karel Hofmanstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4013675728986192",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.5558705421244"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4411527301629983",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.97289520225422"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2857.jsonld#54960",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Karel Hofmanstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4013675728986192",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.5558705421244"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4411527301629983",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.97289520225422"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Karel Hofmanstraat"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

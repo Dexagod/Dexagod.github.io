@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "M",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1940.jsonld#65417",
-              "@type": "tree:Node",
-              "token_string": "ichielsstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1940.jsonld#65418",
-              "@type": "tree:Node",
-              "token_string": "agermanplein"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1940.jsonld#78774",
-              "@type": "tree:Node",
-              "token_string": "eerssemanstraat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "ichielsstraat": [
+          "1940",
+          "65417"
+        ],
+        "agermanplein": [
+          "1940",
+          "65418"
+        ],
+        "eerssemanstraat": [
+          "1940",
+          "78774"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment1578.jsonld#14063",
         "@type": "tree:Node"
@@ -62,18 +44,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Pieter Michielsstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.391230526455126",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.887857054007725"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1838588833636474",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.044823291695025"
         },
         {
           "http://example.com/terms#name": "Pieter Magermanplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8588952036657673",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.785492399289446"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9922800816464856",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.08457818906055"
         },
         {
           "http://example.com/terms#name": "Pieter Meerssemanstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6796239587134254",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.7560516537095"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5145433184172377",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.207919829140515"
         }
       ],
       "total_children_count": 3,
@@ -99,17 +81,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1940.jsonld#65417"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1940.jsonld#65418"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1940.jsonld#78774"
+          ]
+        }
+      ]
     },
     {
       "token_string": "ichielsstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Pieter Michielsstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.391230526455126",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.887857054007725"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1838588833636474",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.044823291695025"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1940.jsonld#65416",
         "@type": "tree:Node"
@@ -117,8 +120,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Pieter Michielsstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.391230526455126",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.887857054007725"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1838588833636474",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.044823291695025"
         }
       ],
       "total_children_count": 0,
@@ -134,17 +137,19 @@
       ],
       "triples_metadata": [
         "Pieter Michielsstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "agermanplein",
       "triples": [
         {
           "http://example.com/terms#name": "Pieter Magermanplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8588952036657673",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.785492399289446"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9922800816464856",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.08457818906055"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1940.jsonld#65416",
         "@type": "tree:Node"
@@ -152,8 +157,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Pieter Magermanplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8588952036657673",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.785492399289446"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9922800816464856",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.08457818906055"
         }
       ],
       "total_children_count": 0,
@@ -169,17 +174,19 @@
       ],
       "triples_metadata": [
         "Pieter Magermanplein"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "eerssemanstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Pieter Meerssemanstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6796239587134254",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.7560516537095"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5145433184172377",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.207919829140515"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1940.jsonld#65416",
         "@type": "tree:Node"
@@ -187,8 +194,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Pieter Meerssemanstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6796239587134254",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.7560516537095"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5145433184172377",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.207919829140515"
         }
       ],
       "total_children_count": 0,
@@ -204,7 +211,8 @@
       ],
       "triples_metadata": [
         "Pieter Meerssemanstraat"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

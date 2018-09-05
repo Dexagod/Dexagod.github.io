@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "c",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4123.jsonld#134940",
-              "@type": "tree:Node",
-              "token_string": "ours d'Eau"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4123.jsonld#134941",
-              "@type": "tree:Node",
-              "token_string": "hemin Vert"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4123.jsonld#139825",
-              "@type": "tree:Node",
-              "token_string": "imetière"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "ours d'Eau": [
+          "4123",
+          "134940"
+        ],
+        "hemin Vert": [
+          "4123",
+          "134941"
+        ],
+        "imetière": [
+          "4123",
+          "139825"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment3708.jsonld#136527",
         "@type": "tree:Node"
@@ -62,18 +44,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue du cours d'Eau",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.602571314577859",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.98356493352792"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.680450014938367",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.27822157706373"
         },
         {
           "http://example.com/terms#name": "Rue du chemin Vert",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4941067683019114",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.140877612781814"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3851317237124507",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.33698996249931"
         },
         {
           "http://example.com/terms#name": "Rue du cimetière",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.854946027799359",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.55034956161472"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2715074009391825",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.45284363291283"
         }
       ],
       "total_children_count": 3,
@@ -99,17 +81,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4123.jsonld#134940"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4123.jsonld#134941"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4123.jsonld#139825"
+          ]
+        }
+      ]
     },
     {
       "token_string": "ours d'Eau",
       "triples": [
         {
           "http://example.com/terms#name": "Rue du cours d'Eau",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.602571314577859",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.98356493352792"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.680450014938367",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.27822157706373"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4123.jsonld#134939",
         "@type": "tree:Node"
@@ -117,8 +120,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue du cours d'Eau",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.602571314577859",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.98356493352792"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.680450014938367",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.27822157706373"
         }
       ],
       "total_children_count": 0,
@@ -134,17 +137,19 @@
       ],
       "triples_metadata": [
         "Rue du cours d'Eau"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "hemin Vert",
       "triples": [
         {
           "http://example.com/terms#name": "Rue du chemin Vert",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4941067683019114",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.140877612781814"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3851317237124507",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.33698996249931"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4123.jsonld#134939",
         "@type": "tree:Node"
@@ -152,8 +157,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue du chemin Vert",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4941067683019114",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.140877612781814"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3851317237124507",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.33698996249931"
         }
       ],
       "total_children_count": 0,
@@ -169,17 +174,19 @@
       ],
       "triples_metadata": [
         "Rue du chemin Vert"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "imetière",
       "triples": [
         {
           "http://example.com/terms#name": "Rue du cimetière",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.854946027799359",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.55034956161472"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2715074009391825",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.45284363291283"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4123.jsonld#134939",
         "@type": "tree:Node"
@@ -187,8 +194,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue du cimetière",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.854946027799359",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.55034956161472"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2715074009391825",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.45284363291283"
         }
       ],
       "total_children_count": 0,
@@ -204,7 +211,8 @@
       ],
       "triples_metadata": [
         "Rue du cimetière"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

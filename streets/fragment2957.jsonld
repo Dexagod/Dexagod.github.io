@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "M",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2957.jsonld#40954",
-              "@type": "tree:Node",
-              "token_string": "aurice Timmermanslaan"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2957.jsonld#40955",
-              "@type": "tree:Node",
-              "token_string": "eeusstraat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "aurice Timmermanslaan": [
+          "2957",
+          "40954"
+        ],
+        "eeusstraat": [
+          "2957",
+          "40955"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment2426.jsonld#27963",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Dokter Maurice Timmermanslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6703559095160916",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.84208451057214"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2005276045315654",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.35594506012689"
         },
         {
           "http://example.com/terms#name": "Dokter Meeusstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4424223579164437",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.058786325546556"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.190897897451268",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.365876513308095"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2957.jsonld#40954"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2957.jsonld#40955"
+          ]
+        }
+      ]
     },
     {
       "token_string": "aurice Timmermanslaan",
       "triples": [
         {
           "http://example.com/terms#name": "Dokter Maurice Timmermanslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6703559095160916",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.84208451057214"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2005276045315654",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.35594506012689"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2957.jsonld#40953",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Dokter Maurice Timmermanslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6703559095160916",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.84208451057214"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2005276045315654",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.35594506012689"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Dokter Maurice Timmermanslaan"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "eeusstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Dokter Meeusstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4424223579164437",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.058786325546556"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.190897897451268",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.365876513308095"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2957.jsonld#40953",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Dokter Meeusstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4424223579164437",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.058786325546556"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.190897897451268",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.365876513308095"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Dokter Meeusstraat"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

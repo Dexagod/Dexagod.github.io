@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "T",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3293.jsonld#91802",
-              "@type": "tree:Node",
-              "token_string": "oebenteplein"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3293.jsonld#91803",
-              "@type": "tree:Node",
-              "token_string": "immermansstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3293.jsonld#92992",
-              "@type": "tree:Node",
-              "token_string": "heunisstraat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "oebenteplein": [
+          "3293",
+          "91802"
+        ],
+        "immermansstraat": [
+          "3293",
+          "91803"
+        ],
+        "heunisstraat": [
+          "3293",
+          "92992"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment3686.jsonld#38312",
         "@type": "tree:Node"
@@ -62,18 +44,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Pierre Toebenteplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8904710163451424",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.55296584281459"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.85514993916857",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.97185073622447"
         },
         {
           "http://example.com/terms#name": "Pierre Timmermansstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0511678182731727",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.181280654292706"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7780783147659305",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.76166566103184"
         },
         {
           "http://example.com/terms#name": "Pierre Theunisstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.22324347579341",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.418892165436276"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.215054821983292",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.147231876324724"
         }
       ],
       "total_children_count": 3,
@@ -99,17 +81,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3293.jsonld#91802"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3293.jsonld#91803"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3293.jsonld#92992"
+          ]
+        }
+      ]
     },
     {
       "token_string": "oebenteplein",
       "triples": [
         {
           "http://example.com/terms#name": "Pierre Toebenteplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8904710163451424",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.55296584281459"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.85514993916857",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.97185073622447"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3293.jsonld#91801",
         "@type": "tree:Node"
@@ -117,8 +120,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Pierre Toebenteplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8904710163451424",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.55296584281459"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.85514993916857",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.97185073622447"
         }
       ],
       "total_children_count": 0,
@@ -134,17 +137,19 @@
       ],
       "triples_metadata": [
         "Pierre Toebenteplein"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "immermansstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Pierre Timmermansstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0511678182731727",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.181280654292706"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7780783147659305",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.76166566103184"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3293.jsonld#91801",
         "@type": "tree:Node"
@@ -152,8 +157,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Pierre Timmermansstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0511678182731727",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.181280654292706"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7780783147659305",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.76166566103184"
         }
       ],
       "total_children_count": 0,
@@ -169,17 +174,19 @@
       ],
       "triples_metadata": [
         "Pierre Timmermansstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "heunisstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Pierre Theunisstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.22324347579341",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.418892165436276"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.215054821983292",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.147231876324724"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3293.jsonld#91801",
         "@type": "tree:Node"
@@ -187,8 +194,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Pierre Theunisstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.22324347579341",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.418892165436276"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.215054821983292",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.147231876324724"
         }
       ],
       "total_children_count": 0,
@@ -204,7 +211,8 @@
       ],
       "triples_metadata": [
         "Pierre Theunisstraat"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

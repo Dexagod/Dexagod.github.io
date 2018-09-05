@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "p",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5244.jsonld#49045",
-              "@type": "tree:Node",
-              "token_string": "stal"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5244.jsonld#49046",
-              "@type": "tree:Node",
-              "token_string": "penstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5244.jsonld#62698",
-              "@type": "tree:Node",
-              "token_string": "hovestraat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "stal": [
+          "5244",
+          "49045"
+        ],
+        "penstraat": [
+          "5244",
+          "49046"
+        ],
+        "hovestraat": [
+          "5244",
+          "62698"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment625.jsonld#1145",
         "@type": "tree:Node"
@@ -62,18 +44,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nopstal",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1976006186613164",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.74500088043069"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1229401250772373",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.889463602044984"
         },
         {
           "http://example.com/terms#name": "Noppenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5376786612934747",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.10235438319967"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.421974148588678",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.05622435896527"
         },
         {
           "http://example.com/terms#name": "Nophovestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1930111564573367",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.353305997583455"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.233235471783719",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.91031375145639"
         }
       ],
       "total_children_count": 3,
@@ -99,17 +81,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5244.jsonld#49045"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5244.jsonld#49046"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5244.jsonld#62698"
+          ]
+        }
+      ]
     },
     {
       "token_string": "stal",
       "triples": [
         {
           "http://example.com/terms#name": "Nopstal",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1976006186613164",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.74500088043069"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1229401250772373",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.889463602044984"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5244.jsonld#49044",
         "@type": "tree:Node"
@@ -117,8 +120,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nopstal",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1976006186613164",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.74500088043069"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1229401250772373",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.889463602044984"
         }
       ],
       "total_children_count": 0,
@@ -134,17 +137,19 @@
       ],
       "triples_metadata": [
         "Nopstal"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "penstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Noppenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5376786612934747",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.10235438319967"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.421974148588678",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.05622435896527"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5244.jsonld#49044",
         "@type": "tree:Node"
@@ -152,8 +157,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Noppenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5376786612934747",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.10235438319967"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.421974148588678",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.05622435896527"
         }
       ],
       "total_children_count": 0,
@@ -169,17 +174,19 @@
       ],
       "triples_metadata": [
         "Noppenstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "hovestraat",
       "triples": [
         {
           "http://example.com/terms#name": "Nophovestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1930111564573367",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.353305997583455"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.233235471783719",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.91031375145639"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5244.jsonld#49044",
         "@type": "tree:Node"
@@ -187,8 +194,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nophovestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1930111564573367",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.353305997583455"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.233235471783719",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.91031375145639"
         }
       ],
       "total_children_count": 0,
@@ -204,7 +211,8 @@
       ],
       "triples_metadata": [
         "Nophovestraat"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

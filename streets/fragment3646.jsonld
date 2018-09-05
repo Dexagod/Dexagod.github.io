@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "F",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3646.jsonld#46732",
-              "@type": "tree:Node",
-              "token_string": "redericqstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3646.jsonld#46733",
-              "@type": "tree:Node",
-              "token_string": "errardstraat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "redericqstraat": [
+          "3646",
+          "46732"
+        ],
+        "errardstraat": [
+          "3646",
+          "46733"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment2729.jsonld#5779",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Paul Fredericqstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8284859329296537",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.561542504866246"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9484125201822637",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.94221482581686"
         },
         {
           "http://example.com/terms#name": "Paul Ferrardstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9458443112368955",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.19386382203772"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.346067078782767",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.59693284275619"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3646.jsonld#46732"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3646.jsonld#46733"
+          ]
+        }
+      ]
     },
     {
       "token_string": "redericqstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Paul Fredericqstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8284859329296537",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.561542504866246"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9484125201822637",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.94221482581686"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3646.jsonld#46731",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Paul Fredericqstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8284859329296537",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.561542504866246"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9484125201822637",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.94221482581686"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Paul Fredericqstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "errardstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Paul Ferrardstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9458443112368955",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.19386382203772"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.346067078782767",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.59693284275619"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3646.jsonld#46731",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Paul Ferrardstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9458443112368955",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.19386382203772"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.346067078782767",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.59693284275619"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Paul Ferrardstraat"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

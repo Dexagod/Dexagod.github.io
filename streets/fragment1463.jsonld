@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "s",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1463.jsonld#49969",
-              "@type": "tree:Node",
-              "token_string": "broekwegel"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1463.jsonld#49970",
-              "@type": "tree:Node",
-              "token_string": "traat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "broekwegel": [
+          "1463",
+          "49969"
+        ],
+        "traat": [
+          "1463",
+          "49970"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment1463.jsonld#54579",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Coensbroekwegel",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.202988186094236",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.33631543364224"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.597841295114556",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.12619525093384"
         },
         {
           "http://example.com/terms#name": "Coenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.435265446575727",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.50049757918743"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0066056944192017",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.329816114261384"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1463.jsonld#49969"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1463.jsonld#49970"
+          ]
+        }
+      ]
     },
     {
       "token_string": "broekwegel",
       "triples": [
         {
           "http://example.com/terms#name": "Coensbroekwegel",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.202988186094236",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.33631543364224"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.597841295114556",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.12619525093384"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1463.jsonld#49968",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Coensbroekwegel",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.202988186094236",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.33631543364224"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.597841295114556",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.12619525093384"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Coensbroekwegel"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "traat",
       "triples": [
         {
           "http://example.com/terms#name": "Coenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.435265446575727",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.50049757918743"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0066056944192017",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.329816114261384"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1463.jsonld#49968",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Coenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.435265446575727",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.50049757918743"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0066056944192017",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.329816114261384"
         }
       ],
       "total_children_count": 0,
@@ -148,37 +153,39 @@
       ],
       "triples_metadata": [
         "Coenstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "straat",
       "triples": [
         {
           "http://example.com/terms#name": "Coenenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1882728082251837",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.39904549890056"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.566607362638325",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.617404876309365"
         },
         {
           "http://example.com/terms#name": "Coenenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7801079828097617",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.5146713424348"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3811203956646776",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.53152736663034"
         },
         {
           "http://example.com/terms#name": "Coenenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7801079828097617",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.5146713424348"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3811203956646776",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.53152736663034"
         },
         {
           "http://example.com/terms#name": "Coenenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7801079828097617",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.5146713424348"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3811203956646776",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.53152736663034"
         },
         {
           "http://example.com/terms#name": "Coenenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7801079828097617",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.5146713424348"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3811203956646776",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.53152736663034"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1463.jsonld#54803",
         "@type": "tree:Node"
@@ -186,28 +193,28 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Coenenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1882728082251837",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.39904549890056"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.566607362638325",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.617404876309365"
         },
         {
           "http://example.com/terms#name": "Coenenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7801079828097617",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.5146713424348"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3811203956646776",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.53152736663034"
         },
         {
           "http://example.com/terms#name": "Coenenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7801079828097617",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.5146713424348"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3811203956646776",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.53152736663034"
         },
         {
           "http://example.com/terms#name": "Coenenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7801079828097617",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.5146713424348"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3811203956646776",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.53152736663034"
         },
         {
           "http://example.com/terms#name": "Coenenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7801079828097617",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.5146713424348"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3811203956646776",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.53152736663034"
         }
       ],
       "total_children_count": 0,
@@ -231,17 +238,19 @@
         "Coenenstraat",
         "Coenenstraat",
         "Coenenstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "bosstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Coenenbosstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.336070138591925",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.29149669153208"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3671747593968937",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.755668895960916"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1463.jsonld#54803",
         "@type": "tree:Node"
@@ -249,8 +258,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Coenenbosstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.336070138591925",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.29149669153208"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3671747593968937",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.755668895960916"
         }
       ],
       "total_children_count": 0,
@@ -266,73 +275,38 @@
       ],
       "triples_metadata": [
         "Coenenbosstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "e",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1463.jsonld#54579",
-              "@type": "tree:Node",
-              "token_string": "n"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1463.jsonld#54580",
-              "@type": "tree:Node",
-              "token_string": "bergerstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1463.jsonld#59226",
-              "@type": "tree:Node",
-              "token_string": "feringstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1463.jsonld#59511",
-              "@type": "tree:Node",
-              "token_string": "yaardstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1463.jsonld#70893",
-              "@type": "tree:Node",
-              "token_string": "veltstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1463.jsonld#134816",
-              "@type": "tree:Node",
-              "token_string": "ur de la Verte Plaine"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "n": [
+          "1463",
+          "54579"
+        ],
+        "bergerstraat": [
+          "1463",
+          "54580"
+        ],
+        "feringstraat": [
+          "1463",
+          "59226"
+        ],
+        "yaardstraat": [
+          "1463",
+          "59511"
+        ],
+        "veltstraat": [
+          "1463",
+          "70893"
+        ],
+        "ur de la Verte Plaine": [
+          "1463",
+          "134816"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment44.jsonld#1035",
         "@type": "tree:Node"
@@ -340,73 +314,73 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Coenraedt Keynslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.322922421702727",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.783176706992336"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.071446453554032",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.19039993551773"
         },
         {
           "http://example.com/terms#name": "Coenenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1882728082251837",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.39904549890056"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.566607362638325",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.617404876309365"
         },
         {
           "http://example.com/terms#name": "Coenenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7801079828097617",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.5146713424348"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3811203956646776",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.53152736663034"
         },
         {
           "http://example.com/terms#name": "Coenenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7801079828097617",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.5146713424348"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3811203956646776",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.53152736663034"
         },
         {
           "http://example.com/terms#name": "Coenenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7801079828097617",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.5146713424348"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3811203956646776",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.53152736663034"
         },
         {
           "http://example.com/terms#name": "Coenenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7801079828097617",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.5146713424348"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3811203956646776",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.53152736663034"
         },
         {
           "http://example.com/terms#name": "Coensbroekwegel",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.202988186094236",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.33631543364224"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.597841295114556",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.12619525093384"
         },
         {
           "http://example.com/terms#name": "Coenenbosstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.336070138591925",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.29149669153208"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3671747593968937",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.755668895960916"
         },
         {
           "http://example.com/terms#name": "Coebergerstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7157279417558122",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.713940997333694"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.682595689035856",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.10336819367206"
         },
         {
           "http://example.com/terms#name": "Coenestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1443942213908627",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.505050202699934"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.731141328191452",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.438633760323206"
         },
         {
           "http://example.com/terms#name": "Coeferingstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.604907688565212",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.81320758446131"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.25252369951585",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.477111590660414"
         },
         {
           "http://example.com/terms#name": "Coenenhofweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0715032940411406",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.71345271873039"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4572178011353634",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.40315331282559"
         },
         {
           "http://example.com/terms#name": "Coenaert",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.736051213500965",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.200136325130245"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2091976608174035",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.394564442420354"
         },
         {
           "http://example.com/terms#name": "Coenraetsstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.94898792529711",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.42626461901777"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4874712730056308",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.28307561711501"
         }
       ],
       "total_children_count": 19,
@@ -478,53 +452,67 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1463.jsonld#54579"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1463.jsonld#54580"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1463.jsonld#59226"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1463.jsonld#59511"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1463.jsonld#70893"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1463.jsonld#134816"
+          ]
+        }
+      ]
     },
     {
       "token_string": "n",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1463.jsonld#49968",
-              "@type": "tree:Node",
-              "token_string": "s"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1463.jsonld#54802",
-              "@type": "tree:Node",
-              "token_string": "e"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1463.jsonld#82448",
-              "@type": "tree:Node",
-              "token_string": "aert"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1463.jsonld#92376",
-              "@type": "tree:Node",
-              "token_string": "rae"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "s": [
+          "1463",
+          "49968"
+        ],
+        "e": [
+          "1463",
+          "54802"
+        ],
+        "aert": [
+          "1463",
+          "82448"
+        ],
+        "rae": [
+          "1463",
+          "92376"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment1463.jsonld#54578",
         "@type": "tree:Node"
@@ -532,68 +520,68 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Coenraedt Keynslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.322922421702727",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.783176706992336"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.071446453554032",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.19039993551773"
         },
         {
           "http://example.com/terms#name": "Coenenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1882728082251837",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.39904549890056"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.566607362638325",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.617404876309365"
         },
         {
           "http://example.com/terms#name": "Coenenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7801079828097617",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.5146713424348"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3811203956646776",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.53152736663034"
         },
         {
           "http://example.com/terms#name": "Coenenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7801079828097617",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.5146713424348"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3811203956646776",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.53152736663034"
         },
         {
           "http://example.com/terms#name": "Coenenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7801079828097617",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.5146713424348"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3811203956646776",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.53152736663034"
         },
         {
           "http://example.com/terms#name": "Coenenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7801079828097617",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.5146713424348"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3811203956646776",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.53152736663034"
         },
         {
           "http://example.com/terms#name": "Coensbroekwegel",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.202988186094236",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.33631543364224"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.597841295114556",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.12619525093384"
         },
         {
           "http://example.com/terms#name": "Coenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.435265446575727",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.50049757918743"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0066056944192017",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.329816114261384"
         },
         {
           "http://example.com/terms#name": "Coenenbosstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.336070138591925",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.29149669153208"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3671747593968937",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.755668895960916"
         },
         {
           "http://example.com/terms#name": "Coenestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1443942213908627",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.505050202699934"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.731141328191452",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.438633760323206"
         },
         {
           "http://example.com/terms#name": "Coenenhofweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0715032940411406",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.71345271873039"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4572178011353634",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.40315331282559"
         },
         {
           "http://example.com/terms#name": "Coenaert",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.736051213500965",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.200136325130245"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2091976608174035",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.394564442420354"
         },
         {
           "http://example.com/terms#name": "Coenraetsstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.94898792529711",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.42626461901777"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4874712730056308",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.28307561711501"
         }
       ],
       "total_children_count": 13,
@@ -659,17 +647,44 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1463.jsonld#49968"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1463.jsonld#54802"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1463.jsonld#82448"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1463.jsonld#92376"
+          ]
+        }
+      ]
     },
     {
       "token_string": "bergerstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Coebergerstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7157279417558122",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.713940997333694"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.682595689035856",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.10336819367206"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1463.jsonld#54578",
         "@type": "tree:Node"
@@ -677,8 +692,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Coebergerstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7157279417558122",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.713940997333694"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.682595689035856",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.10336819367206"
         }
       ],
       "total_children_count": 0,
@@ -694,33 +709,22 @@
       ],
       "triples_metadata": [
         "Coebergerstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "e",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1463.jsonld#54803",
-              "@type": "tree:Node",
-              "token_string": "n"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1463.jsonld#54804",
-              "@type": "tree:Node",
-              "token_string": "straat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "n": [
+          "1463",
+          "54803"
+        ],
+        "straat": [
+          "1463",
+          "54804"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment1463.jsonld#54579",
         "@type": "tree:Node"
@@ -728,43 +732,43 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Coenenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1882728082251837",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.39904549890056"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.566607362638325",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.617404876309365"
         },
         {
           "http://example.com/terms#name": "Coenenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7801079828097617",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.5146713424348"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3811203956646776",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.53152736663034"
         },
         {
           "http://example.com/terms#name": "Coenenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7801079828097617",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.5146713424348"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3811203956646776",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.53152736663034"
         },
         {
           "http://example.com/terms#name": "Coenenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7801079828097617",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.5146713424348"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3811203956646776",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.53152736663034"
         },
         {
           "http://example.com/terms#name": "Coenenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7801079828097617",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.5146713424348"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3811203956646776",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.53152736663034"
         },
         {
           "http://example.com/terms#name": "Coenenbosstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.336070138591925",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.29149669153208"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3671747593968937",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.755668895960916"
         },
         {
           "http://example.com/terms#name": "Coenestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1443942213908627",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.505050202699934"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.731141328191452",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.438633760323206"
         },
         {
           "http://example.com/terms#name": "Coenenhofweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0715032940411406",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.71345271873039"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4572178011353634",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.40315331282559"
         }
       ],
       "total_children_count": 5,
@@ -800,43 +804,39 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1463.jsonld#54803"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1463.jsonld#54804"
+          ]
+        }
+      ]
     },
     {
       "token_string": "n",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1463.jsonld#52143",
-              "@type": "tree:Node",
-              "token_string": "straat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1463.jsonld#52144",
-              "@type": "tree:Node",
-              "token_string": "bosstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1463.jsonld#73512",
-              "@type": "tree:Node",
-              "token_string": "hofweg"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "straat": [
+          "1463",
+          "52143"
+        ],
+        "bosstraat": [
+          "1463",
+          "52144"
+        ],
+        "hofweg": [
+          "1463",
+          "73512"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment1463.jsonld#54802",
         "@type": "tree:Node"
@@ -844,38 +844,38 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Coenenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1882728082251837",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.39904549890056"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.566607362638325",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.617404876309365"
         },
         {
           "http://example.com/terms#name": "Coenenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7801079828097617",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.5146713424348"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3811203956646776",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.53152736663034"
         },
         {
           "http://example.com/terms#name": "Coenenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7801079828097617",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.5146713424348"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3811203956646776",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.53152736663034"
         },
         {
           "http://example.com/terms#name": "Coenenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7801079828097617",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.5146713424348"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3811203956646776",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.53152736663034"
         },
         {
           "http://example.com/terms#name": "Coenenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7801079828097617",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.5146713424348"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3811203956646776",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.53152736663034"
         },
         {
           "http://example.com/terms#name": "Coenenbosstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.336070138591925",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.29149669153208"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3671747593968937",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.755668895960916"
         },
         {
           "http://example.com/terms#name": "Coenenhofweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0715032940411406",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.71345271873039"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4572178011353634",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.40315331282559"
         }
       ],
       "total_children_count": 3,
@@ -905,17 +905,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1463.jsonld#52143"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1463.jsonld#52144"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1463.jsonld#73512"
+          ]
+        }
+      ]
     },
     {
       "token_string": "straat",
       "triples": [
         {
           "http://example.com/terms#name": "Coenestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1443942213908627",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.505050202699934"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.731141328191452",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.438633760323206"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1463.jsonld#54802",
         "@type": "tree:Node"
@@ -923,8 +944,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Coenestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1443942213908627",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.505050202699934"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.731141328191452",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.438633760323206"
         }
       ],
       "total_children_count": 0,
@@ -940,17 +961,19 @@
       ],
       "triples_metadata": [
         "Coenestraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "feringstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Coeferingstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.604907688565212",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.81320758446131"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.25252369951585",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.477111590660414"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1463.jsonld#54578",
         "@type": "tree:Node"
@@ -958,8 +981,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Coeferingstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.604907688565212",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.81320758446131"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.25252369951585",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.477111590660414"
         }
       ],
       "total_children_count": 0,
@@ -975,17 +998,19 @@
       ],
       "triples_metadata": [
         "Coeferingstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "yaardstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Coeyaardstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.281965696784492",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.292614078813976"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.813575745466233",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.718247105426556"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1463.jsonld#54578",
         "@type": "tree:Node"
@@ -993,8 +1018,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Coeyaardstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.281965696784492",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.292614078813976"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.813575745466233",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.718247105426556"
         }
       ],
       "total_children_count": 0,
@@ -1010,17 +1035,19 @@
       ],
       "triples_metadata": [
         "Coeyaardstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "veltstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Coeveltstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0850146360561426",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.66834136321521"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.219510014898379",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.60267362595256"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1463.jsonld#54578",
         "@type": "tree:Node"
@@ -1028,8 +1055,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Coeveltstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0850146360561426",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.66834136321521"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.219510014898379",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.60267362595256"
         }
       ],
       "total_children_count": 0,
@@ -1045,17 +1072,19 @@
       ],
       "triples_metadata": [
         "Coeveltstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "hofweg",
       "triples": [
         {
           "http://example.com/terms#name": "Coenenhofweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0715032940411406",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.71345271873039"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4572178011353634",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.40315331282559"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1463.jsonld#54803",
         "@type": "tree:Node"
@@ -1063,8 +1092,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Coenenhofweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0715032940411406",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.71345271873039"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4572178011353634",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.40315331282559"
         }
       ],
       "total_children_count": 0,
@@ -1080,17 +1109,19 @@
       ],
       "triples_metadata": [
         "Coenenhofweg"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "aert",
       "triples": [
         {
           "http://example.com/terms#name": "Coenaert",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.736051213500965",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.200136325130245"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2091976608174035",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.394564442420354"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1463.jsonld#54579",
         "@type": "tree:Node"
@@ -1098,8 +1129,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Coenaert",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.736051213500965",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.200136325130245"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2091976608174035",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.394564442420354"
         }
       ],
       "total_children_count": 0,
@@ -1115,33 +1146,22 @@
       ],
       "triples_metadata": [
         "Coenaert"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "rae",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1463.jsonld#92377",
-              "@type": "tree:Node",
-              "token_string": "dt Keynslaan"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1463.jsonld#92378",
-              "@type": "tree:Node",
-              "token_string": "tsstraat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "dt Keynslaan": [
+          "1463",
+          "92377"
+        ],
+        "tsstraat": [
+          "1463",
+          "92378"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment1463.jsonld#54579",
         "@type": "tree:Node"
@@ -1149,13 +1169,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Coenraedt Keynslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.322922421702727",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.783176706992336"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.071446453554032",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.19039993551773"
         },
         {
           "http://example.com/terms#name": "Coenraetsstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.94898792529711",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.42626461901777"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4874712730056308",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.28307561711501"
         }
       ],
       "total_children_count": 2,
@@ -1175,17 +1195,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1463.jsonld#92377"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1463.jsonld#92378"
+          ]
+        }
+      ]
     },
     {
       "token_string": "dt Keynslaan",
       "triples": [
         {
           "http://example.com/terms#name": "Coenraedt Keynslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.322922421702727",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.783176706992336"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.071446453554032",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.19039993551773"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1463.jsonld#92376",
         "@type": "tree:Node"
@@ -1193,8 +1228,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Coenraedt Keynslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.322922421702727",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.783176706992336"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.071446453554032",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.19039993551773"
         }
       ],
       "total_children_count": 0,
@@ -1210,17 +1245,19 @@
       ],
       "triples_metadata": [
         "Coenraedt Keynslaan"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "tsstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Coenraetsstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.94898792529711",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.42626461901777"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4874712730056308",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.28307561711501"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1463.jsonld#92376",
         "@type": "tree:Node"
@@ -1228,8 +1265,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Coenraetsstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.94898792529711",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.42626461901777"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4874712730056308",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.28307561711501"
         }
       ],
       "total_children_count": 0,
@@ -1245,17 +1282,19 @@
       ],
       "triples_metadata": [
         "Coenraetsstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "ur de la Verte Plaine",
       "triples": [
         {
           "http://example.com/terms#name": "Coeur de la Verte Plaine",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.087438692969698",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.01666221083724"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6021788718894387",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.98938231569794"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1463.jsonld#54578",
         "@type": "tree:Node"
@@ -1263,8 +1302,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Coeur de la Verte Plaine",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.087438692969698",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.01666221083724"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6021788718894387",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.98938231569794"
         }
       ],
       "total_children_count": 0,
@@ -1280,7 +1319,8 @@
       ],
       "triples_metadata": [
         "Coeur de la Verte Plaine"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

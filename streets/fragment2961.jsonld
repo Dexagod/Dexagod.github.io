@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -25,10 +25,11 @@
       "triples": [
         {
           "http://example.com/terms#name": "Dokter Pergenslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5738857714403744",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.50564366667739"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8841341400425",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.826677912314125"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2961.jsonld#60818",
         "@type": "tree:Node"
@@ -36,8 +37,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Dokter Pergenslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5738857714403744",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.50564366667739"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8841341400425",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.826677912314125"
         }
       ],
       "total_children_count": 0,
@@ -53,17 +54,19 @@
       ],
       "triples_metadata": [
         "Dokter Pergenslaan"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "soonslaan",
       "triples": [
         {
           "http://example.com/terms#name": "Dokter Persoonslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9674067865685068",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.908243835064944"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.045825422392739",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.56807506981007"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2961.jsonld#60818",
         "@type": "tree:Node"
@@ -71,8 +74,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Dokter Persoonslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9674067865685068",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.908243835064944"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.045825422392739",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.56807506981007"
         }
       ],
       "total_children_count": 0,
@@ -88,33 +91,22 @@
       ],
       "triples_metadata": [
         "Dokter Persoonslaan"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "r",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2961.jsonld#51018",
-              "@type": "tree:Node",
-              "token_string": "genslaan"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2961.jsonld#51019",
-              "@type": "tree:Node",
-              "token_string": "soonslaan"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "genslaan": [
+          "2961",
+          "51018"
+        ],
+        "soonslaan": [
+          "2961",
+          "51019"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment2961.jsonld#81937",
         "@type": "tree:Node"
@@ -122,13 +114,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Dokter Pergenslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5738857714403744",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.50564366667739"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8841341400425",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.826677912314125"
         },
         {
           "http://example.com/terms#name": "Dokter Persoonslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9674067865685068",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.908243835064944"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.045825422392739",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.56807506981007"
         }
       ],
       "total_children_count": 2,
@@ -148,17 +140,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2961.jsonld#51018"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2961.jsonld#51019"
+          ]
+        }
+      ]
     },
     {
       "token_string": "elstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Dokter Peelstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9065708155831254",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.6237044753776"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.75785968270011",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.59957656529546"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2961.jsonld#81937",
         "@type": "tree:Node"
@@ -166,8 +173,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Dokter Peelstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9065708155831254",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.6237044753776"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.75785968270011",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.59957656529546"
         }
       ],
       "total_children_count": 0,
@@ -183,33 +190,22 @@
       ],
       "triples_metadata": [
         "Dokter Peelstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "P",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2961.jsonld#81937",
-              "@type": "tree:Node",
-              "token_string": "e"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2961.jsonld#81938",
-              "@type": "tree:Node",
-              "token_string": "aul Janssenlaan"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "e": [
+          "2961",
+          "81937"
+        ],
+        "aul Janssenlaan": [
+          "2961",
+          "81938"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment2426.jsonld#27963",
         "@type": "tree:Node"
@@ -217,38 +213,38 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Dokter Pergenslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5738857714403744",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.50564366667739"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8841341400425",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.826677912314125"
         },
         {
           "http://example.com/terms#name": "Dokter Persoonslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9674067865685068",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.908243835064944"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.045825422392739",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.56807506981007"
         },
         {
           "http://example.com/terms#name": "Dokter Peelstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9065708155831254",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.6237044753776"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.75785968270011",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.59957656529546"
         },
         {
           "http://example.com/terms#name": "Dokter Paul Janssenlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5085959619713836",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.49521317094316"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8013381671205293",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.3005992107588"
         },
         {
           "http://example.com/terms#name": "Dokter Paul Janssenlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.816957001337793",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.08156689301222"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.829346004620897",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.0648202084697"
         },
         {
           "http://example.com/terms#name": "Dokter Paul Janssenlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.816957001337793",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.08156689301222"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.829346004620897",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.0648202084697"
         },
         {
           "http://example.com/terms#name": "Dokter Paul Janssenlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.816957001337793",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.08156689301222"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.829346004620897",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.0648202084697"
         }
       ],
       "total_children_count": 6,
@@ -283,33 +279,35 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
-    },
-    {
-      "token_string": "e",
-      "triples": [],
-      "children": [
+      "triples_metadata": [],
+      "childlist": [
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment2961.jsonld#60818",
-              "@type": "tree:Node",
-              "token_string": "r"
-            }
+            "/streets/fragment2961.jsonld#81937"
           ]
         },
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment2961.jsonld#60819",
-              "@type": "tree:Node",
-              "token_string": "elstraat"
-            }
+            "/streets/fragment2961.jsonld#81938"
           ]
         }
-      ],
+      ]
+    },
+    {
+      "token_string": "e",
+      "triples": [],
+      "children": {
+        "r": [
+          "2961",
+          "60818"
+        ],
+        "elstraat": [
+          "2961",
+          "60819"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment2961.jsonld#81936",
         "@type": "tree:Node"
@@ -317,18 +315,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Dokter Pergenslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5738857714403744",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.50564366667739"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8841341400425",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.826677912314125"
         },
         {
           "http://example.com/terms#name": "Dokter Persoonslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9674067865685068",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.908243835064944"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.045825422392739",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.56807506981007"
         },
         {
           "http://example.com/terms#name": "Dokter Peelstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9065708155831254",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.6237044753776"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.75785968270011",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.59957656529546"
         }
       ],
       "total_children_count": 4,
@@ -354,32 +352,47 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2961.jsonld#60818"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2961.jsonld#60819"
+          ]
+        }
+      ]
     },
     {
       "token_string": "aul Janssenlaan",
       "triples": [
         {
           "http://example.com/terms#name": "Dokter Paul Janssenlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5085959619713836",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.49521317094316"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8013381671205293",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.3005992107588"
         },
         {
           "http://example.com/terms#name": "Dokter Paul Janssenlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.816957001337793",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.08156689301222"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.829346004620897",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.0648202084697"
         },
         {
           "http://example.com/terms#name": "Dokter Paul Janssenlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.816957001337793",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.08156689301222"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.829346004620897",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.0648202084697"
         },
         {
           "http://example.com/terms#name": "Dokter Paul Janssenlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.816957001337793",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.08156689301222"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.829346004620897",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.0648202084697"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2961.jsonld#81936",
         "@type": "tree:Node"
@@ -387,23 +400,23 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Dokter Paul Janssenlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5085959619713836",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.49521317094316"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8013381671205293",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.3005992107588"
         },
         {
           "http://example.com/terms#name": "Dokter Paul Janssenlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.816957001337793",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.08156689301222"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.829346004620897",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.0648202084697"
         },
         {
           "http://example.com/terms#name": "Dokter Paul Janssenlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.816957001337793",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.08156689301222"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.829346004620897",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.0648202084697"
         },
         {
           "http://example.com/terms#name": "Dokter Paul Janssenlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.816957001337793",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.08156689301222"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.829346004620897",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.0648202084697"
         }
       ],
       "total_children_count": 0,
@@ -425,7 +438,8 @@
         "Dokter Paul Janssenlaan",
         "Dokter Paul Janssenlaan",
         "Dokter Paul Janssenlaan"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

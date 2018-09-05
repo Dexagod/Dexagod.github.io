@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "O",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2305.jsonld#81332",
-              "@type": "tree:Node",
-              "token_string": "psomerstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2305.jsonld#81333",
-              "@type": "tree:Node",
-              "token_string": "mer De Meyplein"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "psomerstraat": [
+          "2305",
+          "81332"
+        ],
+        "mer De Meyplein": [
+          "2305",
+          "81333"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment782.jsonld#7749",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Burgemeester Opsomerstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4987283827000044",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.55041687741296"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2071023989861067",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.828492004220394"
         },
         {
           "http://example.com/terms#name": "Burgemeester Omer De Meyplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5037033534970696",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.16028625742782"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.780157590635545",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.768259436235695"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2305.jsonld#81332"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2305.jsonld#81333"
+          ]
+        }
+      ]
     },
     {
       "token_string": "psomerstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Burgemeester Opsomerstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4987283827000044",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.55041687741296"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2071023989861067",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.828492004220394"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2305.jsonld#81331",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Burgemeester Opsomerstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4987283827000044",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.55041687741296"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2071023989861067",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.828492004220394"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Burgemeester Opsomerstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "mer De Meyplein",
       "triples": [
         {
           "http://example.com/terms#name": "Burgemeester Omer De Meyplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5037033534970696",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.16028625742782"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.780157590635545",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.768259436235695"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2305.jsonld#81331",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Burgemeester Omer De Meyplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5037033534970696",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.16028625742782"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.780157590635545",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.768259436235695"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Burgemeester Omer De Meyplein"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

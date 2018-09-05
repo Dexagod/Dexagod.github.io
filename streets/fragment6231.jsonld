@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "G",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6231.jsonld#144396",
-              "@type": "tree:Node",
-              "token_string": "loesener"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6231.jsonld#144397",
-              "@type": "tree:Node",
-              "token_string": "odefroid-Kurth"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "loesener": [
+          "6231",
+          "144396"
+        ],
+        "odefroid-Kurth": [
+          "6231",
+          "144397"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4778.jsonld#109901",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Quai Gloesener",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4471395257574984",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.24163244853932"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1209343108466947",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.356760851805774"
         },
         {
           "http://example.com/terms#name": "Quai Godefroid-Kurth",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0580479122334117",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.024463735642364"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.357433306767359",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.46490766642072"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6231.jsonld#144396"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6231.jsonld#144397"
+          ]
+        }
+      ]
     },
     {
       "token_string": "loesener",
       "triples": [
         {
           "http://example.com/terms#name": "Quai Gloesener",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4471395257574984",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.24163244853932"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1209343108466947",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.356760851805774"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6231.jsonld#144395",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Quai Gloesener",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4471395257574984",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.24163244853932"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1209343108466947",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.356760851805774"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Quai Gloesener"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "odefroid-Kurth",
       "triples": [
         {
           "http://example.com/terms#name": "Quai Godefroid-Kurth",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0580479122334117",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.024463735642364"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.357433306767359",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.46490766642072"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6231.jsonld#144395",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Quai Godefroid-Kurth",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0580479122334117",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.024463735642364"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.357433306767359",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.46490766642072"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Quai Godefroid-Kurth"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

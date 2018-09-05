@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "e",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5340.jsonld#149344",
-              "@type": "tree:Node",
-              "token_string": "noir Scaillet"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5340.jsonld#149345",
-              "@type": "tree:Node",
-              "token_string": "grand"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5340.jsonld#149768",
-              "@type": "tree:Node",
-              "token_string": "ménager"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "noir Scaillet": [
+          "5340",
+          "149344"
+        ],
+        "grand": [
+          "5340",
+          "149345"
+        ],
+        "ménager": [
+          "5340",
+          "149768"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4248.jsonld#129901",
         "@type": "tree:Node"
@@ -62,18 +44,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Louis Lenoir Scaillet",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4560155329140936",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.9692550623935"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.231925483048807",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.162637990907164"
         },
         {
           "http://example.com/terms#name": "Rue Louis Legrand",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7638694436278954",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.8943138957962"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.018673713705258",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.81285288910318"
         },
         {
           "http://example.com/terms#name": "Rue Louis Leménager",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9146700921427815",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.83293334691068"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0079918959452927",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.77543428065627"
         }
       ],
       "total_children_count": 3,
@@ -99,17 +81,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5340.jsonld#149344"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5340.jsonld#149345"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5340.jsonld#149768"
+          ]
+        }
+      ]
     },
     {
       "token_string": "noir Scaillet",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Louis Lenoir Scaillet",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4560155329140936",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.9692550623935"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.231925483048807",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.162637990907164"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5340.jsonld#149343",
         "@type": "tree:Node"
@@ -117,8 +120,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Louis Lenoir Scaillet",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4560155329140936",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.9692550623935"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.231925483048807",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.162637990907164"
         }
       ],
       "total_children_count": 0,
@@ -134,17 +137,19 @@
       ],
       "triples_metadata": [
         "Rue Louis Lenoir Scaillet"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "grand",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Louis Legrand",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7638694436278954",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.8943138957962"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.018673713705258",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.81285288910318"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5340.jsonld#149343",
         "@type": "tree:Node"
@@ -152,8 +157,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Louis Legrand",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7638694436278954",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.8943138957962"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.018673713705258",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.81285288910318"
         }
       ],
       "total_children_count": 0,
@@ -169,17 +174,19 @@
       ],
       "triples_metadata": [
         "Rue Louis Legrand"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "ménager",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Louis Leménager",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9146700921427815",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.83293334691068"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0079918959452927",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.77543428065627"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5340.jsonld#149343",
         "@type": "tree:Node"
@@ -187,8 +194,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Louis Leménager",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9146700921427815",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.83293334691068"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0079918959452927",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.77543428065627"
         }
       ],
       "total_children_count": 0,
@@ -204,7 +211,8 @@
       ],
       "triples_metadata": [
         "Rue Louis Leménager"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "g",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2435.jsonld#19938",
-              "@type": "tree:Node",
-              "token_string": "oedstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2435.jsonld#19939",
-              "@type": "tree:Node",
-              "token_string": "ate"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "oedstraat": [
+          "2435",
+          "19938"
+        ],
+        "ate": [
+          "2435",
+          "19939"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment883.jsonld#421",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Kerkgoedstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7543142837512353",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.840425067719075"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.19321504640838",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.505228398884206"
         },
         {
           "http://example.com/terms#name": "Kerkgate",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4048839902850583",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.220612435697284"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5033737617422016",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.45101179292949"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2435.jsonld#19938"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2435.jsonld#19939"
+          ]
+        }
+      ]
     },
     {
       "token_string": "oedstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Kerkgoedstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7543142837512353",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.840425067719075"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.19321504640838",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.505228398884206"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2435.jsonld#19937",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Kerkgoedstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7543142837512353",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.840425067719075"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.19321504640838",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.505228398884206"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Kerkgoedstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "ate",
       "triples": [
         {
           "http://example.com/terms#name": "Kerkgate",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4048839902850583",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.220612435697284"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5033737617422016",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.45101179292949"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2435.jsonld#19937",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Kerkgate",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4048839902850583",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.220612435697284"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5033737617422016",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.45101179292949"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Kerkgate"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "van ",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1574.jsonld#39819",
-              "@type": "tree:Node",
-              "token_string": "Horenbeeckstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1574.jsonld#39820",
-              "@type": "tree:Node",
-              "token_string": "Lierdestraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1574.jsonld#55393",
-              "@type": "tree:Node",
-              "token_string": "Dijckstraat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "Horenbeeckstraat": [
+          "1574",
+          "39819"
+        ],
+        "Lierdestraat": [
+          "1574",
+          "39820"
+        ],
+        "Dijckstraat": [
+          "1574",
+          "55393"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment1029.jsonld#12277",
         "@type": "tree:Node"
@@ -62,18 +44,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Pastoor van Horenbeeckstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3984977830174814",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.87436593203007"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7202499046327158",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.6639899902049"
         },
         {
           "http://example.com/terms#name": "Pastoor van Lierdestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7315916711025876",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.002285358588516"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6867871074203595",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.327931170303344"
         },
         {
           "http://example.com/terms#name": "Pastoor van Dijckstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.392342658771245",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.73620323904089"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9808668095201662",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.88713490350241"
         }
       ],
       "total_children_count": 3,
@@ -99,17 +81,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1574.jsonld#39819"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1574.jsonld#39820"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1574.jsonld#55393"
+          ]
+        }
+      ]
     },
     {
       "token_string": "Horenbeeckstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Pastoor van Horenbeeckstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3984977830174814",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.87436593203007"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7202499046327158",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.6639899902049"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1574.jsonld#39818",
         "@type": "tree:Node"
@@ -117,8 +120,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Pastoor van Horenbeeckstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3984977830174814",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.87436593203007"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7202499046327158",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.6639899902049"
         }
       ],
       "total_children_count": 0,
@@ -134,17 +137,19 @@
       ],
       "triples_metadata": [
         "Pastoor van Horenbeeckstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "Lierdestraat",
       "triples": [
         {
           "http://example.com/terms#name": "Pastoor van Lierdestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7315916711025876",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.002285358588516"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6867871074203595",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.327931170303344"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1574.jsonld#39818",
         "@type": "tree:Node"
@@ -152,8 +157,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Pastoor van Lierdestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7315916711025876",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.002285358588516"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6867871074203595",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.327931170303344"
         }
       ],
       "total_children_count": 0,
@@ -169,17 +174,19 @@
       ],
       "triples_metadata": [
         "Pastoor van Lierdestraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "Dijckstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Pastoor van Dijckstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.392342658771245",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.73620323904089"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9808668095201662",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.88713490350241"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1574.jsonld#39818",
         "@type": "tree:Node"
@@ -187,8 +194,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Pastoor van Dijckstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.392342658771245",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.73620323904089"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9808668095201662",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.88713490350241"
         }
       ],
       "total_children_count": 0,
@@ -204,7 +211,8 @@
       ],
       "triples_metadata": [
         "Pastoor van Dijckstraat"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

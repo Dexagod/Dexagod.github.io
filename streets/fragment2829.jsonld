@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "t",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2829.jsonld#55902",
-              "@type": "tree:Node",
-              "token_string": "weg"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2829.jsonld#55903",
-              "@type": "tree:Node",
-              "token_string": "straat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "weg": [
+          "2829",
+          "55902"
+        ],
+        "straat": [
+          "2829",
+          "55903"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment252.jsonld#9016",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Neetweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2897920405001164",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.73800646555279"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6618823285479314",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.870075748915895"
         },
         {
           "http://example.com/terms#name": "Neetstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.244309645500183",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.13084932433139"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.491308944057665",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.7917496280954"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2829.jsonld#55902"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2829.jsonld#55903"
+          ]
+        }
+      ]
     },
     {
       "token_string": "weg",
       "triples": [
         {
           "http://example.com/terms#name": "Neetweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2897920405001164",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.73800646555279"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6618823285479314",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.870075748915895"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2829.jsonld#55901",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Neetweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2897920405001164",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.73800646555279"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6618823285479314",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.870075748915895"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Neetweg"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "straat",
       "triples": [
         {
           "http://example.com/terms#name": "Neetstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.244309645500183",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.13084932433139"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.491308944057665",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.7917496280954"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2829.jsonld#55901",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Neetstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.244309645500183",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.13084932433139"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.491308944057665",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.7917496280954"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Neetstraat"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

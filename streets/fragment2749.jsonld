@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "I",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2749.jsonld#80578",
-              "@type": "tree:Node",
-              "token_string": "jverheidslaan"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2749.jsonld#98732",
-              "@type": "tree:Node",
-              "token_string": "EUW"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2749.jsonld#98765",
-              "@type": "tree:Node",
-              "token_string": "JVERHEIDSSTRAAT"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "jverheidslaan": [
+          "2749",
+          "80578"
+        ],
+        "EUW": [
+          "2749",
+          "98732"
+        ],
+        "JVERHEIDSSTRAAT": [
+          "2749",
+          "98765"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment16.jsonld#311",
         "@type": "tree:Node"
@@ -62,23 +44,23 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "NIjverheidslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5805827931470176",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.897191908820474"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0112675035774883",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.49828508474782"
         },
         {
           "http://example.com/terms#name": "NIEUWPOORTSTEENWEG",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5807190518571606",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.84678567061563"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.760959102084528",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.26351612174764"
         },
         {
           "http://example.com/terms#name": "NIEUWBRUGSTRAAT",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2230391159595095",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.70638106574778"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.086381403411989",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.19059417121883"
         },
         {
           "http://example.com/terms#name": "NIJVERHEIDSSTRAAT",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1119184901317936",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.397471468932245"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.69432521961851",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.786261876228295"
         }
       ],
       "total_children_count": 5,
@@ -110,17 +92,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2749.jsonld#80578"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2749.jsonld#98732"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2749.jsonld#98765"
+          ]
+        }
+      ]
     },
     {
       "token_string": "jverheidslaan",
       "triples": [
         {
           "http://example.com/terms#name": "NIjverheidslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5805827931470176",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.897191908820474"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0112675035774883",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.49828508474782"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2749.jsonld#80577",
         "@type": "tree:Node"
@@ -128,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "NIjverheidslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5805827931470176",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.897191908820474"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0112675035774883",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.49828508474782"
         }
       ],
       "total_children_count": 0,
@@ -145,33 +148,22 @@
       ],
       "triples_metadata": [
         "NIjverheidslaan"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "EUW",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2749.jsonld#98733",
-              "@type": "tree:Node",
-              "token_string": "POORTSTEENWEG"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2749.jsonld#98734",
-              "@type": "tree:Node",
-              "token_string": "BRUGSTRAAT"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "POORTSTEENWEG": [
+          "2749",
+          "98733"
+        ],
+        "BRUGSTRAAT": [
+          "2749",
+          "98734"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment2749.jsonld#80577",
         "@type": "tree:Node"
@@ -179,13 +171,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "NIEUWPOORTSTEENWEG",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5807190518571606",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.84678567061563"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.760959102084528",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.26351612174764"
         },
         {
           "http://example.com/terms#name": "NIEUWBRUGSTRAAT",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2230391159595095",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.70638106574778"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.086381403411989",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.19059417121883"
         }
       ],
       "total_children_count": 2,
@@ -205,17 +197,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2749.jsonld#98733"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2749.jsonld#98734"
+          ]
+        }
+      ]
     },
     {
       "token_string": "POORTSTEENWEG",
       "triples": [
         {
           "http://example.com/terms#name": "NIEUWPOORTSTEENWEG",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5807190518571606",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.84678567061563"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.760959102084528",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.26351612174764"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2749.jsonld#98732",
         "@type": "tree:Node"
@@ -223,8 +230,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "NIEUWPOORTSTEENWEG",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5807190518571606",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.84678567061563"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.760959102084528",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.26351612174764"
         }
       ],
       "total_children_count": 0,
@@ -240,17 +247,19 @@
       ],
       "triples_metadata": [
         "NIEUWPOORTSTEENWEG"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "BRUGSTRAAT",
       "triples": [
         {
           "http://example.com/terms#name": "NIEUWBRUGSTRAAT",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2230391159595095",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.70638106574778"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.086381403411989",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.19059417121883"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2749.jsonld#98732",
         "@type": "tree:Node"
@@ -258,8 +267,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "NIEUWBRUGSTRAAT",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2230391159595095",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.70638106574778"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.086381403411989",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.19059417121883"
         }
       ],
       "total_children_count": 0,
@@ -275,17 +284,19 @@
       ],
       "triples_metadata": [
         "NIEUWBRUGSTRAAT"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "JVERHEIDSSTRAAT",
       "triples": [
         {
           "http://example.com/terms#name": "NIJVERHEIDSSTRAAT",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1119184901317936",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.397471468932245"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.69432521961851",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.786261876228295"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2749.jsonld#80577",
         "@type": "tree:Node"
@@ -293,8 +304,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "NIJVERHEIDSSTRAAT",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1119184901317936",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.397471468932245"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.69432521961851",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.786261876228295"
         }
       ],
       "total_children_count": 0,
@@ -310,7 +321,8 @@
       ],
       "triples_metadata": [
         "NIJVERHEIDSSTRAAT"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

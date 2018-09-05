@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "u",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5201.jsonld#115775",
-              "@type": "tree:Node",
-              "token_string": "ssart"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5201.jsonld#115776",
-              "@type": "tree:Node",
-              "token_string": "gnies"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "ssart": [
+          "5201",
+          "115775"
+        ],
+        "gnies": [
+          "5201",
+          "115776"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment3986.jsonld#105105",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Beussart",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.348793656990866",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.74802201865896"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.337040080802262",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.96763366797241"
         },
         {
           "http://example.com/terms#name": "Rue Beugnies",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.601134885038699",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.23410904588294"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0352813816613047",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.39759791873652"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5201.jsonld#115775"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5201.jsonld#115776"
+          ]
+        }
+      ]
     },
     {
       "token_string": "ssart",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Beussart",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.348793656990866",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.74802201865896"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.337040080802262",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.96763366797241"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5201.jsonld#115774",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Beussart",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.348793656990866",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.74802201865896"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.337040080802262",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.96763366797241"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Rue Beussart"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "gnies",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Beugnies",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.601134885038699",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.23410904588294"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0352813816613047",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.39759791873652"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5201.jsonld#115774",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Beugnies",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.601134885038699",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.23410904588294"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0352813816613047",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.39759791873652"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Rue Beugnies"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

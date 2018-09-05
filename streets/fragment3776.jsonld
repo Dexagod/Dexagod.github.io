@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": " ",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3776.jsonld#125348",
-              "@type": "tree:Node",
-              "token_string": "Brûlée"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3776.jsonld#125349",
-              "@type": "tree:Node",
-              "token_string": "Gain"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "Brûlée": [
+          "3776",
+          "125348"
+        ],
+        "Gain": [
+          "3776",
+          "125349"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment3776.jsonld#133330",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Chemin de la Cense Brûlée",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4111410506320468",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.505189203765774"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2778743278368676",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.06183497970621"
         },
         {
           "http://example.com/terms#name": "Chemin de la Cense Gain",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.353204596293846",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.15795429061002"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.798093150870382",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.22334128374197"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3776.jsonld#125348"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3776.jsonld#125349"
+          ]
+        }
+      ]
     },
     {
       "token_string": "Brûlée",
       "triples": [
         {
           "http://example.com/terms#name": "Chemin de la Cense Brûlée",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4111410506320468",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.505189203765774"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2778743278368676",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.06183497970621"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3776.jsonld#125347",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Chemin de la Cense Brûlée",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4111410506320468",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.505189203765774"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2778743278368676",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.06183497970621"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Chemin de la Cense Brûlée"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "Gain",
       "triples": [
         {
           "http://example.com/terms#name": "Chemin de la Cense Gain",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.353204596293846",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.15795429061002"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.798093150870382",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.22334128374197"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3776.jsonld#125347",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Chemin de la Cense Gain",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.353204596293846",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.15795429061002"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.798093150870382",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.22334128374197"
         }
       ],
       "total_children_count": 0,
@@ -148,33 +153,22 @@
       ],
       "triples_metadata": [
         "Chemin de la Cense Gain"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "e",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3776.jsonld#133330",
-              "@type": "tree:Node",
-              "token_string": "nse"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3776.jsonld#133331",
-              "@type": "tree:Node",
-              "token_string": "lle"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "nse": [
+          "3776",
+          "133330"
+        ],
+        "lle": [
+          "3776",
+          "133331"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment3777.jsonld#104841",
         "@type": "tree:Node"
@@ -182,48 +176,48 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Chemin de la Cense",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1385479821027324",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.57444299626956"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.215040086863508",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.87232488588799"
         },
         {
           "http://example.com/terms#name": "Chemin de la Cense",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2190656504416655",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.52292505646787"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0194177258417483",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.19248887536858"
         },
         {
           "http://example.com/terms#name": "Chemin de la Cense",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2190656504416655",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.52292505646787"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0194177258417483",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.19248887536858"
         },
         {
           "http://example.com/terms#name": "Chemin de la Cense",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2190656504416655",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.52292505646787"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0194177258417483",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.19248887536858"
         },
         {
           "http://example.com/terms#name": "Chemin de la Cense",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2190656504416655",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.52292505646787"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0194177258417483",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.19248887536858"
         },
         {
           "http://example.com/terms#name": "Chemin de la Cense",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.118119259475504",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.42837425662447"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.329324835961572",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.82108107999389"
         },
         {
           "http://example.com/terms#name": "Chemin de la Cense Brûlée",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4111410506320468",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.505189203765774"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2778743278368676",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.06183497970621"
         },
         {
           "http://example.com/terms#name": "Chemin de la Cense Gain",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.353204596293846",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.15795429061002"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.798093150870382",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.22334128374197"
         },
         {
           "http://example.com/terms#name": "Chemin de la Celle",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.516219440529569",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.45477166045807"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.638534476607305",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.91812487752738"
         }
       ],
       "total_children_count": 5,
@@ -260,54 +254,62 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3776.jsonld#133330"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3776.jsonld#133331"
+          ]
+        }
+      ]
     },
     {
       "token_string": "nse",
       "triples": [
         {
           "http://example.com/terms#name": "Chemin de la Cense",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1385479821027324",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.57444299626956"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.215040086863508",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.87232488588799"
         },
         {
           "http://example.com/terms#name": "Chemin de la Cense",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2190656504416655",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.52292505646787"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0194177258417483",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.19248887536858"
         },
         {
           "http://example.com/terms#name": "Chemin de la Cense",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2190656504416655",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.52292505646787"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0194177258417483",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.19248887536858"
         },
         {
           "http://example.com/terms#name": "Chemin de la Cense",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2190656504416655",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.52292505646787"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0194177258417483",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.19248887536858"
         },
         {
           "http://example.com/terms#name": "Chemin de la Cense",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2190656504416655",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.52292505646787"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0194177258417483",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.19248887536858"
         },
         {
           "http://example.com/terms#name": "Chemin de la Cense",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.118119259475504",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.42837425662447"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.329324835961572",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.82108107999389"
         }
       ],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3776.jsonld#125347",
-              "@type": "tree:Node",
-              "token_string": " "
-            }
-          ]
-        }
-      ],
+      "children": {
+        " ": [
+          "3776",
+          "125347"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment3776.jsonld#133329",
         "@type": "tree:Node"
@@ -315,43 +317,43 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Chemin de la Cense",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1385479821027324",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.57444299626956"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.215040086863508",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.87232488588799"
         },
         {
           "http://example.com/terms#name": "Chemin de la Cense",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2190656504416655",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.52292505646787"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0194177258417483",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.19248887536858"
         },
         {
           "http://example.com/terms#name": "Chemin de la Cense",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2190656504416655",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.52292505646787"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0194177258417483",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.19248887536858"
         },
         {
           "http://example.com/terms#name": "Chemin de la Cense",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2190656504416655",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.52292505646787"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0194177258417483",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.19248887536858"
         },
         {
           "http://example.com/terms#name": "Chemin de la Cense",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2190656504416655",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.52292505646787"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0194177258417483",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.19248887536858"
         },
         {
           "http://example.com/terms#name": "Chemin de la Cense",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.118119259475504",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.42837425662447"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.329324835961572",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.82108107999389"
         },
         {
           "http://example.com/terms#name": "Chemin de la Cense Brûlée",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4111410506320468",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.505189203765774"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2778743278368676",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.06183497970621"
         },
         {
           "http://example.com/terms#name": "Chemin de la Cense Gain",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.353204596293846",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.15795429061002"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.798093150870382",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.22334128374197"
         }
       ],
       "total_children_count": 3,
@@ -389,6 +391,14 @@
         "Chemin de la Cense",
         "Chemin de la Cense",
         "Chemin de la Cense"
+      ],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3776.jsonld#125347"
+          ]
+        }
       ]
     },
     {
@@ -396,10 +406,11 @@
       "triples": [
         {
           "http://example.com/terms#name": "Chemin de la Celle",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.516219440529569",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.45477166045807"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.638534476607305",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.91812487752738"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3776.jsonld#133329",
         "@type": "tree:Node"
@@ -407,8 +418,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Chemin de la Celle",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.516219440529569",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.45477166045807"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.638534476607305",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.91812487752738"
         }
       ],
       "total_children_count": 0,
@@ -424,7 +435,8 @@
       ],
       "triples_metadata": [
         "Chemin de la Celle"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

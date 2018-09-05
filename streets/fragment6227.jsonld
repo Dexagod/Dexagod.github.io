@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "A",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6227.jsonld#138291",
-              "@type": "tree:Node",
-              "token_string": "ndreï Sakharov"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6227.jsonld#138292",
-              "@type": "tree:Node",
-              "token_string": " Lhoest"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6227.jsonld#179059",
-              "@type": "tree:Node",
-              "token_string": "r"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "ndreï Sakharov": [
+          "6227",
+          "138291"
+        ],
+        " Lhoest": [
+          "6227",
+          "138292"
+        ],
+        "r": [
+          "6227",
+          "179059"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4778.jsonld#109901",
         "@type": "tree:Node"
@@ -62,23 +44,23 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Quai Andreï Sakharov",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.274088876012119",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.90240590087628"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.069983028542018",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.5872566331135"
         },
         {
           "http://example.com/terms#name": "Quai A Lhoest",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5771002696364214",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.54283021567941"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4386659734939373",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.65711624633796"
         },
         {
           "http://example.com/terms#name": "Quai Armand Follet",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.358002533664856",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.958777936041635"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.506415484732549",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.69794474176161"
         },
         {
           "http://example.com/terms#name": "Quai Arthur Rimbaud",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4178473705598273",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.35716981912582"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1836702099192493",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.811071270082955"
         }
       ],
       "total_children_count": 5,
@@ -110,17 +92,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6227.jsonld#138291"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6227.jsonld#138292"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6227.jsonld#179059"
+          ]
+        }
+      ]
     },
     {
       "token_string": "ndreï Sakharov",
       "triples": [
         {
           "http://example.com/terms#name": "Quai Andreï Sakharov",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.274088876012119",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.90240590087628"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.069983028542018",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.5872566331135"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6227.jsonld#138290",
         "@type": "tree:Node"
@@ -128,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Quai Andreï Sakharov",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.274088876012119",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.90240590087628"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.069983028542018",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.5872566331135"
         }
       ],
       "total_children_count": 0,
@@ -145,17 +148,19 @@
       ],
       "triples_metadata": [
         "Quai Andreï Sakharov"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": " Lhoest",
       "triples": [
         {
           "http://example.com/terms#name": "Quai A Lhoest",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5771002696364214",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.54283021567941"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4386659734939373",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.65711624633796"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6227.jsonld#138290",
         "@type": "tree:Node"
@@ -163,8 +168,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Quai A Lhoest",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5771002696364214",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.54283021567941"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4386659734939373",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.65711624633796"
         }
       ],
       "total_children_count": 0,
@@ -180,33 +185,22 @@
       ],
       "triples_metadata": [
         "Quai A Lhoest"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "r",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6227.jsonld#179060",
-              "@type": "tree:Node",
-              "token_string": "mand Follet"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6227.jsonld#179061",
-              "@type": "tree:Node",
-              "token_string": "thur Rimbaud"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "mand Follet": [
+          "6227",
+          "179060"
+        ],
+        "thur Rimbaud": [
+          "6227",
+          "179061"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment6227.jsonld#138290",
         "@type": "tree:Node"
@@ -214,13 +208,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Quai Armand Follet",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.358002533664856",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.958777936041635"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.506415484732549",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.69794474176161"
         },
         {
           "http://example.com/terms#name": "Quai Arthur Rimbaud",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4178473705598273",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.35716981912582"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1836702099192493",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.811071270082955"
         }
       ],
       "total_children_count": 2,
@@ -240,17 +234,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6227.jsonld#179060"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6227.jsonld#179061"
+          ]
+        }
+      ]
     },
     {
       "token_string": "mand Follet",
       "triples": [
         {
           "http://example.com/terms#name": "Quai Armand Follet",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.358002533664856",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.958777936041635"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.506415484732549",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.69794474176161"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6227.jsonld#179059",
         "@type": "tree:Node"
@@ -258,8 +267,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Quai Armand Follet",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.358002533664856",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.958777936041635"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.506415484732549",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.69794474176161"
         }
       ],
       "total_children_count": 0,
@@ -275,17 +284,19 @@
       ],
       "triples_metadata": [
         "Quai Armand Follet"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "thur Rimbaud",
       "triples": [
         {
           "http://example.com/terms#name": "Quai Arthur Rimbaud",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4178473705598273",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.35716981912582"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1836702099192493",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.811071270082955"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6227.jsonld#179059",
         "@type": "tree:Node"
@@ -293,8 +304,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Quai Arthur Rimbaud",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4178473705598273",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.35716981912582"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1836702099192493",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.811071270082955"
         }
       ],
       "total_children_count": 0,
@@ -310,7 +321,8 @@
       ],
       "triples_metadata": [
         "Quai Arthur Rimbaud"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

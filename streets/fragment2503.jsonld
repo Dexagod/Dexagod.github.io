@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -25,10 +25,11 @@
       "triples": [
         {
           "http://example.com/terms#name": "Tielensteenweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.117501534218623",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.72852361035121"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2438652149435088",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.70123087551441"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2503.jsonld#74709",
         "@type": "tree:Node"
@@ -36,8 +37,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Tielensteenweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.117501534218623",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.72852361035121"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2438652149435088",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.70123087551441"
         }
       ],
       "total_children_count": 0,
@@ -53,17 +54,19 @@
       ],
       "triples_metadata": [
         "Tielensteenweg"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "raat",
       "triples": [
         {
           "http://example.com/terms#name": "Tielenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.712464310695776",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.161268204948954"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.555300785779616",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.145030302693776"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2503.jsonld#74709",
         "@type": "tree:Node"
@@ -71,8 +74,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Tielenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.712464310695776",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.161268204948954"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.555300785779616",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.145030302693776"
         }
       ],
       "total_children_count": 0,
@@ -88,33 +91,22 @@
       ],
       "triples_metadata": [
         "Tielenstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "d",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2503.jsonld#23888",
-              "@type": "tree:Node",
-              "token_string": "orp"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2503.jsonld#23889",
-              "@type": "tree:Node",
-              "token_string": "ijk"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "orp": [
+          "2503",
+          "23888"
+        ],
+        "ijk": [
+          "2503",
+          "23889"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment2503.jsonld#49548",
         "@type": "tree:Node"
@@ -122,13 +114,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Tielendorp",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0219167947807697",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.61886044766538"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.332110831169516",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.339097163098636"
         },
         {
           "http://example.com/terms#name": "Tielendijk",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5363979290759673",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.78280886470088"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4603998510113807",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.32379568306358"
         }
       ],
       "total_children_count": 2,
@@ -148,17 +140,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2503.jsonld#23888"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2503.jsonld#23889"
+          ]
+        }
+      ]
     },
     {
       "token_string": "orp",
       "triples": [
         {
           "http://example.com/terms#name": "Tielendorp",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0219167947807697",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.61886044766538"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.332110831169516",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.339097163098636"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2503.jsonld#23887",
         "@type": "tree:Node"
@@ -166,8 +173,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Tielendorp",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0219167947807697",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.61886044766538"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.332110831169516",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.339097163098636"
         }
       ],
       "total_children_count": 0,
@@ -183,17 +190,19 @@
       ],
       "triples_metadata": [
         "Tielendorp"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "ijk",
       "triples": [
         {
           "http://example.com/terms#name": "Tielendijk",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5363979290759673",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.78280886470088"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4603998510113807",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.32379568306358"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2503.jsonld#23887",
         "@type": "tree:Node"
@@ -201,8 +210,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Tielendijk",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5363979290759673",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.78280886470088"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4603998510113807",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.32379568306358"
         }
       ],
       "total_children_count": 0,
@@ -218,17 +227,19 @@
       ],
       "triples_metadata": [
         "Tielendijk"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "baan",
       "triples": [
         {
           "http://example.com/terms#name": "Tielenbaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.24084131829912",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.452765899488256"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7101763662958693",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.98349113478027"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2503.jsonld#49548",
         "@type": "tree:Node"
@@ -236,8 +247,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Tielenbaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.24084131829912",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.452765899488256"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7101763662958693",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.98349113478027"
         }
       ],
       "total_children_count": 0,
@@ -253,53 +264,30 @@
       ],
       "triples_metadata": [
         "Tielenbaan"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "n",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2503.jsonld#23887",
-              "@type": "tree:Node",
-              "token_string": "d"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2503.jsonld#33891",
-              "@type": "tree:Node",
-              "token_string": "baan"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2503.jsonld#69594",
-              "@type": "tree:Node",
-              "token_string": "heide"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2503.jsonld#74708",
-              "@type": "tree:Node",
-              "token_string": "s"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "d": [
+          "2503",
+          "23887"
+        ],
+        "baan": [
+          "2503",
+          "33891"
+        ],
+        "heide": [
+          "2503",
+          "69594"
+        ],
+        "s": [
+          "2503",
+          "74708"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment3544.jsonld#49547",
         "@type": "tree:Node"
@@ -307,38 +295,38 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Tielensteenweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.117501534218623",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.72852361035121"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2438652149435088",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.70123087551441"
         },
         {
           "http://example.com/terms#name": "Tielendorp",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0219167947807697",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.61886044766538"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.332110831169516",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.339097163098636"
         },
         {
           "http://example.com/terms#name": "Tielenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.712464310695776",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.161268204948954"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.555300785779616",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.145030302693776"
         },
         {
           "http://example.com/terms#name": "Tielendijk",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5363979290759673",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.78280886470088"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4603998510113807",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.32379568306358"
         },
         {
           "http://example.com/terms#name": "Tielenbaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.24084131829912",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.452765899488256"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7101763662958693",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.98349113478027"
         },
         {
           "http://example.com/terms#name": "Tielenheide",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.269617194591864",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.822942822510605"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.029621563504258",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.690957988481124"
         },
         {
           "http://example.com/terms#name": "Tielensweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.329816742289705",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.169654189055635"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0724875814601917",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.0965738091026"
         }
       ],
       "total_children_count": 10,
@@ -388,17 +376,44 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2503.jsonld#23887"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2503.jsonld#33891"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2503.jsonld#69594"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2503.jsonld#74708"
+          ]
+        }
+      ]
     },
     {
       "token_string": "heide",
       "triples": [
         {
           "http://example.com/terms#name": "Tielenheide",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.269617194591864",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.822942822510605"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.029621563504258",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.690957988481124"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2503.jsonld#49548",
         "@type": "tree:Node"
@@ -406,8 +421,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Tielenheide",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.269617194591864",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.822942822510605"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.029621563504258",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.690957988481124"
         }
       ],
       "total_children_count": 0,
@@ -423,33 +438,22 @@
       ],
       "triples_metadata": [
         "Tielenheide"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "s",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2503.jsonld#74709",
-              "@type": "tree:Node",
-              "token_string": "t"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2503.jsonld#74710",
-              "@type": "tree:Node",
-              "token_string": "weg"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "t": [
+          "2503",
+          "74709"
+        ],
+        "weg": [
+          "2503",
+          "74710"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment2503.jsonld#49548",
         "@type": "tree:Node"
@@ -457,18 +461,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Tielensteenweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.117501534218623",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.72852361035121"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2438652149435088",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.70123087551441"
         },
         {
           "http://example.com/terms#name": "Tielenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.712464310695776",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.161268204948954"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.555300785779616",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.145030302693776"
         },
         {
           "http://example.com/terms#name": "Tielensweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.329816742289705",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.169654189055635"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0724875814601917",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.0965738091026"
         }
       ],
       "total_children_count": 4,
@@ -494,33 +498,35 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
-    },
-    {
-      "token_string": "t",
-      "triples": [],
-      "children": [
+      "triples_metadata": [],
+      "childlist": [
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment2503.jsonld#19047",
-              "@type": "tree:Node",
-              "token_string": "eenweg"
-            }
+            "/streets/fragment2503.jsonld#74709"
           ]
         },
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment2503.jsonld#19048",
-              "@type": "tree:Node",
-              "token_string": "raat"
-            }
+            "/streets/fragment2503.jsonld#74710"
           ]
         }
-      ],
+      ]
+    },
+    {
+      "token_string": "t",
+      "triples": [],
+      "children": {
+        "eenweg": [
+          "2503",
+          "19047"
+        ],
+        "raat": [
+          "2503",
+          "19048"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment2503.jsonld#74708",
         "@type": "tree:Node"
@@ -528,13 +534,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Tielensteenweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.117501534218623",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.72852361035121"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2438652149435088",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.70123087551441"
         },
         {
           "http://example.com/terms#name": "Tielenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.712464310695776",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.161268204948954"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.555300785779616",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.145030302693776"
         }
       ],
       "total_children_count": 2,
@@ -554,17 +560,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2503.jsonld#19047"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2503.jsonld#19048"
+          ]
+        }
+      ]
     },
     {
       "token_string": "weg",
       "triples": [
         {
           "http://example.com/terms#name": "Tielensweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.329816742289705",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.169654189055635"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0724875814601917",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.0965738091026"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2503.jsonld#74708",
         "@type": "tree:Node"
@@ -572,8 +593,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Tielensweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.329816742289705",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.169654189055635"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0724875814601917",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.0965738091026"
         }
       ],
       "total_children_count": 0,
@@ -589,7 +610,8 @@
       ],
       "triples_metadata": [
         "Tielensweg"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

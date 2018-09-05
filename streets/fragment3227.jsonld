@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "itter",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3227.jsonld#21038",
-              "@type": "tree:Node",
-              "token_string": "kiezel"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3227.jsonld#21039",
-              "@type": "tree:Node",
-              "token_string": "straat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3227.jsonld#23663",
-              "@type": "tree:Node",
-              "token_string": "poort"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "kiezel": [
+          "3227",
+          "21038"
+        ],
+        "straat": [
+          "3227",
+          "21039"
+        ],
+        "poort": [
+          "3227",
+          "23663"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment87.jsonld#659",
         "@type": "tree:Node"
@@ -62,18 +44,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Opitterkiezel",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.958166404921734",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.20869685163582"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.919246262318971",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.191321877363606"
         },
         {
           "http://example.com/terms#name": "Opitterstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3671775190845508",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.10061517347241"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.578183262860503",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.402126740771095"
         },
         {
           "http://example.com/terms#name": "Opitterpoort",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.335991529733219",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.679945514737284"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.501432818342853",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.38192514909963"
         }
       ],
       "total_children_count": 3,
@@ -99,17 +81,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3227.jsonld#21038"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3227.jsonld#21039"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3227.jsonld#23663"
+          ]
+        }
+      ]
     },
     {
       "token_string": "kiezel",
       "triples": [
         {
           "http://example.com/terms#name": "Opitterkiezel",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.958166404921734",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.20869685163582"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.919246262318971",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.191321877363606"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3227.jsonld#21037",
         "@type": "tree:Node"
@@ -117,8 +120,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Opitterkiezel",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.958166404921734",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.20869685163582"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.919246262318971",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.191321877363606"
         }
       ],
       "total_children_count": 0,
@@ -134,17 +137,19 @@
       ],
       "triples_metadata": [
         "Opitterkiezel"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "straat",
       "triples": [
         {
           "http://example.com/terms#name": "Opitterstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3671775190845508",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.10061517347241"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.578183262860503",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.402126740771095"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3227.jsonld#21037",
         "@type": "tree:Node"
@@ -152,8 +157,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Opitterstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3671775190845508",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.10061517347241"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.578183262860503",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.402126740771095"
         }
       ],
       "total_children_count": 0,
@@ -169,17 +174,19 @@
       ],
       "triples_metadata": [
         "Opitterstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "poort",
       "triples": [
         {
           "http://example.com/terms#name": "Opitterpoort",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.335991529733219",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.679945514737284"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.501432818342853",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.38192514909963"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3227.jsonld#21037",
         "@type": "tree:Node"
@@ -187,8 +194,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Opitterpoort",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.335991529733219",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.679945514737284"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.501432818342853",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.38192514909963"
         }
       ],
       "total_children_count": 0,
@@ -204,7 +211,8 @@
       ],
       "triples_metadata": [
         "Opitterpoort"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

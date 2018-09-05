@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "-",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1988.jsonld#74125",
-              "@type": "tree:Node",
-              "token_string": "Ceulemansstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1988.jsonld#74126",
-              "@type": "tree:Node",
-              "token_string": "Vlaanderenweg"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1988.jsonld#97764",
-              "@type": "tree:Node",
-              "token_string": "Belgischestraat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "Ceulemansstraat": [
+          "1988",
+          "74125"
+        ],
+        "Vlaanderenweg": [
+          "1988",
+          "74126"
+        ],
+        "Belgischestraat": [
+          "1988",
+          "97764"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment996.jsonld#2847",
         "@type": "tree:Node"
@@ -62,18 +44,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Frans-Ceulemansstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.371679284391296",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.21377942374846"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.765695401947063",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.13416731635062"
         },
         {
           "http://example.com/terms#name": "Frans-Vlaanderenweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1876046401160325",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.315611601874345"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8099597609734195",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.029847166232706"
         },
         {
           "http://example.com/terms#name": "Frans-Belgischestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.273367695056937",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.18060875333554"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.991277715948248",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.63681978718838"
         }
       ],
       "total_children_count": 3,
@@ -99,17 +81,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1988.jsonld#74125"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1988.jsonld#74126"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1988.jsonld#97764"
+          ]
+        }
+      ]
     },
     {
       "token_string": "Ceulemansstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Frans-Ceulemansstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.371679284391296",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.21377942374846"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.765695401947063",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.13416731635062"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1988.jsonld#74124",
         "@type": "tree:Node"
@@ -117,8 +120,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Frans-Ceulemansstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.371679284391296",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.21377942374846"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.765695401947063",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.13416731635062"
         }
       ],
       "total_children_count": 0,
@@ -134,17 +137,19 @@
       ],
       "triples_metadata": [
         "Frans-Ceulemansstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "Vlaanderenweg",
       "triples": [
         {
           "http://example.com/terms#name": "Frans-Vlaanderenweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1876046401160325",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.315611601874345"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8099597609734195",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.029847166232706"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1988.jsonld#74124",
         "@type": "tree:Node"
@@ -152,8 +157,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Frans-Vlaanderenweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1876046401160325",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.315611601874345"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8099597609734195",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.029847166232706"
         }
       ],
       "total_children_count": 0,
@@ -169,17 +174,19 @@
       ],
       "triples_metadata": [
         "Frans-Vlaanderenweg"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "Belgischestraat",
       "triples": [
         {
           "http://example.com/terms#name": "Frans-Belgischestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.273367695056937",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.18060875333554"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.991277715948248",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.63681978718838"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1988.jsonld#74124",
         "@type": "tree:Node"
@@ -187,8 +194,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Frans-Belgischestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.273367695056937",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.18060875333554"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.991277715948248",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.63681978718838"
         }
       ],
       "total_children_count": 0,
@@ -204,7 +211,8 @@
       ],
       "triples_metadata": [
         "Frans-Belgischestraat"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

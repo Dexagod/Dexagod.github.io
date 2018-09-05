@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "Wi",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6342.jsonld#174721",
-              "@type": "tree:Node",
-              "token_string": "nston Churchill"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6342.jsonld#174722",
-              "@type": "tree:Node",
-              "token_string": "lly Chaufoureau"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "nston Churchill": [
+          "6342",
+          "174721"
+        ],
+        "lly Chaufoureau": [
+          "6342",
+          "174722"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment3851.jsonld#107630",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Allée Winston Churchill",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5659814636109153",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.62134743273863"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4662100669239035",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.41057342344313"
         },
         {
           "http://example.com/terms#name": "Allée Willy Chaufoureau",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.362001861648807",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.476257198461276"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0989183755655842",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.99689115640634"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6342.jsonld#174721"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6342.jsonld#174722"
+          ]
+        }
+      ]
     },
     {
       "token_string": "nston Churchill",
       "triples": [
         {
           "http://example.com/terms#name": "Allée Winston Churchill",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5659814636109153",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.62134743273863"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4662100669239035",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.41057342344313"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6342.jsonld#174720",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Allée Winston Churchill",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5659814636109153",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.62134743273863"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4662100669239035",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.41057342344313"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Allée Winston Churchill"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "lly Chaufoureau",
       "triples": [
         {
           "http://example.com/terms#name": "Allée Willy Chaufoureau",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.362001861648807",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.476257198461276"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0989183755655842",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.99689115640634"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6342.jsonld#174720",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Allée Willy Chaufoureau",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.362001861648807",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.476257198461276"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0989183755655842",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.99689115640634"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Allée Willy Chaufoureau"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

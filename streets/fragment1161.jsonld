@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "elen",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1161.jsonld#27705",
-              "@type": "tree:Node",
-              "token_string": "straat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1161.jsonld#27706",
-              "@type": "tree:Node",
-              "token_string": "-Dorp"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "straat": [
+          "1161",
+          "27705"
+        ],
+        "-Dorp": [
+          "1161",
+          "27706"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment1161.jsonld#34032",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Runkelenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.694508383318751",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.38270099486506"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4070845490971267",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.4417211210563"
         },
         {
           "http://example.com/terms#name": "Runkelen-Dorp",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.168945780524741",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.435362094895765"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.685652538761816",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.16797734401712"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1161.jsonld#27705"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1161.jsonld#27706"
+          ]
+        }
+      ]
     },
     {
       "token_string": "straat",
       "triples": [
         {
           "http://example.com/terms#name": "Runkelenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.694508383318751",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.38270099486506"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4070845490971267",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.4417211210563"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1161.jsonld#27704",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Runkelenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.694508383318751",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.38270099486506"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4070845490971267",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.4417211210563"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Runkelenstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "-Dorp",
       "triples": [
         {
           "http://example.com/terms#name": "Runkelen-Dorp",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.168945780524741",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.435362094895765"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.685652538761816",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.16797734401712"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1161.jsonld#27704",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Runkelen-Dorp",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.168945780524741",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.435362094895765"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.685652538761816",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.16797734401712"
         }
       ],
       "total_children_count": 0,
@@ -148,63 +153,34 @@
       ],
       "triples_metadata": [
         "Runkelen-Dorp"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "n",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1161.jsonld#34032",
-              "@type": "tree:Node",
-              "token_string": "k"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1161.jsonld#36030",
-              "@type": "tree:Node",
-              "token_string": "enstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1161.jsonld#36309",
-              "@type": "tree:Node",
-              "token_string": "d"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1161.jsonld#43199",
-              "@type": "tree:Node",
-              "token_string": "cvoort"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1161.jsonld#150062",
-              "@type": "tree:Node",
-              "token_string": "schen"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "k": [
+          "1161",
+          "34032"
+        ],
+        "enstraat": [
+          "1161",
+          "36030"
+        ],
+        "d": [
+          "1161",
+          "36309"
+        ],
+        "cvoort": [
+          "1161",
+          "43199"
+        ],
+        "schen": [
+          "1161",
+          "150062"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment228.jsonld#755",
         "@type": "tree:Node"
@@ -212,53 +188,53 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Runkelenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.694508383318751",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.38270099486506"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4070845490971267",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.4417211210563"
         },
         {
           "http://example.com/terms#name": "Runkelen-Dorp",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.168945780524741",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.435362094895765"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.685652538761816",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.16797734401712"
         },
         {
           "http://example.com/terms#name": "Rundvoortstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3455503574426357",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.756783614933205"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.268672831817423",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.77741959168301"
         },
         {
           "http://example.com/terms#name": "Runenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.889590247215281",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.5629868466781"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.045066095518852",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.8427817971493"
         },
         {
           "http://example.com/terms#name": "Rundershoek",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6999438450148148",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.472969801460295"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9604600607648344",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.18874421401482"
         },
         {
           "http://example.com/terms#name": "Runcvoort",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5359692113343137",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.147473646156875"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2356468323529763",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.0569186151044"
         },
         {
           "http://example.com/terms#name": "Runksterdreef",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4033257674268906",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.6834497900566"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.560568495675781",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.89395111875247"
         },
         {
           "http://example.com/terms#name": "Rundsvoort",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0418327499513347",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.92397682435874"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.757487004994645",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.66169304641415"
         },
         {
           "http://example.com/terms#name": "Runksterkiezel",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3937963470599013",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.44310949088492"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1248628032734698",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.36465834795402"
         },
         {
           "http://example.com/terms#name": "Rundstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5163674793506834",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.379111065919616"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.723649444286122",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.36216553479632"
         }
       ],
       "total_children_count": 17,
@@ -326,33 +302,53 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
-    },
-    {
-      "token_string": "k",
-      "triples": [],
-      "children": [
+      "triples_metadata": [],
+      "childlist": [
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment1161.jsonld#27704",
-              "@type": "tree:Node",
-              "token_string": "elen"
-            }
+            "/streets/fragment1161.jsonld#34032"
           ]
         },
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment1161.jsonld#48681",
-              "@type": "tree:Node",
-              "token_string": "ster"
-            }
+            "/streets/fragment1161.jsonld#36030"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1161.jsonld#36309"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1161.jsonld#43199"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1161.jsonld#150062"
           ]
         }
-      ],
+      ]
+    },
+    {
+      "token_string": "k",
+      "triples": [],
+      "children": {
+        "elen": [
+          "1161",
+          "27704"
+        ],
+        "ster": [
+          "1161",
+          "48681"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment1161.jsonld#34031",
         "@type": "tree:Node"
@@ -360,28 +356,28 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Runkelenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.694508383318751",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.38270099486506"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4070845490971267",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.4417211210563"
         },
         {
           "http://example.com/terms#name": "Runkstersteenweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.721220785765604",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.77463923063242"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.792430627266565",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.140254178900584"
         },
         {
           "http://example.com/terms#name": "Runkelen-Dorp",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.168945780524741",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.435362094895765"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.685652538761816",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.16797734401712"
         },
         {
           "http://example.com/terms#name": "Runksterdreef",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4033257674268906",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.6834497900566"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.560568495675781",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.89395111875247"
         },
         {
           "http://example.com/terms#name": "Runksterkiezel",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3937963470599013",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.44310949088492"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1248628032734698",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.36465834795402"
         }
       ],
       "total_children_count": 7,
@@ -419,17 +415,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1161.jsonld#27704"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1161.jsonld#48681"
+          ]
+        }
+      ]
     },
     {
       "token_string": "enstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Runenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.889590247215281",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.5629868466781"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.045066095518852",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.8427817971493"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1161.jsonld#34031",
         "@type": "tree:Node"
@@ -437,8 +448,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Runenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.889590247215281",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.5629868466781"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.045066095518852",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.8427817971493"
         }
       ],
       "total_children_count": 0,
@@ -454,43 +465,26 @@
       ],
       "triples_metadata": [
         "Runenstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "d",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1161.jsonld#36310",
-              "@type": "tree:Node",
-              "token_string": "voortstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1161.jsonld#36311",
-              "@type": "tree:Node",
-              "token_string": "ershoek"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1161.jsonld#74236",
-              "@type": "tree:Node",
-              "token_string": "s"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "voortstraat": [
+          "1161",
+          "36310"
+        ],
+        "ershoek": [
+          "1161",
+          "36311"
+        ],
+        "s": [
+          "1161",
+          "74236"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment1161.jsonld#34031",
         "@type": "tree:Node"
@@ -498,23 +492,23 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rundvoortstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3455503574426357",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.756783614933205"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.268672831817423",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.77741959168301"
         },
         {
           "http://example.com/terms#name": "Rundershoek",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6999438450148148",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.472969801460295"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9604600607648344",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.18874421401482"
         },
         {
           "http://example.com/terms#name": "Rundsvoort",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0418327499513347",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.92397682435874"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.757487004994645",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.66169304641415"
         },
         {
           "http://example.com/terms#name": "Rundstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5163674793506834",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.379111065919616"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.723649444286122",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.36216553479632"
         }
       ],
       "total_children_count": 5,
@@ -546,17 +540,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1161.jsonld#36310"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1161.jsonld#36311"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1161.jsonld#74236"
+          ]
+        }
+      ]
     },
     {
       "token_string": "voortstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Rundvoortstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3455503574426357",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.756783614933205"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.268672831817423",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.77741959168301"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1161.jsonld#36309",
         "@type": "tree:Node"
@@ -564,8 +579,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rundvoortstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3455503574426357",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.756783614933205"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.268672831817423",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.77741959168301"
         }
       ],
       "total_children_count": 0,
@@ -581,17 +596,19 @@
       ],
       "triples_metadata": [
         "Rundvoortstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "ershoek",
       "triples": [
         {
           "http://example.com/terms#name": "Rundershoek",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6999438450148148",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.472969801460295"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9604600607648344",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.18874421401482"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1161.jsonld#36309",
         "@type": "tree:Node"
@@ -599,8 +616,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rundershoek",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6999438450148148",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.472969801460295"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9604600607648344",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.18874421401482"
         }
       ],
       "total_children_count": 0,
@@ -616,17 +633,19 @@
       ],
       "triples_metadata": [
         "Rundershoek"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "cvoort",
       "triples": [
         {
           "http://example.com/terms#name": "Runcvoort",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5359692113343137",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.147473646156875"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2356468323529763",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.0569186151044"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1161.jsonld#34031",
         "@type": "tree:Node"
@@ -634,8 +653,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Runcvoort",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5359692113343137",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.147473646156875"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2356468323529763",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.0569186151044"
         }
       ],
       "total_children_count": 0,
@@ -651,43 +670,26 @@
       ],
       "triples_metadata": [
         "Runcvoort"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "ster",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1161.jsonld#48682",
-              "@type": "tree:Node",
-              "token_string": "steenweg"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1161.jsonld#48683",
-              "@type": "tree:Node",
-              "token_string": "dreef"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1161.jsonld#63837",
-              "@type": "tree:Node",
-              "token_string": "kiezel"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "steenweg": [
+          "1161",
+          "48682"
+        ],
+        "dreef": [
+          "1161",
+          "48683"
+        ],
+        "kiezel": [
+          "1161",
+          "63837"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment1161.jsonld#34032",
         "@type": "tree:Node"
@@ -695,18 +697,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Runkstersteenweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.721220785765604",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.77463923063242"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.792430627266565",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.140254178900584"
         },
         {
           "http://example.com/terms#name": "Runksterdreef",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4033257674268906",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.6834497900566"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.560568495675781",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.89395111875247"
         },
         {
           "http://example.com/terms#name": "Runksterkiezel",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3937963470599013",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.44310949088492"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1248628032734698",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.36465834795402"
         }
       ],
       "total_children_count": 3,
@@ -732,17 +734,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1161.jsonld#48682"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1161.jsonld#48683"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1161.jsonld#63837"
+          ]
+        }
+      ]
     },
     {
       "token_string": "steenweg",
       "triples": [
         {
           "http://example.com/terms#name": "Runkstersteenweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.721220785765604",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.77463923063242"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.792430627266565",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.140254178900584"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1161.jsonld#48681",
         "@type": "tree:Node"
@@ -750,8 +773,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Runkstersteenweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.721220785765604",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.77463923063242"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.792430627266565",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.140254178900584"
         }
       ],
       "total_children_count": 0,
@@ -767,17 +790,19 @@
       ],
       "triples_metadata": [
         "Runkstersteenweg"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "dreef",
       "triples": [
         {
           "http://example.com/terms#name": "Runksterdreef",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4033257674268906",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.6834497900566"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.560568495675781",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.89395111875247"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1161.jsonld#48681",
         "@type": "tree:Node"
@@ -785,8 +810,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Runksterdreef",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4033257674268906",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.6834497900566"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.560568495675781",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.89395111875247"
         }
       ],
       "total_children_count": 0,
@@ -802,17 +827,19 @@
       ],
       "triples_metadata": [
         "Runksterdreef"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "kiezel",
       "triples": [
         {
           "http://example.com/terms#name": "Runksterkiezel",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3937963470599013",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.44310949088492"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1248628032734698",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.36465834795402"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1161.jsonld#48681",
         "@type": "tree:Node"
@@ -820,8 +847,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Runksterkiezel",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3937963470599013",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.44310949088492"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1248628032734698",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.36465834795402"
         }
       ],
       "total_children_count": 0,
@@ -837,33 +864,22 @@
       ],
       "triples_metadata": [
         "Runksterkiezel"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "s",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1161.jsonld#74237",
-              "@type": "tree:Node",
-              "token_string": "voort"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1161.jsonld#74238",
-              "@type": "tree:Node",
-              "token_string": "traat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "voort": [
+          "1161",
+          "74237"
+        ],
+        "traat": [
+          "1161",
+          "74238"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment1161.jsonld#36309",
         "@type": "tree:Node"
@@ -871,13 +887,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rundsvoort",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0418327499513347",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.92397682435874"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.757487004994645",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.66169304641415"
         },
         {
           "http://example.com/terms#name": "Rundstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5163674793506834",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.379111065919616"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.723649444286122",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.36216553479632"
         }
       ],
       "total_children_count": 2,
@@ -897,17 +913,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1161.jsonld#74237"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1161.jsonld#74238"
+          ]
+        }
+      ]
     },
     {
       "token_string": "voort",
       "triples": [
         {
           "http://example.com/terms#name": "Rundsvoort",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0418327499513347",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.92397682435874"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.757487004994645",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.66169304641415"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1161.jsonld#74236",
         "@type": "tree:Node"
@@ -915,8 +946,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rundsvoort",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0418327499513347",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.92397682435874"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.757487004994645",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.66169304641415"
         }
       ],
       "total_children_count": 0,
@@ -932,17 +963,19 @@
       ],
       "triples_metadata": [
         "Rundsvoort"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "traat",
       "triples": [
         {
           "http://example.com/terms#name": "Rundstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5163674793506834",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.379111065919616"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.723649444286122",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.36216553479632"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1161.jsonld#74236",
         "@type": "tree:Node"
@@ -950,8 +983,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rundstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5163674793506834",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.379111065919616"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.723649444286122",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.36216553479632"
         }
       ],
       "total_children_count": 0,
@@ -967,17 +1000,19 @@
       ],
       "triples_metadata": [
         "Rundstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "schen",
       "triples": [
         {
           "http://example.com/terms#name": "Runschen",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.861026576336498",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.52796714947525"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0041743181066054",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.357551349077795"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1161.jsonld#34031",
         "@type": "tree:Node"
@@ -985,8 +1020,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Runschen",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.861026576336498",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.52796714947525"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0041743181066054",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.357551349077795"
         }
       ],
       "total_children_count": 0,
@@ -1002,7 +1037,8 @@
       ],
       "triples_metadata": [
         "Runschen"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

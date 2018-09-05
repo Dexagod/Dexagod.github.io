@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -25,10 +25,11 @@
       "triples": [
         {
           "http://example.com/terms#name": "Hogelaanstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0178540796699016",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.83165568841747"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.969443326658245",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.40793163189053"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3353.jsonld#89088",
         "@type": "tree:Node"
@@ -36,8 +37,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Hogelaanstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0178540796699016",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.83165568841747"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.969443326658245",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.40793163189053"
         }
       ],
       "total_children_count": 0,
@@ -53,17 +54,19 @@
       ],
       "triples_metadata": [
         "Hogelaanstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "ndweg",
       "triples": [
         {
           "http://example.com/terms#name": "Hogelandweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1704469953853907",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.740066206455936"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.843400415849519",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.700280215258765"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3353.jsonld#89088",
         "@type": "tree:Node"
@@ -71,8 +74,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Hogelandweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1704469953853907",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.740066206455936"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.843400415849519",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.700280215258765"
         }
       ],
       "total_children_count": 0,
@@ -88,33 +91,22 @@
       ],
       "triples_metadata": [
         "Hogelandweg"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "l",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3353.jsonld#89088",
-              "@type": "tree:Node",
-              "token_string": "a"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3353.jsonld#89089",
-              "@type": "tree:Node",
-              "token_string": "eeststraat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "a": [
+          "3353",
+          "89088"
+        ],
+        "eeststraat": [
+          "3353",
+          "89089"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment2575.jsonld#20312",
         "@type": "tree:Node"
@@ -122,18 +114,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Hogelaanstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0178540796699016",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.83165568841747"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.969443326658245",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.40793163189053"
         },
         {
           "http://example.com/terms#name": "Hogelandweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1704469953853907",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.740066206455936"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.843400415849519",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.700280215258765"
         },
         {
           "http://example.com/terms#name": "Hogeleeststraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.371419541252599",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.986756399992494"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5661368030423426",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.26211257846815"
         }
       ],
       "total_children_count": 4,
@@ -159,33 +151,35 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
-    },
-    {
-      "token_string": "a",
-      "triples": [],
-      "children": [
+      "triples_metadata": [],
+      "childlist": [
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment3353.jsonld#37228",
-              "@type": "tree:Node",
-              "token_string": "anstraat"
-            }
+            "/streets/fragment3353.jsonld#89088"
           ]
         },
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment3353.jsonld#37229",
-              "@type": "tree:Node",
-              "token_string": "ndweg"
-            }
+            "/streets/fragment3353.jsonld#89089"
           ]
         }
-      ],
+      ]
+    },
+    {
+      "token_string": "a",
+      "triples": [],
+      "children": {
+        "anstraat": [
+          "3353",
+          "37228"
+        ],
+        "ndweg": [
+          "3353",
+          "37229"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment3353.jsonld#89087",
         "@type": "tree:Node"
@@ -193,13 +187,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Hogelaanstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0178540796699016",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.83165568841747"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.969443326658245",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.40793163189053"
         },
         {
           "http://example.com/terms#name": "Hogelandweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1704469953853907",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.740066206455936"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.843400415849519",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.700280215258765"
         }
       ],
       "total_children_count": 2,
@@ -219,17 +213,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3353.jsonld#37228"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3353.jsonld#37229"
+          ]
+        }
+      ]
     },
     {
       "token_string": "eeststraat",
       "triples": [
         {
           "http://example.com/terms#name": "Hogeleeststraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.371419541252599",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.986756399992494"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5661368030423426",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.26211257846815"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3353.jsonld#89087",
         "@type": "tree:Node"
@@ -237,8 +246,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Hogeleeststraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.371419541252599",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.986756399992494"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5661368030423426",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.26211257846815"
         }
       ],
       "total_children_count": 0,
@@ -254,7 +263,8 @@
       ],
       "triples_metadata": [
         "Hogeleeststraat"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

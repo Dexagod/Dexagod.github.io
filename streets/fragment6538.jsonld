@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "an ",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6538.jsonld#34162",
-              "@type": "tree:Node",
-              "token_string": "De Jonghestraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6538.jsonld#55684",
-              "@type": "tree:Node",
-              "token_string": "Modest Glorieuxlaan"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6538.jsonld#57551",
-              "@type": "tree:Node",
-              "token_string": "Glorieux"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "De Jonghestraat": [
+          "6538",
+          "34162"
+        ],
+        "Modest Glorieuxlaan": [
+          "6538",
+          "55684"
+        ],
+        "Glorieux": [
+          "6538",
+          "57551"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment6538.jsonld#179902",
         "@type": "tree:Node"
@@ -62,23 +44,23 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Stefaan De Jonghestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.36547281902305",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.90989261284501"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.894194126166108",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.904077749356624"
         },
         {
           "http://example.com/terms#name": "Stefaan Glorieuxlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.189391709780918",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.96241111779537"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6542079992669585",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.3937321969723"
         },
         {
           "http://example.com/terms#name": "Stefaan Modest Glorieuxlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.457645167338523",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.233874315540106"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9828808821788853",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.17572838651688"
         },
         {
           "http://example.com/terms#name": "Stefaan Glorieuxstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.122019976548865",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.217071731092574"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3665069868690343",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.09825359102151"
         }
       ],
       "total_children_count": 5,
@@ -110,17 +92,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6538.jsonld#34162"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6538.jsonld#55684"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6538.jsonld#57551"
+          ]
+        }
+      ]
     },
     {
       "token_string": "De Jonghestraat",
       "triples": [
         {
           "http://example.com/terms#name": "Stefaan De Jonghestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.36547281902305",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.90989261284501"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.894194126166108",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.904077749356624"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6538.jsonld#34161",
         "@type": "tree:Node"
@@ -128,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Stefaan De Jonghestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.36547281902305",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.90989261284501"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.894194126166108",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.904077749356624"
         }
       ],
       "total_children_count": 0,
@@ -145,17 +148,19 @@
       ],
       "triples_metadata": [
         "Stefaan De Jonghestraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "Modest Glorieuxlaan",
       "triples": [
         {
           "http://example.com/terms#name": "Stefaan Modest Glorieuxlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.457645167338523",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.233874315540106"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9828808821788853",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.17572838651688"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6538.jsonld#34161",
         "@type": "tree:Node"
@@ -163,8 +168,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Stefaan Modest Glorieuxlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.457645167338523",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.233874315540106"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9828808821788853",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.17572838651688"
         }
       ],
       "total_children_count": 0,
@@ -180,33 +185,22 @@
       ],
       "triples_metadata": [
         "Stefaan Modest Glorieuxlaan"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "Glorieux",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6538.jsonld#57552",
-              "@type": "tree:Node",
-              "token_string": "laan"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6538.jsonld#57553",
-              "@type": "tree:Node",
-              "token_string": "straat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "laan": [
+          "6538",
+          "57552"
+        ],
+        "straat": [
+          "6538",
+          "57553"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment6538.jsonld#34161",
         "@type": "tree:Node"
@@ -214,13 +208,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Stefaan Glorieuxlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.189391709780918",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.96241111779537"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6542079992669585",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.3937321969723"
         },
         {
           "http://example.com/terms#name": "Stefaan Glorieuxstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.122019976548865",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.217071731092574"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3665069868690343",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.09825359102151"
         }
       ],
       "total_children_count": 2,
@@ -240,17 +234,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6538.jsonld#57552"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6538.jsonld#57553"
+          ]
+        }
+      ]
     },
     {
       "token_string": "laan",
       "triples": [
         {
           "http://example.com/terms#name": "Stefaan Glorieuxlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.189391709780918",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.96241111779537"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6542079992669585",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.3937321969723"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6538.jsonld#57551",
         "@type": "tree:Node"
@@ -258,8 +267,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Stefaan Glorieuxlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.189391709780918",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.96241111779537"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6542079992669585",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.3937321969723"
         }
       ],
       "total_children_count": 0,
@@ -275,17 +284,19 @@
       ],
       "triples_metadata": [
         "Stefaan Glorieuxlaan"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "straat",
       "triples": [
         {
           "http://example.com/terms#name": "Stefaan Glorieuxstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.122019976548865",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.217071731092574"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3665069868690343",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.09825359102151"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6538.jsonld#57551",
         "@type": "tree:Node"
@@ -293,8 +304,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Stefaan Glorieuxstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.122019976548865",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.217071731092574"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3665069868690343",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.09825359102151"
         }
       ],
       "total_children_count": 0,
@@ -310,17 +321,19 @@
       ],
       "triples_metadata": [
         "Stefaan Glorieuxstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "estraat",
       "triples": [
         {
           "http://example.com/terms#name": "Stefaniestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2854587312267807",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.017964116329196"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9059177420472877",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.11835373144467"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6538.jsonld#181498",
         "@type": "tree:Node"
@@ -328,8 +341,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Stefaniestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2854587312267807",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.017964116329196"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9059177420472877",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.11835373144467"
         }
       ],
       "total_children_count": 0,
@@ -345,33 +358,22 @@
       ],
       "triples_metadata": [
         "Stefaniestraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "a",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6538.jsonld#89895",
-              "@type": "tree:Node",
-              "token_string": "plein"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6538.jsonld#89896",
-              "@type": "tree:Node",
-              "token_string": "straat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "plein": [
+          "6538",
+          "89895"
+        ],
+        "straat": [
+          "6538",
+          "89896"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment6538.jsonld#181498",
         "@type": "tree:Node"
@@ -379,38 +381,38 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Stefaniaplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.706216491021259",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.92334417428879"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9915238992914617",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.32813684339762"
         },
         {
           "http://example.com/terms#name": "Stefaniaplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.217248882993275",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.14224737109675"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.31908520011525",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.241859621434244"
         },
         {
           "http://example.com/terms#name": "Stefaniaplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.217248882993275",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.14224737109675"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.31908520011525",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.241859621434244"
         },
         {
           "http://example.com/terms#name": "Stefaniaplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.217248882993275",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.14224737109675"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.31908520011525",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.241859621434244"
         },
         {
           "http://example.com/terms#name": "Stefaniaplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.217248882993275",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.14224737109675"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.31908520011525",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.241859621434244"
         },
         {
           "http://example.com/terms#name": "Stefaniaplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.217248882993275",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.14224737109675"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.31908520011525",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.241859621434244"
         },
         {
           "http://example.com/terms#name": "Stefaniastraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5628354270720433",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.670760081850005"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3563752823670776",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.06768718839567"
         }
       ],
       "total_children_count": 2,
@@ -435,42 +437,57 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6538.jsonld#89895"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6538.jsonld#89896"
+          ]
+        }
+      ]
     },
     {
       "token_string": "plein",
       "triples": [
         {
           "http://example.com/terms#name": "Stefaniaplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.706216491021259",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.92334417428879"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9915238992914617",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.32813684339762"
         },
         {
           "http://example.com/terms#name": "Stefaniaplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.217248882993275",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.14224737109675"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.31908520011525",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.241859621434244"
         },
         {
           "http://example.com/terms#name": "Stefaniaplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.217248882993275",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.14224737109675"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.31908520011525",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.241859621434244"
         },
         {
           "http://example.com/terms#name": "Stefaniaplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.217248882993275",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.14224737109675"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.31908520011525",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.241859621434244"
         },
         {
           "http://example.com/terms#name": "Stefaniaplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.217248882993275",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.14224737109675"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.31908520011525",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.241859621434244"
         },
         {
           "http://example.com/terms#name": "Stefaniaplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.217248882993275",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.14224737109675"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.31908520011525",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.241859621434244"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6538.jsonld#89894",
         "@type": "tree:Node"
@@ -478,33 +495,33 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Stefaniaplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.706216491021259",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.92334417428879"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9915238992914617",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.32813684339762"
         },
         {
           "http://example.com/terms#name": "Stefaniaplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.217248882993275",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.14224737109675"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.31908520011525",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.241859621434244"
         },
         {
           "http://example.com/terms#name": "Stefaniaplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.217248882993275",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.14224737109675"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.31908520011525",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.241859621434244"
         },
         {
           "http://example.com/terms#name": "Stefaniaplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.217248882993275",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.14224737109675"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.31908520011525",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.241859621434244"
         },
         {
           "http://example.com/terms#name": "Stefaniaplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.217248882993275",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.14224737109675"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.31908520011525",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.241859621434244"
         },
         {
           "http://example.com/terms#name": "Stefaniaplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.217248882993275",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.14224737109675"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.31908520011525",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.241859621434244"
         }
       ],
       "total_children_count": 0,
@@ -530,17 +547,19 @@
         "Stefaniaplein",
         "Stefaniaplein",
         "Stefaniaplein"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "straat",
       "triples": [
         {
           "http://example.com/terms#name": "Stefaniastraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5628354270720433",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.670760081850005"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3563752823670776",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.06768718839567"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6538.jsonld#89894",
         "@type": "tree:Node"
@@ -548,8 +567,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Stefaniastraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5628354270720433",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.670760081850005"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3563752823670776",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.06768718839567"
         }
       ],
       "total_children_count": 0,
@@ -565,33 +584,22 @@
       ],
       "triples_metadata": [
         "Stefaniastraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "f",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6538.jsonld#179902",
-              "@type": "tree:Node",
-              "token_string": "a"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6538.jsonld#181321",
-              "@type": "tree:Node",
-              "token_string": "fes"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "a": [
+          "6538",
+          "179902"
+        ],
+        "fes": [
+          "6538",
+          "181321"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment296.jsonld#711",
         "@type": "tree:Node"
@@ -599,93 +607,93 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Stefaniestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2854587312267807",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.017964116329196"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9059177420472877",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.11835373144467"
         },
         {
           "http://example.com/terms#name": "Stefaan De Jonghestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.36547281902305",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.90989261284501"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.894194126166108",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.904077749356624"
         },
         {
           "http://example.com/terms#name": "Stefaan Glorieuxlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.189391709780918",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.96241111779537"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6542079992669585",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.3937321969723"
         },
         {
           "http://example.com/terms#name": "Stefaan Modest Glorieuxlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.457645167338523",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.233874315540106"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9828808821788853",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.17572838651688"
         },
         {
           "http://example.com/terms#name": "Stefaan Glorieuxstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.122019976548865",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.217071731092574"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3665069868690343",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.09825359102151"
         },
         {
           "http://example.com/terms#name": "Stefaniaplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.706216491021259",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.92334417428879"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9915238992914617",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.32813684339762"
         },
         {
           "http://example.com/terms#name": "Stefaniaplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.217248882993275",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.14224737109675"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.31908520011525",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.241859621434244"
         },
         {
           "http://example.com/terms#name": "Stefaniaplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.217248882993275",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.14224737109675"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.31908520011525",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.241859621434244"
         },
         {
           "http://example.com/terms#name": "Stefaniaplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.217248882993275",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.14224737109675"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.31908520011525",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.241859621434244"
         },
         {
           "http://example.com/terms#name": "Stefaniaplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.217248882993275",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.14224737109675"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.31908520011525",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.241859621434244"
         },
         {
           "http://example.com/terms#name": "Stefaniaplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.217248882993275",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.14224737109675"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.31908520011525",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.241859621434244"
         },
         {
           "http://example.com/terms#name": "Stefaniastraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5628354270720433",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.670760081850005"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3563752823670776",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.06768718839567"
         },
         {
           "http://example.com/terms#name": "Steffesgasse",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.324608824807051",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.23743317591898"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6406254586863014",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.68797144380151"
         },
         {
           "http://example.com/terms#name": "Steffesgasse",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5924025169475486",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.231457150842594"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.117256223395541",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.62755726203772"
         },
         {
           "http://example.com/terms#name": "Steffesgasse",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5924025169475486",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.231457150842594"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.117256223395541",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.62755726203772"
         },
         {
           "http://example.com/terms#name": "Steffesgasse",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5924025169475486",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.231457150842594"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.117256223395541",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.62755726203772"
         },
         {
           "http://example.com/terms#name": "Steffeshausen",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.283937841755255",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.78764227820487"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.523551456258777",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.566577726108626"
         },
         {
           "http://example.com/terms#name": "Stefanshof",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.130434946363972",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.416288265200585"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.981681012661134",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.82996105373062"
         }
       ],
       "total_children_count": 17,
@@ -761,33 +769,35 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
-    },
-    {
-      "token_string": "a",
-      "triples": [],
-      "children": [
+      "triples_metadata": [],
+      "childlist": [
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment6538.jsonld#34161",
-              "@type": "tree:Node",
-              "token_string": "an "
-            }
+            "/streets/fragment6538.jsonld#179902"
           ]
         },
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment6538.jsonld#181497",
-              "@type": "tree:Node",
-              "token_string": "n"
-            }
+            "/streets/fragment6538.jsonld#181321"
           ]
         }
-      ],
+      ]
+    },
+    {
+      "token_string": "a",
+      "triples": [],
+      "children": {
+        "an ": [
+          "6538",
+          "34161"
+        ],
+        "n": [
+          "6538",
+          "181497"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment6538.jsonld#179901",
         "@type": "tree:Node"
@@ -795,68 +805,68 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Stefaniestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2854587312267807",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.017964116329196"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9059177420472877",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.11835373144467"
         },
         {
           "http://example.com/terms#name": "Stefaan De Jonghestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.36547281902305",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.90989261284501"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.894194126166108",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.904077749356624"
         },
         {
           "http://example.com/terms#name": "Stefaan Glorieuxlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.189391709780918",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.96241111779537"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6542079992669585",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.3937321969723"
         },
         {
           "http://example.com/terms#name": "Stefaan Modest Glorieuxlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.457645167338523",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.233874315540106"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9828808821788853",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.17572838651688"
         },
         {
           "http://example.com/terms#name": "Stefaan Glorieuxstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.122019976548865",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.217071731092574"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3665069868690343",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.09825359102151"
         },
         {
           "http://example.com/terms#name": "Stefaniaplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.706216491021259",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.92334417428879"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9915238992914617",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.32813684339762"
         },
         {
           "http://example.com/terms#name": "Stefaniaplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.217248882993275",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.14224737109675"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.31908520011525",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.241859621434244"
         },
         {
           "http://example.com/terms#name": "Stefaniaplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.217248882993275",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.14224737109675"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.31908520011525",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.241859621434244"
         },
         {
           "http://example.com/terms#name": "Stefaniaplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.217248882993275",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.14224737109675"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.31908520011525",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.241859621434244"
         },
         {
           "http://example.com/terms#name": "Stefaniaplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.217248882993275",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.14224737109675"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.31908520011525",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.241859621434244"
         },
         {
           "http://example.com/terms#name": "Stefaniaplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.217248882993275",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.14224737109675"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.31908520011525",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.241859621434244"
         },
         {
           "http://example.com/terms#name": "Stefaniastraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5628354270720433",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.670760081850005"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3563752823670776",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.06768718839567"
         },
         {
           "http://example.com/terms#name": "Stefanshof",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.130434946363972",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.416288265200585"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.981681012661134",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.82996105373062"
         }
       ],
       "total_children_count": 13,
@@ -917,33 +927,35 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
-    },
-    {
-      "token_string": "fes",
-      "triples": [],
-      "children": [
+      "triples_metadata": [],
+      "childlist": [
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment6538.jsonld#181322",
-              "@type": "tree:Node",
-              "token_string": "gasse"
-            }
+            "/streets/fragment6538.jsonld#34161"
           ]
         },
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment6538.jsonld#181323",
-              "@type": "tree:Node",
-              "token_string": "hausen"
-            }
+            "/streets/fragment6538.jsonld#181497"
           ]
         }
-      ],
+      ]
+    },
+    {
+      "token_string": "fes",
+      "triples": [],
+      "children": {
+        "gasse": [
+          "6538",
+          "181322"
+        ],
+        "hausen": [
+          "6538",
+          "181323"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment6538.jsonld#179901",
         "@type": "tree:Node"
@@ -951,28 +963,28 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Steffesgasse",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.324608824807051",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.23743317591898"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6406254586863014",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.68797144380151"
         },
         {
           "http://example.com/terms#name": "Steffesgasse",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5924025169475486",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.231457150842594"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.117256223395541",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.62755726203772"
         },
         {
           "http://example.com/terms#name": "Steffesgasse",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5924025169475486",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.231457150842594"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.117256223395541",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.62755726203772"
         },
         {
           "http://example.com/terms#name": "Steffesgasse",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5924025169475486",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.231457150842594"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.117256223395541",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.62755726203772"
         },
         {
           "http://example.com/terms#name": "Steffeshausen",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.283937841755255",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.78764227820487"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.523551456258777",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.566577726108626"
         }
       ],
       "total_children_count": 2,
@@ -995,32 +1007,47 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6538.jsonld#181322"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6538.jsonld#181323"
+          ]
+        }
+      ]
     },
     {
       "token_string": "gasse",
       "triples": [
         {
           "http://example.com/terms#name": "Steffesgasse",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.324608824807051",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.23743317591898"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6406254586863014",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.68797144380151"
         },
         {
           "http://example.com/terms#name": "Steffesgasse",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5924025169475486",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.231457150842594"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.117256223395541",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.62755726203772"
         },
         {
           "http://example.com/terms#name": "Steffesgasse",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5924025169475486",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.231457150842594"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.117256223395541",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.62755726203772"
         },
         {
           "http://example.com/terms#name": "Steffesgasse",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5924025169475486",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.231457150842594"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.117256223395541",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.62755726203772"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6538.jsonld#181321",
         "@type": "tree:Node"
@@ -1028,23 +1055,23 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Steffesgasse",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.324608824807051",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.23743317591898"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6406254586863014",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.68797144380151"
         },
         {
           "http://example.com/terms#name": "Steffesgasse",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5924025169475486",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.231457150842594"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.117256223395541",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.62755726203772"
         },
         {
           "http://example.com/terms#name": "Steffesgasse",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5924025169475486",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.231457150842594"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.117256223395541",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.62755726203772"
         },
         {
           "http://example.com/terms#name": "Steffesgasse",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5924025169475486",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.231457150842594"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.117256223395541",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.62755726203772"
         }
       ],
       "total_children_count": 0,
@@ -1066,17 +1093,19 @@
         "Steffesgasse",
         "Steffesgasse",
         "Steffesgasse"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "hausen",
       "triples": [
         {
           "http://example.com/terms#name": "Steffeshausen",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.283937841755255",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.78764227820487"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.523551456258777",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.566577726108626"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6538.jsonld#181321",
         "@type": "tree:Node"
@@ -1084,8 +1113,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Steffeshausen",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.283937841755255",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.78764227820487"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.523551456258777",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.566577726108626"
         }
       ],
       "total_children_count": 0,
@@ -1101,33 +1130,22 @@
       ],
       "triples_metadata": [
         "Steffeshausen"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "n",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6538.jsonld#181498",
-              "@type": "tree:Node",
-              "token_string": "i"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6538.jsonld#181499",
-              "@type": "tree:Node",
-              "token_string": "shof"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "i": [
+          "6538",
+          "181498"
+        ],
+        "shof": [
+          "6538",
+          "181499"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment6538.jsonld#179902",
         "@type": "tree:Node"
@@ -1135,48 +1153,48 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Stefaniestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2854587312267807",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.017964116329196"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9059177420472877",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.11835373144467"
         },
         {
           "http://example.com/terms#name": "Stefaniaplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.706216491021259",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.92334417428879"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9915238992914617",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.32813684339762"
         },
         {
           "http://example.com/terms#name": "Stefaniaplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.217248882993275",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.14224737109675"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.31908520011525",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.241859621434244"
         },
         {
           "http://example.com/terms#name": "Stefaniaplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.217248882993275",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.14224737109675"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.31908520011525",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.241859621434244"
         },
         {
           "http://example.com/terms#name": "Stefaniaplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.217248882993275",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.14224737109675"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.31908520011525",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.241859621434244"
         },
         {
           "http://example.com/terms#name": "Stefaniaplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.217248882993275",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.14224737109675"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.31908520011525",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.241859621434244"
         },
         {
           "http://example.com/terms#name": "Stefaniaplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.217248882993275",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.14224737109675"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.31908520011525",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.241859621434244"
         },
         {
           "http://example.com/terms#name": "Stefaniastraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5628354270720433",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.670760081850005"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3563752823670776",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.06768718839567"
         },
         {
           "http://example.com/terms#name": "Stefanshof",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.130434946363972",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.416288265200585"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.981681012661134",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.82996105373062"
         }
       ],
       "total_children_count": 6,
@@ -1213,33 +1231,35 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
-    },
-    {
-      "token_string": "i",
-      "triples": [],
-      "children": [
+      "triples_metadata": [],
+      "childlist": [
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment6538.jsonld#89892",
-              "@type": "tree:Node",
-              "token_string": "estraat"
-            }
+            "/streets/fragment6538.jsonld#181498"
           ]
         },
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment6538.jsonld#89894",
-              "@type": "tree:Node",
-              "token_string": "a"
-            }
+            "/streets/fragment6538.jsonld#181499"
           ]
         }
-      ],
+      ]
+    },
+    {
+      "token_string": "i",
+      "triples": [],
+      "children": {
+        "estraat": [
+          "6538",
+          "89892"
+        ],
+        "a": [
+          "6538",
+          "89894"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment6538.jsonld#181497",
         "@type": "tree:Node"
@@ -1247,43 +1267,43 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Stefaniestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2854587312267807",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.017964116329196"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9059177420472877",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.11835373144467"
         },
         {
           "http://example.com/terms#name": "Stefaniaplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.706216491021259",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.92334417428879"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9915238992914617",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.32813684339762"
         },
         {
           "http://example.com/terms#name": "Stefaniaplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.217248882993275",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.14224737109675"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.31908520011525",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.241859621434244"
         },
         {
           "http://example.com/terms#name": "Stefaniaplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.217248882993275",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.14224737109675"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.31908520011525",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.241859621434244"
         },
         {
           "http://example.com/terms#name": "Stefaniaplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.217248882993275",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.14224737109675"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.31908520011525",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.241859621434244"
         },
         {
           "http://example.com/terms#name": "Stefaniaplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.217248882993275",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.14224737109675"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.31908520011525",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.241859621434244"
         },
         {
           "http://example.com/terms#name": "Stefaniaplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.217248882993275",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.14224737109675"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.31908520011525",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.241859621434244"
         },
         {
           "http://example.com/terms#name": "Stefaniastraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5628354270720433",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.670760081850005"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3563752823670776",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.06768718839567"
         }
       ],
       "total_children_count": 4,
@@ -1314,17 +1334,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6538.jsonld#89892"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6538.jsonld#89894"
+          ]
+        }
+      ]
     },
     {
       "token_string": "shof",
       "triples": [
         {
           "http://example.com/terms#name": "Stefanshof",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.130434946363972",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.416288265200585"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.981681012661134",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.82996105373062"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6538.jsonld#181497",
         "@type": "tree:Node"
@@ -1332,8 +1367,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Stefanshof",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.130434946363972",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.416288265200585"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.981681012661134",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.82996105373062"
         }
       ],
       "total_children_count": 0,
@@ -1349,7 +1384,8 @@
       ],
       "triples_metadata": [
         "Stefanshof"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

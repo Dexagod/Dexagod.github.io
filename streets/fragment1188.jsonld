@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -25,10 +25,11 @@
       "triples": [
         {
           "http://example.com/terms#name": "Mijlstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7471235355929595",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.26935512461572"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3921170110115635",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.57054148622392"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1188.jsonld#32447",
         "@type": "tree:Node"
@@ -36,8 +37,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Mijlstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7471235355929595",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.26935512461572"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3921170110115635",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.57054148622392"
         }
       ],
       "total_children_count": 0,
@@ -53,17 +54,19 @@
       ],
       "triples_metadata": [
         "Mijlstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "een",
       "triples": [
         {
           "http://example.com/terms#name": "Mijlsteen",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.657882824219429",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.74581849331274"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.403263640679721",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.15974611312182"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1188.jsonld#32447",
         "@type": "tree:Node"
@@ -71,8 +74,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Mijlsteen",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.657882824219429",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.74581849331274"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.403263640679721",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.15974611312182"
         }
       ],
       "total_children_count": 0,
@@ -88,33 +91,22 @@
       ],
       "triples_metadata": [
         "Mijlsteen"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "st",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1188.jsonld#21474",
-              "@type": "tree:Node",
-              "token_string": "raat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1188.jsonld#21475",
-              "@type": "tree:Node",
-              "token_string": "een"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "raat": [
+          "1188",
+          "21474"
+        ],
+        "een": [
+          "1188",
+          "21475"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment1188.jsonld#40530",
         "@type": "tree:Node"
@@ -122,13 +114,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Mijlstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7471235355929595",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.26935512461572"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3921170110115635",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.57054148622392"
         },
         {
           "http://example.com/terms#name": "Mijlsteen",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.657882824219429",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.74581849331274"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.403263640679721",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.15974611312182"
         }
       ],
       "total_children_count": 2,
@@ -148,43 +140,39 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1188.jsonld#21474"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1188.jsonld#21475"
+          ]
+        }
+      ]
     },
     {
       "token_string": "j",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1188.jsonld#40530",
-              "@type": "tree:Node",
-              "token_string": "l"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1188.jsonld#51855",
-              "@type": "tree:Node",
-              "token_string": "n"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1188.jsonld#67112",
-              "@type": "tree:Node",
-              "token_string": "t"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "l": [
+          "1188",
+          "40530"
+        ],
+        "n": [
+          "1188",
+          "51855"
+        ],
+        "t": [
+          "1188",
+          "67112"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment139.jsonld#1184",
         "@type": "tree:Node"
@@ -192,53 +180,53 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Mijlstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7471235355929595",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.26935512461572"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3921170110115635",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.57054148622392"
         },
         {
           "http://example.com/terms#name": "Mijlsteen",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.657882824219429",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.74581849331274"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.403263640679721",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.15974611312182"
         },
         {
           "http://example.com/terms#name": "Mijleekstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8977970848891657",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.120921765603995"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4120212053220236",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.786792485493805"
         },
         {
           "http://example.com/terms#name": "Mijlbekelaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1979781105166865",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.150547640743056"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.978960381362453",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.260008619462724"
         },
         {
           "http://example.com/terms#name": "Mijl",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.679853656726898",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.46232975406775"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.523497037816289",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.74431095451176"
         },
         {
           "http://example.com/terms#name": "Mijnherenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7944509610628683",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.07757946325081"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.703138284354503",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.85145870412276"
         },
         {
           "http://example.com/terms#name": "Mijlgrachtstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0838843992650435",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.78013708323708"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9078605710129004",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.06962514097294"
         },
         {
           "http://example.com/terms#name": "Mijlenmeersstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.075419481451206",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.05774138752068"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8637613457193876",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.17728875023054"
         },
         {
           "http://example.com/terms#name": "Mijlboomweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.535855041260299",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.12315176564472"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.681467224268236",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.88245393380094"
         },
         {
           "http://example.com/terms#name": "Mijnekomweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3020006015341807",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.90456790480715"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.436595234231742",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.54447643140701"
         }
       ],
       "total_children_count": 30,
@@ -306,59 +294,55 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1188.jsonld#40530"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1188.jsonld#51855"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1188.jsonld#67112"
+          ]
+        }
+      ]
     },
     {
       "token_string": "l",
       "triples": [
         {
           "http://example.com/terms#name": "Mijl",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.679853656726898",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.46232975406775"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.523497037816289",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.74431095451176"
         }
       ],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1188.jsonld#32447",
-              "@type": "tree:Node",
-              "token_string": "st"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1188.jsonld#75077",
-              "@type": "tree:Node",
-              "token_string": "grachtstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1188.jsonld#87632",
-              "@type": "tree:Node",
-              "token_string": "e"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1188.jsonld#95118",
-              "@type": "tree:Node",
-              "token_string": "b"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "st": [
+          "1188",
+          "32447"
+        ],
+        "grachtstraat": [
+          "1188",
+          "75077"
+        ],
+        "e": [
+          "1188",
+          "87632"
+        ],
+        "b": [
+          "1188",
+          "95118"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment1188.jsonld#40529",
         "@type": "tree:Node"
@@ -366,43 +350,43 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Mijlstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7471235355929595",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.26935512461572"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3921170110115635",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.57054148622392"
         },
         {
           "http://example.com/terms#name": "Mijlsteen",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.657882824219429",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.74581849331274"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.403263640679721",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.15974611312182"
         },
         {
           "http://example.com/terms#name": "Mijleekstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8977970848891657",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.120921765603995"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4120212053220236",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.786792485493805"
         },
         {
           "http://example.com/terms#name": "Mijlbekelaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1979781105166865",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.150547640743056"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.978960381362453",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.260008619462724"
         },
         {
           "http://example.com/terms#name": "Mijl",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.679853656726898",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.46232975406775"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.523497037816289",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.74431095451176"
         },
         {
           "http://example.com/terms#name": "Mijlgrachtstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0838843992650435",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.78013708323708"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9078605710129004",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.06962514097294"
         },
         {
           "http://example.com/terms#name": "Mijlenmeersstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.075419481451206",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.05774138752068"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8637613457193876",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.17728875023054"
         },
         {
           "http://example.com/terms#name": "Mijlboomweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.535855041260299",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.12315176564472"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.681467224268236",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.88245393380094"
         }
       ],
       "total_children_count": 10,
@@ -460,73 +444,63 @@
       ],
       "triples_metadata": [
         "Mijl"
+      ],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1188.jsonld#32447"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1188.jsonld#75077"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1188.jsonld#87632"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1188.jsonld#95118"
+          ]
+        }
       ]
     },
     {
       "token_string": "n",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1188.jsonld#52707",
-              "@type": "tree:Node",
-              "token_string": "w"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1188.jsonld#66575",
-              "@type": "tree:Node",
-              "token_string": "s"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1188.jsonld#71080",
-              "@type": "tree:Node",
-              "token_string": "plein"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1188.jsonld#79078",
-              "@type": "tree:Node",
-              "token_string": "lamphof"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1188.jsonld#99575",
-              "@type": "tree:Node",
-              "token_string": "ekomweg"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1188.jsonld#101824",
-              "@type": "tree:Node",
-              "token_string": "h"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "w": [
+          "1188",
+          "52707"
+        ],
+        "s": [
+          "1188",
+          "66575"
+        ],
+        "plein": [
+          "1188",
+          "71080"
+        ],
+        "lamphof": [
+          "1188",
+          "79078"
+        ],
+        "ekomweg": [
+          "1188",
+          "99575"
+        ],
+        "h": [
+          "1188",
+          "101824"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment1188.jsonld#40529",
         "@type": "tree:Node"
@@ -534,78 +508,78 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Mijnherenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7944509610628683",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.07757946325081"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.703138284354503",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.85145870412276"
         },
         {
           "http://example.com/terms#name": "Mijnwerkersstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2595475183410483",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.7289513781986"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5878922029118283",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.2360415022454"
         },
         {
           "http://example.com/terms#name": "Mijnwerkersstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.80913971688387",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.46507518206937"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9252900282108203",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.734515995446536"
         },
         {
           "http://example.com/terms#name": "Mijnwerkersstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.80913971688387",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.46507518206937"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9252900282108203",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.734515995446536"
         },
         {
           "http://example.com/terms#name": "Mijnwerkersstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.80913971688387",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.46507518206937"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9252900282108203",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.734515995446536"
         },
         {
           "http://example.com/terms#name": "Mijnwerkersstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.80913971688387",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.46507518206937"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9252900282108203",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.734515995446536"
         },
         {
           "http://example.com/terms#name": "Mijnwerkersstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.80913971688387",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.46507518206937"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9252900282108203",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.734515995446536"
         },
         {
           "http://example.com/terms#name": "Mijnschoolstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7269943573048065",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.79642060822563"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.592919187524294",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.07266647543359"
         },
         {
           "http://example.com/terms#name": "Mijnstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8086851630215017",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.886934516503864"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.153887100904339",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.35533667098721"
         },
         {
           "http://example.com/terms#name": "Mijnplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8363365229426014",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.057246256290554"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2606837298128553",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.52224950782508"
         },
         {
           "http://example.com/terms#name": "Mijnwerkerslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.99105893359734",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.92434510265659"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7693562484931347",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.98731095528723"
         },
         {
           "http://example.com/terms#name": "Mijnlamphof",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.351327267165573",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.26809086580189"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2519322570852167",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.24825915217834"
         },
         {
           "http://example.com/terms#name": "Mijnwerkerspad",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.984145415107028",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.72015768464088"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.107677466949904",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.87849045582951"
         },
         {
           "http://example.com/terms#name": "Mijnekomweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3020006015341807",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.90456790480715"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.436595234231742",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.54447643140701"
         },
         {
           "http://example.com/terms#name": "Mijnhoutkaai",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4434791153881625",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.03549295928808"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2893854634032396",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.568031534342666"
         }
       ],
       "total_children_count": 15,
@@ -678,33 +652,59 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
-    },
-    {
-      "token_string": "w",
-      "triples": [],
-      "children": [
+      "triples_metadata": [],
+      "childlist": [
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment1188.jsonld#52708",
-              "@type": "tree:Node",
-              "token_string": "inningstraat"
-            }
+            "/streets/fragment1188.jsonld#52707"
           ]
         },
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment1188.jsonld#78173",
-              "@type": "tree:Node",
-              "token_string": "erkers"
-            }
+            "/streets/fragment1188.jsonld#66575"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1188.jsonld#71080"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1188.jsonld#79078"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1188.jsonld#99575"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1188.jsonld#101824"
           ]
         }
-      ],
+      ]
+    },
+    {
+      "token_string": "w",
+      "triples": [],
+      "children": {
+        "inningstraat": [
+          "1188",
+          "52708"
+        ],
+        "erkers": [
+          "1188",
+          "78173"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment1188.jsonld#51855",
         "@type": "tree:Node"
@@ -712,48 +712,48 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Mijnwinningstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3083835292005994",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.14920899171184"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.131100257543284",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.499631699284826"
         },
         {
           "http://example.com/terms#name": "Mijnwerkersstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2595475183410483",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.7289513781986"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5878922029118283",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.2360415022454"
         },
         {
           "http://example.com/terms#name": "Mijnwerkersstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.80913971688387",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.46507518206937"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9252900282108203",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.734515995446536"
         },
         {
           "http://example.com/terms#name": "Mijnwerkersstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.80913971688387",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.46507518206937"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9252900282108203",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.734515995446536"
         },
         {
           "http://example.com/terms#name": "Mijnwerkersstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.80913971688387",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.46507518206937"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9252900282108203",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.734515995446536"
         },
         {
           "http://example.com/terms#name": "Mijnwerkersstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.80913971688387",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.46507518206937"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9252900282108203",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.734515995446536"
         },
         {
           "http://example.com/terms#name": "Mijnwerkersstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.80913971688387",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.46507518206937"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9252900282108203",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.734515995446536"
         },
         {
           "http://example.com/terms#name": "Mijnwerkerslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.99105893359734",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.92434510265659"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7693562484931347",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.98731095528723"
         },
         {
           "http://example.com/terms#name": "Mijnwerkerspad",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.984145415107028",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.72015768464088"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.107677466949904",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.87849045582951"
         }
       ],
       "total_children_count": 5,
@@ -790,17 +790,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1188.jsonld#52708"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1188.jsonld#78173"
+          ]
+        }
+      ]
     },
     {
       "token_string": "inningstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Mijnwinningstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3083835292005994",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.14920899171184"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.131100257543284",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.499631699284826"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1188.jsonld#52707",
         "@type": "tree:Node"
@@ -808,8 +823,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Mijnwinningstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3083835292005994",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.14920899171184"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.131100257543284",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.499631699284826"
         }
       ],
       "total_children_count": 0,
@@ -825,33 +840,22 @@
       ],
       "triples_metadata": [
         "Mijnwinningstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "s",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1188.jsonld#66576",
-              "@type": "tree:Node",
-              "token_string": "choolstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1188.jsonld#66577",
-              "@type": "tree:Node",
-              "token_string": "traat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "choolstraat": [
+          "1188",
+          "66576"
+        ],
+        "traat": [
+          "1188",
+          "66577"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment1188.jsonld#51855",
         "@type": "tree:Node"
@@ -859,13 +863,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Mijnschoolstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7269943573048065",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.79642060822563"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.592919187524294",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.07266647543359"
         },
         {
           "http://example.com/terms#name": "Mijnstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8086851630215017",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.886934516503864"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.153887100904339",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.35533667098721"
         }
       ],
       "total_children_count": 2,
@@ -885,17 +889,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1188.jsonld#66576"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1188.jsonld#66577"
+          ]
+        }
+      ]
     },
     {
       "token_string": "choolstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Mijnschoolstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7269943573048065",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.79642060822563"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.592919187524294",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.07266647543359"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1188.jsonld#66575",
         "@type": "tree:Node"
@@ -903,8 +922,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Mijnschoolstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7269943573048065",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.79642060822563"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.592919187524294",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.07266647543359"
         }
       ],
       "total_children_count": 0,
@@ -920,17 +939,19 @@
       ],
       "triples_metadata": [
         "Mijnschoolstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "traat",
       "triples": [
         {
           "http://example.com/terms#name": "Mijnstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8086851630215017",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.886934516503864"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.153887100904339",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.35533667098721"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1188.jsonld#66575",
         "@type": "tree:Node"
@@ -938,8 +959,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Mijnstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8086851630215017",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.886934516503864"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.153887100904339",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.35533667098721"
         }
       ],
       "total_children_count": 0,
@@ -955,33 +976,22 @@
       ],
       "triples_metadata": [
         "Mijnstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "t",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1188.jsonld#67113",
-              "@type": "tree:Node",
-              "token_string": "erlaan"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1188.jsonld#67114",
-              "@type": "tree:Node",
-              "token_string": "testraat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "erlaan": [
+          "1188",
+          "67113"
+        ],
+        "testraat": [
+          "1188",
+          "67114"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment1188.jsonld#40529",
         "@type": "tree:Node"
@@ -989,13 +999,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Mijterlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0798047246820426",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.76000462348925"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3335682011863956",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.881777403171014"
         },
         {
           "http://example.com/terms#name": "Mijttestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5316430506836487",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.39240907040372"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1326805210796578",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.56422058854436"
         }
       ],
       "total_children_count": 2,
@@ -1015,17 +1025,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1188.jsonld#67113"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1188.jsonld#67114"
+          ]
+        }
+      ]
     },
     {
       "token_string": "erlaan",
       "triples": [
         {
           "http://example.com/terms#name": "Mijterlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0798047246820426",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.76000462348925"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3335682011863956",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.881777403171014"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1188.jsonld#67112",
         "@type": "tree:Node"
@@ -1033,8 +1058,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Mijterlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0798047246820426",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.76000462348925"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3335682011863956",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.881777403171014"
         }
       ],
       "total_children_count": 0,
@@ -1050,17 +1075,19 @@
       ],
       "triples_metadata": [
         "Mijterlaan"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "testraat",
       "triples": [
         {
           "http://example.com/terms#name": "Mijttestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5316430506836487",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.39240907040372"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1326805210796578",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.56422058854436"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1188.jsonld#67112",
         "@type": "tree:Node"
@@ -1068,8 +1095,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Mijttestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5316430506836487",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.39240907040372"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1326805210796578",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.56422058854436"
         }
       ],
       "total_children_count": 0,
@@ -1085,17 +1112,19 @@
       ],
       "triples_metadata": [
         "Mijttestraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "plein",
       "triples": [
         {
           "http://example.com/terms#name": "Mijnplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8363365229426014",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.057246256290554"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2606837298128553",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.52224950782508"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1188.jsonld#51855",
         "@type": "tree:Node"
@@ -1103,8 +1132,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Mijnplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8363365229426014",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.057246256290554"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2606837298128553",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.52224950782508"
         }
       ],
       "total_children_count": 0,
@@ -1120,17 +1149,19 @@
       ],
       "triples_metadata": [
         "Mijnplein"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "grachtstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Mijlgrachtstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0838843992650435",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.78013708323708"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9078605710129004",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.06962514097294"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1188.jsonld#40530",
         "@type": "tree:Node"
@@ -1138,8 +1169,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Mijlgrachtstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0838843992650435",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.78013708323708"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9078605710129004",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.06962514097294"
         }
       ],
       "total_children_count": 0,
@@ -1155,43 +1186,26 @@
       ],
       "triples_metadata": [
         "Mijlgrachtstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "erkers",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1188.jsonld#78174",
-              "@type": "tree:Node",
-              "token_string": "straat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1188.jsonld#78175",
-              "@type": "tree:Node",
-              "token_string": "laan"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1188.jsonld#96306",
-              "@type": "tree:Node",
-              "token_string": "pad"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "straat": [
+          "1188",
+          "78174"
+        ],
+        "laan": [
+          "1188",
+          "78175"
+        ],
+        "pad": [
+          "1188",
+          "96306"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment1188.jsonld#52707",
         "@type": "tree:Node"
@@ -1199,43 +1213,43 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Mijnwerkersstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2595475183410483",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.7289513781986"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5878922029118283",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.2360415022454"
         },
         {
           "http://example.com/terms#name": "Mijnwerkersstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.80913971688387",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.46507518206937"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9252900282108203",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.734515995446536"
         },
         {
           "http://example.com/terms#name": "Mijnwerkersstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.80913971688387",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.46507518206937"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9252900282108203",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.734515995446536"
         },
         {
           "http://example.com/terms#name": "Mijnwerkersstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.80913971688387",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.46507518206937"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9252900282108203",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.734515995446536"
         },
         {
           "http://example.com/terms#name": "Mijnwerkersstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.80913971688387",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.46507518206937"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9252900282108203",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.734515995446536"
         },
         {
           "http://example.com/terms#name": "Mijnwerkersstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.80913971688387",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.46507518206937"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9252900282108203",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.734515995446536"
         },
         {
           "http://example.com/terms#name": "Mijnwerkerslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.99105893359734",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.92434510265659"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7693562484931347",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.98731095528723"
         },
         {
           "http://example.com/terms#name": "Mijnwerkerspad",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.984145415107028",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.72015768464088"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.107677466949904",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.87849045582951"
         }
       ],
       "total_children_count": 3,
@@ -1266,42 +1280,63 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1188.jsonld#78174"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1188.jsonld#78175"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1188.jsonld#96306"
+          ]
+        }
+      ]
     },
     {
       "token_string": "straat",
       "triples": [
         {
           "http://example.com/terms#name": "Mijnwerkersstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2595475183410483",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.7289513781986"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5878922029118283",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.2360415022454"
         },
         {
           "http://example.com/terms#name": "Mijnwerkersstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.80913971688387",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.46507518206937"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9252900282108203",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.734515995446536"
         },
         {
           "http://example.com/terms#name": "Mijnwerkersstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.80913971688387",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.46507518206937"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9252900282108203",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.734515995446536"
         },
         {
           "http://example.com/terms#name": "Mijnwerkersstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.80913971688387",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.46507518206937"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9252900282108203",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.734515995446536"
         },
         {
           "http://example.com/terms#name": "Mijnwerkersstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.80913971688387",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.46507518206937"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9252900282108203",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.734515995446536"
         },
         {
           "http://example.com/terms#name": "Mijnwerkersstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.80913971688387",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.46507518206937"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9252900282108203",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.734515995446536"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1188.jsonld#78173",
         "@type": "tree:Node"
@@ -1309,33 +1344,33 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Mijnwerkersstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2595475183410483",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.7289513781986"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5878922029118283",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.2360415022454"
         },
         {
           "http://example.com/terms#name": "Mijnwerkersstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.80913971688387",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.46507518206937"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9252900282108203",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.734515995446536"
         },
         {
           "http://example.com/terms#name": "Mijnwerkersstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.80913971688387",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.46507518206937"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9252900282108203",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.734515995446536"
         },
         {
           "http://example.com/terms#name": "Mijnwerkersstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.80913971688387",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.46507518206937"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9252900282108203",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.734515995446536"
         },
         {
           "http://example.com/terms#name": "Mijnwerkersstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.80913971688387",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.46507518206937"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9252900282108203",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.734515995446536"
         },
         {
           "http://example.com/terms#name": "Mijnwerkersstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.80913971688387",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.46507518206937"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9252900282108203",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.734515995446536"
         }
       ],
       "total_children_count": 0,
@@ -1361,17 +1396,19 @@
         "Mijnwerkersstraat",
         "Mijnwerkersstraat",
         "Mijnwerkersstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "laan",
       "triples": [
         {
           "http://example.com/terms#name": "Mijnwerkerslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.99105893359734",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.92434510265659"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7693562484931347",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.98731095528723"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1188.jsonld#78173",
         "@type": "tree:Node"
@@ -1379,8 +1416,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Mijnwerkerslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.99105893359734",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.92434510265659"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7693562484931347",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.98731095528723"
         }
       ],
       "total_children_count": 0,
@@ -1396,17 +1433,19 @@
       ],
       "triples_metadata": [
         "Mijnwerkerslaan"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "lamphof",
       "triples": [
         {
           "http://example.com/terms#name": "Mijnlamphof",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.351327267165573",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.26809086580189"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2519322570852167",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.24825915217834"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1188.jsonld#51855",
         "@type": "tree:Node"
@@ -1414,8 +1453,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Mijnlamphof",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.351327267165573",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.26809086580189"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2519322570852167",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.24825915217834"
         }
       ],
       "total_children_count": 0,
@@ -1431,33 +1470,22 @@
       ],
       "triples_metadata": [
         "Mijnlamphof"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "e",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1188.jsonld#87633",
-              "@type": "tree:Node",
-              "token_string": "ekstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1188.jsonld#87634",
-              "@type": "tree:Node",
-              "token_string": "nmeersstraat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "ekstraat": [
+          "1188",
+          "87633"
+        ],
+        "nmeersstraat": [
+          "1188",
+          "87634"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment1188.jsonld#40530",
         "@type": "tree:Node"
@@ -1465,13 +1493,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Mijleekstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8977970848891657",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.120921765603995"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4120212053220236",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.786792485493805"
         },
         {
           "http://example.com/terms#name": "Mijlenmeersstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.075419481451206",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.05774138752068"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8637613457193876",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.17728875023054"
         }
       ],
       "total_children_count": 2,
@@ -1491,17 +1519,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1188.jsonld#87633"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1188.jsonld#87634"
+          ]
+        }
+      ]
     },
     {
       "token_string": "ekstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Mijleekstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8977970848891657",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.120921765603995"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4120212053220236",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.786792485493805"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1188.jsonld#87632",
         "@type": "tree:Node"
@@ -1509,8 +1552,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Mijleekstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8977970848891657",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.120921765603995"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4120212053220236",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.786792485493805"
         }
       ],
       "total_children_count": 0,
@@ -1526,17 +1569,19 @@
       ],
       "triples_metadata": [
         "Mijleekstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "nmeersstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Mijlenmeersstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.075419481451206",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.05774138752068"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8637613457193876",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.17728875023054"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1188.jsonld#87632",
         "@type": "tree:Node"
@@ -1544,8 +1589,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Mijlenmeersstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.075419481451206",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.05774138752068"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8637613457193876",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.17728875023054"
         }
       ],
       "total_children_count": 0,
@@ -1561,33 +1606,22 @@
       ],
       "triples_metadata": [
         "Mijlenmeersstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "b",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1188.jsonld#95119",
-              "@type": "tree:Node",
-              "token_string": "ekelaan"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1188.jsonld#95120",
-              "@type": "tree:Node",
-              "token_string": "oomweg"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "ekelaan": [
+          "1188",
+          "95119"
+        ],
+        "oomweg": [
+          "1188",
+          "95120"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment1188.jsonld#40530",
         "@type": "tree:Node"
@@ -1595,13 +1629,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Mijlbekelaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1979781105166865",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.150547640743056"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.978960381362453",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.260008619462724"
         },
         {
           "http://example.com/terms#name": "Mijlboomweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.535855041260299",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.12315176564472"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.681467224268236",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.88245393380094"
         }
       ],
       "total_children_count": 2,
@@ -1621,17 +1655,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1188.jsonld#95119"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1188.jsonld#95120"
+          ]
+        }
+      ]
     },
     {
       "token_string": "ekelaan",
       "triples": [
         {
           "http://example.com/terms#name": "Mijlbekelaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1979781105166865",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.150547640743056"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.978960381362453",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.260008619462724"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1188.jsonld#95118",
         "@type": "tree:Node"
@@ -1639,8 +1688,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Mijlbekelaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1979781105166865",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.150547640743056"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.978960381362453",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.260008619462724"
         }
       ],
       "total_children_count": 0,
@@ -1656,17 +1705,19 @@
       ],
       "triples_metadata": [
         "Mijlbekelaan"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "oomweg",
       "triples": [
         {
           "http://example.com/terms#name": "Mijlboomweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.535855041260299",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.12315176564472"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.681467224268236",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.88245393380094"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1188.jsonld#95118",
         "@type": "tree:Node"
@@ -1674,8 +1725,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Mijlboomweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.535855041260299",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.12315176564472"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.681467224268236",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.88245393380094"
         }
       ],
       "total_children_count": 0,
@@ -1691,17 +1742,19 @@
       ],
       "triples_metadata": [
         "Mijlboomweg"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "pad",
       "triples": [
         {
           "http://example.com/terms#name": "Mijnwerkerspad",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.984145415107028",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.72015768464088"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.107677466949904",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.87849045582951"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1188.jsonld#78173",
         "@type": "tree:Node"
@@ -1709,8 +1762,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Mijnwerkerspad",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.984145415107028",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.72015768464088"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.107677466949904",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.87849045582951"
         }
       ],
       "total_children_count": 0,
@@ -1726,17 +1779,19 @@
       ],
       "triples_metadata": [
         "Mijnwerkerspad"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "ekomweg",
       "triples": [
         {
           "http://example.com/terms#name": "Mijnekomweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3020006015341807",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.90456790480715"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.436595234231742",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.54447643140701"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1188.jsonld#51855",
         "@type": "tree:Node"
@@ -1744,8 +1799,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Mijnekomweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3020006015341807",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.90456790480715"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.436595234231742",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.54447643140701"
         }
       ],
       "total_children_count": 0,
@@ -1761,33 +1816,22 @@
       ],
       "triples_metadata": [
         "Mijnekomweg"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "h",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1188.jsonld#101825",
-              "@type": "tree:Node",
-              "token_string": "erenstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1188.jsonld#101826",
-              "@type": "tree:Node",
-              "token_string": "outkaai"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "erenstraat": [
+          "1188",
+          "101825"
+        ],
+        "outkaai": [
+          "1188",
+          "101826"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment1188.jsonld#51855",
         "@type": "tree:Node"
@@ -1795,13 +1839,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Mijnherenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7944509610628683",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.07757946325081"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.703138284354503",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.85145870412276"
         },
         {
           "http://example.com/terms#name": "Mijnhoutkaai",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4434791153881625",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.03549295928808"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2893854634032396",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.568031534342666"
         }
       ],
       "total_children_count": 2,
@@ -1821,17 +1865,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1188.jsonld#101825"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1188.jsonld#101826"
+          ]
+        }
+      ]
     },
     {
       "token_string": "erenstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Mijnherenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7944509610628683",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.07757946325081"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.703138284354503",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.85145870412276"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1188.jsonld#101824",
         "@type": "tree:Node"
@@ -1839,8 +1898,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Mijnherenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7944509610628683",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.07757946325081"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.703138284354503",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.85145870412276"
         }
       ],
       "total_children_count": 0,
@@ -1856,17 +1915,19 @@
       ],
       "triples_metadata": [
         "Mijnherenstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "outkaai",
       "triples": [
         {
           "http://example.com/terms#name": "Mijnhoutkaai",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4434791153881625",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.03549295928808"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2893854634032396",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.568031534342666"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1188.jsonld#101824",
         "@type": "tree:Node"
@@ -1874,8 +1935,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Mijnhoutkaai",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4434791153881625",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.03549295928808"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2893854634032396",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.568031534342666"
         }
       ],
       "total_children_count": 0,
@@ -1891,7 +1952,8 @@
       ],
       "triples_metadata": [
         "Mijnhoutkaai"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

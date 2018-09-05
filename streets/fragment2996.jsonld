@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "Y",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2996.jsonld#101250",
-              "@type": "tree:Node",
-              "token_string": "delaan"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2996.jsonld#101251",
-              "@type": "tree:Node",
-              "token_string": "achthavenweg"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "delaan": [
+          "2996",
+          "101250"
+        ],
+        "achthavenweg": [
+          "2996",
+          "101251"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment180.jsonld#5073",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nieuwe Ydelaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.96420191169131",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.499821661038865"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1122912272968675",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.606068030632954"
         },
         {
           "http://example.com/terms#name": "Nieuwe Yachthavenweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0797786645461924",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.54021120216812"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.157749433110703",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.95418081736735"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2996.jsonld#101250"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2996.jsonld#101251"
+          ]
+        }
+      ]
     },
     {
       "token_string": "delaan",
       "triples": [
         {
           "http://example.com/terms#name": "Nieuwe Ydelaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.96420191169131",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.499821661038865"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1122912272968675",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.606068030632954"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2996.jsonld#101249",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nieuwe Ydelaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.96420191169131",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.499821661038865"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1122912272968675",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.606068030632954"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Nieuwe Ydelaan"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "achthavenweg",
       "triples": [
         {
           "http://example.com/terms#name": "Nieuwe Yachthavenweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0797786645461924",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.54021120216812"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.157749433110703",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.95418081736735"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2996.jsonld#101249",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nieuwe Yachthavenweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0797786645461924",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.54021120216812"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.157749433110703",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.95418081736735"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Nieuwe Yachthavenweg"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

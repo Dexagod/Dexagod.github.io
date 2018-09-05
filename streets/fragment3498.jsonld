@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "de",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3498.jsonld#52921",
-              "@type": "tree:Node",
-              "token_string": "plein"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3498.jsonld#52922",
-              "@type": "tree:Node",
-              "token_string": "straat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3498.jsonld#99879",
-              "@type": "tree:Node",
-              "token_string": "dam"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "plein": [
+          "3498",
+          "52921"
+        ],
+        "straat": [
+          "3498",
+          "52922"
+        ],
+        "dam": [
+          "3498",
+          "99879"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment306.jsonld#40672",
         "@type": "tree:Node"
@@ -62,18 +44,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Zuidledeplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6583223431047864",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.35381189252321"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4889855879584757",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.38242985427734"
         },
         {
           "http://example.com/terms#name": "Zuidledestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0938298329416267",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.365054136638776"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2619936125238116",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.61865353451385"
         },
         {
           "http://example.com/terms#name": "Zuidlededam",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5043075619294894",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.31971409503007"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.750790476022974",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.415009485196286"
         }
       ],
       "total_children_count": 3,
@@ -99,17 +81,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3498.jsonld#52921"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3498.jsonld#52922"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3498.jsonld#99879"
+          ]
+        }
+      ]
     },
     {
       "token_string": "plein",
       "triples": [
         {
           "http://example.com/terms#name": "Zuidledeplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6583223431047864",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.35381189252321"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4889855879584757",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.38242985427734"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3498.jsonld#52920",
         "@type": "tree:Node"
@@ -117,8 +120,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Zuidledeplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6583223431047864",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.35381189252321"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4889855879584757",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.38242985427734"
         }
       ],
       "total_children_count": 0,
@@ -134,17 +137,19 @@
       ],
       "triples_metadata": [
         "Zuidledeplein"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "straat",
       "triples": [
         {
           "http://example.com/terms#name": "Zuidledestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0938298329416267",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.365054136638776"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2619936125238116",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.61865353451385"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3498.jsonld#52920",
         "@type": "tree:Node"
@@ -152,8 +157,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Zuidledestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0938298329416267",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.365054136638776"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2619936125238116",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.61865353451385"
         }
       ],
       "total_children_count": 0,
@@ -169,17 +174,19 @@
       ],
       "triples_metadata": [
         "Zuidledestraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "dam",
       "triples": [
         {
           "http://example.com/terms#name": "Zuidlededam",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5043075619294894",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.31971409503007"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.750790476022974",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.415009485196286"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3498.jsonld#52920",
         "@type": "tree:Node"
@@ -187,8 +194,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Zuidlededam",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5043075619294894",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.31971409503007"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.750790476022974",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.415009485196286"
         }
       ],
       "total_children_count": 0,
@@ -204,7 +211,8 @@
       ],
       "triples_metadata": [
         "Zuidlededam"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

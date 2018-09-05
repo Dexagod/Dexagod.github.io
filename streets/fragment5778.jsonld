@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "p",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5778.jsonld#145657",
-              "@type": "tree:Node",
-              "token_string": "eau"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5778.jsonld#145658",
-              "@type": "tree:Node",
-              "token_string": "ort"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5778.jsonld#147325",
-              "@type": "tree:Node",
-              "token_string": "lace"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "eau": [
+          "5778",
+          "145657"
+        ],
+        "ort": [
+          "5778",
+          "145658"
+        ],
+        "lace": [
+          "5778",
+          "147325"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4574.jsonld#105890",
         "@type": "tree:Node"
@@ -62,18 +44,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Lapeau",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.131927727484422",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.37592869148129"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1910516637702733",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.51822226124606"
         },
         {
           "http://example.com/terms#name": "Rue Laport",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4231538385334797",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.45873628069516"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6028440474334786",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.53301911636741"
         },
         {
           "http://example.com/terms#name": "Rue Laplace",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0584351880985117",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.55628617513341"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0473397001773206",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.581185719088175"
         }
       ],
       "total_children_count": 3,
@@ -99,17 +81,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5778.jsonld#145657"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5778.jsonld#145658"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5778.jsonld#147325"
+          ]
+        }
+      ]
     },
     {
       "token_string": "eau",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Lapeau",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.131927727484422",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.37592869148129"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1910516637702733",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.51822226124606"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5778.jsonld#145656",
         "@type": "tree:Node"
@@ -117,8 +120,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Lapeau",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.131927727484422",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.37592869148129"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1910516637702733",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.51822226124606"
         }
       ],
       "total_children_count": 0,
@@ -134,17 +137,19 @@
       ],
       "triples_metadata": [
         "Rue Lapeau"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "ort",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Laport",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4231538385334797",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.45873628069516"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6028440474334786",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.53301911636741"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5778.jsonld#145656",
         "@type": "tree:Node"
@@ -152,8 +157,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Laport",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4231538385334797",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.45873628069516"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6028440474334786",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.53301911636741"
         }
       ],
       "total_children_count": 0,
@@ -169,17 +174,19 @@
       ],
       "triples_metadata": [
         "Rue Laport"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "lace",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Laplace",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0584351880985117",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.55628617513341"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0473397001773206",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.581185719088175"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5778.jsonld#145656",
         "@type": "tree:Node"
@@ -187,8 +194,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Laplace",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0584351880985117",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.55628617513341"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0473397001773206",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.581185719088175"
         }
       ],
       "total_children_count": 0,
@@ -204,7 +211,8 @@
       ],
       "triples_metadata": [
         "Rue Laplace"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

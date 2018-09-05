@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "au",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4565.jsonld#139666",
-              "@type": "tree:Node",
-              "token_string": "-sur-Elle"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4565.jsonld#139667",
-              "@type": "tree:Node",
-              "token_string": " Morte"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4565.jsonld#161745",
-              "@type": "tree:Node",
-              "token_string": "bruchet"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "-sur-Elle": [
+          "4565",
+          "139666"
+        ],
+        " Morte": [
+          "4565",
+          "139667"
+        ],
+        "bruchet": [
+          "4565",
+          "161745"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment3715.jsonld#105400",
         "@type": "tree:Node"
@@ -62,18 +44,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Eau-sur-Elle",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.323682597347396",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.292209329337524"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8266942899444216",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.098699814767635"
         },
         {
           "http://example.com/terms#name": "Rue Eau Morte",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6012192290501455",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.89029293715961"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.307280035885557",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.719453505885234"
         },
         {
           "http://example.com/terms#name": "Rue Eaubruchet",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5764488051203385",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.33965950439762"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.07993591752232",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.384193465441406"
         }
       ],
       "total_children_count": 3,
@@ -99,17 +81,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4565.jsonld#139666"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4565.jsonld#139667"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4565.jsonld#161745"
+          ]
+        }
+      ]
     },
     {
       "token_string": "-sur-Elle",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Eau-sur-Elle",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.323682597347396",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.292209329337524"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8266942899444216",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.098699814767635"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4565.jsonld#139665",
         "@type": "tree:Node"
@@ -117,8 +120,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Eau-sur-Elle",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.323682597347396",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.292209329337524"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8266942899444216",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.098699814767635"
         }
       ],
       "total_children_count": 0,
@@ -134,17 +137,19 @@
       ],
       "triples_metadata": [
         "Rue Eau-sur-Elle"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": " Morte",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Eau Morte",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6012192290501455",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.89029293715961"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.307280035885557",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.719453505885234"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4565.jsonld#139665",
         "@type": "tree:Node"
@@ -152,8 +157,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Eau Morte",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6012192290501455",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.89029293715961"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.307280035885557",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.719453505885234"
         }
       ],
       "total_children_count": 0,
@@ -169,17 +174,19 @@
       ],
       "triples_metadata": [
         "Rue Eau Morte"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "bruchet",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Eaubruchet",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5764488051203385",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.33965950439762"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.07993591752232",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.384193465441406"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4565.jsonld#139665",
         "@type": "tree:Node"
@@ -187,8 +194,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Eaubruchet",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5764488051203385",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.33965950439762"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.07993591752232",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.384193465441406"
         }
       ],
       "total_children_count": 0,
@@ -204,7 +211,8 @@
       ],
       "triples_metadata": [
         "Rue Eaubruchet"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

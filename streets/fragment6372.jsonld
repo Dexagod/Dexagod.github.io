@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "b",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6372.jsonld#163141",
-              "@type": "tree:Node",
-              "token_string": "roux"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6372.jsonld#163142",
-              "@type": "tree:Node",
-              "token_string": "oca"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6372.jsonld#177646",
-              "@type": "tree:Node",
-              "token_string": "a"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "roux": [
+          "6372",
+          "163141"
+        ],
+        "oca": [
+          "6372",
+          "163142"
+        ],
+        "a": [
+          "6372",
+          "177646"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment3762.jsonld#108139",
         "@type": "tree:Node"
@@ -62,18 +44,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue d'Albroux",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.157056216106576",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.51969379521962"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.599292256906593",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.506710591694244"
         },
         {
           "http://example.com/terms#name": "Rue d'Alboca",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7924621357431736",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.265998542751866"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8437518201018865",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.60406849032397"
         },
         {
           "http://example.com/terms#name": "Rue d'Alba",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.529145264547125",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.59107056903243"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6920173645551606",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.414759327625255"
         }
       ],
       "total_children_count": 3,
@@ -99,17 +81,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6372.jsonld#163141"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6372.jsonld#163142"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6372.jsonld#177646"
+          ]
+        }
+      ]
     },
     {
       "token_string": "roux",
       "triples": [
         {
           "http://example.com/terms#name": "Rue d'Albroux",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.157056216106576",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.51969379521962"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.599292256906593",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.506710591694244"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6372.jsonld#163140",
         "@type": "tree:Node"
@@ -117,8 +120,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue d'Albroux",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.157056216106576",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.51969379521962"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.599292256906593",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.506710591694244"
         }
       ],
       "total_children_count": 0,
@@ -134,17 +137,19 @@
       ],
       "triples_metadata": [
         "Rue d'Albroux"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "oca",
       "triples": [
         {
           "http://example.com/terms#name": "Rue d'Alboca",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7924621357431736",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.265998542751866"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8437518201018865",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.60406849032397"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6372.jsonld#163140",
         "@type": "tree:Node"
@@ -152,8 +157,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue d'Alboca",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7924621357431736",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.265998542751866"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8437518201018865",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.60406849032397"
         }
       ],
       "total_children_count": 0,
@@ -169,17 +174,19 @@
       ],
       "triples_metadata": [
         "Rue d'Alboca"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "a",
       "triples": [
         {
           "http://example.com/terms#name": "Rue d'Alba",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.529145264547125",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.59107056903243"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6920173645551606",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.414759327625255"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6372.jsonld#163140",
         "@type": "tree:Node"
@@ -187,8 +194,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue d'Alba",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.529145264547125",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.59107056903243"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6920173645551606",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.414759327625255"
         }
       ],
       "total_children_count": 0,
@@ -204,7 +211,8 @@
       ],
       "triples_metadata": [
         "Rue d'Alba"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

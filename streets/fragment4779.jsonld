@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -25,10 +25,11 @@
       "triples": [
         {
           "http://example.com/terms#name": "Résidence de la Lesse",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1673103320275557",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.10639528784243"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.284190854539102",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.71517871087292"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4779.jsonld#111914",
         "@type": "tree:Node"
@@ -36,8 +37,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Résidence de la Lesse",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1673103320275557",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.10639528784243"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.284190854539102",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.71517871087292"
         }
       ],
       "total_children_count": 0,
@@ -53,17 +54,19 @@
       ],
       "triples_metadata": [
         "Résidence de la Lesse"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "yre",
       "triples": [
         {
           "http://example.com/terms#name": "Résidence de la Lyre",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5414713997639278",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.6373101497046"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6170552655340518",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.542221008092774"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4779.jsonld#111914",
         "@type": "tree:Node"
@@ -71,8 +74,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Résidence de la Lyre",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5414713997639278",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.6373101497046"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6170552655340518",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.542221008092774"
         }
       ],
       "total_children_count": 0,
@@ -88,33 +91,22 @@
       ],
       "triples_metadata": [
         "Résidence de la Lyre"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "L",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4779.jsonld#111911",
-              "@type": "tree:Node",
-              "token_string": "esse"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4779.jsonld#111912",
-              "@type": "tree:Node",
-              "token_string": "yre"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "esse": [
+          "4779",
+          "111911"
+        ],
+        "yre": [
+          "4779",
+          "111912"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4779.jsonld#111921",
         "@type": "tree:Node"
@@ -122,13 +114,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Résidence de la Lesse",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1673103320275557",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.10639528784243"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.284190854539102",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.71517871087292"
         },
         {
           "http://example.com/terms#name": "Résidence de la Lyre",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5414713997639278",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.6373101497046"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6170552655340518",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.542221008092774"
         }
       ],
       "total_children_count": 2,
@@ -148,33 +140,35 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
-    },
-    {
-      "token_string": "S",
-      "triples": [],
-      "children": [
+      "triples_metadata": [],
+      "childlist": [
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment4779.jsonld#111917",
-              "@type": "tree:Node",
-              "token_string": "ambre"
-            }
+            "/streets/fragment4779.jsonld#111911"
           ]
         },
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment4779.jsonld#111918",
-              "@type": "tree:Node",
-              "token_string": "emois"
-            }
+            "/streets/fragment4779.jsonld#111912"
           ]
         }
-      ],
+      ]
+    },
+    {
+      "token_string": "S",
+      "triples": [],
+      "children": {
+        "ambre": [
+          "4779",
+          "111917"
+        ],
+        "emois": [
+          "4779",
+          "111918"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4779.jsonld#111921",
         "@type": "tree:Node"
@@ -182,13 +176,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Résidence de la Sambre",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3709418547236996",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.47292606995873"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.394992866434712",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.3041745286868"
         },
         {
           "http://example.com/terms#name": "Résidence de la Semois",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.291143774195033",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.14341316526212"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.03110183904631",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.18410153563267"
         }
       ],
       "total_children_count": 2,
@@ -208,17 +202,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4779.jsonld#111917"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4779.jsonld#111918"
+          ]
+        }
+      ]
     },
     {
       "token_string": "ambre",
       "triples": [
         {
           "http://example.com/terms#name": "Résidence de la Sambre",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3709418547236996",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.47292606995873"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.394992866434712",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.3041745286868"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4779.jsonld#111916",
         "@type": "tree:Node"
@@ -226,8 +235,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Résidence de la Sambre",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3709418547236996",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.47292606995873"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.394992866434712",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.3041745286868"
         }
       ],
       "total_children_count": 0,
@@ -243,17 +252,19 @@
       ],
       "triples_metadata": [
         "Résidence de la Sambre"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "emois",
       "triples": [
         {
           "http://example.com/terms#name": "Résidence de la Semois",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.291143774195033",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.14341316526212"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.03110183904631",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.18410153563267"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4779.jsonld#111916",
         "@type": "tree:Node"
@@ -261,8 +272,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Résidence de la Semois",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.291143774195033",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.14341316526212"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.03110183904631",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.18410153563267"
         }
       ],
       "total_children_count": 0,
@@ -278,17 +289,19 @@
       ],
       "triples_metadata": [
         "Résidence de la Semois"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "Vesdre",
       "triples": [
         {
           "http://example.com/terms#name": "Résidence de la Vesdre",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5050590005081217",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.12439149699668"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.166255916969438",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.262760013067194"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4779.jsonld#111921",
         "@type": "tree:Node"
@@ -296,8 +309,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Résidence de la Vesdre",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5050590005081217",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.12439149699668"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.166255916969438",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.262760013067194"
         }
       ],
       "total_children_count": 0,
@@ -313,103 +326,50 @@
       ],
       "triples_metadata": [
         "Résidence de la Vesdre"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "a ",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4779.jsonld#111914",
-              "@type": "tree:Node",
-              "token_string": "L"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4779.jsonld#111916",
-              "@type": "tree:Node",
-              "token_string": "S"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4779.jsonld#111919",
-              "@type": "tree:Node",
-              "token_string": "Vesdre"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4779.jsonld#125713",
-              "@type": "tree:Node",
-              "token_string": "Ba"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4779.jsonld#131767",
-              "@type": "tree:Node",
-              "token_string": "C"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4779.jsonld#135934",
-              "@type": "tree:Node",
-              "token_string": "Touille"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4779.jsonld#137311",
-              "@type": "tree:Node",
-              "token_string": "Fraternité"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4779.jsonld#142177",
-              "@type": "tree:Node",
-              "token_string": "Mar"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4779.jsonld#154808",
-              "@type": "tree:Node",
-              "token_string": "Gare"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "L": [
+          "4779",
+          "111914"
+        ],
+        "S": [
+          "4779",
+          "111916"
+        ],
+        "Vesdre": [
+          "4779",
+          "111919"
+        ],
+        "Ba": [
+          "4779",
+          "125713"
+        ],
+        "C": [
+          "4779",
+          "131767"
+        ],
+        "Touille": [
+          "4779",
+          "135934"
+        ],
+        "Fraternité": [
+          "4779",
+          "137311"
+        ],
+        "Mar": [
+          "4779",
+          "142177"
+        ],
+        "Gare": [
+          "4779",
+          "154808"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment5222.jsonld#125717",
         "@type": "tree:Node"
@@ -417,78 +377,78 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Résidence de la Lesse",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1673103320275557",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.10639528784243"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.284190854539102",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.71517871087292"
         },
         {
           "http://example.com/terms#name": "Résidence de la Lyre",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5414713997639278",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.6373101497046"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6170552655340518",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.542221008092774"
         },
         {
           "http://example.com/terms#name": "Résidence de la Marlière",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6403546599348604",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.306510034566124"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4005947996111248",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.52546876037723"
         },
         {
           "http://example.com/terms#name": "Résidence de la Baille",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.220789200176363",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.092282576088124"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0439426234107767",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.79087853506502"
         },
         {
           "http://example.com/terms#name": "Résidence de la Baille",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.42541057907762",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.361035230744186"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7850738591622117",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.47813071772791"
         },
         {
           "http://example.com/terms#name": "Résidence de la Baille",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.42541057907762",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.361035230744186"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7850738591622117",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.47813071772791"
         },
         {
           "http://example.com/terms#name": "Résidence de la Baille",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.42541057907762",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.361035230744186"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7850738591622117",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.47813071772791"
         },
         {
           "http://example.com/terms#name": "Résidence de la Baille",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.42541057907762",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.361035230744186"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7850738591622117",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.47813071772791"
         },
         {
           "http://example.com/terms#name": "Résidence de la Baille",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.42541057907762",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.361035230744186"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7850738591622117",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.47813071772791"
         },
         {
           "http://example.com/terms#name": "Résidence de la Bascule",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5946814543949617",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.455872882256266"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.25577253624522",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.81578723146685"
         },
         {
           "http://example.com/terms#name": "Résidence de la Court",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.78681306804639",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.685828918895304"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.531450557728649",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.457088687317075"
         },
         {
           "http://example.com/terms#name": "Résidence de la Croix-Rouge",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.864621278154605",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.61840509694707"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5547632118740005",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.15649387538817"
         },
         {
           "http://example.com/terms#name": "Résidence de la Fraternité",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.677997840172372",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.7413939022303"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8844629752000186",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.19633201526861"
         },
         {
           "http://example.com/terms#name": "Résidence de la Margelle",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.471522387681844",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.860292543951964"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7242649623022595",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.90854868410707"
         },
         {
           "http://example.com/terms#name": "Résidence de la Gare",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2163944654069128",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.85010942032999"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5782809488658267",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.765909149689534"
         }
       ],
       "total_children_count": 19,
@@ -561,33 +521,77 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
-    },
-    {
-      "token_string": "Ba",
-      "triples": [],
-      "children": [
+      "triples_metadata": [],
+      "childlist": [
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment4779.jsonld#125714",
-              "@type": "tree:Node",
-              "token_string": "ille"
-            }
+            "/streets/fragment4779.jsonld#111914"
           ]
         },
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment4779.jsonld#125715",
-              "@type": "tree:Node",
-              "token_string": "scule"
-            }
+            "/streets/fragment4779.jsonld#111916"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4779.jsonld#111919"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4779.jsonld#125713"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4779.jsonld#131767"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4779.jsonld#135934"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4779.jsonld#137311"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4779.jsonld#142177"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4779.jsonld#154808"
           ]
         }
-      ],
+      ]
+    },
+    {
+      "token_string": "Ba",
+      "triples": [],
+      "children": {
+        "ille": [
+          "4779",
+          "125714"
+        ],
+        "scule": [
+          "4779",
+          "125715"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4779.jsonld#111921",
         "@type": "tree:Node"
@@ -595,38 +599,38 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Résidence de la Baille",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.220789200176363",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.092282576088124"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0439426234107767",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.79087853506502"
         },
         {
           "http://example.com/terms#name": "Résidence de la Baille",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.42541057907762",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.361035230744186"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7850738591622117",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.47813071772791"
         },
         {
           "http://example.com/terms#name": "Résidence de la Baille",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.42541057907762",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.361035230744186"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7850738591622117",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.47813071772791"
         },
         {
           "http://example.com/terms#name": "Résidence de la Baille",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.42541057907762",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.361035230744186"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7850738591622117",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.47813071772791"
         },
         {
           "http://example.com/terms#name": "Résidence de la Baille",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.42541057907762",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.361035230744186"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7850738591622117",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.47813071772791"
         },
         {
           "http://example.com/terms#name": "Résidence de la Baille",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.42541057907762",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.361035230744186"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7850738591622117",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.47813071772791"
         },
         {
           "http://example.com/terms#name": "Résidence de la Bascule",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5946814543949617",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.455872882256266"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.25577253624522",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.81578723146685"
         }
       ],
       "total_children_count": 2,
@@ -651,42 +655,57 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4779.jsonld#125714"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4779.jsonld#125715"
+          ]
+        }
+      ]
     },
     {
       "token_string": "ille",
       "triples": [
         {
           "http://example.com/terms#name": "Résidence de la Baille",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.220789200176363",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.092282576088124"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0439426234107767",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.79087853506502"
         },
         {
           "http://example.com/terms#name": "Résidence de la Baille",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.42541057907762",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.361035230744186"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7850738591622117",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.47813071772791"
         },
         {
           "http://example.com/terms#name": "Résidence de la Baille",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.42541057907762",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.361035230744186"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7850738591622117",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.47813071772791"
         },
         {
           "http://example.com/terms#name": "Résidence de la Baille",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.42541057907762",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.361035230744186"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7850738591622117",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.47813071772791"
         },
         {
           "http://example.com/terms#name": "Résidence de la Baille",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.42541057907762",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.361035230744186"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7850738591622117",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.47813071772791"
         },
         {
           "http://example.com/terms#name": "Résidence de la Baille",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.42541057907762",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.361035230744186"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7850738591622117",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.47813071772791"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4779.jsonld#125713",
         "@type": "tree:Node"
@@ -694,33 +713,33 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Résidence de la Baille",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.220789200176363",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.092282576088124"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0439426234107767",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.79087853506502"
         },
         {
           "http://example.com/terms#name": "Résidence de la Baille",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.42541057907762",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.361035230744186"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7850738591622117",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.47813071772791"
         },
         {
           "http://example.com/terms#name": "Résidence de la Baille",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.42541057907762",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.361035230744186"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7850738591622117",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.47813071772791"
         },
         {
           "http://example.com/terms#name": "Résidence de la Baille",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.42541057907762",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.361035230744186"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7850738591622117",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.47813071772791"
         },
         {
           "http://example.com/terms#name": "Résidence de la Baille",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.42541057907762",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.361035230744186"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7850738591622117",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.47813071772791"
         },
         {
           "http://example.com/terms#name": "Résidence de la Baille",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.42541057907762",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.361035230744186"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7850738591622117",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.47813071772791"
         }
       ],
       "total_children_count": 0,
@@ -746,17 +765,19 @@
         "Résidence de la Baille",
         "Résidence de la Baille",
         "Résidence de la Baille"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "scule",
       "triples": [
         {
           "http://example.com/terms#name": "Résidence de la Bascule",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5946814543949617",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.455872882256266"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.25577253624522",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.81578723146685"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4779.jsonld#125713",
         "@type": "tree:Node"
@@ -764,8 +785,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Résidence de la Bascule",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5946814543949617",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.455872882256266"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.25577253624522",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.81578723146685"
         }
       ],
       "total_children_count": 0,
@@ -781,33 +802,22 @@
       ],
       "triples_metadata": [
         "Résidence de la Bascule"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "C",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4779.jsonld#131768",
-              "@type": "tree:Node",
-              "token_string": "ourt"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4779.jsonld#131769",
-              "@type": "tree:Node",
-              "token_string": "roix-Rouge"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "ourt": [
+          "4779",
+          "131768"
+        ],
+        "roix-Rouge": [
+          "4779",
+          "131769"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4779.jsonld#111921",
         "@type": "tree:Node"
@@ -815,13 +825,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Résidence de la Court",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.78681306804639",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.685828918895304"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.531450557728649",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.457088687317075"
         },
         {
           "http://example.com/terms#name": "Résidence de la Croix-Rouge",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.864621278154605",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.61840509694707"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5547632118740005",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.15649387538817"
         }
       ],
       "total_children_count": 2,
@@ -841,17 +851,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4779.jsonld#131768"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4779.jsonld#131769"
+          ]
+        }
+      ]
     },
     {
       "token_string": "ourt",
       "triples": [
         {
           "http://example.com/terms#name": "Résidence de la Court",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.78681306804639",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.685828918895304"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.531450557728649",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.457088687317075"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4779.jsonld#131767",
         "@type": "tree:Node"
@@ -859,8 +884,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Résidence de la Court",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.78681306804639",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.685828918895304"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.531450557728649",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.457088687317075"
         }
       ],
       "total_children_count": 0,
@@ -876,17 +901,19 @@
       ],
       "triples_metadata": [
         "Résidence de la Court"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "roix-Rouge",
       "triples": [
         {
           "http://example.com/terms#name": "Résidence de la Croix-Rouge",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.864621278154605",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.61840509694707"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5547632118740005",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.15649387538817"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4779.jsonld#131767",
         "@type": "tree:Node"
@@ -894,8 +921,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Résidence de la Croix-Rouge",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.864621278154605",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.61840509694707"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5547632118740005",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.15649387538817"
         }
       ],
       "total_children_count": 0,
@@ -911,17 +938,19 @@
       ],
       "triples_metadata": [
         "Résidence de la Croix-Rouge"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "Touille",
       "triples": [
         {
           "http://example.com/terms#name": "Résidence de la Touille",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8863762015643823",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.36781639140543"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.288772298076471",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.64503659876005"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4779.jsonld#111921",
         "@type": "tree:Node"
@@ -929,8 +958,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Résidence de la Touille",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8863762015643823",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.36781639140543"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.288772298076471",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.64503659876005"
         }
       ],
       "total_children_count": 0,
@@ -946,17 +975,19 @@
       ],
       "triples_metadata": [
         "Résidence de la Touille"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "Fraternité",
       "triples": [
         {
           "http://example.com/terms#name": "Résidence de la Fraternité",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.677997840172372",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.7413939022303"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8844629752000186",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.19633201526861"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4779.jsonld#111921",
         "@type": "tree:Node"
@@ -964,8 +995,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Résidence de la Fraternité",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.677997840172372",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.7413939022303"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8844629752000186",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.19633201526861"
         }
       ],
       "total_children_count": 0,
@@ -981,33 +1012,22 @@
       ],
       "triples_metadata": [
         "Résidence de la Fraternité"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "Mar",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4779.jsonld#142178",
-              "@type": "tree:Node",
-              "token_string": "lière"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4779.jsonld#142179",
-              "@type": "tree:Node",
-              "token_string": "gelle"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "lière": [
+          "4779",
+          "142178"
+        ],
+        "gelle": [
+          "4779",
+          "142179"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4779.jsonld#111921",
         "@type": "tree:Node"
@@ -1015,13 +1035,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Résidence de la Marlière",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6403546599348604",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.306510034566124"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4005947996111248",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.52546876037723"
         },
         {
           "http://example.com/terms#name": "Résidence de la Margelle",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.471522387681844",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.860292543951964"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7242649623022595",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.90854868410707"
         }
       ],
       "total_children_count": 2,
@@ -1041,17 +1061,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4779.jsonld#142178"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4779.jsonld#142179"
+          ]
+        }
+      ]
     },
     {
       "token_string": "lière",
       "triples": [
         {
           "http://example.com/terms#name": "Résidence de la Marlière",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6403546599348604",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.306510034566124"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4005947996111248",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.52546876037723"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4779.jsonld#142177",
         "@type": "tree:Node"
@@ -1059,8 +1094,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Résidence de la Marlière",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6403546599348604",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.306510034566124"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4005947996111248",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.52546876037723"
         }
       ],
       "total_children_count": 0,
@@ -1076,17 +1111,19 @@
       ],
       "triples_metadata": [
         "Résidence de la Marlière"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "gelle",
       "triples": [
         {
           "http://example.com/terms#name": "Résidence de la Margelle",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.471522387681844",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.860292543951964"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7242649623022595",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.90854868410707"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4779.jsonld#142177",
         "@type": "tree:Node"
@@ -1094,8 +1131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Résidence de la Margelle",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.471522387681844",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.860292543951964"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7242649623022595",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.90854868410707"
         }
       ],
       "total_children_count": 0,
@@ -1111,17 +1148,19 @@
       ],
       "triples_metadata": [
         "Résidence de la Margelle"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "Gare",
       "triples": [
         {
           "http://example.com/terms#name": "Résidence de la Gare",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2163944654069128",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.85010942032999"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5782809488658267",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.765909149689534"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4779.jsonld#111921",
         "@type": "tree:Node"
@@ -1129,8 +1168,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Résidence de la Gare",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2163944654069128",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.85010942032999"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5782809488658267",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.765909149689534"
         }
       ],
       "total_children_count": 0,
@@ -1146,7 +1185,8 @@
       ],
       "triples_metadata": [
         "Résidence de la Gare"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

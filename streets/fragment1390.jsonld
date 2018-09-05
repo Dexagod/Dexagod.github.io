@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "m",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1390.jsonld#93951",
-              "@type": "tree:Node",
-              "token_string": "a"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1390.jsonld#155562",
-              "@type": "tree:Node",
-              "token_string": "e"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "a": [
+          "1390",
+          "93951"
+        ],
+        "e": [
+          "1390",
+          "155562"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment109.jsonld#410",
         "@type": "tree:Node"
@@ -52,23 +40,23 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Almenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3765198188957335",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.665601369212375"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.848657604168066",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.226035134638025"
         },
         {
           "http://example.com/terms#name": "Almaplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1948661091085735",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.17824675973812"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.171943924984302",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.76123216908587"
         },
         {
           "http://example.com/terms#name": "Almawandeling",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.289858683751321",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.294895352948245"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6434573361100493",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.497974967011416"
         },
         {
           "http://example.com/terms#name": "Almeroth",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.065092752228116",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.08712099190999"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.277639282197131",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.984186108222325"
         }
       ],
       "total_children_count": 6,
@@ -100,33 +88,35 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
-    },
-    {
-      "token_string": "a",
-      "triples": [],
-      "children": [
+      "triples_metadata": [],
+      "childlist": [
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment1390.jsonld#93952",
-              "@type": "tree:Node",
-              "token_string": "plein"
-            }
+            "/streets/fragment1390.jsonld#93951"
           ]
         },
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment1390.jsonld#93953",
-              "@type": "tree:Node",
-              "token_string": "wandeling"
-            }
+            "/streets/fragment1390.jsonld#155562"
           ]
         }
-      ],
+      ]
+    },
+    {
+      "token_string": "a",
+      "triples": [],
+      "children": {
+        "plein": [
+          "1390",
+          "93952"
+        ],
+        "wandeling": [
+          "1390",
+          "93953"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment1390.jsonld#93948",
         "@type": "tree:Node"
@@ -134,13 +124,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Almaplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1948661091085735",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.17824675973812"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.171943924984302",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.76123216908587"
         },
         {
           "http://example.com/terms#name": "Almawandeling",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.289858683751321",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.294895352948245"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6434573361100493",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.497974967011416"
         }
       ],
       "total_children_count": 2,
@@ -160,17 +150,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1390.jsonld#93952"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1390.jsonld#93953"
+          ]
+        }
+      ]
     },
     {
       "token_string": "plein",
       "triples": [
         {
           "http://example.com/terms#name": "Almaplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1948661091085735",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.17824675973812"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.171943924984302",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.76123216908587"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1390.jsonld#93951",
         "@type": "tree:Node"
@@ -178,8 +183,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Almaplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1948661091085735",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.17824675973812"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.171943924984302",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.76123216908587"
         }
       ],
       "total_children_count": 0,
@@ -195,17 +200,19 @@
       ],
       "triples_metadata": [
         "Almaplein"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "wandeling",
       "triples": [
         {
           "http://example.com/terms#name": "Almawandeling",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.289858683751321",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.294895352948245"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6434573361100493",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.497974967011416"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1390.jsonld#93951",
         "@type": "tree:Node"
@@ -213,8 +220,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Almawandeling",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.289858683751321",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.294895352948245"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6434573361100493",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.497974967011416"
         }
       ],
       "total_children_count": 0,
@@ -230,33 +237,22 @@
       ],
       "triples_metadata": [
         "Almawandeling"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "e",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1390.jsonld#155563",
-              "@type": "tree:Node",
-              "token_string": "nstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1390.jsonld#155564",
-              "@type": "tree:Node",
-              "token_string": "roth"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "nstraat": [
+          "1390",
+          "155563"
+        ],
+        "roth": [
+          "1390",
+          "155564"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment1390.jsonld#93948",
         "@type": "tree:Node"
@@ -264,13 +260,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Almenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3765198188957335",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.665601369212375"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.848657604168066",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.226035134638025"
         },
         {
           "http://example.com/terms#name": "Almeroth",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.065092752228116",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.08712099190999"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.277639282197131",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.984186108222325"
         }
       ],
       "total_children_count": 2,
@@ -290,17 +286,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1390.jsonld#155563"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1390.jsonld#155564"
+          ]
+        }
+      ]
     },
     {
       "token_string": "nstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Almenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3765198188957335",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.665601369212375"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.848657604168066",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.226035134638025"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1390.jsonld#155562",
         "@type": "tree:Node"
@@ -308,8 +319,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Almenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3765198188957335",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.665601369212375"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.848657604168066",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.226035134638025"
         }
       ],
       "total_children_count": 0,
@@ -325,17 +336,19 @@
       ],
       "triples_metadata": [
         "Almenstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "roth",
       "triples": [
         {
           "http://example.com/terms#name": "Almeroth",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.065092752228116",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.08712099190999"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.277639282197131",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.984186108222325"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1390.jsonld#155562",
         "@type": "tree:Node"
@@ -343,8 +356,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Almeroth",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.065092752228116",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.08712099190999"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.277639282197131",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.984186108222325"
         }
       ],
       "total_children_count": 0,
@@ -360,7 +373,8 @@
       ],
       "triples_metadata": [
         "Almeroth"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

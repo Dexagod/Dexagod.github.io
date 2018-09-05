@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "kke",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3669.jsonld#48703",
-              "@type": "tree:Node",
-              "token_string": "nbosstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3669.jsonld#48704",
-              "@type": "tree:Node",
-              "token_string": "bosstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3669.jsonld#103725",
-              "@type": "tree:Node",
-              "token_string": "ling"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "nbosstraat": [
+          "3669",
+          "48703"
+        ],
+        "bosstraat": [
+          "3669",
+          "48704"
+        ],
+        "ling": [
+          "3669",
+          "103725"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment152.jsonld#2599",
         "@type": "tree:Node"
@@ -62,18 +44,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Takkenbosstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.236149360658791",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.70777690878348"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.877744180238994",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.7796637836697"
         },
         {
           "http://example.com/terms#name": "Takkebosstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4840736807612873",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.315526273092935"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8534609545255334",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.96385852844392"
         },
         {
           "http://example.com/terms#name": "Takkeling",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.30439685679521",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.43917689530916"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.491969332975134",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.06071340261207"
         }
       ],
       "total_children_count": 3,
@@ -99,17 +81,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3669.jsonld#48703"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3669.jsonld#48704"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3669.jsonld#103725"
+          ]
+        }
+      ]
     },
     {
       "token_string": "nbosstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Takkenbosstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.236149360658791",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.70777690878348"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.877744180238994",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.7796637836697"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3669.jsonld#48702",
         "@type": "tree:Node"
@@ -117,8 +120,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Takkenbosstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.236149360658791",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.70777690878348"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.877744180238994",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.7796637836697"
         }
       ],
       "total_children_count": 0,
@@ -134,17 +137,19 @@
       ],
       "triples_metadata": [
         "Takkenbosstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "bosstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Takkebosstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4840736807612873",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.315526273092935"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8534609545255334",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.96385852844392"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3669.jsonld#48702",
         "@type": "tree:Node"
@@ -152,8 +157,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Takkebosstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4840736807612873",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.315526273092935"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8534609545255334",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.96385852844392"
         }
       ],
       "total_children_count": 0,
@@ -169,17 +174,19 @@
       ],
       "triples_metadata": [
         "Takkebosstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "ling",
       "triples": [
         {
           "http://example.com/terms#name": "Takkeling",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.30439685679521",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.43917689530916"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.491969332975134",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.06071340261207"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3669.jsonld#48702",
         "@type": "tree:Node"
@@ -187,8 +194,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Takkeling",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.30439685679521",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.43917689530916"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.491969332975134",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.06071340261207"
         }
       ],
       "total_children_count": 0,
@@ -204,7 +211,8 @@
       ],
       "triples_metadata": [
         "Takkeling"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

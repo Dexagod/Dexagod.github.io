@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "M",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5962.jsonld#167599",
-              "@type": "tree:Node",
-              "token_string": "orfayt"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5962.jsonld#167600",
-              "@type": "tree:Node",
-              "token_string": "enton"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "orfayt": [
+          "5962",
+          "167599"
+        ],
+        "enton": [
+          "5962",
+          "167600"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4020.jsonld#108789",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Allée de Morfayt",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3049277351834765",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.67922469644519"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5794229305589114",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.4553016960186"
         },
         {
           "http://example.com/terms#name": "Allée de Menton",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4754422564644036",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.69045338163036"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.839066358087638",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.34947900162524"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5962.jsonld#167599"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5962.jsonld#167600"
+          ]
+        }
+      ]
     },
     {
       "token_string": "orfayt",
       "triples": [
         {
           "http://example.com/terms#name": "Allée de Morfayt",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3049277351834765",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.67922469644519"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5794229305589114",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.4553016960186"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5962.jsonld#167598",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Allée de Morfayt",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3049277351834765",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.67922469644519"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5794229305589114",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.4553016960186"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Allée de Morfayt"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "enton",
       "triples": [
         {
           "http://example.com/terms#name": "Allée de Menton",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4754422564644036",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.69045338163036"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.839066358087638",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.34947900162524"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5962.jsonld#167598",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Allée de Menton",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4754422564644036",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.69045338163036"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.839066358087638",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.34947900162524"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Allée de Menton"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

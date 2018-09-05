@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "r",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2965.jsonld#31164",
-              "@type": "tree:Node",
-              "token_string": "weg"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2965.jsonld#31165",
-              "@type": "tree:Node",
-              "token_string": "heide"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2965.jsonld#85566",
-              "@type": "tree:Node",
-              "token_string": "molen"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "weg": [
+          "2965",
+          "31164"
+        ],
+        "heide": [
+          "2965",
+          "31165"
+        ],
+        "molen": [
+          "2965",
+          "85566"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment2973.jsonld#19915",
         "@type": "tree:Node"
@@ -62,18 +44,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Schoterweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.021920155905076",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.238322095630096"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6010232891620055",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.2623572610809"
         },
         {
           "http://example.com/terms#name": "Schoterheide",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.50999532349339",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.36520863422168"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.065051354164724",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.63633046531321"
         },
         {
           "http://example.com/terms#name": "Schotermolen",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7622594316588462",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.597957844392106"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.667677779453989",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.31220135250588"
         }
       ],
       "total_children_count": 3,
@@ -99,17 +81,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2965.jsonld#31164"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2965.jsonld#31165"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2965.jsonld#85566"
+          ]
+        }
+      ]
     },
     {
       "token_string": "weg",
       "triples": [
         {
           "http://example.com/terms#name": "Schoterweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.021920155905076",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.238322095630096"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6010232891620055",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.2623572610809"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2965.jsonld#31163",
         "@type": "tree:Node"
@@ -117,8 +120,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Schoterweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.021920155905076",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.238322095630096"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6010232891620055",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.2623572610809"
         }
       ],
       "total_children_count": 0,
@@ -134,17 +137,19 @@
       ],
       "triples_metadata": [
         "Schoterweg"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "heide",
       "triples": [
         {
           "http://example.com/terms#name": "Schoterheide",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.50999532349339",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.36520863422168"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.065051354164724",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.63633046531321"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2965.jsonld#31163",
         "@type": "tree:Node"
@@ -152,8 +157,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Schoterheide",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.50999532349339",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.36520863422168"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.065051354164724",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.63633046531321"
         }
       ],
       "total_children_count": 0,
@@ -169,17 +174,19 @@
       ],
       "triples_metadata": [
         "Schoterheide"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "molen",
       "triples": [
         {
           "http://example.com/terms#name": "Schotermolen",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7622594316588462",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.597957844392106"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.667677779453989",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.31220135250588"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2965.jsonld#31163",
         "@type": "tree:Node"
@@ -187,8 +194,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Schotermolen",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7622594316588462",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.597957844392106"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.667677779453989",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.31220135250588"
         }
       ],
       "total_children_count": 0,
@@ -204,7 +211,8 @@
       ],
       "triples_metadata": [
         "Schotermolen"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

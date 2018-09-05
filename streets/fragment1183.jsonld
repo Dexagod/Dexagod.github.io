@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "k",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1183.jsonld#38054",
-              "@type": "tree:Node",
-              "token_string": "atonweg"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1183.jsonld#38055",
-              "@type": "tree:Node",
-              "token_string": "keldamstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1183.jsonld#47486",
-              "@type": "tree:Node",
-              "token_string": "estraat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "atonweg": [
+          "1183",
+          "38054"
+        ],
+        "keldamstraat": [
+          "1183",
+          "38055"
+        ],
+        "estraat": [
+          "1183",
+          "47486"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment105.jsonld#662",
         "@type": "tree:Node"
@@ -62,18 +44,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Dukatonweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4457286681447616",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.24767273573566"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3788299152784145",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.36936339144084"
         },
         {
           "http://example.com/terms#name": "Dukkeldamstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6290365458123164",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.66735301677856"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4808210156667556",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.31174724687716"
         },
         {
           "http://example.com/terms#name": "Dukestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7786205341271657",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.56818424381987"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.930375028645235",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.8429430740509"
         }
       ],
       "total_children_count": 3,
@@ -99,17 +81,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1183.jsonld#38054"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1183.jsonld#38055"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1183.jsonld#47486"
+          ]
+        }
+      ]
     },
     {
       "token_string": "atonweg",
       "triples": [
         {
           "http://example.com/terms#name": "Dukatonweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4457286681447616",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.24767273573566"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3788299152784145",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.36936339144084"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1183.jsonld#38053",
         "@type": "tree:Node"
@@ -117,8 +120,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Dukatonweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4457286681447616",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.24767273573566"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3788299152784145",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.36936339144084"
         }
       ],
       "total_children_count": 0,
@@ -134,17 +137,19 @@
       ],
       "triples_metadata": [
         "Dukatonweg"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "keldamstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Dukkeldamstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6290365458123164",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.66735301677856"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4808210156667556",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.31174724687716"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1183.jsonld#38053",
         "@type": "tree:Node"
@@ -152,8 +157,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Dukkeldamstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6290365458123164",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.66735301677856"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4808210156667556",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.31174724687716"
         }
       ],
       "total_children_count": 0,
@@ -169,17 +174,19 @@
       ],
       "triples_metadata": [
         "Dukkeldamstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "estraat",
       "triples": [
         {
           "http://example.com/terms#name": "Dukestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7786205341271657",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.56818424381987"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.930375028645235",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.8429430740509"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1183.jsonld#38053",
         "@type": "tree:Node"
@@ -187,8 +194,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Dukestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7786205341271657",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.56818424381987"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.930375028645235",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.8429430740509"
         }
       ],
       "total_children_count": 0,
@@ -204,7 +211,8 @@
       ],
       "triples_metadata": [
         "Dukestraat"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "p",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment774.jsonld#10004",
-              "@type": "tree:Node",
-              "token_string": "erenbergstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment774.jsonld#53436",
-              "@type": "tree:Node",
-              "token_string": "kensberg"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment774.jsonld#181634",
-              "@type": "tree:Node",
-              "token_string": "pe"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "erenbergstraat": [
+          "774",
+          "10004"
+        ],
+        "kensberg": [
+          "774",
+          "53436"
+        ],
+        "pe": [
+          "774",
+          "181634"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment29.jsonld#708",
         "@type": "tree:Node"
@@ -62,23 +44,23 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Keppestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3926075042402037",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.36678730949026"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.173607623028151",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.077915542400916"
         },
         {
           "http://example.com/terms#name": "Keperenbergstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.831697463552472",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.99555178576411"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.772557014942409",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.177577805387635"
         },
         {
           "http://example.com/terms#name": "Kepkensberg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5572401735660164",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.74858460685462"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0665765110654797",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.5236526724227"
         },
         {
           "http://example.com/terms#name": "Keppelborn",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0857933513732063",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.00741973386823"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.745469939735926",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.057480683464384"
         }
       ],
       "total_children_count": 5,
@@ -110,17 +92,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment774.jsonld#10004"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment774.jsonld#53436"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment774.jsonld#181634"
+          ]
+        }
+      ]
     },
     {
       "token_string": "erenbergstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Keperenbergstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.831697463552472",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.99555178576411"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.772557014942409",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.177577805387635"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment774.jsonld#10002",
         "@type": "tree:Node"
@@ -128,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Keperenbergstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.831697463552472",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.99555178576411"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.772557014942409",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.177577805387635"
         }
       ],
       "total_children_count": 0,
@@ -145,17 +148,19 @@
       ],
       "triples_metadata": [
         "Keperenbergstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "kensberg",
       "triples": [
         {
           "http://example.com/terms#name": "Kepkensberg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5572401735660164",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.74858460685462"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0665765110654797",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.5236526724227"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment774.jsonld#10002",
         "@type": "tree:Node"
@@ -163,8 +168,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Kepkensberg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5572401735660164",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.74858460685462"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0665765110654797",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.5236526724227"
         }
       ],
       "total_children_count": 0,
@@ -180,33 +185,22 @@
       ],
       "triples_metadata": [
         "Kepkensberg"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "pe",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment774.jsonld#181635",
-              "@type": "tree:Node",
-              "token_string": "straat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment774.jsonld#181636",
-              "@type": "tree:Node",
-              "token_string": "lborn"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "straat": [
+          "774",
+          "181635"
+        ],
+        "lborn": [
+          "774",
+          "181636"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment774.jsonld#10002",
         "@type": "tree:Node"
@@ -214,13 +208,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Keppestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3926075042402037",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.36678730949026"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.173607623028151",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.077915542400916"
         },
         {
           "http://example.com/terms#name": "Keppelborn",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0857933513732063",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.00741973386823"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.745469939735926",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.057480683464384"
         }
       ],
       "total_children_count": 2,
@@ -240,17 +234,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment774.jsonld#181635"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment774.jsonld#181636"
+          ]
+        }
+      ]
     },
     {
       "token_string": "straat",
       "triples": [
         {
           "http://example.com/terms#name": "Keppestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3926075042402037",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.36678730949026"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.173607623028151",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.077915542400916"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment774.jsonld#181634",
         "@type": "tree:Node"
@@ -258,8 +267,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Keppestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3926075042402037",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.36678730949026"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.173607623028151",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.077915542400916"
         }
       ],
       "total_children_count": 0,
@@ -275,17 +284,19 @@
       ],
       "triples_metadata": [
         "Keppestraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "lborn",
       "triples": [
         {
           "http://example.com/terms#name": "Keppelborn",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0857933513732063",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.00741973386823"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.745469939735926",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.057480683464384"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment774.jsonld#181634",
         "@type": "tree:Node"
@@ -293,8 +304,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Keppelborn",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0857933513732063",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.00741973386823"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.745469939735926",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.057480683464384"
         }
       ],
       "total_children_count": 0,
@@ -310,7 +321,8 @@
       ],
       "triples_metadata": [
         "Keppelborn"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

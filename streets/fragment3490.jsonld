@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "de",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3490.jsonld#89135",
-              "@type": "tree:Node",
-              "token_string": "straat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3490.jsonld#89136",
-              "@type": "tree:Node",
-              "token_string": "pad"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "straat": [
+          "3490",
+          "89135"
+        ],
+        "pad": [
+          "3490",
+          "89136"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment191.jsonld#929",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Jadestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.321977272625254",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.53314444183992"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.926385353405163",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.35189725349337"
         },
         {
           "http://example.com/terms#name": "Jadepad",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.592313919060628",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.81700529312297"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1252626179145087",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.52213745706997"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3490.jsonld#89135"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3490.jsonld#89136"
+          ]
+        }
+      ]
     },
     {
       "token_string": "straat",
       "triples": [
         {
           "http://example.com/terms#name": "Jadestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.321977272625254",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.53314444183992"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.926385353405163",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.35189725349337"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3490.jsonld#89134",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Jadestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.321977272625254",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.53314444183992"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.926385353405163",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.35189725349337"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Jadestraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "pad",
       "triples": [
         {
           "http://example.com/terms#name": "Jadepad",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.592313919060628",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.81700529312297"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1252626179145087",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.52213745706997"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3490.jsonld#89134",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Jadepad",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.592313919060628",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.81700529312297"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1252626179145087",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.52213745706997"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Jadepad"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

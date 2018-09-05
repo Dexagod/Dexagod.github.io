@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,48 +23,24 @@
     {
       "token_string": "s",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1467.jsonld#48639",
-              "@type": "tree:Node",
-              "token_string": "ijnstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1467.jsonld#57097",
-              "@type": "tree:Node",
-              "token_string": "ynmolen"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1467.jsonld#71384",
-              "@type": "tree:Node",
-              "token_string": "ter"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1467.jsonld#149851",
-              "@type": "tree:Node",
-              "token_string": "enberg"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "ijnstraat": [
+          "1467",
+          "48639"
+        ],
+        "ynmolen": [
+          "1467",
+          "57097"
+        ],
+        "ter": [
+          "1467",
+          "71384"
+        ],
+        "enberg": [
+          "1467",
+          "149851"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment44.jsonld#1035",
         "@type": "tree:Node"
@@ -72,38 +48,38 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Costersveld",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.268260180300069",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.97004573545482"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8447992432073415",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.47775193572799"
         },
         {
           "http://example.com/terms#name": "Cosijnstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9962142099238203",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.53912669640013"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.012332477372904",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.81447653358688"
         },
         {
           "http://example.com/terms#name": "Costershof",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1881464140639104",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.4329613992538"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0864909975883705",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.78958198394922"
         },
         {
           "http://example.com/terms#name": "Cosynmolen",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6673756250714686",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.02014775237196"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2990023784701017",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.43805550845456"
         },
         {
           "http://example.com/terms#name": "Costermansstede",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.096802047896922",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.55985650915112"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.974199485413828",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.3795047689743"
         },
         {
           "http://example.com/terms#name": "Cosenberg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2206753397599783",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.379911270917425"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0400061042070434",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.19871806094305"
         },
         {
           "http://example.com/terms#name": "Cosenbergerheydt",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.696856595564097",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.28787817858239"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1958932447460175",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.3125719467236"
         }
       ],
       "total_children_count": 9,
@@ -153,17 +129,44 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1467.jsonld#48639"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1467.jsonld#57097"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1467.jsonld#71384"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1467.jsonld#149851"
+          ]
+        }
+      ]
     },
     {
       "token_string": "ijnstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Cosijnstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9962142099238203",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.53912669640013"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.012332477372904",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.81447653358688"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1467.jsonld#48637",
         "@type": "tree:Node"
@@ -171,8 +174,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Cosijnstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9962142099238203",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.53912669640013"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.012332477372904",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.81447653358688"
         }
       ],
       "total_children_count": 0,
@@ -188,17 +191,19 @@
       ],
       "triples_metadata": [
         "Cosijnstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "veld",
       "triples": [
         {
           "http://example.com/terms#name": "Costersveld",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.268260180300069",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.97004573545482"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8447992432073415",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.47775193572799"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1467.jsonld#71385",
         "@type": "tree:Node"
@@ -206,8 +211,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Costersveld",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.268260180300069",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.97004573545482"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8447992432073415",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.47775193572799"
         }
       ],
       "total_children_count": 0,
@@ -223,17 +228,19 @@
       ],
       "triples_metadata": [
         "Costersveld"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "hof",
       "triples": [
         {
           "http://example.com/terms#name": "Costershof",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1881464140639104",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.4329613992538"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0864909975883705",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.78958198394922"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1467.jsonld#71385",
         "@type": "tree:Node"
@@ -241,8 +248,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Costershof",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1881464140639104",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.4329613992538"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0864909975883705",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.78958198394922"
         }
       ],
       "total_children_count": 0,
@@ -258,17 +265,19 @@
       ],
       "triples_metadata": [
         "Costershof"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "ynmolen",
       "triples": [
         {
           "http://example.com/terms#name": "Cosynmolen",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6673756250714686",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.02014775237196"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2990023784701017",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.43805550845456"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1467.jsonld#48637",
         "@type": "tree:Node"
@@ -276,8 +285,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Cosynmolen",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6673756250714686",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.02014775237196"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2990023784701017",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.43805550845456"
         }
       ],
       "total_children_count": 0,
@@ -293,33 +302,22 @@
       ],
       "triples_metadata": [
         "Cosynmolen"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "ter",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1467.jsonld#71385",
-              "@type": "tree:Node",
-              "token_string": "s"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1467.jsonld#71386",
-              "@type": "tree:Node",
-              "token_string": "mansstede"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "s": [
+          "1467",
+          "71385"
+        ],
+        "mansstede": [
+          "1467",
+          "71386"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment1467.jsonld#48637",
         "@type": "tree:Node"
@@ -327,18 +325,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Costersveld",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.268260180300069",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.97004573545482"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8447992432073415",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.47775193572799"
         },
         {
           "http://example.com/terms#name": "Costershof",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1881464140639104",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.4329613992538"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0864909975883705",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.78958198394922"
         },
         {
           "http://example.com/terms#name": "Costermansstede",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.096802047896922",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.55985650915112"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.974199485413828",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.3795047689743"
         }
       ],
       "total_children_count": 4,
@@ -364,33 +362,35 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
-    },
-    {
-      "token_string": "s",
-      "triples": [],
-      "children": [
+      "triples_metadata": [],
+      "childlist": [
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment1467.jsonld#56426",
-              "@type": "tree:Node",
-              "token_string": "veld"
-            }
+            "/streets/fragment1467.jsonld#71385"
           ]
         },
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment1467.jsonld#56427",
-              "@type": "tree:Node",
-              "token_string": "hof"
-            }
+            "/streets/fragment1467.jsonld#71386"
           ]
         }
-      ],
+      ]
+    },
+    {
+      "token_string": "s",
+      "triples": [],
+      "children": {
+        "veld": [
+          "1467",
+          "56426"
+        ],
+        "hof": [
+          "1467",
+          "56427"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment1467.jsonld#71384",
         "@type": "tree:Node"
@@ -398,13 +398,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Costersveld",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.268260180300069",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.97004573545482"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8447992432073415",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.47775193572799"
         },
         {
           "http://example.com/terms#name": "Costershof",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1881464140639104",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.4329613992538"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0864909975883705",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.78958198394922"
         }
       ],
       "total_children_count": 2,
@@ -424,17 +424,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1467.jsonld#56426"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1467.jsonld#56427"
+          ]
+        }
+      ]
     },
     {
       "token_string": "mansstede",
       "triples": [
         {
           "http://example.com/terms#name": "Costermansstede",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.096802047896922",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.55985650915112"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.974199485413828",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.3795047689743"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1467.jsonld#71384",
         "@type": "tree:Node"
@@ -442,8 +457,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Costermansstede",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.096802047896922",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.55985650915112"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.974199485413828",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.3795047689743"
         }
       ],
       "total_children_count": 0,
@@ -459,29 +474,24 @@
       ],
       "triples_metadata": [
         "Costermansstede"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "enberg",
       "triples": [
         {
           "http://example.com/terms#name": "Cosenberg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2206753397599783",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.379911270917425"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0400061042070434",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.19871806094305"
         }
       ],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1467.jsonld#153723",
-              "@type": "tree:Node",
-              "token_string": "erheydt"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "erheydt": [
+          "1467",
+          "153723"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment1467.jsonld#48637",
         "@type": "tree:Node"
@@ -489,13 +499,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Cosenberg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2206753397599783",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.379911270917425"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0400061042070434",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.19871806094305"
         },
         {
           "http://example.com/terms#name": "Cosenbergerheydt",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.696856595564097",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.28787817858239"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1958932447460175",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.3125719467236"
         }
       ],
       "total_children_count": 1,
@@ -517,6 +527,14 @@
       ],
       "triples_metadata": [
         "Cosenberg"
+      ],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1467.jsonld#153723"
+          ]
+        }
       ]
     },
     {
@@ -524,10 +542,11 @@
       "triples": [
         {
           "http://example.com/terms#name": "Cosenbergerheydt",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.696856595564097",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.28787817858239"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1958932447460175",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.3125719467236"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1467.jsonld#149851",
         "@type": "tree:Node"
@@ -535,8 +554,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Cosenbergerheydt",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.696856595564097",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.28787817858239"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1958932447460175",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.3125719467236"
         }
       ],
       "total_children_count": 0,
@@ -552,7 +571,8 @@
       ],
       "triples_metadata": [
         "Cosenbergerheydt"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "C",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3387.jsonld#68532",
-              "@type": "tree:Node",
-              "token_string": "orneliusstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3387.jsonld#68533",
-              "@type": "tree:Node",
-              "token_string": "arolusstraat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "orneliusstraat": [
+          "3387",
+          "68532"
+        ],
+        "arolusstraat": [
+          "3387",
+          "68533"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment337.jsonld#2163",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "St-Corneliusstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.983843962134295",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.78948525627273"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.06980691966438",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.28121615134947"
         },
         {
           "http://example.com/terms#name": "St-Carolusstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9986500744215077",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.229811783103365"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0983355652397124",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.762743395951134"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3387.jsonld#68532"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3387.jsonld#68533"
+          ]
+        }
+      ]
     },
     {
       "token_string": "orneliusstraat",
       "triples": [
         {
           "http://example.com/terms#name": "St-Corneliusstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.983843962134295",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.78948525627273"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.06980691966438",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.28121615134947"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3387.jsonld#68531",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "St-Corneliusstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.983843962134295",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.78948525627273"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.06980691966438",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.28121615134947"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "St-Corneliusstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "arolusstraat",
       "triples": [
         {
           "http://example.com/terms#name": "St-Carolusstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9986500744215077",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.229811783103365"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0983355652397124",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.762743395951134"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3387.jsonld#68531",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "St-Carolusstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9986500744215077",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.229811783103365"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0983355652397124",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.762743395951134"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "St-Carolusstraat"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

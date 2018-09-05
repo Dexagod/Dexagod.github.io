@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "de ",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2482.jsonld#57410",
-              "@type": "tree:Node",
-              "token_string": "Cortstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2482.jsonld#57411",
-              "@type": "tree:Node",
-              "token_string": "l'Arbrelaan"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2482.jsonld#59395",
-              "@type": "tree:Node",
-              "token_string": "Potterstraat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "Cortstraat": [
+          "2482",
+          "57410"
+        ],
+        "l'Arbrelaan": [
+          "2482",
+          "57411"
+        ],
+        "Potterstraat": [
+          "2482",
+          "59395"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment1985.jsonld#2848",
         "@type": "tree:Node"
@@ -62,18 +44,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Frans de Cortstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.708612231391229",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.412361262229346"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0238193148210337",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.98673099663772"
         },
         {
           "http://example.com/terms#name": "Frans de l'Arbrelaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.760749914561755",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.9692901870283"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.757353139018192",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.44871353956961"
         },
         {
           "http://example.com/terms#name": "Frans de Potterstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.572206335875811",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.446834944802845"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2977282143296325",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.978734772023714"
         }
       ],
       "total_children_count": 3,
@@ -99,17 +81,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2482.jsonld#57410"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2482.jsonld#57411"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2482.jsonld#59395"
+          ]
+        }
+      ]
     },
     {
       "token_string": "Cortstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Frans de Cortstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.708612231391229",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.412361262229346"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0238193148210337",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.98673099663772"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2482.jsonld#57409",
         "@type": "tree:Node"
@@ -117,8 +120,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Frans de Cortstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.708612231391229",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.412361262229346"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0238193148210337",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.98673099663772"
         }
       ],
       "total_children_count": 0,
@@ -134,17 +137,19 @@
       ],
       "triples_metadata": [
         "Frans de Cortstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "l'Arbrelaan",
       "triples": [
         {
           "http://example.com/terms#name": "Frans de l'Arbrelaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.760749914561755",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.9692901870283"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.757353139018192",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.44871353956961"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2482.jsonld#57409",
         "@type": "tree:Node"
@@ -152,8 +157,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Frans de l'Arbrelaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.760749914561755",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.9692901870283"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.757353139018192",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.44871353956961"
         }
       ],
       "total_children_count": 0,
@@ -169,17 +174,19 @@
       ],
       "triples_metadata": [
         "Frans de l'Arbrelaan"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "Potterstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Frans de Potterstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.572206335875811",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.446834944802845"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2977282143296325",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.978734772023714"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2482.jsonld#57409",
         "@type": "tree:Node"
@@ -187,8 +194,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Frans de Potterstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.572206335875811",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.446834944802845"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2977282143296325",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.978734772023714"
         }
       ],
       "total_children_count": 0,
@@ -204,7 +211,8 @@
       ],
       "triples_metadata": [
         "Frans de Potterstraat"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "pine",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4558.jsonld#136544",
-              "@type": "tree:Node",
-              "token_string": " Pucelle"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4558.jsonld#136545",
-              "@type": "tree:Node",
-              "token_string": "tte"
-            }
-          ]
-        }
-      ],
+      "children": {
+        " Pucelle": [
+          "4558",
+          "136544"
+        ],
+        "tte": [
+          "4558",
+          "136545"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment3715.jsonld#105400",
         "@type": "tree:Node"
@@ -52,28 +40,28 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Epine Pucelle",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4136125732757874",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.07185988410998"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0138062040042968",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.72907979716976"
         },
         {
           "http://example.com/terms#name": "Rue Epinette",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2842300187055007",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.267615917686555"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1864082206610975",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.19560033856383"
         },
         {
           "http://example.com/terms#name": "Rue Epinette",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.037027703513751",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.94922499275581"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4712270732424115",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.99986516248594"
         },
         {
           "http://example.com/terms#name": "Rue Epinette",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.037027703513751",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.94922499275581"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4712270732424115",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.99986516248594"
         },
         {
           "http://example.com/terms#name": "Rue Epinette",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.037027703513751",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.94922499275581"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4712270732424115",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.99986516248594"
         }
       ],
       "total_children_count": 2,
@@ -96,17 +84,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4558.jsonld#136544"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4558.jsonld#136545"
+          ]
+        }
+      ]
     },
     {
       "token_string": " Pucelle",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Epine Pucelle",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4136125732757874",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.07185988410998"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0138062040042968",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.72907979716976"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4558.jsonld#136543",
         "@type": "tree:Node"
@@ -114,8 +117,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Epine Pucelle",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4136125732757874",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.07185988410998"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0138062040042968",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.72907979716976"
         }
       ],
       "total_children_count": 0,
@@ -131,32 +134,34 @@
       ],
       "triples_metadata": [
         "Rue Epine Pucelle"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "tte",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Epinette",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2842300187055007",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.267615917686555"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1864082206610975",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.19560033856383"
         },
         {
           "http://example.com/terms#name": "Rue Epinette",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.037027703513751",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.94922499275581"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4712270732424115",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.99986516248594"
         },
         {
           "http://example.com/terms#name": "Rue Epinette",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.037027703513751",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.94922499275581"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4712270732424115",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.99986516248594"
         },
         {
           "http://example.com/terms#name": "Rue Epinette",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.037027703513751",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.94922499275581"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4712270732424115",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.99986516248594"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4558.jsonld#136543",
         "@type": "tree:Node"
@@ -164,23 +169,23 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Epinette",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2842300187055007",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.267615917686555"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1864082206610975",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.19560033856383"
         },
         {
           "http://example.com/terms#name": "Rue Epinette",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.037027703513751",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.94922499275581"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4712270732424115",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.99986516248594"
         },
         {
           "http://example.com/terms#name": "Rue Epinette",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.037027703513751",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.94922499275581"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4712270732424115",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.99986516248594"
         },
         {
           "http://example.com/terms#name": "Rue Epinette",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.037027703513751",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.94922499275581"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4712270732424115",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.99986516248594"
         }
       ],
       "total_children_count": 0,
@@ -202,7 +207,8 @@
         "Rue Epinette",
         "Rue Epinette",
         "Rue Epinette"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

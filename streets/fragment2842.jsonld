@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "rs",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2842.jsonld#51264",
-              "@type": "tree:Node",
-              "token_string": "straat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2842.jsonld#51265",
-              "@type": "tree:Node",
-              "token_string": "hofstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2842.jsonld#82787",
-              "@type": "tree:Node",
-              "token_string": "tede"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "straat": [
+          "2842",
+          "51264"
+        ],
+        "hofstraat": [
+          "2842",
+          "51265"
+        ],
+        "tede": [
+          "2842",
+          "82787"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment43.jsonld#47804",
         "@type": "tree:Node"
@@ -62,18 +44,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Scheppersstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1768344004413467",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.31594825493576"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1709900658723273",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.608134905882544"
         },
         {
           "http://example.com/terms#name": "Scheppershofstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5878141433278072",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.42018757818597"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.483487058224627",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.237716234262685"
         },
         {
           "http://example.com/terms#name": "Schepperstede",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.045440724517509",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.644103366430706"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.445505508005337",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.33044277804557"
         }
       ],
       "total_children_count": 3,
@@ -99,17 +81,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2842.jsonld#51264"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2842.jsonld#51265"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2842.jsonld#82787"
+          ]
+        }
+      ]
     },
     {
       "token_string": "straat",
       "triples": [
         {
           "http://example.com/terms#name": "Scheppersstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1768344004413467",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.31594825493576"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1709900658723273",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.608134905882544"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2842.jsonld#51263",
         "@type": "tree:Node"
@@ -117,8 +120,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Scheppersstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1768344004413467",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.31594825493576"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1709900658723273",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.608134905882544"
         }
       ],
       "total_children_count": 0,
@@ -134,17 +137,19 @@
       ],
       "triples_metadata": [
         "Scheppersstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "hofstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Scheppershofstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5878141433278072",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.42018757818597"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.483487058224627",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.237716234262685"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2842.jsonld#51263",
         "@type": "tree:Node"
@@ -152,8 +157,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Scheppershofstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5878141433278072",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.42018757818597"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.483487058224627",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.237716234262685"
         }
       ],
       "total_children_count": 0,
@@ -169,17 +174,19 @@
       ],
       "triples_metadata": [
         "Scheppershofstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "tede",
       "triples": [
         {
           "http://example.com/terms#name": "Schepperstede",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.045440724517509",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.644103366430706"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.445505508005337",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.33044277804557"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2842.jsonld#51263",
         "@type": "tree:Node"
@@ -187,8 +194,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Schepperstede",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.045440724517509",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.644103366430706"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.445505508005337",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.33044277804557"
         }
       ],
       "total_children_count": 0,
@@ -204,7 +211,8 @@
       ],
       "triples_metadata": [
         "Schepperstede"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

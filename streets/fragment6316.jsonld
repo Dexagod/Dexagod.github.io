@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "F",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6316.jsonld#175009",
-              "@type": "tree:Node",
-              "token_string": "ranklin Delano Roosevelt"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6316.jsonld#175010",
-              "@type": "tree:Node",
-              "token_string": "abelta"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6316.jsonld#176019",
-              "@type": "tree:Node",
-              "token_string": "élix Rousseau"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "ranklin Delano Roosevelt": [
+          "6316",
+          "175009"
+        ],
+        "abelta": [
+          "6316",
+          "175010"
+        ],
+        "élix Rousseau": [
+          "6316",
+          "176019"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment5217.jsonld#164013",
         "@type": "tree:Node"
@@ -62,18 +44,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Square Franklin Delano Roosevelt",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0142851193831257",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.01605225067187"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6694474540713453",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.401767147862635"
         },
         {
           "http://example.com/terms#name": "Square Fabelta",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.767958288360161",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.68899181631327"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5350722616629953",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.66330017082328"
         },
         {
           "http://example.com/terms#name": "Square Félix Rousseau",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5317176355049646",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.38606570583202"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2925723079166023",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.24227988037859"
         }
       ],
       "total_children_count": 3,
@@ -99,17 +81,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6316.jsonld#175009"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6316.jsonld#175010"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6316.jsonld#176019"
+          ]
+        }
+      ]
     },
     {
       "token_string": "ranklin Delano Roosevelt",
       "triples": [
         {
           "http://example.com/terms#name": "Square Franklin Delano Roosevelt",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0142851193831257",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.01605225067187"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6694474540713453",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.401767147862635"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6316.jsonld#175008",
         "@type": "tree:Node"
@@ -117,8 +120,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Square Franklin Delano Roosevelt",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0142851193831257",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.01605225067187"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6694474540713453",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.401767147862635"
         }
       ],
       "total_children_count": 0,
@@ -134,17 +137,19 @@
       ],
       "triples_metadata": [
         "Square Franklin Delano Roosevelt"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "abelta",
       "triples": [
         {
           "http://example.com/terms#name": "Square Fabelta",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.767958288360161",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.68899181631327"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5350722616629953",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.66330017082328"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6316.jsonld#175008",
         "@type": "tree:Node"
@@ -152,8 +157,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Square Fabelta",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.767958288360161",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.68899181631327"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5350722616629953",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.66330017082328"
         }
       ],
       "total_children_count": 0,
@@ -169,17 +174,19 @@
       ],
       "triples_metadata": [
         "Square Fabelta"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "élix Rousseau",
       "triples": [
         {
           "http://example.com/terms#name": "Square Félix Rousseau",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5317176355049646",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.38606570583202"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2925723079166023",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.24227988037859"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6316.jsonld#175008",
         "@type": "tree:Node"
@@ -187,8 +194,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Square Félix Rousseau",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5317176355049646",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.38606570583202"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2925723079166023",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.24227988037859"
         }
       ],
       "total_children_count": 0,
@@ -204,7 +211,8 @@
       ],
       "triples_metadata": [
         "Square Félix Rousseau"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

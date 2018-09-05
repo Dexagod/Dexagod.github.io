@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "u",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6302.jsonld#159298",
-              "@type": "tree:Node",
-              "token_string": "lnes"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6302.jsonld#159299",
-              "@type": "tree:Node",
-              "token_string": "nois"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6302.jsonld#175329",
-              "@type": "tree:Node",
-              "token_string": "bépines"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "lnes": [
+          "6302",
+          "159298"
+        ],
+        "nois": [
+          "6302",
+          "159299"
+        ],
+        "bépines": [
+          "6302",
+          "175329"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment6395.jsonld#128749",
         "@type": "tree:Node"
@@ -62,18 +44,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Quartier des Aulnes",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.775824626294258",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.38007645915846"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6922338894196995",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.48617635045904"
         },
         {
           "http://example.com/terms#name": "Quartier des Aunois",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.64004838060049",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.3222950751823"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.56601217940384",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.58198661024445"
         },
         {
           "http://example.com/terms#name": "Quartier des Aubépines",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8516210278573864",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.48234612323222"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7866382814841937",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.05574073808747"
         }
       ],
       "total_children_count": 3,
@@ -99,17 +81,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6302.jsonld#159298"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6302.jsonld#159299"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6302.jsonld#175329"
+          ]
+        }
+      ]
     },
     {
       "token_string": "lnes",
       "triples": [
         {
           "http://example.com/terms#name": "Quartier des Aulnes",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.775824626294258",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.38007645915846"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6922338894196995",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.48617635045904"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6302.jsonld#159297",
         "@type": "tree:Node"
@@ -117,8 +120,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Quartier des Aulnes",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.775824626294258",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.38007645915846"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6922338894196995",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.48617635045904"
         }
       ],
       "total_children_count": 0,
@@ -134,17 +137,19 @@
       ],
       "triples_metadata": [
         "Quartier des Aulnes"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "nois",
       "triples": [
         {
           "http://example.com/terms#name": "Quartier des Aunois",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.64004838060049",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.3222950751823"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.56601217940384",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.58198661024445"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6302.jsonld#159297",
         "@type": "tree:Node"
@@ -152,8 +157,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Quartier des Aunois",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.64004838060049",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.3222950751823"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.56601217940384",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.58198661024445"
         }
       ],
       "total_children_count": 0,
@@ -169,17 +174,19 @@
       ],
       "triples_metadata": [
         "Quartier des Aunois"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "bépines",
       "triples": [
         {
           "http://example.com/terms#name": "Quartier des Aubépines",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8516210278573864",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.48234612323222"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7866382814841937",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.05574073808747"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6302.jsonld#159297",
         "@type": "tree:Node"
@@ -187,8 +194,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Quartier des Aubépines",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8516210278573864",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.48234612323222"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7866382814841937",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.05574073808747"
         }
       ],
       "total_children_count": 0,
@@ -204,7 +211,8 @@
       ],
       "triples_metadata": [
         "Quartier des Aubépines"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

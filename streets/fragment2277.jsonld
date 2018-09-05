@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "e",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2277.jsonld#64470",
-              "@type": "tree:Node",
-              "token_string": "ymansplein"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2277.jsonld#64471",
-              "@type": "tree:Node",
-              "token_string": "rmanslaan"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2277.jsonld#66817",
-              "@type": "tree:Node",
-              "token_string": "n"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "ymansplein": [
+          "2277",
+          "64470"
+        ],
+        "rmanslaan": [
+          "2277",
+          "64471"
+        ],
+        "n": [
+          "2277",
+          "66817"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment2313.jsonld#53243",
         "@type": "tree:Node"
@@ -62,23 +44,23 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Burgemeester Heymansplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7107815328527667",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.418209020833885"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.448927713451661",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.26538194950632"
         },
         {
           "http://example.com/terms#name": "Burgemeester Hermanslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4902184211751908",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.56815346791671"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3286270351046925",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.738741777164094"
         },
         {
           "http://example.com/terms#name": "Burgemeester Hensstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.365788323439271",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.32437619485816"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1552845708591284",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.06141681345886"
         },
         {
           "http://example.com/terms#name": "Burgemeester Hendrickxstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.62464612735419",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.821383254087365"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9040780047313746",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.232979075041996"
         }
       ],
       "total_children_count": 5,
@@ -110,17 +92,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2277.jsonld#64470"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2277.jsonld#64471"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2277.jsonld#66817"
+          ]
+        }
+      ]
     },
     {
       "token_string": "ymansplein",
       "triples": [
         {
           "http://example.com/terms#name": "Burgemeester Heymansplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7107815328527667",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.418209020833885"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.448927713451661",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.26538194950632"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2277.jsonld#64469",
         "@type": "tree:Node"
@@ -128,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Burgemeester Heymansplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7107815328527667",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.418209020833885"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.448927713451661",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.26538194950632"
         }
       ],
       "total_children_count": 0,
@@ -145,17 +148,19 @@
       ],
       "triples_metadata": [
         "Burgemeester Heymansplein"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "rmanslaan",
       "triples": [
         {
           "http://example.com/terms#name": "Burgemeester Hermanslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4902184211751908",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.56815346791671"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3286270351046925",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.738741777164094"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2277.jsonld#64469",
         "@type": "tree:Node"
@@ -163,8 +168,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Burgemeester Hermanslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4902184211751908",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.56815346791671"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3286270351046925",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.738741777164094"
         }
       ],
       "total_children_count": 0,
@@ -180,33 +185,22 @@
       ],
       "triples_metadata": [
         "Burgemeester Hermanslaan"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "n",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2277.jsonld#66818",
-              "@type": "tree:Node",
-              "token_string": "sstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2277.jsonld#66819",
-              "@type": "tree:Node",
-              "token_string": "drickxstraat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "sstraat": [
+          "2277",
+          "66818"
+        ],
+        "drickxstraat": [
+          "2277",
+          "66819"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment2277.jsonld#64469",
         "@type": "tree:Node"
@@ -214,13 +208,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Burgemeester Hensstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.365788323439271",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.32437619485816"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1552845708591284",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.06141681345886"
         },
         {
           "http://example.com/terms#name": "Burgemeester Hendrickxstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.62464612735419",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.821383254087365"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9040780047313746",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.232979075041996"
         }
       ],
       "total_children_count": 2,
@@ -240,17 +234,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2277.jsonld#66818"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2277.jsonld#66819"
+          ]
+        }
+      ]
     },
     {
       "token_string": "sstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Burgemeester Hensstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.365788323439271",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.32437619485816"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1552845708591284",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.06141681345886"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2277.jsonld#66817",
         "@type": "tree:Node"
@@ -258,8 +267,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Burgemeester Hensstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.365788323439271",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.32437619485816"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1552845708591284",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.06141681345886"
         }
       ],
       "total_children_count": 0,
@@ -275,17 +284,19 @@
       ],
       "triples_metadata": [
         "Burgemeester Hensstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "drickxstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Burgemeester Hendrickxstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.62464612735419",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.821383254087365"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9040780047313746",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.232979075041996"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2277.jsonld#66817",
         "@type": "tree:Node"
@@ -293,8 +304,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Burgemeester Hendrickxstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.62464612735419",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.821383254087365"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9040780047313746",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.232979075041996"
         }
       ],
       "total_children_count": 0,
@@ -310,7 +321,8 @@
       ],
       "triples_metadata": [
         "Burgemeester Hendrickxstraat"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

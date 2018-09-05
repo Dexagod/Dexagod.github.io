@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "d",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2600.jsonld#65742",
-              "@type": "tree:Node",
-              "token_string": "reef"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2600.jsonld#65743",
-              "@type": "tree:Node",
-              "token_string": "amstraat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "reef": [
+          "2600",
+          "65742"
+        ],
+        "amstraat": [
+          "2600",
+          "65743"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment445.jsonld#3882",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Velddreef",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.088588169205153",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.121616965314566"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1325277505113207",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.09629078836962"
         },
         {
           "http://example.com/terms#name": "Velddamstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3327205460308886",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.327341254350316"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.417158178342715",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.20440618377792"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2600.jsonld#65742"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2600.jsonld#65743"
+          ]
+        }
+      ]
     },
     {
       "token_string": "reef",
       "triples": [
         {
           "http://example.com/terms#name": "Velddreef",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.088588169205153",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.121616965314566"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1325277505113207",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.09629078836962"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2600.jsonld#65741",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Velddreef",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.088588169205153",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.121616965314566"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1325277505113207",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.09629078836962"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Velddreef"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "amstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Velddamstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3327205460308886",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.327341254350316"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.417158178342715",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.20440618377792"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2600.jsonld#65741",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Velddamstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3327205460308886",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.327341254350316"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.417158178342715",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.20440618377792"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Velddamstraat"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

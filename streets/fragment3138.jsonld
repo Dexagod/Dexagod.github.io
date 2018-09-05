@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "we",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3138.jsonld#71486",
-              "@type": "tree:Node",
-              "token_string": "instraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3138.jsonld#71487",
-              "@type": "tree:Node",
-              "token_string": "gen"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "instraat": [
+          "3138",
+          "71486"
+        ],
+        "gen": [
+          "3138",
+          "71487"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment719.jsonld#5621",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Walweinstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.535399267068028",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.1047398384211"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5220218574089057",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.77755808146269"
         },
         {
           "http://example.com/terms#name": "Walwegen",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.829283312583749",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.388704888831455"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3995062055316003",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.29311454951522"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3138.jsonld#71486"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3138.jsonld#71487"
+          ]
+        }
+      ]
     },
     {
       "token_string": "instraat",
       "triples": [
         {
           "http://example.com/terms#name": "Walweinstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.535399267068028",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.1047398384211"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5220218574089057",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.77755808146269"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3138.jsonld#71485",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Walweinstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.535399267068028",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.1047398384211"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5220218574089057",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.77755808146269"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Walweinstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "gen",
       "triples": [
         {
           "http://example.com/terms#name": "Walwegen",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.829283312583749",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.388704888831455"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3995062055316003",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.29311454951522"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3138.jsonld#71485",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Walwegen",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.829283312583749",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.388704888831455"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3995062055316003",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.29311454951522"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Walwegen"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

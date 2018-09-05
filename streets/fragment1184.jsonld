@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -25,10 +25,11 @@
       "triples": [
         {
           "http://example.com/terms#name": "Dutselhoek",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9862491288722395",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.32290605403946"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3374310021136204",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.268877095609064"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1184.jsonld#45697",
         "@type": "tree:Node"
@@ -36,8 +37,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Dutselhoek",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9862491288722395",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.32290605403946"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3374310021136204",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.268877095609064"
         }
       ],
       "total_children_count": 0,
@@ -53,17 +54,19 @@
       ],
       "triples_metadata": [
         "Dutselhoek"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "straat",
       "triples": [
         {
           "http://example.com/terms#name": "Dutselstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3096705004643465",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.62690160129091"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.734554146299715",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.315583189109134"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1184.jsonld#45697",
         "@type": "tree:Node"
@@ -71,8 +74,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Dutselstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3096705004643465",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.62690160129091"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.734554146299715",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.315583189109134"
         }
       ],
       "total_children_count": 0,
@@ -88,33 +91,22 @@
       ],
       "triples_metadata": [
         "Dutselstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "ts",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1184.jsonld#45697",
-              "@type": "tree:Node",
-              "token_string": "el"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1184.jsonld#45698",
-              "@type": "tree:Node",
-              "token_string": "kouter"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "el": [
+          "1184",
+          "45697"
+        ],
+        "kouter": [
+          "1184",
+          "45698"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment105.jsonld#662",
         "@type": "tree:Node"
@@ -122,18 +114,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Dutselhoek",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9862491288722395",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.32290605403946"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3374310021136204",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.268877095609064"
         },
         {
           "http://example.com/terms#name": "Dutselstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3096705004643465",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.62690160129091"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.734554146299715",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.315583189109134"
         },
         {
           "http://example.com/terms#name": "Dutskouter",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1429308620127827",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.22556764450852"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1303067063061643",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.35434099475447"
         }
       ],
       "total_children_count": 4,
@@ -159,33 +151,35 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
-    },
-    {
-      "token_string": "el",
-      "triples": [],
-      "children": [
+      "triples_metadata": [],
+      "childlist": [
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment1184.jsonld#32731",
-              "@type": "tree:Node",
-              "token_string": "hoek"
-            }
+            "/streets/fragment1184.jsonld#45697"
           ]
         },
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment1184.jsonld#32732",
-              "@type": "tree:Node",
-              "token_string": "straat"
-            }
+            "/streets/fragment1184.jsonld#45698"
           ]
         }
-      ],
+      ]
+    },
+    {
+      "token_string": "el",
+      "triples": [],
+      "children": {
+        "hoek": [
+          "1184",
+          "32731"
+        ],
+        "straat": [
+          "1184",
+          "32732"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment1184.jsonld#45696",
         "@type": "tree:Node"
@@ -193,13 +187,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Dutselhoek",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9862491288722395",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.32290605403946"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3374310021136204",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.268877095609064"
         },
         {
           "http://example.com/terms#name": "Dutselstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3096705004643465",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.62690160129091"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.734554146299715",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.315583189109134"
         }
       ],
       "total_children_count": 2,
@@ -219,17 +213,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1184.jsonld#32731"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1184.jsonld#32732"
+          ]
+        }
+      ]
     },
     {
       "token_string": "kouter",
       "triples": [
         {
           "http://example.com/terms#name": "Dutskouter",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1429308620127827",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.22556764450852"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1303067063061643",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.35434099475447"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1184.jsonld#45696",
         "@type": "tree:Node"
@@ -237,8 +246,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Dutskouter",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1429308620127827",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.22556764450852"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1303067063061643",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.35434099475447"
         }
       ],
       "total_children_count": 0,
@@ -254,7 +263,8 @@
       ],
       "triples_metadata": [
         "Dutskouter"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "N",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5502.jsonld#178685",
-              "@type": "tree:Node",
-              "token_string": "euf Viviers"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5502.jsonld#178686",
-              "@type": "tree:Node",
-              "token_string": "ais-Prés"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "euf Viviers": [
+          "5502",
+          "178685"
+        ],
+        "ais-Prés": [
+          "5502",
+          "178686"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment5442.jsonld#107306",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Les Neuf Viviers",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.14176115495737",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.354172231950784"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.202132905643236",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.4611131361136"
         },
         {
           "http://example.com/terms#name": "Les Nais-Prés",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8697783370231598",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.144746427177395"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.045711936737171",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.7521549344023"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5502.jsonld#178685"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5502.jsonld#178686"
+          ]
+        }
+      ]
     },
     {
       "token_string": "euf Viviers",
       "triples": [
         {
           "http://example.com/terms#name": "Les Neuf Viviers",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.14176115495737",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.354172231950784"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.202132905643236",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.4611131361136"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5502.jsonld#178684",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Les Neuf Viviers",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.14176115495737",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.354172231950784"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.202132905643236",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.4611131361136"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Les Neuf Viviers"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "ais-Prés",
       "triples": [
         {
           "http://example.com/terms#name": "Les Nais-Prés",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8697783370231598",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.144746427177395"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.045711936737171",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.7521549344023"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5502.jsonld#178684",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Les Nais-Prés",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8697783370231598",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.144746427177395"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.045711936737171",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.7521549344023"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Les Nais-Prés"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "èche",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4692.jsonld#142611",
-              "@type": "tree:Node",
-              "token_string": " Epée"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4692.jsonld#142612",
-              "@type": "tree:Node",
-              "token_string": "val"
-            }
-          ]
-        }
-      ],
+      "children": {
+        " Epée": [
+          "4692",
+          "142611"
+        ],
+        "val": [
+          "4692",
+          "142612"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment3765.jsonld#104464",
         "@type": "tree:Node"
@@ -52,28 +40,28 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Sèche Epée",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.990913522216809",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.577121141598965"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4467526472210226",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.85271108819942"
         },
         {
           "http://example.com/terms#name": "Rue Sècheval",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.623305538865393",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.34310385626043"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.810546632289419",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.62703134079171"
         },
         {
           "http://example.com/terms#name": "Rue Sècheval",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2469024034901",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.13733225937476"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8854479730452214",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.54889964718908"
         },
         {
           "http://example.com/terms#name": "Rue Sècheval",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2469024034901",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.13733225937476"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8854479730452214",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.54889964718908"
         },
         {
           "http://example.com/terms#name": "Rue Sècheval",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2469024034901",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.13733225937476"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8854479730452214",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.54889964718908"
         }
       ],
       "total_children_count": 2,
@@ -96,17 +84,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4692.jsonld#142611"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4692.jsonld#142612"
+          ]
+        }
+      ]
     },
     {
       "token_string": " Epée",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Sèche Epée",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.990913522216809",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.577121141598965"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4467526472210226",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.85271108819942"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4692.jsonld#142610",
         "@type": "tree:Node"
@@ -114,8 +117,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Sèche Epée",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.990913522216809",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.577121141598965"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4467526472210226",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.85271108819942"
         }
       ],
       "total_children_count": 0,
@@ -131,32 +134,34 @@
       ],
       "triples_metadata": [
         "Rue Sèche Epée"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "val",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Sècheval",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.623305538865393",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.34310385626043"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.810546632289419",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.62703134079171"
         },
         {
           "http://example.com/terms#name": "Rue Sècheval",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2469024034901",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.13733225937476"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8854479730452214",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.54889964718908"
         },
         {
           "http://example.com/terms#name": "Rue Sècheval",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2469024034901",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.13733225937476"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8854479730452214",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.54889964718908"
         },
         {
           "http://example.com/terms#name": "Rue Sècheval",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2469024034901",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.13733225937476"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8854479730452214",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.54889964718908"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4692.jsonld#142610",
         "@type": "tree:Node"
@@ -164,23 +169,23 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Sècheval",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.623305538865393",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.34310385626043"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.810546632289419",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.62703134079171"
         },
         {
           "http://example.com/terms#name": "Rue Sècheval",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2469024034901",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.13733225937476"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8854479730452214",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.54889964718908"
         },
         {
           "http://example.com/terms#name": "Rue Sècheval",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2469024034901",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.13733225937476"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8854479730452214",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.54889964718908"
         },
         {
           "http://example.com/terms#name": "Rue Sècheval",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2469024034901",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.13733225937476"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8854479730452214",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.54889964718908"
         }
       ],
       "total_children_count": 0,
@@ -202,7 +207,8 @@
         "Rue Sècheval",
         "Rue Sècheval",
         "Rue Sècheval"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "o",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1922.jsonld#87325",
-              "@type": "tree:Node",
-              "token_string": "i Hellenboschstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1922.jsonld#87326",
-              "@type": "tree:Node",
-              "token_string": "ystraat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "i Hellenboschstraat": [
+          "1922",
+          "87325"
+        ],
+        "ystraat": [
+          "1922",
+          "87326"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment100.jsonld#798",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Eloi Hellenboschstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6927430356684003",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.33396800127528"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2178577352688564",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.07814375381011"
         },
         {
           "http://example.com/terms#name": "Eloystraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7566482010200626",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.507180849132766"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.621089165917678",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.05858583218088"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1922.jsonld#87325"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1922.jsonld#87326"
+          ]
+        }
+      ]
     },
     {
       "token_string": "i Hellenboschstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Eloi Hellenboschstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6927430356684003",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.33396800127528"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2178577352688564",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.07814375381011"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1922.jsonld#87324",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Eloi Hellenboschstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6927430356684003",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.33396800127528"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2178577352688564",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.07814375381011"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Eloi Hellenboschstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "ystraat",
       "triples": [
         {
           "http://example.com/terms#name": "Eloystraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7566482010200626",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.507180849132766"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.621089165917678",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.05858583218088"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1922.jsonld#87324",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Eloystraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7566482010200626",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.507180849132766"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.621089165917678",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.05858583218088"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Eloystraat"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

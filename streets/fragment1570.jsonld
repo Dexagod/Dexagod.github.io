@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "Fr",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1570.jsonld#78347",
-              "@type": "tree:Node",
-              "token_string": "ederickxstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1570.jsonld#78348",
-              "@type": "tree:Node",
-              "token_string": "ans Hermansplein"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "ederickxstraat": [
+          "1570",
+          "78347"
+        ],
+        "ans Hermansplein": [
+          "1570",
+          "78348"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment1029.jsonld#12277",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Pastoor Frederickxstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.398949260900729",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.387058675091296"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7872487374365957",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.53682920512776"
         },
         {
           "http://example.com/terms#name": "Pastoor Frans Hermansplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.802603132202314",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.77416832840832"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.906961172230205",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.21027830132405"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1570.jsonld#78347"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1570.jsonld#78348"
+          ]
+        }
+      ]
     },
     {
       "token_string": "ederickxstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Pastoor Frederickxstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.398949260900729",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.387058675091296"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7872487374365957",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.53682920512776"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1570.jsonld#78346",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Pastoor Frederickxstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.398949260900729",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.387058675091296"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7872487374365957",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.53682920512776"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Pastoor Frederickxstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "ans Hermansplein",
       "triples": [
         {
           "http://example.com/terms#name": "Pastoor Frans Hermansplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.802603132202314",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.77416832840832"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.906961172230205",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.21027830132405"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1570.jsonld#78346",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Pastoor Frans Hermansplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.802603132202314",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.77416832840832"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.906961172230205",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.21027830132405"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Pastoor Frans Hermansplein"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

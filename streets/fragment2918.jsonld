@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "d",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2918.jsonld#57818",
-              "@type": "tree:Node",
-              "token_string": "degemstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2918.jsonld#57819",
-              "@type": "tree:Node",
-              "token_string": "tsmeulen"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "degemstraat": [
+          "2918",
+          "57818"
+        ],
+        "tsmeulen": [
+          "2918",
+          "57819"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment141.jsonld#143",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Poddegemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1515316752189646",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.312484731310704"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1767216303588803",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.79502396505498"
         },
         {
           "http://example.com/terms#name": "Podtsmeulen",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9368916188669036",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.538905169629615"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6242042724145747",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.45193608119819"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2918.jsonld#57818"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2918.jsonld#57819"
+          ]
+        }
+      ]
     },
     {
       "token_string": "degemstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Poddegemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1515316752189646",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.312484731310704"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1767216303588803",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.79502396505498"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2918.jsonld#57817",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Poddegemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1515316752189646",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.312484731310704"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1767216303588803",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.79502396505498"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Poddegemstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "tsmeulen",
       "triples": [
         {
           "http://example.com/terms#name": "Podtsmeulen",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9368916188669036",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.538905169629615"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6242042724145747",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.45193608119819"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2918.jsonld#57817",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Podtsmeulen",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9368916188669036",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.538905169629615"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6242042724145747",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.45193608119819"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Podtsmeulen"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

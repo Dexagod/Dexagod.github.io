@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": " ",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3016.jsonld#49570",
-              "@type": "tree:Node",
-              "token_string": "Brabanderestraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3016.jsonld#49571",
-              "@type": "tree:Node",
-              "token_string": "Meesterlaan"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3016.jsonld#92115",
-              "@type": "tree:Node",
-              "token_string": "S"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "Brabanderestraat": [
+          "3016",
+          "49570"
+        ],
+        "Meesterlaan": [
+          "3016",
+          "49571"
+        ],
+        "S": [
+          "3016",
+          "92115"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment3017.jsonld#43661",
         "@type": "tree:Node"
@@ -62,23 +44,23 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Henri De Brabanderestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.535537293611067",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.63744650086546"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0351506875423313",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.604332773462275"
         },
         {
           "http://example.com/terms#name": "Henri De Meesterlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7841357124990758",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.28716017076861"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.070864859741544",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.27630076760245"
         },
         {
           "http://example.com/terms#name": "Henri De Smetplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.959315489688222",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.19914878516681"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1332331392081803",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.959647023628534"
         },
         {
           "http://example.com/terms#name": "Henri De Saegherstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8766367123185614",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.90749808685231"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0321592016910865",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.230791472896726"
         }
       ],
       "total_children_count": 5,
@@ -110,17 +92,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3016.jsonld#49570"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3016.jsonld#49571"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3016.jsonld#92115"
+          ]
+        }
+      ]
     },
     {
       "token_string": "Brabanderestraat",
       "triples": [
         {
           "http://example.com/terms#name": "Henri De Brabanderestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.535537293611067",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.63744650086546"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0351506875423313",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.604332773462275"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3016.jsonld#49569",
         "@type": "tree:Node"
@@ -128,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Henri De Brabanderestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.535537293611067",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.63744650086546"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0351506875423313",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.604332773462275"
         }
       ],
       "total_children_count": 0,
@@ -145,17 +148,19 @@
       ],
       "triples_metadata": [
         "Henri De Brabanderestraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "Meesterlaan",
       "triples": [
         {
           "http://example.com/terms#name": "Henri De Meesterlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7841357124990758",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.28716017076861"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.070864859741544",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.27630076760245"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3016.jsonld#49569",
         "@type": "tree:Node"
@@ -163,8 +168,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Henri De Meesterlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7841357124990758",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.28716017076861"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.070864859741544",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.27630076760245"
         }
       ],
       "total_children_count": 0,
@@ -180,33 +185,22 @@
       ],
       "triples_metadata": [
         "Henri De Meesterlaan"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "S",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3016.jsonld#92116",
-              "@type": "tree:Node",
-              "token_string": "metplein"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3016.jsonld#92117",
-              "@type": "tree:Node",
-              "token_string": "aegherstraat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "metplein": [
+          "3016",
+          "92116"
+        ],
+        "aegherstraat": [
+          "3016",
+          "92117"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment3016.jsonld#49569",
         "@type": "tree:Node"
@@ -214,13 +208,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Henri De Smetplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.959315489688222",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.19914878516681"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1332331392081803",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.959647023628534"
         },
         {
           "http://example.com/terms#name": "Henri De Saegherstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8766367123185614",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.90749808685231"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0321592016910865",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.230791472896726"
         }
       ],
       "total_children_count": 2,
@@ -240,17 +234,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3016.jsonld#92116"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3016.jsonld#92117"
+          ]
+        }
+      ]
     },
     {
       "token_string": "metplein",
       "triples": [
         {
           "http://example.com/terms#name": "Henri De Smetplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.959315489688222",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.19914878516681"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1332331392081803",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.959647023628534"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3016.jsonld#92115",
         "@type": "tree:Node"
@@ -258,8 +267,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Henri De Smetplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.959315489688222",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.19914878516681"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1332331392081803",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.959647023628534"
         }
       ],
       "total_children_count": 0,
@@ -275,17 +284,19 @@
       ],
       "triples_metadata": [
         "Henri De Smetplein"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "aegherstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Henri De Saegherstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8766367123185614",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.90749808685231"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0321592016910865",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.230791472896726"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3016.jsonld#92115",
         "@type": "tree:Node"
@@ -293,8 +304,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Henri De Saegherstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8766367123185614",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.90749808685231"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0321592016910865",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.230791472896726"
         }
       ],
       "total_children_count": 0,
@@ -310,7 +321,8 @@
       ],
       "triples_metadata": [
         "Henri De Saegherstraat"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

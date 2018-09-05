@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "l",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4893.jsonld#142394",
-              "@type": "tree:Node",
-              "token_string": "ettestraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4893.jsonld#142395",
-              "@type": "tree:Node",
-              "token_string": "te"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "ettestraat": [
+          "4893",
+          "142394"
+        ],
+        "te": [
+          "4893",
+          "142395"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4893.jsonld#150783",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "La Salettestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3516235900567266",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.99761714553945"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1436372790347455",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.076045606521944"
         },
         {
           "http://example.com/terms#name": "La Salte",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.662715086616986",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.75339124362055"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4001402965883294",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.345906440337565"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4893.jsonld#142394"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4893.jsonld#142395"
+          ]
+        }
+      ]
     },
     {
       "token_string": "ettestraat",
       "triples": [
         {
           "http://example.com/terms#name": "La Salettestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3516235900567266",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.99761714553945"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1436372790347455",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.076045606521944"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4893.jsonld#142393",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "La Salettestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3516235900567266",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.99761714553945"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1436372790347455",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.076045606521944"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "La Salettestraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "te",
       "triples": [
         {
           "http://example.com/terms#name": "La Salte",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.662715086616986",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.75339124362055"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4001402965883294",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.345906440337565"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4893.jsonld#142393",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "La Salte",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.662715086616986",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.75339124362055"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4001402965883294",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.345906440337565"
         }
       ],
       "total_children_count": 0,
@@ -148,53 +153,30 @@
       ],
       "triples_metadata": [
         "La Salte"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "S",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4893.jsonld#150783",
-              "@type": "tree:Node",
-              "token_string": "a"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4893.jsonld#159221",
-              "@type": "tree:Node",
-              "token_string": "tr"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4893.jsonld#161074",
-              "@type": "tree:Node",
-              "token_string": "pinette"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4893.jsonld#168176",
-              "@type": "tree:Node",
-              "token_string": "e"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "a": [
+          "4893",
+          "150783"
+        ],
+        "tr": [
+          "4893",
+          "159221"
+        ],
+        "pinette": [
+          "4893",
+          "161074"
+        ],
+        "e": [
+          "4893",
+          "168176"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4379.jsonld#36881",
         "@type": "tree:Node"
@@ -202,103 +184,103 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "La Salettestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3516235900567266",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.99761714553945"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1436372790347455",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.076045606521944"
         },
         {
           "http://example.com/terms#name": "La Sapinière",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.176028913553861",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.40310885301859"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3915428030707977",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.343285121361085"
         },
         {
           "http://example.com/terms#name": "La Sapinière",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.728387687195009",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.787494990802564"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.456478870613734",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.50441476375484"
         },
         {
           "http://example.com/terms#name": "La Sapinière",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.728387687195009",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.787494990802564"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.456478870613734",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.50441476375484"
         },
         {
           "http://example.com/terms#name": "La Sapinière",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.728387687195009",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.787494990802564"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.456478870613734",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.50441476375484"
         },
         {
           "http://example.com/terms#name": "La Sapinière",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.728387687195009",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.787494990802564"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.456478870613734",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.50441476375484"
         },
         {
           "http://example.com/terms#name": "La Sapinière",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.728387687195009",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.787494990802564"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.456478870613734",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.50441476375484"
         },
         {
           "http://example.com/terms#name": "La Saulx",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.730792911094957",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.09343741198345"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4435161295663197",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.63163669120231"
         },
         {
           "http://example.com/terms#name": "La Salte",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.662715086616986",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.75339124362055"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4001402965883294",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.345906440337565"
         },
         {
           "http://example.com/terms#name": "La Savinne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2034240798758202",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.230954906274256"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.173257959813752",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.682583847585015"
         },
         {
           "http://example.com/terms#name": "La Savenière",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1167411776910052",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.89629350867577"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7066959528496626",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.69379809854057"
         },
         {
           "http://example.com/terms#name": "La Sablonnière",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0964560213379406",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.48819533139728"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0249516817951476",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.93810321557591"
         },
         {
           "http://example.com/terms#name": "La Sablonnière",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.126688079805381",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.36738139152294"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0561709076895647",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.78423161195185"
         },
         {
           "http://example.com/terms#name": "La Sablonnière",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.126688079805381",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.36738139152294"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0561709076895647",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.78423161195185"
         },
         {
           "http://example.com/terms#name": "La Sablonnière",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.126688079805381",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.36738139152294"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0561709076895647",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.78423161195185"
         },
         {
           "http://example.com/terms#name": "La Sablonnière",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.126688079805381",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.36738139152294"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0561709076895647",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.78423161195185"
         },
         {
           "http://example.com/terms#name": "La Sablonnière",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.126688079805381",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.36738139152294"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0561709076895647",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.78423161195185"
         },
         {
           "http://example.com/terms#name": "La Sapinette",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.895015665197922",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.58022913864594"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.782955767717977",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.82486634428236"
         },
         {
           "http://example.com/terms#name": "La Sault",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4361003200264597",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.549522295930764"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8305776705269325",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.160122940322026"
         },
         {
           "http://example.com/terms#name": "La Sablière",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.054159227305315",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.15100049013237"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5938250133256564",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.928057329117664"
         }
       ],
       "total_children_count": 23,
@@ -376,63 +358,59 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4893.jsonld#150783"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4893.jsonld#159221"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4893.jsonld#161074"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4893.jsonld#168176"
+          ]
+        }
+      ]
     },
     {
       "token_string": "a",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4893.jsonld#142393",
-              "@type": "tree:Node",
-              "token_string": "l"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4893.jsonld#161071",
-              "@type": "tree:Node",
-              "token_string": "v"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4893.jsonld#162603",
-              "@type": "tree:Node",
-              "token_string": "pin"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4893.jsonld#172980",
-              "@type": "tree:Node",
-              "token_string": "ul"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4893.jsonld#175482",
-              "@type": "tree:Node",
-              "token_string": "bl"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "l": [
+          "4893",
+          "142393"
+        ],
+        "v": [
+          "4893",
+          "161071"
+        ],
+        "pin": [
+          "4893",
+          "162603"
+        ],
+        "ul": [
+          "4893",
+          "172980"
+        ],
+        "bl": [
+          "4893",
+          "175482"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4893.jsonld#150782",
         "@type": "tree:Node"
@@ -440,103 +418,103 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "La Salettestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3516235900567266",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.99761714553945"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1436372790347455",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.076045606521944"
         },
         {
           "http://example.com/terms#name": "La Sapinière",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.176028913553861",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.40310885301859"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3915428030707977",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.343285121361085"
         },
         {
           "http://example.com/terms#name": "La Sapinière",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.728387687195009",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.787494990802564"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.456478870613734",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.50441476375484"
         },
         {
           "http://example.com/terms#name": "La Sapinière",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.728387687195009",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.787494990802564"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.456478870613734",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.50441476375484"
         },
         {
           "http://example.com/terms#name": "La Sapinière",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.728387687195009",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.787494990802564"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.456478870613734",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.50441476375484"
         },
         {
           "http://example.com/terms#name": "La Sapinière",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.728387687195009",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.787494990802564"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.456478870613734",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.50441476375484"
         },
         {
           "http://example.com/terms#name": "La Sapinière",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.728387687195009",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.787494990802564"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.456478870613734",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.50441476375484"
         },
         {
           "http://example.com/terms#name": "La Saulx",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.730792911094957",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.09343741198345"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4435161295663197",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.63163669120231"
         },
         {
           "http://example.com/terms#name": "La Salte",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.662715086616986",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.75339124362055"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4001402965883294",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.345906440337565"
         },
         {
           "http://example.com/terms#name": "La Savinne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2034240798758202",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.230954906274256"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.173257959813752",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.682583847585015"
         },
         {
           "http://example.com/terms#name": "La Savenière",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1167411776910052",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.89629350867577"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7066959528496626",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.69379809854057"
         },
         {
           "http://example.com/terms#name": "La Sablonnière",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0964560213379406",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.48819533139728"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0249516817951476",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.93810321557591"
         },
         {
           "http://example.com/terms#name": "La Sablonnière",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.126688079805381",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.36738139152294"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0561709076895647",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.78423161195185"
         },
         {
           "http://example.com/terms#name": "La Sablonnière",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.126688079805381",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.36738139152294"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0561709076895647",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.78423161195185"
         },
         {
           "http://example.com/terms#name": "La Sablonnière",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.126688079805381",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.36738139152294"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0561709076895647",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.78423161195185"
         },
         {
           "http://example.com/terms#name": "La Sablonnière",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.126688079805381",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.36738139152294"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0561709076895647",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.78423161195185"
         },
         {
           "http://example.com/terms#name": "La Sablonnière",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.126688079805381",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.36738139152294"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0561709076895647",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.78423161195185"
         },
         {
           "http://example.com/terms#name": "La Sapinette",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.895015665197922",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.58022913864594"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.782955767717977",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.82486634428236"
         },
         {
           "http://example.com/terms#name": "La Sault",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4361003200264597",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.549522295930764"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8305776705269325",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.160122940322026"
         },
         {
           "http://example.com/terms#name": "La Sablière",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.054159227305315",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.15100049013237"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5938250133256564",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.928057329117664"
         }
       ],
       "total_children_count": 15,
@@ -614,33 +592,53 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
-    },
-    {
-      "token_string": "tr",
-      "triples": [],
-      "children": [
+      "triples_metadata": [],
+      "childlist": [
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment4893.jsonld#159222",
-              "@type": "tree:Node",
-              "token_string": "ale"
-            }
+            "/streets/fragment4893.jsonld#142393"
           ]
         },
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment4893.jsonld#159223",
-              "@type": "tree:Node",
-              "token_string": "ée"
-            }
+            "/streets/fragment4893.jsonld#161071"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4893.jsonld#162603"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4893.jsonld#172980"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4893.jsonld#175482"
           ]
         }
-      ],
+      ]
+    },
+    {
+      "token_string": "tr",
+      "triples": [],
+      "children": {
+        "ale": [
+          "4893",
+          "159222"
+        ],
+        "ée": [
+          "4893",
+          "159223"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4893.jsonld#150782",
         "@type": "tree:Node"
@@ -648,28 +646,28 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "La Strale",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3633974400202447",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.53931039155907"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.832193140504249",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.079296956900436"
         },
         {
           "http://example.com/terms#name": "La Strée",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9039151490444426",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.990475020864174"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4636532360724295",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.94610891686548"
         },
         {
           "http://example.com/terms#name": "La Strée",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.883785436853485",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.61798447497507"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3337055020413136",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.75437753918512"
         },
         {
           "http://example.com/terms#name": "La Strée",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.883785436853485",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.61798447497507"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3337055020413136",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.75437753918512"
         },
         {
           "http://example.com/terms#name": "La Strée",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.883785436853485",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.61798447497507"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3337055020413136",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.75437753918512"
         }
       ],
       "total_children_count": 2,
@@ -692,17 +690,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4893.jsonld#159222"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4893.jsonld#159223"
+          ]
+        }
+      ]
     },
     {
       "token_string": "ale",
       "triples": [
         {
           "http://example.com/terms#name": "La Strale",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3633974400202447",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.53931039155907"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.832193140504249",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.079296956900436"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4893.jsonld#159221",
         "@type": "tree:Node"
@@ -710,8 +723,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "La Strale",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3633974400202447",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.53931039155907"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.832193140504249",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.079296956900436"
         }
       ],
       "total_children_count": 0,
@@ -727,32 +740,34 @@
       ],
       "triples_metadata": [
         "La Strale"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "ée",
       "triples": [
         {
           "http://example.com/terms#name": "La Strée",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9039151490444426",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.990475020864174"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4636532360724295",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.94610891686548"
         },
         {
           "http://example.com/terms#name": "La Strée",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.883785436853485",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.61798447497507"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3337055020413136",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.75437753918512"
         },
         {
           "http://example.com/terms#name": "La Strée",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.883785436853485",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.61798447497507"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3337055020413136",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.75437753918512"
         },
         {
           "http://example.com/terms#name": "La Strée",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.883785436853485",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.61798447497507"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3337055020413136",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.75437753918512"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4893.jsonld#159221",
         "@type": "tree:Node"
@@ -760,23 +775,23 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "La Strée",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9039151490444426",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.990475020864174"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4636532360724295",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.94610891686548"
         },
         {
           "http://example.com/terms#name": "La Strée",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.883785436853485",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.61798447497507"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3337055020413136",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.75437753918512"
         },
         {
           "http://example.com/terms#name": "La Strée",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.883785436853485",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.61798447497507"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3337055020413136",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.75437753918512"
         },
         {
           "http://example.com/terms#name": "La Strée",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.883785436853485",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.61798447497507"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3337055020413136",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.75437753918512"
         }
       ],
       "total_children_count": 0,
@@ -798,33 +813,22 @@
         "La Strée",
         "La Strée",
         "La Strée"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "v",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4893.jsonld#161072",
-              "@type": "tree:Node",
-              "token_string": "inne"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4893.jsonld#161073",
-              "@type": "tree:Node",
-              "token_string": "enière"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "inne": [
+          "4893",
+          "161072"
+        ],
+        "enière": [
+          "4893",
+          "161073"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4893.jsonld#150783",
         "@type": "tree:Node"
@@ -832,13 +836,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "La Savinne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2034240798758202",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.230954906274256"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.173257959813752",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.682583847585015"
         },
         {
           "http://example.com/terms#name": "La Savenière",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1167411776910052",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.89629350867577"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7066959528496626",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.69379809854057"
         }
       ],
       "total_children_count": 2,
@@ -858,17 +862,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4893.jsonld#161072"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4893.jsonld#161073"
+          ]
+        }
+      ]
     },
     {
       "token_string": "inne",
       "triples": [
         {
           "http://example.com/terms#name": "La Savinne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2034240798758202",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.230954906274256"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.173257959813752",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.682583847585015"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4893.jsonld#161071",
         "@type": "tree:Node"
@@ -876,8 +895,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "La Savinne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2034240798758202",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.230954906274256"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.173257959813752",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.682583847585015"
         }
       ],
       "total_children_count": 0,
@@ -893,17 +912,19 @@
       ],
       "triples_metadata": [
         "La Savinne"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "enière",
       "triples": [
         {
           "http://example.com/terms#name": "La Savenière",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1167411776910052",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.89629350867577"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7066959528496626",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.69379809854057"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4893.jsonld#161071",
         "@type": "tree:Node"
@@ -911,8 +932,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "La Savenière",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1167411776910052",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.89629350867577"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7066959528496626",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.69379809854057"
         }
       ],
       "total_children_count": 0,
@@ -928,17 +949,19 @@
       ],
       "triples_metadata": [
         "La Savenière"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "pinette",
       "triples": [
         {
           "http://example.com/terms#name": "La Spinette",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.219665274897145",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.5058606275239"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.156887611921868",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.72535595058019"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4893.jsonld#150782",
         "@type": "tree:Node"
@@ -946,8 +969,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "La Spinette",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.219665274897145",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.5058606275239"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.156887611921868",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.72535595058019"
         }
       ],
       "total_children_count": 0,
@@ -963,33 +986,22 @@
       ],
       "triples_metadata": [
         "La Spinette"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "pin",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4893.jsonld#162604",
-              "@type": "tree:Node",
-              "token_string": "ière"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4893.jsonld#162605",
-              "@type": "tree:Node",
-              "token_string": "ette"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "ière": [
+          "4893",
+          "162604"
+        ],
+        "ette": [
+          "4893",
+          "162605"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4893.jsonld#150783",
         "@type": "tree:Node"
@@ -997,38 +1009,38 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "La Sapinière",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.176028913553861",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.40310885301859"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3915428030707977",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.343285121361085"
         },
         {
           "http://example.com/terms#name": "La Sapinière",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.728387687195009",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.787494990802564"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.456478870613734",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.50441476375484"
         },
         {
           "http://example.com/terms#name": "La Sapinière",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.728387687195009",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.787494990802564"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.456478870613734",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.50441476375484"
         },
         {
           "http://example.com/terms#name": "La Sapinière",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.728387687195009",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.787494990802564"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.456478870613734",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.50441476375484"
         },
         {
           "http://example.com/terms#name": "La Sapinière",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.728387687195009",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.787494990802564"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.456478870613734",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.50441476375484"
         },
         {
           "http://example.com/terms#name": "La Sapinière",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.728387687195009",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.787494990802564"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.456478870613734",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.50441476375484"
         },
         {
           "http://example.com/terms#name": "La Sapinette",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.895015665197922",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.58022913864594"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.782955767717977",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.82486634428236"
         }
       ],
       "total_children_count": 2,
@@ -1053,42 +1065,57 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4893.jsonld#162604"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4893.jsonld#162605"
+          ]
+        }
+      ]
     },
     {
       "token_string": "ière",
       "triples": [
         {
           "http://example.com/terms#name": "La Sapinière",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.176028913553861",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.40310885301859"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3915428030707977",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.343285121361085"
         },
         {
           "http://example.com/terms#name": "La Sapinière",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.728387687195009",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.787494990802564"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.456478870613734",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.50441476375484"
         },
         {
           "http://example.com/terms#name": "La Sapinière",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.728387687195009",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.787494990802564"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.456478870613734",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.50441476375484"
         },
         {
           "http://example.com/terms#name": "La Sapinière",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.728387687195009",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.787494990802564"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.456478870613734",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.50441476375484"
         },
         {
           "http://example.com/terms#name": "La Sapinière",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.728387687195009",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.787494990802564"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.456478870613734",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.50441476375484"
         },
         {
           "http://example.com/terms#name": "La Sapinière",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.728387687195009",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.787494990802564"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.456478870613734",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.50441476375484"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4893.jsonld#162603",
         "@type": "tree:Node"
@@ -1096,33 +1123,33 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "La Sapinière",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.176028913553861",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.40310885301859"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3915428030707977",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.343285121361085"
         },
         {
           "http://example.com/terms#name": "La Sapinière",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.728387687195009",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.787494990802564"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.456478870613734",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.50441476375484"
         },
         {
           "http://example.com/terms#name": "La Sapinière",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.728387687195009",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.787494990802564"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.456478870613734",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.50441476375484"
         },
         {
           "http://example.com/terms#name": "La Sapinière",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.728387687195009",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.787494990802564"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.456478870613734",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.50441476375484"
         },
         {
           "http://example.com/terms#name": "La Sapinière",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.728387687195009",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.787494990802564"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.456478870613734",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.50441476375484"
         },
         {
           "http://example.com/terms#name": "La Sapinière",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.728387687195009",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.787494990802564"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.456478870613734",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.50441476375484"
         }
       ],
       "total_children_count": 0,
@@ -1148,17 +1175,19 @@
         "La Sapinière",
         "La Sapinière",
         "La Sapinière"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "ette",
       "triples": [
         {
           "http://example.com/terms#name": "La Sapinette",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.895015665197922",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.58022913864594"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.782955767717977",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.82486634428236"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4893.jsonld#162603",
         "@type": "tree:Node"
@@ -1166,8 +1195,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "La Sapinette",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.895015665197922",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.58022913864594"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.782955767717977",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.82486634428236"
         }
       ],
       "total_children_count": 0,
@@ -1183,33 +1212,22 @@
       ],
       "triples_metadata": [
         "La Sapinette"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "e",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4893.jsonld#168177",
-              "@type": "tree:Node",
-              "token_string": "vraille"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4893.jsonld#168178",
-              "@type": "tree:Node",
-              "token_string": "nte"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "vraille": [
+          "4893",
+          "168177"
+        ],
+        "nte": [
+          "4893",
+          "168178"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4893.jsonld#150782",
         "@type": "tree:Node"
@@ -1217,13 +1235,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "La Sevraille",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.332344342685532",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.70878764793696"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.025050873626125",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.06706844024676"
         },
         {
           "http://example.com/terms#name": "La Sente",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.042882300606045",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.63954587805247"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5435376515752814",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.82103150427411"
         }
       ],
       "total_children_count": 2,
@@ -1243,17 +1261,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4893.jsonld#168177"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4893.jsonld#168178"
+          ]
+        }
+      ]
     },
     {
       "token_string": "vraille",
       "triples": [
         {
           "http://example.com/terms#name": "La Sevraille",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.332344342685532",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.70878764793696"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.025050873626125",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.06706844024676"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4893.jsonld#168176",
         "@type": "tree:Node"
@@ -1261,8 +1294,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "La Sevraille",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.332344342685532",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.70878764793696"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.025050873626125",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.06706844024676"
         }
       ],
       "total_children_count": 0,
@@ -1278,17 +1311,19 @@
       ],
       "triples_metadata": [
         "La Sevraille"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "nte",
       "triples": [
         {
           "http://example.com/terms#name": "La Sente",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.042882300606045",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.63954587805247"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5435376515752814",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.82103150427411"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4893.jsonld#168176",
         "@type": "tree:Node"
@@ -1296,8 +1331,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "La Sente",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.042882300606045",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.63954587805247"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5435376515752814",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.82103150427411"
         }
       ],
       "total_children_count": 0,
@@ -1313,33 +1348,22 @@
       ],
       "triples_metadata": [
         "La Sente"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "ul",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4893.jsonld#172981",
-              "@type": "tree:Node",
-              "token_string": "x"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4893.jsonld#172982",
-              "@type": "tree:Node",
-              "token_string": "t"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "x": [
+          "4893",
+          "172981"
+        ],
+        "t": [
+          "4893",
+          "172982"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4893.jsonld#150783",
         "@type": "tree:Node"
@@ -1347,13 +1371,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "La Saulx",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.730792911094957",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.09343741198345"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4435161295663197",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.63163669120231"
         },
         {
           "http://example.com/terms#name": "La Sault",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4361003200264597",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.549522295930764"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8305776705269325",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.160122940322026"
         }
       ],
       "total_children_count": 2,
@@ -1373,17 +1397,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4893.jsonld#172981"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4893.jsonld#172982"
+          ]
+        }
+      ]
     },
     {
       "token_string": "x",
       "triples": [
         {
           "http://example.com/terms#name": "La Saulx",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.730792911094957",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.09343741198345"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4435161295663197",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.63163669120231"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4893.jsonld#172980",
         "@type": "tree:Node"
@@ -1391,8 +1430,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "La Saulx",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.730792911094957",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.09343741198345"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4435161295663197",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.63163669120231"
         }
       ],
       "total_children_count": 0,
@@ -1408,17 +1447,19 @@
       ],
       "triples_metadata": [
         "La Saulx"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "t",
       "triples": [
         {
           "http://example.com/terms#name": "La Sault",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4361003200264597",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.549522295930764"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8305776705269325",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.160122940322026"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4893.jsonld#172980",
         "@type": "tree:Node"
@@ -1426,8 +1467,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "La Sault",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4361003200264597",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.549522295930764"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8305776705269325",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.160122940322026"
         }
       ],
       "total_children_count": 0,
@@ -1443,33 +1484,22 @@
       ],
       "triples_metadata": [
         "La Sault"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "bl",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4893.jsonld#175483",
-              "@type": "tree:Node",
-              "token_string": "onnière"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4893.jsonld#175484",
-              "@type": "tree:Node",
-              "token_string": "ière"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "onnière": [
+          "4893",
+          "175483"
+        ],
+        "ière": [
+          "4893",
+          "175484"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4893.jsonld#150783",
         "@type": "tree:Node"
@@ -1477,38 +1507,38 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "La Sablonnière",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0964560213379406",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.48819533139728"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0249516817951476",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.93810321557591"
         },
         {
           "http://example.com/terms#name": "La Sablonnière",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.126688079805381",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.36738139152294"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0561709076895647",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.78423161195185"
         },
         {
           "http://example.com/terms#name": "La Sablonnière",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.126688079805381",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.36738139152294"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0561709076895647",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.78423161195185"
         },
         {
           "http://example.com/terms#name": "La Sablonnière",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.126688079805381",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.36738139152294"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0561709076895647",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.78423161195185"
         },
         {
           "http://example.com/terms#name": "La Sablonnière",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.126688079805381",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.36738139152294"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0561709076895647",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.78423161195185"
         },
         {
           "http://example.com/terms#name": "La Sablonnière",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.126688079805381",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.36738139152294"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0561709076895647",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.78423161195185"
         },
         {
           "http://example.com/terms#name": "La Sablière",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.054159227305315",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.15100049013237"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5938250133256564",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.928057329117664"
         }
       ],
       "total_children_count": 2,
@@ -1533,42 +1563,57 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4893.jsonld#175483"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4893.jsonld#175484"
+          ]
+        }
+      ]
     },
     {
       "token_string": "onnière",
       "triples": [
         {
           "http://example.com/terms#name": "La Sablonnière",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0964560213379406",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.48819533139728"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0249516817951476",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.93810321557591"
         },
         {
           "http://example.com/terms#name": "La Sablonnière",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.126688079805381",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.36738139152294"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0561709076895647",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.78423161195185"
         },
         {
           "http://example.com/terms#name": "La Sablonnière",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.126688079805381",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.36738139152294"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0561709076895647",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.78423161195185"
         },
         {
           "http://example.com/terms#name": "La Sablonnière",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.126688079805381",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.36738139152294"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0561709076895647",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.78423161195185"
         },
         {
           "http://example.com/terms#name": "La Sablonnière",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.126688079805381",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.36738139152294"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0561709076895647",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.78423161195185"
         },
         {
           "http://example.com/terms#name": "La Sablonnière",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.126688079805381",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.36738139152294"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0561709076895647",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.78423161195185"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4893.jsonld#175482",
         "@type": "tree:Node"
@@ -1576,33 +1621,33 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "La Sablonnière",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0964560213379406",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.48819533139728"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0249516817951476",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.93810321557591"
         },
         {
           "http://example.com/terms#name": "La Sablonnière",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.126688079805381",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.36738139152294"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0561709076895647",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.78423161195185"
         },
         {
           "http://example.com/terms#name": "La Sablonnière",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.126688079805381",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.36738139152294"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0561709076895647",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.78423161195185"
         },
         {
           "http://example.com/terms#name": "La Sablonnière",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.126688079805381",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.36738139152294"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0561709076895647",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.78423161195185"
         },
         {
           "http://example.com/terms#name": "La Sablonnière",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.126688079805381",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.36738139152294"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0561709076895647",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.78423161195185"
         },
         {
           "http://example.com/terms#name": "La Sablonnière",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.126688079805381",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.36738139152294"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0561709076895647",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.78423161195185"
         }
       ],
       "total_children_count": 0,
@@ -1628,17 +1673,19 @@
         "La Sablonnière",
         "La Sablonnière",
         "La Sablonnière"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "ière",
       "triples": [
         {
           "http://example.com/terms#name": "La Sablière",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.054159227305315",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.15100049013237"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5938250133256564",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.928057329117664"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4893.jsonld#175482",
         "@type": "tree:Node"
@@ -1646,8 +1693,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "La Sablière",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.054159227305315",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.15100049013237"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5938250133256564",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.928057329117664"
         }
       ],
       "total_children_count": 0,
@@ -1663,7 +1710,8 @@
       ],
       "triples_metadata": [
         "La Sablière"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

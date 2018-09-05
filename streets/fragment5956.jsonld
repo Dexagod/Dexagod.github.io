@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "W",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5956.jsonld#137931",
-              "@type": "tree:Node",
-              "token_string": "archimont"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5956.jsonld#137932",
-              "@type": "tree:Node",
-              "token_string": "ésomont"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "archimont": [
+          "5956",
+          "137931"
+        ],
+        "ésomont": [
+          "5956",
+          "137932"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4020.jsonld#108789",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Allée de Warchimont",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8049951788292344",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.17533337293128"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.652102038824236",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.313758378580246"
         },
         {
           "http://example.com/terms#name": "Allée de Wésomont",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.199161977565041",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.18716293997396"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.677683634585837",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.66755550938928"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5956.jsonld#137931"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5956.jsonld#137932"
+          ]
+        }
+      ]
     },
     {
       "token_string": "archimont",
       "triples": [
         {
           "http://example.com/terms#name": "Allée de Warchimont",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8049951788292344",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.17533337293128"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.652102038824236",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.313758378580246"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5956.jsonld#137930",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Allée de Warchimont",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8049951788292344",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.17533337293128"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.652102038824236",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.313758378580246"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Allée de Warchimont"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "ésomont",
       "triples": [
         {
           "http://example.com/terms#name": "Allée de Wésomont",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.199161977565041",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.18716293997396"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.677683634585837",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.66755550938928"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5956.jsonld#137930",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Allée de Wésomont",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.199161977565041",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.18716293997396"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.677683634585837",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.66755550938928"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Allée de Wésomont"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

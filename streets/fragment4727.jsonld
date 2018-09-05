@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "A",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4727.jsonld#164766",
-              "@type": "tree:Node",
-              "token_string": "ubépines"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4727.jsonld#164767",
-              "@type": "tree:Node",
-              "token_string": "sipré"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "ubépines": [
+          "4727",
+          "164766"
+        ],
+        "sipré": [
+          "4727",
+          "164767"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4224.jsonld#104362",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue de Aubépines",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.060260273400073",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.27171621449813"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0295518393153276",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.796209829053495"
         },
         {
           "http://example.com/terms#name": "Rue de Asipré",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2779226540959354",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.441180312836494"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6012163170794547",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.97024650914369"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4727.jsonld#164766"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4727.jsonld#164767"
+          ]
+        }
+      ]
     },
     {
       "token_string": "ubépines",
       "triples": [
         {
           "http://example.com/terms#name": "Rue de Aubépines",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.060260273400073",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.27171621449813"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0295518393153276",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.796209829053495"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4727.jsonld#164765",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue de Aubépines",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.060260273400073",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.27171621449813"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0295518393153276",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.796209829053495"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Rue de Aubépines"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "sipré",
       "triples": [
         {
           "http://example.com/terms#name": "Rue de Asipré",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2779226540959354",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.441180312836494"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6012163170794547",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.97024650914369"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4727.jsonld#164765",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue de Asipré",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2779226540959354",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.441180312836494"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6012163170794547",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.97024650914369"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Rue de Asipré"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

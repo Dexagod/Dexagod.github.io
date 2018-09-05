@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "á ",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6177.jsonld#123371",
-              "@type": "tree:Node",
-              "token_string": "Tout Vent"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6177.jsonld#123372",
-              "@type": "tree:Node",
-              "token_string": "Coulon"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6177.jsonld#162842",
-              "@type": "tree:Node",
-              "token_string": "Many"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "Tout Vent": [
+          "6177",
+          "123371"
+        ],
+        "Coulon": [
+          "6177",
+          "123372"
+        ],
+        "Many": [
+          "6177",
+          "162842"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment5952.jsonld#160975",
         "@type": "tree:Node"
@@ -62,18 +44,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Tienne á Tout Vent",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.037638581199879",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.28995256986422"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4101930548236705",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.15574402018493"
         },
         {
           "http://example.com/terms#name": "Tienne á Coulon",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.454900225944999",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.50792428041716"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6128963628369055",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.14874324020427"
         },
         {
           "http://example.com/terms#name": "Tienne á Many",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.634395367335531",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.740420525837635"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2389958966629564",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.20581281497838"
         }
       ],
       "total_children_count": 3,
@@ -99,17 +81,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6177.jsonld#123371"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6177.jsonld#123372"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6177.jsonld#162842"
+          ]
+        }
+      ]
     },
     {
       "token_string": "Tout Vent",
       "triples": [
         {
           "http://example.com/terms#name": "Tienne á Tout Vent",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.037638581199879",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.28995256986422"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4101930548236705",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.15574402018493"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6177.jsonld#123370",
         "@type": "tree:Node"
@@ -117,8 +120,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Tienne á Tout Vent",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.037638581199879",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.28995256986422"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4101930548236705",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.15574402018493"
         }
       ],
       "total_children_count": 0,
@@ -134,17 +137,19 @@
       ],
       "triples_metadata": [
         "Tienne á Tout Vent"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "Coulon",
       "triples": [
         {
           "http://example.com/terms#name": "Tienne á Coulon",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.454900225944999",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.50792428041716"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6128963628369055",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.14874324020427"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6177.jsonld#123370",
         "@type": "tree:Node"
@@ -152,8 +157,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Tienne á Coulon",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.454900225944999",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.50792428041716"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6128963628369055",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.14874324020427"
         }
       ],
       "total_children_count": 0,
@@ -169,17 +174,19 @@
       ],
       "triples_metadata": [
         "Tienne á Coulon"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "Many",
       "triples": [
         {
           "http://example.com/terms#name": "Tienne á Many",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.634395367335531",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.740420525837635"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2389958966629564",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.20581281497838"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6177.jsonld#123370",
         "@type": "tree:Node"
@@ -187,8 +194,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Tienne á Many",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.634395367335531",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.740420525837635"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2389958966629564",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.20581281497838"
         }
       ],
       "total_children_count": 0,
@@ -204,7 +211,8 @@
       ],
       "triples_metadata": [
         "Tienne á Many"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

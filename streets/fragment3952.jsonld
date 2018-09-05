@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "Z",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3952.jsonld#117767",
-              "@type": "tree:Node",
-              "token_string": "odiaque"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3952.jsonld#117768",
-              "@type": "tree:Node",
-              "token_string": "énith"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "odiaque": [
+          "3952",
+          "117767"
+        ],
+        "énith": [
+          "3952",
+          "117768"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment3731.jsonld#104697",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Avenue du Zodiaque",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.944751413930149",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.45042868207762"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.000752747921391",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.745039972165195"
         },
         {
           "http://example.com/terms#name": "Avenue du Zénith",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.134708852263003",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.149587064720414"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4520993299253924",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.817797332489974"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3952.jsonld#117767"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3952.jsonld#117768"
+          ]
+        }
+      ]
     },
     {
       "token_string": "odiaque",
       "triples": [
         {
           "http://example.com/terms#name": "Avenue du Zodiaque",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.944751413930149",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.45042868207762"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.000752747921391",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.745039972165195"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3952.jsonld#117766",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Avenue du Zodiaque",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.944751413930149",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.45042868207762"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.000752747921391",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.745039972165195"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Avenue du Zodiaque"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "énith",
       "triples": [
         {
           "http://example.com/terms#name": "Avenue du Zénith",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.134708852263003",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.149587064720414"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4520993299253924",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.817797332489974"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3952.jsonld#117766",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Avenue du Zénith",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.134708852263003",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.149587064720414"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4520993299253924",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.817797332489974"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Avenue du Zénith"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

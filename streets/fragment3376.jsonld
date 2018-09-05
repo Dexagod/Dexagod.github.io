@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "K",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3376.jsonld#18921",
-              "@type": "tree:Node",
-              "token_string": "atharinastraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3376.jsonld#18922",
-              "@type": "tree:Node",
-              "token_string": "ristoffelstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3376.jsonld#24360",
-              "@type": "tree:Node",
-              "token_string": "wintensstraat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "atharinastraat": [
+          "3376",
+          "18921"
+        ],
+        "ristoffelstraat": [
+          "3376",
+          "18922"
+        ],
+        "wintensstraat": [
+          "3376",
+          "24360"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment337.jsonld#2163",
         "@type": "tree:Node"
@@ -62,18 +44,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "St-Katharinastraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.126032413199749",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.029858781856355"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.821411947214442",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.052028062146746"
         },
         {
           "http://example.com/terms#name": "St-Kristoffelstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.004733382503003",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.107900696729764"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.596377856540605",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.772293202456595"
         },
         {
           "http://example.com/terms#name": "St-Kwintensstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.491265944715698",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.438649409782"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4600583497324573",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.67131351080287"
         }
       ],
       "total_children_count": 3,
@@ -99,17 +81,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3376.jsonld#18921"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3376.jsonld#18922"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3376.jsonld#24360"
+          ]
+        }
+      ]
     },
     {
       "token_string": "atharinastraat",
       "triples": [
         {
           "http://example.com/terms#name": "St-Katharinastraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.126032413199749",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.029858781856355"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.821411947214442",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.052028062146746"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3376.jsonld#18920",
         "@type": "tree:Node"
@@ -117,8 +120,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "St-Katharinastraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.126032413199749",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.029858781856355"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.821411947214442",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.052028062146746"
         }
       ],
       "total_children_count": 0,
@@ -134,17 +137,19 @@
       ],
       "triples_metadata": [
         "St-Katharinastraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "ristoffelstraat",
       "triples": [
         {
           "http://example.com/terms#name": "St-Kristoffelstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.004733382503003",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.107900696729764"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.596377856540605",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.772293202456595"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3376.jsonld#18920",
         "@type": "tree:Node"
@@ -152,8 +157,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "St-Kristoffelstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.004733382503003",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.107900696729764"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.596377856540605",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.772293202456595"
         }
       ],
       "total_children_count": 0,
@@ -169,17 +174,19 @@
       ],
       "triples_metadata": [
         "St-Kristoffelstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "wintensstraat",
       "triples": [
         {
           "http://example.com/terms#name": "St-Kwintensstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.491265944715698",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.438649409782"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4600583497324573",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.67131351080287"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3376.jsonld#18920",
         "@type": "tree:Node"
@@ -187,8 +194,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "St-Kwintensstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.491265944715698",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.438649409782"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4600583497324573",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.67131351080287"
         }
       ],
       "total_children_count": 0,
@@ -204,7 +211,8 @@
       ],
       "triples_metadata": [
         "St-Kwintensstraat"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

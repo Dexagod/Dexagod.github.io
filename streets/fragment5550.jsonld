@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "t",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5550.jsonld#151372",
-              "@type": "tree:Node",
-              "token_string": "racmans"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5550.jsonld#151373",
-              "@type": "tree:Node",
-              "token_string": "einbach"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5550.jsonld#154357",
-              "@type": "tree:Node",
-              "token_string": "iernet"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "racmans": [
+          "5550",
+          "151372"
+        ],
+        "einbach": [
+          "5550",
+          "151373"
+        ],
+        "iernet": [
+          "5550",
+          "154357"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment6371.jsonld#122528",
         "@type": "tree:Node"
@@ -62,18 +44,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Jules Stracmans",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.16387467832236",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.75294548582501"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5131235987237974",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.954466522504944"
         },
         {
           "http://example.com/terms#name": "Rue Jules Steinbach",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0966759388561473",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.26859119774109"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.863126347377497",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.43990735379283"
         },
         {
           "http://example.com/terms#name": "Rue Jules Stiernet",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9594768587553593",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.310399598185725"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.287467856400612",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.262966565450114"
         }
       ],
       "total_children_count": 3,
@@ -99,17 +81,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5550.jsonld#151372"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5550.jsonld#151373"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5550.jsonld#154357"
+          ]
+        }
+      ]
     },
     {
       "token_string": "racmans",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Jules Stracmans",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.16387467832236",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.75294548582501"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5131235987237974",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.954466522504944"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5550.jsonld#151371",
         "@type": "tree:Node"
@@ -117,8 +120,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Jules Stracmans",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.16387467832236",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.75294548582501"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5131235987237974",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.954466522504944"
         }
       ],
       "total_children_count": 0,
@@ -134,17 +137,19 @@
       ],
       "triples_metadata": [
         "Rue Jules Stracmans"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "einbach",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Jules Steinbach",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0966759388561473",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.26859119774109"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.863126347377497",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.43990735379283"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5550.jsonld#151371",
         "@type": "tree:Node"
@@ -152,8 +157,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Jules Steinbach",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0966759388561473",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.26859119774109"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.863126347377497",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.43990735379283"
         }
       ],
       "total_children_count": 0,
@@ -169,17 +174,19 @@
       ],
       "triples_metadata": [
         "Rue Jules Steinbach"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "iernet",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Jules Stiernet",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9594768587553593",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.310399598185725"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.287467856400612",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.262966565450114"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5550.jsonld#151371",
         "@type": "tree:Node"
@@ -187,8 +194,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Jules Stiernet",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9594768587553593",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.310399598185725"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.287467856400612",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.262966565450114"
         }
       ],
       "total_children_count": 0,
@@ -204,7 +211,8 @@
       ],
       "triples_metadata": [
         "Rue Jules Stiernet"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

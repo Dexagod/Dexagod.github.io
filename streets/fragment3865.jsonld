@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "c",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3865.jsonld#149084",
-              "@type": "tree:Node",
-              "token_string": "onstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3865.jsonld#149085",
-              "@type": "tree:Node",
-              "token_string": "e aux Îles"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "onstraat": [
+          "3865",
+          "149084"
+        ],
+        "e aux Îles": [
+          "3865",
+          "149085"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment264.jsonld#867",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Faconstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0440114226157213",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.80052955910986"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4701285812322067",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.879808494099784"
         },
         {
           "http://example.com/terms#name": "Face aux Îles",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1375080879184254",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.606407154767226"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.53105108089728",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.936917778130244"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3865.jsonld#149084"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3865.jsonld#149085"
+          ]
+        }
+      ]
     },
     {
       "token_string": "onstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Faconstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0440114226157213",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.80052955910986"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4701285812322067",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.879808494099784"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3865.jsonld#149083",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Faconstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0440114226157213",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.80052955910986"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4701285812322067",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.879808494099784"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Faconstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "e aux Îles",
       "triples": [
         {
           "http://example.com/terms#name": "Face aux Îles",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1375080879184254",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.606407154767226"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.53105108089728",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.936917778130244"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3865.jsonld#149083",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Face aux Îles",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1375080879184254",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.606407154767226"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.53105108089728",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.936917778130244"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Face aux Îles"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

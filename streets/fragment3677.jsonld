@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "ga",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3677.jsonld#91108",
-              "@type": "tree:Node",
-              "token_string": "ardenstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3677.jsonld#91109",
-              "@type": "tree:Node",
-              "token_string": "ertstraat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "ardenstraat": [
+          "3677",
+          "91108"
+        ],
+        "ertstraat": [
+          "3677",
+          "91109"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment169.jsonld#2590",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Pangaardenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.513890645083717",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.422918074589944"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.601610471658701",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.37809168168526"
         },
         {
           "http://example.com/terms#name": "Pangaertstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1094407055942788",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.186943603380904"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5424334882195603",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.58636074824873"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3677.jsonld#91108"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3677.jsonld#91109"
+          ]
+        }
+      ]
     },
     {
       "token_string": "ardenstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Pangaardenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.513890645083717",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.422918074589944"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.601610471658701",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.37809168168526"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3677.jsonld#91107",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Pangaardenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.513890645083717",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.422918074589944"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.601610471658701",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.37809168168526"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Pangaardenstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "ertstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Pangaertstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1094407055942788",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.186943603380904"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5424334882195603",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.58636074824873"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3677.jsonld#91107",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Pangaertstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1094407055942788",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.186943603380904"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5424334882195603",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.58636074824873"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Pangaertstraat"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "T",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1943.jsonld#95389",
-              "@type": "tree:Node",
-              "token_string": "ackstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1943.jsonld#95390",
-              "@type": "tree:Node",
-              "token_string": "roostlaan"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "ackstraat": [
+          "1943",
+          "95389"
+        ],
+        "roostlaan": [
+          "1943",
+          "95390"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment1578.jsonld#14063",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Pieter Tackstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.523922459505902",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.970306167328324"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8178790399229903",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.865580564297254"
         },
         {
           "http://example.com/terms#name": "Pieter Troostlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.514993778281386",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.72472415166924"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.564993552410308",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.302323546324374"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1943.jsonld#95389"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1943.jsonld#95390"
+          ]
+        }
+      ]
     },
     {
       "token_string": "ackstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Pieter Tackstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.523922459505902",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.970306167328324"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8178790399229903",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.865580564297254"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1943.jsonld#95388",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Pieter Tackstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.523922459505902",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.970306167328324"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8178790399229903",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.865580564297254"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Pieter Tackstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "roostlaan",
       "triples": [
         {
           "http://example.com/terms#name": "Pieter Troostlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.514993778281386",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.72472415166924"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.564993552410308",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.302323546324374"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1943.jsonld#95388",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Pieter Troostlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.514993778281386",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.72472415166924"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.564993552410308",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.302323546324374"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Pieter Troostlaan"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

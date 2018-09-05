@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,48 +23,24 @@
     {
       "token_string": " ",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2030.jsonld#32699",
-              "@type": "tree:Node",
-              "token_string": "Van Aa"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2030.jsonld#51443",
-              "@type": "tree:Node",
-              "token_string": "van "
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2030.jsonld#72920",
-              "@type": "tree:Node",
-              "token_string": "Dellen"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2030.jsonld#82244",
-              "@type": "tree:Node",
-              "token_string": "en "
-            }
-          ]
-        }
-      ],
+      "children": {
+        "Van Aa": [
+          "2030",
+          "32699"
+        ],
+        "van ": [
+          "2030",
+          "51443"
+        ],
+        "Dellen": [
+          "2030",
+          "72920"
+        ],
+        "en ": [
+          "2030",
+          "82244"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment887.jsonld#1010",
         "@type": "tree:Node"
@@ -72,38 +48,38 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Bos Van Aa",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7573584077905817",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.915469356505405"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9754004898789392",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.12133492229477"
         },
         {
           "http://example.com/terms#name": "Bos van Houthulstlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1755152220707257",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.5581992475094"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0010624062415916",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.618885078348065"
         },
         {
           "http://example.com/terms#name": "Bos van Oppemweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.979625401764597",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.55930310237957"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6048970921058485",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.0919697417943"
         },
         {
           "http://example.com/terms#name": "Bos van Steenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8868852604832083",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.88653042129446"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2065949533021985",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.87556220268065"
         },
         {
           "http://example.com/terms#name": "Bos en Lommer",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3364306771393797",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.76676124018612"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9374064717191604",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.80244995525699"
         },
         {
           "http://example.com/terms#name": "Bos Dellen",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.580290458338224",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.2817227576044"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0194262479560363",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.01825105691628"
         },
         {
           "http://example.com/terms#name": "Bos en Bremdreef",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1019643952267666",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.86648783553149"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.336488907683216",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.768383659896614"
         }
       ],
       "total_children_count": 9,
@@ -153,17 +129,44 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2030.jsonld#32699"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2030.jsonld#51443"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2030.jsonld#72920"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2030.jsonld#82244"
+          ]
+        }
+      ]
     },
     {
       "token_string": "Van Aa",
       "triples": [
         {
           "http://example.com/terms#name": "Bos Van Aa",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7573584077905817",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.915469356505405"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9754004898789392",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.12133492229477"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2030.jsonld#32698",
         "@type": "tree:Node"
@@ -171,8 +174,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Bos Van Aa",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7573584077905817",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.915469356505405"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9754004898789392",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.12133492229477"
         }
       ],
       "total_children_count": 0,
@@ -188,43 +191,26 @@
       ],
       "triples_metadata": [
         "Bos Van Aa"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "van ",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2030.jsonld#51444",
-              "@type": "tree:Node",
-              "token_string": "Houthulstlaan"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2030.jsonld#51445",
-              "@type": "tree:Node",
-              "token_string": "Oppemweg"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2030.jsonld#57216",
-              "@type": "tree:Node",
-              "token_string": "Steenstraat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "Houthulstlaan": [
+          "2030",
+          "51444"
+        ],
+        "Oppemweg": [
+          "2030",
+          "51445"
+        ],
+        "Steenstraat": [
+          "2030",
+          "57216"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment2030.jsonld#32698",
         "@type": "tree:Node"
@@ -232,18 +218,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Bos van Houthulstlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1755152220707257",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.5581992475094"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0010624062415916",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.618885078348065"
         },
         {
           "http://example.com/terms#name": "Bos van Oppemweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.979625401764597",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.55930310237957"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6048970921058485",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.0919697417943"
         },
         {
           "http://example.com/terms#name": "Bos van Steenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8868852604832083",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.88653042129446"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2065949533021985",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.87556220268065"
         }
       ],
       "total_children_count": 3,
@@ -269,17 +255,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2030.jsonld#51444"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2030.jsonld#51445"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2030.jsonld#57216"
+          ]
+        }
+      ]
     },
     {
       "token_string": "Houthulstlaan",
       "triples": [
         {
           "http://example.com/terms#name": "Bos van Houthulstlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1755152220707257",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.5581992475094"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0010624062415916",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.618885078348065"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2030.jsonld#51443",
         "@type": "tree:Node"
@@ -287,8 +294,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Bos van Houthulstlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1755152220707257",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.5581992475094"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0010624062415916",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.618885078348065"
         }
       ],
       "total_children_count": 0,
@@ -304,17 +311,19 @@
       ],
       "triples_metadata": [
         "Bos van Houthulstlaan"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "Oppemweg",
       "triples": [
         {
           "http://example.com/terms#name": "Bos van Oppemweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.979625401764597",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.55930310237957"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6048970921058485",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.0919697417943"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2030.jsonld#51443",
         "@type": "tree:Node"
@@ -322,8 +331,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Bos van Oppemweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.979625401764597",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.55930310237957"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6048970921058485",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.0919697417943"
         }
       ],
       "total_children_count": 0,
@@ -339,17 +348,19 @@
       ],
       "triples_metadata": [
         "Bos van Oppemweg"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "Steenstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Bos van Steenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8868852604832083",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.88653042129446"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2065949533021985",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.87556220268065"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2030.jsonld#51443",
         "@type": "tree:Node"
@@ -357,8 +368,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Bos van Steenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8868852604832083",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.88653042129446"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2065949533021985",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.87556220268065"
         }
       ],
       "total_children_count": 0,
@@ -374,17 +385,19 @@
       ],
       "triples_metadata": [
         "Bos van Steenstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "Dellen",
       "triples": [
         {
           "http://example.com/terms#name": "Bos Dellen",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.580290458338224",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.2817227576044"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0194262479560363",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.01825105691628"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2030.jsonld#32698",
         "@type": "tree:Node"
@@ -392,8 +405,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Bos Dellen",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.580290458338224",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.2817227576044"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0194262479560363",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.01825105691628"
         }
       ],
       "total_children_count": 0,
@@ -409,33 +422,22 @@
       ],
       "triples_metadata": [
         "Bos Dellen"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "en ",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2030.jsonld#82245",
-              "@type": "tree:Node",
-              "token_string": "Lommer"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2030.jsonld#82246",
-              "@type": "tree:Node",
-              "token_string": "Bremdreef"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "Lommer": [
+          "2030",
+          "82245"
+        ],
+        "Bremdreef": [
+          "2030",
+          "82246"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment2030.jsonld#32698",
         "@type": "tree:Node"
@@ -443,13 +445,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Bos en Lommer",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3364306771393797",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.76676124018612"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9374064717191604",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.80244995525699"
         },
         {
           "http://example.com/terms#name": "Bos en Bremdreef",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1019643952267666",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.86648783553149"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.336488907683216",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.768383659896614"
         }
       ],
       "total_children_count": 2,
@@ -469,17 +471,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2030.jsonld#82245"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2030.jsonld#82246"
+          ]
+        }
+      ]
     },
     {
       "token_string": "Lommer",
       "triples": [
         {
           "http://example.com/terms#name": "Bos en Lommer",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3364306771393797",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.76676124018612"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9374064717191604",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.80244995525699"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2030.jsonld#82244",
         "@type": "tree:Node"
@@ -487,8 +504,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Bos en Lommer",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3364306771393797",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.76676124018612"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9374064717191604",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.80244995525699"
         }
       ],
       "total_children_count": 0,
@@ -504,17 +521,19 @@
       ],
       "triples_metadata": [
         "Bos en Lommer"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "Bremdreef",
       "triples": [
         {
           "http://example.com/terms#name": "Bos en Bremdreef",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1019643952267666",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.86648783553149"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.336488907683216",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.768383659896614"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2030.jsonld#82244",
         "@type": "tree:Node"
@@ -522,8 +541,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Bos en Bremdreef",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1019643952267666",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.86648783553149"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.336488907683216",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.768383659896614"
         }
       ],
       "total_children_count": 0,
@@ -539,7 +558,8 @@
       ],
       "triples_metadata": [
         "Bos en Bremdreef"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

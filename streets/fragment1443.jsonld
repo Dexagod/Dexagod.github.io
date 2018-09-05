@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "b",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1443.jsonld#10612",
-              "@type": "tree:Node",
-              "token_string": "roek"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1443.jsonld#10613",
-              "@type": "tree:Node",
-              "token_string": "weg"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "roek": [
+          "1443",
+          "10612"
+        ],
+        "weg": [
+          "1443",
+          "10613"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment529.jsonld#355",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Stabroek",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.053792704329405",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.63591958724096"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9938494544856837",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.065355584482646"
         },
         {
           "http://example.com/terms#name": "Stabweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.156282700458593",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.90447830173423"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6552823090567403",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.894555266068046"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1443.jsonld#10612"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1443.jsonld#10613"
+          ]
+        }
+      ]
     },
     {
       "token_string": "roek",
       "triples": [
         {
           "http://example.com/terms#name": "Stabroek",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.053792704329405",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.63591958724096"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9938494544856837",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.065355584482646"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1443.jsonld#10611",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Stabroek",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.053792704329405",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.63591958724096"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9938494544856837",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.065355584482646"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Stabroek"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "weg",
       "triples": [
         {
           "http://example.com/terms#name": "Stabweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.156282700458593",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.90447830173423"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6552823090567403",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.894555266068046"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1443.jsonld#10611",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Stabweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.156282700458593",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.90447830173423"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6552823090567403",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.894555266068046"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Stabweg"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

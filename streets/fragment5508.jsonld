@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "W",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5508.jsonld#142166",
-              "@type": "tree:Node",
-              "token_string": "espellières"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5508.jsonld#142167",
-              "@type": "tree:Node",
-              "token_string": "aides"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5508.jsonld#160218",
-              "@type": "tree:Node",
-              "token_string": "és"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "espellières": [
+          "5508",
+          "142166"
+        ],
+        "aides": [
+          "5508",
+          "142167"
+        ],
+        "és": [
+          "5508",
+          "160218"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment5442.jsonld#107306",
         "@type": "tree:Node"
@@ -62,18 +44,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Les Wespellières",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3984073176218943",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.81027508644732"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9193179994038143",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.06226255163346"
         },
         {
           "http://example.com/terms#name": "Les Waides",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.096048079883057",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.29659038829491"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.95763981680773",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.36145790754503"
         },
         {
           "http://example.com/terms#name": "Les Wés",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3582497863601968",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.722701509506784"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6775982361377726",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.93394764521723"
         }
       ],
       "total_children_count": 3,
@@ -99,17 +81,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5508.jsonld#142166"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5508.jsonld#142167"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5508.jsonld#160218"
+          ]
+        }
+      ]
     },
     {
       "token_string": "espellières",
       "triples": [
         {
           "http://example.com/terms#name": "Les Wespellières",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3984073176218943",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.81027508644732"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9193179994038143",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.06226255163346"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5508.jsonld#142165",
         "@type": "tree:Node"
@@ -117,8 +120,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Les Wespellières",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3984073176218943",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.81027508644732"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9193179994038143",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.06226255163346"
         }
       ],
       "total_children_count": 0,
@@ -134,17 +137,19 @@
       ],
       "triples_metadata": [
         "Les Wespellières"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "aides",
       "triples": [
         {
           "http://example.com/terms#name": "Les Waides",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.096048079883057",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.29659038829491"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.95763981680773",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.36145790754503"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5508.jsonld#142165",
         "@type": "tree:Node"
@@ -152,8 +157,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Les Waides",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.096048079883057",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.29659038829491"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.95763981680773",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.36145790754503"
         }
       ],
       "total_children_count": 0,
@@ -169,17 +174,19 @@
       ],
       "triples_metadata": [
         "Les Waides"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "és",
       "triples": [
         {
           "http://example.com/terms#name": "Les Wés",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3582497863601968",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.722701509506784"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6775982361377726",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.93394764521723"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5508.jsonld#142165",
         "@type": "tree:Node"
@@ -187,8 +194,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Les Wés",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3582497863601968",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.722701509506784"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6775982361377726",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.93394764521723"
         }
       ],
       "total_children_count": 0,
@@ -204,7 +211,8 @@
       ],
       "triples_metadata": [
         "Les Wés"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,48 +23,24 @@
     {
       "token_string": "P",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2517.jsonld#23371",
-              "@type": "tree:Node",
-              "token_string": "otestraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2517.jsonld#23372",
-              "@type": "tree:Node",
-              "token_string": "ijpelstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2517.jsonld#78843",
-              "@type": "tree:Node",
-              "token_string": "a"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2517.jsonld#86000",
-              "@type": "tree:Node",
-              "token_string": "la"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "otestraat": [
+          "2517",
+          "23371"
+        ],
+        "ijpelstraat": [
+          "2517",
+          "23372"
+        ],
+        "a": [
+          "2517",
+          "78843"
+        ],
+        "la": [
+          "2517",
+          "86000"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment338.jsonld#8314",
         "@type": "tree:Node"
@@ -72,38 +48,38 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Klein Potestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.473271853685",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.59275986407104"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1943314210378637",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.91932731632497"
         },
         {
           "http://example.com/terms#name": "Klein Pijpelstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6515150390702997",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.39077357871715"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9180586656142817",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.23409198576321"
         },
         {
           "http://example.com/terms#name": "Klein Plaats",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9711544239041814",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.26397423055381"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1707435080065447",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.59529385867625"
         },
         {
           "http://example.com/terms#name": "Klein Park",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9773794671925304",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.98441096055064"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.183303700991149",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.11825173783519"
         },
         {
           "http://example.com/terms#name": "Klein Parksken",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.481649701070038",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.79251488936984"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.329691631802954",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.10240713561786"
         },
         {
           "http://example.com/terms#name": "Klein Padveld",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1052805122811926",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.824482816431306"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.188855160830284",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.4519170482221"
         },
         {
           "http://example.com/terms#name": "Klein Plassendonk",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.189877962911273",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.56471600036378"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3197422257889406",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.033477248125564"
         }
       ],
       "total_children_count": 9,
@@ -153,17 +129,44 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2517.jsonld#23371"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2517.jsonld#23372"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2517.jsonld#78843"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2517.jsonld#86000"
+          ]
+        }
+      ]
     },
     {
       "token_string": "otestraat",
       "triples": [
         {
           "http://example.com/terms#name": "Klein Potestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.473271853685",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.59275986407104"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1943314210378637",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.91932731632497"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2517.jsonld#23370",
         "@type": "tree:Node"
@@ -171,8 +174,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Klein Potestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.473271853685",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.59275986407104"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1943314210378637",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.91932731632497"
         }
       ],
       "total_children_count": 0,
@@ -188,17 +191,19 @@
       ],
       "triples_metadata": [
         "Klein Potestraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "ijpelstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Klein Pijpelstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6515150390702997",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.39077357871715"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9180586656142817",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.23409198576321"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2517.jsonld#23370",
         "@type": "tree:Node"
@@ -206,8 +211,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Klein Pijpelstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6515150390702997",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.39077357871715"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9180586656142817",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.23409198576321"
         }
       ],
       "total_children_count": 0,
@@ -223,17 +228,19 @@
       ],
       "triples_metadata": [
         "Klein Pijpelstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "sken",
       "triples": [
         {
           "http://example.com/terms#name": "Klein Parksken",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.481649701070038",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.79251488936984"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.329691631802954",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.10240713561786"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2517.jsonld#78844",
         "@type": "tree:Node"
@@ -241,8 +248,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Klein Parksken",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.481649701070038",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.79251488936984"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.329691631802954",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.10240713561786"
         }
       ],
       "total_children_count": 0,
@@ -258,33 +265,22 @@
       ],
       "triples_metadata": [
         "Klein Parksken"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "a",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2517.jsonld#78844",
-              "@type": "tree:Node",
-              "token_string": "rk"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2517.jsonld#78845",
-              "@type": "tree:Node",
-              "token_string": "dveld"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "rk": [
+          "2517",
+          "78844"
+        ],
+        "dveld": [
+          "2517",
+          "78845"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment2517.jsonld#23370",
         "@type": "tree:Node"
@@ -292,18 +288,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Klein Park",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9773794671925304",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.98441096055064"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.183303700991149",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.11825173783519"
         },
         {
           "http://example.com/terms#name": "Klein Parksken",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.481649701070038",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.79251488936984"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.329691631802954",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.10240713561786"
         },
         {
           "http://example.com/terms#name": "Klein Padveld",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1052805122811926",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.824482816431306"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.188855160830284",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.4519170482221"
         }
       ],
       "total_children_count": 3,
@@ -329,29 +325,37 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2517.jsonld#78844"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2517.jsonld#78845"
+          ]
+        }
+      ]
     },
     {
       "token_string": "rk",
       "triples": [
         {
           "http://example.com/terms#name": "Klein Park",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9773794671925304",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.98441096055064"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.183303700991149",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.11825173783519"
         }
       ],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2517.jsonld#78269",
-              "@type": "tree:Node",
-              "token_string": "sken"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "sken": [
+          "2517",
+          "78269"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment2517.jsonld#78843",
         "@type": "tree:Node"
@@ -359,13 +363,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Klein Park",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9773794671925304",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.98441096055064"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.183303700991149",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.11825173783519"
         },
         {
           "http://example.com/terms#name": "Klein Parksken",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.481649701070038",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.79251488936984"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.329691631802954",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.10240713561786"
         }
       ],
       "total_children_count": 1,
@@ -387,6 +391,14 @@
       ],
       "triples_metadata": [
         "Klein Park"
+      ],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2517.jsonld#78269"
+          ]
+        }
       ]
     },
     {
@@ -394,10 +406,11 @@
       "triples": [
         {
           "http://example.com/terms#name": "Klein Padveld",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1052805122811926",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.824482816431306"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.188855160830284",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.4519170482221"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2517.jsonld#78843",
         "@type": "tree:Node"
@@ -405,8 +418,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Klein Padveld",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1052805122811926",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.824482816431306"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.188855160830284",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.4519170482221"
         }
       ],
       "total_children_count": 0,
@@ -422,33 +435,22 @@
       ],
       "triples_metadata": [
         "Klein Padveld"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "la",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2517.jsonld#86001",
-              "@type": "tree:Node",
-              "token_string": "ats"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2517.jsonld#86002",
-              "@type": "tree:Node",
-              "token_string": "ssendonk"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "ats": [
+          "2517",
+          "86001"
+        ],
+        "ssendonk": [
+          "2517",
+          "86002"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment2517.jsonld#23370",
         "@type": "tree:Node"
@@ -456,13 +458,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Klein Plaats",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9711544239041814",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.26397423055381"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1707435080065447",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.59529385867625"
         },
         {
           "http://example.com/terms#name": "Klein Plassendonk",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.189877962911273",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.56471600036378"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3197422257889406",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.033477248125564"
         }
       ],
       "total_children_count": 2,
@@ -482,17 +484,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2517.jsonld#86001"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2517.jsonld#86002"
+          ]
+        }
+      ]
     },
     {
       "token_string": "ats",
       "triples": [
         {
           "http://example.com/terms#name": "Klein Plaats",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9711544239041814",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.26397423055381"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1707435080065447",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.59529385867625"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2517.jsonld#86000",
         "@type": "tree:Node"
@@ -500,8 +517,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Klein Plaats",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9711544239041814",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.26397423055381"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1707435080065447",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.59529385867625"
         }
       ],
       "total_children_count": 0,
@@ -517,17 +534,19 @@
       ],
       "triples_metadata": [
         "Klein Plaats"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "ssendonk",
       "triples": [
         {
           "http://example.com/terms#name": "Klein Plassendonk",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.189877962911273",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.56471600036378"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3197422257889406",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.033477248125564"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2517.jsonld#86000",
         "@type": "tree:Node"
@@ -535,8 +554,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Klein Plassendonk",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.189877962911273",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.56471600036378"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3197422257889406",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.033477248125564"
         }
       ],
       "total_children_count": 0,
@@ -552,7 +571,8 @@
       ],
       "triples_metadata": [
         "Klein Plassendonk"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

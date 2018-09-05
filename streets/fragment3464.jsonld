@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "p",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3464.jsonld#76237",
-              "@type": "tree:Node",
-              "token_string": "laats"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3464.jsonld#76238",
-              "@type": "tree:Node",
-              "token_string": "oortstraat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "laats": [
+          "3464",
+          "76237"
+        ],
+        "oortstraat": [
+          "3464",
+          "76238"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment699.jsonld#2619",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Groeneplaats",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.265611054556028",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.7108602249572"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1470598808521113",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.503472836338524"
         },
         {
           "http://example.com/terms#name": "Groenepoortstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.363436825596621",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.869343448091854"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.575534634478547",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.3251442817031"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3464.jsonld#76237"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3464.jsonld#76238"
+          ]
+        }
+      ]
     },
     {
       "token_string": "laats",
       "triples": [
         {
           "http://example.com/terms#name": "Groeneplaats",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.265611054556028",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.7108602249572"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1470598808521113",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.503472836338524"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3464.jsonld#76236",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Groeneplaats",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.265611054556028",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.7108602249572"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1470598808521113",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.503472836338524"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Groeneplaats"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "oortstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Groenepoortstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.363436825596621",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.869343448091854"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.575534634478547",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.3251442817031"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3464.jsonld#76236",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Groenepoortstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.363436825596621",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.869343448091854"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.575534634478547",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.3251442817031"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Groenepoortstraat"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "é",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5742.jsonld#158606",
-              "@type": "tree:Node",
-              "token_string": "guinet"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5742.jsonld#158607",
-              "@type": "tree:Node",
-              "token_string": "niké"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "guinet": [
+          "5742",
+          "158606"
+        ],
+        "niké": [
+          "5742",
+          "158607"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment3967.jsonld#106082",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Chemin du Béguinet",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9319426305131615",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.293976860344536"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5795374348130724",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.961821955179694"
         },
         {
           "http://example.com/terms#name": "Chemin du Béniké",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8197529036121",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.44105773476478"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8053278352559166",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.12116709523309"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5742.jsonld#158606"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5742.jsonld#158607"
+          ]
+        }
+      ]
     },
     {
       "token_string": "guinet",
       "triples": [
         {
           "http://example.com/terms#name": "Chemin du Béguinet",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9319426305131615",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.293976860344536"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5795374348130724",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.961821955179694"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5742.jsonld#158605",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Chemin du Béguinet",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9319426305131615",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.293976860344536"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5795374348130724",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.961821955179694"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Chemin du Béguinet"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "niké",
       "triples": [
         {
           "http://example.com/terms#name": "Chemin du Béniké",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8197529036121",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.44105773476478"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8053278352559166",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.12116709523309"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5742.jsonld#158605",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Chemin du Béniké",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8197529036121",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.44105773476478"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8053278352559166",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.12116709523309"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Chemin du Béniké"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

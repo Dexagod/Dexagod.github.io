@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "st",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1669.jsonld#48437",
-              "@type": "tree:Node",
-              "token_string": "raat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1669.jsonld#48438",
-              "@type": "tree:Node",
-              "token_string": "ukstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1669.jsonld#50687",
-              "@type": "tree:Node",
-              "token_string": "eestraat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "raat": [
+          "1669",
+          "48437"
+        ],
+        "ukstraat": [
+          "1669",
+          "48438"
+        ],
+        "eestraat": [
+          "1669",
+          "50687"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment2430.jsonld#3900",
         "@type": "tree:Node"
@@ -62,18 +44,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Kerkestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6220842466450622",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.80627463190202"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7795192101619013",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.23700818635941"
         },
         {
           "http://example.com/terms#name": "Kerkestukstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.328863312151971",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.98967276008258"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.603725774427461",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.92072487614785"
         },
         {
           "http://example.com/terms#name": "Kerkesteestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9519564471906548",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.3529664703081"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1210145325415057",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.7467977021988"
         }
       ],
       "total_children_count": 3,
@@ -99,17 +81,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1669.jsonld#48437"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1669.jsonld#48438"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1669.jsonld#50687"
+          ]
+        }
+      ]
     },
     {
       "token_string": "raat",
       "triples": [
         {
           "http://example.com/terms#name": "Kerkestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6220842466450622",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.80627463190202"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7795192101619013",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.23700818635941"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1669.jsonld#48436",
         "@type": "tree:Node"
@@ -117,8 +120,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Kerkestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6220842466450622",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.80627463190202"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7795192101619013",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.23700818635941"
         }
       ],
       "total_children_count": 0,
@@ -134,17 +137,19 @@
       ],
       "triples_metadata": [
         "Kerkestraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "ukstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Kerkestukstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.328863312151971",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.98967276008258"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.603725774427461",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.92072487614785"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1669.jsonld#48436",
         "@type": "tree:Node"
@@ -152,8 +157,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Kerkestukstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.328863312151971",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.98967276008258"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.603725774427461",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.92072487614785"
         }
       ],
       "total_children_count": 0,
@@ -169,17 +174,19 @@
       ],
       "triples_metadata": [
         "Kerkestukstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "eestraat",
       "triples": [
         {
           "http://example.com/terms#name": "Kerkesteestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9519564471906548",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.3529664703081"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1210145325415057",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.7467977021988"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1669.jsonld#48436",
         "@type": "tree:Node"
@@ -187,8 +194,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Kerkesteestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9519564471906548",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.3529664703081"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1210145325415057",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.7467977021988"
         }
       ],
       "total_children_count": 0,
@@ -204,7 +211,8 @@
       ],
       "triples_metadata": [
         "Kerkesteestraat"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

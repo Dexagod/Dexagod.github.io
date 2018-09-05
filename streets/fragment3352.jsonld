@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "z",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3352.jsonld#78256",
-              "@type": "tree:Node",
-              "token_string": "avel"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3352.jsonld#78257",
-              "@type": "tree:Node",
-              "token_string": "iekenweg"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "avel": [
+          "3352",
+          "78256"
+        ],
+        "iekenweg": [
+          "3352",
+          "78257"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment2575.jsonld#20312",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Hogezavel",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.917290063151212",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.56585368969317"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7258163734447076",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.39021915852694"
         },
         {
           "http://example.com/terms#name": "Hogeziekenweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.915565480633813",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.911315892915724"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3716912759668975",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.91128029319269"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3352.jsonld#78256"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3352.jsonld#78257"
+          ]
+        }
+      ]
     },
     {
       "token_string": "avel",
       "triples": [
         {
           "http://example.com/terms#name": "Hogezavel",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.917290063151212",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.56585368969317"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7258163734447076",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.39021915852694"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3352.jsonld#78255",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Hogezavel",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.917290063151212",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.56585368969317"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7258163734447076",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.39021915852694"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Hogezavel"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "iekenweg",
       "triples": [
         {
           "http://example.com/terms#name": "Hogeziekenweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.915565480633813",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.911315892915724"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3716912759668975",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.91128029319269"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3352.jsonld#78255",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Hogeziekenweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.915565480633813",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.911315892915724"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3716912759668975",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.91128029319269"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Hogeziekenweg"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

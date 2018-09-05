@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "l",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6144.jsonld#150468",
-              "@type": "tree:Node",
-              "token_string": "ibourg"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6144.jsonld#150469",
-              "@type": "tree:Node",
-              "token_string": "akoff"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "ibourg": [
+          "6144",
+          "150468"
+        ],
+        "akoff": [
+          "6144",
+          "150469"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4682.jsonld#106273",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue du Malibourg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.152161957407941",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.48187271815853"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0905588144731557",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.06846822975506"
         },
         {
           "http://example.com/terms#name": "Rue du Malakoff",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3908274232326474",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.47408872698019"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1583666956152725",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.359019819458766"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6144.jsonld#150468"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6144.jsonld#150469"
+          ]
+        }
+      ]
     },
     {
       "token_string": "ibourg",
       "triples": [
         {
           "http://example.com/terms#name": "Rue du Malibourg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.152161957407941",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.48187271815853"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0905588144731557",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.06846822975506"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6144.jsonld#150467",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue du Malibourg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.152161957407941",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.48187271815853"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0905588144731557",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.06846822975506"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Rue du Malibourg"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "akoff",
       "triples": [
         {
           "http://example.com/terms#name": "Rue du Malakoff",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3908274232326474",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.47408872698019"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1583666956152725",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.359019819458766"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6144.jsonld#150467",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue du Malakoff",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3908274232326474",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.47408872698019"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1583666956152725",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.359019819458766"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Rue du Malakoff"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

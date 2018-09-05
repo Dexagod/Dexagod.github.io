@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "H",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5082.jsonld#115224",
-              "@type": "tree:Node",
-              "token_string": "Rousseau"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5082.jsonld#153511",
-              "@type": "tree:Node",
-              "token_string": "e"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "Rousseau": [
+          "5082",
+          "115224"
+        ],
+        "e": [
+          "5082",
+          "153511"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4208.jsonld#107812",
         "@type": "tree:Node"
@@ -52,23 +40,23 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Boulevard Henri Rolin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6129911591794013",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.670135131893716"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8419956616402238",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.942650791927136"
         },
         {
           "http://example.com/terms#name": "Boulevard HRousseau",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.738889649765749",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.59484933498961"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.061110013789069",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.15828169338101"
         },
         {
           "http://example.com/terms#name": "Boulevard Hector Grosjean",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5692263867729865",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.176978023915495"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9467485693789452",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.19691051428749"
         },
         {
           "http://example.com/terms#name": "Boulevard Heynen",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1403090370031213",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.06528758486346"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.773727097099624",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.00972402697934"
         }
       ],
       "total_children_count": 5,
@@ -100,17 +88,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5082.jsonld#115224"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5082.jsonld#153511"
+          ]
+        }
+      ]
     },
     {
       "token_string": "Rousseau",
       "triples": [
         {
           "http://example.com/terms#name": "Boulevard HRousseau",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.738889649765749",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.59484933498961"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.061110013789069",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.15828169338101"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5082.jsonld#115222",
         "@type": "tree:Node"
@@ -118,8 +121,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Boulevard HRousseau",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.738889649765749",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.59484933498961"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.061110013789069",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.15828169338101"
         }
       ],
       "total_children_count": 0,
@@ -135,43 +138,26 @@
       ],
       "triples_metadata": [
         "Boulevard HRousseau"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "e",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5082.jsonld#153512",
-              "@type": "tree:Node",
-              "token_string": "nri Rolin"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5082.jsonld#153513",
-              "@type": "tree:Node",
-              "token_string": "ctor Grosjean"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5082.jsonld#159144",
-              "@type": "tree:Node",
-              "token_string": "ynen"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "nri Rolin": [
+          "5082",
+          "153512"
+        ],
+        "ctor Grosjean": [
+          "5082",
+          "153513"
+        ],
+        "ynen": [
+          "5082",
+          "159144"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment5082.jsonld#115222",
         "@type": "tree:Node"
@@ -179,18 +165,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Boulevard Henri Rolin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6129911591794013",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.670135131893716"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8419956616402238",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.942650791927136"
         },
         {
           "http://example.com/terms#name": "Boulevard Hector Grosjean",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5692263867729865",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.176978023915495"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9467485693789452",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.19691051428749"
         },
         {
           "http://example.com/terms#name": "Boulevard Heynen",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1403090370031213",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.06528758486346"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.773727097099624",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.00972402697934"
         }
       ],
       "total_children_count": 3,
@@ -216,17 +202,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5082.jsonld#153512"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5082.jsonld#153513"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5082.jsonld#159144"
+          ]
+        }
+      ]
     },
     {
       "token_string": "nri Rolin",
       "triples": [
         {
           "http://example.com/terms#name": "Boulevard Henri Rolin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6129911591794013",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.670135131893716"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8419956616402238",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.942650791927136"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5082.jsonld#153511",
         "@type": "tree:Node"
@@ -234,8 +241,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Boulevard Henri Rolin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6129911591794013",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.670135131893716"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8419956616402238",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.942650791927136"
         }
       ],
       "total_children_count": 0,
@@ -251,17 +258,19 @@
       ],
       "triples_metadata": [
         "Boulevard Henri Rolin"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "ctor Grosjean",
       "triples": [
         {
           "http://example.com/terms#name": "Boulevard Hector Grosjean",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5692263867729865",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.176978023915495"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9467485693789452",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.19691051428749"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5082.jsonld#153511",
         "@type": "tree:Node"
@@ -269,8 +278,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Boulevard Hector Grosjean",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5692263867729865",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.176978023915495"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9467485693789452",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.19691051428749"
         }
       ],
       "total_children_count": 0,
@@ -286,17 +295,19 @@
       ],
       "triples_metadata": [
         "Boulevard Hector Grosjean"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "ynen",
       "triples": [
         {
           "http://example.com/terms#name": "Boulevard Heynen",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1403090370031213",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.06528758486346"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.773727097099624",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.00972402697934"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5082.jsonld#153511",
         "@type": "tree:Node"
@@ -304,8 +315,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Boulevard Heynen",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1403090370031213",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.06528758486346"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.773727097099624",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.00972402697934"
         }
       ],
       "total_children_count": 0,
@@ -321,7 +332,8 @@
       ],
       "triples_metadata": [
         "Boulevard Heynen"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

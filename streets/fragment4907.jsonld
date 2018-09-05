@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "Jo",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4907.jsonld#175750",
-              "@type": "tree:Node",
-              "token_string": "ncquière"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4907.jsonld#175751",
-              "@type": "tree:Node",
-              "token_string": "urnée"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "ncquière": [
+          "4907",
+          "175750"
+        ],
+        "urnée": [
+          "4907",
+          "175751"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4379.jsonld#36881",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "La Joncquière",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8895523724958023",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.590596772538426"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.923468694028297",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.701949860626044"
         },
         {
           "http://example.com/terms#name": "La Journée",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.228638801523485",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.53461773327019"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9208736777485313",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.52504872806045"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4907.jsonld#175750"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4907.jsonld#175751"
+          ]
+        }
+      ]
     },
     {
       "token_string": "ncquière",
       "triples": [
         {
           "http://example.com/terms#name": "La Joncquière",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8895523724958023",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.590596772538426"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.923468694028297",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.701949860626044"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4907.jsonld#175749",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "La Joncquière",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8895523724958023",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.590596772538426"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.923468694028297",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.701949860626044"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "La Joncquière"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "urnée",
       "triples": [
         {
           "http://example.com/terms#name": "La Journée",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.228638801523485",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.53461773327019"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9208736777485313",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.52504872806045"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4907.jsonld#175749",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "La Journée",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.228638801523485",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.53461773327019"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9208736777485313",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.52504872806045"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "La Journée"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

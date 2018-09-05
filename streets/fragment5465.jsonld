@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "e",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5465.jsonld#142267",
-              "@type": "tree:Node",
-              "token_string": "venstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5465.jsonld#142268",
-              "@type": "tree:Node",
-              "token_string": "rotte"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "venstraat": [
+          "5465",
+          "142267"
+        ],
+        "rotte": [
+          "5465",
+          "142268"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment243.jsonld#1176",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Winevenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.882395859303849",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.1761062711465"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.173110067660029",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.452136976303834"
         },
         {
           "http://example.com/terms#name": "Winerotte",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.541788938172511",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.439493670539754"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8859110423814975",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.878285531835495"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5465.jsonld#142267"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5465.jsonld#142268"
+          ]
+        }
+      ]
     },
     {
       "token_string": "venstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Winevenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.882395859303849",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.1761062711465"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.173110067660029",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.452136976303834"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5465.jsonld#142266",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Winevenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.882395859303849",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.1761062711465"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.173110067660029",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.452136976303834"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Winevenstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "rotte",
       "triples": [
         {
           "http://example.com/terms#name": "Winerotte",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.541788938172511",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.439493670539754"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8859110423814975",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.878285531835495"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5465.jsonld#142266",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Winerotte",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.541788938172511",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.439493670539754"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8859110423814975",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.878285531835495"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Winerotte"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

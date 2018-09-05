@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "4",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4129.jsonld#126275",
-              "@type": "tree:Node",
-              "token_string": "3è Régiment d'Infanterie"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4129.jsonld#126276",
-              "@type": "tree:Node",
-              "token_string": " Août"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4129.jsonld#161839",
-              "@type": "tree:Node",
-              "token_string": "e"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "3è Régiment d'Infanterie": [
+          "4129",
+          "126275"
+        ],
+        " Août": [
+          "4129",
+          "126276"
+        ],
+        "e": [
+          "4129",
+          "161839"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment3708.jsonld#136527",
         "@type": "tree:Node"
@@ -62,23 +44,23 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue du 43è Régiment d'Infanterie",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3720742801953705",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.44604585097578"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9400485865411903",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.323574603166506"
         },
         {
           "http://example.com/terms#name": "Rue du 4 Août",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.664485802634553",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.13535270818157"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.253224511840195",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.937002356080015"
         },
         {
           "http://example.com/terms#name": "Rue du 4e Génie",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3525395396946163",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.0860146256917"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.969052292687899",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.44231482620957"
         },
         {
           "http://example.com/terms#name": "Rue du 4e-R-I",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.032765646998781",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.54793811601588"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8533636916925507",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.76537304998207"
         }
       ],
       "total_children_count": 5,
@@ -110,17 +92,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4129.jsonld#126275"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4129.jsonld#126276"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4129.jsonld#161839"
+          ]
+        }
+      ]
     },
     {
       "token_string": "3è Régiment d'Infanterie",
       "triples": [
         {
           "http://example.com/terms#name": "Rue du 43è Régiment d'Infanterie",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3720742801953705",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.44604585097578"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9400485865411903",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.323574603166506"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4129.jsonld#126274",
         "@type": "tree:Node"
@@ -128,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue du 43è Régiment d'Infanterie",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3720742801953705",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.44604585097578"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9400485865411903",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.323574603166506"
         }
       ],
       "total_children_count": 0,
@@ -145,17 +148,19 @@
       ],
       "triples_metadata": [
         "Rue du 43è Régiment d'Infanterie"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": " Août",
       "triples": [
         {
           "http://example.com/terms#name": "Rue du 4 Août",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.664485802634553",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.13535270818157"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.253224511840195",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.937002356080015"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4129.jsonld#126274",
         "@type": "tree:Node"
@@ -163,8 +168,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue du 4 Août",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.664485802634553",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.13535270818157"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.253224511840195",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.937002356080015"
         }
       ],
       "total_children_count": 0,
@@ -180,33 +185,22 @@
       ],
       "triples_metadata": [
         "Rue du 4 Août"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "e",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4129.jsonld#161840",
-              "@type": "tree:Node",
-              "token_string": " Génie"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4129.jsonld#161841",
-              "@type": "tree:Node",
-              "token_string": "-R-I"
-            }
-          ]
-        }
-      ],
+      "children": {
+        " Génie": [
+          "4129",
+          "161840"
+        ],
+        "-R-I": [
+          "4129",
+          "161841"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4129.jsonld#126274",
         "@type": "tree:Node"
@@ -214,13 +208,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue du 4e Génie",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3525395396946163",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.0860146256917"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.969052292687899",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.44231482620957"
         },
         {
           "http://example.com/terms#name": "Rue du 4e-R-I",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.032765646998781",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.54793811601588"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8533636916925507",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.76537304998207"
         }
       ],
       "total_children_count": 2,
@@ -240,17 +234,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4129.jsonld#161840"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4129.jsonld#161841"
+          ]
+        }
+      ]
     },
     {
       "token_string": " Génie",
       "triples": [
         {
           "http://example.com/terms#name": "Rue du 4e Génie",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3525395396946163",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.0860146256917"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.969052292687899",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.44231482620957"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4129.jsonld#161839",
         "@type": "tree:Node"
@@ -258,8 +267,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue du 4e Génie",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3525395396946163",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.0860146256917"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.969052292687899",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.44231482620957"
         }
       ],
       "total_children_count": 0,
@@ -275,17 +284,19 @@
       ],
       "triples_metadata": [
         "Rue du 4e Génie"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "-R-I",
       "triples": [
         {
           "http://example.com/terms#name": "Rue du 4e-R-I",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.032765646998781",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.54793811601588"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8533636916925507",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.76537304998207"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4129.jsonld#161839",
         "@type": "tree:Node"
@@ -293,8 +304,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue du 4e-R-I",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.032765646998781",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.54793811601588"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8533636916925507",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.76537304998207"
         }
       ],
       "total_children_count": 0,
@@ -310,7 +321,8 @@
       ],
       "triples_metadata": [
         "Rue du 4e-R-I"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

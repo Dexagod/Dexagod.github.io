@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "k",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2495.jsonld#33696",
-              "@type": "tree:Node",
-              "token_string": "kerstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2495.jsonld#33697",
-              "@type": "tree:Node",
-              "token_string": "enaarslaan"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "kerstraat": [
+          "2495",
+          "33696"
+        ],
+        "enaarslaan": [
+          "2495",
+          "33697"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment81.jsonld#103",
         "@type": "tree:Node"
@@ -52,28 +40,28 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Tekkerstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.615523399511953",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.69329930332995"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.538672396924082",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.92830235159842"
         },
         {
           "http://example.com/terms#name": "Tekenaarslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5370510508339983",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.28621500296726"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1800920063986897",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.47183443179472"
         },
         {
           "http://example.com/terms#name": "Tekenaarslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.191885989801097",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.697117171081615"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.670789035298197",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.31337357033473"
         },
         {
           "http://example.com/terms#name": "Tekenaarslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.191885989801097",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.697117171081615"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.670789035298197",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.31337357033473"
         },
         {
           "http://example.com/terms#name": "Tekenaarslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.191885989801097",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.697117171081615"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.670789035298197",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.31337357033473"
         }
       ],
       "total_children_count": 2,
@@ -96,17 +84,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2495.jsonld#33696"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2495.jsonld#33697"
+          ]
+        }
+      ]
     },
     {
       "token_string": "kerstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Tekkerstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.615523399511953",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.69329930332995"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.538672396924082",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.92830235159842"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2495.jsonld#33695",
         "@type": "tree:Node"
@@ -114,8 +117,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Tekkerstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.615523399511953",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.69329930332995"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.538672396924082",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.92830235159842"
         }
       ],
       "total_children_count": 0,
@@ -131,32 +134,34 @@
       ],
       "triples_metadata": [
         "Tekkerstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "enaarslaan",
       "triples": [
         {
           "http://example.com/terms#name": "Tekenaarslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5370510508339983",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.28621500296726"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1800920063986897",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.47183443179472"
         },
         {
           "http://example.com/terms#name": "Tekenaarslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.191885989801097",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.697117171081615"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.670789035298197",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.31337357033473"
         },
         {
           "http://example.com/terms#name": "Tekenaarslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.191885989801097",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.697117171081615"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.670789035298197",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.31337357033473"
         },
         {
           "http://example.com/terms#name": "Tekenaarslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.191885989801097",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.697117171081615"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.670789035298197",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.31337357033473"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2495.jsonld#33695",
         "@type": "tree:Node"
@@ -164,23 +169,23 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Tekenaarslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5370510508339983",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.28621500296726"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1800920063986897",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.47183443179472"
         },
         {
           "http://example.com/terms#name": "Tekenaarslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.191885989801097",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.697117171081615"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.670789035298197",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.31337357033473"
         },
         {
           "http://example.com/terms#name": "Tekenaarslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.191885989801097",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.697117171081615"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.670789035298197",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.31337357033473"
         },
         {
           "http://example.com/terms#name": "Tekenaarslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.191885989801097",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.697117171081615"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.670789035298197",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.31337357033473"
         }
       ],
       "total_children_count": 0,
@@ -202,7 +207,8 @@
         "Tekenaarslaan",
         "Tekenaarslaan",
         "Tekenaarslaan"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

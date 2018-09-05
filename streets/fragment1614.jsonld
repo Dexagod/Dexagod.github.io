@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "-",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1614.jsonld#26481",
-              "@type": "tree:Node",
-              "token_string": "Reninge"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1614.jsonld#26482",
-              "@type": "tree:Node",
-              "token_string": "Molen"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1614.jsonld#75624",
-              "@type": "tree:Node",
-              "token_string": "Noordhoek"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "Reninge": [
+          "1614",
+          "26481"
+        ],
+        "Molen": [
+          "1614",
+          "26482"
+        ],
+        "Noordhoek": [
+          "1614",
+          "75624"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment37.jsonld#175",
         "@type": "tree:Node"
@@ -62,18 +44,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Lo-Reninge",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.109333594822349",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.42648543003715"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.528594848933349",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.82338438208194"
         },
         {
           "http://example.com/terms#name": "Lo-Molen",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7913799835940867",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.723476440137105"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8059829135747476",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.49479135989355"
         },
         {
           "http://example.com/terms#name": "Lo-Noordhoek",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9481232717182224",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.21963943215095"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6012448892014923",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.504872260536544"
         }
       ],
       "total_children_count": 3,
@@ -99,17 +81,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1614.jsonld#26481"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1614.jsonld#26482"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1614.jsonld#75624"
+          ]
+        }
+      ]
     },
     {
       "token_string": "Reninge",
       "triples": [
         {
           "http://example.com/terms#name": "Lo-Reninge",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.109333594822349",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.42648543003715"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.528594848933349",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.82338438208194"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1614.jsonld#26480",
         "@type": "tree:Node"
@@ -117,8 +120,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Lo-Reninge",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.109333594822349",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.42648543003715"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.528594848933349",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.82338438208194"
         }
       ],
       "total_children_count": 0,
@@ -134,17 +137,19 @@
       ],
       "triples_metadata": [
         "Lo-Reninge"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "Molen",
       "triples": [
         {
           "http://example.com/terms#name": "Lo-Molen",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7913799835940867",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.723476440137105"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8059829135747476",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.49479135989355"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1614.jsonld#26480",
         "@type": "tree:Node"
@@ -152,8 +157,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Lo-Molen",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7913799835940867",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.723476440137105"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8059829135747476",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.49479135989355"
         }
       ],
       "total_children_count": 0,
@@ -169,17 +174,19 @@
       ],
       "triples_metadata": [
         "Lo-Molen"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "Noordhoek",
       "triples": [
         {
           "http://example.com/terms#name": "Lo-Noordhoek",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9481232717182224",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.21963943215095"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6012448892014923",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.504872260536544"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1614.jsonld#26480",
         "@type": "tree:Node"
@@ -187,8 +194,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Lo-Noordhoek",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9481232717182224",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.21963943215095"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6012448892014923",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.504872260536544"
         }
       ],
       "total_children_count": 0,
@@ -204,7 +211,8 @@
       ],
       "triples_metadata": [
         "Lo-Noordhoek"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

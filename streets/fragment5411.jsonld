@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "g",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5411.jsonld#78238",
-              "@type": "tree:Node",
-              "token_string": "atstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5411.jsonld#78239",
-              "@type": "tree:Node",
-              "token_string": "ouw"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5411.jsonld#181459",
-              "@type": "tree:Node",
-              "token_string": "ässchen"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "atstraat": [
+          "5411",
+          "78238"
+        ],
+        "ouw": [
+          "5411",
+          "78239"
+        ],
+        "ässchen": [
+          "5411",
+          "181459"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment740.jsonld#2382",
         "@type": "tree:Node"
@@ -62,18 +44,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Berggatstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5442010039395364",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.16985279379437"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4348802126168896",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.16941131351082"
         },
         {
           "http://example.com/terms#name": "Berggouw",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.667796697758334",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.030713062303"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.954266921730077",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.42475531359163"
         },
         {
           "http://example.com/terms#name": "Berggässchen",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.108079633043496",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.13067010834505"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.913592392854072",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.13224397181752"
         }
       ],
       "total_children_count": 3,
@@ -99,17 +81,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5411.jsonld#78238"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5411.jsonld#78239"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5411.jsonld#181459"
+          ]
+        }
+      ]
     },
     {
       "token_string": "atstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Berggatstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5442010039395364",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.16985279379437"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4348802126168896",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.16941131351082"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5411.jsonld#78237",
         "@type": "tree:Node"
@@ -117,8 +120,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Berggatstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5442010039395364",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.16985279379437"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4348802126168896",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.16941131351082"
         }
       ],
       "total_children_count": 0,
@@ -134,17 +137,19 @@
       ],
       "triples_metadata": [
         "Berggatstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "ouw",
       "triples": [
         {
           "http://example.com/terms#name": "Berggouw",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.667796697758334",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.030713062303"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.954266921730077",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.42475531359163"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5411.jsonld#78237",
         "@type": "tree:Node"
@@ -152,8 +157,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Berggouw",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.667796697758334",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.030713062303"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.954266921730077",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.42475531359163"
         }
       ],
       "total_children_count": 0,
@@ -169,17 +174,19 @@
       ],
       "triples_metadata": [
         "Berggouw"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "ässchen",
       "triples": [
         {
           "http://example.com/terms#name": "Berggässchen",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.108079633043496",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.13067010834505"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.913592392854072",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.13224397181752"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5411.jsonld#78237",
         "@type": "tree:Node"
@@ -187,8 +194,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Berggässchen",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.108079633043496",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.13067010834505"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.913592392854072",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.13224397181752"
         }
       ],
       "total_children_count": 0,
@@ -204,7 +211,8 @@
       ],
       "triples_metadata": [
         "Berggässchen"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

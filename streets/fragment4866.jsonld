@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "qu",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4866.jsonld#148466",
-              "@type": "tree:Node",
-              "token_string": "ilon"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4866.jsonld#148467",
-              "@type": "tree:Node",
-              "token_string": "educ"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "ilon": [
+          "4866",
+          "148466"
+        ],
+        "educ": [
+          "4866",
+          "148467"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment3902.jsonld#105219",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue de l'Aquilon",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.097472999228487",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.283694765792674"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3092747777368405",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.81233805899102"
         },
         {
           "http://example.com/terms#name": "Rue de l'Aqueduc",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6829809465949173",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.4181479751937"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3444559565452385",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.27983839660409"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4866.jsonld#148466"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4866.jsonld#148467"
+          ]
+        }
+      ]
     },
     {
       "token_string": "ilon",
       "triples": [
         {
           "http://example.com/terms#name": "Rue de l'Aquilon",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.097472999228487",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.283694765792674"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3092747777368405",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.81233805899102"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4866.jsonld#148465",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue de l'Aquilon",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.097472999228487",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.283694765792674"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3092747777368405",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.81233805899102"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Rue de l'Aquilon"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "educ",
       "triples": [
         {
           "http://example.com/terms#name": "Rue de l'Aqueduc",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6829809465949173",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.4181479751937"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3444559565452385",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.27983839660409"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4866.jsonld#148465",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue de l'Aqueduc",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6829809465949173",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.4181479751937"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3444559565452385",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.27983839660409"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Rue de l'Aqueduc"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

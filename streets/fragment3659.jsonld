@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "Ro",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3659.jsonld#101757",
-              "@type": "tree:Node",
-              "token_string": "sestraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3659.jsonld#101758",
-              "@type": "tree:Node",
-              "token_string": "tsart de Hertaingdreef"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "sestraat": [
+          "3659",
+          "101757"
+        ],
+        "tsart de Hertaingdreef": [
+          "3659",
+          "101758"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment2729.jsonld#5779",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Paul Rosestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.629190270859559",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.0886188763334"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.618492151769494",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.54334671767446"
         },
         {
           "http://example.com/terms#name": "Paul Rotsart de Hertaingdreef",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8229851462031252",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.01518026947712"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7088010501182733",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.71451814200403"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3659.jsonld#101757"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3659.jsonld#101758"
+          ]
+        }
+      ]
     },
     {
       "token_string": "sestraat",
       "triples": [
         {
           "http://example.com/terms#name": "Paul Rosestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.629190270859559",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.0886188763334"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.618492151769494",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.54334671767446"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3659.jsonld#101756",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Paul Rosestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.629190270859559",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.0886188763334"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.618492151769494",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.54334671767446"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Paul Rosestraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "tsart de Hertaingdreef",
       "triples": [
         {
           "http://example.com/terms#name": "Paul Rotsart de Hertaingdreef",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8229851462031252",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.01518026947712"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7088010501182733",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.71451814200403"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3659.jsonld#101756",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Paul Rotsart de Hertaingdreef",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8229851462031252",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.01518026947712"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7088010501182733",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.71451814200403"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Paul Rotsart de Hertaingdreef"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

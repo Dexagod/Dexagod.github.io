@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "ustheids",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6035.jsonld#94454",
-              "@type": "tree:Node",
-              "token_string": "straat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6035.jsonld#94455",
-              "@type": "tree:Node",
-              "token_string": "plein"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "straat": [
+          "6035",
+          "94454"
+        ],
+        "plein": [
+          "6035",
+          "94455"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment614.jsonld#1913",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Gerustheidsstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6115603152865017",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.8106916468742"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.557011952272196",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.639270389301416"
         },
         {
           "http://example.com/terms#name": "Gerustheidsplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2374502711040622",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.30458297964756"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.050652447743025",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.854371459725776"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6035.jsonld#94454"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6035.jsonld#94455"
+          ]
+        }
+      ]
     },
     {
       "token_string": "straat",
       "triples": [
         {
           "http://example.com/terms#name": "Gerustheidsstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6115603152865017",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.8106916468742"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.557011952272196",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.639270389301416"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6035.jsonld#94453",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Gerustheidsstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6115603152865017",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.8106916468742"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.557011952272196",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.639270389301416"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Gerustheidsstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "plein",
       "triples": [
         {
           "http://example.com/terms#name": "Gerustheidsplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2374502711040622",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.30458297964756"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.050652447743025",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.854371459725776"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6035.jsonld#94453",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Gerustheidsplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2374502711040622",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.30458297964756"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.050652447743025",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.854371459725776"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Gerustheidsplein"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

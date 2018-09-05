@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "E",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1101.jsonld#38598",
-              "@type": "tree:Node",
-              "token_string": "lsdries"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1101.jsonld#38599",
-              "@type": "tree:Node",
-              "token_string": "de"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1101.jsonld#64854",
-              "@type": "tree:Node",
-              "token_string": "ggestraat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "lsdries": [
+          "1101",
+          "38598"
+        ],
+        "de": [
+          "1101",
+          "38599"
+        ],
+        "ggestraat": [
+          "1101",
+          "64854"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment340.jsonld#2836",
         "@type": "tree:Node"
@@ -62,18 +44,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Grote Elsdries",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0488686676615195",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.09397818889224"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.05305001379809",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.21240338588311"
         },
         {
           "http://example.com/terms#name": "Grote Ede",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.004105262651035",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.43437195513117"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4966955663796315",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.83180652638418"
         },
         {
           "http://example.com/terms#name": "Grote Eggestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6055067822915206",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.18171594110936"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.215401098012609",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.357785940150215"
         }
       ],
       "total_children_count": 3,
@@ -99,17 +81,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1101.jsonld#38598"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1101.jsonld#38599"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1101.jsonld#64854"
+          ]
+        }
+      ]
     },
     {
       "token_string": "lsdries",
       "triples": [
         {
           "http://example.com/terms#name": "Grote Elsdries",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0488686676615195",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.09397818889224"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.05305001379809",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.21240338588311"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1101.jsonld#38597",
         "@type": "tree:Node"
@@ -117,8 +120,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Grote Elsdries",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0488686676615195",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.09397818889224"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.05305001379809",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.21240338588311"
         }
       ],
       "total_children_count": 0,
@@ -134,17 +137,19 @@
       ],
       "triples_metadata": [
         "Grote Elsdries"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "de",
       "triples": [
         {
           "http://example.com/terms#name": "Grote Ede",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.004105262651035",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.43437195513117"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4966955663796315",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.83180652638418"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1101.jsonld#38597",
         "@type": "tree:Node"
@@ -152,8 +157,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Grote Ede",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.004105262651035",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.43437195513117"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4966955663796315",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.83180652638418"
         }
       ],
       "total_children_count": 0,
@@ -169,17 +174,19 @@
       ],
       "triples_metadata": [
         "Grote Ede"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "ggestraat",
       "triples": [
         {
           "http://example.com/terms#name": "Grote Eggestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6055067822915206",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.18171594110936"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.215401098012609",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.357785940150215"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1101.jsonld#38597",
         "@type": "tree:Node"
@@ -187,8 +194,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Grote Eggestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6055067822915206",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.18171594110936"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.215401098012609",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.357785940150215"
         }
       ],
       "total_children_count": 0,
@@ -204,7 +211,8 @@
       ],
       "triples_metadata": [
         "Grote Eggestraat"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

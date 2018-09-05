@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -25,10 +25,11 @@
       "triples": [
         {
           "http://example.com/terms#name": "Parnassialaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.463136466819724",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.02616133333866"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2375715387933077",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.27644849607099"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2328.jsonld#64428",
         "@type": "tree:Node"
@@ -36,8 +37,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Parnassialaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.463136466819724",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.02616133333866"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2375715387933077",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.27644849607099"
         }
       ],
       "total_children_count": 0,
@@ -53,17 +54,19 @@
       ],
       "triples_metadata": [
         "Parnassialaan"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "weg",
       "triples": [
         {
           "http://example.com/terms#name": "Parnassiaweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.236501056653457",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.334705260493955"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6936949378532704",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.441249563856"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2328.jsonld#64428",
         "@type": "tree:Node"
@@ -71,8 +74,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Parnassiaweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.236501056653457",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.334705260493955"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6936949378532704",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.441249563856"
         }
       ],
       "total_children_count": 0,
@@ -88,33 +91,22 @@
       ],
       "triples_metadata": [
         "Parnassiaweg"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "a",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2328.jsonld#58293",
-              "@type": "tree:Node",
-              "token_string": "laan"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2328.jsonld#58294",
-              "@type": "tree:Node",
-              "token_string": "weg"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "laan": [
+          "2328",
+          "58293"
+        ],
+        "weg": [
+          "2328",
+          "58294"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment2328.jsonld#91477",
         "@type": "tree:Node"
@@ -122,13 +114,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Parnassialaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.463136466819724",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.02616133333866"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2375715387933077",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.27644849607099"
         },
         {
           "http://example.com/terms#name": "Parnassiaweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.236501056653457",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.334705260493955"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6936949378532704",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.441249563856"
         }
       ],
       "total_children_count": 2,
@@ -148,33 +140,35 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
-    },
-    {
-      "token_string": "us",
-      "triples": [],
-      "children": [
+      "triples_metadata": [],
+      "childlist": [
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment2328.jsonld#64603",
-              "@type": "tree:Node",
-              "token_string": "straat"
-            }
+            "/streets/fragment2328.jsonld#58293"
           ]
         },
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment2328.jsonld#64604",
-              "@type": "tree:Node",
-              "token_string": "kruidstraat"
-            }
+            "/streets/fragment2328.jsonld#58294"
           ]
         }
-      ],
+      ]
+    },
+    {
+      "token_string": "us",
+      "triples": [],
+      "children": {
+        "straat": [
+          "2328",
+          "64603"
+        ],
+        "kruidstraat": [
+          "2328",
+          "64604"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment2328.jsonld#91477",
         "@type": "tree:Node"
@@ -182,13 +176,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Parnassiusstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.638142654352528",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.35762693258885"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3019104409941304",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.177782895052495"
         },
         {
           "http://example.com/terms#name": "Parnassiuskruidstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.345182541971403",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.16682635987784"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.213748663688105",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.70624416699158"
         }
       ],
       "total_children_count": 2,
@@ -208,17 +202,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2328.jsonld#64603"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2328.jsonld#64604"
+          ]
+        }
+      ]
     },
     {
       "token_string": "straat",
       "triples": [
         {
           "http://example.com/terms#name": "Parnassiusstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.638142654352528",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.35762693258885"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3019104409941304",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.177782895052495"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2328.jsonld#64602",
         "@type": "tree:Node"
@@ -226,8 +235,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Parnassiusstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.638142654352528",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.35762693258885"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3019104409941304",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.177782895052495"
         }
       ],
       "total_children_count": 0,
@@ -243,17 +252,19 @@
       ],
       "triples_metadata": [
         "Parnassiusstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "kruidstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Parnassiuskruidstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.345182541971403",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.16682635987784"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.213748663688105",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.70624416699158"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2328.jsonld#64602",
         "@type": "tree:Node"
@@ -261,8 +272,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Parnassiuskruidstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.345182541971403",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.16682635987784"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.213748663688105",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.70624416699158"
         }
       ],
       "total_children_count": 0,
@@ -278,33 +289,22 @@
       ],
       "triples_metadata": [
         "Parnassiuskruidstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "nass",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2328.jsonld#91477",
-              "@type": "tree:Node",
-              "token_string": "i"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2328.jsonld#91479",
-              "@type": "tree:Node",
-              "token_string": "us"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "i": [
+          "2328",
+          "91477"
+        ],
+        "us": [
+          "2328",
+          "91479"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment168.jsonld#2153",
         "@type": "tree:Node"
@@ -312,63 +312,63 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Parnassialaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.463136466819724",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.02616133333866"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2375715387933077",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.27644849607099"
         },
         {
           "http://example.com/terms#name": "Parnassiaweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.236501056653457",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.334705260493955"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6936949378532704",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.441249563856"
         },
         {
           "http://example.com/terms#name": "Parnassiusstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.638142654352528",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.35762693258885"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3019104409941304",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.177782895052495"
         },
         {
           "http://example.com/terms#name": "Parnassiuskruidstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.345182541971403",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.16682635987784"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.213748663688105",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.70624416699158"
         },
         {
           "http://example.com/terms#name": "Parnassusgaarde",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.810730809986865",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.162823126434496"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8453445721533135",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.451877707400584"
         },
         {
           "http://example.com/terms#name": "Parnassusstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.273546217012275",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.93342484248981"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9919331724358846",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.0192342462385"
         },
         {
           "http://example.com/terms#name": "Parnassusbergdreef",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5375657736806874",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.05262354184875"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.347468466047614",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.23153070282095"
         },
         {
           "http://example.com/terms#name": "Parnassusbergdreef",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.092431546462885",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.493536200136056"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8460599072714023",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.22323912256362"
         },
         {
           "http://example.com/terms#name": "Parnassusbergdreef",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.092431546462885",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.493536200136056"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8460599072714023",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.22323912256362"
         },
         {
           "http://example.com/terms#name": "Parnassusbergdreef",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.092431546462885",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.493536200136056"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8460599072714023",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.22323912256362"
         },
         {
           "http://example.com/terms#name": "Parnassusbergdreef",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.092431546462885",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.493536200136056"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8460599072714023",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.22323912256362"
         },
         {
           "http://example.com/terms#name": "Parnassusdreef",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.701706089470362",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.82861997376176"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8364701287189216",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.40801630922255"
         }
       ],
       "total_children_count": 12,
@@ -428,33 +428,35 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
-    },
-    {
-      "token_string": "i",
-      "triples": [],
-      "children": [
+      "triples_metadata": [],
+      "childlist": [
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment2328.jsonld#64428",
-              "@type": "tree:Node",
-              "token_string": "a"
-            }
+            "/streets/fragment2328.jsonld#91477"
           ]
         },
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment2328.jsonld#64602",
-              "@type": "tree:Node",
-              "token_string": "us"
-            }
+            "/streets/fragment2328.jsonld#91479"
           ]
         }
-      ],
+      ]
+    },
+    {
+      "token_string": "i",
+      "triples": [],
+      "children": {
+        "a": [
+          "2328",
+          "64428"
+        ],
+        "us": [
+          "2328",
+          "64602"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment2328.jsonld#91476",
         "@type": "tree:Node"
@@ -462,23 +464,23 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Parnassialaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.463136466819724",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.02616133333866"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2375715387933077",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.27644849607099"
         },
         {
           "http://example.com/terms#name": "Parnassiaweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.236501056653457",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.334705260493955"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6936949378532704",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.441249563856"
         },
         {
           "http://example.com/terms#name": "Parnassiusstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.638142654352528",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.35762693258885"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3019104409941304",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.177782895052495"
         },
         {
           "http://example.com/terms#name": "Parnassiuskruidstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.345182541971403",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.16682635987784"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.213748663688105",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.70624416699158"
         }
       ],
       "total_children_count": 6,
@@ -510,53 +512,43 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2328.jsonld#64428"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2328.jsonld#64602"
+          ]
+        }
+      ]
     },
     {
       "token_string": "us",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2328.jsonld#91480",
-              "@type": "tree:Node",
-              "token_string": "gaarde"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2328.jsonld#91481",
-              "@type": "tree:Node",
-              "token_string": "straat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2328.jsonld#95135",
-              "@type": "tree:Node",
-              "token_string": "bergdreef"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2328.jsonld#99239",
-              "@type": "tree:Node",
-              "token_string": "dreef"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "gaarde": [
+          "2328",
+          "91480"
+        ],
+        "straat": [
+          "2328",
+          "91481"
+        ],
+        "bergdreef": [
+          "2328",
+          "95135"
+        ],
+        "dreef": [
+          "2328",
+          "99239"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment2328.jsonld#91476",
         "@type": "tree:Node"
@@ -564,43 +556,43 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Parnassusgaarde",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.810730809986865",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.162823126434496"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8453445721533135",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.451877707400584"
         },
         {
           "http://example.com/terms#name": "Parnassusstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.273546217012275",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.93342484248981"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9919331724358846",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.0192342462385"
         },
         {
           "http://example.com/terms#name": "Parnassusbergdreef",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5375657736806874",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.05262354184875"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.347468466047614",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.23153070282095"
         },
         {
           "http://example.com/terms#name": "Parnassusbergdreef",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.092431546462885",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.493536200136056"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8460599072714023",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.22323912256362"
         },
         {
           "http://example.com/terms#name": "Parnassusbergdreef",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.092431546462885",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.493536200136056"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8460599072714023",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.22323912256362"
         },
         {
           "http://example.com/terms#name": "Parnassusbergdreef",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.092431546462885",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.493536200136056"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8460599072714023",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.22323912256362"
         },
         {
           "http://example.com/terms#name": "Parnassusbergdreef",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.092431546462885",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.493536200136056"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8460599072714023",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.22323912256362"
         },
         {
           "http://example.com/terms#name": "Parnassusdreef",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.701706089470362",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.82861997376176"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8364701287189216",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.40801630922255"
         }
       ],
       "total_children_count": 4,
@@ -636,17 +628,44 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2328.jsonld#91480"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2328.jsonld#91481"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2328.jsonld#95135"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2328.jsonld#99239"
+          ]
+        }
+      ]
     },
     {
       "token_string": "gaarde",
       "triples": [
         {
           "http://example.com/terms#name": "Parnassusgaarde",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.810730809986865",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.162823126434496"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8453445721533135",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.451877707400584"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2328.jsonld#91479",
         "@type": "tree:Node"
@@ -654,8 +673,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Parnassusgaarde",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.810730809986865",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.162823126434496"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8453445721533135",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.451877707400584"
         }
       ],
       "total_children_count": 0,
@@ -671,17 +690,19 @@
       ],
       "triples_metadata": [
         "Parnassusgaarde"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "straat",
       "triples": [
         {
           "http://example.com/terms#name": "Parnassusstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.273546217012275",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.93342484248981"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9919331724358846",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.0192342462385"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2328.jsonld#91479",
         "@type": "tree:Node"
@@ -689,8 +710,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Parnassusstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.273546217012275",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.93342484248981"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9919331724358846",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.0192342462385"
         }
       ],
       "total_children_count": 0,
@@ -706,37 +727,39 @@
       ],
       "triples_metadata": [
         "Parnassusstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "bergdreef",
       "triples": [
         {
           "http://example.com/terms#name": "Parnassusbergdreef",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5375657736806874",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.05262354184875"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.347468466047614",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.23153070282095"
         },
         {
           "http://example.com/terms#name": "Parnassusbergdreef",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.092431546462885",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.493536200136056"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8460599072714023",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.22323912256362"
         },
         {
           "http://example.com/terms#name": "Parnassusbergdreef",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.092431546462885",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.493536200136056"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8460599072714023",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.22323912256362"
         },
         {
           "http://example.com/terms#name": "Parnassusbergdreef",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.092431546462885",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.493536200136056"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8460599072714023",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.22323912256362"
         },
         {
           "http://example.com/terms#name": "Parnassusbergdreef",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.092431546462885",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.493536200136056"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8460599072714023",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.22323912256362"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2328.jsonld#91479",
         "@type": "tree:Node"
@@ -744,28 +767,28 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Parnassusbergdreef",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5375657736806874",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.05262354184875"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.347468466047614",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.23153070282095"
         },
         {
           "http://example.com/terms#name": "Parnassusbergdreef",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.092431546462885",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.493536200136056"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8460599072714023",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.22323912256362"
         },
         {
           "http://example.com/terms#name": "Parnassusbergdreef",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.092431546462885",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.493536200136056"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8460599072714023",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.22323912256362"
         },
         {
           "http://example.com/terms#name": "Parnassusbergdreef",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.092431546462885",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.493536200136056"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8460599072714023",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.22323912256362"
         },
         {
           "http://example.com/terms#name": "Parnassusbergdreef",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.092431546462885",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.493536200136056"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8460599072714023",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.22323912256362"
         }
       ],
       "total_children_count": 0,
@@ -789,17 +812,19 @@
         "Parnassusbergdreef",
         "Parnassusbergdreef",
         "Parnassusbergdreef"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "dreef",
       "triples": [
         {
           "http://example.com/terms#name": "Parnassusdreef",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.701706089470362",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.82861997376176"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8364701287189216",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.40801630922255"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2328.jsonld#91479",
         "@type": "tree:Node"
@@ -807,8 +832,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Parnassusdreef",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.701706089470362",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.82861997376176"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8364701287189216",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.40801630922255"
         }
       ],
       "total_children_count": 0,
@@ -824,7 +849,8 @@
       ],
       "triples_metadata": [
         "Parnassusdreef"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

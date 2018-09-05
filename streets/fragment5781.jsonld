@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "s",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5781.jsonld#153816",
-              "@type": "tree:Node",
-              "token_string": "saux"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5781.jsonld#153817",
-              "@type": "tree:Node",
-              "token_string": "chet"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5781.jsonld#159970",
-              "@type": "tree:Node",
-              "token_string": "ence"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "saux": [
+          "5781",
+          "153816"
+        ],
+        "chet": [
+          "5781",
+          "153817"
+        ],
+        "ence": [
+          "5781",
+          "159970"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4574.jsonld#105890",
         "@type": "tree:Node"
@@ -62,18 +44,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Lassaux",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9223722689763427",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.43229125061633"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.005338755849105",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.3033464662"
         },
         {
           "http://example.com/terms#name": "Rue Laschet",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.151656908210052",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.518382389766835"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.004488450343824",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.44926511795614"
         },
         {
           "http://example.com/terms#name": "Rue Lasence",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2373488543282205",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.117005698410274"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0718295369976714",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.197110519597274"
         }
       ],
       "total_children_count": 3,
@@ -99,17 +81,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5781.jsonld#153816"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5781.jsonld#153817"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5781.jsonld#159970"
+          ]
+        }
+      ]
     },
     {
       "token_string": "saux",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Lassaux",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9223722689763427",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.43229125061633"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.005338755849105",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.3033464662"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5781.jsonld#153815",
         "@type": "tree:Node"
@@ -117,8 +120,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Lassaux",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9223722689763427",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.43229125061633"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.005338755849105",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.3033464662"
         }
       ],
       "total_children_count": 0,
@@ -134,17 +137,19 @@
       ],
       "triples_metadata": [
         "Rue Lassaux"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "chet",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Laschet",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.151656908210052",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.518382389766835"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.004488450343824",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.44926511795614"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5781.jsonld#153815",
         "@type": "tree:Node"
@@ -152,8 +157,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Laschet",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.151656908210052",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.518382389766835"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.004488450343824",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.44926511795614"
         }
       ],
       "total_children_count": 0,
@@ -169,17 +174,19 @@
       ],
       "triples_metadata": [
         "Rue Laschet"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "ence",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Lasence",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2373488543282205",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.117005698410274"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0718295369976714",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.197110519597274"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5781.jsonld#153815",
         "@type": "tree:Node"
@@ -187,8 +194,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Lasence",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2373488543282205",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.117005698410274"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0718295369976714",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.197110519597274"
         }
       ],
       "total_children_count": 0,
@@ -204,7 +211,8 @@
       ],
       "triples_metadata": [
         "Rue Lasence"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

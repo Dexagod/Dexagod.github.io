@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "3",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5446.jsonld#100711",
-              "@type": "tree:Node",
-              "token_string": "-plein"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5446.jsonld#100712",
-              "@type": "tree:Node",
-              "token_string": "14 Leuven"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "-plein": [
+          "5446",
+          "100711"
+        ],
+        "14 Leuven": [
+          "5446",
+          "100712"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment17.jsonld#294",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "E3-plein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2270183206122764",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.7136548030993"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.171913085337497",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.929317364191064"
         },
         {
           "http://example.com/terms#name": "E314 Leuven",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.565325165267916",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.59347539072938"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0432935928645213",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.506657200258566"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5446.jsonld#100711"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5446.jsonld#100712"
+          ]
+        }
+      ]
     },
     {
       "token_string": "-plein",
       "triples": [
         {
           "http://example.com/terms#name": "E3-plein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2270183206122764",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.7136548030993"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.171913085337497",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.929317364191064"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5446.jsonld#100710",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "E3-plein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2270183206122764",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.7136548030993"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.171913085337497",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.929317364191064"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "E3-plein"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "14 Leuven",
       "triples": [
         {
           "http://example.com/terms#name": "E314 Leuven",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.565325165267916",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.59347539072938"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0432935928645213",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.506657200258566"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5446.jsonld#100710",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "E314 Leuven",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.565325165267916",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.59347539072938"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0432935928645213",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.506657200258566"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "E314 Leuven"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

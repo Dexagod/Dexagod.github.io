@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "f",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1818.jsonld#117850",
-              "@type": "tree:Node",
-              "token_string": "meyerstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1818.jsonld#117851",
-              "@type": "tree:Node",
-              "token_string": "étaria de l'aéroport"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "meyerstraat": [
+          "1818",
+          "117850"
+        ],
+        "étaria de l'aéroport": [
+          "1818",
+          "117851"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment766.jsonld#1589",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Cafmeyerstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.355018890469077",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.44493496123277"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.031638288807141",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.196164106474626"
         },
         {
           "http://example.com/terms#name": "Cafétaria de l'aéroport",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.731785767647561",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.87170224124432"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0033321254624705",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.71071038558579"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1818.jsonld#117850"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1818.jsonld#117851"
+          ]
+        }
+      ]
     },
     {
       "token_string": "meyerstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Cafmeyerstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.355018890469077",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.44493496123277"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.031638288807141",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.196164106474626"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1818.jsonld#117849",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Cafmeyerstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.355018890469077",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.44493496123277"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.031638288807141",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.196164106474626"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Cafmeyerstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "étaria de l'aéroport",
       "triples": [
         {
           "http://example.com/terms#name": "Cafétaria de l'aéroport",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.731785767647561",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.87170224124432"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0033321254624705",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.71071038558579"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1818.jsonld#117849",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Cafétaria de l'aéroport",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.731785767647561",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.87170224124432"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0033321254624705",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.71071038558579"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Cafétaria de l'aéroport"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -25,10 +25,11 @@
       "triples": [
         {
           "http://example.com/terms#name": "Paul de Smet de Naeyerstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0520499341771927",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.76138016263683"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3909627512190514",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.67300130698226"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3649.jsonld#53105",
         "@type": "tree:Node"
@@ -36,8 +37,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Paul de Smet de Naeyerstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0520499341771927",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.76138016263683"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3909627512190514",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.67300130698226"
         }
       ],
       "total_children_count": 0,
@@ -53,17 +54,19 @@
       ],
       "triples_metadata": [
         "Paul de Smet de Naeyerstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "plein",
       "triples": [
         {
           "http://example.com/terms#name": "Paul de Smet de Naeyerplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.122273460353385",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.74278200102978"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.595210814752299",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.98334458142062"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3649.jsonld#53105",
         "@type": "tree:Node"
@@ -71,8 +74,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Paul de Smet de Naeyerplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.122273460353385",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.74278200102978"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.595210814752299",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.98334458142062"
         }
       ],
       "total_children_count": 0,
@@ -88,33 +91,22 @@
       ],
       "triples_metadata": [
         "Paul de Smet de Naeyerplein"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "Smet de Naeyer",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3649.jsonld#39414",
-              "@type": "tree:Node",
-              "token_string": "straat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3649.jsonld#39415",
-              "@type": "tree:Node",
-              "token_string": "plein"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "straat": [
+          "3649",
+          "39414"
+        ],
+        "plein": [
+          "3649",
+          "39415"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment3649.jsonld#73103",
         "@type": "tree:Node"
@@ -122,13 +114,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Paul de Smet de Naeyerstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0520499341771927",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.76138016263683"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3909627512190514",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.67300130698226"
         },
         {
           "http://example.com/terms#name": "Paul de Smet de Naeyerplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.122273460353385",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.74278200102978"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.595210814752299",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.98334458142062"
         }
       ],
       "total_children_count": 2,
@@ -148,17 +140,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3649.jsonld#39414"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3649.jsonld#39415"
+          ]
+        }
+      ]
     },
     {
       "token_string": "Gravelaan",
       "triples": [
         {
           "http://example.com/terms#name": "Paul de Gravelaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1930996184630014",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.348027458457196"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5504922169543454",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.62838967351574"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3649.jsonld#73103",
         "@type": "tree:Node"
@@ -166,8 +173,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Paul de Gravelaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1930996184630014",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.348027458457196"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5504922169543454",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.62838967351574"
         }
       ],
       "total_children_count": 0,
@@ -183,33 +190,22 @@
       ],
       "triples_metadata": [
         "Paul de Gravelaan"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "d",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3649.jsonld#73103",
-              "@type": "tree:Node",
-              "token_string": "e "
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3649.jsonld#73104",
-              "@type": "tree:Node",
-              "token_string": "'Acostalaan"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "e ": [
+          "3649",
+          "73103"
+        ],
+        "'Acostalaan": [
+          "3649",
+          "73104"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment2729.jsonld#5779",
         "@type": "tree:Node"
@@ -217,28 +213,28 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Paul de Smet de Naeyerstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0520499341771927",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.76138016263683"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3909627512190514",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.67300130698226"
         },
         {
           "http://example.com/terms#name": "Paul de Smet de Naeyerplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.122273460353385",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.74278200102978"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.595210814752299",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.98334458142062"
         },
         {
           "http://example.com/terms#name": "Paul de Gravelaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1930996184630014",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.348027458457196"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5504922169543454",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.62838967351574"
         },
         {
           "http://example.com/terms#name": "Paul d'Acostalaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4544010388188253",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.79494422460916"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.582205052220627",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.348122581030864"
         },
         {
           "http://example.com/terms#name": "Paul de Halleuxstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.372394790467036",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.36847442198954"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0987644726738695",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.62691114879629"
         }
       ],
       "total_children_count": 7,
@@ -276,43 +272,39 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3649.jsonld#73103"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3649.jsonld#73104"
+          ]
+        }
+      ]
     },
     {
       "token_string": "e ",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3649.jsonld#53105",
-              "@type": "tree:Node",
-              "token_string": "Smet de Naeyer"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3649.jsonld#53106",
-              "@type": "tree:Node",
-              "token_string": "Gravelaan"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3649.jsonld#95381",
-              "@type": "tree:Node",
-              "token_string": "Halleuxstraat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "Smet de Naeyer": [
+          "3649",
+          "53105"
+        ],
+        "Gravelaan": [
+          "3649",
+          "53106"
+        ],
+        "Halleuxstraat": [
+          "3649",
+          "95381"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment3649.jsonld#73102",
         "@type": "tree:Node"
@@ -320,23 +312,23 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Paul de Smet de Naeyerstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0520499341771927",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.76138016263683"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3909627512190514",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.67300130698226"
         },
         {
           "http://example.com/terms#name": "Paul de Smet de Naeyerplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.122273460353385",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.74278200102978"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.595210814752299",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.98334458142062"
         },
         {
           "http://example.com/terms#name": "Paul de Gravelaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1930996184630014",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.348027458457196"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5504922169543454",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.62838967351574"
         },
         {
           "http://example.com/terms#name": "Paul de Halleuxstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.372394790467036",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.36847442198954"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0987644726738695",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.62691114879629"
         }
       ],
       "total_children_count": 5,
@@ -368,17 +360,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3649.jsonld#53105"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3649.jsonld#53106"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3649.jsonld#95381"
+          ]
+        }
+      ]
     },
     {
       "token_string": "'Acostalaan",
       "triples": [
         {
           "http://example.com/terms#name": "Paul d'Acostalaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4544010388188253",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.79494422460916"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.582205052220627",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.348122581030864"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3649.jsonld#73102",
         "@type": "tree:Node"
@@ -386,8 +399,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Paul d'Acostalaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4544010388188253",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.79494422460916"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.582205052220627",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.348122581030864"
         }
       ],
       "total_children_count": 0,
@@ -403,17 +416,19 @@
       ],
       "triples_metadata": [
         "Paul d'Acostalaan"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "Halleuxstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Paul de Halleuxstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.372394790467036",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.36847442198954"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0987644726738695",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.62691114879629"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3649.jsonld#73103",
         "@type": "tree:Node"
@@ -421,8 +436,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Paul de Halleuxstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.372394790467036",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.36847442198954"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0987644726738695",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.62691114879629"
         }
       ],
       "total_children_count": 0,
@@ -438,7 +453,8 @@
       ],
       "triples_metadata": [
         "Paul de Halleuxstraat"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

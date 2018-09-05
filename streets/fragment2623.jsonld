@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "e",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2623.jsonld#37835",
-              "@type": "tree:Node",
-              "token_string": "straat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2623.jsonld#37836",
-              "@type": "tree:Node",
-              "token_string": "gstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2623.jsonld#70302",
-              "@type": "tree:Node",
-              "token_string": "edstraat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "straat": [
+          "2623",
+          "37835"
+        ],
+        "gstraat": [
+          "2623",
+          "37836"
+        ],
+        "edstraat": [
+          "2623",
+          "70302"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment248.jsonld#235",
         "@type": "tree:Node"
@@ -62,18 +44,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Belestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1982025910475125",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.591705351278364"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0766890058990275",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.16802917192685"
         },
         {
           "http://example.com/terms#name": "Belegstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.960389346141763",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.80532578130654"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8325162340611105",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.64679815602587"
         },
         {
           "http://example.com/terms#name": "Beleedstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.562432447902986",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.86579147868847"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3859745850135132",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.0432713119117"
         }
       ],
       "total_children_count": 3,
@@ -99,17 +81,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2623.jsonld#37835"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2623.jsonld#37836"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2623.jsonld#70302"
+          ]
+        }
+      ]
     },
     {
       "token_string": "straat",
       "triples": [
         {
           "http://example.com/terms#name": "Belestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1982025910475125",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.591705351278364"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0766890058990275",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.16802917192685"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2623.jsonld#37834",
         "@type": "tree:Node"
@@ -117,8 +120,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Belestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1982025910475125",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.591705351278364"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0766890058990275",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.16802917192685"
         }
       ],
       "total_children_count": 0,
@@ -134,17 +137,19 @@
       ],
       "triples_metadata": [
         "Belestraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "gstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Belegstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.960389346141763",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.80532578130654"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8325162340611105",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.64679815602587"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2623.jsonld#37834",
         "@type": "tree:Node"
@@ -152,8 +157,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Belegstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.960389346141763",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.80532578130654"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8325162340611105",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.64679815602587"
         }
       ],
       "total_children_count": 0,
@@ -169,17 +174,19 @@
       ],
       "triples_metadata": [
         "Belegstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "edstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Beleedstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.562432447902986",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.86579147868847"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3859745850135132",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.0432713119117"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2623.jsonld#37834",
         "@type": "tree:Node"
@@ -187,8 +194,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Beleedstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.562432447902986",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.86579147868847"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3859745850135132",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.0432713119117"
         }
       ],
       "total_children_count": 0,
@@ -204,7 +211,8 @@
       ],
       "triples_metadata": [
         "Beleedstraat"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

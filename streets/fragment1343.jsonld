@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "T",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1343.jsonld#94949",
-              "@type": "tree:Node",
-              "token_string": "orhoutstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1343.jsonld#94950",
-              "@type": "tree:Node",
-              "token_string": "ramweg"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "orhoutstraat": [
+          "1343",
+          "94949"
+        ],
+        "ramweg": [
+          "1343",
+          "94950"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment643.jsonld#63",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Lange Torhoutstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3566818488784484",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.74738712682352"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.759951578446807",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.79808619675029"
         },
         {
           "http://example.com/terms#name": "Lange Tramweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2906594506886693",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.821397480068704"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1482017823083948",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.84032417558008"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1343.jsonld#94949"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1343.jsonld#94950"
+          ]
+        }
+      ]
     },
     {
       "token_string": "orhoutstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Lange Torhoutstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3566818488784484",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.74738712682352"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.759951578446807",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.79808619675029"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1343.jsonld#94948",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Lange Torhoutstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3566818488784484",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.74738712682352"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.759951578446807",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.79808619675029"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Lange Torhoutstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "ramweg",
       "triples": [
         {
           "http://example.com/terms#name": "Lange Tramweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2906594506886693",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.821397480068704"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1482017823083948",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.84032417558008"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1343.jsonld#94948",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Lange Tramweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2906594506886693",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.821397480068704"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1482017823083948",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.84032417558008"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Lange Tramweg"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

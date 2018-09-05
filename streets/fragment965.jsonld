@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "Fra",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment965.jsonld#66245",
-              "@type": "tree:Node",
-              "token_string": "chenlaan"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment965.jsonld#66246",
-              "@type": "tree:Node",
-              "token_string": "echemstraat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "chenlaan": [
+          "965",
+          "66245"
+        ],
+        "echemstraat": [
+          "965",
+          "66246"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment628.jsonld#3242",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Van Frachenlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.731601050490123",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.94558678102533"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.234866717540102",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.187198612500055"
         },
         {
           "http://example.com/terms#name": "Van Fraechemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.675152801141565",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.0109855220947"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.054182166875705",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.58834602703375"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment965.jsonld#66245"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment965.jsonld#66246"
+          ]
+        }
+      ]
     },
     {
       "token_string": "chenlaan",
       "triples": [
         {
           "http://example.com/terms#name": "Van Frachenlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.731601050490123",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.94558678102533"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.234866717540102",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.187198612500055"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment965.jsonld#66244",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Van Frachenlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.731601050490123",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.94558678102533"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.234866717540102",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.187198612500055"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Van Frachenlaan"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "echemstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Van Fraechemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.675152801141565",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.0109855220947"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.054182166875705",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.58834602703375"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment965.jsonld#66244",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Van Fraechemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.675152801141565",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.0109855220947"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.054182166875705",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.58834602703375"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Van Fraechemstraat"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

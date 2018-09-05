@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "o",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2174.jsonld#164409",
-              "@type": "tree:Node",
-              "token_string": "pbouwstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2174.jsonld#164410",
-              "@type": "tree:Node",
-              "token_string": "ck"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "pbouwstraat": [
+          "2174",
+          "164409"
+        ],
+        "ck": [
+          "2174",
+          "164410"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment349.jsonld#195",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Heropbouwstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6333920633581167",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.33787534502462"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0971110680529716",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.01091635676927"
         },
         {
           "http://example.com/terms#name": "Herock",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.098326216506135",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.09528549311684"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.23780314873249",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.79506388208857"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2174.jsonld#164409"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2174.jsonld#164410"
+          ]
+        }
+      ]
     },
     {
       "token_string": "pbouwstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Heropbouwstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6333920633581167",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.33787534502462"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0971110680529716",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.01091635676927"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2174.jsonld#164408",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Heropbouwstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6333920633581167",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.33787534502462"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0971110680529716",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.01091635676927"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Heropbouwstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "ck",
       "triples": [
         {
           "http://example.com/terms#name": "Herock",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.098326216506135",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.09528549311684"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.23780314873249",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.79506388208857"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2174.jsonld#164408",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Herock",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.098326216506135",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.09528549311684"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.23780314873249",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.79506388208857"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Herock"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

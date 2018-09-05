@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "t",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment568.jsonld#17460",
-              "@type": "tree:Node",
-              "token_string": "jesstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment568.jsonld#17461",
-              "@type": "tree:Node",
-              "token_string": "omme"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment568.jsonld#26668",
-              "@type": "tree:Node",
-              "token_string": "egemstraat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "jesstraat": [
+          "568",
+          "17460"
+        ],
+        "omme": [
+          "568",
+          "17461"
+        ],
+        "egemstraat": [
+          "568",
+          "26668"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment42.jsonld#300",
         "@type": "tree:Node"
@@ -62,18 +44,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Heitjesstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4262083191419737",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.280866283350484"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.072292898316789",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.723506185606105"
         },
         {
           "http://example.com/terms#name": "Heitomme",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8148823605937787",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.14241966645299"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2525472797099098",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.28338116666656"
         },
         {
           "http://example.com/terms#name": "Heitegemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.926790172780158",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.33530494698573"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.360697415558657",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.301318921116845"
         }
       ],
       "total_children_count": 3,
@@ -99,17 +81,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment568.jsonld#17460"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment568.jsonld#17461"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment568.jsonld#26668"
+          ]
+        }
+      ]
     },
     {
       "token_string": "jesstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Heitjesstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4262083191419737",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.280866283350484"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.072292898316789",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.723506185606105"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment568.jsonld#17459",
         "@type": "tree:Node"
@@ -117,8 +120,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Heitjesstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4262083191419737",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.280866283350484"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.072292898316789",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.723506185606105"
         }
       ],
       "total_children_count": 0,
@@ -134,17 +137,19 @@
       ],
       "triples_metadata": [
         "Heitjesstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "omme",
       "triples": [
         {
           "http://example.com/terms#name": "Heitomme",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8148823605937787",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.14241966645299"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2525472797099098",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.28338116666656"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment568.jsonld#17459",
         "@type": "tree:Node"
@@ -152,8 +157,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Heitomme",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8148823605937787",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.14241966645299"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2525472797099098",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.28338116666656"
         }
       ],
       "total_children_count": 0,
@@ -169,17 +174,19 @@
       ],
       "triples_metadata": [
         "Heitomme"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "egemstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Heitegemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.926790172780158",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.33530494698573"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.360697415558657",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.301318921116845"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment568.jsonld#17459",
         "@type": "tree:Node"
@@ -187,8 +194,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Heitegemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.926790172780158",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.33530494698573"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.360697415558657",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.301318921116845"
         }
       ],
       "total_children_count": 0,
@@ -204,7 +211,8 @@
       ],
       "triples_metadata": [
         "Heitegemstraat"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

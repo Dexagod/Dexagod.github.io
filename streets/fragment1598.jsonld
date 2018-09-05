@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "uil",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1598.jsonld#84239",
-              "@type": "tree:Node",
-              "token_string": "weg"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1598.jsonld#84240",
-              "@type": "tree:Node",
-              "token_string": "straat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "weg": [
+          "1598",
+          "84239"
+        ],
+        "straat": [
+          "1598",
+          "84240"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment638.jsonld#5618",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Steenuilweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1883428034060226",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.02966596112424"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3276621466316483",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.30880499053814"
         },
         {
           "http://example.com/terms#name": "Steenuilstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.703772523793082",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.435291786638814"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.600138077005936",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.25448712781952"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1598.jsonld#84239"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1598.jsonld#84240"
+          ]
+        }
+      ]
     },
     {
       "token_string": "weg",
       "triples": [
         {
           "http://example.com/terms#name": "Steenuilweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1883428034060226",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.02966596112424"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3276621466316483",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.30880499053814"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1598.jsonld#84238",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Steenuilweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1883428034060226",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.02966596112424"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3276621466316483",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.30880499053814"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Steenuilweg"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "straat",
       "triples": [
         {
           "http://example.com/terms#name": "Steenuilstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.703772523793082",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.435291786638814"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.600138077005936",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.25448712781952"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1598.jsonld#84238",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Steenuilstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.703772523793082",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.435291786638814"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.600138077005936",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.25448712781952"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Steenuilstraat"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "m",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5609.jsonld#155768",
-              "@type": "tree:Node",
-              "token_string": "odeau"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5609.jsonld#155769",
-              "@type": "tree:Node",
-              "token_string": "arais"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5609.jsonld#155960",
-              "@type": "tree:Node",
-              "token_string": "ency"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "odeau": [
+          "5609",
+          "155768"
+        ],
+        "arais": [
+          "5609",
+          "155769"
+        ],
+        "ency": [
+          "5609",
+          "155960"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment3808.jsonld#141386",
         "@type": "tree:Node"
@@ -62,18 +44,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue de Clémodeau",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.31697202959692",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.07232397849603"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4652035128414886",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.83897907856428"
         },
         {
           "http://example.com/terms#name": "Rue de Clémarais",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9572373639081295",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.97272608349577"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5081317660280065",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.30975544250874"
         },
         {
           "http://example.com/terms#name": "Rue de Clémency",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.544481430651723",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.83318371635443"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8655400626680656",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.15135551506183"
         }
       ],
       "total_children_count": 3,
@@ -99,17 +81,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5609.jsonld#155768"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5609.jsonld#155769"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5609.jsonld#155960"
+          ]
+        }
+      ]
     },
     {
       "token_string": "odeau",
       "triples": [
         {
           "http://example.com/terms#name": "Rue de Clémodeau",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.31697202959692",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.07232397849603"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4652035128414886",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.83897907856428"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5609.jsonld#155767",
         "@type": "tree:Node"
@@ -117,8 +120,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue de Clémodeau",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.31697202959692",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.07232397849603"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4652035128414886",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.83897907856428"
         }
       ],
       "total_children_count": 0,
@@ -134,17 +137,19 @@
       ],
       "triples_metadata": [
         "Rue de Clémodeau"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "arais",
       "triples": [
         {
           "http://example.com/terms#name": "Rue de Clémarais",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9572373639081295",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.97272608349577"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5081317660280065",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.30975544250874"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5609.jsonld#155767",
         "@type": "tree:Node"
@@ -152,8 +157,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue de Clémarais",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9572373639081295",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.97272608349577"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5081317660280065",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.30975544250874"
         }
       ],
       "total_children_count": 0,
@@ -169,17 +174,19 @@
       ],
       "triples_metadata": [
         "Rue de Clémarais"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "ency",
       "triples": [
         {
           "http://example.com/terms#name": "Rue de Clémency",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.544481430651723",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.83318371635443"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8655400626680656",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.15135551506183"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5609.jsonld#155767",
         "@type": "tree:Node"
@@ -187,8 +194,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue de Clémency",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.544481430651723",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.83318371635443"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8655400626680656",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.15135551506183"
         }
       ],
       "total_children_count": 0,
@@ -204,7 +211,8 @@
       ],
       "triples_metadata": [
         "Rue de Clémency"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

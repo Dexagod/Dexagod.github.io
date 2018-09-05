@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "T",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2862.jsonld#67175",
-              "@type": "tree:Node",
-              "token_string": "emmermanstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2862.jsonld#67176",
-              "@type": "tree:Node",
-              "token_string": "heunissenlaan"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "emmermanstraat": [
+          "2862",
+          "67175"
+        ],
+        "heunissenlaan": [
+          "2862",
+          "67176"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment2411.jsonld#34590",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Karel Temmermanstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9059112235626574",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.833164635320195"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.972797793969994",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.22408167598542"
         },
         {
           "http://example.com/terms#name": "Karel Theunissenlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8000848739822106",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.27500805878345"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.192194383121293",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.33584233573327"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2862.jsonld#67175"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2862.jsonld#67176"
+          ]
+        }
+      ]
     },
     {
       "token_string": "emmermanstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Karel Temmermanstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9059112235626574",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.833164635320195"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.972797793969994",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.22408167598542"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2862.jsonld#67174",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Karel Temmermanstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9059112235626574",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.833164635320195"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.972797793969994",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.22408167598542"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Karel Temmermanstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "heunissenlaan",
       "triples": [
         {
           "http://example.com/terms#name": "Karel Theunissenlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8000848739822106",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.27500805878345"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.192194383121293",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.33584233573327"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2862.jsonld#67174",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Karel Theunissenlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8000848739822106",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.27500805878345"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.192194383121293",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.33584233573327"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Karel Theunissenlaan"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "E",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2954.jsonld#30394",
-              "@type": "tree:Node",
-              "token_string": "miel Van Dammestraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2954.jsonld#87998",
-              "@type": "tree:Node",
-              "token_string": "d"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2954.jsonld#92740",
-              "@type": "tree:Node",
-              "token_string": "lie Lambottestraat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "miel Van Dammestraat": [
+          "2954",
+          "30394"
+        ],
+        "d": [
+          "2954",
+          "87998"
+        ],
+        "lie Lambottestraat": [
+          "2954",
+          "92740"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment2426.jsonld#27963",
         "@type": "tree:Node"
@@ -62,23 +44,23 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Dokter Eduard Moreauxlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2230397862350504",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.12888956790272"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8419693019196868",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.90923870170309"
         },
         {
           "http://example.com/terms#name": "Dokter Emiel Van Dammestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9778856110347256",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.27866782348708"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4636898368865614",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.82095326587241"
         },
         {
           "http://example.com/terms#name": "Dokter Edmond Cordierlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7069403917080703",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.531734897152866"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1711609670270233",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.21977700294928"
         },
         {
           "http://example.com/terms#name": "Dokter Elie Lambottestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4223802259455556",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.23048262831689"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1844327504771295",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.41529590800464"
         }
       ],
       "total_children_count": 5,
@@ -110,17 +92,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2954.jsonld#30394"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2954.jsonld#87998"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2954.jsonld#92740"
+          ]
+        }
+      ]
     },
     {
       "token_string": "miel Van Dammestraat",
       "triples": [
         {
           "http://example.com/terms#name": "Dokter Emiel Van Dammestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9778856110347256",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.27866782348708"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4636898368865614",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.82095326587241"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2954.jsonld#30392",
         "@type": "tree:Node"
@@ -128,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Dokter Emiel Van Dammestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9778856110347256",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.27866782348708"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4636898368865614",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.82095326587241"
         }
       ],
       "total_children_count": 0,
@@ -145,33 +148,22 @@
       ],
       "triples_metadata": [
         "Dokter Emiel Van Dammestraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "d",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2954.jsonld#87999",
-              "@type": "tree:Node",
-              "token_string": "uard Moreauxlaan"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2954.jsonld#88000",
-              "@type": "tree:Node",
-              "token_string": "mond Cordierlaan"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "uard Moreauxlaan": [
+          "2954",
+          "87999"
+        ],
+        "mond Cordierlaan": [
+          "2954",
+          "88000"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment2954.jsonld#30392",
         "@type": "tree:Node"
@@ -179,13 +171,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Dokter Eduard Moreauxlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2230397862350504",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.12888956790272"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8419693019196868",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.90923870170309"
         },
         {
           "http://example.com/terms#name": "Dokter Edmond Cordierlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7069403917080703",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.531734897152866"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1711609670270233",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.21977700294928"
         }
       ],
       "total_children_count": 2,
@@ -205,17 +197,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2954.jsonld#87999"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2954.jsonld#88000"
+          ]
+        }
+      ]
     },
     {
       "token_string": "uard Moreauxlaan",
       "triples": [
         {
           "http://example.com/terms#name": "Dokter Eduard Moreauxlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2230397862350504",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.12888956790272"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8419693019196868",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.90923870170309"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2954.jsonld#87998",
         "@type": "tree:Node"
@@ -223,8 +230,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Dokter Eduard Moreauxlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2230397862350504",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.12888956790272"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8419693019196868",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.90923870170309"
         }
       ],
       "total_children_count": 0,
@@ -240,17 +247,19 @@
       ],
       "triples_metadata": [
         "Dokter Eduard Moreauxlaan"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "mond Cordierlaan",
       "triples": [
         {
           "http://example.com/terms#name": "Dokter Edmond Cordierlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7069403917080703",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.531734897152866"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1711609670270233",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.21977700294928"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2954.jsonld#87998",
         "@type": "tree:Node"
@@ -258,8 +267,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Dokter Edmond Cordierlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7069403917080703",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.531734897152866"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1711609670270233",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.21977700294928"
         }
       ],
       "total_children_count": 0,
@@ -275,17 +284,19 @@
       ],
       "triples_metadata": [
         "Dokter Edmond Cordierlaan"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "lie Lambottestraat",
       "triples": [
         {
           "http://example.com/terms#name": "Dokter Elie Lambottestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4223802259455556",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.23048262831689"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1844327504771295",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.41529590800464"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2954.jsonld#30392",
         "@type": "tree:Node"
@@ -293,8 +304,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Dokter Elie Lambottestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4223802259455556",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.23048262831689"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1844327504771295",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.41529590800464"
         }
       ],
       "total_children_count": 0,
@@ -310,7 +321,8 @@
       ],
       "triples_metadata": [
         "Dokter Elie Lambottestraat"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "X",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6207.jsonld#152842",
-              "@type": "tree:Node",
-              "token_string": "avier-Neujean"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6207.jsonld#152843",
-              "@type": "tree:Node",
-              "token_string": "hovémont"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "avier-Neujean": [
+          "6207",
+          "152842"
+        ],
+        "hovémont": [
+          "6207",
+          "152843"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment3978.jsonld#107658",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Place Xavier-Neujean",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6013257386586446",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.3446462380227"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.942951215815229",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.65759391117301"
         },
         {
           "http://example.com/terms#name": "Place Xhovémont",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.469435346899321",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.876485528682174"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.041108549725075",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.197639835613856"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6207.jsonld#152842"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6207.jsonld#152843"
+          ]
+        }
+      ]
     },
     {
       "token_string": "avier-Neujean",
       "triples": [
         {
           "http://example.com/terms#name": "Place Xavier-Neujean",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6013257386586446",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.3446462380227"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.942951215815229",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.65759391117301"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6207.jsonld#152841",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Place Xavier-Neujean",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6013257386586446",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.3446462380227"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.942951215815229",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.65759391117301"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Place Xavier-Neujean"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "hovémont",
       "triples": [
         {
           "http://example.com/terms#name": "Place Xhovémont",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.469435346899321",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.876485528682174"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.041108549725075",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.197639835613856"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6207.jsonld#152841",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Place Xhovémont",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.469435346899321",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.876485528682174"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.041108549725075",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.197639835613856"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Place Xhovémont"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

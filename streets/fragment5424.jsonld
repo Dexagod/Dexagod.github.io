@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "el",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5424.jsonld#47989",
-              "@type": "tree:Node",
-              "token_string": "hof"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5424.jsonld#47990",
-              "@type": "tree:Node",
-              "token_string": "laan"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "hof": [
+          "5424",
+          "47989"
+        ],
+        "laan": [
+          "5424",
+          "47990"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment5424.jsonld#61129",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Bruegelhof",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2962336571771442",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.86113028987719"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8567551963884674",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.57660212613834"
         },
         {
           "http://example.com/terms#name": "Bruegellaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2955514947084272",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.372163035443236"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.724338673231443",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.788744871318"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5424.jsonld#47989"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5424.jsonld#47990"
+          ]
+        }
+      ]
     },
     {
       "token_string": "hof",
       "triples": [
         {
           "http://example.com/terms#name": "Bruegelhof",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2962336571771442",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.86113028987719"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8567551963884674",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.57660212613834"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5424.jsonld#47988",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Bruegelhof",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2962336571771442",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.86113028987719"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8567551963884674",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.57660212613834"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Bruegelhof"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "laan",
       "triples": [
         {
           "http://example.com/terms#name": "Bruegellaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2955514947084272",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.372163035443236"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.724338673231443",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.788744871318"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5424.jsonld#47988",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Bruegellaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2955514947084272",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.372163035443236"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.724338673231443",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.788744871318"
         }
       ],
       "total_children_count": 0,
@@ -148,43 +153,26 @@
       ],
       "triples_metadata": [
         "Bruegellaan"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "hel",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5424.jsonld#49910",
-              "@type": "tree:Node",
-              "token_string": "dreef"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5424.jsonld#49911",
-              "@type": "tree:Node",
-              "token_string": "park"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5424.jsonld#53612",
-              "@type": "tree:Node",
-              "token_string": "laan"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "dreef": [
+          "5424",
+          "49910"
+        ],
+        "park": [
+          "5424",
+          "49911"
+        ],
+        "laan": [
+          "5424",
+          "53612"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment5424.jsonld#61129",
         "@type": "tree:Node"
@@ -192,18 +180,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Bruegheldreef",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5195183312941087",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.40120293469492"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3836925110120313",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.33263731590714"
         },
         {
           "http://example.com/terms#name": "Brueghelpark",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0442848108562988",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.954804681813926"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5290005455629676",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.531033650236566"
         },
         {
           "http://example.com/terms#name": "Brueghellaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4300821717103025",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.25880109680884"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.025557674811623",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.64720506013215"
         }
       ],
       "total_children_count": 3,
@@ -229,17 +217,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5424.jsonld#49910"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5424.jsonld#49911"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5424.jsonld#53612"
+          ]
+        }
+      ]
     },
     {
       "token_string": "dreef",
       "triples": [
         {
           "http://example.com/terms#name": "Bruegheldreef",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5195183312941087",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.40120293469492"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3836925110120313",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.33263731590714"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5424.jsonld#49909",
         "@type": "tree:Node"
@@ -247,8 +256,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Bruegheldreef",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5195183312941087",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.40120293469492"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3836925110120313",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.33263731590714"
         }
       ],
       "total_children_count": 0,
@@ -264,17 +273,19 @@
       ],
       "triples_metadata": [
         "Bruegheldreef"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "park",
       "triples": [
         {
           "http://example.com/terms#name": "Brueghelpark",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0442848108562988",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.954804681813926"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5290005455629676",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.531033650236566"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5424.jsonld#49909",
         "@type": "tree:Node"
@@ -282,8 +293,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Brueghelpark",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0442848108562988",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.954804681813926"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5290005455629676",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.531033650236566"
         }
       ],
       "total_children_count": 0,
@@ -299,17 +310,19 @@
       ],
       "triples_metadata": [
         "Brueghelpark"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "laan",
       "triples": [
         {
           "http://example.com/terms#name": "Brueghellaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4300821717103025",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.25880109680884"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.025557674811623",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.64720506013215"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5424.jsonld#49909",
         "@type": "tree:Node"
@@ -317,8 +330,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Brueghellaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4300821717103025",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.25880109680884"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.025557674811623",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.64720506013215"
         }
       ],
       "total_children_count": 0,
@@ -334,43 +347,26 @@
       ],
       "triples_metadata": [
         "Brueghellaan"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "e",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5424.jsonld#61129",
-              "@type": "tree:Node",
-              "token_string": "g"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5424.jsonld#61130",
-              "@type": "tree:Node",
-              "token_string": "kauterstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5424.jsonld#78749",
-              "@type": "tree:Node",
-              "token_string": "len"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "g": [
+          "5424",
+          "61129"
+        ],
+        "kauterstraat": [
+          "5424",
+          "61130"
+        ],
+        "len": [
+          "5424",
+          "78749"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4707.jsonld#477",
         "@type": "tree:Node"
@@ -378,43 +374,43 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Bruegelhof",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2962336571771442",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.86113028987719"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8567551963884674",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.57660212613834"
         },
         {
           "http://example.com/terms#name": "Bruegheldreef",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5195183312941087",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.40120293469492"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3836925110120313",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.33263731590714"
         },
         {
           "http://example.com/terms#name": "Bruegellaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2955514947084272",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.372163035443236"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.724338673231443",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.788744871318"
         },
         {
           "http://example.com/terms#name": "Brueghelpark",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0442848108562988",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.954804681813926"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5290005455629676",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.531033650236566"
         },
         {
           "http://example.com/terms#name": "Brueghellaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4300821717103025",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.25880109680884"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.025557674811623",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.64720506013215"
         },
         {
           "http://example.com/terms#name": "Bruekauterstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.633146036493289",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.80671946031916"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8087363565415084",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.183523742141034"
         },
         {
           "http://example.com/terms#name": "Bruelensweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9558519081362347",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.11191812739762"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.419617405879272",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.5295323769683"
         },
         {
           "http://example.com/terms#name": "Bruelenhof",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8748502469623296",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.926145773845256"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8684737883115354",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.13623631061475"
         }
       ],
       "total_children_count": 12,
@@ -470,33 +466,41 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
-    },
-    {
-      "token_string": "g",
-      "triples": [],
-      "children": [
+      "triples_metadata": [],
+      "childlist": [
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment5424.jsonld#47988",
-              "@type": "tree:Node",
-              "token_string": "el"
-            }
+            "/streets/fragment5424.jsonld#61129"
           ]
         },
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment5424.jsonld#49909",
-              "@type": "tree:Node",
-              "token_string": "hel"
-            }
+            "/streets/fragment5424.jsonld#61130"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5424.jsonld#78749"
           ]
         }
-      ],
+      ]
+    },
+    {
+      "token_string": "g",
+      "triples": [],
+      "children": {
+        "el": [
+          "5424",
+          "47988"
+        ],
+        "hel": [
+          "5424",
+          "49909"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment5424.jsonld#61128",
         "@type": "tree:Node"
@@ -504,28 +508,28 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Bruegelhof",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2962336571771442",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.86113028987719"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8567551963884674",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.57660212613834"
         },
         {
           "http://example.com/terms#name": "Bruegheldreef",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5195183312941087",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.40120293469492"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3836925110120313",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.33263731590714"
         },
         {
           "http://example.com/terms#name": "Bruegellaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2955514947084272",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.372163035443236"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.724338673231443",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.788744871318"
         },
         {
           "http://example.com/terms#name": "Brueghelpark",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0442848108562988",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.954804681813926"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5290005455629676",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.531033650236566"
         },
         {
           "http://example.com/terms#name": "Brueghellaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4300821717103025",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.25880109680884"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.025557674811623",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.64720506013215"
         }
       ],
       "total_children_count": 7,
@@ -563,17 +567,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5424.jsonld#47988"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5424.jsonld#49909"
+          ]
+        }
+      ]
     },
     {
       "token_string": "kauterstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Bruekauterstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.633146036493289",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.80671946031916"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8087363565415084",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.183523742141034"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5424.jsonld#61128",
         "@type": "tree:Node"
@@ -581,8 +600,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Bruekauterstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.633146036493289",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.80671946031916"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8087363565415084",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.183523742141034"
         }
       ],
       "total_children_count": 0,
@@ -598,33 +617,22 @@
       ],
       "triples_metadata": [
         "Bruekauterstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "len",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5424.jsonld#78750",
-              "@type": "tree:Node",
-              "token_string": "sweg"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5424.jsonld#78751",
-              "@type": "tree:Node",
-              "token_string": "hof"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "sweg": [
+          "5424",
+          "78750"
+        ],
+        "hof": [
+          "5424",
+          "78751"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment5424.jsonld#61128",
         "@type": "tree:Node"
@@ -632,13 +640,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Bruelensweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9558519081362347",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.11191812739762"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.419617405879272",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.5295323769683"
         },
         {
           "http://example.com/terms#name": "Bruelenhof",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8748502469623296",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.926145773845256"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8684737883115354",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.13623631061475"
         }
       ],
       "total_children_count": 2,
@@ -658,17 +666,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5424.jsonld#78750"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5424.jsonld#78751"
+          ]
+        }
+      ]
     },
     {
       "token_string": "sweg",
       "triples": [
         {
           "http://example.com/terms#name": "Bruelensweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9558519081362347",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.11191812739762"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.419617405879272",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.5295323769683"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5424.jsonld#78749",
         "@type": "tree:Node"
@@ -676,8 +699,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Bruelensweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9558519081362347",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.11191812739762"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.419617405879272",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.5295323769683"
         }
       ],
       "total_children_count": 0,
@@ -693,17 +716,19 @@
       ],
       "triples_metadata": [
         "Bruelensweg"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "hof",
       "triples": [
         {
           "http://example.com/terms#name": "Bruelenhof",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8748502469623296",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.926145773845256"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8684737883115354",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.13623631061475"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5424.jsonld#78749",
         "@type": "tree:Node"
@@ -711,8 +736,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Bruelenhof",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8748502469623296",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.926145773845256"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8684737883115354",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.13623631061475"
         }
       ],
       "total_children_count": 0,
@@ -728,7 +753,8 @@
       ],
       "triples_metadata": [
         "Bruelenhof"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

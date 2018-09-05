@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "V",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6238.jsonld#144429",
-              "@type": "tree:Node",
-              "token_string": "ifquin"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6238.jsonld#144430",
-              "@type": "tree:Node",
-              "token_string": "ercour"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "ifquin": [
+          "6238",
+          "144429"
+        ],
+        "ercour": [
+          "6238",
+          "144430"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4778.jsonld#109901",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Quai Vifquin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1791126121747912",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.9205364954604"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.23269760623942",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.34030688800972"
         },
         {
           "http://example.com/terms#name": "Quai Vercour",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5487394692128587",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.899858512860305"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4250112636329764",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.02529538876697"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6238.jsonld#144429"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6238.jsonld#144430"
+          ]
+        }
+      ]
     },
     {
       "token_string": "ifquin",
       "triples": [
         {
           "http://example.com/terms#name": "Quai Vifquin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1791126121747912",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.9205364954604"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.23269760623942",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.34030688800972"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6238.jsonld#144428",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Quai Vifquin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1791126121747912",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.9205364954604"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.23269760623942",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.34030688800972"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Quai Vifquin"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "ercour",
       "triples": [
         {
           "http://example.com/terms#name": "Quai Vercour",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5487394692128587",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.899858512860305"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4250112636329764",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.02529538876697"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6238.jsonld#144428",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Quai Vercour",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5487394692128587",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.899858512860305"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4250112636329764",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.02529538876697"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Quai Vercour"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

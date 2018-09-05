@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "le ",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5052.jsonld#154612",
-              "@type": "tree:Node",
-              "token_string": "Meunier"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5052.jsonld#154613",
-              "@type": "tree:Node",
-              "token_string": "Brasseur"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "Meunier": [
+          "5052",
+          "154612"
+        ],
+        "Brasseur": [
+          "5052",
+          "154613"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4792.jsonld#105440",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Jean le Meunier",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5873664079360816",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.00442148107604"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2619861754880364",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.292848509612114"
         },
         {
           "http://example.com/terms#name": "Rue Jean le Brasseur",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5769711068023704",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.55108188123607"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.745310519659022",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.24690118786025"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5052.jsonld#154612"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5052.jsonld#154613"
+          ]
+        }
+      ]
     },
     {
       "token_string": "Meunier",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Jean le Meunier",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5873664079360816",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.00442148107604"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2619861754880364",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.292848509612114"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5052.jsonld#154611",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Jean le Meunier",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5873664079360816",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.00442148107604"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2619861754880364",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.292848509612114"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Rue Jean le Meunier"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "Brasseur",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Jean le Brasseur",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5769711068023704",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.55108188123607"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.745310519659022",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.24690118786025"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5052.jsonld#154611",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Jean le Brasseur",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5769711068023704",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.55108188123607"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.745310519659022",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.24690118786025"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Rue Jean le Brasseur"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

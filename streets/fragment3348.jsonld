@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "p",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3348.jsonld#26985",
-              "@type": "tree:Node",
-              "token_string": "edestraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3348.jsonld#26986",
-              "@type": "tree:Node",
-              "token_string": "ontstraat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "edestraat": [
+          "3348",
+          "26985"
+        ],
+        "ontstraat": [
+          "3348",
+          "26986"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment2575.jsonld#20312",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Hogepedestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.132954232293998",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.205543449193016"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.721248081461023",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.00174175185907"
         },
         {
           "http://example.com/terms#name": "Hogepontstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.586067663969428",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.88656042030652"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4501205426268124",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.328018032322845"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3348.jsonld#26985"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3348.jsonld#26986"
+          ]
+        }
+      ]
     },
     {
       "token_string": "edestraat",
       "triples": [
         {
           "http://example.com/terms#name": "Hogepedestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.132954232293998",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.205543449193016"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.721248081461023",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.00174175185907"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3348.jsonld#26984",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Hogepedestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.132954232293998",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.205543449193016"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.721248081461023",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.00174175185907"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Hogepedestraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "ontstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Hogepontstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.586067663969428",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.88656042030652"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4501205426268124",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.328018032322845"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3348.jsonld#26984",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Hogepontstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.586067663969428",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.88656042030652"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4501205426268124",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.328018032322845"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Hogepontstraat"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

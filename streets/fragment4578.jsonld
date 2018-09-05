@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "ho",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4578.jsonld#146751",
-              "@type": "tree:Node",
-              "token_string": "ir"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4578.jsonld#146752",
-              "@type": "tree:Node",
-              "token_string": "neux"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "ir": [
+          "4578",
+          "146751"
+        ],
+        "neux": [
+          "4578",
+          "146752"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment3720.jsonld#104448",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Lhoir",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3878911331476687",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.37158659119883"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.341624994159475",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.551403873132855"
         },
         {
           "http://example.com/terms#name": "Rue Lhoneux",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4072455362369634",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.7441304791913"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.83182654404362",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.9635558290949"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4578.jsonld#146751"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4578.jsonld#146752"
+          ]
+        }
+      ]
     },
     {
       "token_string": "ir",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Lhoir",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3878911331476687",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.37158659119883"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.341624994159475",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.551403873132855"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4578.jsonld#146750",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Lhoir",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3878911331476687",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.37158659119883"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.341624994159475",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.551403873132855"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Rue Lhoir"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "neux",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Lhoneux",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4072455362369634",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.7441304791913"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.83182654404362",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.9635558290949"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4578.jsonld#146750",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Lhoneux",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4072455362369634",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.7441304791913"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.83182654404362",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.9635558290949"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Rue Lhoneux"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

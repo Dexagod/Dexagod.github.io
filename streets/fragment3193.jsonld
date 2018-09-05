@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,48 +23,24 @@
     {
       "token_string": " ",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3193.jsonld#56453",
-              "@type": "tree:Node",
-              "token_string": "De Vochtstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3193.jsonld#60548",
-              "@type": "tree:Node",
-              "token_string": "Van"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3193.jsonld#94980",
-              "@type": "tree:Node",
-              "token_string": "Woutersstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3193.jsonld#99802",
-              "@type": "tree:Node",
-              "token_string": "Co"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "De Vochtstraat": [
+          "3193",
+          "56453"
+        ],
+        "Van": [
+          "3193",
+          "60548"
+        ],
+        "Woutersstraat": [
+          "3193",
+          "94980"
+        ],
+        "Co": [
+          "3193",
+          "99802"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment8.jsonld#29",
         "@type": "tree:Node"
@@ -72,38 +48,38 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "W De Vochtstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8877176875198107",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.93853945273162"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5009327689786915",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.6772347818665"
         },
         {
           "http://example.com/terms#name": "W Van Vlasselaerstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.784407676498836",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.110614318502336"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9469606296922537",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.87522941735583"
         },
         {
           "http://example.com/terms#name": "W Vandermeerenlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5400548757400037",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.632079820505325"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5913995796659477",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.746982112561525"
         },
         {
           "http://example.com/terms#name": "W Cobergherstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0757244620130155",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.92510706558396"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4423681887673707",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.47744469325334"
         },
         {
           "http://example.com/terms#name": "W Van Perckstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.574098509987266",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.96638459899072"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8832883285708415",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.49853958866679"
         },
         {
           "http://example.com/terms#name": "W Woutersstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8569939202935353",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.76525690412911"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7326629540046556",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.27148054843768"
         },
         {
           "http://example.com/terms#name": "W Coppensplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.863558592430546",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.995239116504365"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1597749493183596",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.476647369552815"
         }
       ],
       "total_children_count": 10,
@@ -153,17 +129,44 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3193.jsonld#56453"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3193.jsonld#60548"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3193.jsonld#94980"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3193.jsonld#99802"
+          ]
+        }
+      ]
     },
     {
       "token_string": "De Vochtstraat",
       "triples": [
         {
           "http://example.com/terms#name": "W De Vochtstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8877176875198107",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.93853945273162"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5009327689786915",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.6772347818665"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3193.jsonld#56452",
         "@type": "tree:Node"
@@ -171,8 +174,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "W De Vochtstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8877176875198107",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.93853945273162"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5009327689786915",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.6772347818665"
         }
       ],
       "total_children_count": 0,
@@ -188,33 +191,22 @@
       ],
       "triples_metadata": [
         "W De Vochtstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "Van",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3193.jsonld#60550",
-              "@type": "tree:Node",
-              "token_string": "dermeerenlaan"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3193.jsonld#90698",
-              "@type": "tree:Node",
-              "token_string": " "
-            }
-          ]
-        }
-      ],
+      "children": {
+        "dermeerenlaan": [
+          "3193",
+          "60550"
+        ],
+        " ": [
+          "3193",
+          "90698"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment3193.jsonld#56452",
         "@type": "tree:Node"
@@ -222,18 +214,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "W Van Vlasselaerstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.784407676498836",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.110614318502336"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9469606296922537",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.87522941735583"
         },
         {
           "http://example.com/terms#name": "W Vandermeerenlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5400548757400037",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.632079820505325"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5913995796659477",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.746982112561525"
         },
         {
           "http://example.com/terms#name": "W Van Perckstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.574098509987266",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.96638459899072"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8832883285708415",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.49853958866679"
         }
       ],
       "total_children_count": 4,
@@ -259,17 +251,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3193.jsonld#60550"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3193.jsonld#90698"
+          ]
+        }
+      ]
     },
     {
       "token_string": "dermeerenlaan",
       "triples": [
         {
           "http://example.com/terms#name": "W Vandermeerenlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5400548757400037",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.632079820505325"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5913995796659477",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.746982112561525"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3193.jsonld#60548",
         "@type": "tree:Node"
@@ -277,8 +284,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "W Vandermeerenlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5400548757400037",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.632079820505325"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5913995796659477",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.746982112561525"
         }
       ],
       "total_children_count": 0,
@@ -294,33 +301,22 @@
       ],
       "triples_metadata": [
         "W Vandermeerenlaan"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": " ",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3193.jsonld#90699",
-              "@type": "tree:Node",
-              "token_string": "Vlasselaerstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3193.jsonld#90700",
-              "@type": "tree:Node",
-              "token_string": "Perckstraat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "Vlasselaerstraat": [
+          "3193",
+          "90699"
+        ],
+        "Perckstraat": [
+          "3193",
+          "90700"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment3193.jsonld#60548",
         "@type": "tree:Node"
@@ -328,13 +324,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "W Van Vlasselaerstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.784407676498836",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.110614318502336"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9469606296922537",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.87522941735583"
         },
         {
           "http://example.com/terms#name": "W Van Perckstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.574098509987266",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.96638459899072"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8832883285708415",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.49853958866679"
         }
       ],
       "total_children_count": 2,
@@ -354,17 +350,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3193.jsonld#90699"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3193.jsonld#90700"
+          ]
+        }
+      ]
     },
     {
       "token_string": "Vlasselaerstraat",
       "triples": [
         {
           "http://example.com/terms#name": "W Van Vlasselaerstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.784407676498836",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.110614318502336"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9469606296922537",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.87522941735583"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3193.jsonld#90698",
         "@type": "tree:Node"
@@ -372,8 +383,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "W Van Vlasselaerstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.784407676498836",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.110614318502336"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9469606296922537",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.87522941735583"
         }
       ],
       "total_children_count": 0,
@@ -389,17 +400,19 @@
       ],
       "triples_metadata": [
         "W Van Vlasselaerstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "Perckstraat",
       "triples": [
         {
           "http://example.com/terms#name": "W Van Perckstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.574098509987266",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.96638459899072"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8832883285708415",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.49853958866679"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3193.jsonld#90698",
         "@type": "tree:Node"
@@ -407,8 +420,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "W Van Perckstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.574098509987266",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.96638459899072"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8832883285708415",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.49853958866679"
         }
       ],
       "total_children_count": 0,
@@ -424,17 +437,19 @@
       ],
       "triples_metadata": [
         "W Van Perckstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "Woutersstraat",
       "triples": [
         {
           "http://example.com/terms#name": "W Woutersstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8569939202935353",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.76525690412911"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7326629540046556",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.27148054843768"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3193.jsonld#56452",
         "@type": "tree:Node"
@@ -442,8 +457,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "W Woutersstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8569939202935353",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.76525690412911"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7326629540046556",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.27148054843768"
         }
       ],
       "total_children_count": 0,
@@ -459,33 +474,22 @@
       ],
       "triples_metadata": [
         "W Woutersstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "Co",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3193.jsonld#99803",
-              "@type": "tree:Node",
-              "token_string": "bergherstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3193.jsonld#99804",
-              "@type": "tree:Node",
-              "token_string": "ppensplein"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "bergherstraat": [
+          "3193",
+          "99803"
+        ],
+        "ppensplein": [
+          "3193",
+          "99804"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment3193.jsonld#56452",
         "@type": "tree:Node"
@@ -493,13 +497,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "W Cobergherstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0757244620130155",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.92510706558396"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4423681887673707",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.47744469325334"
         },
         {
           "http://example.com/terms#name": "W Coppensplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.863558592430546",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.995239116504365"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1597749493183596",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.476647369552815"
         }
       ],
       "total_children_count": 2,
@@ -519,17 +523,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3193.jsonld#99803"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3193.jsonld#99804"
+          ]
+        }
+      ]
     },
     {
       "token_string": "bergherstraat",
       "triples": [
         {
           "http://example.com/terms#name": "W Cobergherstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0757244620130155",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.92510706558396"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4423681887673707",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.47744469325334"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3193.jsonld#99802",
         "@type": "tree:Node"
@@ -537,8 +556,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "W Cobergherstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0757244620130155",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.92510706558396"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4423681887673707",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.47744469325334"
         }
       ],
       "total_children_count": 0,
@@ -554,17 +573,19 @@
       ],
       "triples_metadata": [
         "W Cobergherstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "ppensplein",
       "triples": [
         {
           "http://example.com/terms#name": "W Coppensplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.863558592430546",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.995239116504365"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1597749493183596",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.476647369552815"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3193.jsonld#99802",
         "@type": "tree:Node"
@@ -572,8 +593,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "W Coppensplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.863558592430546",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.995239116504365"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1597749493183596",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.476647369552815"
         }
       ],
       "total_children_count": 0,
@@ -589,7 +610,8 @@
       ],
       "triples_metadata": [
         "W Coppensplein"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

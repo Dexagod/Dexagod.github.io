@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "A",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3623.jsonld#90307",
-              "@type": "tree:Node",
-              "token_string": "ccentlaan"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3623.jsonld#90308",
-              "@type": "tree:Node",
-              "token_string": "bsilsquare"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "ccentlaan": [
+          "3623",
+          "90307"
+        ],
+        "bsilsquare": [
+          "3623",
+          "90308"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment2226.jsonld#16136",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Jean Accentlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6566778225336334",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.43170936208421"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1119158587837963",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.28370447201779"
         },
         {
           "http://example.com/terms#name": "Jean Absilsquare",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.206936109528851",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.474029587811934"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1488890029414125",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.433267578325065"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3623.jsonld#90307"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3623.jsonld#90308"
+          ]
+        }
+      ]
     },
     {
       "token_string": "ccentlaan",
       "triples": [
         {
           "http://example.com/terms#name": "Jean Accentlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6566778225336334",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.43170936208421"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1119158587837963",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.28370447201779"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3623.jsonld#90306",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Jean Accentlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6566778225336334",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.43170936208421"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1119158587837963",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.28370447201779"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Jean Accentlaan"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "bsilsquare",
       "triples": [
         {
           "http://example.com/terms#name": "Jean Absilsquare",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.206936109528851",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.474029587811934"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1488890029414125",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.433267578325065"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3623.jsonld#90306",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Jean Absilsquare",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.206936109528851",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.474029587811934"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1488890029414125",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.433267578325065"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Jean Absilsquare"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

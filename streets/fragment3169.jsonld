@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "ypte",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3169.jsonld#37375",
-              "@type": "tree:Node",
-              "token_string": "veldstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3169.jsonld#37376",
-              "@type": "tree:Node",
-              "token_string": "straat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3169.jsonld#91275",
-              "@type": "tree:Node",
-              "token_string": "narenstraat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "veldstraat": [
+          "3169",
+          "37375"
+        ],
+        "straat": [
+          "3169",
+          "37376"
+        ],
+        "narenstraat": [
+          "3169",
+          "91275"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment225.jsonld#5790",
         "@type": "tree:Node"
@@ -62,18 +44,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Egypteveldstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0478475708208963",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.290727995617196"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1110649754392283",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.24825858466093"
         },
         {
           "http://example.com/terms#name": "Egyptestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4921661408642275",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.273157903231606"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3406285572692003",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.008505910313126"
         },
         {
           "http://example.com/terms#name": "Egyptenarenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.238031397271722",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.566142902747686"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7369308147758047",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.40625371377872"
         }
       ],
       "total_children_count": 3,
@@ -99,17 +81,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3169.jsonld#37375"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3169.jsonld#37376"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3169.jsonld#91275"
+          ]
+        }
+      ]
     },
     {
       "token_string": "veldstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Egypteveldstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0478475708208963",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.290727995617196"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1110649754392283",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.24825858466093"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3169.jsonld#37374",
         "@type": "tree:Node"
@@ -117,8 +120,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Egypteveldstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0478475708208963",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.290727995617196"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1110649754392283",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.24825858466093"
         }
       ],
       "total_children_count": 0,
@@ -134,17 +137,19 @@
       ],
       "triples_metadata": [
         "Egypteveldstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "straat",
       "triples": [
         {
           "http://example.com/terms#name": "Egyptestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4921661408642275",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.273157903231606"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3406285572692003",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.008505910313126"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3169.jsonld#37374",
         "@type": "tree:Node"
@@ -152,8 +157,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Egyptestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4921661408642275",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.273157903231606"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3406285572692003",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.008505910313126"
         }
       ],
       "total_children_count": 0,
@@ -169,17 +174,19 @@
       ],
       "triples_metadata": [
         "Egyptestraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "narenstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Egyptenarenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.238031397271722",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.566142902747686"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7369308147758047",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.40625371377872"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3169.jsonld#37374",
         "@type": "tree:Node"
@@ -187,8 +194,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Egyptenarenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.238031397271722",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.566142902747686"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7369308147758047",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.40625371377872"
         }
       ],
       "total_children_count": 0,
@@ -204,7 +211,8 @@
       ],
       "triples_metadata": [
         "Egyptenarenstraat"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

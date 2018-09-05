@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "G",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2959.jsonld#58116",
-              "@type": "tree:Node",
-              "token_string": "ermaan De Vosstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2959.jsonld#58117",
-              "@type": "tree:Node",
-              "token_string": "ommersstraat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "ermaan De Vosstraat": [
+          "2959",
+          "58116"
+        ],
+        "ommersstraat": [
+          "2959",
+          "58117"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment2426.jsonld#27963",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Dokter Germaan De Vosstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3612761098823065",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.718428245908164"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.794449714703414",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.12434965315629"
         },
         {
           "http://example.com/terms#name": "Dokter Gommersstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2953356342101348",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.64524182476521"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6787977937725698",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.83770516464467"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2959.jsonld#58116"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2959.jsonld#58117"
+          ]
+        }
+      ]
     },
     {
       "token_string": "ermaan De Vosstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Dokter Germaan De Vosstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3612761098823065",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.718428245908164"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.794449714703414",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.12434965315629"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2959.jsonld#58115",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Dokter Germaan De Vosstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3612761098823065",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.718428245908164"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.794449714703414",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.12434965315629"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Dokter Germaan De Vosstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "ommersstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Dokter Gommersstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2953356342101348",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.64524182476521"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6787977937725698",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.83770516464467"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2959.jsonld#58115",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Dokter Gommersstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2953356342101348",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.64524182476521"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6787977937725698",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.83770516464467"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Dokter Gommersstraat"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

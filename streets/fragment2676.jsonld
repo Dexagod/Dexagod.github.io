@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "vel",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2676.jsonld#72829",
-              "@type": "tree:Node",
-              "token_string": "driesweg"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2676.jsonld#72830",
-              "@type": "tree:Node",
-              "token_string": "veldweg"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2676.jsonld#75917",
-              "@type": "tree:Node",
-              "token_string": "straat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "driesweg": [
+          "2676",
+          "72829"
+        ],
+        "veldweg": [
+          "2676",
+          "72830"
+        ],
+        "straat": [
+          "2676",
+          "75917"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment3747.jsonld#766",
         "@type": "tree:Node"
@@ -62,18 +44,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nieveldriesweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.106640688070227",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.337935507130254"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.158568807123525",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.35305882517278"
         },
         {
           "http://example.com/terms#name": "Nievelveldweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.007438877724563",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.339770194622275"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4593349078808004",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.865290925578385"
         },
         {
           "http://example.com/terms#name": "Nievelstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8280389596378868",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.21129688934218"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.46891881997562",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.69115534125561"
         }
       ],
       "total_children_count": 3,
@@ -99,17 +81,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2676.jsonld#72829"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2676.jsonld#72830"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2676.jsonld#75917"
+          ]
+        }
+      ]
     },
     {
       "token_string": "driesweg",
       "triples": [
         {
           "http://example.com/terms#name": "Nieveldriesweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.106640688070227",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.337935507130254"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.158568807123525",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.35305882517278"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2676.jsonld#72828",
         "@type": "tree:Node"
@@ -117,8 +120,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nieveldriesweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.106640688070227",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.337935507130254"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.158568807123525",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.35305882517278"
         }
       ],
       "total_children_count": 0,
@@ -134,17 +137,19 @@
       ],
       "triples_metadata": [
         "Nieveldriesweg"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "veldweg",
       "triples": [
         {
           "http://example.com/terms#name": "Nievelveldweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.007438877724563",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.339770194622275"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4593349078808004",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.865290925578385"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2676.jsonld#72828",
         "@type": "tree:Node"
@@ -152,8 +157,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nievelveldweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.007438877724563",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.339770194622275"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4593349078808004",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.865290925578385"
         }
       ],
       "total_children_count": 0,
@@ -169,17 +174,19 @@
       ],
       "triples_metadata": [
         "Nievelveldweg"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "straat",
       "triples": [
         {
           "http://example.com/terms#name": "Nievelstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8280389596378868",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.21129688934218"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.46891881997562",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.69115534125561"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2676.jsonld#72828",
         "@type": "tree:Node"
@@ -187,8 +194,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nievelstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8280389596378868",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.21129688934218"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.46891881997562",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.69115534125561"
         }
       ],
       "total_children_count": 0,
@@ -204,7 +211,8 @@
       ],
       "triples_metadata": [
         "Nievelstraat"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

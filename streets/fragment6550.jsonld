@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "F",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6550.jsonld#181557",
-              "@type": "tree:Node",
-              "token_string": "lachsberg"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6550.jsonld#181558",
-              "@type": "tree:Node",
-              "token_string": "reudenstein"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6550.jsonld#181964",
-              "@type": "tree:Node",
-              "token_string": "els"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "lachsberg": [
+          "6550",
+          "181557"
+        ],
+        "reudenstein": [
+          "6550",
+          "181558"
+        ],
+        "els": [
+          "6550",
+          "181964"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment6549.jsonld#155565",
         "@type": "tree:Node"
@@ -62,18 +44,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Am Flachsberg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.729217303439531",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.70104662825268"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7371720833324322",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.41678059794257"
         },
         {
           "http://example.com/terms#name": "Am Freudenstein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7187460358922193",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.5577104302767"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.399268611481474",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.45495731627952"
         },
         {
           "http://example.com/terms#name": "Am Fels",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.222125449422021",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.664598363690196"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6175860166519143",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.82354956974364"
         }
       ],
       "total_children_count": 3,
@@ -99,17 +81,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6550.jsonld#181557"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6550.jsonld#181558"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6550.jsonld#181964"
+          ]
+        }
+      ]
     },
     {
       "token_string": "lachsberg",
       "triples": [
         {
           "http://example.com/terms#name": "Am Flachsberg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.729217303439531",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.70104662825268"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7371720833324322",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.41678059794257"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6550.jsonld#181556",
         "@type": "tree:Node"
@@ -117,8 +120,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Am Flachsberg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.729217303439531",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.70104662825268"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7371720833324322",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.41678059794257"
         }
       ],
       "total_children_count": 0,
@@ -134,17 +137,19 @@
       ],
       "triples_metadata": [
         "Am Flachsberg"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "reudenstein",
       "triples": [
         {
           "http://example.com/terms#name": "Am Freudenstein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7187460358922193",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.5577104302767"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.399268611481474",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.45495731627952"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6550.jsonld#181556",
         "@type": "tree:Node"
@@ -152,8 +157,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Am Freudenstein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7187460358922193",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.5577104302767"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.399268611481474",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.45495731627952"
         }
       ],
       "total_children_count": 0,
@@ -169,17 +174,19 @@
       ],
       "triples_metadata": [
         "Am Freudenstein"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "els",
       "triples": [
         {
           "http://example.com/terms#name": "Am Fels",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.222125449422021",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.664598363690196"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6175860166519143",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.82354956974364"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6550.jsonld#181556",
         "@type": "tree:Node"
@@ -187,8 +194,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Am Fels",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.222125449422021",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.664598363690196"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6175860166519143",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.82354956974364"
         }
       ],
       "total_children_count": 0,
@@ -204,7 +211,8 @@
       ],
       "triples_metadata": [
         "Am Fels"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

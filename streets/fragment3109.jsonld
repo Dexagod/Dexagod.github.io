@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "p",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3109.jsonld#70584",
-              "@type": "tree:Node",
-              "token_string": "straat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3109.jsonld#70585",
-              "@type": "tree:Node",
-              "token_string": "veldstraat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "straat": [
+          "3109",
+          "70584"
+        ],
+        "veldstraat": [
+          "3109",
+          "70585"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment640.jsonld#535",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Zapstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7761365809882497",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.53291432333521"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5242841224744703",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.07415678397933"
         },
         {
           "http://example.com/terms#name": "Zapveldstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2676387720706526",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.69715739364974"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8615805699878094",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.2093982399525"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3109.jsonld#70584"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3109.jsonld#70585"
+          ]
+        }
+      ]
     },
     {
       "token_string": "straat",
       "triples": [
         {
           "http://example.com/terms#name": "Zapstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7761365809882497",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.53291432333521"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5242841224744703",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.07415678397933"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3109.jsonld#70583",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Zapstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7761365809882497",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.53291432333521"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5242841224744703",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.07415678397933"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Zapstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "veldstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Zapveldstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2676387720706526",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.69715739364974"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8615805699878094",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.2093982399525"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3109.jsonld#70583",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Zapveldstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2676387720706526",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.69715739364974"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8615805699878094",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.2093982399525"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Zapveldstraat"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

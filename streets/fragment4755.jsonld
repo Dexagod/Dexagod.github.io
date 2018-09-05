@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": " M",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4755.jsonld#135923",
-              "@type": "tree:Node",
-              "token_string": "arcel Carbonnelle"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4755.jsonld#135924",
-              "@type": "tree:Node",
-              "token_string": "inistre R Lefebvre"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "arcel Carbonnelle": [
+          "4755",
+          "135923"
+        ],
+        "inistre R Lefebvre": [
+          "4755",
+          "135924"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4755.jsonld#169841",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Résid Marcel Carbonnelle",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7311684676934154",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.80678613949166"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5730022527519902",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.97749109368827"
         },
         {
           "http://example.com/terms#name": "Résid Ministre R Lefebvre",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6912570875964197",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.1959073386713"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.904704147476154",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.81509654506605"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4755.jsonld#135923"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4755.jsonld#135924"
+          ]
+        }
+      ]
     },
     {
       "token_string": "arcel Carbonnelle",
       "triples": [
         {
           "http://example.com/terms#name": "Résid Marcel Carbonnelle",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7311684676934154",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.80678613949166"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5730022527519902",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.97749109368827"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4755.jsonld#135922",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Résid Marcel Carbonnelle",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7311684676934154",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.80678613949166"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5730022527519902",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.97749109368827"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Résid Marcel Carbonnelle"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "inistre R Lefebvre",
       "triples": [
         {
           "http://example.com/terms#name": "Résid Ministre R Lefebvre",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6912570875964197",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.1959073386713"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.904704147476154",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.81509654506605"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4755.jsonld#135922",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Résid Ministre R Lefebvre",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6912570875964197",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.1959073386713"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.904704147476154",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.81509654506605"
         }
       ],
       "total_children_count": 0,
@@ -148,33 +153,22 @@
       ],
       "triples_metadata": [
         "Résid Ministre R Lefebvre"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "ence",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5222.jsonld#144437",
-              "@type": "tree:Node",
-              "token_string": " "
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4755.jsonld#171972",
-              "@type": "tree:Node",
-              "token_string": "-"
-            }
-          ]
-        }
-      ],
+      "children": {
+        " ": [
+          "5222",
+          "144437"
+        ],
+        "-": [
+          "4755",
+          "171972"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4755.jsonld#169841",
         "@type": "tree:Node"
@@ -182,53 +176,53 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Résidence Aigue-Marine",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.956996260262099",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.150143083080785"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9380382495718824",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.49161976565193"
         },
         {
           "http://example.com/terms#name": "Résidence Altaïr",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.887202354080656",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.92723713010024"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2702916626469336",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.462812112523686"
         },
         {
           "http://example.com/terms#name": "Résidence Améthyste",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.719488145434968",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.342959733695736"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.62941804274768",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.249515678475426"
         },
         {
           "http://example.com/terms#name": "Résidence Andromède",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4041061473183207",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.109154030968625"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1455954020784493",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.91920179828128"
         },
         {
           "http://example.com/terms#name": "Résidence Bel Air",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1967961607624162",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.332562280290816"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.620416528025405",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.20856540197464"
         },
         {
           "http://example.com/terms#name": "Résidence Abbé Gossiaux",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.998928462509078",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.55121955503266"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2336321327058304",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.08070137626871"
         },
         {
           "http://example.com/terms#name": "Résidence Bois de Courrière",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8975145707051464",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.230467477548274"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.938494960366203",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.06724912568918"
         },
         {
           "http://example.com/terms#name": "Résidence ''Les Sablons''",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2200784749680245",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.44073188784486"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.202516988294554",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.207241872803046"
         },
         {
           "http://example.com/terms#name": "Résidence Alfred Bausier",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3202743925410623",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.764878119249346"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4681366905596653",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.65075281032934"
         },
         {
           "http://example.com/terms#name": "Résidence Air pur",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.165186134037677",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.10805662555231"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.137633707850152",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.905474116713656"
         }
       ],
       "total_children_count": 204,
@@ -296,33 +290,35 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
-    },
-    {
-      "token_string": "i",
-      "triples": [],
-      "children": [
+      "triples_metadata": [],
+      "childlist": [
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment4755.jsonld#169841",
-              "@type": "tree:Node",
-              "token_string": "d"
-            }
+            "/streets/fragment5222.jsonld#144437"
           ]
         },
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment4755.jsonld#169842",
-              "@type": "tree:Node",
-              "token_string": "mont"
-            }
+            "/streets/fragment4755.jsonld#171972"
           ]
         }
-      ],
+      ]
+    },
+    {
+      "token_string": "i",
+      "triples": [],
+      "children": {
+        "d": [
+          "4755",
+          "169841"
+        ],
+        "mont": [
+          "4755",
+          "169842"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4409.jsonld#135906",
         "@type": "tree:Node"
@@ -330,53 +326,53 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Résidence Aigue-Marine",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.956996260262099",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.150143083080785"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9380382495718824",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.49161976565193"
         },
         {
           "http://example.com/terms#name": "Résidence Altaïr",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.887202354080656",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.92723713010024"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2702916626469336",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.462812112523686"
         },
         {
           "http://example.com/terms#name": "Résidence Améthyste",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.719488145434968",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.342959733695736"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.62941804274768",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.249515678475426"
         },
         {
           "http://example.com/terms#name": "Résidence Andromède",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4041061473183207",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.109154030968625"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1455954020784493",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.91920179828128"
         },
         {
           "http://example.com/terms#name": "Résidence Abbé Gossiaux",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.998928462509078",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.55121955503266"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2336321327058304",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.08070137626871"
         },
         {
           "http://example.com/terms#name": "Résidence ''Les Sablons''",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2200784749680245",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.44073188784486"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.202516988294554",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.207241872803046"
         },
         {
           "http://example.com/terms#name": "Résid Marcel Carbonnelle",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7311684676934154",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.80678613949166"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5730022527519902",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.97749109368827"
         },
         {
           "http://example.com/terms#name": "Résid Ministre R Lefebvre",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6912570875964197",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.1959073386713"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.904704147476154",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.81509654506605"
         },
         {
           "http://example.com/terms#name": "Résidence Alfred Bausier",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3202743925410623",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.764878119249346"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4681366905596653",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.65075281032934"
         },
         {
           "http://example.com/terms#name": "Résidence Air pur",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.165186134037677",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.10805662555231"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.137633707850152",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.905474116713656"
         }
       ],
       "total_children_count": 210,
@@ -444,33 +440,35 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
-    },
-    {
-      "token_string": "d",
-      "triples": [],
-      "children": [
+      "triples_metadata": [],
+      "childlist": [
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment4755.jsonld#135922",
-              "@type": "tree:Node",
-              "token_string": " M"
-            }
+            "/streets/fragment4755.jsonld#169841"
           ]
         },
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment4755.jsonld#144436",
-              "@type": "tree:Node",
-              "token_string": "ence"
-            }
+            "/streets/fragment4755.jsonld#169842"
           ]
         }
-      ],
+      ]
+    },
+    {
+      "token_string": "d",
+      "triples": [],
+      "children": {
+        " M": [
+          "4755",
+          "135922"
+        ],
+        "ence": [
+          "4755",
+          "144436"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4755.jsonld#169840",
         "@type": "tree:Node"
@@ -478,53 +476,53 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Résidence Aigue-Marine",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.956996260262099",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.150143083080785"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9380382495718824",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.49161976565193"
         },
         {
           "http://example.com/terms#name": "Résidence Altaïr",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.887202354080656",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.92723713010024"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2702916626469336",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.462812112523686"
         },
         {
           "http://example.com/terms#name": "Résidence Améthyste",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.719488145434968",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.342959733695736"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.62941804274768",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.249515678475426"
         },
         {
           "http://example.com/terms#name": "Résidence Andromède",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4041061473183207",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.109154030968625"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1455954020784493",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.91920179828128"
         },
         {
           "http://example.com/terms#name": "Résidence Abbé Gossiaux",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.998928462509078",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.55121955503266"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2336321327058304",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.08070137626871"
         },
         {
           "http://example.com/terms#name": "Résidence ''Les Sablons''",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2200784749680245",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.44073188784486"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.202516988294554",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.207241872803046"
         },
         {
           "http://example.com/terms#name": "Résid Marcel Carbonnelle",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7311684676934154",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.80678613949166"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5730022527519902",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.97749109368827"
         },
         {
           "http://example.com/terms#name": "Résid Ministre R Lefebvre",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6912570875964197",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.1959073386713"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.904704147476154",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.81509654506605"
         },
         {
           "http://example.com/terms#name": "Résidence Alfred Bausier",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3202743925410623",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.764878119249346"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4681366905596653",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.65075281032934"
         },
         {
           "http://example.com/terms#name": "Résidence Air pur",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.165186134037677",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.10805662555231"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.137633707850152",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.905474116713656"
         }
       ],
       "total_children_count": 208,
@@ -592,17 +590,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4755.jsonld#135922"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4755.jsonld#144436"
+          ]
+        }
+      ]
     },
     {
       "token_string": "mont",
       "triples": [
         {
           "http://example.com/terms#name": "Résimont",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6540096630891354",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.47377237149966"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2923933261919602",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.16341604371301"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4755.jsonld#169840",
         "@type": "tree:Node"
@@ -610,8 +623,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Résimont",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6540096630891354",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.47377237149966"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2923933261919602",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.16341604371301"
         }
       ],
       "total_children_count": 0,
@@ -627,53 +640,30 @@
       ],
       "triples_metadata": [
         "Résimont"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "-",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4755.jsonld#171973",
-              "@type": "tree:Node",
-              "token_string": "Fraternité"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4755.jsonld#171974",
-              "@type": "tree:Node",
-              "token_string": "Emile-Donnay"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4755.jsonld#171975",
-              "@type": "tree:Node",
-              "token_string": "Kennedy"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4755.jsonld#171976",
-              "@type": "tree:Node",
-              "token_string": "Montbard"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "Fraternité": [
+          "4755",
+          "171973"
+        ],
+        "Emile-Donnay": [
+          "4755",
+          "171974"
+        ],
+        "Kennedy": [
+          "4755",
+          "171975"
+        ],
+        "Montbard": [
+          "4755",
+          "171976"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4755.jsonld#144436",
         "@type": "tree:Node"
@@ -681,23 +671,23 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Résidence-Fraternité",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.334164862830538",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.93736971761964"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.872618759386465",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.127497379208926"
         },
         {
           "http://example.com/terms#name": "Résidence-Emile-Donnay",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1693563758918857",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.95622293939516"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.001815218709632",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.49938569023151"
         },
         {
           "http://example.com/terms#name": "Résidence-Kennedy",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.740184057015404",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.33365411138854"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0321168354483294",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.243975937352545"
         },
         {
           "http://example.com/terms#name": "Résidence-Montbard",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2353607908914364",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.83902656567588"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7670974715005108",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.50067009144951"
         }
       ],
       "total_children_count": 4,
@@ -729,17 +719,44 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4755.jsonld#171973"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4755.jsonld#171974"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4755.jsonld#171975"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4755.jsonld#171976"
+          ]
+        }
+      ]
     },
     {
       "token_string": "Fraternité",
       "triples": [
         {
           "http://example.com/terms#name": "Résidence-Fraternité",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.334164862830538",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.93736971761964"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.872618759386465",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.127497379208926"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4755.jsonld#171972",
         "@type": "tree:Node"
@@ -747,8 +764,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Résidence-Fraternité",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.334164862830538",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.93736971761964"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.872618759386465",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.127497379208926"
         }
       ],
       "total_children_count": 0,
@@ -764,17 +781,19 @@
       ],
       "triples_metadata": [
         "Résidence-Fraternité"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "Emile-Donnay",
       "triples": [
         {
           "http://example.com/terms#name": "Résidence-Emile-Donnay",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1693563758918857",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.95622293939516"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.001815218709632",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.49938569023151"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4755.jsonld#171972",
         "@type": "tree:Node"
@@ -782,8 +801,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Résidence-Emile-Donnay",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1693563758918857",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.95622293939516"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.001815218709632",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.49938569023151"
         }
       ],
       "total_children_count": 0,
@@ -799,17 +818,19 @@
       ],
       "triples_metadata": [
         "Résidence-Emile-Donnay"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "Kennedy",
       "triples": [
         {
           "http://example.com/terms#name": "Résidence-Kennedy",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.740184057015404",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.33365411138854"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0321168354483294",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.243975937352545"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4755.jsonld#171972",
         "@type": "tree:Node"
@@ -817,8 +838,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Résidence-Kennedy",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.740184057015404",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.33365411138854"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0321168354483294",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.243975937352545"
         }
       ],
       "total_children_count": 0,
@@ -834,17 +855,19 @@
       ],
       "triples_metadata": [
         "Résidence-Kennedy"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "Montbard",
       "triples": [
         {
           "http://example.com/terms#name": "Résidence-Montbard",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2353607908914364",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.83902656567588"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7670974715005108",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.50067009144951"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4755.jsonld#171972",
         "@type": "tree:Node"
@@ -852,8 +875,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Résidence-Montbard",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2353607908914364",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.83902656567588"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7670974715005108",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.50067009144951"
         }
       ],
       "total_children_count": 0,
@@ -869,7 +892,8 @@
       ],
       "triples_metadata": [
         "Résidence-Montbard"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

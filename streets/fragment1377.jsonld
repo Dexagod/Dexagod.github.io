@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "v",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1377.jsonld#100914",
-              "@type": "tree:Node",
-              "token_string": "ennendijk"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1377.jsonld#100915",
-              "@type": "tree:Node",
-              "token_string": "ierweg"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "ennendijk": [
+          "1377",
+          "100914"
+        ],
+        "ierweg": [
+          "1377",
+          "100915"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment617.jsonld#701",
         "@type": "tree:Node"
@@ -52,28 +40,28 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Brevennendijk",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.268502343133337",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.59343115305027"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9929528684630324",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.284863912582416"
         },
         {
           "http://example.com/terms#name": "Brevierweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3044164382469825",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.12127921242429"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.67435084094919",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.41935059888865"
         },
         {
           "http://example.com/terms#name": "Brevierweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.627593774877432",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.82268013519703"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.066363764441518",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.5301626264801"
         },
         {
           "http://example.com/terms#name": "Brevierweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.627593774877432",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.82268013519703"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.066363764441518",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.5301626264801"
         },
         {
           "http://example.com/terms#name": "Brevierweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.627593774877432",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.82268013519703"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.066363764441518",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.5301626264801"
         }
       ],
       "total_children_count": 2,
@@ -96,17 +84,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1377.jsonld#100914"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1377.jsonld#100915"
+          ]
+        }
+      ]
     },
     {
       "token_string": "ennendijk",
       "triples": [
         {
           "http://example.com/terms#name": "Brevennendijk",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.268502343133337",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.59343115305027"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9929528684630324",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.284863912582416"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1377.jsonld#100913",
         "@type": "tree:Node"
@@ -114,8 +117,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Brevennendijk",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.268502343133337",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.59343115305027"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9929528684630324",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.284863912582416"
         }
       ],
       "total_children_count": 0,
@@ -131,32 +134,34 @@
       ],
       "triples_metadata": [
         "Brevennendijk"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "ierweg",
       "triples": [
         {
           "http://example.com/terms#name": "Brevierweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3044164382469825",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.12127921242429"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.67435084094919",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.41935059888865"
         },
         {
           "http://example.com/terms#name": "Brevierweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.627593774877432",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.82268013519703"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.066363764441518",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.5301626264801"
         },
         {
           "http://example.com/terms#name": "Brevierweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.627593774877432",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.82268013519703"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.066363764441518",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.5301626264801"
         },
         {
           "http://example.com/terms#name": "Brevierweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.627593774877432",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.82268013519703"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.066363764441518",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.5301626264801"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1377.jsonld#100913",
         "@type": "tree:Node"
@@ -164,23 +169,23 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Brevierweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3044164382469825",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.12127921242429"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.67435084094919",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.41935059888865"
         },
         {
           "http://example.com/terms#name": "Brevierweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.627593774877432",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.82268013519703"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.066363764441518",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.5301626264801"
         },
         {
           "http://example.com/terms#name": "Brevierweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.627593774877432",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.82268013519703"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.066363764441518",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.5301626264801"
         },
         {
           "http://example.com/terms#name": "Brevierweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.627593774877432",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.82268013519703"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.066363764441518",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.5301626264801"
         }
       ],
       "total_children_count": 0,
@@ -202,7 +207,8 @@
         "Brevierweg",
         "Brevierweg",
         "Brevierweg"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "J",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6281.jsonld#159473",
-              "@type": "tree:Node",
-              "token_string": "ean Botte"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6281.jsonld#159474",
-              "@type": "tree:Node",
-              "token_string": "ocquée"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "ean Botte": [
+          "6281",
+          "159473"
+        ],
+        "ocquée": [
+          "6281",
+          "159474"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4884.jsonld#134465",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Voie Jean Botte",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.30254311608321",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.73626675490857"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2868314790424042",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.50837097322248"
         },
         {
           "http://example.com/terms#name": "Voie Jocquée",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.094290668092599",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.81371529738785"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5862215049985164",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.851522227130964"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6281.jsonld#159473"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6281.jsonld#159474"
+          ]
+        }
+      ]
     },
     {
       "token_string": "ean Botte",
       "triples": [
         {
           "http://example.com/terms#name": "Voie Jean Botte",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.30254311608321",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.73626675490857"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2868314790424042",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.50837097322248"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6281.jsonld#159472",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Voie Jean Botte",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.30254311608321",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.73626675490857"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2868314790424042",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.50837097322248"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Voie Jean Botte"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "ocquée",
       "triples": [
         {
           "http://example.com/terms#name": "Voie Jocquée",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.094290668092599",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.81371529738785"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5862215049985164",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.851522227130964"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6281.jsonld#159472",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Voie Jocquée",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.094290668092599",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.81371529738785"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5862215049985164",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.851522227130964"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Voie Jocquée"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

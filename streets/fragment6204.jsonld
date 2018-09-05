@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -25,10 +25,11 @@
       "triples": [
         {
           "http://example.com/terms#name": "Place Try Royelle",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.973795322267204",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.52254267183574"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.181445307496662",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.05417290668389"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6204.jsonld#125680",
         "@type": "tree:Node"
@@ -36,8 +37,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Place Try Royelle",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.973795322267204",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.52254267183574"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.181445307496662",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.05417290668389"
         }
       ],
       "total_children_count": 0,
@@ -53,17 +54,19 @@
       ],
       "triples_metadata": [
         "Place Try Royelle"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "-Colau",
       "triples": [
         {
           "http://example.com/terms#name": "Place Try-Colau",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9631703162369805",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.71824350534463"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.097778897215286",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.6658145314137"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6204.jsonld#125680",
         "@type": "tree:Node"
@@ -71,8 +74,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Place Try-Colau",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9631703162369805",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.71824350534463"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.097778897215286",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.6658145314137"
         }
       ],
       "total_children_count": 0,
@@ -88,33 +91,22 @@
       ],
       "triples_metadata": [
         "Place Try-Colau"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "y",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6204.jsonld#118219",
-              "@type": "tree:Node",
-              "token_string": " Royelle"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6204.jsonld#118220",
-              "@type": "tree:Node",
-              "token_string": "-Colau"
-            }
-          ]
-        }
-      ],
+      "children": {
+        " Royelle": [
+          "6204",
+          "118219"
+        ],
+        "-Colau": [
+          "6204",
+          "118220"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment6204.jsonld#131383",
         "@type": "tree:Node"
@@ -122,13 +114,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Place Try Royelle",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.973795322267204",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.52254267183574"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.181445307496662",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.05417290668389"
         },
         {
           "http://example.com/terms#name": "Place Try-Colau",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9631703162369805",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.71824350534463"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.097778897215286",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.6658145314137"
         }
       ],
       "total_children_count": 2,
@@ -148,17 +140,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6204.jsonld#118219"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6204.jsonld#118220"
+          ]
+        }
+      ]
     },
     {
       "token_string": "iangulaire",
       "triples": [
         {
           "http://example.com/terms#name": "Place Triangulaire",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.074645312743089",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.39670368872994"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.284890508724738",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.223674059158675"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6204.jsonld#131383",
         "@type": "tree:Node"
@@ -166,8 +173,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Place Triangulaire",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.074645312743089",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.39670368872994"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.284890508724738",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.223674059158675"
         }
       ],
       "total_children_count": 0,
@@ -183,63 +190,34 @@
       ],
       "triples_metadata": [
         "Place Triangulaire"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "T",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6204.jsonld#131383",
-              "@type": "tree:Node",
-              "token_string": "r"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6204.jsonld#131384",
-              "@type": "tree:Node",
-              "token_string": "illy"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6204.jsonld#146946",
-              "@type": "tree:Node",
-              "token_string": "ermonia"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6204.jsonld#150027",
-              "@type": "tree:Node",
-              "token_string": "h"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6204.jsonld#163511",
-              "@type": "tree:Node",
-              "token_string": "o"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "r": [
+          "6204",
+          "131383"
+        ],
+        "illy": [
+          "6204",
+          "131384"
+        ],
+        "ermonia": [
+          "6204",
+          "146946"
+        ],
+        "h": [
+          "6204",
+          "150027"
+        ],
+        "o": [
+          "6204",
+          "163511"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment3978.jsonld#107658",
         "@type": "tree:Node"
@@ -247,53 +225,53 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Place Tilly",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6020630998557617",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.015544730362194"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.780505962332021",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.11627632802491"
         },
         {
           "http://example.com/terms#name": "Place Théodore Foguenne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.092128554278733",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.93669356258799"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.035060480539269",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.425106865041"
         },
         {
           "http://example.com/terms#name": "Place Théodore-Gobert",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2876630636054016",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.48513780203148"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.83745944687604",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.08298531513174"
         },
         {
           "http://example.com/terms#name": "Place Termonia",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.846437626108255",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.97506959141952"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7694112927631136",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.29122355216982"
         },
         {
           "http://example.com/terms#name": "Place Th Palm",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.415785436182594",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.511102232074045"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.717730070813109",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.817895196896686"
         },
         {
           "http://example.com/terms#name": "Place Toucrée",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2575144933799605",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.20865664328127"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0637079531768894",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.89637386766187"
         },
         {
           "http://example.com/terms#name": "Place Tombois",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0140772430465117",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.30330813093739"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.114156691943927",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.689819081119026"
         },
         {
           "http://example.com/terms#name": "Place Théo-Lannoy",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2476314184710313",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.652356830751955"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7945270496638686",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.31706828495868"
         },
         {
           "http://example.com/terms#name": "Place Tombu",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.47442336957856",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.673156305385376"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9908024729367333",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.55307984410634"
         },
         {
           "http://example.com/terms#name": "Place Thérèse Schumann",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.531218463243324",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.71721607502905"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1986441695735444",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.733295082800076"
         }
       ],
       "total_children_count": 24,
@@ -361,43 +339,57 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6204.jsonld#131383"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6204.jsonld#131384"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6204.jsonld#146946"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6204.jsonld#150027"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6204.jsonld#163511"
+          ]
+        }
+      ]
     },
     {
       "token_string": "r",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6204.jsonld#125680",
-              "@type": "tree:Node",
-              "token_string": "y"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6204.jsonld#125681",
-              "@type": "tree:Node",
-              "token_string": "iangulaire"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6204.jsonld#157391",
-              "@type": "tree:Node",
-              "token_string": "oquet"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "y": [
+          "6204",
+          "125680"
+        ],
+        "iangulaire": [
+          "6204",
+          "125681"
+        ],
+        "oquet": [
+          "6204",
+          "157391"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment6204.jsonld#131382",
         "@type": "tree:Node"
@@ -405,23 +397,23 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Place Try Royelle",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.973795322267204",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.52254267183574"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.181445307496662",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.05417290668389"
         },
         {
           "http://example.com/terms#name": "Place Try-Colau",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9631703162369805",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.71824350534463"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.097778897215286",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.6658145314137"
         },
         {
           "http://example.com/terms#name": "Place Triangulaire",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.074645312743089",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.39670368872994"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.284890508724738",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.223674059158675"
         },
         {
           "http://example.com/terms#name": "Place Troquet",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.366507490876644",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.086007483645474"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.491697240226672",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.29625997506019"
         }
       ],
       "total_children_count": 5,
@@ -453,17 +445,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6204.jsonld#125680"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6204.jsonld#125681"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6204.jsonld#157391"
+          ]
+        }
+      ]
     },
     {
       "token_string": "illy",
       "triples": [
         {
           "http://example.com/terms#name": "Place Tilly",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6020630998557617",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.015544730362194"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.780505962332021",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.11627632802491"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6204.jsonld#131382",
         "@type": "tree:Node"
@@ -471,8 +484,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Place Tilly",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6020630998557617",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.015544730362194"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.780505962332021",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.11627632802491"
         }
       ],
       "total_children_count": 0,
@@ -488,17 +501,19 @@
       ],
       "triples_metadata": [
         "Place Tilly"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": " Foguenne",
       "triples": [
         {
           "http://example.com/terms#name": "Place Théodore Foguenne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.092128554278733",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.93669356258799"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.035060480539269",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.425106865041"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6204.jsonld#164747",
         "@type": "tree:Node"
@@ -506,8 +521,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Place Théodore Foguenne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.092128554278733",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.93669356258799"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.035060480539269",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.425106865041"
         }
       ],
       "total_children_count": 0,
@@ -523,17 +538,19 @@
       ],
       "triples_metadata": [
         "Place Théodore Foguenne"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "-Gobert",
       "triples": [
         {
           "http://example.com/terms#name": "Place Théodore-Gobert",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2876630636054016",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.48513780203148"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.83745944687604",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.08298531513174"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6204.jsonld#164747",
         "@type": "tree:Node"
@@ -541,8 +558,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Place Théodore-Gobert",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2876630636054016",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.48513780203148"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.83745944687604",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.08298531513174"
         }
       ],
       "total_children_count": 0,
@@ -558,17 +575,19 @@
       ],
       "triples_metadata": [
         "Place Théodore-Gobert"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "ermonia",
       "triples": [
         {
           "http://example.com/terms#name": "Place Termonia",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.846437626108255",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.97506959141952"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7694112927631136",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.29122355216982"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6204.jsonld#131382",
         "@type": "tree:Node"
@@ -576,8 +595,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Place Termonia",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.846437626108255",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.97506959141952"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7694112927631136",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.29122355216982"
         }
       ],
       "total_children_count": 0,
@@ -593,33 +612,22 @@
       ],
       "triples_metadata": [
         "Place Termonia"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "h",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6204.jsonld#150029",
-              "@type": "tree:Node",
-              "token_string": " Palm"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6204.jsonld#168370",
-              "@type": "tree:Node",
-              "token_string": "é"
-            }
-          ]
-        }
-      ],
+      "children": {
+        " Palm": [
+          "6204",
+          "150029"
+        ],
+        "é": [
+          "6204",
+          "168370"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment6204.jsonld#131382",
         "@type": "tree:Node"
@@ -627,28 +635,28 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Place Théodore Foguenne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.092128554278733",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.93669356258799"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.035060480539269",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.425106865041"
         },
         {
           "http://example.com/terms#name": "Place Théodore-Gobert",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2876630636054016",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.48513780203148"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.83745944687604",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.08298531513174"
         },
         {
           "http://example.com/terms#name": "Place Th Palm",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.415785436182594",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.511102232074045"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.717730070813109",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.817895196896686"
         },
         {
           "http://example.com/terms#name": "Place Théo-Lannoy",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2476314184710313",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.652356830751955"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7945270496638686",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.31706828495868"
         },
         {
           "http://example.com/terms#name": "Place Thérèse Schumann",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.531218463243324",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.71721607502905"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1986441695735444",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.733295082800076"
         }
       ],
       "total_children_count": 8,
@@ -686,17 +694,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6204.jsonld#150029"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6204.jsonld#168370"
+          ]
+        }
+      ]
     },
     {
       "token_string": " Palm",
       "triples": [
         {
           "http://example.com/terms#name": "Place Th Palm",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.415785436182594",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.511102232074045"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.717730070813109",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.817895196896686"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6204.jsonld#150027",
         "@type": "tree:Node"
@@ -704,8 +727,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Place Th Palm",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.415785436182594",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.511102232074045"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.717730070813109",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.817895196896686"
         }
       ],
       "total_children_count": 0,
@@ -721,17 +744,19 @@
       ],
       "triples_metadata": [
         "Place Th Palm"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "oquet",
       "triples": [
         {
           "http://example.com/terms#name": "Place Troquet",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.366507490876644",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.086007483645474"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.491697240226672",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.29625997506019"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6204.jsonld#131383",
         "@type": "tree:Node"
@@ -739,8 +764,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Place Troquet",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.366507490876644",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.086007483645474"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.491697240226672",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.29625997506019"
         }
       ],
       "total_children_count": 0,
@@ -756,17 +781,19 @@
       ],
       "triples_metadata": [
         "Place Troquet"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "ssaint Balthasart",
       "triples": [
         {
           "http://example.com/terms#name": "Place Toussaint Balthasart",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9657657861603344",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.13612055495709"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.376217051069699",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.0172413409949"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6204.jsonld#163512",
         "@type": "tree:Node"
@@ -774,8 +801,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Place Toussaint Balthasart",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9657657861603344",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.13612055495709"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.376217051069699",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.0172413409949"
         }
       ],
       "total_children_count": 0,
@@ -791,17 +818,19 @@
       ],
       "triples_metadata": [
         "Place Toussaint Balthasart"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "crée",
       "triples": [
         {
           "http://example.com/terms#name": "Place Toucrée",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2575144933799605",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.20865664328127"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0637079531768894",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.89637386766187"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6204.jsonld#163512",
         "@type": "tree:Node"
@@ -809,8 +838,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Place Toucrée",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2575144933799605",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.20865664328127"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0637079531768894",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.89637386766187"
         }
       ],
       "total_children_count": 0,
@@ -826,33 +855,22 @@
       ],
       "triples_metadata": [
         "Place Toucrée"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "o",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6204.jsonld#163512",
-              "@type": "tree:Node",
-              "token_string": "u"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6204.jsonld#165881",
-              "@type": "tree:Node",
-              "token_string": "mb"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "u": [
+          "6204",
+          "163512"
+        ],
+        "mb": [
+          "6204",
+          "165881"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment6204.jsonld#131382",
         "@type": "tree:Node"
@@ -860,23 +878,23 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Place Toussaint Balthasart",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9657657861603344",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.13612055495709"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.376217051069699",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.0172413409949"
         },
         {
           "http://example.com/terms#name": "Place Toucrée",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2575144933799605",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.20865664328127"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0637079531768894",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.89637386766187"
         },
         {
           "http://example.com/terms#name": "Place Tombois",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0140772430465117",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.30330813093739"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.114156691943927",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.689819081119026"
         },
         {
           "http://example.com/terms#name": "Place Tombu",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.47442336957856",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.673156305385376"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9908024729367333",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.55307984410634"
         }
       ],
       "total_children_count": 6,
@@ -908,33 +926,35 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
-    },
-    {
-      "token_string": "u",
-      "triples": [],
-      "children": [
+      "triples_metadata": [],
+      "childlist": [
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment6204.jsonld#157886",
-              "@type": "tree:Node",
-              "token_string": "ssaint Balthasart"
-            }
+            "/streets/fragment6204.jsonld#163512"
           ]
         },
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment6204.jsonld#157887",
-              "@type": "tree:Node",
-              "token_string": "crée"
-            }
+            "/streets/fragment6204.jsonld#165881"
           ]
         }
-      ],
+      ]
+    },
+    {
+      "token_string": "u",
+      "triples": [],
+      "children": {
+        "ssaint Balthasart": [
+          "6204",
+          "157886"
+        ],
+        "crée": [
+          "6204",
+          "157887"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment6204.jsonld#163511",
         "@type": "tree:Node"
@@ -942,13 +962,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Place Toussaint Balthasart",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9657657861603344",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.13612055495709"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.376217051069699",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.0172413409949"
         },
         {
           "http://example.com/terms#name": "Place Toucrée",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2575144933799605",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.20865664328127"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0637079531768894",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.89637386766187"
         }
       ],
       "total_children_count": 2,
@@ -968,33 +988,35 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
-    },
-    {
-      "token_string": "dore",
-      "triples": [],
-      "children": [
+      "triples_metadata": [],
+      "childlist": [
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment6204.jsonld#144259",
-              "@type": "tree:Node",
-              "token_string": " Foguenne"
-            }
+            "/streets/fragment6204.jsonld#157886"
           ]
         },
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment6204.jsonld#144260",
-              "@type": "tree:Node",
-              "token_string": "-Gobert"
-            }
+            "/streets/fragment6204.jsonld#157887"
           ]
         }
-      ],
+      ]
+    },
+    {
+      "token_string": "dore",
+      "triples": [],
+      "children": {
+        " Foguenne": [
+          "6204",
+          "144259"
+        ],
+        "-Gobert": [
+          "6204",
+          "144260"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment6204.jsonld#168371",
         "@type": "tree:Node"
@@ -1002,13 +1024,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Place Théodore Foguenne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.092128554278733",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.93669356258799"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.035060480539269",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.425106865041"
         },
         {
           "http://example.com/terms#name": "Place Théodore-Gobert",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2876630636054016",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.48513780203148"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.83745944687604",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.08298531513174"
         }
       ],
       "total_children_count": 2,
@@ -1028,17 +1050,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6204.jsonld#144259"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6204.jsonld#144260"
+          ]
+        }
+      ]
     },
     {
       "token_string": "-Lannoy",
       "triples": [
         {
           "http://example.com/terms#name": "Place Théo-Lannoy",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2476314184710313",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.652356830751955"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7945270496638686",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.31706828495868"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6204.jsonld#168371",
         "@type": "tree:Node"
@@ -1046,8 +1083,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Place Théo-Lannoy",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2476314184710313",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.652356830751955"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7945270496638686",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.31706828495868"
         }
       ],
       "total_children_count": 0,
@@ -1063,33 +1100,22 @@
       ],
       "triples_metadata": [
         "Place Théo-Lannoy"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "mb",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6204.jsonld#165882",
-              "@type": "tree:Node",
-              "token_string": "ois"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6204.jsonld#165883",
-              "@type": "tree:Node",
-              "token_string": "u"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "ois": [
+          "6204",
+          "165882"
+        ],
+        "u": [
+          "6204",
+          "165883"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment6204.jsonld#163511",
         "@type": "tree:Node"
@@ -1097,13 +1123,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Place Tombois",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0140772430465117",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.30330813093739"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.114156691943927",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.689819081119026"
         },
         {
           "http://example.com/terms#name": "Place Tombu",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.47442336957856",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.673156305385376"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9908024729367333",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.55307984410634"
         }
       ],
       "total_children_count": 2,
@@ -1123,17 +1149,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6204.jsonld#165882"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6204.jsonld#165883"
+          ]
+        }
+      ]
     },
     {
       "token_string": "ois",
       "triples": [
         {
           "http://example.com/terms#name": "Place Tombois",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0140772430465117",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.30330813093739"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.114156691943927",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.689819081119026"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6204.jsonld#165881",
         "@type": "tree:Node"
@@ -1141,8 +1182,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Place Tombois",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0140772430465117",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.30330813093739"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.114156691943927",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.689819081119026"
         }
       ],
       "total_children_count": 0,
@@ -1158,17 +1199,19 @@
       ],
       "triples_metadata": [
         "Place Tombois"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "u",
       "triples": [
         {
           "http://example.com/terms#name": "Place Tombu",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.47442336957856",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.673156305385376"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9908024729367333",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.55307984410634"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6204.jsonld#165881",
         "@type": "tree:Node"
@@ -1176,8 +1219,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Place Tombu",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.47442336957856",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.673156305385376"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9908024729367333",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.55307984410634"
         }
       ],
       "total_children_count": 0,
@@ -1193,33 +1236,22 @@
       ],
       "triples_metadata": [
         "Place Tombu"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "é",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6204.jsonld#168371",
-              "@type": "tree:Node",
-              "token_string": "o"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6204.jsonld#168372",
-              "@type": "tree:Node",
-              "token_string": "rèse Schumann"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "o": [
+          "6204",
+          "168371"
+        ],
+        "rèse Schumann": [
+          "6204",
+          "168372"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment6204.jsonld#150027",
         "@type": "tree:Node"
@@ -1227,23 +1259,23 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Place Théodore Foguenne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.092128554278733",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.93669356258799"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.035060480539269",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.425106865041"
         },
         {
           "http://example.com/terms#name": "Place Théodore-Gobert",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2876630636054016",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.48513780203148"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.83745944687604",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.08298531513174"
         },
         {
           "http://example.com/terms#name": "Place Théo-Lannoy",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2476314184710313",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.652356830751955"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7945270496638686",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.31706828495868"
         },
         {
           "http://example.com/terms#name": "Place Thérèse Schumann",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.531218463243324",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.71721607502905"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1986441695735444",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.733295082800076"
         }
       ],
       "total_children_count": 6,
@@ -1275,33 +1307,35 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
-    },
-    {
-      "token_string": "o",
-      "triples": [],
-      "children": [
+      "triples_metadata": [],
+      "childlist": [
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment6204.jsonld#164747",
-              "@type": "tree:Node",
-              "token_string": "dore"
-            }
+            "/streets/fragment6204.jsonld#168371"
           ]
         },
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment6204.jsonld#164748",
-              "@type": "tree:Node",
-              "token_string": "-Lannoy"
-            }
+            "/streets/fragment6204.jsonld#168372"
           ]
         }
-      ],
+      ]
+    },
+    {
+      "token_string": "o",
+      "triples": [],
+      "children": {
+        "dore": [
+          "6204",
+          "164747"
+        ],
+        "-Lannoy": [
+          "6204",
+          "164748"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment6204.jsonld#168370",
         "@type": "tree:Node"
@@ -1309,18 +1343,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Place Théodore Foguenne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.092128554278733",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.93669356258799"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.035060480539269",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.425106865041"
         },
         {
           "http://example.com/terms#name": "Place Théodore-Gobert",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2876630636054016",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.48513780203148"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.83745944687604",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.08298531513174"
         },
         {
           "http://example.com/terms#name": "Place Théo-Lannoy",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2476314184710313",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.652356830751955"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7945270496638686",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.31706828495868"
         }
       ],
       "total_children_count": 4,
@@ -1346,17 +1380,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6204.jsonld#164747"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6204.jsonld#164748"
+          ]
+        }
+      ]
     },
     {
       "token_string": "rèse Schumann",
       "triples": [
         {
           "http://example.com/terms#name": "Place Thérèse Schumann",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.531218463243324",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.71721607502905"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1986441695735444",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.733295082800076"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6204.jsonld#168370",
         "@type": "tree:Node"
@@ -1364,8 +1413,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Place Thérèse Schumann",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.531218463243324",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.71721607502905"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1986441695735444",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.733295082800076"
         }
       ],
       "total_children_count": 0,
@@ -1381,7 +1430,8 @@
       ],
       "triples_metadata": [
         "Place Thérèse Schumann"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

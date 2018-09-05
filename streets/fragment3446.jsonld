@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "len",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3446.jsonld#82236",
-              "@type": "tree:Node",
-              "token_string": "weg"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3446.jsonld#82237",
-              "@type": "tree:Node",
-              "token_string": "ven"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "weg": [
+          "3446",
+          "82236"
+        ],
+        "ven": [
+          "3446",
+          "82237"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment727.jsonld#2166",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rielenweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.63796728029908",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.27639516517209"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.026614824808763",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.94494444702682"
         },
         {
           "http://example.com/terms#name": "Rielenven",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.972067116560724",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.520396356398095"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9621531251874194",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.16164114697423"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3446.jsonld#82236"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3446.jsonld#82237"
+          ]
+        }
+      ]
     },
     {
       "token_string": "weg",
       "triples": [
         {
           "http://example.com/terms#name": "Rielenweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.63796728029908",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.27639516517209"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.026614824808763",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.94494444702682"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3446.jsonld#82235",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rielenweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.63796728029908",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.27639516517209"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.026614824808763",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.94494444702682"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Rielenweg"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "ven",
       "triples": [
         {
           "http://example.com/terms#name": "Rielenven",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.972067116560724",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.520396356398095"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9621531251874194",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.16164114697423"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3446.jsonld#82235",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rielenven",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.972067116560724",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.520396356398095"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9621531251874194",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.16164114697423"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Rielenven"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

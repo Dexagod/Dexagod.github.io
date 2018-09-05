@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "Z",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3005.jsonld#69061",
-              "@type": "tree:Node",
-              "token_string": "oetendaalstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3005.jsonld#69062",
-              "@type": "tree:Node",
-              "token_string": "aventemsesteenweg"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3005.jsonld#99372",
-              "@type": "tree:Node",
-              "token_string": "ijp"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "oetendaalstraat": [
+          "3005",
+          "69061"
+        ],
+        "aventemsesteenweg": [
+          "3005",
+          "69062"
+        ],
+        "ijp": [
+          "3005",
+          "99372"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment180.jsonld#5073",
         "@type": "tree:Node"
@@ -62,18 +44,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nieuwe Zoetendaalstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5980021210738973",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.24161527833893"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0197447625176435",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.79882325231877"
         },
         {
           "http://example.com/terms#name": "Nieuwe Zaventemsesteenweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3650255243117813",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.331130546871634"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4363357644020747",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.41284635024372"
         },
         {
           "http://example.com/terms#name": "Nieuwe Zijp",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7599730220500107",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.18645859418715"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.443963521883603",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.710258404819164"
         }
       ],
       "total_children_count": 3,
@@ -99,17 +81,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3005.jsonld#69061"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3005.jsonld#69062"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3005.jsonld#99372"
+          ]
+        }
+      ]
     },
     {
       "token_string": "oetendaalstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Nieuwe Zoetendaalstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5980021210738973",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.24161527833893"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0197447625176435",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.79882325231877"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3005.jsonld#69060",
         "@type": "tree:Node"
@@ -117,8 +120,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nieuwe Zoetendaalstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5980021210738973",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.24161527833893"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0197447625176435",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.79882325231877"
         }
       ],
       "total_children_count": 0,
@@ -134,17 +137,19 @@
       ],
       "triples_metadata": [
         "Nieuwe Zoetendaalstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "aventemsesteenweg",
       "triples": [
         {
           "http://example.com/terms#name": "Nieuwe Zaventemsesteenweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3650255243117813",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.331130546871634"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4363357644020747",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.41284635024372"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3005.jsonld#69060",
         "@type": "tree:Node"
@@ -152,8 +157,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nieuwe Zaventemsesteenweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3650255243117813",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.331130546871634"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4363357644020747",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.41284635024372"
         }
       ],
       "total_children_count": 0,
@@ -169,17 +174,19 @@
       ],
       "triples_metadata": [
         "Nieuwe Zaventemsesteenweg"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "ijp",
       "triples": [
         {
           "http://example.com/terms#name": "Nieuwe Zijp",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7599730220500107",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.18645859418715"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.443963521883603",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.710258404819164"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3005.jsonld#69060",
         "@type": "tree:Node"
@@ -187,8 +194,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nieuwe Zijp",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7599730220500107",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.18645859418715"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.443963521883603",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.710258404819164"
         }
       ],
       "total_children_count": 0,
@@ -204,7 +211,8 @@
       ],
       "triples_metadata": [
         "Nieuwe Zijp"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

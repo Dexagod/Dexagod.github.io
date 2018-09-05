@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "I",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment421.jsonld#30598",
-              "@type": "tree:Node",
-              "token_string": "sidoorstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment421.jsonld#30599",
-              "@type": "tree:Node",
-              "token_string": "desbaldusstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment421.jsonld#80266",
-              "@type": "tree:Node",
-              "token_string": "gnatiusstraat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "sidoorstraat": [
+          "421",
+          "30598"
+        ],
+        "desbaldusstraat": [
+          "421",
+          "30599"
+        ],
+        "gnatiusstraat": [
+          "421",
+          "80266"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment259.jsonld#1721",
         "@type": "tree:Node"
@@ -62,18 +44,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Sint-Isidoorstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.074438157594945",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.58919467129731"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1605608276899217",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.4964739157341"
         },
         {
           "http://example.com/terms#name": "Sint-Idesbaldusstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1821045968160426",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.7031422966101"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0038812818997846",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.887801200822835"
         },
         {
           "http://example.com/terms#name": "Sint-Ignatiusstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7307133793137957",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.83812331833561"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.839130214477745",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.30070015068002"
         }
       ],
       "total_children_count": 3,
@@ -99,17 +81,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment421.jsonld#30598"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment421.jsonld#30599"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment421.jsonld#80266"
+          ]
+        }
+      ]
     },
     {
       "token_string": "sidoorstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Sint-Isidoorstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.074438157594945",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.58919467129731"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1605608276899217",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.4964739157341"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment421.jsonld#30597",
         "@type": "tree:Node"
@@ -117,8 +120,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Sint-Isidoorstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.074438157594945",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.58919467129731"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1605608276899217",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.4964739157341"
         }
       ],
       "total_children_count": 0,
@@ -134,17 +137,19 @@
       ],
       "triples_metadata": [
         "Sint-Isidoorstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "desbaldusstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Sint-Idesbaldusstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1821045968160426",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.7031422966101"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0038812818997846",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.887801200822835"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment421.jsonld#30597",
         "@type": "tree:Node"
@@ -152,8 +157,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Sint-Idesbaldusstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1821045968160426",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.7031422966101"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0038812818997846",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.887801200822835"
         }
       ],
       "total_children_count": 0,
@@ -169,17 +174,19 @@
       ],
       "triples_metadata": [
         "Sint-Idesbaldusstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "gnatiusstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Sint-Ignatiusstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7307133793137957",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.83812331833561"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.839130214477745",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.30070015068002"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment421.jsonld#30597",
         "@type": "tree:Node"
@@ -187,8 +194,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Sint-Ignatiusstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7307133793137957",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.83812331833561"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.839130214477745",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.30070015068002"
         }
       ],
       "total_children_count": 0,
@@ -204,7 +211,8 @@
       ],
       "triples_metadata": [
         "Sint-Ignatiusstraat"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

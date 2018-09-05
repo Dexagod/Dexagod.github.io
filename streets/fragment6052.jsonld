@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "s",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6052.jsonld#163572",
-              "@type": "tree:Node",
-              "token_string": "peau"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6052.jsonld#163573",
-              "@type": "tree:Node",
-              "token_string": "ter"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "peau": [
+          "6052",
+          "163572"
+        ],
+        "ter": [
+          "6052",
+          "163573"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment3988.jsonld#105134",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Cospeau",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.076947193875234",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.59170991421981"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2239949293919152",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.22020811842165"
         },
         {
           "http://example.com/terms#name": "Rue Coster",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9462225696985596",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.00650366950458"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4702295080298304",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.27045011091161"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6052.jsonld#163572"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6052.jsonld#163573"
+          ]
+        }
+      ]
     },
     {
       "token_string": "peau",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Cospeau",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.076947193875234",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.59170991421981"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2239949293919152",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.22020811842165"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6052.jsonld#163571",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Cospeau",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.076947193875234",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.59170991421981"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2239949293919152",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.22020811842165"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Rue Cospeau"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "ter",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Coster",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9462225696985596",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.00650366950458"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4702295080298304",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.27045011091161"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6052.jsonld#163571",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Coster",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9462225696985596",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.00650366950458"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4702295080298304",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.27045011091161"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Rue Coster"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

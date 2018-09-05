@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "ker",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2574.jsonld#71410",
-              "@type": "tree:Node",
-              "token_string": "weg"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2574.jsonld#71411",
-              "@type": "tree:Node",
-              "token_string": "voetweg"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2574.jsonld#72571",
-              "@type": "tree:Node",
-              "token_string": "bos"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "weg": [
+          "2574",
+          "71410"
+        ],
+        "voetweg": [
+          "2574",
+          "71411"
+        ],
+        "bos": [
+          "2574",
+          "72571"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment2614.jsonld#61123",
         "@type": "tree:Node"
@@ -62,18 +44,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Diepenbekerweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.228805190831849",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.03533469132137"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5180047074742373",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.26384891935241"
         },
         {
           "http://example.com/terms#name": "Diepenbekervoetweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7592628092979474",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.25685039219842"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.842662950988223",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.096724517555735"
         },
         {
           "http://example.com/terms#name": "Diepenbekerbos",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9424388259771326",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.29701812048576"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5825728365265883",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.95704019282641"
         }
       ],
       "total_children_count": 3,
@@ -99,17 +81,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2574.jsonld#71410"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2574.jsonld#71411"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2574.jsonld#72571"
+          ]
+        }
+      ]
     },
     {
       "token_string": "weg",
       "triples": [
         {
           "http://example.com/terms#name": "Diepenbekerweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.228805190831849",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.03533469132137"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5180047074742373",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.26384891935241"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2574.jsonld#71409",
         "@type": "tree:Node"
@@ -117,8 +120,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Diepenbekerweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.228805190831849",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.03533469132137"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5180047074742373",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.26384891935241"
         }
       ],
       "total_children_count": 0,
@@ -134,17 +137,19 @@
       ],
       "triples_metadata": [
         "Diepenbekerweg"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "voetweg",
       "triples": [
         {
           "http://example.com/terms#name": "Diepenbekervoetweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7592628092979474",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.25685039219842"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.842662950988223",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.096724517555735"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2574.jsonld#71409",
         "@type": "tree:Node"
@@ -152,8 +157,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Diepenbekervoetweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7592628092979474",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.25685039219842"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.842662950988223",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.096724517555735"
         }
       ],
       "total_children_count": 0,
@@ -169,17 +174,19 @@
       ],
       "triples_metadata": [
         "Diepenbekervoetweg"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "bos",
       "triples": [
         {
           "http://example.com/terms#name": "Diepenbekerbos",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9424388259771326",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.29701812048576"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5825728365265883",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.95704019282641"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2574.jsonld#71409",
         "@type": "tree:Node"
@@ -187,8 +194,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Diepenbekerbos",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9424388259771326",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.29701812048576"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5825728365265883",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.95704019282641"
         }
       ],
       "total_children_count": 0,
@@ -204,7 +211,8 @@
       ],
       "triples_metadata": [
         "Diepenbekerbos"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "g",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2031.jsonld#34524",
-              "@type": "tree:Node",
-              "token_string": "atstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2031.jsonld#34525",
-              "@type": "tree:Node",
-              "token_string": "raaf"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "atstraat": [
+          "2031",
+          "34524"
+        ],
+        "raaf": [
+          "2031",
+          "34525"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment887.jsonld#1010",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Bosgatstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.798802466475058",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.700967113457864"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.137987543048795",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.581825902125814"
         },
         {
           "http://example.com/terms#name": "Bosgraaf",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.995749065952574",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.66621857731847"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9313534469617264",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.753584010532215"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2031.jsonld#34524"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2031.jsonld#34525"
+          ]
+        }
+      ]
     },
     {
       "token_string": "atstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Bosgatstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.798802466475058",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.700967113457864"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.137987543048795",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.581825902125814"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2031.jsonld#34523",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Bosgatstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.798802466475058",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.700967113457864"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.137987543048795",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.581825902125814"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Bosgatstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "raaf",
       "triples": [
         {
           "http://example.com/terms#name": "Bosgraaf",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.995749065952574",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.66621857731847"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9313534469617264",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.753584010532215"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2031.jsonld#34523",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Bosgraaf",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.995749065952574",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.66621857731847"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9313534469617264",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.753584010532215"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Bosgraaf"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

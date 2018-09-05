@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -25,10 +25,11 @@
       "triples": [
         {
           "http://example.com/terms#name": "Judocus Rogmanstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.172264791425612",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.15439265721619"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.261464512602786",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.49336249979733"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3362.jsonld#96656",
         "@type": "tree:Node"
@@ -36,8 +37,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Judocus Rogmanstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.172264791425612",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.15439265721619"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.261464512602786",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.49336249979733"
         }
       ],
       "total_children_count": 0,
@@ -53,17 +54,19 @@
       ],
       "triples_metadata": [
         "Judocus Rogmanstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "Pauwelslaan",
       "triples": [
         {
           "http://example.com/terms#name": "Judocus Pauwelslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3072552889997153",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.831065207992346"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2899225035789335",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.27684121276358"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3362.jsonld#96656",
         "@type": "tree:Node"
@@ -71,8 +74,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Judocus Pauwelslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3072552889997153",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.831065207992346"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2899225035789335",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.27684121276358"
         }
       ],
       "total_children_count": 0,
@@ -88,33 +91,22 @@
       ],
       "triples_metadata": [
         "Judocus Pauwelslaan"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "cus ",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3362.jsonld#44738",
-              "@type": "tree:Node",
-              "token_string": "Rogmanstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3362.jsonld#44739",
-              "@type": "tree:Node",
-              "token_string": "Pauwelslaan"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "Rogmanstraat": [
+          "3362",
+          "44738"
+        ],
+        "Pauwelslaan": [
+          "3362",
+          "44739"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment3362.jsonld#180309",
         "@type": "tree:Node"
@@ -122,13 +114,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Judocus Rogmanstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.172264791425612",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.15439265721619"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.261464512602786",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.49336249979733"
         },
         {
           "http://example.com/terms#name": "Judocus Pauwelslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3072552889997153",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.831065207992346"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2899225035789335",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.27684121276358"
         }
       ],
       "total_children_count": 2,
@@ -148,17 +140,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3362.jsonld#44738"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3362.jsonld#44739"
+          ]
+        }
+      ]
     },
     {
       "token_string": "weg",
       "triples": [
         {
           "http://example.com/terms#name": "Judoweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4494198126926783",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.45535874280004"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7140162610467704",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.411497893820034"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3362.jsonld#180309",
         "@type": "tree:Node"
@@ -166,8 +173,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Judoweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4494198126926783",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.45535874280004"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7140162610467704",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.411497893820034"
         }
       ],
       "total_children_count": 0,
@@ -183,33 +190,22 @@
       ],
       "triples_metadata": [
         "Judoweg"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "d",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3362.jsonld#180309",
-              "@type": "tree:Node",
-              "token_string": "o"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3362.jsonld#180310",
-              "@type": "tree:Node",
-              "token_string": "enstrasse"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "o": [
+          "3362",
+          "180309"
+        ],
+        "enstrasse": [
+          "3362",
+          "180310"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment374.jsonld#3146",
         "@type": "tree:Node"
@@ -217,23 +213,23 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Judocus Rogmanstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.172264791425612",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.15439265721619"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.261464512602786",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.49336249979733"
         },
         {
           "http://example.com/terms#name": "Judocus Pauwelslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3072552889997153",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.831065207992346"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2899225035789335",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.27684121276358"
         },
         {
           "http://example.com/terms#name": "Judoweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4494198126926783",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.45535874280004"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7140162610467704",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.411497893820034"
         },
         {
           "http://example.com/terms#name": "Judenstrasse",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9900526540297534",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.47863574273032"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5266484962769638",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.259672247997436"
         }
       ],
       "total_children_count": 6,
@@ -265,33 +261,35 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
-    },
-    {
-      "token_string": "o",
-      "triples": [],
-      "children": [
+      "triples_metadata": [],
+      "childlist": [
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment3362.jsonld#96656",
-              "@type": "tree:Node",
-              "token_string": "cus "
-            }
+            "/streets/fragment3362.jsonld#180309"
           ]
         },
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment3362.jsonld#96657",
-              "@type": "tree:Node",
-              "token_string": "weg"
-            }
+            "/streets/fragment3362.jsonld#180310"
           ]
         }
-      ],
+      ]
+    },
+    {
+      "token_string": "o",
+      "triples": [],
+      "children": {
+        "cus ": [
+          "3362",
+          "96656"
+        ],
+        "weg": [
+          "3362",
+          "96657"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment3362.jsonld#180308",
         "@type": "tree:Node"
@@ -299,18 +297,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Judocus Rogmanstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.172264791425612",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.15439265721619"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.261464512602786",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.49336249979733"
         },
         {
           "http://example.com/terms#name": "Judocus Pauwelslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3072552889997153",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.831065207992346"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2899225035789335",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.27684121276358"
         },
         {
           "http://example.com/terms#name": "Judoweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4494198126926783",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.45535874280004"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7140162610467704",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.411497893820034"
         }
       ],
       "total_children_count": 4,
@@ -336,17 +334,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3362.jsonld#96656"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3362.jsonld#96657"
+          ]
+        }
+      ]
     },
     {
       "token_string": "enstrasse",
       "triples": [
         {
           "http://example.com/terms#name": "Judenstrasse",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9900526540297534",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.47863574273032"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5266484962769638",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.259672247997436"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3362.jsonld#180308",
         "@type": "tree:Node"
@@ -354,8 +367,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Judenstrasse",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9900526540297534",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.47863574273032"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5266484962769638",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.259672247997436"
         }
       ],
       "total_children_count": 0,
@@ -371,7 +384,8 @@
       ],
       "triples_metadata": [
         "Judenstrasse"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

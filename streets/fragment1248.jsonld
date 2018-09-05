@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "W",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1248.jsonld#39490",
-              "@type": "tree:Node",
-              "token_string": "illemstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1248.jsonld#39491",
-              "@type": "tree:Node",
-              "token_string": "elterslaan"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "illemstraat": [
+          "1248",
+          "39490"
+        ],
+        "elterslaan": [
+          "1248",
+          "39491"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment468.jsonld#1696",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Jan Willemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.453226545533129",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.384702218097054"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7252257408058873",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.54221542715987"
         },
         {
           "http://example.com/terms#name": "Jan Welterslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.333146196204333",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.08071996305833"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2871645150966744",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.499095457885424"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1248.jsonld#39490"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1248.jsonld#39491"
+          ]
+        }
+      ]
     },
     {
       "token_string": "illemstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Jan Willemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.453226545533129",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.384702218097054"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7252257408058873",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.54221542715987"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1248.jsonld#39489",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Jan Willemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.453226545533129",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.384702218097054"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7252257408058873",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.54221542715987"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Jan Willemstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "elterslaan",
       "triples": [
         {
           "http://example.com/terms#name": "Jan Welterslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.333146196204333",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.08071996305833"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2871645150966744",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.499095457885424"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1248.jsonld#39489",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Jan Welterslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.333146196204333",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.08071996305833"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2871645150966744",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.499095457885424"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Jan Welterslaan"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

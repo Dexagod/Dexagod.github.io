@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "e",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1451.jsonld#43464",
-              "@type": "tree:Node",
-              "token_string": "ystraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1451.jsonld#43465",
-              "@type": "tree:Node",
-              "token_string": "ssenstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1451.jsonld#70743",
-              "@type": "tree:Node",
-              "token_string": "kboomseweg"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "ystraat": [
+          "1451",
+          "43464"
+        ],
+        "ssenstraat": [
+          "1451",
+          "43465"
+        ],
+        "kboomseweg": [
+          "1451",
+          "70743"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment529.jsonld#355",
         "@type": "tree:Node"
@@ -62,18 +44,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Staeystraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8835184045067543",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.48380737607862"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1757666858245597",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.34512169011624"
         },
         {
           "http://example.com/terms#name": "Staessenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.058228472127562",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.288662069245454"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.384643941895886",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.26649343355894"
         },
         {
           "http://example.com/terms#name": "Staekboomseweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.244508960975885",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.33818480753435"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.035009744568541",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.10235128934041"
         }
       ],
       "total_children_count": 3,
@@ -99,17 +81,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1451.jsonld#43464"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1451.jsonld#43465"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1451.jsonld#70743"
+          ]
+        }
+      ]
     },
     {
       "token_string": "ystraat",
       "triples": [
         {
           "http://example.com/terms#name": "Staeystraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8835184045067543",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.48380737607862"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1757666858245597",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.34512169011624"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1451.jsonld#43463",
         "@type": "tree:Node"
@@ -117,8 +120,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Staeystraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8835184045067543",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.48380737607862"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1757666858245597",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.34512169011624"
         }
       ],
       "total_children_count": 0,
@@ -134,17 +137,19 @@
       ],
       "triples_metadata": [
         "Staeystraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "ssenstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Staessenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.058228472127562",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.288662069245454"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.384643941895886",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.26649343355894"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1451.jsonld#43463",
         "@type": "tree:Node"
@@ -152,8 +157,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Staessenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.058228472127562",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.288662069245454"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.384643941895886",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.26649343355894"
         }
       ],
       "total_children_count": 0,
@@ -169,17 +174,19 @@
       ],
       "triples_metadata": [
         "Staessenstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "kboomseweg",
       "triples": [
         {
           "http://example.com/terms#name": "Staekboomseweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.244508960975885",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.33818480753435"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.035009744568541",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.10235128934041"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1451.jsonld#43463",
         "@type": "tree:Node"
@@ -187,8 +194,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Staekboomseweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.244508960975885",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.33818480753435"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.035009744568541",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.10235128934041"
         }
       ],
       "total_children_count": 0,
@@ -204,7 +211,8 @@
       ],
       "triples_metadata": [
         "Staekboomseweg"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

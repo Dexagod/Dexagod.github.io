@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "V",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6353.jsonld#42165",
-              "@type": "tree:Node",
-              "token_string": "erbelenstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6353.jsonld#177293",
-              "@type": "tree:Node",
-              "token_string": "a"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "erbelenstraat": [
+          "6353",
+          "42165"
+        ],
+        "a": [
+          "6353",
+          "177293"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment1322.jsonld#33447",
         "@type": "tree:Node"
@@ -52,23 +40,23 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "R Van Ostaeyenlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2528941815134917",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.36420890458268"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4801365574394225",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.07838780141585"
         },
         {
           "http://example.com/terms#name": "R Verbelenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.575528494025133",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.26174002909373"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0639724179296897",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.130071492594"
         },
         {
           "http://example.com/terms#name": "R Vandervelde",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.709381328341247",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.09356463477474"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1621100503153055",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.09659252695741"
         },
         {
           "http://example.com/terms#name": "R Vallée de la Sûre",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8918443598508086",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.08564351423748"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.314376193905667",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.558606310698025"
         }
       ],
       "total_children_count": 6,
@@ -100,17 +88,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6353.jsonld#42165"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6353.jsonld#177293"
+          ]
+        }
+      ]
     },
     {
       "token_string": "erbelenstraat",
       "triples": [
         {
           "http://example.com/terms#name": "R Verbelenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.575528494025133",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.26174002909373"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0639724179296897",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.130071492594"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6353.jsonld#42163",
         "@type": "tree:Node"
@@ -118,8 +121,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "R Verbelenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.575528494025133",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.26174002909373"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0639724179296897",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.130071492594"
         }
       ],
       "total_children_count": 0,
@@ -135,17 +138,19 @@
       ],
       "triples_metadata": [
         "R Verbelenstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": " Ostaeyenlaan",
       "triples": [
         {
           "http://example.com/terms#name": "R Van Ostaeyenlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2528941815134917",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.36420890458268"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4801365574394225",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.07838780141585"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6353.jsonld#177294",
         "@type": "tree:Node"
@@ -153,8 +158,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "R Van Ostaeyenlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2528941815134917",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.36420890458268"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4801365574394225",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.07838780141585"
         }
       ],
       "total_children_count": 0,
@@ -170,17 +175,19 @@
       ],
       "triples_metadata": [
         "R Van Ostaeyenlaan"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "dervelde",
       "triples": [
         {
           "http://example.com/terms#name": "R Vandervelde",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.709381328341247",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.09356463477474"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1621100503153055",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.09659252695741"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6353.jsonld#177294",
         "@type": "tree:Node"
@@ -188,8 +195,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "R Vandervelde",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.709381328341247",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.09356463477474"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1621100503153055",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.09659252695741"
         }
       ],
       "total_children_count": 0,
@@ -205,33 +212,22 @@
       ],
       "triples_metadata": [
         "R Vandervelde"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "a",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6353.jsonld#177294",
-              "@type": "tree:Node",
-              "token_string": "n"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6353.jsonld#177295",
-              "@type": "tree:Node",
-              "token_string": "llée de la Sûre"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "n": [
+          "6353",
+          "177294"
+        ],
+        "llée de la Sûre": [
+          "6353",
+          "177295"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment6353.jsonld#42163",
         "@type": "tree:Node"
@@ -239,18 +235,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "R Van Ostaeyenlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2528941815134917",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.36420890458268"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4801365574394225",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.07838780141585"
         },
         {
           "http://example.com/terms#name": "R Vandervelde",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.709381328341247",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.09356463477474"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1621100503153055",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.09659252695741"
         },
         {
           "http://example.com/terms#name": "R Vallée de la Sûre",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8918443598508086",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.08564351423748"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.314376193905667",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.558606310698025"
         }
       ],
       "total_children_count": 4,
@@ -276,33 +272,35 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
-    },
-    {
-      "token_string": "n",
-      "triples": [],
-      "children": [
+      "triples_metadata": [],
+      "childlist": [
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment6353.jsonld#133411",
-              "@type": "tree:Node",
-              "token_string": " Ostaeyenlaan"
-            }
+            "/streets/fragment6353.jsonld#177294"
           ]
         },
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment6353.jsonld#133412",
-              "@type": "tree:Node",
-              "token_string": "dervelde"
-            }
+            "/streets/fragment6353.jsonld#177295"
           ]
         }
-      ],
+      ]
+    },
+    {
+      "token_string": "n",
+      "triples": [],
+      "children": {
+        " Ostaeyenlaan": [
+          "6353",
+          "133411"
+        ],
+        "dervelde": [
+          "6353",
+          "133412"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment6353.jsonld#177293",
         "@type": "tree:Node"
@@ -310,13 +308,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "R Van Ostaeyenlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2528941815134917",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.36420890458268"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4801365574394225",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.07838780141585"
         },
         {
           "http://example.com/terms#name": "R Vandervelde",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.709381328341247",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.09356463477474"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1621100503153055",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.09659252695741"
         }
       ],
       "total_children_count": 2,
@@ -336,17 +334,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6353.jsonld#133411"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6353.jsonld#133412"
+          ]
+        }
+      ]
     },
     {
       "token_string": "llée de la Sûre",
       "triples": [
         {
           "http://example.com/terms#name": "R Vallée de la Sûre",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8918443598508086",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.08564351423748"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.314376193905667",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.558606310698025"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6353.jsonld#177293",
         "@type": "tree:Node"
@@ -354,8 +367,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "R Vallée de la Sûre",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8918443598508086",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.08564351423748"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.314376193905667",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.558606310698025"
         }
       ],
       "total_children_count": 0,
@@ -371,7 +384,8 @@
       ],
       "triples_metadata": [
         "R Vallée de la Sûre"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

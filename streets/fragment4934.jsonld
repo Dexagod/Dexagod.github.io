@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "ho",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4934.jsonld#161151",
-              "@type": "tree:Node",
-              "token_string": "nneux"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4934.jsonld#161152",
-              "@type": "tree:Node",
-              "token_string": "mmal"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "nneux": [
+          "4934",
+          "161151"
+        ],
+        "mmal": [
+          "4934",
+          "161152"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment3769.jsonld#105227",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue de Lhonneux",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3161030040061887",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.7636959045636"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.452291552018313",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.32538635465894"
         },
         {
           "http://example.com/terms#name": "Rue de Lhommal",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.253830394746066",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.63716806599885"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3487990055736545",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.14507610443524"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4934.jsonld#161151"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4934.jsonld#161152"
+          ]
+        }
+      ]
     },
     {
       "token_string": "nneux",
       "triples": [
         {
           "http://example.com/terms#name": "Rue de Lhonneux",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3161030040061887",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.7636959045636"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.452291552018313",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.32538635465894"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4934.jsonld#161150",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue de Lhonneux",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3161030040061887",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.7636959045636"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.452291552018313",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.32538635465894"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Rue de Lhonneux"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "mmal",
       "triples": [
         {
           "http://example.com/terms#name": "Rue de Lhommal",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.253830394746066",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.63716806599885"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3487990055736545",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.14507610443524"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4934.jsonld#161150",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue de Lhommal",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.253830394746066",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.63716806599885"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3487990055736545",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.14507610443524"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Rue de Lhommal"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

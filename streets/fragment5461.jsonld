@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "ston Churchill",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5461.jsonld#38065",
-              "@type": "tree:Node",
-              "token_string": "laan"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5461.jsonld#38066",
-              "@type": "tree:Node",
-              "token_string": "plein"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "laan": [
+          "5461",
+          "38065"
+        ],
+        "plein": [
+          "5461",
+          "38066"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment243.jsonld#1176",
         "@type": "tree:Node"
@@ -52,43 +40,43 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Winston Churchilllaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.758885646015316",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.790923443177356"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2766570156651467",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.48905424241337"
         },
         {
           "http://example.com/terms#name": "Winston Churchilllaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4732453906313627",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.26945755359113"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7143801577300213",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.776742379573435"
         },
         {
           "http://example.com/terms#name": "Winston Churchilllaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4732453906313627",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.26945755359113"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7143801577300213",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.776742379573435"
         },
         {
           "http://example.com/terms#name": "Winston Churchilllaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4732453906313627",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.26945755359113"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7143801577300213",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.776742379573435"
         },
         {
           "http://example.com/terms#name": "Winston Churchillplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.479272044192834",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.170876431697394"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.035344871431537",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.281151412485926"
         },
         {
           "http://example.com/terms#name": "Winston Churchillplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1522898658541743",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.27898732167413"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.622463758718578",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.60660239900383"
         },
         {
           "http://example.com/terms#name": "Winston Churchillplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1522898658541743",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.27898732167413"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.622463758718578",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.60660239900383"
         },
         {
           "http://example.com/terms#name": "Winston Churchillplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1522898658541743",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.27898732167413"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.622463758718578",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.60660239900383"
         }
       ],
       "total_children_count": 2,
@@ -114,32 +102,47 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5461.jsonld#38065"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5461.jsonld#38066"
+          ]
+        }
+      ]
     },
     {
       "token_string": "laan",
       "triples": [
         {
           "http://example.com/terms#name": "Winston Churchilllaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.758885646015316",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.790923443177356"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2766570156651467",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.48905424241337"
         },
         {
           "http://example.com/terms#name": "Winston Churchilllaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4732453906313627",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.26945755359113"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7143801577300213",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.776742379573435"
         },
         {
           "http://example.com/terms#name": "Winston Churchilllaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4732453906313627",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.26945755359113"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7143801577300213",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.776742379573435"
         },
         {
           "http://example.com/terms#name": "Winston Churchilllaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4732453906313627",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.26945755359113"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7143801577300213",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.776742379573435"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5461.jsonld#38064",
         "@type": "tree:Node"
@@ -147,23 +150,23 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Winston Churchilllaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.758885646015316",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.790923443177356"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2766570156651467",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.48905424241337"
         },
         {
           "http://example.com/terms#name": "Winston Churchilllaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4732453906313627",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.26945755359113"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7143801577300213",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.776742379573435"
         },
         {
           "http://example.com/terms#name": "Winston Churchilllaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4732453906313627",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.26945755359113"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7143801577300213",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.776742379573435"
         },
         {
           "http://example.com/terms#name": "Winston Churchilllaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4732453906313627",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.26945755359113"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7143801577300213",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.776742379573435"
         }
       ],
       "total_children_count": 0,
@@ -185,32 +188,34 @@
         "Winston Churchilllaan",
         "Winston Churchilllaan",
         "Winston Churchilllaan"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "plein",
       "triples": [
         {
           "http://example.com/terms#name": "Winston Churchillplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.479272044192834",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.170876431697394"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.035344871431537",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.281151412485926"
         },
         {
           "http://example.com/terms#name": "Winston Churchillplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1522898658541743",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.27898732167413"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.622463758718578",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.60660239900383"
         },
         {
           "http://example.com/terms#name": "Winston Churchillplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1522898658541743",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.27898732167413"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.622463758718578",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.60660239900383"
         },
         {
           "http://example.com/terms#name": "Winston Churchillplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1522898658541743",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.27898732167413"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.622463758718578",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.60660239900383"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5461.jsonld#38064",
         "@type": "tree:Node"
@@ -218,23 +223,23 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Winston Churchillplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.479272044192834",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.170876431697394"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.035344871431537",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.281151412485926"
         },
         {
           "http://example.com/terms#name": "Winston Churchillplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1522898658541743",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.27898732167413"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.622463758718578",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.60660239900383"
         },
         {
           "http://example.com/terms#name": "Winston Churchillplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1522898658541743",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.27898732167413"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.622463758718578",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.60660239900383"
         },
         {
           "http://example.com/terms#name": "Winston Churchillplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1522898658541743",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.27898732167413"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.622463758718578",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.60660239900383"
         }
       ],
       "total_children_count": 0,
@@ -256,7 +261,8 @@
         "Winston Churchillplein",
         "Winston Churchillplein",
         "Winston Churchillplein"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

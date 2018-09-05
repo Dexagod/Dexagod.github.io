@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "chè",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5548.jsonld#175971",
-              "@type": "tree:Node",
-              "token_string": "nas"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5548.jsonld#175972",
-              "@type": "tree:Node",
-              "token_string": "rweûs"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "nas": [
+          "5548",
+          "175971"
+        ],
+        "rweûs": [
+          "5548",
+          "175972"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment3795.jsonld#105304",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue des Tchènas",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9643283780734886",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.14209907806844"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3792456246794402",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.78935605272629"
         },
         {
           "http://example.com/terms#name": "Rue des Tchèrweûs",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.473553671126147",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.74541939311001"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.984987584584536",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.98004098894062"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5548.jsonld#175971"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5548.jsonld#175972"
+          ]
+        }
+      ]
     },
     {
       "token_string": "nas",
       "triples": [
         {
           "http://example.com/terms#name": "Rue des Tchènas",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9643283780734886",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.14209907806844"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3792456246794402",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.78935605272629"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5548.jsonld#175970",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue des Tchènas",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9643283780734886",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.14209907806844"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3792456246794402",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.78935605272629"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Rue des Tchènas"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "rweûs",
       "triples": [
         {
           "http://example.com/terms#name": "Rue des Tchèrweûs",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.473553671126147",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.74541939311001"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.984987584584536",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.98004098894062"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5548.jsonld#175970",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue des Tchèrweûs",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.473553671126147",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.74541939311001"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.984987584584536",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.98004098894062"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Rue des Tchèrweûs"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

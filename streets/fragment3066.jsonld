@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "w",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3066.jsonld#14548",
-              "@type": "tree:Node",
-              "token_string": "ittelaan"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3066.jsonld#94395",
-              "@type": "tree:Node",
-              "token_string": "and"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "ittelaan": [
+          "3066",
+          "14548"
+        ],
+        "and": [
+          "3066",
+          "94395"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment51.jsonld#198",
         "@type": "tree:Node"
@@ -52,23 +40,23 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Dewittelaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9063968751961324",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.85779962063195"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3962938048193725",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.29684862445611"
         },
         {
           "http://example.com/terms#name": "Dewandelaerstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1766446508557",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.14531764241267"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2079418883486324",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.81744412813636"
         },
         {
           "http://example.com/terms#name": "Dewandeleerblok",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5325851297750224",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.355122724744966"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.675439942853987",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.366491922245984"
         },
         {
           "http://example.com/terms#name": "Dewandreplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4416775345077144",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.8562922333696"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3332550120582245",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.914324992734464"
         }
       ],
       "total_children_count": 6,
@@ -100,17 +88,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3066.jsonld#14548"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3066.jsonld#94395"
+          ]
+        }
+      ]
     },
     {
       "token_string": "ittelaan",
       "triples": [
         {
           "http://example.com/terms#name": "Dewittelaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9063968751961324",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.85779962063195"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3962938048193725",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.29684862445611"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3066.jsonld#14547",
         "@type": "tree:Node"
@@ -118,8 +121,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Dewittelaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9063968751961324",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.85779962063195"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3962938048193725",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.29684862445611"
         }
       ],
       "total_children_count": 0,
@@ -135,17 +138,19 @@
       ],
       "triples_metadata": [
         "Dewittelaan"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "aerstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Dewandelaerstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1766446508557",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.14531764241267"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2079418883486324",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.81744412813636"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3066.jsonld#94396",
         "@type": "tree:Node"
@@ -153,8 +158,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Dewandelaerstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1766446508557",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.14531764241267"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2079418883486324",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.81744412813636"
         }
       ],
       "total_children_count": 0,
@@ -170,17 +175,19 @@
       ],
       "triples_metadata": [
         "Dewandelaerstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "eerblok",
       "triples": [
         {
           "http://example.com/terms#name": "Dewandeleerblok",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5325851297750224",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.355122724744966"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.675439942853987",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.366491922245984"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3066.jsonld#94396",
         "@type": "tree:Node"
@@ -188,8 +195,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Dewandeleerblok",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5325851297750224",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.355122724744966"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.675439942853987",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.366491922245984"
         }
       ],
       "total_children_count": 0,
@@ -205,33 +212,22 @@
       ],
       "triples_metadata": [
         "Dewandeleerblok"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "and",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3066.jsonld#94396",
-              "@type": "tree:Node",
-              "token_string": "el"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3066.jsonld#94397",
-              "@type": "tree:Node",
-              "token_string": "replein"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "el": [
+          "3066",
+          "94396"
+        ],
+        "replein": [
+          "3066",
+          "94397"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment3066.jsonld#14547",
         "@type": "tree:Node"
@@ -239,18 +235,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Dewandelaerstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1766446508557",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.14531764241267"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2079418883486324",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.81744412813636"
         },
         {
           "http://example.com/terms#name": "Dewandeleerblok",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5325851297750224",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.355122724744966"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.675439942853987",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.366491922245984"
         },
         {
           "http://example.com/terms#name": "Dewandreplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4416775345077144",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.8562922333696"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3332550120582245",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.914324992734464"
         }
       ],
       "total_children_count": 4,
@@ -276,33 +272,35 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
-    },
-    {
-      "token_string": "el",
-      "triples": [],
-      "children": [
+      "triples_metadata": [],
+      "childlist": [
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment3066.jsonld#93197",
-              "@type": "tree:Node",
-              "token_string": "aerstraat"
-            }
+            "/streets/fragment3066.jsonld#94396"
           ]
         },
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment3066.jsonld#93198",
-              "@type": "tree:Node",
-              "token_string": "eerblok"
-            }
+            "/streets/fragment3066.jsonld#94397"
           ]
         }
-      ],
+      ]
+    },
+    {
+      "token_string": "el",
+      "triples": [],
+      "children": {
+        "aerstraat": [
+          "3066",
+          "93197"
+        ],
+        "eerblok": [
+          "3066",
+          "93198"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment3066.jsonld#94395",
         "@type": "tree:Node"
@@ -310,13 +308,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Dewandelaerstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1766446508557",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.14531764241267"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2079418883486324",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.81744412813636"
         },
         {
           "http://example.com/terms#name": "Dewandeleerblok",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5325851297750224",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.355122724744966"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.675439942853987",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.366491922245984"
         }
       ],
       "total_children_count": 2,
@@ -336,17 +334,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3066.jsonld#93197"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3066.jsonld#93198"
+          ]
+        }
+      ]
     },
     {
       "token_string": "replein",
       "triples": [
         {
           "http://example.com/terms#name": "Dewandreplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4416775345077144",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.8562922333696"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3332550120582245",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.914324992734464"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3066.jsonld#94395",
         "@type": "tree:Node"
@@ -354,8 +367,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Dewandreplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4416775345077144",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.8562922333696"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3332550120582245",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.914324992734464"
         }
       ],
       "total_children_count": 0,
@@ -371,7 +384,8 @@
       ],
       "triples_metadata": [
         "Dewandreplein"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

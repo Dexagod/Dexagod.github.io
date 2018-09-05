@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "V",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4368.jsonld#130606",
-              "@type": "tree:Node",
-              "token_string": "i"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4368.jsonld#131701",
-              "@type": "tree:Node",
-              "token_string": "an"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "i": [
+          "4368",
+          "130606"
+        ],
+        "an": [
+          "4368",
+          "131701"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4185.jsonld#156062",
         "@type": "tree:Node"
@@ -52,23 +40,23 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Cité Van Looy",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.742153818252695",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.42486696495766"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0506810089963783",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.17774090447185"
         },
         {
           "http://example.com/terms#name": "Cité Victor Jacmin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5639551402598633",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.60811411493396"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.232231223031157",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.44102085045382"
         },
         {
           "http://example.com/terms#name": "Cité Vital Parée",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5633837400326436",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.318229679518716"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.136426443760397",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.63174138300166"
         },
         {
           "http://example.com/terms#name": "Cité Vandervelde",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.373336884631315",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.323252192523135"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3684455687813566",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.69152173579239"
         }
       ],
       "total_children_count": 6,
@@ -100,33 +88,35 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
-    },
-    {
-      "token_string": "i",
-      "triples": [],
-      "children": [
+      "triples_metadata": [],
+      "childlist": [
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment4368.jsonld#130607",
-              "@type": "tree:Node",
-              "token_string": "ctor Jacmin"
-            }
+            "/streets/fragment4368.jsonld#130606"
           ]
         },
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment4368.jsonld#130608",
-              "@type": "tree:Node",
-              "token_string": "tal Parée"
-            }
+            "/streets/fragment4368.jsonld#131701"
           ]
         }
-      ],
+      ]
+    },
+    {
+      "token_string": "i",
+      "triples": [],
+      "children": {
+        "ctor Jacmin": [
+          "4368",
+          "130607"
+        ],
+        "tal Parée": [
+          "4368",
+          "130608"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4368.jsonld#117927",
         "@type": "tree:Node"
@@ -134,13 +124,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Cité Victor Jacmin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5639551402598633",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.60811411493396"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.232231223031157",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.44102085045382"
         },
         {
           "http://example.com/terms#name": "Cité Vital Parée",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5633837400326436",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.318229679518716"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.136426443760397",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.63174138300166"
         }
       ],
       "total_children_count": 2,
@@ -160,17 +150,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4368.jsonld#130607"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4368.jsonld#130608"
+          ]
+        }
+      ]
     },
     {
       "token_string": "ctor Jacmin",
       "triples": [
         {
           "http://example.com/terms#name": "Cité Victor Jacmin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5639551402598633",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.60811411493396"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.232231223031157",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.44102085045382"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4368.jsonld#130606",
         "@type": "tree:Node"
@@ -178,8 +183,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Cité Victor Jacmin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5639551402598633",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.60811411493396"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.232231223031157",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.44102085045382"
         }
       ],
       "total_children_count": 0,
@@ -195,17 +200,19 @@
       ],
       "triples_metadata": [
         "Cité Victor Jacmin"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "tal Parée",
       "triples": [
         {
           "http://example.com/terms#name": "Cité Vital Parée",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5633837400326436",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.318229679518716"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.136426443760397",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.63174138300166"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4368.jsonld#130606",
         "@type": "tree:Node"
@@ -213,8 +220,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Cité Vital Parée",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5633837400326436",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.318229679518716"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.136426443760397",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.63174138300166"
         }
       ],
       "total_children_count": 0,
@@ -230,33 +237,22 @@
       ],
       "triples_metadata": [
         "Cité Vital Parée"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "an",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4368.jsonld#131702",
-              "@type": "tree:Node",
-              "token_string": " Looy"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4368.jsonld#131703",
-              "@type": "tree:Node",
-              "token_string": "dervelde"
-            }
-          ]
-        }
-      ],
+      "children": {
+        " Looy": [
+          "4368",
+          "131702"
+        ],
+        "dervelde": [
+          "4368",
+          "131703"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4368.jsonld#117927",
         "@type": "tree:Node"
@@ -264,13 +260,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Cité Van Looy",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.742153818252695",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.42486696495766"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0506810089963783",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.17774090447185"
         },
         {
           "http://example.com/terms#name": "Cité Vandervelde",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.373336884631315",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.323252192523135"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3684455687813566",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.69152173579239"
         }
       ],
       "total_children_count": 2,
@@ -290,17 +286,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4368.jsonld#131702"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4368.jsonld#131703"
+          ]
+        }
+      ]
     },
     {
       "token_string": " Looy",
       "triples": [
         {
           "http://example.com/terms#name": "Cité Van Looy",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.742153818252695",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.42486696495766"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0506810089963783",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.17774090447185"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4368.jsonld#131701",
         "@type": "tree:Node"
@@ -308,8 +319,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Cité Van Looy",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.742153818252695",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.42486696495766"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0506810089963783",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.17774090447185"
         }
       ],
       "total_children_count": 0,
@@ -325,17 +336,19 @@
       ],
       "triples_metadata": [
         "Cité Van Looy"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "dervelde",
       "triples": [
         {
           "http://example.com/terms#name": "Cité Vandervelde",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.373336884631315",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.323252192523135"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3684455687813566",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.69152173579239"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4368.jsonld#131701",
         "@type": "tree:Node"
@@ -343,8 +356,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Cité Vandervelde",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.373336884631315",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.323252192523135"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3684455687813566",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.69152173579239"
         }
       ],
       "total_children_count": 0,
@@ -360,7 +373,8 @@
       ],
       "triples_metadata": [
         "Cité Vandervelde"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

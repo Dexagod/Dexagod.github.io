@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "T",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5092.jsonld#125296",
-              "@type": "tree:Node",
-              "token_string": "iberghien"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5092.jsonld#125297",
-              "@type": "tree:Node",
-              "token_string": "ype"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5092.jsonld#176603",
-              "@type": "tree:Node",
-              "token_string": "echnopolis"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "iberghien": [
+          "5092",
+          "125296"
+        ],
+        "ype": [
+          "5092",
+          "125297"
+        ],
+        "echnopolis": [
+          "5092",
+          "176603"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4208.jsonld#107812",
         "@type": "tree:Node"
@@ -62,18 +44,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Boulevard Tiberghien",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.659273011728939",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.095028249794666"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2080364484646897",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.26463405177874"
         },
         {
           "http://example.com/terms#name": "Boulevard Type",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.284531750180283",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.18334862246017"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.638819421212849",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.22355253383543"
         },
         {
           "http://example.com/terms#name": "Boulevard Technopolis",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9161974429638495",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.488305986586944"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5384461376615857",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.88854725379901"
         }
       ],
       "total_children_count": 3,
@@ -99,17 +81,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5092.jsonld#125296"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5092.jsonld#125297"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5092.jsonld#176603"
+          ]
+        }
+      ]
     },
     {
       "token_string": "iberghien",
       "triples": [
         {
           "http://example.com/terms#name": "Boulevard Tiberghien",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.659273011728939",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.095028249794666"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2080364484646897",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.26463405177874"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5092.jsonld#125295",
         "@type": "tree:Node"
@@ -117,8 +120,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Boulevard Tiberghien",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.659273011728939",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.095028249794666"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2080364484646897",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.26463405177874"
         }
       ],
       "total_children_count": 0,
@@ -134,17 +137,19 @@
       ],
       "triples_metadata": [
         "Boulevard Tiberghien"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "ype",
       "triples": [
         {
           "http://example.com/terms#name": "Boulevard Type",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.284531750180283",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.18334862246017"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.638819421212849",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.22355253383543"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5092.jsonld#125295",
         "@type": "tree:Node"
@@ -152,8 +157,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Boulevard Type",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.284531750180283",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.18334862246017"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.638819421212849",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.22355253383543"
         }
       ],
       "total_children_count": 0,
@@ -169,17 +174,19 @@
       ],
       "triples_metadata": [
         "Boulevard Type"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "echnopolis",
       "triples": [
         {
           "http://example.com/terms#name": "Boulevard Technopolis",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9161974429638495",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.488305986586944"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5384461376615857",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.88854725379901"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5092.jsonld#125295",
         "@type": "tree:Node"
@@ -187,8 +194,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Boulevard Technopolis",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9161974429638495",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.488305986586944"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5384461376615857",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.88854725379901"
         }
       ],
       "total_children_count": 0,
@@ -204,7 +211,8 @@
       ],
       "triples_metadata": [
         "Boulevard Technopolis"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

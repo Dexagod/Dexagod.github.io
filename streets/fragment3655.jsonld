@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "W",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3655.jsonld#94624",
-              "@type": "tree:Node",
-              "token_string": "ielemansstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3655.jsonld#94625",
-              "@type": "tree:Node",
-              "token_string": "emaerestraat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "ielemansstraat": [
+          "3655",
+          "94624"
+        ],
+        "emaerestraat": [
+          "3655",
+          "94625"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment2729.jsonld#5779",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Paul Wielemansstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.243027119714129",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.566329883719334"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.467203715624685",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.78742906794951"
         },
         {
           "http://example.com/terms#name": "Paul Wemaerestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.436012504862315",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.188889990149086"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3914293075718986",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.15943932238468"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3655.jsonld#94624"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3655.jsonld#94625"
+          ]
+        }
+      ]
     },
     {
       "token_string": "ielemansstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Paul Wielemansstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.243027119714129",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.566329883719334"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.467203715624685",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.78742906794951"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3655.jsonld#94623",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Paul Wielemansstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.243027119714129",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.566329883719334"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.467203715624685",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.78742906794951"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Paul Wielemansstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "emaerestraat",
       "triples": [
         {
           "http://example.com/terms#name": "Paul Wemaerestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.436012504862315",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.188889990149086"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3914293075718986",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.15943932238468"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3655.jsonld#94623",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Paul Wemaerestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.436012504862315",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.188889990149086"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3914293075718986",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.15943932238468"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Paul Wemaerestraat"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

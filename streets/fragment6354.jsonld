@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "B",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6354.jsonld#45783",
-              "@type": "tree:Node",
-              "token_string": "orremansstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6354.jsonld#45784",
-              "@type": "tree:Node",
-              "token_string": "ultynckstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6354.jsonld#118259",
-              "@type": "tree:Node",
-              "token_string": "r"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "orremansstraat": [
+          "6354",
+          "45783"
+        ],
+        "ultynckstraat": [
+          "6354",
+          "45784"
+        ],
+        "r": [
+          "6354",
+          "118259"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment1322.jsonld#33447",
         "@type": "tree:Node"
@@ -62,23 +44,23 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "R Borremansstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7732507702185054",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.613388056164546"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2315198197454595",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.150755784264696"
         },
         {
           "http://example.com/terms#name": "R Bultynckstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.957754277284688",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.383564757822704"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.400381801356347",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.02571108109219"
         },
         {
           "http://example.com/terms#name": "R Brulezstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.835327243289254",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.55992149369413"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8693730272699725",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.84361995172106"
         },
         {
           "http://example.com/terms#name": "R Briq Verrerie des Hamendes",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1182638617023763",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.50367490995109"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.112878935184795",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.43795629782615"
         }
       ],
       "total_children_count": 5,
@@ -110,17 +92,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6354.jsonld#45783"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6354.jsonld#45784"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6354.jsonld#118259"
+          ]
+        }
+      ]
     },
     {
       "token_string": "orremansstraat",
       "triples": [
         {
           "http://example.com/terms#name": "R Borremansstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7732507702185054",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.613388056164546"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2315198197454595",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.150755784264696"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6354.jsonld#45782",
         "@type": "tree:Node"
@@ -128,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "R Borremansstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7732507702185054",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.613388056164546"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2315198197454595",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.150755784264696"
         }
       ],
       "total_children_count": 0,
@@ -145,17 +148,19 @@
       ],
       "triples_metadata": [
         "R Borremansstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "ultynckstraat",
       "triples": [
         {
           "http://example.com/terms#name": "R Bultynckstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.957754277284688",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.383564757822704"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.400381801356347",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.02571108109219"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6354.jsonld#45782",
         "@type": "tree:Node"
@@ -163,8 +168,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "R Bultynckstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.957754277284688",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.383564757822704"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.400381801356347",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.02571108109219"
         }
       ],
       "total_children_count": 0,
@@ -180,33 +185,22 @@
       ],
       "triples_metadata": [
         "R Bultynckstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "r",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6354.jsonld#118260",
-              "@type": "tree:Node",
-              "token_string": "ulezstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6354.jsonld#118261",
-              "@type": "tree:Node",
-              "token_string": "iq Verrerie des Hamendes"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "ulezstraat": [
+          "6354",
+          "118260"
+        ],
+        "iq Verrerie des Hamendes": [
+          "6354",
+          "118261"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment6354.jsonld#45782",
         "@type": "tree:Node"
@@ -214,13 +208,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "R Brulezstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.835327243289254",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.55992149369413"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8693730272699725",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.84361995172106"
         },
         {
           "http://example.com/terms#name": "R Briq Verrerie des Hamendes",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1182638617023763",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.50367490995109"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.112878935184795",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.43795629782615"
         }
       ],
       "total_children_count": 2,
@@ -240,17 +234,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6354.jsonld#118260"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6354.jsonld#118261"
+          ]
+        }
+      ]
     },
     {
       "token_string": "ulezstraat",
       "triples": [
         {
           "http://example.com/terms#name": "R Brulezstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.835327243289254",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.55992149369413"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8693730272699725",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.84361995172106"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6354.jsonld#118259",
         "@type": "tree:Node"
@@ -258,8 +267,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "R Brulezstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.835327243289254",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.55992149369413"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8693730272699725",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.84361995172106"
         }
       ],
       "total_children_count": 0,
@@ -275,17 +284,19 @@
       ],
       "triples_metadata": [
         "R Brulezstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "iq Verrerie des Hamendes",
       "triples": [
         {
           "http://example.com/terms#name": "R Briq Verrerie des Hamendes",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1182638617023763",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.50367490995109"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.112878935184795",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.43795629782615"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6354.jsonld#118259",
         "@type": "tree:Node"
@@ -293,8 +304,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "R Briq Verrerie des Hamendes",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1182638617023763",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.50367490995109"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.112878935184795",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.43795629782615"
         }
       ],
       "total_children_count": 0,
@@ -310,7 +321,8 @@
       ],
       "triples_metadata": [
         "R Briq Verrerie des Hamendes"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

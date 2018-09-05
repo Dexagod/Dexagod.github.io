@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "t",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3752.jsonld#63546",
-              "@type": "tree:Node",
-              "token_string": "terveldstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3752.jsonld#63547",
-              "@type": "tree:Node",
-              "token_string": "semstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3752.jsonld#82256",
-              "@type": "tree:Node",
-              "token_string": "roweg"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "terveldstraat": [
+          "3752",
+          "63546"
+        ],
+        "semstraat": [
+          "3752",
+          "63547"
+        ],
+        "roweg": [
+          "3752",
+          "82256"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment2744.jsonld#727",
         "@type": "tree:Node"
@@ -62,18 +44,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nitterveldstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.474338473813138",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.12566233596295"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7311466268541866",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.95205486434991"
         },
         {
           "http://example.com/terms#name": "Nitsemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7220760296654385",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.86382431508953"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5203801270134263",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.98716003493785"
         },
         {
           "http://example.com/terms#name": "Nitroweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4515459337714365",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.434981802484195"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5202605592197544",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.721013194855274"
         }
       ],
       "total_children_count": 3,
@@ -99,17 +81,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3752.jsonld#63546"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3752.jsonld#63547"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3752.jsonld#82256"
+          ]
+        }
+      ]
     },
     {
       "token_string": "terveldstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Nitterveldstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.474338473813138",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.12566233596295"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7311466268541866",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.95205486434991"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3752.jsonld#63545",
         "@type": "tree:Node"
@@ -117,8 +120,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nitterveldstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.474338473813138",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.12566233596295"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7311466268541866",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.95205486434991"
         }
       ],
       "total_children_count": 0,
@@ -134,17 +137,19 @@
       ],
       "triples_metadata": [
         "Nitterveldstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "semstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Nitsemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7220760296654385",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.86382431508953"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5203801270134263",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.98716003493785"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3752.jsonld#63545",
         "@type": "tree:Node"
@@ -152,8 +157,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nitsemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7220760296654385",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.86382431508953"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5203801270134263",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.98716003493785"
         }
       ],
       "total_children_count": 0,
@@ -169,17 +174,19 @@
       ],
       "triples_metadata": [
         "Nitsemstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "roweg",
       "triples": [
         {
           "http://example.com/terms#name": "Nitroweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4515459337714365",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.434981802484195"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5202605592197544",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.721013194855274"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3752.jsonld#63545",
         "@type": "tree:Node"
@@ -187,8 +194,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nitroweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4515459337714365",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.434981802484195"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5202605592197544",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.721013194855274"
         }
       ],
       "total_children_count": 0,
@@ -204,7 +211,8 @@
       ],
       "triples_metadata": [
         "Nitroweg"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

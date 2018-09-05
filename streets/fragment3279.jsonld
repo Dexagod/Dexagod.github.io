@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -25,10 +25,11 @@
       "triples": [
         {
           "http://example.com/terms#name": "Daillylaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1213278032910865",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.20312418148371"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6231617882984914",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.85021058337925"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3279.jsonld#156478",
         "@type": "tree:Node"
@@ -36,8 +37,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Daillylaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1213278032910865",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.20312418148371"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6231617882984914",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.85021058337925"
         }
       ],
       "total_children_count": 0,
@@ -53,17 +54,19 @@
       ],
       "triples_metadata": [
         "Daillylaan"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "plein",
       "triples": [
         {
           "http://example.com/terms#name": "Daillyplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.283709239840564",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.33244431960991"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3665209389423474",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.45984399939604"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3279.jsonld#156478",
         "@type": "tree:Node"
@@ -71,8 +74,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Daillyplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.283709239840564",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.33244431960991"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3665209389423474",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.45984399939604"
         }
       ],
       "total_children_count": 0,
@@ -88,33 +91,22 @@
       ],
       "triples_metadata": [
         "Daillyplein"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "i",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3279.jsonld#156478",
-              "@type": "tree:Node",
-              "token_string": "lly"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3279.jsonld#156479",
-              "@type": "tree:Node",
-              "token_string": "romont"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "lly": [
+          "3279",
+          "156478"
+        ],
+        "romont": [
+          "3279",
+          "156479"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment804.jsonld#603",
         "@type": "tree:Node"
@@ -122,18 +114,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Daillylaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1213278032910865",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.20312418148371"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6231617882984914",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.85021058337925"
         },
         {
           "http://example.com/terms#name": "Daillyplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.283709239840564",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.33244431960991"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3665209389423474",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.45984399939604"
         },
         {
           "http://example.com/terms#name": "Dairomont",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.396885463355228",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.10463509056372"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.492117765287088",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.24332829568733"
         }
       ],
       "total_children_count": 4,
@@ -159,33 +151,35 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
-    },
-    {
-      "token_string": "lly",
-      "triples": [],
-      "children": [
+      "triples_metadata": [],
+      "childlist": [
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment3279.jsonld#92727",
-              "@type": "tree:Node",
-              "token_string": "laan"
-            }
+            "/streets/fragment3279.jsonld#156478"
           ]
         },
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment3279.jsonld#92728",
-              "@type": "tree:Node",
-              "token_string": "plein"
-            }
+            "/streets/fragment3279.jsonld#156479"
           ]
         }
-      ],
+      ]
+    },
+    {
+      "token_string": "lly",
+      "triples": [],
+      "children": {
+        "laan": [
+          "3279",
+          "92727"
+        ],
+        "plein": [
+          "3279",
+          "92728"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment3279.jsonld#156477",
         "@type": "tree:Node"
@@ -193,13 +187,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Daillylaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1213278032910865",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.20312418148371"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6231617882984914",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.85021058337925"
         },
         {
           "http://example.com/terms#name": "Daillyplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.283709239840564",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.33244431960991"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3665209389423474",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.45984399939604"
         }
       ],
       "total_children_count": 2,
@@ -219,17 +213,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3279.jsonld#92727"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3279.jsonld#92728"
+          ]
+        }
+      ]
     },
     {
       "token_string": "romont",
       "triples": [
         {
           "http://example.com/terms#name": "Dairomont",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.396885463355228",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.10463509056372"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.492117765287088",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.24332829568733"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3279.jsonld#156477",
         "@type": "tree:Node"
@@ -237,8 +246,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Dairomont",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.396885463355228",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.10463509056372"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.492117765287088",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.24332829568733"
         }
       ],
       "total_children_count": 0,
@@ -254,7 +263,8 @@
       ],
       "triples_metadata": [
         "Dairomont"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

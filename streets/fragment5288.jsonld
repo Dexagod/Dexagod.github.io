@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "W",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5288.jsonld#165639",
-              "@type": "tree:Node",
-              "token_string": "aronche"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5288.jsonld#165640",
-              "@type": "tree:Node",
-              "token_string": "èbe"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "aronche": [
+          "5288",
+          "165639"
+        ],
+        "èbe": [
+          "5288",
+          "165640"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment3778.jsonld#104848",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Chemin de la Waronche",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1728387834105662",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.37803259384389"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.09122282045513",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.75933690666186"
         },
         {
           "http://example.com/terms#name": "Chemin de la Wèbe",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.946194981517397",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.96024493210564"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4294886181503186",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.455267621851725"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5288.jsonld#165639"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5288.jsonld#165640"
+          ]
+        }
+      ]
     },
     {
       "token_string": "aronche",
       "triples": [
         {
           "http://example.com/terms#name": "Chemin de la Waronche",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1728387834105662",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.37803259384389"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.09122282045513",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.75933690666186"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5288.jsonld#165638",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Chemin de la Waronche",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1728387834105662",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.37803259384389"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.09122282045513",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.75933690666186"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Chemin de la Waronche"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "èbe",
       "triples": [
         {
           "http://example.com/terms#name": "Chemin de la Wèbe",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.946194981517397",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.96024493210564"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4294886181503186",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.455267621851725"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5288.jsonld#165638",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Chemin de la Wèbe",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.946194981517397",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.96024493210564"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4294886181503186",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.455267621851725"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Chemin de la Wèbe"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

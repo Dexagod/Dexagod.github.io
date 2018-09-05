@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "wi",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2265.jsonld#78603",
-              "@type": "tree:Node",
-              "token_string": "laan"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2265.jsonld#78604",
-              "@type": "tree:Node",
-              "token_string": "weg"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "laan": [
+          "2265",
+          "78603"
+        ],
+        "weg": [
+          "2265",
+          "78604"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment229.jsonld#1206",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Kiwilaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.268846116116567",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.30717873392547"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.996440992486424",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.79941335640979"
         },
         {
           "http://example.com/terms#name": "Kiwiweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1899935587687462",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.05315123297774"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3677790295735472",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.537604011403666"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2265.jsonld#78603"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2265.jsonld#78604"
+          ]
+        }
+      ]
     },
     {
       "token_string": "laan",
       "triples": [
         {
           "http://example.com/terms#name": "Kiwilaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.268846116116567",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.30717873392547"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.996440992486424",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.79941335640979"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2265.jsonld#78602",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Kiwilaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.268846116116567",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.30717873392547"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.996440992486424",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.79941335640979"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Kiwilaan"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "weg",
       "triples": [
         {
           "http://example.com/terms#name": "Kiwiweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1899935587687462",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.05315123297774"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3677790295735472",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.537604011403666"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2265.jsonld#78602",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Kiwiweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1899935587687462",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.05315123297774"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3677790295735472",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.537604011403666"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Kiwiweg"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

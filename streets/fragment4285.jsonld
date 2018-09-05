@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "J",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4285.jsonld#127485",
-              "@type": "tree:Node",
-              "token_string": "andrenouille"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4285.jsonld#127486",
-              "@type": "tree:Node",
-              "token_string": "emappes"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "andrenouille": [
+          "4285",
+          "127485"
+        ],
+        "emappes": [
+          "4285",
+          "127486"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4019.jsonld#105605",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Sentier de Jandrenouille",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7077142320882275",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.561834688223314"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3142706822663053",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.955005252547835"
         },
         {
           "http://example.com/terms#name": "Sentier de Jemappes",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.576658248662025",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.4523468087407"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.387997737787294",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.7481370482846"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4285.jsonld#127485"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4285.jsonld#127486"
+          ]
+        }
+      ]
     },
     {
       "token_string": "andrenouille",
       "triples": [
         {
           "http://example.com/terms#name": "Sentier de Jandrenouille",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7077142320882275",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.561834688223314"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3142706822663053",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.955005252547835"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4285.jsonld#127484",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Sentier de Jandrenouille",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7077142320882275",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.561834688223314"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3142706822663053",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.955005252547835"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Sentier de Jandrenouille"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "emappes",
       "triples": [
         {
           "http://example.com/terms#name": "Sentier de Jemappes",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.576658248662025",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.4523468087407"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.387997737787294",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.7481370482846"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4285.jsonld#127484",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Sentier de Jemappes",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.576658248662025",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.4523468087407"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.387997737787294",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.7481370482846"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Sentier de Jemappes"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

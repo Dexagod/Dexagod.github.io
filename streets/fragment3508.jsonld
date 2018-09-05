@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "mans",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3508.jsonld#52451",
-              "@type": "tree:Node",
-              "token_string": "straat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3508.jsonld#52452",
-              "@type": "tree:Node",
-              "token_string": "weg"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3508.jsonld#84887",
-              "@type": "tree:Node",
-              "token_string": "hof"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "straat": [
+          "3508",
+          "52451"
+        ],
+        "weg": [
+          "3508",
+          "52452"
+        ],
+        "hof": [
+          "3508",
+          "84887"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment158.jsonld#4581",
         "@type": "tree:Node"
@@ -62,18 +44,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Moermansstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7911661531793057",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.43005967769775"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0101694425094747",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.35960075661904"
         },
         {
           "http://example.com/terms#name": "Moermansweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.479904919895856",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.5690733927548"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.347657838185572",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.54028168228249"
         },
         {
           "http://example.com/terms#name": "Moermanshof",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.220281788800059",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.28240589546321"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4478068437018186",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.27240135964226"
         }
       ],
       "total_children_count": 3,
@@ -99,17 +81,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3508.jsonld#52451"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3508.jsonld#52452"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3508.jsonld#84887"
+          ]
+        }
+      ]
     },
     {
       "token_string": "straat",
       "triples": [
         {
           "http://example.com/terms#name": "Moermansstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7911661531793057",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.43005967769775"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0101694425094747",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.35960075661904"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3508.jsonld#52450",
         "@type": "tree:Node"
@@ -117,8 +120,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Moermansstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7911661531793057",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.43005967769775"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0101694425094747",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.35960075661904"
         }
       ],
       "total_children_count": 0,
@@ -134,17 +137,19 @@
       ],
       "triples_metadata": [
         "Moermansstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "weg",
       "triples": [
         {
           "http://example.com/terms#name": "Moermansweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.479904919895856",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.5690733927548"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.347657838185572",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.54028168228249"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3508.jsonld#52450",
         "@type": "tree:Node"
@@ -152,8 +157,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Moermansweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.479904919895856",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.5690733927548"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.347657838185572",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.54028168228249"
         }
       ],
       "total_children_count": 0,
@@ -169,17 +174,19 @@
       ],
       "triples_metadata": [
         "Moermansweg"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "hof",
       "triples": [
         {
           "http://example.com/terms#name": "Moermanshof",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.220281788800059",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.28240589546321"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4478068437018186",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.27240135964226"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3508.jsonld#52450",
         "@type": "tree:Node"
@@ -187,8 +194,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Moermanshof",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.220281788800059",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.28240589546321"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4478068437018186",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.27240135964226"
         }
       ],
       "total_children_count": 0,
@@ -204,7 +211,8 @@
       ],
       "triples_metadata": [
         "Moermanshof"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

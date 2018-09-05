@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "fo",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2382.jsonld#62473",
-              "@type": "tree:Node",
-              "token_string": "ortstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2382.jsonld#62474",
-              "@type": "tree:Node",
-              "token_string": "rt"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "ortstraat": [
+          "2382",
+          "62473"
+        ],
+        "rt": [
+          "2382",
+          "62474"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment256.jsonld#5395",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Zandfoortstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1539916942498167",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.02564284579971"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.215643658877533",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.15586158358131"
         },
         {
           "http://example.com/terms#name": "Zandfort",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.438267418400907",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.183510148634674"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7652566293831966",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.76556485874025"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2382.jsonld#62473"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2382.jsonld#62474"
+          ]
+        }
+      ]
     },
     {
       "token_string": "ortstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Zandfoortstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1539916942498167",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.02564284579971"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.215643658877533",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.15586158358131"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2382.jsonld#62472",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Zandfoortstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1539916942498167",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.02564284579971"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.215643658877533",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.15586158358131"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Zandfoortstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "rt",
       "triples": [
         {
           "http://example.com/terms#name": "Zandfort",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.438267418400907",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.183510148634674"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7652566293831966",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.76556485874025"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2382.jsonld#62472",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Zandfort",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.438267418400907",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.183510148634674"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7652566293831966",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.76556485874025"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Zandfort"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

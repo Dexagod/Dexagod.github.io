@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "uil",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2443.jsonld#56931",
-              "@type": "tree:Node",
-              "token_string": "straat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2443.jsonld#56932",
-              "@type": "tree:Node",
-              "token_string": "weg"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "straat": [
+          "2443",
+          "56931"
+        ],
+        "weg": [
+          "2443",
+          "56932"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment883.jsonld#421",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Kerkuilstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6035988096176608",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.147931372661034"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3155792248639564",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.64250388696347"
         },
         {
           "http://example.com/terms#name": "Kerkuilweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6300508160620235",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.12095309980744"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.502689230738579",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.781159718131036"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2443.jsonld#56931"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2443.jsonld#56932"
+          ]
+        }
+      ]
     },
     {
       "token_string": "straat",
       "triples": [
         {
           "http://example.com/terms#name": "Kerkuilstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6035988096176608",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.147931372661034"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3155792248639564",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.64250388696347"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2443.jsonld#56930",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Kerkuilstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6035988096176608",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.147931372661034"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3155792248639564",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.64250388696347"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Kerkuilstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "weg",
       "triples": [
         {
           "http://example.com/terms#name": "Kerkuilweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6300508160620235",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.12095309980744"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.502689230738579",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.781159718131036"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2443.jsonld#56930",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Kerkuilweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6300508160620235",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.12095309980744"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.502689230738579",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.781159718131036"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Kerkuilweg"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "Th",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5190.jsonld#158420",
-              "@type": "tree:Node",
-              "token_string": "omas"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5190.jsonld#158421",
-              "@type": "tree:Node",
-              "token_string": "ibaut"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "omas": [
+          "5190",
+          "158420"
+        ],
+        "ibaut": [
+          "5190",
+          "158421"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4253.jsonld#105919",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Saint-Thomas",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1556257399256786",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.51808818899789"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.95309846360603",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.707299910557104"
         },
         {
           "http://example.com/terms#name": "Rue Saint-Thibaut",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9898914045115803",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.881245773493596"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0091932159684216",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.825342056409404"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5190.jsonld#158420"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5190.jsonld#158421"
+          ]
+        }
+      ]
     },
     {
       "token_string": "omas",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Saint-Thomas",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1556257399256786",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.51808818899789"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.95309846360603",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.707299910557104"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5190.jsonld#158419",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Saint-Thomas",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1556257399256786",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.51808818899789"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.95309846360603",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.707299910557104"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Rue Saint-Thomas"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "ibaut",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Saint-Thibaut",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9898914045115803",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.881245773493596"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0091932159684216",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.825342056409404"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5190.jsonld#158419",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Saint-Thibaut",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9898914045115803",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.881245773493596"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0091932159684216",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.825342056409404"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Rue Saint-Thibaut"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

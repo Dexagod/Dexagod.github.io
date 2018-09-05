@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "A",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5934.jsonld#124886",
-              "@type": "tree:Node",
-              "token_string": "pechau"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5934.jsonld#166367",
-              "@type": "tree:Node",
-              "token_string": "usse"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5934.jsonld#170093",
-              "@type": "tree:Node",
-              "token_string": "r"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "pechau": [
+          "5934",
+          "124886"
+        ],
+        "usse": [
+          "5934",
+          "166367"
+        ],
+        "r": [
+          "5934",
+          "170093"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment3759.jsonld#105846",
         "@type": "tree:Node"
@@ -62,23 +44,23 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue du Bois d'Apechau",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7835513842138853",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.96855061177934"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1238968364993154",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.26740103691483"
         },
         {
           "http://example.com/terms#name": "Rue du Bois d'Arras",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.749518171203159",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.88532617749745"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2777350948951094",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.68382430703874"
         },
         {
           "http://example.com/terms#name": "Rue du Bois d'Ausse",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6506004913937766",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.097195464591195"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.647074266782967",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.15617667579094"
         },
         {
           "http://example.com/terms#name": "Rue du Bois d'Arche",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1145053733628942",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.82253012648171"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2362562752604846",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.23538358645955"
         }
       ],
       "total_children_count": 5,
@@ -110,17 +92,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5934.jsonld#124886"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5934.jsonld#166367"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5934.jsonld#170093"
+          ]
+        }
+      ]
     },
     {
       "token_string": "pechau",
       "triples": [
         {
           "http://example.com/terms#name": "Rue du Bois d'Apechau",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7835513842138853",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.96855061177934"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1238968364993154",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.26740103691483"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5934.jsonld#124885",
         "@type": "tree:Node"
@@ -128,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue du Bois d'Apechau",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7835513842138853",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.96855061177934"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1238968364993154",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.26740103691483"
         }
       ],
       "total_children_count": 0,
@@ -145,17 +148,19 @@
       ],
       "triples_metadata": [
         "Rue du Bois d'Apechau"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "usse",
       "triples": [
         {
           "http://example.com/terms#name": "Rue du Bois d'Ausse",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6506004913937766",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.097195464591195"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.647074266782967",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.15617667579094"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5934.jsonld#124885",
         "@type": "tree:Node"
@@ -163,8 +168,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue du Bois d'Ausse",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6506004913937766",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.097195464591195"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.647074266782967",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.15617667579094"
         }
       ],
       "total_children_count": 0,
@@ -180,33 +185,22 @@
       ],
       "triples_metadata": [
         "Rue du Bois d'Ausse"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "r",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5934.jsonld#170094",
-              "@type": "tree:Node",
-              "token_string": "ras"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5934.jsonld#170095",
-              "@type": "tree:Node",
-              "token_string": "che"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "ras": [
+          "5934",
+          "170094"
+        ],
+        "che": [
+          "5934",
+          "170095"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment5934.jsonld#124885",
         "@type": "tree:Node"
@@ -214,13 +208,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue du Bois d'Arras",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.749518171203159",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.88532617749745"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2777350948951094",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.68382430703874"
         },
         {
           "http://example.com/terms#name": "Rue du Bois d'Arche",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1145053733628942",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.82253012648171"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2362562752604846",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.23538358645955"
         }
       ],
       "total_children_count": 2,
@@ -240,17 +234,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5934.jsonld#170094"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5934.jsonld#170095"
+          ]
+        }
+      ]
     },
     {
       "token_string": "ras",
       "triples": [
         {
           "http://example.com/terms#name": "Rue du Bois d'Arras",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.749518171203159",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.88532617749745"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2777350948951094",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.68382430703874"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5934.jsonld#170093",
         "@type": "tree:Node"
@@ -258,8 +267,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue du Bois d'Arras",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.749518171203159",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.88532617749745"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2777350948951094",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.68382430703874"
         }
       ],
       "total_children_count": 0,
@@ -275,17 +284,19 @@
       ],
       "triples_metadata": [
         "Rue du Bois d'Arras"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "che",
       "triples": [
         {
           "http://example.com/terms#name": "Rue du Bois d'Arche",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1145053733628942",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.82253012648171"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2362562752604846",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.23538358645955"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5934.jsonld#170093",
         "@type": "tree:Node"
@@ -293,8 +304,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue du Bois d'Arche",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1145053733628942",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.82253012648171"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2362562752604846",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.23538358645955"
         }
       ],
       "total_children_count": 0,
@@ -310,7 +321,8 @@
       ],
       "triples_metadata": [
         "Rue du Bois d'Arche"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

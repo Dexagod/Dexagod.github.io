@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "r",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3698.jsonld#34719",
-              "@type": "tree:Node",
-              "token_string": "sstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3698.jsonld#34720",
-              "@type": "tree:Node",
-              "token_string": "ikstraat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "sstraat": [
+          "3698",
+          "34719"
+        ],
+        "ikstraat": [
+          "3698",
+          "34720"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment3698.jsonld#50885",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Auwersstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4900236469424937",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.27502275631903"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2120482833281847",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.05690823423366"
         },
         {
           "http://example.com/terms#name": "Auwerikstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.69230708517673",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.136095904799866"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.364336788861873",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.62025736873495"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3698.jsonld#34719"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3698.jsonld#34720"
+          ]
+        }
+      ]
     },
     {
       "token_string": "sstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Auwersstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4900236469424937",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.27502275631903"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2120482833281847",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.05690823423366"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3698.jsonld#34718",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Auwersstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4900236469424937",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.27502275631903"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2120482833281847",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.05690823423366"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Auwersstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "ikstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Auwerikstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.69230708517673",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.136095904799866"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.364336788861873",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.62025736873495"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3698.jsonld#34718",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Auwerikstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.69230708517673",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.136095904799866"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.364336788861873",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.62025736873495"
         }
       ],
       "total_children_count": 0,
@@ -148,33 +153,22 @@
       ],
       "triples_metadata": [
         "Auwerikstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "w",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3698.jsonld#50885",
-              "@type": "tree:Node",
-              "token_string": "e"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3698.jsonld#50886",
-              "@type": "tree:Node",
-              "token_string": "blauwstraat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "e": [
+          "3698",
+          "50885"
+        ],
+        "blauwstraat": [
+          "3698",
+          "50886"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment121.jsonld#4381",
         "@type": "tree:Node"
@@ -182,48 +176,48 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Auwersstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4900236469424937",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.27502275631903"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2120482833281847",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.05690823423366"
         },
         {
           "http://example.com/terms#name": "Auwegemvaart",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9992389570705216",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.88690909611295"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7729319151083254",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.91004086047327"
         },
         {
           "http://example.com/terms#name": "Auwerikstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.69230708517673",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.136095904799866"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.364336788861873",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.62025736873495"
         },
         {
           "http://example.com/terms#name": "Auwelanden",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1285332569008624",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.55590475840753"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.729214219079971",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.43615168824648"
         },
         {
           "http://example.com/terms#name": "Auwblauwstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4926427330447716",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.34119460018242"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.073125659022944",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.102620411641105"
         },
         {
           "http://example.com/terms#name": "Auwegemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.940927620614957",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.48667793993821"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.928557995734228",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.37561375494677"
         },
         {
           "http://example.com/terms#name": "Auwelijn",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.151033950127097",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.19854542164235"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.523159878643528",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.143664344135956"
         },
         {
           "http://example.com/terms#name": "Auweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1155441670989275",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.5167335807074"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.298531613371836",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.20576475244461"
         },
         {
           "http://example.com/terms#name": "Auwez",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.339369941186096",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.469589560461785"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.589064509473994",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.94653353320487"
         }
       ],
       "total_children_count": 13,
@@ -285,53 +279,43 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3698.jsonld#50885"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3698.jsonld#50886"
+          ]
+        }
+      ]
     },
     {
       "token_string": "e",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3698.jsonld#34718",
-              "@type": "tree:Node",
-              "token_string": "r"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3698.jsonld#74789",
-              "@type": "tree:Node",
-              "token_string": "l"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3698.jsonld#153506",
-              "@type": "tree:Node",
-              "token_string": "g"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3698.jsonld#162932",
-              "@type": "tree:Node",
-              "token_string": "z"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "r": [
+          "3698",
+          "34718"
+        ],
+        "l": [
+          "3698",
+          "74789"
+        ],
+        "g": [
+          "3698",
+          "153506"
+        ],
+        "z": [
+          "3698",
+          "162932"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment3698.jsonld#50884",
         "@type": "tree:Node"
@@ -339,43 +323,43 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Auwersstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4900236469424937",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.27502275631903"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2120482833281847",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.05690823423366"
         },
         {
           "http://example.com/terms#name": "Auwegemvaart",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9992389570705216",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.88690909611295"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7729319151083254",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.91004086047327"
         },
         {
           "http://example.com/terms#name": "Auwerikstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.69230708517673",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.136095904799866"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.364336788861873",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.62025736873495"
         },
         {
           "http://example.com/terms#name": "Auwelanden",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1285332569008624",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.55590475840753"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.729214219079971",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.43615168824648"
         },
         {
           "http://example.com/terms#name": "Auwegemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.940927620614957",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.48667793993821"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.928557995734228",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.37561375494677"
         },
         {
           "http://example.com/terms#name": "Auwelijn",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.151033950127097",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.19854542164235"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.523159878643528",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.143664344135956"
         },
         {
           "http://example.com/terms#name": "Auweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1155441670989275",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.5167335807074"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.298531613371836",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.20576475244461"
         },
         {
           "http://example.com/terms#name": "Auwez",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.339369941186096",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.469589560461785"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.589064509473994",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.94653353320487"
         }
       ],
       "total_children_count": 11,
@@ -431,17 +415,44 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3698.jsonld#34718"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3698.jsonld#74789"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3698.jsonld#153506"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3698.jsonld#162932"
+          ]
+        }
+      ]
     },
     {
       "token_string": "blauwstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Auwblauwstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4926427330447716",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.34119460018242"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.073125659022944",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.102620411641105"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3698.jsonld#50884",
         "@type": "tree:Node"
@@ -449,8 +460,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Auwblauwstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4926427330447716",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.34119460018242"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.073125659022944",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.102620411641105"
         }
       ],
       "total_children_count": 0,
@@ -466,17 +477,19 @@
       ],
       "triples_metadata": [
         "Auwblauwstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "vaart",
       "triples": [
         {
           "http://example.com/terms#name": "Auwegemvaart",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9992389570705216",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.88690909611295"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7729319151083254",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.91004086047327"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3698.jsonld#153507",
         "@type": "tree:Node"
@@ -484,8 +497,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Auwegemvaart",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9992389570705216",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.88690909611295"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7729319151083254",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.91004086047327"
         }
       ],
       "total_children_count": 0,
@@ -501,17 +514,19 @@
       ],
       "triples_metadata": [
         "Auwegemvaart"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "straat",
       "triples": [
         {
           "http://example.com/terms#name": "Auwegemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.940927620614957",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.48667793993821"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.928557995734228",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.37561375494677"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3698.jsonld#153507",
         "@type": "tree:Node"
@@ -519,8 +534,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Auwegemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.940927620614957",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.48667793993821"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.928557995734228",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.37561375494677"
         }
       ],
       "total_children_count": 0,
@@ -536,33 +551,22 @@
       ],
       "triples_metadata": [
         "Auwegemstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "l",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3698.jsonld#74790",
-              "@type": "tree:Node",
-              "token_string": "anden"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3698.jsonld#74791",
-              "@type": "tree:Node",
-              "token_string": "ijn"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "anden": [
+          "3698",
+          "74790"
+        ],
+        "ijn": [
+          "3698",
+          "74791"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment3698.jsonld#50885",
         "@type": "tree:Node"
@@ -570,13 +574,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Auwelanden",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1285332569008624",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.55590475840753"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.729214219079971",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.43615168824648"
         },
         {
           "http://example.com/terms#name": "Auwelijn",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.151033950127097",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.19854542164235"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.523159878643528",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.143664344135956"
         }
       ],
       "total_children_count": 2,
@@ -596,17 +600,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3698.jsonld#74790"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3698.jsonld#74791"
+          ]
+        }
+      ]
     },
     {
       "token_string": "anden",
       "triples": [
         {
           "http://example.com/terms#name": "Auwelanden",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1285332569008624",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.55590475840753"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.729214219079971",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.43615168824648"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3698.jsonld#74789",
         "@type": "tree:Node"
@@ -614,8 +633,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Auwelanden",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1285332569008624",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.55590475840753"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.729214219079971",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.43615168824648"
         }
       ],
       "total_children_count": 0,
@@ -631,17 +650,19 @@
       ],
       "triples_metadata": [
         "Auwelanden"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "ijn",
       "triples": [
         {
           "http://example.com/terms#name": "Auwelijn",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.151033950127097",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.19854542164235"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.523159878643528",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.143664344135956"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3698.jsonld#74789",
         "@type": "tree:Node"
@@ -649,8 +670,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Auwelijn",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.151033950127097",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.19854542164235"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.523159878643528",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.143664344135956"
         }
       ],
       "total_children_count": 0,
@@ -666,29 +687,24 @@
       ],
       "triples_metadata": [
         "Auwelijn"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "g",
       "triples": [
         {
           "http://example.com/terms#name": "Auweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1155441670989275",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.5167335807074"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.298531613371836",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.20576475244461"
         }
       ],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3698.jsonld#153507",
-              "@type": "tree:Node",
-              "token_string": "em"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "em": [
+          "3698",
+          "153507"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment3698.jsonld#50885",
         "@type": "tree:Node"
@@ -696,18 +712,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Auwegemvaart",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9992389570705216",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.88690909611295"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7729319151083254",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.91004086047327"
         },
         {
           "http://example.com/terms#name": "Auwegemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.940927620614957",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.48667793993821"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.928557995734228",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.37561375494677"
         },
         {
           "http://example.com/terms#name": "Auweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1155441670989275",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.5167335807074"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.298531613371836",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.20576475244461"
         }
       ],
       "total_children_count": 3,
@@ -735,33 +751,29 @@
       ],
       "triples_metadata": [
         "Auweg"
+      ],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3698.jsonld#153507"
+          ]
+        }
       ]
     },
     {
       "token_string": "em",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3698.jsonld#62966",
-              "@type": "tree:Node",
-              "token_string": "vaart"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3698.jsonld#62967",
-              "@type": "tree:Node",
-              "token_string": "straat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "vaart": [
+          "3698",
+          "62966"
+        ],
+        "straat": [
+          "3698",
+          "62967"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment3698.jsonld#153506",
         "@type": "tree:Node"
@@ -769,13 +781,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Auwegemvaart",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9992389570705216",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.88690909611295"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7729319151083254",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.91004086047327"
         },
         {
           "http://example.com/terms#name": "Auwegemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.940927620614957",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.48667793993821"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.928557995734228",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.37561375494677"
         }
       ],
       "total_children_count": 2,
@@ -795,17 +807,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3698.jsonld#62966"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3698.jsonld#62967"
+          ]
+        }
+      ]
     },
     {
       "token_string": "z",
       "triples": [
         {
           "http://example.com/terms#name": "Auwez",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.339369941186096",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.469589560461785"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.589064509473994",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.94653353320487"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3698.jsonld#50885",
         "@type": "tree:Node"
@@ -813,8 +840,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Auwez",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.339369941186096",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.469589560461785"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.589064509473994",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.94653353320487"
         }
       ],
       "total_children_count": 0,
@@ -830,7 +857,8 @@
       ],
       "triples_metadata": [
         "Auwez"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

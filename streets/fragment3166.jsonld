@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "All",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3166.jsonld#101627",
-              "@type": "tree:Node",
-              "token_string": "emanstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3166.jsonld#101628",
-              "@type": "tree:Node",
-              "token_string": "oserystraat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "emanstraat": [
+          "3166",
+          "101627"
+        ],
+        "oserystraat": [
+          "3166",
+          "101628"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment847.jsonld#2131",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Albert Allemanstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2214089242478265",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.82009978732178"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8823991274941068",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.21013047583241"
         },
         {
           "http://example.com/terms#name": "Albert Alloserystraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2747596313002303",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.673459560316566"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.808023594585437",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.010232064881734"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3166.jsonld#101627"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3166.jsonld#101628"
+          ]
+        }
+      ]
     },
     {
       "token_string": "emanstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Albert Allemanstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2214089242478265",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.82009978732178"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8823991274941068",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.21013047583241"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3166.jsonld#101626",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Albert Allemanstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2214089242478265",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.82009978732178"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8823991274941068",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.21013047583241"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Albert Allemanstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "oserystraat",
       "triples": [
         {
           "http://example.com/terms#name": "Albert Alloserystraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2747596313002303",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.673459560316566"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.808023594585437",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.010232064881734"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3166.jsonld#101626",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Albert Alloserystraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2747596313002303",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.673459560316566"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.808023594585437",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.010232064881734"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Albert Alloserystraat"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

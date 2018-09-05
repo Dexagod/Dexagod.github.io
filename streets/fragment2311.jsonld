@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "W",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2311.jsonld#42272",
-              "@type": "tree:Node",
-              "token_string": "outersstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2311.jsonld#42273",
-              "@type": "tree:Node",
-              "token_string": "ylinstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2311.jsonld#84056",
-              "@type": "tree:Node",
-              "token_string": "i"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "outersstraat": [
+          "2311",
+          "42272"
+        ],
+        "ylinstraat": [
+          "2311",
+          "42273"
+        ],
+        "i": [
+          "2311",
+          "84056"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment782.jsonld#7749",
         "@type": "tree:Node"
@@ -62,23 +44,23 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Burgemeester Woutersstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8971550075811234",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.24497351502483"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9605526769808",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.76160217184349"
         },
         {
           "http://example.com/terms#name": "Burgemeester Wylinstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.802869710653981",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.311625199175175"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.892205098937668",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.10988268033479"
         },
         {
           "http://example.com/terms#name": "Burgemeester Wiricus Vosplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.799998397676408",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.364841089880485"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5394535161437877",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.64327888794075"
         },
         {
           "http://example.com/terms#name": "Burgemeester Williamehof",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5874371659337774",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.32754948567557"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8915359301597103",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.020356370237664"
         }
       ],
       "total_children_count": 5,
@@ -110,17 +92,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2311.jsonld#42272"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2311.jsonld#42273"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2311.jsonld#84056"
+          ]
+        }
+      ]
     },
     {
       "token_string": "outersstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Burgemeester Woutersstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8971550075811234",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.24497351502483"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9605526769808",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.76160217184349"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2311.jsonld#42271",
         "@type": "tree:Node"
@@ -128,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Burgemeester Woutersstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8971550075811234",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.24497351502483"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9605526769808",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.76160217184349"
         }
       ],
       "total_children_count": 0,
@@ -145,17 +148,19 @@
       ],
       "triples_metadata": [
         "Burgemeester Woutersstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "ylinstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Burgemeester Wylinstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.802869710653981",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.311625199175175"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.892205098937668",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.10988268033479"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2311.jsonld#42271",
         "@type": "tree:Node"
@@ -163,8 +168,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Burgemeester Wylinstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.802869710653981",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.311625199175175"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.892205098937668",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.10988268033479"
         }
       ],
       "total_children_count": 0,
@@ -180,33 +185,22 @@
       ],
       "triples_metadata": [
         "Burgemeester Wylinstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "i",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2311.jsonld#84057",
-              "@type": "tree:Node",
-              "token_string": "ricus Vosplein"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2311.jsonld#84058",
-              "@type": "tree:Node",
-              "token_string": "lliamehof"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "ricus Vosplein": [
+          "2311",
+          "84057"
+        ],
+        "lliamehof": [
+          "2311",
+          "84058"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment2311.jsonld#42271",
         "@type": "tree:Node"
@@ -214,13 +208,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Burgemeester Wiricus Vosplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.799998397676408",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.364841089880485"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5394535161437877",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.64327888794075"
         },
         {
           "http://example.com/terms#name": "Burgemeester Williamehof",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5874371659337774",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.32754948567557"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8915359301597103",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.020356370237664"
         }
       ],
       "total_children_count": 2,
@@ -240,17 +234,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2311.jsonld#84057"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2311.jsonld#84058"
+          ]
+        }
+      ]
     },
     {
       "token_string": "ricus Vosplein",
       "triples": [
         {
           "http://example.com/terms#name": "Burgemeester Wiricus Vosplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.799998397676408",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.364841089880485"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5394535161437877",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.64327888794075"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2311.jsonld#84056",
         "@type": "tree:Node"
@@ -258,8 +267,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Burgemeester Wiricus Vosplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.799998397676408",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.364841089880485"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5394535161437877",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.64327888794075"
         }
       ],
       "total_children_count": 0,
@@ -275,17 +284,19 @@
       ],
       "triples_metadata": [
         "Burgemeester Wiricus Vosplein"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "lliamehof",
       "triples": [
         {
           "http://example.com/terms#name": "Burgemeester Williamehof",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5874371659337774",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.32754948567557"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8915359301597103",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.020356370237664"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2311.jsonld#84056",
         "@type": "tree:Node"
@@ -293,8 +304,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Burgemeester Williamehof",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5874371659337774",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.32754948567557"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8915359301597103",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.020356370237664"
         }
       ],
       "total_children_count": 0,
@@ -310,7 +321,8 @@
       ],
       "triples_metadata": [
         "Burgemeester Williamehof"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

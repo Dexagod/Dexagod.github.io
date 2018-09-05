@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "que",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5826.jsonld#127219",
-              "@type": "tree:Node",
-              "token_string": "gnies"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5826.jsonld#127220",
-              "@type": "tree:Node",
-              "token_string": "lions"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5826.jsonld#161713",
-              "@type": "tree:Node",
-              "token_string": "t"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "gnies": [
+          "5826",
+          "127219"
+        ],
+        "lions": [
+          "5826",
+          "127220"
+        ],
+        "t": [
+          "5826",
+          "161713"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment3993.jsonld#117058",
         "@type": "tree:Node"
@@ -62,18 +44,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Criquegnies",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6076715347593",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.55957798672039"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.717345402619146",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.76750376627116"
         },
         {
           "http://example.com/terms#name": "Rue Criquelions",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.301030270960208",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.24828391763008"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.568931954976306",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.23667080528737"
         },
         {
           "http://example.com/terms#name": "Rue Criquet",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0672044003994747",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.56628282857852"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0664417176972627",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.84772869617718"
         }
       ],
       "total_children_count": 3,
@@ -99,17 +81,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5826.jsonld#127219"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5826.jsonld#127220"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5826.jsonld#161713"
+          ]
+        }
+      ]
     },
     {
       "token_string": "gnies",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Criquegnies",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6076715347593",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.55957798672039"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.717345402619146",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.76750376627116"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5826.jsonld#127218",
         "@type": "tree:Node"
@@ -117,8 +120,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Criquegnies",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6076715347593",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.55957798672039"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.717345402619146",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.76750376627116"
         }
       ],
       "total_children_count": 0,
@@ -134,17 +137,19 @@
       ],
       "triples_metadata": [
         "Rue Criquegnies"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "lions",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Criquelions",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.301030270960208",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.24828391763008"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.568931954976306",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.23667080528737"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5826.jsonld#127218",
         "@type": "tree:Node"
@@ -152,8 +157,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Criquelions",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.301030270960208",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.24828391763008"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.568931954976306",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.23667080528737"
         }
       ],
       "total_children_count": 0,
@@ -169,17 +174,19 @@
       ],
       "triples_metadata": [
         "Rue Criquelions"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "t",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Criquet",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0672044003994747",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.56628282857852"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0664417176972627",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.84772869617718"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5826.jsonld#127218",
         "@type": "tree:Node"
@@ -187,8 +194,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Criquet",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0672044003994747",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.56628282857852"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0664417176972627",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.84772869617718"
         }
       ],
       "total_children_count": 0,
@@ -204,7 +211,8 @@
       ],
       "triples_metadata": [
         "Rue Criquet"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

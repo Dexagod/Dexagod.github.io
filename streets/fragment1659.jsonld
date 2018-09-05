@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "se",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1659.jsonld#32837",
-              "@type": "tree:Node",
-              "token_string": "steenweg"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1659.jsonld#32838",
-              "@type": "tree:Node",
-              "token_string": "weg"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1659.jsonld#50052",
-              "@type": "tree:Node",
-              "token_string": "baan"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "steenweg": [
+          "1659",
+          "32837"
+        ],
+        "weg": [
+          "1659",
+          "32838"
+        ],
+        "baan": [
+          "1659",
+          "50052"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment2179.jsonld#52134",
         "@type": "tree:Node"
@@ -62,18 +44,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Herseltsesteenweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7076313834914614",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.44215889189966"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6872511174801432",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.45353207334577"
         },
         {
           "http://example.com/terms#name": "Herseltseweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7095052784704845",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.064537720433016"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.363496410767671",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.50965453736572"
         },
         {
           "http://example.com/terms#name": "Herseltsebaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4642211543645858",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.19185263951368"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9292121809676925",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.64900987225524"
         }
       ],
       "total_children_count": 3,
@@ -99,17 +81,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1659.jsonld#32837"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1659.jsonld#32838"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1659.jsonld#50052"
+          ]
+        }
+      ]
     },
     {
       "token_string": "steenweg",
       "triples": [
         {
           "http://example.com/terms#name": "Herseltsesteenweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7076313834914614",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.44215889189966"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6872511174801432",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.45353207334577"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1659.jsonld#32836",
         "@type": "tree:Node"
@@ -117,8 +120,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Herseltsesteenweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7076313834914614",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.44215889189966"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6872511174801432",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.45353207334577"
         }
       ],
       "total_children_count": 0,
@@ -134,17 +137,19 @@
       ],
       "triples_metadata": [
         "Herseltsesteenweg"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "weg",
       "triples": [
         {
           "http://example.com/terms#name": "Herseltseweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7095052784704845",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.064537720433016"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.363496410767671",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.50965453736572"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1659.jsonld#32836",
         "@type": "tree:Node"
@@ -152,8 +157,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Herseltseweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7095052784704845",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.064537720433016"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.363496410767671",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.50965453736572"
         }
       ],
       "total_children_count": 0,
@@ -169,17 +174,19 @@
       ],
       "triples_metadata": [
         "Herseltseweg"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "baan",
       "triples": [
         {
           "http://example.com/terms#name": "Herseltsebaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4642211543645858",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.19185263951368"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9292121809676925",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.64900987225524"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1659.jsonld#32836",
         "@type": "tree:Node"
@@ -187,8 +194,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Herseltsebaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4642211543645858",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.19185263951368"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9292121809676925",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.64900987225524"
         }
       ],
       "total_children_count": 0,
@@ -204,7 +211,8 @@
       ],
       "triples_metadata": [
         "Herseltsebaan"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

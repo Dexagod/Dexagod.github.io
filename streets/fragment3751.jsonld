@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "ve",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3751.jsonld#150636",
-              "@type": "tree:Node",
-              "token_string": "kerke"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3751.jsonld#150637",
-              "@type": "tree:Node",
-              "token_string": "zé Bas"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3751.jsonld#156647",
-              "@type": "tree:Node",
-              "token_string": "s"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "kerke": [
+          "3751",
+          "150636"
+        ],
+        "zé Bas": [
+          "3751",
+          "150637"
+        ],
+        "s": [
+          "3751",
+          "156647"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment2744.jsonld#727",
         "@type": "tree:Node"
@@ -62,18 +44,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nivekerke",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9780475527105525",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.44742071727191"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5830544994317575",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.34677389356863"
         },
         {
           "http://example.com/terms#name": "Nivezé Bas",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.105369956488921",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.96382241913452"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9456776313618684",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.95280697202992"
         },
         {
           "http://example.com/terms#name": "Nives",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.460875618096792",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.343566559152364"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.209046357956109",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.62908233512629"
         }
       ],
       "total_children_count": 3,
@@ -99,17 +81,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3751.jsonld#150636"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3751.jsonld#150637"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3751.jsonld#156647"
+          ]
+        }
+      ]
     },
     {
       "token_string": "kerke",
       "triples": [
         {
           "http://example.com/terms#name": "Nivekerke",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9780475527105525",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.44742071727191"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5830544994317575",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.34677389356863"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3751.jsonld#150635",
         "@type": "tree:Node"
@@ -117,8 +120,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nivekerke",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9780475527105525",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.44742071727191"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5830544994317575",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.34677389356863"
         }
       ],
       "total_children_count": 0,
@@ -134,17 +137,19 @@
       ],
       "triples_metadata": [
         "Nivekerke"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "zé Bas",
       "triples": [
         {
           "http://example.com/terms#name": "Nivezé Bas",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.105369956488921",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.96382241913452"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9456776313618684",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.95280697202992"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3751.jsonld#150635",
         "@type": "tree:Node"
@@ -152,8 +157,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nivezé Bas",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.105369956488921",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.96382241913452"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9456776313618684",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.95280697202992"
         }
       ],
       "total_children_count": 0,
@@ -169,17 +174,19 @@
       ],
       "triples_metadata": [
         "Nivezé Bas"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "s",
       "triples": [
         {
           "http://example.com/terms#name": "Nives",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.460875618096792",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.343566559152364"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.209046357956109",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.62908233512629"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3751.jsonld#150635",
         "@type": "tree:Node"
@@ -187,8 +194,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nives",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.460875618096792",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.343566559152364"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.209046357956109",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.62908233512629"
         }
       ],
       "total_children_count": 0,
@@ -204,7 +211,8 @@
       ],
       "triples_metadata": [
         "Nives"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

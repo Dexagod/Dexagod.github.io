@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "k",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3010.jsonld#78494",
-              "@type": "tree:Node",
-              "token_string": "testraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3010.jsonld#84975",
-              "@type": "tree:Node",
-              "token_string": "el"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3010.jsonld#87019",
-              "@type": "tree:Node",
-              "token_string": "skensstraat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "testraat": [
+          "3010",
+          "78494"
+        ],
+        "el": [
+          "3010",
+          "84975"
+        ],
+        "skensstraat": [
+          "3010",
+          "87019"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment875.jsonld#2359",
         "@type": "tree:Node"
@@ -62,38 +44,38 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Kriktestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.009922929393451",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.17474619921246"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.359060027155582",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.99637034828097"
         },
         {
           "http://example.com/terms#name": "Krikeldries",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.863378856941395",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.309242178386015"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9147169037832246",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.84519899766014"
         },
         {
           "http://example.com/terms#name": "Krikelshoutstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1865214968226274",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.0939260344738"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8795583608524065",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.958389475257384"
         },
         {
           "http://example.com/terms#name": "Krikskensstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0202940111673273",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.34077980126325"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9585195841603373",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.97268652761649"
         },
         {
           "http://example.com/terms#name": "Krikskensstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7887803263108775",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.667273028980844"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8009200059367347",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.82397944930741"
         },
         {
           "http://example.com/terms#name": "Krikskensstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7887803263108775",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.667273028980844"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8009200059367347",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.82397944930741"
         },
         {
           "http://example.com/terms#name": "Krikskensstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7887803263108775",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.667273028980844"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8009200059367347",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.82397944930741"
         }
       ],
       "total_children_count": 5,
@@ -128,17 +110,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3010.jsonld#78494"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3010.jsonld#84975"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3010.jsonld#87019"
+          ]
+        }
+      ]
     },
     {
       "token_string": "testraat",
       "triples": [
         {
           "http://example.com/terms#name": "Kriktestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.009922929393451",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.17474619921246"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.359060027155582",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.99637034828097"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3010.jsonld#78493",
         "@type": "tree:Node"
@@ -146,8 +149,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Kriktestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.009922929393451",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.17474619921246"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.359060027155582",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.99637034828097"
         }
       ],
       "total_children_count": 0,
@@ -163,33 +166,22 @@
       ],
       "triples_metadata": [
         "Kriktestraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "el",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3010.jsonld#84976",
-              "@type": "tree:Node",
-              "token_string": "dries"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3010.jsonld#84977",
-              "@type": "tree:Node",
-              "token_string": "shoutstraat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "dries": [
+          "3010",
+          "84976"
+        ],
+        "shoutstraat": [
+          "3010",
+          "84977"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment3010.jsonld#78493",
         "@type": "tree:Node"
@@ -197,13 +189,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Krikeldries",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.863378856941395",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.309242178386015"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9147169037832246",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.84519899766014"
         },
         {
           "http://example.com/terms#name": "Krikelshoutstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1865214968226274",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.0939260344738"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8795583608524065",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.958389475257384"
         }
       ],
       "total_children_count": 2,
@@ -223,17 +215,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3010.jsonld#84976"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3010.jsonld#84977"
+          ]
+        }
+      ]
     },
     {
       "token_string": "dries",
       "triples": [
         {
           "http://example.com/terms#name": "Krikeldries",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.863378856941395",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.309242178386015"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9147169037832246",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.84519899766014"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3010.jsonld#84975",
         "@type": "tree:Node"
@@ -241,8 +248,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Krikeldries",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.863378856941395",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.309242178386015"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9147169037832246",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.84519899766014"
         }
       ],
       "total_children_count": 0,
@@ -258,17 +265,19 @@
       ],
       "triples_metadata": [
         "Krikeldries"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "shoutstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Krikelshoutstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1865214968226274",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.0939260344738"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8795583608524065",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.958389475257384"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3010.jsonld#84975",
         "@type": "tree:Node"
@@ -276,8 +285,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Krikelshoutstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1865214968226274",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.0939260344738"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8795583608524065",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.958389475257384"
         }
       ],
       "total_children_count": 0,
@@ -293,32 +302,34 @@
       ],
       "triples_metadata": [
         "Krikelshoutstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "skensstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Krikskensstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0202940111673273",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.34077980126325"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9585195841603373",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.97268652761649"
         },
         {
           "http://example.com/terms#name": "Krikskensstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7887803263108775",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.667273028980844"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8009200059367347",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.82397944930741"
         },
         {
           "http://example.com/terms#name": "Krikskensstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7887803263108775",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.667273028980844"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8009200059367347",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.82397944930741"
         },
         {
           "http://example.com/terms#name": "Krikskensstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7887803263108775",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.667273028980844"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8009200059367347",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.82397944930741"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3010.jsonld#78493",
         "@type": "tree:Node"
@@ -326,23 +337,23 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Krikskensstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0202940111673273",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.34077980126325"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9585195841603373",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.97268652761649"
         },
         {
           "http://example.com/terms#name": "Krikskensstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7887803263108775",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.667273028980844"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8009200059367347",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.82397944930741"
         },
         {
           "http://example.com/terms#name": "Krikskensstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7887803263108775",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.667273028980844"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8009200059367347",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.82397944930741"
         },
         {
           "http://example.com/terms#name": "Krikskensstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7887803263108775",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.667273028980844"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8009200059367347",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.82397944930741"
         }
       ],
       "total_children_count": 0,
@@ -364,7 +375,8 @@
         "Krikskensstraat",
         "Krikskensstraat",
         "Krikskensstraat"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "b",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5582.jsonld#176563",
-              "@type": "tree:Node",
-              "token_string": "esse"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5582.jsonld#176564",
-              "@type": "tree:Node",
-              "token_string": " Morane"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "esse": [
+          "5582",
+          "176563"
+        ],
+        " Morane": [
+          "5582",
+          "176564"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4342.jsonld#105111",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Bobesse",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.346787028916187",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.08020791772989"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.702577273514468",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.401887586432764"
         },
         {
           "http://example.com/terms#name": "Rue Bob Morane",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2361174619255086",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.1460280096536"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6478420249146053",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.12154593363411"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5582.jsonld#176563"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5582.jsonld#176564"
+          ]
+        }
+      ]
     },
     {
       "token_string": "esse",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Bobesse",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.346787028916187",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.08020791772989"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.702577273514468",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.401887586432764"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5582.jsonld#176562",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Bobesse",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.346787028916187",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.08020791772989"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.702577273514468",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.401887586432764"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Rue Bobesse"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": " Morane",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Bob Morane",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2361174619255086",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.1460280096536"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6478420249146053",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.12154593363411"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5582.jsonld#176562",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Bob Morane",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2361174619255086",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.1460280096536"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6478420249146053",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.12154593363411"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Rue Bob Morane"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

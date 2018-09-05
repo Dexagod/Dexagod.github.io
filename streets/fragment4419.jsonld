@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "x",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4419.jsonld#138720",
-              "@type": "tree:Node",
-              "token_string": "iale"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4419.jsonld#138721",
-              "@type": "tree:Node",
-              "token_string": "helière"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "iale": [
+          "4419",
+          "138720"
+        ],
+        "helière": [
+          "4419",
+          "138721"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment3710.jsonld#104283",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Axiale",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4635921166517214",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.01565227458812"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.912803199726486",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.678155843258594"
         },
         {
           "http://example.com/terms#name": "Rue Axhelière",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2326413580602047",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.09187819404923"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.291357938271051",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.57668244378199"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4419.jsonld#138720"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4419.jsonld#138721"
+          ]
+        }
+      ]
     },
     {
       "token_string": "iale",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Axiale",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4635921166517214",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.01565227458812"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.912803199726486",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.678155843258594"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4419.jsonld#138719",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Axiale",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4635921166517214",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.01565227458812"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.912803199726486",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.678155843258594"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Rue Axiale"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "helière",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Axhelière",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2326413580602047",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.09187819404923"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.291357938271051",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.57668244378199"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4419.jsonld#138719",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Axhelière",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2326413580602047",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.09187819404923"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.291357938271051",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.57668244378199"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Rue Axhelière"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

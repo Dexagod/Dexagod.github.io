@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "deo",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3290.jsonld#81753",
-              "@type": "tree:Node",
-              "token_string": "laan"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3290.jsonld#81754",
-              "@type": "tree:Node",
-              "token_string": "straat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "laan": [
+          "3290",
+          "81753"
+        ],
+        "straat": [
+          "3290",
+          "81754"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment657.jsonld#2276",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Mondeolaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3379685056017614",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.00407050171088"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.328321108409874",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.98054597035512"
         },
         {
           "http://example.com/terms#name": "Mondeostraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.589915832887794",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.949053391868866"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4708889754349697",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.16329975911073"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3290.jsonld#81753"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3290.jsonld#81754"
+          ]
+        }
+      ]
     },
     {
       "token_string": "laan",
       "triples": [
         {
           "http://example.com/terms#name": "Mondeolaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3379685056017614",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.00407050171088"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.328321108409874",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.98054597035512"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3290.jsonld#81752",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Mondeolaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3379685056017614",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.00407050171088"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.328321108409874",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.98054597035512"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Mondeolaan"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "straat",
       "triples": [
         {
           "http://example.com/terms#name": "Mondeostraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.589915832887794",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.949053391868866"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4708889754349697",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.16329975911073"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3290.jsonld#81752",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Mondeostraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.589915832887794",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.949053391868866"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4708889754349697",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.16329975911073"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Mondeostraat"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

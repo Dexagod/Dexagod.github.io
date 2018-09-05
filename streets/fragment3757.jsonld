@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "l",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3757.jsonld#103798",
-              "@type": "tree:Node",
-              "token_string": "leveldstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3757.jsonld#103799",
-              "@type": "tree:Node",
-              "token_string": "andtweg"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "leveldstraat": [
+          "3757",
+          "103798"
+        ],
+        "andtweg": [
+          "3757",
+          "103799"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment2744.jsonld#727",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nilleveldstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.800062123810461",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.900437847822694"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2469297340806826",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.84660138718987"
         },
         {
           "http://example.com/terms#name": "Nilandtweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5469427912603773",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.74404243417417"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3518316179234717",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.48802368862051"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3757.jsonld#103798"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3757.jsonld#103799"
+          ]
+        }
+      ]
     },
     {
       "token_string": "leveldstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Nilleveldstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.800062123810461",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.900437847822694"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2469297340806826",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.84660138718987"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3757.jsonld#103797",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nilleveldstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.800062123810461",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.900437847822694"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2469297340806826",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.84660138718987"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Nilleveldstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "andtweg",
       "triples": [
         {
           "http://example.com/terms#name": "Nilandtweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5469427912603773",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.74404243417417"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3518316179234717",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.48802368862051"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3757.jsonld#103797",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nilandtweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5469427912603773",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.74404243417417"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3518316179234717",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.48802368862051"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Nilandtweg"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

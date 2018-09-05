@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "gelle",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3755.jsonld#93792",
-              "@type": "tree:Node",
-              "token_string": "straat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3755.jsonld#93793",
-              "@type": "tree:Node",
-              "token_string": "nstraat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "straat": [
+          "3755",
+          "93792"
+        ],
+        "nstraat": [
+          "3755",
+          "93793"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment2744.jsonld#727",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nigellestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.292260964635478",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.62635341811644"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5580638505370827",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.703460627016646"
         },
         {
           "http://example.com/terms#name": "Nigellenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.96434235939182",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.41912356292184"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.317039481991327",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.768054335223674"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3755.jsonld#93792"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3755.jsonld#93793"
+          ]
+        }
+      ]
     },
     {
       "token_string": "straat",
       "triples": [
         {
           "http://example.com/terms#name": "Nigellestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.292260964635478",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.62635341811644"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5580638505370827",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.703460627016646"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3755.jsonld#93791",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nigellestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.292260964635478",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.62635341811644"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5580638505370827",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.703460627016646"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Nigellestraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "nstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Nigellenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.96434235939182",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.41912356292184"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.317039481991327",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.768054335223674"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3755.jsonld#93791",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nigellenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.96434235939182",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.41912356292184"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.317039481991327",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.768054335223674"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Nigellenstraat"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

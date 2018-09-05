@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "l Doff",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2830.jsonld#103628",
-              "@type": "tree:Node",
-              "token_string": "straat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2830.jsonld#103629",
-              "@type": "tree:Node",
-              "token_string": "laan"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "straat": [
+          "2830",
+          "103628"
+        ],
+        "laan": [
+          "2830",
+          "103629"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment252.jsonld#9016",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Neel Doffstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7549471264269014",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.339617499910105"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7149780660629523",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.014493212983396"
         },
         {
           "http://example.com/terms#name": "Neel Dofflaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6649397824255305",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.12511419363832"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.542168106640131",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.07540179677736"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2830.jsonld#103628"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2830.jsonld#103629"
+          ]
+        }
+      ]
     },
     {
       "token_string": "straat",
       "triples": [
         {
           "http://example.com/terms#name": "Neel Doffstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7549471264269014",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.339617499910105"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7149780660629523",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.014493212983396"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2830.jsonld#103627",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Neel Doffstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7549471264269014",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.339617499910105"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7149780660629523",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.014493212983396"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Neel Doffstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "laan",
       "triples": [
         {
           "http://example.com/terms#name": "Neel Dofflaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6649397824255305",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.12511419363832"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.542168106640131",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.07540179677736"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2830.jsonld#103627",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Neel Dofflaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6649397824255305",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.12511419363832"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.542168106640131",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.07540179677736"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Neel Dofflaan"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

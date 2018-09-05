@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "-",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5415.jsonld#149832",
-              "@type": "tree:Node",
-              "token_string": "van-Barmhartigheidsplein"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5415.jsonld#149833",
-              "@type": "tree:Node",
-              "token_string": "Clouse"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "van-Barmhartigheidsplein": [
+          "5415",
+          "149832"
+        ],
+        "Clouse": [
+          "5415",
+          "149833"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment740.jsonld#2382",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Berg-van-Barmhartigheidsplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.613886296706813",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.978607352195546"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.307129438476001",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.354924881411364"
         },
         {
           "http://example.com/terms#name": "Berg-Clouse",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.085782760424525",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.027670875979055"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8673637061972133",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.46647180632498"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5415.jsonld#149832"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5415.jsonld#149833"
+          ]
+        }
+      ]
     },
     {
       "token_string": "van-Barmhartigheidsplein",
       "triples": [
         {
           "http://example.com/terms#name": "Berg-van-Barmhartigheidsplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.613886296706813",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.978607352195546"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.307129438476001",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.354924881411364"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5415.jsonld#149831",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Berg-van-Barmhartigheidsplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.613886296706813",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.978607352195546"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.307129438476001",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.354924881411364"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Berg-van-Barmhartigheidsplein"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "Clouse",
       "triples": [
         {
           "http://example.com/terms#name": "Berg-Clouse",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.085782760424525",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.027670875979055"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8673637061972133",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.46647180632498"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5415.jsonld#149831",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Berg-Clouse",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.085782760424525",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.027670875979055"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8673637061972133",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.46647180632498"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Berg-Clouse"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

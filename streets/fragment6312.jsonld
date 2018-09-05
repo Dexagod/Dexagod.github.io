@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "L",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6312.jsonld#174075",
-              "@type": "tree:Node",
-              "token_string": "éon Le Pas"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6312.jsonld#174076",
-              "@type": "tree:Node",
-              "token_string": "ouis Charlier"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6312.jsonld#175907",
-              "@type": "tree:Node",
-              "token_string": "e Phare"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "éon Le Pas": [
+          "6312",
+          "174075"
+        ],
+        "ouis Charlier": [
+          "6312",
+          "174076"
+        ],
+        "e Phare": [
+          "6312",
+          "175907"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment6378.jsonld#109366",
         "@type": "tree:Node"
@@ -62,18 +44,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Venelle Léon Le Pas",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.527823519479602",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.09813029424246"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7404390877109113",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.1527243203007"
         },
         {
           "http://example.com/terms#name": "Venelle Louis Charlier",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0017699700489224",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.221582615258626"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.131719006811686",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.911812237464915"
         },
         {
           "http://example.com/terms#name": "Venelle Le Phare",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.631150732153896",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.82283432082583"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.934397361039477",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.971085154631744"
         }
       ],
       "total_children_count": 3,
@@ -99,17 +81,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6312.jsonld#174075"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6312.jsonld#174076"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6312.jsonld#175907"
+          ]
+        }
+      ]
     },
     {
       "token_string": "éon Le Pas",
       "triples": [
         {
           "http://example.com/terms#name": "Venelle Léon Le Pas",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.527823519479602",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.09813029424246"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7404390877109113",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.1527243203007"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6312.jsonld#174074",
         "@type": "tree:Node"
@@ -117,8 +120,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Venelle Léon Le Pas",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.527823519479602",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.09813029424246"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7404390877109113",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.1527243203007"
         }
       ],
       "total_children_count": 0,
@@ -134,17 +137,19 @@
       ],
       "triples_metadata": [
         "Venelle Léon Le Pas"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "ouis Charlier",
       "triples": [
         {
           "http://example.com/terms#name": "Venelle Louis Charlier",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0017699700489224",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.221582615258626"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.131719006811686",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.911812237464915"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6312.jsonld#174074",
         "@type": "tree:Node"
@@ -152,8 +157,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Venelle Louis Charlier",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0017699700489224",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.221582615258626"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.131719006811686",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.911812237464915"
         }
       ],
       "total_children_count": 0,
@@ -169,17 +174,19 @@
       ],
       "triples_metadata": [
         "Venelle Louis Charlier"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "e Phare",
       "triples": [
         {
           "http://example.com/terms#name": "Venelle Le Phare",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.631150732153896",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.82283432082583"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.934397361039477",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.971085154631744"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6312.jsonld#174074",
         "@type": "tree:Node"
@@ -187,8 +194,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Venelle Le Phare",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.631150732153896",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.82283432082583"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.934397361039477",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.971085154631744"
         }
       ],
       "total_children_count": 0,
@@ -204,7 +211,8 @@
       ],
       "triples_metadata": [
         "Venelle Le Phare"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

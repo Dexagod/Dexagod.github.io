@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "van ",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2777.jsonld#42601",
-              "@type": "tree:Node",
-              "token_string": "Aalst"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2777.jsonld#42602",
-              "@type": "tree:Node",
-              "token_string": "Grembergen"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "Aalst": [
+          "2777",
+          "42601"
+        ],
+        "Grembergen": [
+          "2777",
+          "42602"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment717.jsonld#376",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Steenweg van Aalst",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9148016411626956",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.34808133716932"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5517118957900498",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.74019385399498"
         },
         {
           "http://example.com/terms#name": "Steenweg van Grembergen",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0245765909553732",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.067974761337965"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.032014232102044",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.77932942348968"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2777.jsonld#42601"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2777.jsonld#42602"
+          ]
+        }
+      ]
     },
     {
       "token_string": "Aalst",
       "triples": [
         {
           "http://example.com/terms#name": "Steenweg van Aalst",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9148016411626956",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.34808133716932"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5517118957900498",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.74019385399498"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2777.jsonld#42600",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Steenweg van Aalst",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9148016411626956",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.34808133716932"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5517118957900498",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.74019385399498"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Steenweg van Aalst"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "Grembergen",
       "triples": [
         {
           "http://example.com/terms#name": "Steenweg van Grembergen",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0245765909553732",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.067974761337965"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.032014232102044",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.77932942348968"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2777.jsonld#42600",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Steenweg van Grembergen",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0245765909553732",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.067974761337965"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.032014232102044",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.77932942348968"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Steenweg van Grembergen"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

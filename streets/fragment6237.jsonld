@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "T",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6237.jsonld#144426",
-              "@type": "tree:Node",
-              "token_string": "aille-Pierres"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6237.jsonld#144427",
-              "@type": "tree:Node",
-              "token_string": "immermans"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "aille-Pierres": [
+          "6237",
+          "144426"
+        ],
+        "immermans": [
+          "6237",
+          "144427"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4778.jsonld#109901",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Quai Taille-Pierres",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0028044150667297",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.03164735164277"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.777731696809318",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.539553342343204"
         },
         {
           "http://example.com/terms#name": "Quai Timmermans",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5742910698557555",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.68436223983653"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3097722272552055",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.55804475814533"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6237.jsonld#144426"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6237.jsonld#144427"
+          ]
+        }
+      ]
     },
     {
       "token_string": "aille-Pierres",
       "triples": [
         {
           "http://example.com/terms#name": "Quai Taille-Pierres",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0028044150667297",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.03164735164277"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.777731696809318",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.539553342343204"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6237.jsonld#144425",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Quai Taille-Pierres",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0028044150667297",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.03164735164277"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.777731696809318",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.539553342343204"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Quai Taille-Pierres"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "immermans",
       "triples": [
         {
           "http://example.com/terms#name": "Quai Timmermans",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5742910698557555",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.68436223983653"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3097722272552055",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.55804475814533"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6237.jsonld#144425",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Quai Timmermans",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5742910698557555",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.68436223983653"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3097722272552055",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.55804475814533"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Quai Timmermans"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

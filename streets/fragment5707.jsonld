@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "e",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5707.jsonld#66177",
-              "@type": "tree:Node",
-              "token_string": "ymanslaan"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5707.jsonld#66178",
-              "@type": "tree:Node",
-              "token_string": "lstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5707.jsonld#74608",
-              "@type": "tree:Node",
-              "token_string": "mweg"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "ymanslaan": [
+          "5707",
+          "66177"
+        ],
+        "lstraat": [
+          "5707",
+          "66178"
+        ],
+        "mweg": [
+          "5707",
+          "74608"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment152.jsonld#2599",
         "@type": "tree:Node"
@@ -62,18 +44,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Taeymanslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3250058560132505",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.069187096032785"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3302129471857604",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.13790357367602"
         },
         {
           "http://example.com/terms#name": "Taelstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.617939181559572",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.54186404455118"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0032444278795194",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.74737222107392"
         },
         {
           "http://example.com/terms#name": "Taemweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6913882277992927",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.92742887628774"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7829241230508437",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.398548263803704"
         }
       ],
       "total_children_count": 3,
@@ -99,17 +81,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5707.jsonld#66177"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5707.jsonld#66178"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5707.jsonld#74608"
+          ]
+        }
+      ]
     },
     {
       "token_string": "ymanslaan",
       "triples": [
         {
           "http://example.com/terms#name": "Taeymanslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3250058560132505",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.069187096032785"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3302129471857604",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.13790357367602"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5707.jsonld#66176",
         "@type": "tree:Node"
@@ -117,8 +120,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Taeymanslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3250058560132505",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.069187096032785"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3302129471857604",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.13790357367602"
         }
       ],
       "total_children_count": 0,
@@ -134,17 +137,19 @@
       ],
       "triples_metadata": [
         "Taeymanslaan"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "lstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Taelstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.617939181559572",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.54186404455118"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0032444278795194",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.74737222107392"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5707.jsonld#66176",
         "@type": "tree:Node"
@@ -152,8 +157,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Taelstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.617939181559572",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.54186404455118"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0032444278795194",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.74737222107392"
         }
       ],
       "total_children_count": 0,
@@ -169,17 +174,19 @@
       ],
       "triples_metadata": [
         "Taelstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "mweg",
       "triples": [
         {
           "http://example.com/terms#name": "Taemweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6913882277992927",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.92742887628774"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7829241230508437",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.398548263803704"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5707.jsonld#66176",
         "@type": "tree:Node"
@@ -187,8 +194,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Taemweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6913882277992927",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.92742887628774"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7829241230508437",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.398548263803704"
         }
       ],
       "total_children_count": 0,
@@ -204,7 +211,8 @@
       ],
       "triples_metadata": [
         "Taemweg"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

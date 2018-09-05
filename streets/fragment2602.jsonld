@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "akker",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2602.jsonld#72674",
-              "@type": "tree:Node",
-              "token_string": "wegel"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2602.jsonld#72675",
-              "@type": "tree:Node",
-              "token_string": "straat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "wegel": [
+          "2602",
+          "72674"
+        ],
+        "straat": [
+          "2602",
+          "72675"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment445.jsonld#3882",
         "@type": "tree:Node"
@@ -52,43 +40,43 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Veldakkerwegel",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3408023433610796",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.940031312183955"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.115347768651805",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.23102883168903"
         },
         {
           "http://example.com/terms#name": "Veldakkerstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4874526196217235",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.438862303419185"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6667038198534723",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.37747522591466"
         },
         {
           "http://example.com/terms#name": "Veldakkerstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.04309684971975",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.925103898331635"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2714801135576907",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.61971371941357"
         },
         {
           "http://example.com/terms#name": "Veldakkerstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.04309684971975",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.925103898331635"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2714801135576907",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.61971371941357"
         },
         {
           "http://example.com/terms#name": "Veldakkerstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.04309684971975",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.925103898331635"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2714801135576907",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.61971371941357"
         },
         {
           "http://example.com/terms#name": "Veldakkerstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.04309684971975",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.925103898331635"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2714801135576907",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.61971371941357"
         },
         {
           "http://example.com/terms#name": "Veldakkerstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.04309684971975",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.925103898331635"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2714801135576907",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.61971371941357"
         },
         {
           "http://example.com/terms#name": "Veldakkerstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.060701057151642",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.62458190460054"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.290359720131208",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.68826727719593"
         }
       ],
       "total_children_count": 2,
@@ -114,17 +102,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2602.jsonld#72674"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2602.jsonld#72675"
+          ]
+        }
+      ]
     },
     {
       "token_string": "wegel",
       "triples": [
         {
           "http://example.com/terms#name": "Veldakkerwegel",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3408023433610796",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.940031312183955"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.115347768651805",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.23102883168903"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2602.jsonld#72673",
         "@type": "tree:Node"
@@ -132,8 +135,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Veldakkerwegel",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3408023433610796",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.940031312183955"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.115347768651805",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.23102883168903"
         }
       ],
       "total_children_count": 0,
@@ -149,47 +152,49 @@
       ],
       "triples_metadata": [
         "Veldakkerwegel"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "straat",
       "triples": [
         {
           "http://example.com/terms#name": "Veldakkerstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4874526196217235",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.438862303419185"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6667038198534723",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.37747522591466"
         },
         {
           "http://example.com/terms#name": "Veldakkerstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.04309684971975",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.925103898331635"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2714801135576907",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.61971371941357"
         },
         {
           "http://example.com/terms#name": "Veldakkerstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.04309684971975",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.925103898331635"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2714801135576907",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.61971371941357"
         },
         {
           "http://example.com/terms#name": "Veldakkerstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.04309684971975",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.925103898331635"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2714801135576907",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.61971371941357"
         },
         {
           "http://example.com/terms#name": "Veldakkerstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.04309684971975",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.925103898331635"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2714801135576907",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.61971371941357"
         },
         {
           "http://example.com/terms#name": "Veldakkerstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.04309684971975",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.925103898331635"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2714801135576907",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.61971371941357"
         },
         {
           "http://example.com/terms#name": "Veldakkerstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.060701057151642",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.62458190460054"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.290359720131208",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.68826727719593"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2602.jsonld#72673",
         "@type": "tree:Node"
@@ -197,38 +202,38 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Veldakkerstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4874526196217235",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.438862303419185"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6667038198534723",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.37747522591466"
         },
         {
           "http://example.com/terms#name": "Veldakkerstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.04309684971975",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.925103898331635"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2714801135576907",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.61971371941357"
         },
         {
           "http://example.com/terms#name": "Veldakkerstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.04309684971975",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.925103898331635"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2714801135576907",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.61971371941357"
         },
         {
           "http://example.com/terms#name": "Veldakkerstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.04309684971975",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.925103898331635"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2714801135576907",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.61971371941357"
         },
         {
           "http://example.com/terms#name": "Veldakkerstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.04309684971975",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.925103898331635"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2714801135576907",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.61971371941357"
         },
         {
           "http://example.com/terms#name": "Veldakkerstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.04309684971975",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.925103898331635"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2714801135576907",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.61971371941357"
         },
         {
           "http://example.com/terms#name": "Veldakkerstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.060701057151642",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.62458190460054"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.290359720131208",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.68826727719593"
         }
       ],
       "total_children_count": 0,
@@ -256,7 +261,8 @@
         "Veldakkerstraat",
         "Veldakkerstraat",
         "Veldakkerstraat"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

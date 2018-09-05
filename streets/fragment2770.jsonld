@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "D",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2770.jsonld#13652",
-              "@type": "tree:Node",
-              "token_string": "iest"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2770.jsonld#13653",
-              "@type": "tree:Node",
-              "token_string": "einze"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "iest": [
+          "2770",
+          "13652"
+        ],
+        "einze": [
+          "2770",
+          "13653"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment717.jsonld#376",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Steenweg Diest",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.177488100014553",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.641059116604985"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6702669162011796",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.373155865202776"
         },
         {
           "http://example.com/terms#name": "Steenweg Deinze",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.409258356829869",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.02293208561073"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.096637910072892",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.501442931310336"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2770.jsonld#13652"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2770.jsonld#13653"
+          ]
+        }
+      ]
     },
     {
       "token_string": "iest",
       "triples": [
         {
           "http://example.com/terms#name": "Steenweg Diest",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.177488100014553",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.641059116604985"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6702669162011796",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.373155865202776"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2770.jsonld#13651",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Steenweg Diest",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.177488100014553",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.641059116604985"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6702669162011796",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.373155865202776"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Steenweg Diest"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "einze",
       "triples": [
         {
           "http://example.com/terms#name": "Steenweg Deinze",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.409258356829869",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.02293208561073"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.096637910072892",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.501442931310336"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2770.jsonld#13651",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Steenweg Deinze",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.409258356829869",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.02293208561073"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.096637910072892",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.501442931310336"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Steenweg Deinze"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

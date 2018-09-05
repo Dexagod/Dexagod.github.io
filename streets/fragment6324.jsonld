@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -25,32 +25,20 @@
       "triples": [
         {
           "http://example.com/terms#name": "Allée D",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.643599635499798",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.85664143127096"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.447779103507325",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.578312750115025"
         }
       ],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6324.jsonld#141563",
-              "@type": "tree:Node",
-              "token_string": "ubois"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6324.jsonld#176668",
-              "@type": "tree:Node",
-              "token_string": "es Ormes"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "ubois": [
+          "6324",
+          "141563"
+        ],
+        "es Ormes": [
+          "6324",
+          "176668"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment3851.jsonld#107630",
         "@type": "tree:Node"
@@ -58,18 +46,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Allée D",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.643599635499798",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.85664143127096"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.447779103507325",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.578312750115025"
         },
         {
           "http://example.com/terms#name": "Allée Dubois",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.67660117956728",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.522031129398364"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8428960177703386",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.00961711679909"
         },
         {
           "http://example.com/terms#name": "Allée Des Ormes",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.815336504214262",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.79873964985055"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.447222929953403",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.9307642098818"
         }
       ],
       "total_children_count": 2,
@@ -97,6 +85,20 @@
       ],
       "triples_metadata": [
         "Allée D"
+      ],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6324.jsonld#141563"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6324.jsonld#176668"
+          ]
+        }
       ]
     },
     {
@@ -104,10 +106,11 @@
       "triples": [
         {
           "http://example.com/terms#name": "Allée Dubois",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.67660117956728",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.522031129398364"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8428960177703386",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.00961711679909"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6324.jsonld#117678",
         "@type": "tree:Node"
@@ -115,8 +118,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Allée Dubois",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.67660117956728",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.522031129398364"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8428960177703386",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.00961711679909"
         }
       ],
       "total_children_count": 0,
@@ -132,17 +135,19 @@
       ],
       "triples_metadata": [
         "Allée Dubois"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "es Ormes",
       "triples": [
         {
           "http://example.com/terms#name": "Allée Des Ormes",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.815336504214262",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.79873964985055"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.447222929953403",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.9307642098818"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6324.jsonld#117678",
         "@type": "tree:Node"
@@ -150,8 +155,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Allée Des Ormes",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.815336504214262",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.79873964985055"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.447222929953403",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.9307642098818"
         }
       ],
       "total_children_count": 0,
@@ -167,7 +172,8 @@
       ],
       "triples_metadata": [
         "Allée Des Ormes"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

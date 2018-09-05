@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "h",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5437.jsonld#158918",
-              "@type": "tree:Node",
-              "token_string": "ennestraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5437.jsonld#158919",
-              "@type": "tree:Node",
-              "token_string": "onville"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "ennestraat": [
+          "5437",
+          "158918"
+        ],
+        "onville": [
+          "5437",
+          "158919"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment373.jsonld#3126",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Jehennestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9713577343740907",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.49066370870469"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.862626637481168",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.29055604691385"
         },
         {
           "http://example.com/terms#name": "Jehonville",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0519380987351186",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.55019264260462"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.662053371943784",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.75774267626109"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5437.jsonld#158918"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5437.jsonld#158919"
+          ]
+        }
+      ]
     },
     {
       "token_string": "ennestraat",
       "triples": [
         {
           "http://example.com/terms#name": "Jehennestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9713577343740907",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.49066370870469"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.862626637481168",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.29055604691385"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5437.jsonld#158917",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Jehennestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9713577343740907",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.49066370870469"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.862626637481168",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.29055604691385"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Jehennestraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "onville",
       "triples": [
         {
           "http://example.com/terms#name": "Jehonville",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0519380987351186",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.55019264260462"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.662053371943784",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.75774267626109"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5437.jsonld#158917",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Jehonville",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0519380987351186",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.55019264260462"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.662053371943784",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.75774267626109"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Jehonville"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

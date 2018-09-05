@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "K",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3167.jsonld#87929",
-              "@type": "tree:Node",
-              "token_string": "anaalstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3167.jsonld#87930",
-              "@type": "tree:Node",
-              "token_string": "ringsstraat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "anaalstraat": [
+          "3167",
+          "87929"
+        ],
+        "ringsstraat": [
+          "3167",
+          "87930"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment847.jsonld#2131",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Albert Kanaalstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0596124607004747",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.5288587951234"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8263014144838725",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.296493988527054"
         },
         {
           "http://example.com/terms#name": "Albert Kringsstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.451137667571027",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.523209425036164"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3847281260866593",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.17759412887641"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3167.jsonld#87929"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3167.jsonld#87930"
+          ]
+        }
+      ]
     },
     {
       "token_string": "anaalstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Albert Kanaalstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0596124607004747",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.5288587951234"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8263014144838725",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.296493988527054"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3167.jsonld#87928",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Albert Kanaalstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0596124607004747",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.5288587951234"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8263014144838725",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.296493988527054"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Albert Kanaalstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "ringsstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Albert Kringsstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.451137667571027",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.523209425036164"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3847281260866593",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.17759412887641"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3167.jsonld#87928",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Albert Kringsstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.451137667571027",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.523209425036164"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3847281260866593",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.17759412887641"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Albert Kringsstraat"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

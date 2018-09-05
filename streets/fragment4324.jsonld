@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -25,10 +25,11 @@
       "triples": [
         {
           "http://example.com/terms#name": "Rue Martinsart",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.625146078001887",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.5812889651505"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5837217234915575",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.68487496286335"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4324.jsonld#121666",
         "@type": "tree:Node"
@@ -36,8 +37,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Martinsart",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.625146078001887",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.5812889651505"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5837217234915575",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.68487496286335"
         }
       ],
       "total_children_count": 0,
@@ -53,17 +54,19 @@
       ],
       "triples_metadata": [
         "Rue Martinsart"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "en",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Martinsen",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4920169483052823",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.409204995909086"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8137122404068617",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.87393214316677"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4324.jsonld#121666",
         "@type": "tree:Node"
@@ -71,8 +74,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Martinsen",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4920169483052823",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.409204995909086"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8137122404068617",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.87393214316677"
         }
       ],
       "total_children_count": 0,
@@ -88,33 +91,22 @@
       ],
       "triples_metadata": [
         "Rue Martinsen"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "s",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4324.jsonld#119782",
-              "@type": "tree:Node",
-              "token_string": "art"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4324.jsonld#119783",
-              "@type": "tree:Node",
-              "token_string": "en"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "art": [
+          "4324",
+          "119782"
+        ],
+        "en": [
+          "4324",
+          "119783"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4324.jsonld#126572",
         "@type": "tree:Node"
@@ -122,13 +114,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Martinsart",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.625146078001887",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.5812889651505"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5837217234915575",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.68487496286335"
         },
         {
           "http://example.com/terms#name": "Rue Martinsen",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4920169483052823",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.409204995909086"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8137122404068617",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.87393214316677"
         }
       ],
       "total_children_count": 2,
@@ -148,17 +140,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4324.jsonld#119782"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4324.jsonld#119783"
+          ]
+        }
+      ]
     },
     {
       "token_string": "roux",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Martinroux",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3288598920031633",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.82382328549644"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.093607406738034",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.67060175463523"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4324.jsonld#126572",
         "@type": "tree:Node"
@@ -166,8 +173,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Martinroux",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3288598920031633",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.82382328549644"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.093607406738034",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.67060175463523"
         }
       ],
       "total_children_count": 0,
@@ -183,53 +190,30 @@
       ],
       "triples_metadata": [
         "Rue Martinroux"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "t",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4324.jsonld#124946",
-              "@type": "tree:Node",
-              "token_string": "art"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4324.jsonld#126570",
-              "@type": "tree:Node",
-              "token_string": "he Sigart"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4324.jsonld#126571",
-              "@type": "tree:Node",
-              "token_string": "i"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4324.jsonld#152565",
-              "@type": "tree:Node",
-              "token_string": "eau"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "art": [
+          "4324",
+          "124946"
+        ],
+        "he Sigart": [
+          "4324",
+          "126570"
+        ],
+        "i": [
+          "4324",
+          "126571"
+        ],
+        "eau": [
+          "4324",
+          "152565"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4391.jsonld#105476",
         "@type": "tree:Node"
@@ -237,93 +221,93 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Martin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1136841751332223",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.22490077994394"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6384532629563027",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.30015218696867"
         },
         {
           "http://example.com/terms#name": "Rue Martin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.860740667143173",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.6403679508684"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.605621469624448",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.110326184295104"
         },
         {
           "http://example.com/terms#name": "Rue Martin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.860740667143173",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.6403679508684"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.605621469624448",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.110326184295104"
         },
         {
           "http://example.com/terms#name": "Rue Martin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.860740667143173",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.6403679508684"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.605621469624448",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.110326184295104"
         },
         {
           "http://example.com/terms#name": "Rue Martin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.860740667143173",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.6403679508684"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.605621469624448",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.110326184295104"
         },
         {
           "http://example.com/terms#name": "Rue Martin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.110186042124199",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.95575030291953"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7533575279430855",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.0116710441764"
         },
         {
           "http://example.com/terms#name": "Rue Martart",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2063476813165175",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.53486117000671"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7103913296604936",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.164312294239565"
         },
         {
           "http://example.com/terms#name": "Rue Marthe Sigart",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1906451862875707",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.29883469815391"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.641936909825207",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.550998821015526"
         },
         {
           "http://example.com/terms#name": "Rue Martial Nicodème",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.572368063101193",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.91254501096314"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2609175903493868",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.76938962423143"
         },
         {
           "http://example.com/terms#name": "Rue Martial Autier",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4638193309030623",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.11336561064804"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3544546323780606",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.527554428057485"
         },
         {
           "http://example.com/terms#name": "Rue Martimont",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9647561283112185",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.54764611469196"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.23238977895322",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.15391695465798"
         },
         {
           "http://example.com/terms#name": "Rue Martin Beckers",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.534846840551186",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.42622366624406"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.302478352834933",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.87481426660904"
         },
         {
           "http://example.com/terms#name": "Rue Marteau",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.017098566472651",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.69484141179753"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.092754280732605",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.63827638079028"
         },
         {
           "http://example.com/terms#name": "Rue Marteau",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5542498339626767",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.16274908780154"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2322878411432274",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.57764852203988"
         },
         {
           "http://example.com/terms#name": "Rue Marteau",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5542498339626767",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.16274908780154"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2322878411432274",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.57764852203988"
         },
         {
           "http://example.com/terms#name": "Rue Marteau",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5542498339626767",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.16274908780154"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2322878411432274",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.57764852203988"
         },
         {
           "http://example.com/terms#name": "Rue Martin Beguin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.57818315332027",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.105466127049105"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6220781899487315",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.83654191650635"
         },
         {
           "http://example.com/terms#name": "Rue Martia",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3008024640499025",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.292820374070736"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.370147112270599",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.854312159972636"
         }
       ],
       "total_children_count": 40,
@@ -399,17 +383,44 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4324.jsonld#124946"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4324.jsonld#126570"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4324.jsonld#126571"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4324.jsonld#152565"
+          ]
+        }
+      ]
     },
     {
       "token_string": "art",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Martart",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2063476813165175",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.53486117000671"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7103913296604936",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.164312294239565"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4324.jsonld#124944",
         "@type": "tree:Node"
@@ -417,8 +428,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Martart",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2063476813165175",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.53486117000671"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7103913296604936",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.164312294239565"
         }
       ],
       "total_children_count": 0,
@@ -434,17 +445,19 @@
       ],
       "triples_metadata": [
         "Rue Martart"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "he Sigart",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Marthe Sigart",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1906451862875707",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.29883469815391"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.641936909825207",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.550998821015526"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4324.jsonld#124944",
         "@type": "tree:Node"
@@ -452,8 +465,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Marthe Sigart",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1906451862875707",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.29883469815391"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.641936909825207",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.550998821015526"
         }
       ],
       "total_children_count": 0,
@@ -469,43 +482,26 @@
       ],
       "triples_metadata": [
         "Rue Marthe Sigart"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "i",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4324.jsonld#126572",
-              "@type": "tree:Node",
-              "token_string": "n"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4324.jsonld#137240",
-              "@type": "tree:Node",
-              "token_string": "mont"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4324.jsonld#173267",
-              "@type": "tree:Node",
-              "token_string": "a"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "n": [
+          "4324",
+          "126572"
+        ],
+        "mont": [
+          "4324",
+          "137240"
+        ],
+        "a": [
+          "4324",
+          "173267"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4324.jsonld#124944",
         "@type": "tree:Node"
@@ -513,78 +509,78 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Martin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1136841751332223",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.22490077994394"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6384532629563027",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.30015218696867"
         },
         {
           "http://example.com/terms#name": "Rue Martin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.860740667143173",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.6403679508684"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.605621469624448",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.110326184295104"
         },
         {
           "http://example.com/terms#name": "Rue Martin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.860740667143173",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.6403679508684"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.605621469624448",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.110326184295104"
         },
         {
           "http://example.com/terms#name": "Rue Martin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.860740667143173",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.6403679508684"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.605621469624448",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.110326184295104"
         },
         {
           "http://example.com/terms#name": "Rue Martin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.860740667143173",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.6403679508684"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.605621469624448",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.110326184295104"
         },
         {
           "http://example.com/terms#name": "Rue Martin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.110186042124199",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.95575030291953"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7533575279430855",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.0116710441764"
         },
         {
           "http://example.com/terms#name": "Rue Martin Fayt",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5367178628355735",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.68316515102738"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9018969060625386",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.30335762790677"
         },
         {
           "http://example.com/terms#name": "Rue Martial Nicodème",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.572368063101193",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.91254501096314"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2609175903493868",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.76938962423143"
         },
         {
           "http://example.com/terms#name": "Rue Martial Autier",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4638193309030623",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.11336561064804"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3544546323780606",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.527554428057485"
         },
         {
           "http://example.com/terms#name": "Rue Martimont",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9647561283112185",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.54764611469196"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.23238977895322",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.15391695465798"
         },
         {
           "http://example.com/terms#name": "Rue Martin Beckers",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.534846840551186",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.42622366624406"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.302478352834933",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.87481426660904"
         },
         {
           "http://example.com/terms#name": "Rue Martin Blanchy",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0393741298292234",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.61314527145751"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5407435153503743",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.99775314475762"
         },
         {
           "http://example.com/terms#name": "Rue Martin Daenen",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5256479189488554",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.52493803421655"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0312230817171377",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.558733883643306"
         },
         {
           "http://example.com/terms#name": "Rue Martin Beguin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.57818315332027",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.105466127049105"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6220781899487315",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.83654191650635"
         },
         {
           "http://example.com/terms#name": "Rue Martia",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3008024640499025",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.292820374070736"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.370147112270599",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.854312159972636"
         }
       ],
       "total_children_count": 36,
@@ -657,114 +653,92 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4324.jsonld#126572"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4324.jsonld#137240"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4324.jsonld#173267"
+          ]
+        }
+      ]
     },
     {
       "token_string": "n",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Martin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1136841751332223",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.22490077994394"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6384532629563027",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.30015218696867"
         },
         {
           "http://example.com/terms#name": "Rue Martin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.860740667143173",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.6403679508684"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.605621469624448",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.110326184295104"
         },
         {
           "http://example.com/terms#name": "Rue Martin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.860740667143173",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.6403679508684"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.605621469624448",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.110326184295104"
         },
         {
           "http://example.com/terms#name": "Rue Martin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.860740667143173",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.6403679508684"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.605621469624448",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.110326184295104"
         },
         {
           "http://example.com/terms#name": "Rue Martin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.860740667143173",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.6403679508684"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.605621469624448",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.110326184295104"
         },
         {
           "http://example.com/terms#name": "Rue Martin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.110186042124199",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.95575030291953"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7533575279430855",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.0116710441764"
         }
       ],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4324.jsonld#121666",
-              "@type": "tree:Node",
-              "token_string": "s"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4324.jsonld#121667",
-              "@type": "tree:Node",
-              "token_string": "roux"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4324.jsonld#137585",
-              "@type": "tree:Node",
-              "token_string": "e"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4324.jsonld#143315",
-              "@type": "tree:Node",
-              "token_string": " "
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4324.jsonld#152163",
-              "@type": "tree:Node",
-              "token_string": "ville"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4324.jsonld#172272",
-              "@type": "tree:Node",
-              "token_string": "-"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4324.jsonld#174283",
-              "@type": "tree:Node",
-              "token_string": "pa"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "s": [
+          "4324",
+          "121666"
+        ],
+        "roux": [
+          "4324",
+          "121667"
+        ],
+        "e": [
+          "4324",
+          "137585"
+        ],
+        " ": [
+          "4324",
+          "143315"
+        ],
+        "ville": [
+          "4324",
+          "152163"
+        ],
+        "-": [
+          "4324",
+          "172272"
+        ],
+        "pa": [
+          "4324",
+          "174283"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4324.jsonld#126571",
         "@type": "tree:Node"
@@ -772,78 +746,78 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Martin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1136841751332223",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.22490077994394"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6384532629563027",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.30015218696867"
         },
         {
           "http://example.com/terms#name": "Rue Martin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.860740667143173",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.6403679508684"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.605621469624448",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.110326184295104"
         },
         {
           "http://example.com/terms#name": "Rue Martin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.860740667143173",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.6403679508684"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.605621469624448",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.110326184295104"
         },
         {
           "http://example.com/terms#name": "Rue Martin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.860740667143173",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.6403679508684"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.605621469624448",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.110326184295104"
         },
         {
           "http://example.com/terms#name": "Rue Martin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.860740667143173",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.6403679508684"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.605621469624448",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.110326184295104"
         },
         {
           "http://example.com/terms#name": "Rue Martin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.110186042124199",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.95575030291953"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7533575279430855",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.0116710441764"
         },
         {
           "http://example.com/terms#name": "Rue Martin Fayt",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5367178628355735",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.68316515102738"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9018969060625386",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.30335762790677"
         },
         {
           "http://example.com/terms#name": "Rue Martin Frise",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.586456086837703",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.25104896719452"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2658012305253465",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.946455600989424"
         },
         {
           "http://example.com/terms#name": "Rue Martin Herman",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.71288925362642",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.965875344203496"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.732592233315839",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.29607293784901"
         },
         {
           "http://example.com/terms#name": "Rue Martin Beckers",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.534846840551186",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.42622366624406"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.302478352834933",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.87481426660904"
         },
         {
           "http://example.com/terms#name": "Rue Martin Gritte",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0076697790808953",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.062385324089625"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.907949421963327",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.78199050863944"
         },
         {
           "http://example.com/terms#name": "Rue Martin Legros",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8382740208724173",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.53186609331102"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.660277510186371",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.95580204578755"
         },
         {
           "http://example.com/terms#name": "Rue Martin Blanchy",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0393741298292234",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.61314527145751"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5407435153503743",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.99775314475762"
         },
         {
           "http://example.com/terms#name": "Rue Martin Daenen",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5256479189488554",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.52493803421655"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0312230817171377",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.558733883643306"
         },
         {
           "http://example.com/terms#name": "Rue Martin Beguin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.57818315332027",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.105466127049105"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6220781899487315",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.83654191650635"
         }
       ],
       "total_children_count": 30,
@@ -923,6 +897,50 @@
         "Rue Martin",
         "Rue Martin",
         "Rue Martin"
+      ],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4324.jsonld#121666"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4324.jsonld#121667"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4324.jsonld#137585"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4324.jsonld#143315"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4324.jsonld#152163"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4324.jsonld#172272"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4324.jsonld#174283"
+          ]
+        }
       ]
     },
     {
@@ -930,10 +948,11 @@
       "triples": [
         {
           "http://example.com/terms#name": "Rue Martial Nicodème",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.572368063101193",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.91254501096314"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2609175903493868",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.76938962423143"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4324.jsonld#173268",
         "@type": "tree:Node"
@@ -941,8 +960,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Martial Nicodème",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.572368063101193",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.91254501096314"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2609175903493868",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.76938962423143"
         }
       ],
       "total_children_count": 0,
@@ -958,17 +977,19 @@
       ],
       "triples_metadata": [
         "Rue Martial Nicodème"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "Autier",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Martial Autier",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4638193309030623",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.11336561064804"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3544546323780606",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.527554428057485"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4324.jsonld#173268",
         "@type": "tree:Node"
@@ -976,8 +997,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Martial Autier",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4638193309030623",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.11336561064804"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3544546323780606",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.527554428057485"
         }
       ],
       "total_children_count": 0,
@@ -993,17 +1014,19 @@
       ],
       "triples_metadata": [
         "Rue Martial Autier"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "ayt",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Martin Fayt",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5367178628355735",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.68316515102738"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9018969060625386",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.30335762790677"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4324.jsonld#143316",
         "@type": "tree:Node"
@@ -1011,8 +1034,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Martin Fayt",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5367178628355735",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.68316515102738"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9018969060625386",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.30335762790677"
         }
       ],
       "total_children_count": 0,
@@ -1028,17 +1051,19 @@
       ],
       "triples_metadata": [
         "Rue Martin Fayt"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "rise",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Martin Frise",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.586456086837703",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.25104896719452"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2658012305253465",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.946455600989424"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4324.jsonld#143316",
         "@type": "tree:Node"
@@ -1046,8 +1071,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Martin Frise",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.586456086837703",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.25104896719452"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2658012305253465",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.946455600989424"
         }
       ],
       "total_children_count": 0,
@@ -1063,17 +1088,19 @@
       ],
       "triples_metadata": [
         "Rue Martin Frise"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "mont",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Martimont",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9647561283112185",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.54764611469196"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.23238977895322",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.15391695465798"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4324.jsonld#126571",
         "@type": "tree:Node"
@@ -1081,8 +1108,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Martimont",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9647561283112185",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.54764611469196"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.23238977895322",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.15391695465798"
         }
       ],
       "total_children_count": 0,
@@ -1098,29 +1125,24 @@
       ],
       "triples_metadata": [
         "Rue Martimont"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "e",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Martine",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4856731090169846",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.412261259522396"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9116631464073515",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.01312357188037"
         }
       ],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4324.jsonld#169500",
-              "@type": "tree:Node",
-              "token_string": " Bourtonbourt"
-            }
-          ]
-        }
-      ],
+      "children": {
+        " Bourtonbourt": [
+          "4324",
+          "169500"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4324.jsonld#126572",
         "@type": "tree:Node"
@@ -1128,13 +1150,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Martine",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4856731090169846",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.412261259522396"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9116631464073515",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.01312357188037"
         },
         {
           "http://example.com/terms#name": "Rue Martine Bourtonbourt",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.71182149043482",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.53231971607586"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7724679130096366",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.959358789946336"
         }
       ],
       "total_children_count": 1,
@@ -1156,93 +1178,53 @@
       ],
       "triples_metadata": [
         "Rue Martine"
+      ],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4324.jsonld#169500"
+          ]
+        }
       ]
     },
     {
       "token_string": " ",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4324.jsonld#143316",
-              "@type": "tree:Node",
-              "token_string": "F"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4324.jsonld#143317",
-              "@type": "tree:Node",
-              "token_string": "Herman"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4324.jsonld#148298",
-              "@type": "tree:Node",
-              "token_string": "Gritte"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4324.jsonld#151382",
-              "@type": "tree:Node",
-              "token_string": "L"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4324.jsonld#153190",
-              "@type": "tree:Node",
-              "token_string": "B"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4324.jsonld#154201",
-              "@type": "tree:Node",
-              "token_string": "Daenen"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4324.jsonld#154202",
-              "@type": "tree:Node",
-              "token_string": "Wynants"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4324.jsonld#163276",
-              "@type": "tree:Node",
-              "token_string": "Morimont"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "F": [
+          "4324",
+          "143316"
+        ],
+        "Herman": [
+          "4324",
+          "143317"
+        ],
+        "Gritte": [
+          "4324",
+          "148298"
+        ],
+        "L": [
+          "4324",
+          "151382"
+        ],
+        "B": [
+          "4324",
+          "153190"
+        ],
+        "Daenen": [
+          "4324",
+          "154201"
+        ],
+        "Wynants": [
+          "4324",
+          "154202"
+        ],
+        "Morimont": [
+          "4324",
+          "163276"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4324.jsonld#126572",
         "@type": "tree:Node"
@@ -1250,53 +1232,53 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Martin Fayt",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5367178628355735",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.68316515102738"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9018969060625386",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.30335762790677"
         },
         {
           "http://example.com/terms#name": "Rue Martin Frise",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.586456086837703",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.25104896719452"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2658012305253465",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.946455600989424"
         },
         {
           "http://example.com/terms#name": "Rue Martin Herman",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.71288925362642",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.965875344203496"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.732592233315839",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.29607293784901"
         },
         {
           "http://example.com/terms#name": "Rue Martin Beckers",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.534846840551186",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.42622366624406"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.302478352834933",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.87481426660904"
         },
         {
           "http://example.com/terms#name": "Rue Martin Gritte",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0076697790808953",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.062385324089625"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.907949421963327",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.78199050863944"
         },
         {
           "http://example.com/terms#name": "Rue Martin Legros",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8382740208724173",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.53186609331102"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.660277510186371",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.95580204578755"
         },
         {
           "http://example.com/terms#name": "Rue Martin Blanchy",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0393741298292234",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.61314527145751"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5407435153503743",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.99775314475762"
         },
         {
           "http://example.com/terms#name": "Rue Martin Daenen",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5256479189488554",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.52493803421655"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0312230817171377",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.558733883643306"
         },
         {
           "http://example.com/terms#name": "Rue Martin Lejeune",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6201993437811497",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.61460844196004"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.660608802119874",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.919426862768844"
         },
         {
           "http://example.com/terms#name": "Rue Martin Beguin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.57818315332027",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.105466127049105"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6220781899487315",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.83654191650635"
         }
       ],
       "total_children_count": 18,
@@ -1364,33 +1346,71 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
-    },
-    {
-      "token_string": "F",
-      "triples": [],
-      "children": [
+      "triples_metadata": [],
+      "childlist": [
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment4324.jsonld#130795",
-              "@type": "tree:Node",
-              "token_string": "ayt"
-            }
+            "/streets/fragment4324.jsonld#143316"
           ]
         },
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment4324.jsonld#130796",
-              "@type": "tree:Node",
-              "token_string": "rise"
-            }
+            "/streets/fragment4324.jsonld#143317"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4324.jsonld#148298"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4324.jsonld#151382"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4324.jsonld#153190"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4324.jsonld#154201"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4324.jsonld#154202"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4324.jsonld#163276"
           ]
         }
-      ],
+      ]
+    },
+    {
+      "token_string": "F",
+      "triples": [],
+      "children": {
+        "ayt": [
+          "4324",
+          "130795"
+        ],
+        "rise": [
+          "4324",
+          "130796"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4324.jsonld#143315",
         "@type": "tree:Node"
@@ -1398,13 +1418,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Martin Fayt",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5367178628355735",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.68316515102738"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9018969060625386",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.30335762790677"
         },
         {
           "http://example.com/terms#name": "Rue Martin Frise",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.586456086837703",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.25104896719452"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2658012305253465",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.946455600989424"
         }
       ],
       "total_children_count": 2,
@@ -1424,17 +1444,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4324.jsonld#130795"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4324.jsonld#130796"
+          ]
+        }
+      ]
     },
     {
       "token_string": "Herman",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Martin Herman",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.71288925362642",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.965875344203496"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.732592233315839",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.29607293784901"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4324.jsonld#143315",
         "@type": "tree:Node"
@@ -1442,8 +1477,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Martin Herman",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.71288925362642",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.965875344203496"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.732592233315839",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.29607293784901"
         }
       ],
       "total_children_count": 0,
@@ -1459,17 +1494,19 @@
       ],
       "triples_metadata": [
         "Rue Martin Herman"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "Gritte",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Martin Gritte",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0076697790808953",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.062385324089625"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.907949421963327",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.78199050863944"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4324.jsonld#143315",
         "@type": "tree:Node"
@@ -1477,8 +1514,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Martin Gritte",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0076697790808953",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.062385324089625"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.907949421963327",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.78199050863944"
         }
       ],
       "total_children_count": 0,
@@ -1494,33 +1531,22 @@
       ],
       "triples_metadata": [
         "Rue Martin Gritte"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "L",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4324.jsonld#151383",
-              "@type": "tree:Node",
-              "token_string": "uther King"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4324.jsonld#169497",
-              "@type": "tree:Node",
-              "token_string": "e"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "uther King": [
+          "4324",
+          "151383"
+        ],
+        "e": [
+          "4324",
+          "169497"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4324.jsonld#143315",
         "@type": "tree:Node"
@@ -1528,43 +1554,43 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Martin Luther King",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8439257004212477",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.02735825683569"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8229087743398025",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.43211709136376"
         },
         {
           "http://example.com/terms#name": "Rue Martin Luther King",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.544373437188366",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.46686676825253"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1197516732133748",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.71025613607667"
         },
         {
           "http://example.com/terms#name": "Rue Martin Luther King",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.544373437188366",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.46686676825253"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1197516732133748",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.71025613607667"
         },
         {
           "http://example.com/terms#name": "Rue Martin Luther King",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.544373437188366",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.46686676825253"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1197516732133748",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.71025613607667"
         },
         {
           "http://example.com/terms#name": "Rue Martin Luther King",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.544373437188366",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.46686676825253"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1197516732133748",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.71025613607667"
         },
         {
           "http://example.com/terms#name": "Rue Martin Luther King",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.544373437188366",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.46686676825253"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1197516732133748",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.71025613607667"
         },
         {
           "http://example.com/terms#name": "Rue Martin Legros",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8382740208724173",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.53186609331102"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.660277510186371",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.95580204578755"
         },
         {
           "http://example.com/terms#name": "Rue Martin Lejeune",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6201993437811497",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.61460844196004"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.660608802119874",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.919426862768844"
         }
       ],
       "total_children_count": 4,
@@ -1595,42 +1621,57 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4324.jsonld#151383"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4324.jsonld#169497"
+          ]
+        }
+      ]
     },
     {
       "token_string": "uther King",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Martin Luther King",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8439257004212477",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.02735825683569"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8229087743398025",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.43211709136376"
         },
         {
           "http://example.com/terms#name": "Rue Martin Luther King",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.544373437188366",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.46686676825253"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1197516732133748",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.71025613607667"
         },
         {
           "http://example.com/terms#name": "Rue Martin Luther King",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.544373437188366",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.46686676825253"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1197516732133748",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.71025613607667"
         },
         {
           "http://example.com/terms#name": "Rue Martin Luther King",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.544373437188366",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.46686676825253"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1197516732133748",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.71025613607667"
         },
         {
           "http://example.com/terms#name": "Rue Martin Luther King",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.544373437188366",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.46686676825253"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1197516732133748",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.71025613607667"
         },
         {
           "http://example.com/terms#name": "Rue Martin Luther King",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.544373437188366",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.46686676825253"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1197516732133748",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.71025613607667"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4324.jsonld#151382",
         "@type": "tree:Node"
@@ -1638,33 +1679,33 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Martin Luther King",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8439257004212477",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.02735825683569"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8229087743398025",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.43211709136376"
         },
         {
           "http://example.com/terms#name": "Rue Martin Luther King",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.544373437188366",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.46686676825253"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1197516732133748",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.71025613607667"
         },
         {
           "http://example.com/terms#name": "Rue Martin Luther King",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.544373437188366",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.46686676825253"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1197516732133748",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.71025613607667"
         },
         {
           "http://example.com/terms#name": "Rue Martin Luther King",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.544373437188366",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.46686676825253"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1197516732133748",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.71025613607667"
         },
         {
           "http://example.com/terms#name": "Rue Martin Luther King",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.544373437188366",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.46686676825253"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1197516732133748",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.71025613607667"
         },
         {
           "http://example.com/terms#name": "Rue Martin Luther King",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.544373437188366",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.46686676825253"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1197516732133748",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.71025613607667"
         }
       ],
       "total_children_count": 0,
@@ -1690,17 +1731,19 @@
         "Rue Martin Luther King",
         "Rue Martin Luther King",
         "Rue Martin Luther King"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "ville",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Martinville",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8721014673899017",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.66625566705956"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.051991410450528",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.74854122708599"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4324.jsonld#126572",
         "@type": "tree:Node"
@@ -1708,8 +1751,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Martinville",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8721014673899017",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.66625566705956"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.051991410450528",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.74854122708599"
         }
       ],
       "total_children_count": 0,
@@ -1725,32 +1768,34 @@
       ],
       "triples_metadata": [
         "Rue Martinville"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "eau",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Marteau",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.017098566472651",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.69484141179753"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.092754280732605",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.63827638079028"
         },
         {
           "http://example.com/terms#name": "Rue Marteau",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5542498339626767",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.16274908780154"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2322878411432274",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.57764852203988"
         },
         {
           "http://example.com/terms#name": "Rue Marteau",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5542498339626767",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.16274908780154"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2322878411432274",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.57764852203988"
         },
         {
           "http://example.com/terms#name": "Rue Marteau",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5542498339626767",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.16274908780154"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2322878411432274",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.57764852203988"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4324.jsonld#124944",
         "@type": "tree:Node"
@@ -1758,23 +1803,23 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Marteau",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.017098566472651",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.69484141179753"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.092754280732605",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.63827638079028"
         },
         {
           "http://example.com/terms#name": "Rue Marteau",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5542498339626767",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.16274908780154"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2322878411432274",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.57764852203988"
         },
         {
           "http://example.com/terms#name": "Rue Marteau",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5542498339626767",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.16274908780154"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2322878411432274",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.57764852203988"
         },
         {
           "http://example.com/terms#name": "Rue Marteau",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5542498339626767",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.16274908780154"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2322878411432274",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.57764852203988"
         }
       ],
       "total_children_count": 0,
@@ -1796,33 +1841,22 @@
         "Rue Marteau",
         "Rue Marteau",
         "Rue Marteau"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "B",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4324.jsonld#153192",
-              "@type": "tree:Node",
-              "token_string": "lanchy"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4324.jsonld#170191",
-              "@type": "tree:Node",
-              "token_string": "e"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "lanchy": [
+          "4324",
+          "153192"
+        ],
+        "e": [
+          "4324",
+          "170191"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4324.jsonld#143315",
         "@type": "tree:Node"
@@ -1830,18 +1864,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Martin Beckers",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.534846840551186",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.42622366624406"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.302478352834933",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.87481426660904"
         },
         {
           "http://example.com/terms#name": "Rue Martin Blanchy",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0393741298292234",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.61314527145751"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5407435153503743",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.99775314475762"
         },
         {
           "http://example.com/terms#name": "Rue Martin Beguin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.57818315332027",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.105466127049105"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6220781899487315",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.83654191650635"
         }
       ],
       "total_children_count": 4,
@@ -1867,17 +1901,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4324.jsonld#153192"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4324.jsonld#170191"
+          ]
+        }
+      ]
     },
     {
       "token_string": "lanchy",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Martin Blanchy",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0393741298292234",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.61314527145751"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5407435153503743",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.99775314475762"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4324.jsonld#153190",
         "@type": "tree:Node"
@@ -1885,8 +1934,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Martin Blanchy",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0393741298292234",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.61314527145751"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5407435153503743",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.99775314475762"
         }
       ],
       "total_children_count": 0,
@@ -1902,17 +1951,19 @@
       ],
       "triples_metadata": [
         "Rue Martin Blanchy"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "Daenen",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Martin Daenen",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5256479189488554",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.52493803421655"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0312230817171377",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.558733883643306"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4324.jsonld#143315",
         "@type": "tree:Node"
@@ -1920,8 +1971,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Martin Daenen",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5256479189488554",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.52493803421655"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0312230817171377",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.558733883643306"
         }
       ],
       "total_children_count": 0,
@@ -1937,17 +1988,19 @@
       ],
       "triples_metadata": [
         "Rue Martin Daenen"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "Wynants",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Martin Wynants",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8846513925524007",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.35567915114153"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.873308624390008",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.84759702442151"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4324.jsonld#143315",
         "@type": "tree:Node"
@@ -1955,8 +2008,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Martin Wynants",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8846513925524007",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.35567915114153"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.873308624390008",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.84759702442151"
         }
       ],
       "total_children_count": 0,
@@ -1972,17 +2025,19 @@
       ],
       "triples_metadata": [
         "Rue Martin Wynants"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "Morimont",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Martin Morimont",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.121368487367062",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.17204500737475"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3029786426348964",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.83602035489308"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4324.jsonld#143315",
         "@type": "tree:Node"
@@ -1990,8 +2045,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Martin Morimont",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.121368487367062",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.17204500737475"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3029786426348964",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.83602035489308"
         }
       ],
       "total_children_count": 0,
@@ -2007,33 +2062,22 @@
       ],
       "triples_metadata": [
         "Rue Martin Morimont"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "e",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4324.jsonld#169498",
-              "@type": "tree:Node",
-              "token_string": "gros"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4324.jsonld#169499",
-              "@type": "tree:Node",
-              "token_string": "jeune"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "gros": [
+          "4324",
+          "169498"
+        ],
+        "jeune": [
+          "4324",
+          "169499"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4324.jsonld#151382",
         "@type": "tree:Node"
@@ -2041,13 +2085,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Martin Legros",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8382740208724173",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.53186609331102"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.660277510186371",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.95580204578755"
         },
         {
           "http://example.com/terms#name": "Rue Martin Lejeune",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6201993437811497",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.61460844196004"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.660608802119874",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.919426862768844"
         }
       ],
       "total_children_count": 2,
@@ -2067,17 +2111,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4324.jsonld#169498"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4324.jsonld#169499"
+          ]
+        }
+      ]
     },
     {
       "token_string": "gros",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Martin Legros",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8382740208724173",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.53186609331102"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.660277510186371",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.95580204578755"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4324.jsonld#169497",
         "@type": "tree:Node"
@@ -2085,8 +2144,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Martin Legros",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8382740208724173",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.53186609331102"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.660277510186371",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.95580204578755"
         }
       ],
       "total_children_count": 0,
@@ -2102,17 +2161,19 @@
       ],
       "triples_metadata": [
         "Rue Martin Legros"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "jeune",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Martin Lejeune",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6201993437811497",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.61460844196004"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.660608802119874",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.919426862768844"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4324.jsonld#169497",
         "@type": "tree:Node"
@@ -2120,8 +2181,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Martin Lejeune",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6201993437811497",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.61460844196004"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.660608802119874",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.919426862768844"
         }
       ],
       "total_children_count": 0,
@@ -2137,17 +2198,19 @@
       ],
       "triples_metadata": [
         "Rue Martin Lejeune"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": " Bourtonbourt",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Martine Bourtonbourt",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.71182149043482",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.53231971607586"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7724679130096366",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.959358789946336"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4324.jsonld#137585",
         "@type": "tree:Node"
@@ -2155,8 +2218,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Martine Bourtonbourt",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.71182149043482",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.53231971607586"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7724679130096366",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.959358789946336"
         }
       ],
       "total_children_count": 0,
@@ -2172,33 +2235,22 @@
       ],
       "triples_metadata": [
         "Rue Martine Bourtonbourt"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "e",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4324.jsonld#170192",
-              "@type": "tree:Node",
-              "token_string": "ckers"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4324.jsonld#170193",
-              "@type": "tree:Node",
-              "token_string": "guin"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "ckers": [
+          "4324",
+          "170192"
+        ],
+        "guin": [
+          "4324",
+          "170193"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4324.jsonld#153190",
         "@type": "tree:Node"
@@ -2206,13 +2258,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Martin Beckers",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.534846840551186",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.42622366624406"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.302478352834933",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.87481426660904"
         },
         {
           "http://example.com/terms#name": "Rue Martin Beguin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.57818315332027",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.105466127049105"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6220781899487315",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.83654191650635"
         }
       ],
       "total_children_count": 2,
@@ -2232,17 +2284,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4324.jsonld#170192"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4324.jsonld#170193"
+          ]
+        }
+      ]
     },
     {
       "token_string": "ckers",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Martin Beckers",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.534846840551186",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.42622366624406"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.302478352834933",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.87481426660904"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4324.jsonld#170191",
         "@type": "tree:Node"
@@ -2250,8 +2317,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Martin Beckers",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.534846840551186",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.42622366624406"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.302478352834933",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.87481426660904"
         }
       ],
       "total_children_count": 0,
@@ -2267,17 +2334,19 @@
       ],
       "triples_metadata": [
         "Rue Martin Beckers"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "guin",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Martin Beguin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.57818315332027",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.105466127049105"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6220781899487315",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.83654191650635"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4324.jsonld#170191",
         "@type": "tree:Node"
@@ -2285,8 +2354,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Martin Beguin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.57818315332027",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.105466127049105"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6220781899487315",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.83654191650635"
         }
       ],
       "total_children_count": 0,
@@ -2302,33 +2371,22 @@
       ],
       "triples_metadata": [
         "Rue Martin Beguin"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "-",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4324.jsonld#172273",
-              "@type": "tree:Node",
-              "token_string": "Luther-King"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4324.jsonld#172274",
-              "@type": "tree:Node",
-              "token_string": "Sandron"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "Luther-King": [
+          "4324",
+          "172273"
+        ],
+        "Sandron": [
+          "4324",
+          "172274"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4324.jsonld#126572",
         "@type": "tree:Node"
@@ -2336,13 +2394,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Martin-Luther-King",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5948501243616295",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.442966569911086"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.636370287690542",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.787485401187055"
         },
         {
           "http://example.com/terms#name": "Rue Martin-Sandron",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.84389857182631",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.910199482456335"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.151611136736357",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.18169590040201"
         }
       ],
       "total_children_count": 2,
@@ -2362,17 +2420,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4324.jsonld#172273"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4324.jsonld#172274"
+          ]
+        }
+      ]
     },
     {
       "token_string": "Luther-King",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Martin-Luther-King",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5948501243616295",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.442966569911086"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.636370287690542",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.787485401187055"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4324.jsonld#172272",
         "@type": "tree:Node"
@@ -2380,8 +2453,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Martin-Luther-King",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5948501243616295",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.442966569911086"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.636370287690542",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.787485401187055"
         }
       ],
       "total_children_count": 0,
@@ -2397,17 +2470,19 @@
       ],
       "triples_metadata": [
         "Rue Martin-Luther-King"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "Sandron",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Martin-Sandron",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.84389857182631",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.910199482456335"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.151611136736357",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.18169590040201"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4324.jsonld#172272",
         "@type": "tree:Node"
@@ -2415,8 +2490,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Martin-Sandron",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.84389857182631",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.910199482456335"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.151611136736357",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.18169590040201"
         }
       ],
       "total_children_count": 0,
@@ -2432,29 +2507,24 @@
       ],
       "triples_metadata": [
         "Rue Martin-Sandron"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "a",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Martia",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3008024640499025",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.292820374070736"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.370147112270599",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.854312159972636"
         }
       ],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4324.jsonld#173268",
-              "@type": "tree:Node",
-              "token_string": "l "
-            }
-          ]
-        }
-      ],
+      "children": {
+        "l ": [
+          "4324",
+          "173268"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4324.jsonld#126571",
         "@type": "tree:Node"
@@ -2462,18 +2532,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Martial Nicodème",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.572368063101193",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.91254501096314"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2609175903493868",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.76938962423143"
         },
         {
           "http://example.com/terms#name": "Rue Martial Autier",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4638193309030623",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.11336561064804"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3544546323780606",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.527554428057485"
         },
         {
           "http://example.com/terms#name": "Rue Martia",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3008024640499025",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.292820374070736"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.370147112270599",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.854312159972636"
         }
       ],
       "total_children_count": 3,
@@ -2501,33 +2571,29 @@
       ],
       "triples_metadata": [
         "Rue Martia"
+      ],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4324.jsonld#173268"
+          ]
+        }
       ]
     },
     {
       "token_string": "l ",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4324.jsonld#130112",
-              "@type": "tree:Node",
-              "token_string": "Nicodème"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4324.jsonld#130113",
-              "@type": "tree:Node",
-              "token_string": "Autier"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "Nicodème": [
+          "4324",
+          "130112"
+        ],
+        "Autier": [
+          "4324",
+          "130113"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4324.jsonld#173267",
         "@type": "tree:Node"
@@ -2535,13 +2601,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Martial Nicodème",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.572368063101193",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.91254501096314"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2609175903493868",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.76938962423143"
         },
         {
           "http://example.com/terms#name": "Rue Martial Autier",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4638193309030623",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.11336561064804"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3544546323780606",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.527554428057485"
         }
       ],
       "total_children_count": 2,
@@ -2561,17 +2627,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4324.jsonld#130112"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4324.jsonld#130113"
+          ]
+        }
+      ]
     },
     {
       "token_string": "pa",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Martinpa",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.721643251117648",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.89085295065867"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5799518749762056",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.334071843814456"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4324.jsonld#126572",
         "@type": "tree:Node"
@@ -2579,8 +2660,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Martinpa",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.721643251117648",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.89085295065867"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5799518749762056",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.334071843814456"
         }
       ],
       "total_children_count": 0,
@@ -2596,7 +2677,8 @@
       ],
       "triples_metadata": [
         "Rue Martinpa"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

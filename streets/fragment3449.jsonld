@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -25,10 +25,11 @@
       "triples": [
         {
           "http://example.com/terms#name": "Jules Van Beylenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.159972355922565",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.63049364613707"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.56674915216183",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.97438566870745"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3449.jsonld#39548",
         "@type": "tree:Node"
@@ -36,8 +37,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Jules Van Beylenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.159972355922565",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.63049364613707"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.56674915216183",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.97438566870745"
         }
       ],
       "total_children_count": 0,
@@ -53,17 +54,19 @@
       ],
       "triples_metadata": [
         "Jules Van Beylenstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "iesbroeckstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Jules Van Biesbroeckstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.330148168678289",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.32103198910444"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6372096020025064",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.211175738972194"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3449.jsonld#39548",
         "@type": "tree:Node"
@@ -71,8 +74,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Jules Van Biesbroeckstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.330148168678289",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.32103198910444"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6372096020025064",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.211175738972194"
         }
       ],
       "total_children_count": 0,
@@ -88,33 +91,22 @@
       ],
       "triples_metadata": [
         "Jules Van Biesbroeckstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "B",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3449.jsonld#32753",
-              "@type": "tree:Node",
-              "token_string": "eylenstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3449.jsonld#32754",
-              "@type": "tree:Node",
-              "token_string": "iesbroeckstraat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "eylenstraat": [
+          "3449",
+          "32753"
+        ],
+        "iesbroeckstraat": [
+          "3449",
+          "32754"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment3449.jsonld#40268",
         "@type": "tree:Node"
@@ -122,13 +114,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Jules Van Beylenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.159972355922565",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.63049364613707"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.56674915216183",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.97438566870745"
         },
         {
           "http://example.com/terms#name": "Jules Van Biesbroeckstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.330148168678289",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.32103198910444"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6372096020025064",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.211175738972194"
         }
       ],
       "total_children_count": 2,
@@ -148,17 +140,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3449.jsonld#32753"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3449.jsonld#32754"
+          ]
+        }
+      ]
     },
     {
       "token_string": "Ooststraat",
       "triples": [
         {
           "http://example.com/terms#name": "Jules Van Ooststraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.258860617146912",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.93923335884296"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0466924164352673",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.01899339280059"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3449.jsonld#40268",
         "@type": "tree:Node"
@@ -166,8 +173,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Jules Van Ooststraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.258860617146912",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.93923335884296"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0466924164352673",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.01899339280059"
         }
       ],
       "total_children_count": 0,
@@ -183,73 +190,38 @@
       ],
       "triples_metadata": [
         "Jules Van Ooststraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": " ",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3449.jsonld#39548",
-              "@type": "tree:Node",
-              "token_string": "B"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3449.jsonld#39549",
-              "@type": "tree:Node",
-              "token_string": "Ooststraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3449.jsonld#67746",
-              "@type": "tree:Node",
-              "token_string": "Campenhoutplein"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3449.jsonld#71965",
-              "@type": "tree:Node",
-              "token_string": "den Heuvelstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3449.jsonld#83614",
-              "@type": "tree:Node",
-              "token_string": "Agtmaelstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3449.jsonld#89192",
-              "@type": "tree:Node",
-              "token_string": "Praetstraat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "B": [
+          "3449",
+          "39548"
+        ],
+        "Ooststraat": [
+          "3449",
+          "39549"
+        ],
+        "Campenhoutplein": [
+          "3449",
+          "67746"
+        ],
+        "den Heuvelstraat": [
+          "3449",
+          "71965"
+        ],
+        "Agtmaelstraat": [
+          "3449",
+          "83614"
+        ],
+        "Praetstraat": [
+          "3449",
+          "89192"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment3449.jsonld#84230",
         "@type": "tree:Node"
@@ -257,38 +229,38 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Jules Van Beylenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.159972355922565",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.63049364613707"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.56674915216183",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.97438566870745"
         },
         {
           "http://example.com/terms#name": "Jules Van Biesbroeckstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.330148168678289",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.32103198910444"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6372096020025064",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.211175738972194"
         },
         {
           "http://example.com/terms#name": "Jules Van Ooststraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.258860617146912",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.93923335884296"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0466924164352673",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.01899339280059"
         },
         {
           "http://example.com/terms#name": "Jules Van Campenhoutplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9110733220038063",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.85329713837496"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5465863186976647",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.33184238052567"
         },
         {
           "http://example.com/terms#name": "Jules Van den Heuvelstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.044103884360466",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.28644183292997"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4047948997367365",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.453044844693444"
         },
         {
           "http://example.com/terms#name": "Jules Van Agtmaelstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2240766923122357",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.23473358868961"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0096512869666574",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.25262768542194"
         },
         {
           "http://example.com/terms#name": "Jules Van Praetstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.124108304768547",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.4101102152139"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.766730072192523",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.6360578042259"
         }
       ],
       "total_children_count": 8,
@@ -338,17 +310,56 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3449.jsonld#39548"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3449.jsonld#39549"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3449.jsonld#67746"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3449.jsonld#71965"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3449.jsonld#83614"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3449.jsonld#89192"
+          ]
+        }
+      ]
     },
     {
       "token_string": "laerstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Jules Vanlaerstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7135488612186984",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.57940728669851"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0590950487640924",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.24433720234068"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3449.jsonld#84230",
         "@type": "tree:Node"
@@ -356,8 +367,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Jules Vanlaerstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7135488612186984",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.57940728669851"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0590950487640924",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.24433720234068"
         }
       ],
       "total_children_count": 0,
@@ -373,17 +384,19 @@
       ],
       "triples_metadata": [
         "Jules Vanlaerstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "Campenhoutplein",
       "triples": [
         {
           "http://example.com/terms#name": "Jules Van Campenhoutplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9110733220038063",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.85329713837496"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5465863186976647",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.33184238052567"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3449.jsonld#40268",
         "@type": "tree:Node"
@@ -391,8 +404,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Jules Van Campenhoutplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9110733220038063",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.85329713837496"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5465863186976647",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.33184238052567"
         }
       ],
       "total_children_count": 0,
@@ -408,17 +421,19 @@
       ],
       "triples_metadata": [
         "Jules Van Campenhoutplein"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "den Heuvelstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Jules Van den Heuvelstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.044103884360466",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.28644183292997"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4047948997367365",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.453044844693444"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3449.jsonld#40268",
         "@type": "tree:Node"
@@ -426,8 +441,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Jules Van den Heuvelstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.044103884360466",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.28644183292997"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4047948997367365",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.453044844693444"
         }
       ],
       "total_children_count": 0,
@@ -443,17 +458,19 @@
       ],
       "triples_metadata": [
         "Jules Van den Heuvelstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "Agtmaelstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Jules Van Agtmaelstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2240766923122357",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.23473358868961"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0096512869666574",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.25262768542194"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3449.jsonld#40268",
         "@type": "tree:Node"
@@ -461,8 +478,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Jules Van Agtmaelstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2240766923122357",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.23473358868961"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0096512869666574",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.25262768542194"
         }
       ],
       "total_children_count": 0,
@@ -478,63 +495,34 @@
       ],
       "triples_metadata": [
         "Jules Van Agtmaelstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "n",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3449.jsonld#40268",
-              "@type": "tree:Node",
-              "token_string": " "
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3449.jsonld#54787",
-              "@type": "tree:Node",
-              "token_string": "laerstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3449.jsonld#88171",
-              "@type": "tree:Node",
-              "token_string": "de"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3449.jsonld#97799",
-              "@type": "tree:Node",
-              "token_string": "nestestraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3449.jsonld#100928",
-              "@type": "tree:Node",
-              "token_string": "tieghemstraat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        " ": [
+          "3449",
+          "40268"
+        ],
+        "laerstraat": [
+          "3449",
+          "54787"
+        ],
+        "de": [
+          "3449",
+          "88171"
+        ],
+        "nestestraat": [
+          "3449",
+          "97799"
+        ],
+        "tieghemstraat": [
+          "3449",
+          "100928"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment352.jsonld#84229",
         "@type": "tree:Node"
@@ -542,53 +530,53 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Jules Van Beylenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.159972355922565",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.63049364613707"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.56674915216183",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.97438566870745"
         },
         {
           "http://example.com/terms#name": "Jules Van Biesbroeckstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.330148168678289",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.32103198910444"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6372096020025064",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.211175738972194"
         },
         {
           "http://example.com/terms#name": "Jules Van Ooststraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.258860617146912",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.93923335884296"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0466924164352673",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.01899339280059"
         },
         {
           "http://example.com/terms#name": "Jules Vandenbemptlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8442562190671734",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.86656451523308"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6065476990178973",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.64299969593357"
         },
         {
           "http://example.com/terms#name": "Jules Vanlaerstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7135488612186984",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.57940728669851"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0590950487640924",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.24433720234068"
         },
         {
           "http://example.com/terms#name": "Jules Van Campenhoutplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9110733220038063",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.85329713837496"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5465863186976647",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.33184238052567"
         },
         {
           "http://example.com/terms#name": "Jules Van den Heuvelstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.044103884360466",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.28644183292997"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4047948997367365",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.453044844693444"
         },
         {
           "http://example.com/terms#name": "Jules Van Agtmaelstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2240766923122357",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.23473358868961"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0096512869666574",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.25262768542194"
         },
         {
           "http://example.com/terms#name": "Jules Vandeleenelaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.312258847375649",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.86410929813694"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.707831108683138",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.26721097990703"
         },
         {
           "http://example.com/terms#name": "Jules Van Praetstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.124108304768547",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.4101102152139"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.766730072192523",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.6360578042259"
         }
       ],
       "total_children_count": 15,
@@ -656,33 +644,53 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
-    },
-    {
-      "token_string": "de",
-      "triples": [],
-      "children": [
+      "triples_metadata": [],
+      "childlist": [
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment3449.jsonld#88172",
-              "@type": "tree:Node",
-              "token_string": "nbemptlaan"
-            }
+            "/streets/fragment3449.jsonld#40268"
           ]
         },
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment3449.jsonld#88173",
-              "@type": "tree:Node",
-              "token_string": "leenelaan"
-            }
+            "/streets/fragment3449.jsonld#54787"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3449.jsonld#88171"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3449.jsonld#97799"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3449.jsonld#100928"
           ]
         }
-      ],
+      ]
+    },
+    {
+      "token_string": "de",
+      "triples": [],
+      "children": {
+        "nbemptlaan": [
+          "3449",
+          "88172"
+        ],
+        "leenelaan": [
+          "3449",
+          "88173"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment3449.jsonld#84230",
         "@type": "tree:Node"
@@ -690,13 +698,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Jules Vandenbemptlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8442562190671734",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.86656451523308"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6065476990178973",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.64299969593357"
         },
         {
           "http://example.com/terms#name": "Jules Vandeleenelaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.312258847375649",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.86410929813694"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.707831108683138",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.26721097990703"
         }
       ],
       "total_children_count": 2,
@@ -716,17 +724,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3449.jsonld#88172"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3449.jsonld#88173"
+          ]
+        }
+      ]
     },
     {
       "token_string": "nbemptlaan",
       "triples": [
         {
           "http://example.com/terms#name": "Jules Vandenbemptlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8442562190671734",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.86656451523308"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6065476990178973",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.64299969593357"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3449.jsonld#88171",
         "@type": "tree:Node"
@@ -734,8 +757,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Jules Vandenbemptlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8442562190671734",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.86656451523308"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6065476990178973",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.64299969593357"
         }
       ],
       "total_children_count": 0,
@@ -751,17 +774,19 @@
       ],
       "triples_metadata": [
         "Jules Vandenbemptlaan"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "leenelaan",
       "triples": [
         {
           "http://example.com/terms#name": "Jules Vandeleenelaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.312258847375649",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.86410929813694"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.707831108683138",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.26721097990703"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3449.jsonld#88171",
         "@type": "tree:Node"
@@ -769,8 +794,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Jules Vandeleenelaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.312258847375649",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.86410929813694"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.707831108683138",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.26721097990703"
         }
       ],
       "total_children_count": 0,
@@ -786,17 +811,19 @@
       ],
       "triples_metadata": [
         "Jules Vandeleenelaan"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "Praetstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Jules Van Praetstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.124108304768547",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.4101102152139"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.766730072192523",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.6360578042259"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3449.jsonld#40268",
         "@type": "tree:Node"
@@ -804,8 +831,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Jules Van Praetstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.124108304768547",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.4101102152139"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.766730072192523",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.6360578042259"
         }
       ],
       "total_children_count": 0,
@@ -821,17 +848,19 @@
       ],
       "triples_metadata": [
         "Jules Van Praetstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "nestestraat",
       "triples": [
         {
           "http://example.com/terms#name": "Jules Vannestestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8123862958377592",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.42564790753378"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.303523642511773",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.76061378244446"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3449.jsonld#84230",
         "@type": "tree:Node"
@@ -839,8 +868,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Jules Vannestestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8123862958377592",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.42564790753378"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.303523642511773",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.76061378244446"
         }
       ],
       "total_children_count": 0,
@@ -856,17 +885,19 @@
       ],
       "triples_metadata": [
         "Jules Vannestestraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "tieghemstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Jules Vantieghemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.64196701443894",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.464305976942974"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3644178886113236",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.974063265090585"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3449.jsonld#84230",
         "@type": "tree:Node"
@@ -874,8 +905,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Jules Vantieghemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.64196701443894",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.464305976942974"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3644178886113236",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.974063265090585"
         }
       ],
       "total_children_count": 0,
@@ -891,7 +922,8 @@
       ],
       "triples_metadata": [
         "Jules Vantieghemstraat"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

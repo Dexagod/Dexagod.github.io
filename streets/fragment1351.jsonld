@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "o",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1351.jsonld#21520",
-              "@type": "tree:Node",
-              "token_string": "sbergstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1351.jsonld#21521",
-              "@type": "tree:Node",
-              "token_string": "etweg"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1351.jsonld#41409",
-              "@type": "tree:Node",
-              "token_string": "ute"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "sbergstraat": [
+          "1351",
+          "21520"
+        ],
+        "etweg": [
+          "1351",
+          "21521"
+        ],
+        "ute": [
+          "1351",
+          "41409"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment1352.jsonld#12384",
         "@type": "tree:Node"
@@ -62,23 +44,23 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Hoge Vosbergstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9767097192276193",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.89577294197941"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5143114796351265",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.63974724283709"
         },
         {
           "http://example.com/terms#name": "Hoge Voetweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.533127239261778",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.48188806990708"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2733153534699215",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.29448818354743"
         },
         {
           "http://example.com/terms#name": "Hoge Voute",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8726664923523653",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.48181213522236"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3112273045527485",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.497437822070154"
         },
         {
           "http://example.com/terms#name": "Hoge Voutestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.651376200176929",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.48313231969636"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2255122643642102",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.528156909959876"
         }
       ],
       "total_children_count": 4,
@@ -110,17 +92,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1351.jsonld#21520"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1351.jsonld#21521"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1351.jsonld#41409"
+          ]
+        }
+      ]
     },
     {
       "token_string": "sbergstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Hoge Vosbergstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9767097192276193",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.89577294197941"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5143114796351265",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.63974724283709"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1351.jsonld#21519",
         "@type": "tree:Node"
@@ -128,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Hoge Vosbergstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9767097192276193",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.89577294197941"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5143114796351265",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.63974724283709"
         }
       ],
       "total_children_count": 0,
@@ -145,17 +148,19 @@
       ],
       "triples_metadata": [
         "Hoge Vosbergstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "etweg",
       "triples": [
         {
           "http://example.com/terms#name": "Hoge Voetweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.533127239261778",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.48188806990708"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2733153534699215",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.29448818354743"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1351.jsonld#21519",
         "@type": "tree:Node"
@@ -163,8 +168,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Hoge Voetweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.533127239261778",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.48188806990708"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2733153534699215",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.29448818354743"
         }
       ],
       "total_children_count": 0,
@@ -180,29 +185,24 @@
       ],
       "triples_metadata": [
         "Hoge Voetweg"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "ute",
       "triples": [
         {
           "http://example.com/terms#name": "Hoge Voute",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8726664923523653",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.48181213522236"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3112273045527485",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.497437822070154"
         }
       ],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1351.jsonld#95718",
-              "@type": "tree:Node",
-              "token_string": "straat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "straat": [
+          "1351",
+          "95718"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment1351.jsonld#21519",
         "@type": "tree:Node"
@@ -210,13 +210,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Hoge Voute",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8726664923523653",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.48181213522236"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3112273045527485",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.497437822070154"
         },
         {
           "http://example.com/terms#name": "Hoge Voutestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.651376200176929",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.48313231969636"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2255122643642102",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.528156909959876"
         }
       ],
       "total_children_count": 1,
@@ -238,6 +238,14 @@
       ],
       "triples_metadata": [
         "Hoge Voute"
+      ],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1351.jsonld#95718"
+          ]
+        }
       ]
     },
     {
@@ -245,10 +253,11 @@
       "triples": [
         {
           "http://example.com/terms#name": "Hoge Voutestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.651376200176929",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.48313231969636"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2255122643642102",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.528156909959876"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1351.jsonld#41409",
         "@type": "tree:Node"
@@ -256,8 +265,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Hoge Voutestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.651376200176929",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.48313231969636"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2255122643642102",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.528156909959876"
         }
       ],
       "total_children_count": 0,
@@ -273,7 +282,8 @@
       ],
       "triples_metadata": [
         "Hoge Voutestraat"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "T",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6340.jsonld#172927",
-              "@type": "tree:Node",
-              "token_string": " Nicolay"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6340.jsonld#172928",
-              "@type": "tree:Node",
-              "token_string": "élémaque"
-            }
-          ]
-        }
-      ],
+      "children": {
+        " Nicolay": [
+          "6340",
+          "172927"
+        ],
+        "élémaque": [
+          "6340",
+          "172928"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment3851.jsonld#107630",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Allée T Nicolay",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5445822320736133",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.53040025174384"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.606309522528187",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.17695690069424"
         },
         {
           "http://example.com/terms#name": "Allée Télémaque",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5230835241516436",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.25740137093242"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7749909869007214",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.668882752396094"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6340.jsonld#172927"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6340.jsonld#172928"
+          ]
+        }
+      ]
     },
     {
       "token_string": " Nicolay",
       "triples": [
         {
           "http://example.com/terms#name": "Allée T Nicolay",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5445822320736133",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.53040025174384"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.606309522528187",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.17695690069424"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6340.jsonld#172926",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Allée T Nicolay",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5445822320736133",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.53040025174384"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.606309522528187",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.17695690069424"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Allée T Nicolay"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "élémaque",
       "triples": [
         {
           "http://example.com/terms#name": "Allée Télémaque",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5230835241516436",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.25740137093242"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7749909869007214",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.668882752396094"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6340.jsonld#172926",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Allée Télémaque",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5230835241516436",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.25740137093242"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7749909869007214",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.668882752396094"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Allée Télémaque"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

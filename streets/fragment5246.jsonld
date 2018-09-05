@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "s",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5246.jsonld#56676",
-              "@type": "tree:Node",
-              "token_string": "estraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5246.jsonld#56677",
-              "@type": "tree:Node",
-              "token_string": "segemstraat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "estraat": [
+          "5246",
+          "56676"
+        ],
+        "segemstraat": [
+          "5246",
+          "56677"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment625.jsonld#1145",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nosestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.914912449050689",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.156463895121995"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4636085099240694",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.40977325369454"
         },
         {
           "http://example.com/terms#name": "Nossegemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3826886253833566",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.95502168673693"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.718027809982512",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.81087034108893"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5246.jsonld#56676"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5246.jsonld#56677"
+          ]
+        }
+      ]
     },
     {
       "token_string": "estraat",
       "triples": [
         {
           "http://example.com/terms#name": "Nosestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.914912449050689",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.156463895121995"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4636085099240694",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.40977325369454"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5246.jsonld#56675",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nosestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.914912449050689",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.156463895121995"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4636085099240694",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.40977325369454"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Nosestraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "segemstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Nossegemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3826886253833566",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.95502168673693"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.718027809982512",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.81087034108893"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5246.jsonld#56675",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nossegemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3826886253833566",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.95502168673693"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.718027809982512",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.81087034108893"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Nossegemstraat"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

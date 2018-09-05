@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "g",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3073.jsonld#63968",
-              "@type": "tree:Node",
-              "token_string": "straat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3073.jsonld#63969",
-              "@type": "tree:Node",
-              "token_string": "gerbaan"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3073.jsonld#179664",
-              "@type": "tree:Node",
-              "token_string": "r"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "straat": [
+          "3073",
+          "63968"
+        ],
+        "gerbaan": [
+          "3073",
+          "63969"
+        ],
+        "r": [
+          "3073",
+          "179664"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment51.jsonld#198",
         "@type": "tree:Node"
@@ -62,43 +44,43 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Degstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.103578533617544",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.85984698481685"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9006282383120188",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.382529385306974"
         },
         {
           "http://example.com/terms#name": "Deggerbaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.336921256363981",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.55513616369977"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.828254210814268",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.14802501346393"
         },
         {
           "http://example.com/terms#name": "Degrés Saint-Pierre",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.143244631153571",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.90560853475363"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0162568943540577",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.49698839084102"
         },
         {
           "http://example.com/terms#name": "Degrés-des-Tisserands",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9936990349948225",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.148200623691345"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.250012557585909",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.4484338135469"
         },
         {
           "http://example.com/terms#name": "Degrés de Saint-Martin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5981904976777996",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.85031617246341"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2294394378767723",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.29527528718565"
         },
         {
           "http://example.com/terms#name": "Degré des Artisans",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.97211949405592",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.38250060537317"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0165779766784477",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.3773100902018"
         },
         {
           "http://example.com/terms#name": "Degrés des Dentellières",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0306232522109284",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.06785978288815"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6098048736092445",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.027958592712665"
         },
         {
           "http://example.com/terms#name": "Degr�s Jacques Izoard",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.704961329679167",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.49807250800574"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.158372116506566",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.0055699880926"
         }
       ],
       "total_children_count": 13,
@@ -154,17 +136,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3073.jsonld#63968"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3073.jsonld#63969"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3073.jsonld#179664"
+          ]
+        }
+      ]
     },
     {
       "token_string": "straat",
       "triples": [
         {
           "http://example.com/terms#name": "Degstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.103578533617544",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.85984698481685"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9006282383120188",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.382529385306974"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3073.jsonld#63967",
         "@type": "tree:Node"
@@ -172,8 +175,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Degstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.103578533617544",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.85984698481685"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9006282383120188",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.382529385306974"
         }
       ],
       "total_children_count": 0,
@@ -189,17 +192,19 @@
       ],
       "triples_metadata": [
         "Degstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "gerbaan",
       "triples": [
         {
           "http://example.com/terms#name": "Deggerbaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.336921256363981",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.55513616369977"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.828254210814268",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.14802501346393"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3073.jsonld#63967",
         "@type": "tree:Node"
@@ -207,8 +212,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Deggerbaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.336921256363981",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.55513616369977"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.828254210814268",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.14802501346393"
         }
       ],
       "total_children_count": 0,
@@ -224,17 +229,19 @@
       ],
       "triples_metadata": [
         "Deggerbaan"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "-des-Tisserands",
       "triples": [
         {
           "http://example.com/terms#name": "Degrés-des-Tisserands",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9936990349948225",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.148200623691345"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.250012557585909",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.4484338135469"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3073.jsonld#175830",
         "@type": "tree:Node"
@@ -242,8 +249,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Degrés-des-Tisserands",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9936990349948225",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.148200623691345"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.250012557585909",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.4484338135469"
         }
       ],
       "total_children_count": 0,
@@ -259,33 +266,22 @@
       ],
       "triples_metadata": [
         "Degrés-des-Tisserands"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": " ",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3073.jsonld#148137",
-              "@type": "tree:Node",
-              "token_string": "Saint-Pierre"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3073.jsonld#176798",
-              "@type": "tree:Node",
-              "token_string": "de"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "Saint-Pierre": [
+          "3073",
+          "148137"
+        ],
+        "de": [
+          "3073",
+          "176798"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment3073.jsonld#175830",
         "@type": "tree:Node"
@@ -293,18 +289,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Degrés Saint-Pierre",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.143244631153571",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.90560853475363"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0162568943540577",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.49698839084102"
         },
         {
           "http://example.com/terms#name": "Degrés de Saint-Martin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5981904976777996",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.85031617246341"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2294394378767723",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.29527528718565"
         },
         {
           "http://example.com/terms#name": "Degrés des Dentellières",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0306232522109284",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.06785978288815"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6098048736092445",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.027958592712665"
         }
       ],
       "total_children_count": 4,
@@ -330,17 +326,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3073.jsonld#148137"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3073.jsonld#176798"
+          ]
+        }
+      ]
     },
     {
       "token_string": "Saint-Pierre",
       "triples": [
         {
           "http://example.com/terms#name": "Degrés Saint-Pierre",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.143244631153571",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.90560853475363"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0162568943540577",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.49698839084102"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3073.jsonld#148136",
         "@type": "tree:Node"
@@ -348,8 +359,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Degrés Saint-Pierre",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.143244631153571",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.90560853475363"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0162568943540577",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.49698839084102"
         }
       ],
       "total_children_count": 0,
@@ -365,33 +376,22 @@
       ],
       "triples_metadata": [
         "Degrés Saint-Pierre"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "s",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3073.jsonld#143891",
-              "@type": "tree:Node",
-              "token_string": "-des-Tisserands"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3073.jsonld#148136",
-              "@type": "tree:Node",
-              "token_string": " "
-            }
-          ]
-        }
-      ],
+      "children": {
+        "-des-Tisserands": [
+          "3073",
+          "143891"
+        ],
+        " ": [
+          "3073",
+          "148136"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment3073.jsonld#179665",
         "@type": "tree:Node"
@@ -399,23 +399,23 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Degrés Saint-Pierre",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.143244631153571",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.90560853475363"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0162568943540577",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.49698839084102"
         },
         {
           "http://example.com/terms#name": "Degrés-des-Tisserands",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9936990349948225",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.148200623691345"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.250012557585909",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.4484338135469"
         },
         {
           "http://example.com/terms#name": "Degrés de Saint-Martin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5981904976777996",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.85031617246341"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2294394378767723",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.29527528718565"
         },
         {
           "http://example.com/terms#name": "Degrés des Dentellières",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0306232522109284",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.06785978288815"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6098048736092445",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.027958592712665"
         }
       ],
       "total_children_count": 6,
@@ -447,17 +447,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3073.jsonld#143891"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3073.jsonld#148136"
+          ]
+        }
+      ]
     },
     {
       "token_string": " des Artisans",
       "triples": [
         {
           "http://example.com/terms#name": "Degré des Artisans",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.97211949405592",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.38250060537317"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0165779766784477",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.3773100902018"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3073.jsonld#179665",
         "@type": "tree:Node"
@@ -465,8 +480,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Degré des Artisans",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.97211949405592",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.38250060537317"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0165779766784477",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.3773100902018"
         }
       ],
       "total_children_count": 0,
@@ -482,33 +497,22 @@
       ],
       "triples_metadata": [
         "Degré des Artisans"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "de",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3073.jsonld#176799",
-              "@type": "tree:Node",
-              "token_string": " Saint-Martin"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3073.jsonld#176800",
-              "@type": "tree:Node",
-              "token_string": "s Dentellières"
-            }
-          ]
-        }
-      ],
+      "children": {
+        " Saint-Martin": [
+          "3073",
+          "176799"
+        ],
+        "s Dentellières": [
+          "3073",
+          "176800"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment3073.jsonld#148136",
         "@type": "tree:Node"
@@ -516,13 +520,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Degrés de Saint-Martin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5981904976777996",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.85031617246341"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2294394378767723",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.29527528718565"
         },
         {
           "http://example.com/terms#name": "Degrés des Dentellières",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0306232522109284",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.06785978288815"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6098048736092445",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.027958592712665"
         }
       ],
       "total_children_count": 2,
@@ -542,17 +546,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3073.jsonld#176799"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3073.jsonld#176800"
+          ]
+        }
+      ]
     },
     {
       "token_string": " Saint-Martin",
       "triples": [
         {
           "http://example.com/terms#name": "Degrés de Saint-Martin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5981904976777996",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.85031617246341"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2294394378767723",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.29527528718565"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3073.jsonld#176798",
         "@type": "tree:Node"
@@ -560,8 +579,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Degrés de Saint-Martin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5981904976777996",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.85031617246341"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2294394378767723",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.29527528718565"
         }
       ],
       "total_children_count": 0,
@@ -577,17 +596,19 @@
       ],
       "triples_metadata": [
         "Degrés de Saint-Martin"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "s Dentellières",
       "triples": [
         {
           "http://example.com/terms#name": "Degrés des Dentellières",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0306232522109284",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.06785978288815"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6098048736092445",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.027958592712665"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3073.jsonld#176798",
         "@type": "tree:Node"
@@ -595,8 +616,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Degrés des Dentellières",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0306232522109284",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.06785978288815"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6098048736092445",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.027958592712665"
         }
       ],
       "total_children_count": 0,
@@ -612,33 +633,22 @@
       ],
       "triples_metadata": [
         "Degrés des Dentellières"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "r",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3073.jsonld#179665",
-              "@type": "tree:Node",
-              "token_string": "é"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3073.jsonld#179666",
-              "@type": "tree:Node",
-              "token_string": "�s Jacques Izoard"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "é": [
+          "3073",
+          "179665"
+        ],
+        "�s Jacques Izoard": [
+          "3073",
+          "179666"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment3073.jsonld#63967",
         "@type": "tree:Node"
@@ -646,33 +656,33 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Degrés Saint-Pierre",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.143244631153571",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.90560853475363"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0162568943540577",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.49698839084102"
         },
         {
           "http://example.com/terms#name": "Degrés-des-Tisserands",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9936990349948225",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.148200623691345"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.250012557585909",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.4484338135469"
         },
         {
           "http://example.com/terms#name": "Degrés de Saint-Martin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5981904976777996",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.85031617246341"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2294394378767723",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.29527528718565"
         },
         {
           "http://example.com/terms#name": "Degré des Artisans",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.97211949405592",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.38250060537317"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0165779766784477",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.3773100902018"
         },
         {
           "http://example.com/terms#name": "Degrés des Dentellières",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0306232522109284",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.06785978288815"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6098048736092445",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.027958592712665"
         },
         {
           "http://example.com/terms#name": "Degr�s Jacques Izoard",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.704961329679167",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.49807250800574"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.158372116506566",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.0055699880926"
         }
       ],
       "total_children_count": 10,
@@ -716,33 +726,35 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
-    },
-    {
-      "token_string": "é",
-      "triples": [],
-      "children": [
+      "triples_metadata": [],
+      "childlist": [
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment3073.jsonld#175830",
-              "@type": "tree:Node",
-              "token_string": "s"
-            }
+            "/streets/fragment3073.jsonld#179665"
           ]
         },
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment3073.jsonld#175831",
-              "@type": "tree:Node",
-              "token_string": " des Artisans"
-            }
+            "/streets/fragment3073.jsonld#179666"
           ]
         }
-      ],
+      ]
+    },
+    {
+      "token_string": "é",
+      "triples": [],
+      "children": {
+        "s": [
+          "3073",
+          "175830"
+        ],
+        " des Artisans": [
+          "3073",
+          "175831"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment3073.jsonld#179664",
         "@type": "tree:Node"
@@ -750,28 +762,28 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Degrés Saint-Pierre",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.143244631153571",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.90560853475363"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0162568943540577",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.49698839084102"
         },
         {
           "http://example.com/terms#name": "Degrés-des-Tisserands",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9936990349948225",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.148200623691345"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.250012557585909",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.4484338135469"
         },
         {
           "http://example.com/terms#name": "Degrés de Saint-Martin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5981904976777996",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.85031617246341"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2294394378767723",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.29527528718565"
         },
         {
           "http://example.com/terms#name": "Degré des Artisans",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.97211949405592",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.38250060537317"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0165779766784477",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.3773100902018"
         },
         {
           "http://example.com/terms#name": "Degrés des Dentellières",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0306232522109284",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.06785978288815"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6098048736092445",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.027958592712665"
         }
       ],
       "total_children_count": 8,
@@ -809,17 +821,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3073.jsonld#175830"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3073.jsonld#175831"
+          ]
+        }
+      ]
     },
     {
       "token_string": "�s Jacques Izoard",
       "triples": [
         {
           "http://example.com/terms#name": "Degr�s Jacques Izoard",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.704961329679167",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.49807250800574"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.158372116506566",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.0055699880926"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3073.jsonld#179664",
         "@type": "tree:Node"
@@ -827,8 +854,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Degr�s Jacques Izoard",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.704961329679167",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.49807250800574"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.158372116506566",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.0055699880926"
         }
       ],
       "total_children_count": 0,
@@ -844,7 +871,8 @@
       ],
       "triples_metadata": [
         "Degr�s Jacques Izoard"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": " ",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3310.jsonld#93520",
-              "@type": "tree:Node",
-              "token_string": "Hoevelaan"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3310.jsonld#93521",
-              "@type": "tree:Node",
-              "token_string": "Molenweg"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "Hoevelaan": [
+          "3310",
+          "93520"
+        ],
+        "Molenweg": [
+          "3310",
+          "93521"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment2984.jsonld#17434",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Roze Hoevelaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3905681938372947",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.26682947447292"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4972605774877974",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.52272136070544"
         },
         {
           "http://example.com/terms#name": "Roze Molenweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.981083204067383",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.54677165957751"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7565113008743194",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.3328691949858"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3310.jsonld#93520"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3310.jsonld#93521"
+          ]
+        }
+      ]
     },
     {
       "token_string": "Hoevelaan",
       "triples": [
         {
           "http://example.com/terms#name": "Roze Hoevelaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3905681938372947",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.26682947447292"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4972605774877974",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.52272136070544"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3310.jsonld#93519",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Roze Hoevelaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3905681938372947",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.26682947447292"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4972605774877974",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.52272136070544"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Roze Hoevelaan"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "Molenweg",
       "triples": [
         {
           "http://example.com/terms#name": "Roze Molenweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.981083204067383",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.54677165957751"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7565113008743194",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.3328691949858"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3310.jsonld#93519",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Roze Molenweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.981083204067383",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.54677165957751"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7565113008743194",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.3328691949858"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Roze Molenweg"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

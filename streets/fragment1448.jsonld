@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "r",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1448.jsonld#60448",
-              "@type": "tree:Node",
-              "token_string": "telstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1448.jsonld#60449",
-              "@type": "tree:Node",
-              "token_string": "renhoflaan"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "telstraat": [
+          "1448",
+          "60448"
+        ],
+        "renhoflaan": [
+          "1448",
+          "60449"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment529.jsonld#355",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Startelstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.330591231244779",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.28525554959418"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6846314395613105",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.88080056416949"
         },
         {
           "http://example.com/terms#name": "Starrenhoflaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0896647602439424",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.96235199429961"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.600746764742604",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.19248782452185"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1448.jsonld#60448"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1448.jsonld#60449"
+          ]
+        }
+      ]
     },
     {
       "token_string": "telstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Startelstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.330591231244779",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.28525554959418"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6846314395613105",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.88080056416949"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1448.jsonld#60447",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Startelstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.330591231244779",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.28525554959418"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6846314395613105",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.88080056416949"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Startelstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "renhoflaan",
       "triples": [
         {
           "http://example.com/terms#name": "Starrenhoflaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0896647602439424",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.96235199429961"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.600746764742604",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.19248782452185"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1448.jsonld#60447",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Starrenhoflaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0896647602439424",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.96235199429961"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.600746764742604",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.19248782452185"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Starrenhoflaan"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

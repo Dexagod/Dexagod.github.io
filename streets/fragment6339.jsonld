@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "No",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6339.jsonld#172922",
-              "@type": "tree:Node",
-              "token_string": "tre Dame de Grâce"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6339.jsonld#172923",
-              "@type": "tree:Node",
-              "token_string": "rd"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "tre Dame de Grâce": [
+          "6339",
+          "172922"
+        ],
+        "rd": [
+          "6339",
+          "172923"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment3851.jsonld#107630",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Allée Notre Dame de Grâce",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.101521825774631",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.376301234537806"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.710126638595302",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.35459320215217"
         },
         {
           "http://example.com/terms#name": "Allée Nord",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.841243836143474",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.81850566685565"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8689580689171446",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.328992348436785"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6339.jsonld#172922"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6339.jsonld#172923"
+          ]
+        }
+      ]
     },
     {
       "token_string": "tre Dame de Grâce",
       "triples": [
         {
           "http://example.com/terms#name": "Allée Notre Dame de Grâce",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.101521825774631",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.376301234537806"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.710126638595302",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.35459320215217"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6339.jsonld#172921",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Allée Notre Dame de Grâce",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.101521825774631",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.376301234537806"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.710126638595302",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.35459320215217"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Allée Notre Dame de Grâce"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "rd",
       "triples": [
         {
           "http://example.com/terms#name": "Allée Nord",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.841243836143474",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.81850566685565"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8689580689171446",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.328992348436785"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6339.jsonld#172921",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Allée Nord",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.841243836143474",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.81850566685565"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8689580689171446",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.328992348436785"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Allée Nord"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

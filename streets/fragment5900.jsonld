@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -25,10 +25,11 @@
       "triples": [
         {
           "http://example.com/terms#name": "Domaine-de-Tchession",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5249327536784705",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.76724397112811"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1877719414754324",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.18776399779496"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5900.jsonld#165024",
         "@type": "tree:Node"
@@ -36,8 +37,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Domaine-de-Tchession",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5249327536784705",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.76724397112811"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1877719414754324",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.18776399779496"
         }
       ],
       "total_children_count": 0,
@@ -53,17 +54,19 @@
       ],
       "triples_metadata": [
         "Domaine-de-Tchession"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "l'Ourthe",
       "triples": [
         {
           "http://example.com/terms#name": "Domaine-de-l'Ourthe",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.213677750395645",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.21529854107818"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.343095504755507",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.077651421382576"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5900.jsonld#165024",
         "@type": "tree:Node"
@@ -71,8 +74,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Domaine-de-l'Ourthe",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.213677750395645",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.21529854107818"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.343095504755507",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.077651421382576"
         }
       ],
       "total_children_count": 0,
@@ -88,33 +91,22 @@
       ],
       "triples_metadata": [
         "Domaine-de-l'Ourthe"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "-",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5900.jsonld#165021",
-              "@type": "tree:Node",
-              "token_string": "Tchession"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5900.jsonld#165022",
-              "@type": "tree:Node",
-              "token_string": "l'Ourthe"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "Tchession": [
+          "5900",
+          "165021"
+        ],
+        "l'Ourthe": [
+          "5900",
+          "165022"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment5900.jsonld#165027",
         "@type": "tree:Node"
@@ -122,13 +114,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Domaine-de-Tchession",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5249327536784705",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.76724397112811"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1877719414754324",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.18776399779496"
         },
         {
           "http://example.com/terms#name": "Domaine-de-l'Ourthe",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.213677750395645",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.21529854107818"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.343095504755507",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.077651421382576"
         }
       ],
       "total_children_count": 2,
@@ -148,33 +140,35 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
-    },
-    {
-      "token_string": "e",
-      "triples": [],
-      "children": [
+      "triples_metadata": [],
+      "childlist": [
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment5900.jsonld#165024",
-              "@type": "tree:Node",
-              "token_string": "-"
-            }
+            "/streets/fragment5900.jsonld#165021"
           ]
         },
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment5900.jsonld#171866",
-              "@type": "tree:Node",
-              "token_string": "s-"
-            }
+            "/streets/fragment5900.jsonld#165022"
           ]
         }
-      ],
+      ]
+    },
+    {
+      "token_string": "e",
+      "triples": [],
+      "children": {
+        "-": [
+          "5900",
+          "165024"
+        ],
+        "s-": [
+          "5900",
+          "171866"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment5900.jsonld#165448",
         "@type": "tree:Node"
@@ -182,28 +176,28 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Domaine-de-Tchession",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5249327536784705",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.76724397112811"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1877719414754324",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.18776399779496"
         },
         {
           "http://example.com/terms#name": "Domaine-de-l'Ourthe",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.213677750395645",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.21529854107818"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.343095504755507",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.077651421382576"
         },
         {
           "http://example.com/terms#name": "Domaine-des-Monts-de-l'Ourthe",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9203170946058825",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.28228764373792"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2324540135234705",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.822676138235494"
         },
         {
           "http://example.com/terms#name": "Domaine-des-Bouvreuils",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7766709451365474",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.85049419048161"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0340344176218292",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.64139706919857"
         },
         {
           "http://example.com/terms#name": "Domaine-des-Ecureuils",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.113753981630607",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.893412475520336"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4280283807178304",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.69627436519174"
         }
       ],
       "total_children_count": 7,
@@ -241,33 +235,35 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
-    },
-    {
-      "token_string": "-",
-      "triples": [],
-      "children": [
+      "triples_metadata": [],
+      "childlist": [
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment5900.jsonld#165448",
-              "@type": "tree:Node",
-              "token_string": "d"
-            }
+            "/streets/fragment5900.jsonld#165024"
           ]
         },
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment5900.jsonld#165450",
-              "@type": "tree:Node",
-              "token_string": "M"
-            }
+            "/streets/fragment5900.jsonld#171866"
           ]
         }
-      ],
+      ]
+    },
+    {
+      "token_string": "-",
+      "triples": [],
+      "children": {
+        "d": [
+          "5900",
+          "165448"
+        ],
+        "M": [
+          "5900",
+          "165450"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment2123.jsonld#157631",
         "@type": "tree:Node"
@@ -275,53 +271,53 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Domaine-de-Tchession",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5249327536784705",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.76724397112811"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1877719414754324",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.18776399779496"
         },
         {
           "http://example.com/terms#name": "Domaine-de-l'Ourthe",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.213677750395645",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.21529854107818"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.343095504755507",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.077651421382576"
         },
         {
           "http://example.com/terms#name": "Domaine-des-Monts-de-l'Ourthe",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9203170946058825",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.28228764373792"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2324540135234705",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.822676138235494"
         },
         {
           "http://example.com/terms#name": "Domaine-du-Bonsoy",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.369876834292369",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.98149566953264"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.326029772718278",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.93373999751148"
         },
         {
           "http://example.com/terms#name": "Domaine-du-Bonsoy - Azur",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.822925293030311",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.981164847933734"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4764384359553513",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.08393880145134"
         },
         {
           "http://example.com/terms#name": "Domaine-du-Bonsoy - Blanc",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.002543437079716",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.887379304798564"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8327843818845926",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.160209950436254"
         },
         {
           "http://example.com/terms#name": "Domaine-Ma-Campagne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2422845881612106",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.941610296365624"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3059333333558842",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.92593013441396"
         },
         {
           "http://example.com/terms#name": "Domaine-Montmeuse",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.386283355097632",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.15304864406528"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8950190036295087",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.01350448546555"
         },
         {
           "http://example.com/terms#name": "Domaine-des-Bouvreuils",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7766709451365474",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.85049419048161"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0340344176218292",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.64139706919857"
         },
         {
           "http://example.com/terms#name": "Domaine-des-Ecureuils",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.113753981630607",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.893412475520336"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4280283807178304",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.69627436519174"
         }
       ],
       "total_children_count": 27,
@@ -389,33 +385,35 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
-    },
-    {
-      "token_string": "d",
-      "triples": [],
-      "children": [
+      "triples_metadata": [],
+      "childlist": [
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment5900.jsonld#165027",
-              "@type": "tree:Node",
-              "token_string": "e"
-            }
+            "/streets/fragment5900.jsonld#165448"
           ]
         },
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment5899.jsonld#165029",
-              "@type": "tree:Node",
-              "token_string": "u-"
-            }
+            "/streets/fragment5900.jsonld#165450"
           ]
         }
-      ],
+      ]
+    },
+    {
+      "token_string": "d",
+      "triples": [],
+      "children": {
+        "e": [
+          "5900",
+          "165027"
+        ],
+        "u-": [
+          "5899",
+          "165029"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment5900.jsonld#165447",
         "@type": "tree:Node"
@@ -423,53 +421,53 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Domaine-de-Tchession",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5249327536784705",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.76724397112811"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1877719414754324",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.18776399779496"
         },
         {
           "http://example.com/terms#name": "Domaine-de-l'Ourthe",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.213677750395645",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.21529854107818"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.343095504755507",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.077651421382576"
         },
         {
           "http://example.com/terms#name": "Domaine-des-Monts-de-l'Ourthe",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9203170946058825",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.28228764373792"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2324540135234705",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.822676138235494"
         },
         {
           "http://example.com/terms#name": "Domaine-du-Bonsoy",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.369876834292369",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.98149566953264"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.326029772718278",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.93373999751148"
         },
         {
           "http://example.com/terms#name": "Domaine-du-Bonsoy - Azur",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.822925293030311",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.981164847933734"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4764384359553513",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.08393880145134"
         },
         {
           "http://example.com/terms#name": "Domaine-du-Bonsoy - Blanc",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.002543437079716",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.887379304798564"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8327843818845926",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.160209950436254"
         },
         {
           "http://example.com/terms#name": "Domaine-du-Bonsoy - Doré",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5034170045246644",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.0908163469316"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7093983605877687",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.899957115839506"
         },
         {
           "http://example.com/terms#name": "Domaine-du-Bonsoy - Fauve",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7747770142112365",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.75110618857501"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.895265003703905",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.19257096756674"
         },
         {
           "http://example.com/terms#name": "Domaine-des-Bouvreuils",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7766709451365474",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.85049419048161"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0340344176218292",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.64139706919857"
         },
         {
           "http://example.com/terms#name": "Domaine-des-Ecureuils",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.113753981630607",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.893412475520336"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4280283807178304",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.69627436519174"
         }
       ],
       "total_children_count": 23,
@@ -537,33 +535,35 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
-    },
-    {
-      "token_string": "M",
-      "triples": [],
-      "children": [
+      "triples_metadata": [],
+      "childlist": [
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment5900.jsonld#165451",
-              "@type": "tree:Node",
-              "token_string": "a-Campagne"
-            }
+            "/streets/fragment5900.jsonld#165027"
           ]
         },
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment5900.jsonld#165452",
-              "@type": "tree:Node",
-              "token_string": "ontmeuse"
-            }
+            "/streets/fragment5899.jsonld#165029"
           ]
         }
-      ],
+      ]
+    },
+    {
+      "token_string": "M",
+      "triples": [],
+      "children": {
+        "a-Campagne": [
+          "5900",
+          "165451"
+        ],
+        "ontmeuse": [
+          "5900",
+          "165452"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment5900.jsonld#165447",
         "@type": "tree:Node"
@@ -571,13 +571,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Domaine-Ma-Campagne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2422845881612106",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.941610296365624"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3059333333558842",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.92593013441396"
         },
         {
           "http://example.com/terms#name": "Domaine-Montmeuse",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.386283355097632",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.15304864406528"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8950190036295087",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.01350448546555"
         }
       ],
       "total_children_count": 2,
@@ -597,17 +597,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5900.jsonld#165451"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5900.jsonld#165452"
+          ]
+        }
+      ]
     },
     {
       "token_string": "a-Campagne",
       "triples": [
         {
           "http://example.com/terms#name": "Domaine-Ma-Campagne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2422845881612106",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.941610296365624"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3059333333558842",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.92593013441396"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5900.jsonld#165450",
         "@type": "tree:Node"
@@ -615,8 +630,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Domaine-Ma-Campagne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2422845881612106",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.941610296365624"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3059333333558842",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.92593013441396"
         }
       ],
       "total_children_count": 0,
@@ -632,17 +647,19 @@
       ],
       "triples_metadata": [
         "Domaine-Ma-Campagne"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "ontmeuse",
       "triples": [
         {
           "http://example.com/terms#name": "Domaine-Montmeuse",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.386283355097632",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.15304864406528"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8950190036295087",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.01350448546555"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5900.jsonld#165450",
         "@type": "tree:Node"
@@ -650,8 +667,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Domaine-Montmeuse",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.386283355097632",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.15304864406528"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8950190036295087",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.01350448546555"
         }
       ],
       "total_children_count": 0,
@@ -667,43 +684,26 @@
       ],
       "triples_metadata": [
         "Domaine-Montmeuse"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "s-",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5900.jsonld#171867",
-              "@type": "tree:Node",
-              "token_string": "Monts-de-l'Ourthe"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5900.jsonld#171868",
-              "@type": "tree:Node",
-              "token_string": "Bouvreuils"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5900.jsonld#171869",
-              "@type": "tree:Node",
-              "token_string": "Ecureuils"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "Monts-de-l'Ourthe": [
+          "5900",
+          "171867"
+        ],
+        "Bouvreuils": [
+          "5900",
+          "171868"
+        ],
+        "Ecureuils": [
+          "5900",
+          "171869"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment5900.jsonld#165027",
         "@type": "tree:Node"
@@ -711,18 +711,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Domaine-des-Monts-de-l'Ourthe",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9203170946058825",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.28228764373792"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2324540135234705",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.822676138235494"
         },
         {
           "http://example.com/terms#name": "Domaine-des-Bouvreuils",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7766709451365474",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.85049419048161"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0340344176218292",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.64139706919857"
         },
         {
           "http://example.com/terms#name": "Domaine-des-Ecureuils",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.113753981630607",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.893412475520336"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4280283807178304",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.69627436519174"
         }
       ],
       "total_children_count": 3,
@@ -748,17 +748,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5900.jsonld#171867"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5900.jsonld#171868"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5900.jsonld#171869"
+          ]
+        }
+      ]
     },
     {
       "token_string": "Monts-de-l'Ourthe",
       "triples": [
         {
           "http://example.com/terms#name": "Domaine-des-Monts-de-l'Ourthe",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9203170946058825",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.28228764373792"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2324540135234705",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.822676138235494"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5900.jsonld#171866",
         "@type": "tree:Node"
@@ -766,8 +787,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Domaine-des-Monts-de-l'Ourthe",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9203170946058825",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.28228764373792"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2324540135234705",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.822676138235494"
         }
       ],
       "total_children_count": 0,
@@ -783,17 +804,19 @@
       ],
       "triples_metadata": [
         "Domaine-des-Monts-de-l'Ourthe"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "Bouvreuils",
       "triples": [
         {
           "http://example.com/terms#name": "Domaine-des-Bouvreuils",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7766709451365474",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.85049419048161"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0340344176218292",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.64139706919857"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5900.jsonld#171866",
         "@type": "tree:Node"
@@ -801,8 +824,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Domaine-des-Bouvreuils",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7766709451365474",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.85049419048161"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0340344176218292",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.64139706919857"
         }
       ],
       "total_children_count": 0,
@@ -818,17 +841,19 @@
       ],
       "triples_metadata": [
         "Domaine-des-Bouvreuils"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "Ecureuils",
       "triples": [
         {
           "http://example.com/terms#name": "Domaine-des-Ecureuils",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.113753981630607",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.893412475520336"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4280283807178304",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.69627436519174"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5900.jsonld#171866",
         "@type": "tree:Node"
@@ -836,8 +861,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Domaine-des-Ecureuils",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.113753981630607",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.893412475520336"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4280283807178304",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.69627436519174"
         }
       ],
       "total_children_count": 0,
@@ -853,7 +878,8 @@
       ],
       "triples_metadata": [
         "Domaine-des-Ecureuils"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

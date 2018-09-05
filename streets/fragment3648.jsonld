@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "P",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3648.jsonld#69218",
-              "@type": "tree:Node",
-              "token_string": "armentierlaan"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3648.jsonld#69219",
-              "@type": "tree:Node",
-              "token_string": "iperslaan"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "armentierlaan": [
+          "3648",
+          "69218"
+        ],
+        "iperslaan": [
+          "3648",
+          "69219"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment2729.jsonld#5779",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Paul Parmentierlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.986592754098597",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.16344908414001"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.230076931846003",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.54808042930952"
         },
         {
           "http://example.com/terms#name": "Paul Piperslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8282300015005073",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.884814301420334"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2063564165191116",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.90396403855928"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3648.jsonld#69218"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3648.jsonld#69219"
+          ]
+        }
+      ]
     },
     {
       "token_string": "armentierlaan",
       "triples": [
         {
           "http://example.com/terms#name": "Paul Parmentierlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.986592754098597",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.16344908414001"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.230076931846003",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.54808042930952"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3648.jsonld#69217",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Paul Parmentierlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.986592754098597",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.16344908414001"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.230076931846003",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.54808042930952"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Paul Parmentierlaan"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "iperslaan",
       "triples": [
         {
           "http://example.com/terms#name": "Paul Piperslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8282300015005073",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.884814301420334"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2063564165191116",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.90396403855928"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3648.jsonld#69217",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Paul Piperslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8282300015005073",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.884814301420334"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2063564165191116",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.90396403855928"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Paul Piperslaan"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "k",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2139.jsonld#41168",
-              "@type": "tree:Node",
-              "token_string": "vijverstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2139.jsonld#60618",
-              "@type": "tree:Node",
-              "token_string": "baan"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2139.jsonld#94114",
-              "@type": "tree:Node",
-              "token_string": "k"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "vijverstraat": [
+          "2139",
+          "41168"
+        ],
+        "baan": [
+          "2139",
+          "60618"
+        ],
+        "k": [
+          "2139",
+          "94114"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment582.jsonld#4083",
         "@type": "tree:Node"
@@ -62,43 +44,43 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Klakvijverstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.678291977817459",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.648492018219365"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.338308726983976",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.70655351651015"
         },
         {
           "http://example.com/terms#name": "Klakkaertstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9263275815861527",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.68357215637902"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3753751700993737",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.68739953824463"
         },
         {
           "http://example.com/terms#name": "Klakbaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7907908345496786",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.070192092208735"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.447514620905715",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.32869154175236"
         },
         {
           "http://example.com/terms#name": "Klakkaards Reke",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.417417906018845",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.355035852987456"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9634859417557378",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.997086071353436"
         },
         {
           "http://example.com/terms#name": "Klakkaardsplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6385109994878624",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.83111759639152"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.371979609344862",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.26746384230256"
         },
         {
           "http://example.com/terms#name": "Klakkedellestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7979447308125023",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.67448264824683"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.782439265604815",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.1576521879396"
         },
         {
           "http://example.com/terms#name": "Klakkaarderf",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.178619135069253",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.39835979558212"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8311662639542834",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.286985152808235"
         },
         {
           "http://example.com/terms#name": "Klakkaardspad",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.501237301854645",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.4453272054546"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1705171886606673",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.90504739625965"
         }
       ],
       "total_children_count": 13,
@@ -154,17 +136,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2139.jsonld#41168"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2139.jsonld#60618"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2139.jsonld#94114"
+          ]
+        }
+      ]
     },
     {
       "token_string": "vijverstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Klakvijverstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.678291977817459",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.648492018219365"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.338308726983976",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.70655351651015"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2139.jsonld#41167",
         "@type": "tree:Node"
@@ -172,8 +175,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Klakvijverstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.678291977817459",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.648492018219365"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.338308726983976",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.70655351651015"
         }
       ],
       "total_children_count": 0,
@@ -189,17 +192,19 @@
       ],
       "triples_metadata": [
         "Klakvijverstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "baan",
       "triples": [
         {
           "http://example.com/terms#name": "Klakbaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7907908345496786",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.070192092208735"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.447514620905715",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.32869154175236"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2139.jsonld#41167",
         "@type": "tree:Node"
@@ -207,8 +212,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Klakbaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7907908345496786",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.070192092208735"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.447514620905715",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.32869154175236"
         }
       ],
       "total_children_count": 0,
@@ -224,17 +229,19 @@
       ],
       "triples_metadata": [
         "Klakbaan"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "ertstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Klakkaertstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9263275815861527",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.68357215637902"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3753751700993737",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.68739953824463"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2139.jsonld#94115",
         "@type": "tree:Node"
@@ -242,8 +249,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Klakkaertstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9263275815861527",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.68357215637902"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3753751700993737",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.68739953824463"
         }
       ],
       "total_children_count": 0,
@@ -259,17 +266,19 @@
       ],
       "triples_metadata": [
         "Klakkaertstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": " Reke",
       "triples": [
         {
           "http://example.com/terms#name": "Klakkaards Reke",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.417417906018845",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.355035852987456"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9634859417557378",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.997086071353436"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2139.jsonld#95800",
         "@type": "tree:Node"
@@ -277,8 +286,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Klakkaards Reke",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.417417906018845",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.355035852987456"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9634859417557378",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.997086071353436"
         }
       ],
       "total_children_count": 0,
@@ -294,33 +303,22 @@
       ],
       "triples_metadata": [
         "Klakkaards Reke"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "k",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2139.jsonld#94115",
-              "@type": "tree:Node",
-              "token_string": "a"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2139.jsonld#94116",
-              "@type": "tree:Node",
-              "token_string": "edellestraat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "a": [
+          "2139",
+          "94115"
+        ],
+        "edellestraat": [
+          "2139",
+          "94116"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment2139.jsonld#41167",
         "@type": "tree:Node"
@@ -328,33 +326,33 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Klakkaertstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9263275815861527",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.68357215637902"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3753751700993737",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.68739953824463"
         },
         {
           "http://example.com/terms#name": "Klakkaards Reke",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.417417906018845",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.355035852987456"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9634859417557378",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.997086071353436"
         },
         {
           "http://example.com/terms#name": "Klakkaardsplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6385109994878624",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.83111759639152"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.371979609344862",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.26746384230256"
         },
         {
           "http://example.com/terms#name": "Klakkedellestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7979447308125023",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.67448264824683"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.782439265604815",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.1576521879396"
         },
         {
           "http://example.com/terms#name": "Klakkaarderf",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.178619135069253",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.39835979558212"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8311662639542834",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.286985152808235"
         },
         {
           "http://example.com/terms#name": "Klakkaardspad",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.501237301854645",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.4453272054546"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1705171886606673",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.90504739625965"
         }
       ],
       "total_children_count": 10,
@@ -398,33 +396,35 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
-    },
-    {
-      "token_string": "a",
-      "triples": [],
-      "children": [
+      "triples_metadata": [],
+      "childlist": [
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment2139.jsonld#77003",
-              "@type": "tree:Node",
-              "token_string": "ertstraat"
-            }
+            "/streets/fragment2139.jsonld#94115"
           ]
         },
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment2139.jsonld#95799",
-              "@type": "tree:Node",
-              "token_string": "ard"
-            }
+            "/streets/fragment2139.jsonld#94116"
           ]
         }
-      ],
+      ]
+    },
+    {
+      "token_string": "a",
+      "triples": [],
+      "children": {
+        "ertstraat": [
+          "2139",
+          "77003"
+        ],
+        "ard": [
+          "2139",
+          "95799"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment2139.jsonld#94114",
         "@type": "tree:Node"
@@ -432,28 +432,28 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Klakkaertstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9263275815861527",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.68357215637902"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3753751700993737",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.68739953824463"
         },
         {
           "http://example.com/terms#name": "Klakkaards Reke",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.417417906018845",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.355035852987456"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9634859417557378",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.997086071353436"
         },
         {
           "http://example.com/terms#name": "Klakkaardsplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6385109994878624",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.83111759639152"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.371979609344862",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.26746384230256"
         },
         {
           "http://example.com/terms#name": "Klakkaarderf",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.178619135069253",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.39835979558212"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8311662639542834",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.286985152808235"
         },
         {
           "http://example.com/terms#name": "Klakkaardspad",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.501237301854645",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.4453272054546"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1705171886606673",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.90504739625965"
         }
       ],
       "total_children_count": 8,
@@ -491,17 +491,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2139.jsonld#77003"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2139.jsonld#95799"
+          ]
+        }
+      ]
     },
     {
       "token_string": "edellestraat",
       "triples": [
         {
           "http://example.com/terms#name": "Klakkedellestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7979447308125023",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.67448264824683"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.782439265604815",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.1576521879396"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2139.jsonld#94114",
         "@type": "tree:Node"
@@ -509,8 +524,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Klakkedellestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7979447308125023",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.67448264824683"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.782439265604815",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.1576521879396"
         }
       ],
       "total_children_count": 0,
@@ -526,33 +541,22 @@
       ],
       "triples_metadata": [
         "Klakkedellestraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "ard",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2139.jsonld#95800",
-              "@type": "tree:Node",
-              "token_string": "s"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2139.jsonld#95801",
-              "@type": "tree:Node",
-              "token_string": "erf"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "s": [
+          "2139",
+          "95800"
+        ],
+        "erf": [
+          "2139",
+          "95801"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment2139.jsonld#94115",
         "@type": "tree:Node"
@@ -560,23 +564,23 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Klakkaards Reke",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.417417906018845",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.355035852987456"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9634859417557378",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.997086071353436"
         },
         {
           "http://example.com/terms#name": "Klakkaardsplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6385109994878624",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.83111759639152"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.371979609344862",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.26746384230256"
         },
         {
           "http://example.com/terms#name": "Klakkaarderf",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.178619135069253",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.39835979558212"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8311662639542834",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.286985152808235"
         },
         {
           "http://example.com/terms#name": "Klakkaardspad",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.501237301854645",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.4453272054546"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1705171886606673",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.90504739625965"
         }
       ],
       "total_children_count": 6,
@@ -608,33 +612,35 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
-    },
-    {
-      "token_string": "s",
-      "triples": [],
-      "children": [
+      "triples_metadata": [],
+      "childlist": [
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment2139.jsonld#77693",
-              "@type": "tree:Node",
-              "token_string": " Reke"
-            }
+            "/streets/fragment2139.jsonld#95800"
           ]
         },
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment2139.jsonld#95802",
-              "@type": "tree:Node",
-              "token_string": "p"
-            }
+            "/streets/fragment2139.jsonld#95801"
           ]
         }
-      ],
+      ]
+    },
+    {
+      "token_string": "s",
+      "triples": [],
+      "children": {
+        " Reke": [
+          "2139",
+          "77693"
+        ],
+        "p": [
+          "2139",
+          "95802"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment2139.jsonld#95799",
         "@type": "tree:Node"
@@ -642,18 +648,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Klakkaards Reke",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.417417906018845",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.355035852987456"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9634859417557378",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.997086071353436"
         },
         {
           "http://example.com/terms#name": "Klakkaardsplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6385109994878624",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.83111759639152"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.371979609344862",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.26746384230256"
         },
         {
           "http://example.com/terms#name": "Klakkaardspad",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.501237301854645",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.4453272054546"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1705171886606673",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.90504739625965"
         }
       ],
       "total_children_count": 4,
@@ -679,17 +685,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2139.jsonld#77693"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2139.jsonld#95802"
+          ]
+        }
+      ]
     },
     {
       "token_string": "erf",
       "triples": [
         {
           "http://example.com/terms#name": "Klakkaarderf",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.178619135069253",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.39835979558212"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8311662639542834",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.286985152808235"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2139.jsonld#95799",
         "@type": "tree:Node"
@@ -697,8 +718,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Klakkaarderf",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.178619135069253",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.39835979558212"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8311662639542834",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.286985152808235"
         }
       ],
       "total_children_count": 0,
@@ -714,33 +735,22 @@
       ],
       "triples_metadata": [
         "Klakkaarderf"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "p",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2139.jsonld#95803",
-              "@type": "tree:Node",
-              "token_string": "lein"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2139.jsonld#95804",
-              "@type": "tree:Node",
-              "token_string": "ad"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "lein": [
+          "2139",
+          "95803"
+        ],
+        "ad": [
+          "2139",
+          "95804"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment2139.jsonld#95800",
         "@type": "tree:Node"
@@ -748,13 +758,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Klakkaardsplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6385109994878624",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.83111759639152"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.371979609344862",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.26746384230256"
         },
         {
           "http://example.com/terms#name": "Klakkaardspad",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.501237301854645",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.4453272054546"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1705171886606673",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.90504739625965"
         }
       ],
       "total_children_count": 2,
@@ -774,17 +784,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2139.jsonld#95803"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2139.jsonld#95804"
+          ]
+        }
+      ]
     },
     {
       "token_string": "lein",
       "triples": [
         {
           "http://example.com/terms#name": "Klakkaardsplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6385109994878624",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.83111759639152"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.371979609344862",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.26746384230256"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2139.jsonld#95802",
         "@type": "tree:Node"
@@ -792,8 +817,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Klakkaardsplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6385109994878624",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.83111759639152"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.371979609344862",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.26746384230256"
         }
       ],
       "total_children_count": 0,
@@ -809,17 +834,19 @@
       ],
       "triples_metadata": [
         "Klakkaardsplein"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "ad",
       "triples": [
         {
           "http://example.com/terms#name": "Klakkaardspad",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.501237301854645",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.4453272054546"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1705171886606673",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.90504739625965"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2139.jsonld#95802",
         "@type": "tree:Node"
@@ -827,8 +854,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Klakkaardspad",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.501237301854645",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.4453272054546"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1705171886606673",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.90504739625965"
         }
       ],
       "total_children_count": 0,
@@ -844,7 +871,8 @@
       ],
       "triples_metadata": [
         "Klakkaardspad"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

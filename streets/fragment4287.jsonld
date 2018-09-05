@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "Qu",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4287.jsonld#127757",
-              "@type": "tree:Node",
-              "token_string": "evaucamps"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4287.jsonld#127758",
-              "@type": "tree:Node",
-              "token_string": "aregnon"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "evaucamps": [
+          "4287",
+          "127757"
+        ],
+        "aregnon": [
+          "4287",
+          "127758"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4019.jsonld#105605",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Sentier de Quevaucamps",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.090059102377383",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.02530623923748"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3039651937074375",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.864016885221616"
         },
         {
           "http://example.com/terms#name": "Sentier de Quaregnon",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.59449603054887",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.095196964722135"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.765133495016748",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.04901520458257"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4287.jsonld#127757"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4287.jsonld#127758"
+          ]
+        }
+      ]
     },
     {
       "token_string": "evaucamps",
       "triples": [
         {
           "http://example.com/terms#name": "Sentier de Quevaucamps",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.090059102377383",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.02530623923748"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3039651937074375",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.864016885221616"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4287.jsonld#127756",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Sentier de Quevaucamps",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.090059102377383",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.02530623923748"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3039651937074375",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.864016885221616"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Sentier de Quevaucamps"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "aregnon",
       "triples": [
         {
           "http://example.com/terms#name": "Sentier de Quaregnon",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.59449603054887",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.095196964722135"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.765133495016748",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.04901520458257"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4287.jsonld#127756",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Sentier de Quaregnon",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.59449603054887",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.095196964722135"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.765133495016748",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.04901520458257"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Sentier de Quaregnon"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "l",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5928.jsonld#146411",
-              "@type": "tree:Node",
-              "token_string": "imont"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5928.jsonld#146412",
-              "@type": "tree:Node",
-              "token_string": "hain Champs"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5928.jsonld#147186",
-              "@type": "tree:Node",
-              "token_string": "et"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "imont": [
+          "5928",
+          "146411"
+        ],
+        "hain Champs": [
+          "5928",
+          "146412"
+        ],
+        "et": [
+          "5928",
+          "147186"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4487.jsonld#108280",
         "@type": "tree:Node"
@@ -62,18 +44,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Dolimont",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9986408867669665",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.801403768275165"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.675813594398282",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.959878304168505"
         },
         {
           "http://example.com/terms#name": "Rue Dolhain Champs",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.850446783206747",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.801856244002536"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.467262845000016",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.481315304701916"
         },
         {
           "http://example.com/terms#name": "Rue Dolet",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2522750102043",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.368758050455156"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2432806738275675",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.9223303421367"
         }
       ],
       "total_children_count": 3,
@@ -99,17 +81,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5928.jsonld#146411"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5928.jsonld#146412"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5928.jsonld#147186"
+          ]
+        }
+      ]
     },
     {
       "token_string": "imont",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Dolimont",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9986408867669665",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.801403768275165"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.675813594398282",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.959878304168505"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5928.jsonld#146410",
         "@type": "tree:Node"
@@ -117,8 +120,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Dolimont",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9986408867669665",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.801403768275165"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.675813594398282",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.959878304168505"
         }
       ],
       "total_children_count": 0,
@@ -134,17 +137,19 @@
       ],
       "triples_metadata": [
         "Rue Dolimont"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "hain Champs",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Dolhain Champs",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.850446783206747",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.801856244002536"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.467262845000016",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.481315304701916"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5928.jsonld#146410",
         "@type": "tree:Node"
@@ -152,8 +157,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Dolhain Champs",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.850446783206747",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.801856244002536"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.467262845000016",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.481315304701916"
         }
       ],
       "total_children_count": 0,
@@ -169,17 +174,19 @@
       ],
       "triples_metadata": [
         "Rue Dolhain Champs"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "et",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Dolet",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2522750102043",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.368758050455156"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2432806738275675",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.9223303421367"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5928.jsonld#146410",
         "@type": "tree:Node"
@@ -187,8 +194,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Dolet",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2522750102043",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.368758050455156"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2432806738275675",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.9223303421367"
         }
       ],
       "total_children_count": 0,
@@ -204,7 +211,8 @@
       ],
       "triples_metadata": [
         "Rue Dolet"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

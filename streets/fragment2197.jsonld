@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "e",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2197.jsonld#49191",
-              "@type": "tree:Node",
-              "token_string": "beekstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2197.jsonld#49192",
-              "@type": "tree:Node",
-              "token_string": "mstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2197.jsonld#62291",
-              "@type": "tree:Node",
-              "token_string": "straat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "beekstraat": [
+          "2197",
+          "49191"
+        ],
+        "mstraat": [
+          "2197",
+          "49192"
+        ],
+        "straat": [
+          "2197",
+          "62291"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment71.jsonld#31654",
         "@type": "tree:Node"
@@ -62,18 +44,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Muylebeekstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.171748481663989",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.01851841009227"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4834682085405855",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.12365868581532"
         },
         {
           "http://example.com/terms#name": "Muylemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.067438773181924",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.495026133905675"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4100409246504286",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.60440012106754"
         },
         {
           "http://example.com/terms#name": "Muylestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.016657525074545",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.84157242020749"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4685623479095486",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.94270656199885"
         }
       ],
       "total_children_count": 3,
@@ -99,17 +81,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2197.jsonld#49191"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2197.jsonld#49192"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2197.jsonld#62291"
+          ]
+        }
+      ]
     },
     {
       "token_string": "beekstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Muylebeekstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.171748481663989",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.01851841009227"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4834682085405855",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.12365868581532"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2197.jsonld#49190",
         "@type": "tree:Node"
@@ -117,8 +120,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Muylebeekstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.171748481663989",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.01851841009227"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4834682085405855",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.12365868581532"
         }
       ],
       "total_children_count": 0,
@@ -134,17 +137,19 @@
       ],
       "triples_metadata": [
         "Muylebeekstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "mstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Muylemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.067438773181924",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.495026133905675"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4100409246504286",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.60440012106754"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2197.jsonld#49190",
         "@type": "tree:Node"
@@ -152,8 +157,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Muylemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.067438773181924",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.495026133905675"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4100409246504286",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.60440012106754"
         }
       ],
       "total_children_count": 0,
@@ -169,17 +174,19 @@
       ],
       "triples_metadata": [
         "Muylemstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "straat",
       "triples": [
         {
           "http://example.com/terms#name": "Muylestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.016657525074545",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.84157242020749"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4685623479095486",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.94270656199885"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2197.jsonld#49190",
         "@type": "tree:Node"
@@ -187,8 +194,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Muylestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.016657525074545",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.84157242020749"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4685623479095486",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.94270656199885"
         }
       ],
       "total_children_count": 0,
@@ -204,7 +211,8 @@
       ],
       "triples_metadata": [
         "Muylestraat"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

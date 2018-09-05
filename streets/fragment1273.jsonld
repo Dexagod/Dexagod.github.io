@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "P",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1273.jsonld#38524",
-              "@type": "tree:Node",
-              "token_string": "rissestraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1273.jsonld#38525",
-              "@type": "tree:Node",
-              "token_string": "oelaertstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1273.jsonld#39289",
-              "@type": "tree:Node",
-              "token_string": "êcherstraat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "rissestraat": [
+          "1273",
+          "38524"
+        ],
+        "oelaertstraat": [
+          "1273",
+          "38525"
+        ],
+        "êcherstraat": [
+          "1273",
+          "39289"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment1670.jsonld#2310",
         "@type": "tree:Node"
@@ -62,18 +44,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Eduard Prissestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2781867972233982",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.08558570099868"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5466323863878086",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.71574763408873"
         },
         {
           "http://example.com/terms#name": "Eduard Poelaertstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8985900818328068",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.487593425061796"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6357203428593863",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.04209738703235"
         },
         {
           "http://example.com/terms#name": "Eduard Pêcherstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4334404342810827",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.24679748684144"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.497764197976404",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.07849252866648"
         }
       ],
       "total_children_count": 3,
@@ -99,17 +81,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1273.jsonld#38524"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1273.jsonld#38525"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1273.jsonld#39289"
+          ]
+        }
+      ]
     },
     {
       "token_string": "rissestraat",
       "triples": [
         {
           "http://example.com/terms#name": "Eduard Prissestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2781867972233982",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.08558570099868"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5466323863878086",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.71574763408873"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1273.jsonld#38523",
         "@type": "tree:Node"
@@ -117,8 +120,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Eduard Prissestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2781867972233982",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.08558570099868"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5466323863878086",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.71574763408873"
         }
       ],
       "total_children_count": 0,
@@ -134,17 +137,19 @@
       ],
       "triples_metadata": [
         "Eduard Prissestraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "oelaertstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Eduard Poelaertstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8985900818328068",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.487593425061796"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6357203428593863",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.04209738703235"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1273.jsonld#38523",
         "@type": "tree:Node"
@@ -152,8 +157,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Eduard Poelaertstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8985900818328068",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.487593425061796"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6357203428593863",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.04209738703235"
         }
       ],
       "total_children_count": 0,
@@ -169,17 +174,19 @@
       ],
       "triples_metadata": [
         "Eduard Poelaertstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "êcherstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Eduard Pêcherstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4334404342810827",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.24679748684144"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.497764197976404",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.07849252866648"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1273.jsonld#38523",
         "@type": "tree:Node"
@@ -187,8 +194,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Eduard Pêcherstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4334404342810827",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.24679748684144"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.497764197976404",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.07849252866648"
         }
       ],
       "total_children_count": 0,
@@ -204,7 +211,8 @@
       ],
       "triples_metadata": [
         "Eduard Pêcherstraat"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

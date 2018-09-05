@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "J",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2050.jsonld#40318",
-              "@type": "tree:Node",
-              "token_string": "udestraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2050.jsonld#40319",
-              "@type": "tree:Node",
-              "token_string": "onghestraat (Stefaan)(KRU)"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "udestraat": [
+          "2050",
+          "40318"
+        ],
+        "onghestraat (Stefaan)(KRU)": [
+          "2050",
+          "40319"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment289.jsonld#248",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "De Judestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7420482672906163",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.81226384396166"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.994165058698834",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.61398074401658"
         },
         {
           "http://example.com/terms#name": "De Jonghestraat (Stefaan)(KRU)",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6414677930119934",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.79297628782564"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.246868615332306",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.37012135594786"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2050.jsonld#40318"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2050.jsonld#40319"
+          ]
+        }
+      ]
     },
     {
       "token_string": "udestraat",
       "triples": [
         {
           "http://example.com/terms#name": "De Judestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7420482672906163",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.81226384396166"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.994165058698834",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.61398074401658"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2050.jsonld#40317",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "De Judestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7420482672906163",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.81226384396166"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.994165058698834",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.61398074401658"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "De Judestraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "onghestraat (Stefaan)(KRU)",
       "triples": [
         {
           "http://example.com/terms#name": "De Jonghestraat (Stefaan)(KRU)",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6414677930119934",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.79297628782564"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.246868615332306",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.37012135594786"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2050.jsonld#40317",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "De Jonghestraat (Stefaan)(KRU)",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6414677930119934",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.79297628782564"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.246868615332306",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.37012135594786"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "De Jonghestraat (Stefaan)(KRU)"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "m",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1902.jsonld#68700",
-              "@type": "tree:Node",
-              "token_string": "itri Peniakofflaan"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1902.jsonld#68701",
-              "@type": "tree:Node",
-              "token_string": "mereieweg"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "itri Peniakofflaan": [
+          "1902",
+          "68700"
+        ],
+        "mereieweg": [
+          "1902",
+          "68701"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment138.jsonld#464",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Dimitri Peniakofflaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9937297750559235",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.39995496636706"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2345102742649936",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.167074625892404"
         },
         {
           "http://example.com/terms#name": "Dimmereieweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8162244087034445",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.07011365442788"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7774553990146433",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.11888984426693"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1902.jsonld#68700"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1902.jsonld#68701"
+          ]
+        }
+      ]
     },
     {
       "token_string": "itri Peniakofflaan",
       "triples": [
         {
           "http://example.com/terms#name": "Dimitri Peniakofflaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9937297750559235",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.39995496636706"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2345102742649936",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.167074625892404"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1902.jsonld#68699",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Dimitri Peniakofflaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9937297750559235",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.39995496636706"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2345102742649936",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.167074625892404"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Dimitri Peniakofflaan"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "mereieweg",
       "triples": [
         {
           "http://example.com/terms#name": "Dimmereieweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8162244087034445",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.07011365442788"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7774553990146433",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.11888984426693"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1902.jsonld#68699",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Dimmereieweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8162244087034445",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.07011365442788"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7774553990146433",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.11888984426693"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Dimmereieweg"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "F",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5375.jsonld#135704",
-              "@type": "tree:Node",
-              "token_string": "ichermont"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5375.jsonld#135705",
-              "@type": "tree:Node",
-              "token_string": "léquières"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5375.jsonld#150109",
-              "@type": "tree:Node",
-              "token_string": "ranche-Comté"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "ichermont": [
+          "5375",
+          "135704"
+        ],
+        "léquières": [
+          "5375",
+          "135705"
+        ],
+        "ranche-Comté": [
+          "5375",
+          "150109"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment3767.jsonld#104958",
         "@type": "tree:Node"
@@ -62,18 +44,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Clos de Fichermont",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.222208678018085",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.256082533568474"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1011312769557535",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.70332163372767"
         },
         {
           "http://example.com/terms#name": "Clos de Fléquières",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.127954586249142",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.501887895446515"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6633986189290053",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.95365120344027"
         },
         {
           "http://example.com/terms#name": "Clos de Franche-Comté",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.895139757230587",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.589550488973686"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.054452387960604",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.290915730083185"
         }
       ],
       "total_children_count": 3,
@@ -99,17 +81,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5375.jsonld#135704"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5375.jsonld#135705"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5375.jsonld#150109"
+          ]
+        }
+      ]
     },
     {
       "token_string": "ichermont",
       "triples": [
         {
           "http://example.com/terms#name": "Clos de Fichermont",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.222208678018085",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.256082533568474"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1011312769557535",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.70332163372767"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5375.jsonld#135703",
         "@type": "tree:Node"
@@ -117,8 +120,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Clos de Fichermont",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.222208678018085",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.256082533568474"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1011312769557535",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.70332163372767"
         }
       ],
       "total_children_count": 0,
@@ -134,17 +137,19 @@
       ],
       "triples_metadata": [
         "Clos de Fichermont"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "léquières",
       "triples": [
         {
           "http://example.com/terms#name": "Clos de Fléquières",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.127954586249142",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.501887895446515"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6633986189290053",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.95365120344027"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5375.jsonld#135703",
         "@type": "tree:Node"
@@ -152,8 +157,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Clos de Fléquières",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.127954586249142",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.501887895446515"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6633986189290053",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.95365120344027"
         }
       ],
       "total_children_count": 0,
@@ -169,17 +174,19 @@
       ],
       "triples_metadata": [
         "Clos de Fléquières"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "ranche-Comté",
       "triples": [
         {
           "http://example.com/terms#name": "Clos de Franche-Comté",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.895139757230587",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.589550488973686"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.054452387960604",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.290915730083185"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5375.jsonld#135703",
         "@type": "tree:Node"
@@ -187,8 +194,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Clos de Franche-Comté",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.895139757230587",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.589550488973686"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.054452387960604",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.290915730083185"
         }
       ],
       "total_children_count": 0,
@@ -204,7 +211,8 @@
       ],
       "triples_metadata": [
         "Clos de Franche-Comté"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

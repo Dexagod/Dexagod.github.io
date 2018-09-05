@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "u",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6076.jsonld#157728",
-              "@type": "tree:Node",
-              "token_string": "ma Dupuis"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6076.jsonld#157729",
-              "@type": "tree:Node",
-              "token_string": "lay"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6076.jsonld#170648",
-              "@type": "tree:Node",
-              "token_string": "its-Saint-Georges"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "ma Dupuis": [
+          "6076",
+          "157728"
+        ],
+        "lay": [
+          "6076",
+          "157729"
+        ],
+        "its-Saint-Georges": [
+          "6076",
+          "170648"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment3722.jsonld#105492",
         "@type": "tree:Node"
@@ -62,18 +44,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Numa Dupuis",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9517121158130313",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.00569542672314"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6531176321253085",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.71344387642665"
         },
         {
           "http://example.com/terms#name": "Rue Nulay",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9646497455565552",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.09466353326515"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9909427042363217",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.92624422910261"
         },
         {
           "http://example.com/terms#name": "Rue Nuits-Saint-Georges",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.508859161220859",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.08117719147234"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8759151613394587",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.24991237738378"
         }
       ],
       "total_children_count": 3,
@@ -99,17 +81,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6076.jsonld#157728"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6076.jsonld#157729"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6076.jsonld#170648"
+          ]
+        }
+      ]
     },
     {
       "token_string": "ma Dupuis",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Numa Dupuis",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9517121158130313",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.00569542672314"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6531176321253085",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.71344387642665"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6076.jsonld#157727",
         "@type": "tree:Node"
@@ -117,8 +120,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Numa Dupuis",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9517121158130313",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.00569542672314"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6531176321253085",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.71344387642665"
         }
       ],
       "total_children_count": 0,
@@ -134,17 +137,19 @@
       ],
       "triples_metadata": [
         "Rue Numa Dupuis"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "lay",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Nulay",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9646497455565552",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.09466353326515"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9909427042363217",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.92624422910261"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6076.jsonld#157727",
         "@type": "tree:Node"
@@ -152,8 +157,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Nulay",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9646497455565552",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.09466353326515"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9909427042363217",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.92624422910261"
         }
       ],
       "total_children_count": 0,
@@ -169,17 +174,19 @@
       ],
       "triples_metadata": [
         "Rue Nulay"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "its-Saint-Georges",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Nuits-Saint-Georges",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.508859161220859",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.08117719147234"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8759151613394587",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.24991237738378"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6076.jsonld#157727",
         "@type": "tree:Node"
@@ -187,8 +194,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Nuits-Saint-Georges",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.508859161220859",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.08117719147234"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8759151613394587",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.24991237738378"
         }
       ],
       "total_children_count": 0,
@@ -204,7 +211,8 @@
       ],
       "triples_metadata": [
         "Rue Nuits-Saint-Georges"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

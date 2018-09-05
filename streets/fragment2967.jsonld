@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "e",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2967.jsonld#63091",
-              "@type": "tree:Node",
-              "token_string": "straat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2967.jsonld#63092",
-              "@type": "tree:Node",
-              "token_string": "nlaan"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2967.jsonld#85864",
-              "@type": "tree:Node",
-              "token_string": "hof"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "straat": [
+          "2967",
+          "63091"
+        ],
+        "nlaan": [
+          "2967",
+          "63092"
+        ],
+        "hof": [
+          "2967",
+          "85864"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment134.jsonld#13662",
         "@type": "tree:Node"
@@ -62,18 +44,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Vlietestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.221487825845539",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.330962090976435"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7252891888871273",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.23187491754898"
         },
         {
           "http://example.com/terms#name": "Vlietenlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1048602903989866",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.03469106641622"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1019463277707446",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.130325235684964"
         },
         {
           "http://example.com/terms#name": "Vlietehof",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3062280054476156",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.3033857250306"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4728539665508444",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.522762988230895"
         }
       ],
       "total_children_count": 3,
@@ -99,17 +81,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2967.jsonld#63091"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2967.jsonld#63092"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2967.jsonld#85864"
+          ]
+        }
+      ]
     },
     {
       "token_string": "straat",
       "triples": [
         {
           "http://example.com/terms#name": "Vlietestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.221487825845539",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.330962090976435"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7252891888871273",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.23187491754898"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2967.jsonld#63090",
         "@type": "tree:Node"
@@ -117,8 +120,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Vlietestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.221487825845539",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.330962090976435"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7252891888871273",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.23187491754898"
         }
       ],
       "total_children_count": 0,
@@ -134,17 +137,19 @@
       ],
       "triples_metadata": [
         "Vlietestraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "nlaan",
       "triples": [
         {
           "http://example.com/terms#name": "Vlietenlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1048602903989866",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.03469106641622"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1019463277707446",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.130325235684964"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2967.jsonld#63090",
         "@type": "tree:Node"
@@ -152,8 +157,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Vlietenlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1048602903989866",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.03469106641622"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1019463277707446",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.130325235684964"
         }
       ],
       "total_children_count": 0,
@@ -169,17 +174,19 @@
       ],
       "triples_metadata": [
         "Vlietenlaan"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "hof",
       "triples": [
         {
           "http://example.com/terms#name": "Vlietehof",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3062280054476156",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.3033857250306"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4728539665508444",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.522762988230895"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2967.jsonld#63090",
         "@type": "tree:Node"
@@ -187,8 +194,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Vlietehof",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3062280054476156",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.3033857250306"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4728539665508444",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.522762988230895"
         }
       ],
       "total_children_count": 0,
@@ -204,7 +211,8 @@
       ],
       "triples_metadata": [
         "Vlietehof"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

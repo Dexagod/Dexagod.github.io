@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -25,10 +25,11 @@
       "triples": [
         {
           "http://example.com/terms#name": "Makelberghstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9070112306289024",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.08480344658625"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2923815925710564",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.78807533949154"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment497.jsonld#34771",
         "@type": "tree:Node"
@@ -36,8 +37,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Makelberghstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9070112306289024",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.08480344658625"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2923815925710564",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.78807533949154"
         }
       ],
       "total_children_count": 0,
@@ -53,17 +54,19 @@
       ],
       "triples_metadata": [
         "Makelberghstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "hoeve",
       "triples": [
         {
           "http://example.com/terms#name": "Makelhoeve",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7091603141749387",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.751309075683615"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6377265380645603",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.0944850258362"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment497.jsonld#34771",
         "@type": "tree:Node"
@@ -71,8 +74,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Makelhoeve",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7091603141749387",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.751309075683615"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6377265380645603",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.0944850258362"
         }
       ],
       "total_children_count": 0,
@@ -88,33 +91,22 @@
       ],
       "triples_metadata": [
         "Makelhoeve"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "s",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment497.jsonld#19990",
-              "@type": "tree:Node",
-              "token_string": "chrans"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment497.jsonld#19991",
-              "@type": "tree:Node",
-              "token_string": "traat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "chrans": [
+          "497",
+          "19990"
+        ],
+        "traat": [
+          "497",
+          "19991"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment497.jsonld#34771",
         "@type": "tree:Node"
@@ -122,13 +114,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Makelschrans",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.801091946300941",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.15983943486396"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9892507670846014",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.40405978027695"
         },
         {
           "http://example.com/terms#name": "Makelstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2937841251217574",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.24111820802131"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4272165425478924",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.39096433737598"
         }
       ],
       "total_children_count": 2,
@@ -148,17 +140,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment497.jsonld#19990"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment497.jsonld#19991"
+          ]
+        }
+      ]
     },
     {
       "token_string": "chrans",
       "triples": [
         {
           "http://example.com/terms#name": "Makelschrans",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.801091946300941",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.15983943486396"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9892507670846014",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.40405978027695"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment497.jsonld#19989",
         "@type": "tree:Node"
@@ -166,8 +173,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Makelschrans",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.801091946300941",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.15983943486396"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9892507670846014",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.40405978027695"
         }
       ],
       "total_children_count": 0,
@@ -183,17 +190,19 @@
       ],
       "triples_metadata": [
         "Makelschrans"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "traat",
       "triples": [
         {
           "http://example.com/terms#name": "Makelstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2937841251217574",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.24111820802131"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4272165425478924",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.39096433737598"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment497.jsonld#19989",
         "@type": "tree:Node"
@@ -201,8 +210,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Makelstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2937841251217574",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.24111820802131"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4272165425478924",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.39096433737598"
         }
       ],
       "total_children_count": 0,
@@ -218,43 +227,26 @@
       ],
       "triples_metadata": [
         "Makelstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "k",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment497.jsonld#34067",
-              "@type": "tree:Node",
-              "token_string": "reelstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment497.jsonld#34770",
-              "@type": "tree:Node",
-              "token_string": "e"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment497.jsonld#41034",
-              "@type": "tree:Node",
-              "token_string": "ke"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "reelstraat": [
+          "497",
+          "34067"
+        ],
+        "e": [
+          "497",
+          "34770"
+        ],
+        "ke": [
+          "497",
+          "41034"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment83.jsonld#367",
         "@type": "tree:Node"
@@ -262,53 +254,53 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Makelberghstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9070112306289024",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.08480344658625"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2923815925710564",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.78807533949154"
         },
         {
           "http://example.com/terms#name": "Makelaarsstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.258260806215545",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.97838854769209"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9666825961438206",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.35483035644991"
         },
         {
           "http://example.com/terms#name": "Makelhoeve",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7091603141749387",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.751309075683615"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6377265380645603",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.0944850258362"
         },
         {
           "http://example.com/terms#name": "Makelschrans",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.801091946300941",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.15983943486396"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9892507670846014",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.40405978027695"
         },
         {
           "http://example.com/terms#name": "Makelstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2937841251217574",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.24111820802131"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4272165425478924",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.39096433737598"
         },
         {
           "http://example.com/terms#name": "Makelveld",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.183626814665281",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.60437971202074"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4044309645593374",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.94494157055659"
         },
         {
           "http://example.com/terms#name": "Make Bekestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.777386441832978",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.54095129543402"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.699273626491499",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.2100957205741"
         },
         {
           "http://example.com/terms#name": "Makelarenplaats",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.269600476093149",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.54948607887712"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1280837492531033",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.947457451491616"
         },
         {
           "http://example.com/terms#name": "Makebekestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1522607342486912",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.43295373414118"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9459215387562927",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.86385183565776"
         },
         {
           "http://example.com/terms#name": "Makejaas",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5807688656495023",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.45210478834032"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.289430439459714",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.38009488735577"
         }
       ],
       "total_children_count": 23,
@@ -376,27 +368,48 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment497.jsonld#34067"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment497.jsonld#34770"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment497.jsonld#41034"
+          ]
+        }
+      ]
     },
     {
       "token_string": "reelstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Makreelstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.303271831879746",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.336578362634675"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1243106070006643",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.37635315177588"
         },
         {
           "http://example.com/terms#name": "Makreelstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9782026402677046",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.64836403868042"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.354004271775864",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.564731308814835"
         },
         {
           "http://example.com/terms#name": "Makreelstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9782026402677046",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.64836403868042"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.354004271775864",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.564731308814835"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment497.jsonld#25399",
         "@type": "tree:Node"
@@ -404,18 +417,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Makreelstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.303271831879746",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.336578362634675"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1243106070006643",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.37635315177588"
         },
         {
           "http://example.com/terms#name": "Makreelstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9782026402677046",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.64836403868042"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.354004271775864",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.564731308814835"
         },
         {
           "http://example.com/terms#name": "Makreelstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9782026402677046",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.64836403868042"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.354004271775864",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.564731308814835"
         }
       ],
       "total_children_count": 0,
@@ -435,63 +448,34 @@
         "Makreelstraat",
         "Makreelstraat",
         "Makreelstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "e",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment497.jsonld#34771",
-              "@type": "tree:Node",
-              "token_string": "l"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment497.jsonld#70120",
-              "@type": "tree:Node",
-              "token_string": " Bekestraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment497.jsonld#78467",
-              "@type": "tree:Node",
-              "token_string": "veld"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment497.jsonld#99764",
-              "@type": "tree:Node",
-              "token_string": "bekestraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment497.jsonld#181517",
-              "@type": "tree:Node",
-              "token_string": "jaas"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "l": [
+          "497",
+          "34771"
+        ],
+        " Bekestraat": [
+          "497",
+          "70120"
+        ],
+        "veld": [
+          "497",
+          "78467"
+        ],
+        "bekestraat": [
+          "497",
+          "99764"
+        ],
+        "jaas": [
+          "497",
+          "181517"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment497.jsonld#25399",
         "@type": "tree:Node"
@@ -499,53 +483,53 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Makelberghstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9070112306289024",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.08480344658625"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2923815925710564",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.78807533949154"
         },
         {
           "http://example.com/terms#name": "Makelaarsstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.258260806215545",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.97838854769209"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9666825961438206",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.35483035644991"
         },
         {
           "http://example.com/terms#name": "Makelhoeve",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7091603141749387",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.751309075683615"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6377265380645603",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.0944850258362"
         },
         {
           "http://example.com/terms#name": "Makelschrans",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.801091946300941",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.15983943486396"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9892507670846014",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.40405978027695"
         },
         {
           "http://example.com/terms#name": "Makelstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2937841251217574",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.24111820802131"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4272165425478924",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.39096433737598"
         },
         {
           "http://example.com/terms#name": "Makelveld",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.183626814665281",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.60437971202074"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4044309645593374",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.94494157055659"
         },
         {
           "http://example.com/terms#name": "Make Bekestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.777386441832978",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.54095129543402"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.699273626491499",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.2100957205741"
         },
         {
           "http://example.com/terms#name": "Makelarenplaats",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.269600476093149",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.54948607887712"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1280837492531033",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.947457451491616"
         },
         {
           "http://example.com/terms#name": "Makebekestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1522607342486912",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.43295373414118"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9459215387562927",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.86385183565776"
         },
         {
           "http://example.com/terms#name": "Makejaas",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5807688656495023",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.45210478834032"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.289430439459714",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.38009488735577"
         }
       ],
       "total_children_count": 16,
@@ -613,63 +597,65 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment497.jsonld#34771"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment497.jsonld#70120"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment497.jsonld#78467"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment497.jsonld#99764"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment497.jsonld#181517"
+          ]
+        }
+      ]
     },
     {
       "token_string": "l",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment497.jsonld#7227",
-              "@type": "tree:Node",
-              "token_string": "berghstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment497.jsonld#7426",
-              "@type": "tree:Node",
-              "token_string": "hoeve"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment497.jsonld#19989",
-              "@type": "tree:Node",
-              "token_string": "s"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment497.jsonld#53936",
-              "@type": "tree:Node",
-              "token_string": "veld"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment497.jsonld#86456",
-              "@type": "tree:Node",
-              "token_string": "a"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "berghstraat": [
+          "497",
+          "7227"
+        ],
+        "hoeve": [
+          "497",
+          "7426"
+        ],
+        "s": [
+          "497",
+          "19989"
+        ],
+        "veld": [
+          "497",
+          "53936"
+        ],
+        "a": [
+          "497",
+          "86456"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment497.jsonld#34770",
         "@type": "tree:Node"
@@ -677,38 +663,38 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Makelberghstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9070112306289024",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.08480344658625"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2923815925710564",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.78807533949154"
         },
         {
           "http://example.com/terms#name": "Makelaarsstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.258260806215545",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.97838854769209"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9666825961438206",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.35483035644991"
         },
         {
           "http://example.com/terms#name": "Makelhoeve",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7091603141749387",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.751309075683615"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6377265380645603",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.0944850258362"
         },
         {
           "http://example.com/terms#name": "Makelschrans",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.801091946300941",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.15983943486396"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9892507670846014",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.40405978027695"
         },
         {
           "http://example.com/terms#name": "Makelstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2937841251217574",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.24111820802131"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4272165425478924",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.39096433737598"
         },
         {
           "http://example.com/terms#name": "Makelveld",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.183626814665281",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.60437971202074"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4044309645593374",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.94494157055659"
         },
         {
           "http://example.com/terms#name": "Makelarenplaats",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.269600476093149",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.54948607887712"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1280837492531033",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.947457451491616"
         }
       ],
       "total_children_count": 9,
@@ -758,33 +744,53 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
-    },
-    {
-      "token_string": "ke",
-      "triples": [],
-      "children": [
+      "triples_metadata": [],
+      "childlist": [
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment497.jsonld#41036",
-              "@type": "tree:Node",
-              "token_string": "straat"
-            }
+            "/streets/fragment497.jsonld#7227"
           ]
         },
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment497.jsonld#41268",
-              "@type": "tree:Node",
-              "token_string": "gem"
-            }
+            "/streets/fragment497.jsonld#7426"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment497.jsonld#19989"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment497.jsonld#53936"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment497.jsonld#86456"
           ]
         }
-      ],
+      ]
+    },
+    {
+      "token_string": "ke",
+      "triples": [],
+      "children": {
+        "straat": [
+          "497",
+          "41036"
+        ],
+        "gem": [
+          "497",
+          "41268"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment497.jsonld#25399",
         "@type": "tree:Node"
@@ -792,38 +798,38 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Makkegemdries",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9827994581054527",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.52659506436424"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.789590478566246",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.88902942494247"
         },
         {
           "http://example.com/terms#name": "Makkestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.811527397625341",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.2259248478535"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5689955239681055",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.63039534145729"
         },
         {
           "http://example.com/terms#name": "Makkestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.958228291918665",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.97327654133473"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3421346201226525",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.96399940714253"
         },
         {
           "http://example.com/terms#name": "Makkestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.958228291918665",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.97327654133473"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3421346201226525",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.96399940714253"
         },
         {
           "http://example.com/terms#name": "Makkestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.958228291918665",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.97327654133473"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3421346201226525",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.96399940714253"
         },
         {
           "http://example.com/terms#name": "Makkegemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.806104256341842",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.317953938406"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.85053834531228",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.452471442034756"
         },
         {
           "http://example.com/terms#name": "Makkegem",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9006959867545814",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.03004664731797"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.620419215304228",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.12456405983569"
         }
       ],
       "total_children_count": 4,
@@ -858,32 +864,47 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment497.jsonld#41036"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment497.jsonld#41268"
+          ]
+        }
+      ]
     },
     {
       "token_string": "straat",
       "triples": [
         {
           "http://example.com/terms#name": "Makkestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.811527397625341",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.2259248478535"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5689955239681055",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.63039534145729"
         },
         {
           "http://example.com/terms#name": "Makkestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.958228291918665",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.97327654133473"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3421346201226525",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.96399940714253"
         },
         {
           "http://example.com/terms#name": "Makkestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.958228291918665",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.97327654133473"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3421346201226525",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.96399940714253"
         },
         {
           "http://example.com/terms#name": "Makkestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.958228291918665",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.97327654133473"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3421346201226525",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.96399940714253"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment497.jsonld#41034",
         "@type": "tree:Node"
@@ -891,23 +912,23 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Makkestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.811527397625341",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.2259248478535"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5689955239681055",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.63039534145729"
         },
         {
           "http://example.com/terms#name": "Makkestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.958228291918665",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.97327654133473"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3421346201226525",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.96399940714253"
         },
         {
           "http://example.com/terms#name": "Makkestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.958228291918665",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.97327654133473"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3421346201226525",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.96399940714253"
         },
         {
           "http://example.com/terms#name": "Makkestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.958228291918665",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.97327654133473"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3421346201226525",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.96399940714253"
         }
       ],
       "total_children_count": 0,
@@ -929,39 +950,28 @@
         "Makkestraat",
         "Makkestraat",
         "Makkestraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "gem",
       "triples": [
         {
           "http://example.com/terms#name": "Makkegem",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9006959867545814",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.03004664731797"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.620419215304228",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.12456405983569"
         }
       ],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment497.jsonld#41269",
-              "@type": "tree:Node",
-              "token_string": "dries"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment497.jsonld#41270",
-              "@type": "tree:Node",
-              "token_string": "straat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "dries": [
+          "497",
+          "41269"
+        ],
+        "straat": [
+          "497",
+          "41270"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment497.jsonld#41034",
         "@type": "tree:Node"
@@ -969,18 +979,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Makkegemdries",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9827994581054527",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.52659506436424"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.789590478566246",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.88902942494247"
         },
         {
           "http://example.com/terms#name": "Makkegemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.806104256341842",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.317953938406"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.85053834531228",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.452471442034756"
         },
         {
           "http://example.com/terms#name": "Makkegem",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9006959867545814",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.03004664731797"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.620419215304228",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.12456405983569"
         }
       ],
       "total_children_count": 2,
@@ -1008,6 +1018,20 @@
       ],
       "triples_metadata": [
         "Makkegem"
+      ],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment497.jsonld#41269"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment497.jsonld#41270"
+          ]
+        }
       ]
     },
     {
@@ -1015,10 +1039,11 @@
       "triples": [
         {
           "http://example.com/terms#name": "Makkegemdries",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9827994581054527",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.52659506436424"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.789590478566246",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.88902942494247"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment497.jsonld#41268",
         "@type": "tree:Node"
@@ -1026,8 +1051,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Makkegemdries",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9827994581054527",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.52659506436424"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.789590478566246",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.88902942494247"
         }
       ],
       "total_children_count": 0,
@@ -1043,17 +1068,19 @@
       ],
       "triples_metadata": [
         "Makkegemdries"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "straat",
       "triples": [
         {
           "http://example.com/terms#name": "Makkegemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.806104256341842",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.317953938406"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.85053834531228",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.452471442034756"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment497.jsonld#41268",
         "@type": "tree:Node"
@@ -1061,8 +1088,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Makkegemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.806104256341842",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.317953938406"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.85053834531228",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.452471442034756"
         }
       ],
       "total_children_count": 0,
@@ -1078,17 +1105,19 @@
       ],
       "triples_metadata": [
         "Makkegemstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "veld",
       "triples": [
         {
           "http://example.com/terms#name": "Makelveld",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.183626814665281",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.60437971202074"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4044309645593374",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.94494157055659"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment497.jsonld#34771",
         "@type": "tree:Node"
@@ -1096,8 +1125,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Makelveld",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.183626814665281",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.60437971202074"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4044309645593374",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.94494157055659"
         }
       ],
       "total_children_count": 0,
@@ -1113,17 +1142,19 @@
       ],
       "triples_metadata": [
         "Makelveld"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": " Bekestraat",
       "triples": [
         {
           "http://example.com/terms#name": "Make Bekestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.777386441832978",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.54095129543402"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.699273626491499",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.2100957205741"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment497.jsonld#34770",
         "@type": "tree:Node"
@@ -1131,8 +1162,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Make Bekestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.777386441832978",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.54095129543402"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.699273626491499",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.2100957205741"
         }
       ],
       "total_children_count": 0,
@@ -1148,33 +1179,22 @@
       ],
       "triples_metadata": [
         "Make Bekestraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "veld",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment497.jsonld#78468",
-              "@type": "tree:Node",
-              "token_string": "straat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment497.jsonld#78469",
-              "@type": "tree:Node",
-              "token_string": "molenstraat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "straat": [
+          "497",
+          "78468"
+        ],
+        "molenstraat": [
+          "497",
+          "78469"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment497.jsonld#34770",
         "@type": "tree:Node"
@@ -1182,33 +1202,33 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Makeveldstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5280280611110677",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.72243866699213"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.621617795341778",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.650248036440225"
         },
         {
           "http://example.com/terms#name": "Makeveldstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4712475627853814",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.46838557943654"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4083708687948846",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.618043792098696"
         },
         {
           "http://example.com/terms#name": "Makeveldstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4712475627853814",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.46838557943654"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4083708687948846",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.618043792098696"
         },
         {
           "http://example.com/terms#name": "Makeveldstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4712475627853814",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.46838557943654"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4083708687948846",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.618043792098696"
         },
         {
           "http://example.com/terms#name": "Makeveldstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4712475627853814",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.46838557943654"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4083708687948846",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.618043792098696"
         },
         {
           "http://example.com/terms#name": "Makeveldmolenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9639457170947043",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.81467436993547"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2577640709108424",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.35378909426343"
         }
       ],
       "total_children_count": 2,
@@ -1232,37 +1252,52 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment497.jsonld#78468"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment497.jsonld#78469"
+          ]
+        }
+      ]
     },
     {
       "token_string": "straat",
       "triples": [
         {
           "http://example.com/terms#name": "Makeveldstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5280280611110677",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.72243866699213"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.621617795341778",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.650248036440225"
         },
         {
           "http://example.com/terms#name": "Makeveldstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4712475627853814",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.46838557943654"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4083708687948846",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.618043792098696"
         },
         {
           "http://example.com/terms#name": "Makeveldstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4712475627853814",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.46838557943654"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4083708687948846",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.618043792098696"
         },
         {
           "http://example.com/terms#name": "Makeveldstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4712475627853814",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.46838557943654"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4083708687948846",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.618043792098696"
         },
         {
           "http://example.com/terms#name": "Makeveldstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4712475627853814",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.46838557943654"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4083708687948846",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.618043792098696"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment497.jsonld#78467",
         "@type": "tree:Node"
@@ -1270,28 +1305,28 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Makeveldstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5280280611110677",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.72243866699213"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.621617795341778",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.650248036440225"
         },
         {
           "http://example.com/terms#name": "Makeveldstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4712475627853814",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.46838557943654"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4083708687948846",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.618043792098696"
         },
         {
           "http://example.com/terms#name": "Makeveldstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4712475627853814",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.46838557943654"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4083708687948846",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.618043792098696"
         },
         {
           "http://example.com/terms#name": "Makeveldstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4712475627853814",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.46838557943654"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4083708687948846",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.618043792098696"
         },
         {
           "http://example.com/terms#name": "Makeveldstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4712475627853814",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.46838557943654"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4083708687948846",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.618043792098696"
         }
       ],
       "total_children_count": 0,
@@ -1315,17 +1350,19 @@
         "Makeveldstraat",
         "Makeveldstraat",
         "Makeveldstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "molenstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Makeveldmolenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9639457170947043",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.81467436993547"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2577640709108424",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.35378909426343"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment497.jsonld#78467",
         "@type": "tree:Node"
@@ -1333,8 +1370,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Makeveldmolenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9639457170947043",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.81467436993547"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2577640709108424",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.35378909426343"
         }
       ],
       "total_children_count": 0,
@@ -1350,33 +1387,22 @@
       ],
       "triples_metadata": [
         "Makeveldmolenstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "a",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment497.jsonld#86457",
-              "@type": "tree:Node",
-              "token_string": "arsstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment497.jsonld#86458",
-              "@type": "tree:Node",
-              "token_string": "renplaats"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "arsstraat": [
+          "497",
+          "86457"
+        ],
+        "renplaats": [
+          "497",
+          "86458"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment497.jsonld#34771",
         "@type": "tree:Node"
@@ -1384,13 +1410,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Makelaarsstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.258260806215545",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.97838854769209"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9666825961438206",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.35483035644991"
         },
         {
           "http://example.com/terms#name": "Makelarenplaats",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.269600476093149",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.54948607887712"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1280837492531033",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.947457451491616"
         }
       ],
       "total_children_count": 2,
@@ -1410,17 +1436,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment497.jsonld#86457"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment497.jsonld#86458"
+          ]
+        }
+      ]
     },
     {
       "token_string": "arsstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Makelaarsstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.258260806215545",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.97838854769209"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9666825961438206",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.35483035644991"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment497.jsonld#86456",
         "@type": "tree:Node"
@@ -1428,8 +1469,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Makelaarsstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.258260806215545",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.97838854769209"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9666825961438206",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.35483035644991"
         }
       ],
       "total_children_count": 0,
@@ -1445,17 +1486,19 @@
       ],
       "triples_metadata": [
         "Makelaarsstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "renplaats",
       "triples": [
         {
           "http://example.com/terms#name": "Makelarenplaats",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.269600476093149",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.54948607887712"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1280837492531033",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.947457451491616"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment497.jsonld#86456",
         "@type": "tree:Node"
@@ -1463,8 +1506,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Makelarenplaats",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.269600476093149",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.54948607887712"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1280837492531033",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.947457451491616"
         }
       ],
       "total_children_count": 0,
@@ -1480,17 +1523,19 @@
       ],
       "triples_metadata": [
         "Makelarenplaats"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "bekestraat",
       "triples": [
         {
           "http://example.com/terms#name": "Makebekestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1522607342486912",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.43295373414118"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9459215387562927",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.86385183565776"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment497.jsonld#34770",
         "@type": "tree:Node"
@@ -1498,8 +1543,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Makebekestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1522607342486912",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.43295373414118"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9459215387562927",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.86385183565776"
         }
       ],
       "total_children_count": 0,
@@ -1515,17 +1560,19 @@
       ],
       "triples_metadata": [
         "Makebekestraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "jaas",
       "triples": [
         {
           "http://example.com/terms#name": "Makejaas",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5807688656495023",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.45210478834032"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.289430439459714",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.38009488735577"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment497.jsonld#34770",
         "@type": "tree:Node"
@@ -1533,8 +1580,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Makejaas",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5807688656495023",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.45210478834032"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.289430439459714",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.38009488735577"
         }
       ],
       "total_children_count": 0,
@@ -1550,7 +1597,8 @@
       ],
       "triples_metadata": [
         "Makejaas"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

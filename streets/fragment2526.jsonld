@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "N",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2526.jsonld#58923",
-              "@type": "tree:Node",
-              "token_string": "ormandië"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2526.jsonld#58924",
-              "@type": "tree:Node",
-              "token_string": "azareth"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2526.jsonld#101374",
-              "@type": "tree:Node",
-              "token_string": "eromhof"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "ormandië": [
+          "2526",
+          "58923"
+        ],
+        "azareth": [
+          "2526",
+          "58924"
+        ],
+        "eromhof": [
+          "2526",
+          "101374"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment338.jsonld#8314",
         "@type": "tree:Node"
@@ -62,18 +44,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Klein Normandië",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.932430441292914",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.4428144700371"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0652107150769208",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.09161621471084"
         },
         {
           "http://example.com/terms#name": "Klein Nazareth",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.640569725511035",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.980730778154566"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8614716228073265",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.07515679053897"
         },
         {
           "http://example.com/terms#name": "Klein Neromhof",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.052940436491331",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.42702143481924"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9778557275349407",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.549083907957886"
         }
       ],
       "total_children_count": 3,
@@ -99,17 +81,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2526.jsonld#58923"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2526.jsonld#58924"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2526.jsonld#101374"
+          ]
+        }
+      ]
     },
     {
       "token_string": "ormandië",
       "triples": [
         {
           "http://example.com/terms#name": "Klein Normandië",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.932430441292914",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.4428144700371"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0652107150769208",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.09161621471084"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2526.jsonld#58922",
         "@type": "tree:Node"
@@ -117,8 +120,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Klein Normandië",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.932430441292914",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.4428144700371"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0652107150769208",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.09161621471084"
         }
       ],
       "total_children_count": 0,
@@ -134,17 +137,19 @@
       ],
       "triples_metadata": [
         "Klein Normandië"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "azareth",
       "triples": [
         {
           "http://example.com/terms#name": "Klein Nazareth",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.640569725511035",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.980730778154566"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8614716228073265",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.07515679053897"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2526.jsonld#58922",
         "@type": "tree:Node"
@@ -152,8 +157,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Klein Nazareth",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.640569725511035",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.980730778154566"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8614716228073265",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.07515679053897"
         }
       ],
       "total_children_count": 0,
@@ -169,17 +174,19 @@
       ],
       "triples_metadata": [
         "Klein Nazareth"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "eromhof",
       "triples": [
         {
           "http://example.com/terms#name": "Klein Neromhof",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.052940436491331",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.42702143481924"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9778557275349407",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.549083907957886"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2526.jsonld#58922",
         "@type": "tree:Node"
@@ -187,8 +194,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Klein Neromhof",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.052940436491331",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.42702143481924"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9778557275349407",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.549083907957886"
         }
       ],
       "total_children_count": 0,
@@ -204,7 +211,8 @@
       ],
       "triples_metadata": [
         "Klein Neromhof"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

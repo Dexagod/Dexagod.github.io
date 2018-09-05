@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "o",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1677.jsonld#50950",
-              "@type": "tree:Node",
-              "token_string": "tiaulaan"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1677.jsonld#50951",
-              "@type": "tree:Node",
-              "token_string": "rtmanslaan"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1677.jsonld#51037",
-              "@type": "tree:Node",
-              "token_string": "nseelelaan"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "tiaulaan": [
+          "1677",
+          "50950"
+        ],
+        "rtmanslaan": [
+          "1677",
+          "50951"
+        ],
+        "nseelelaan": [
+          "1677",
+          "51037"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment2297.jsonld#9133",
         "@type": "tree:Node"
@@ -62,18 +44,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Burgemeester Potiaulaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9960046592860197",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.547195740896036"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.094639980187947",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.30481196624749"
         },
         {
           "http://example.com/terms#name": "Burgemeester Portmanslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.30481101140716",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.40368897389574"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9174036747495435",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.18811740764173"
         },
         {
           "http://example.com/terms#name": "Burgemeester Ponseelelaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3346873697934867",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.97499298264235"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.016163922591986",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.83255571107322"
         }
       ],
       "total_children_count": 3,
@@ -99,17 +81,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1677.jsonld#50950"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1677.jsonld#50951"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1677.jsonld#51037"
+          ]
+        }
+      ]
     },
     {
       "token_string": "tiaulaan",
       "triples": [
         {
           "http://example.com/terms#name": "Burgemeester Potiaulaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9960046592860197",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.547195740896036"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.094639980187947",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.30481196624749"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1677.jsonld#50949",
         "@type": "tree:Node"
@@ -117,8 +120,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Burgemeester Potiaulaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9960046592860197",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.547195740896036"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.094639980187947",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.30481196624749"
         }
       ],
       "total_children_count": 0,
@@ -134,17 +137,19 @@
       ],
       "triples_metadata": [
         "Burgemeester Potiaulaan"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "rtmanslaan",
       "triples": [
         {
           "http://example.com/terms#name": "Burgemeester Portmanslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.30481101140716",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.40368897389574"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9174036747495435",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.18811740764173"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1677.jsonld#50949",
         "@type": "tree:Node"
@@ -152,8 +157,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Burgemeester Portmanslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.30481101140716",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.40368897389574"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9174036747495435",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.18811740764173"
         }
       ],
       "total_children_count": 0,
@@ -169,17 +174,19 @@
       ],
       "triples_metadata": [
         "Burgemeester Portmanslaan"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "nseelelaan",
       "triples": [
         {
           "http://example.com/terms#name": "Burgemeester Ponseelelaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3346873697934867",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.97499298264235"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.016163922591986",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.83255571107322"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1677.jsonld#50949",
         "@type": "tree:Node"
@@ -187,8 +194,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Burgemeester Ponseelelaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3346873697934867",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.97499298264235"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.016163922591986",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.83255571107322"
         }
       ],
       "total_children_count": 0,
@@ -204,7 +211,8 @@
       ],
       "triples_metadata": [
         "Burgemeester Ponseelelaan"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

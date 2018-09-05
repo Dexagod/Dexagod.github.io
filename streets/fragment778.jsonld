@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "ze",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment778.jsonld#23440",
-              "@type": "tree:Node",
-              "token_string": "weide"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment778.jsonld#81186",
-              "@type": "tree:Node",
-              "token_string": "l"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "weide": [
+          "778",
+          "23440"
+        ],
+        "l": [
+          "778",
+          "81186"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment29.jsonld#708",
         "@type": "tree:Node"
@@ -52,23 +40,23 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Kezelbergstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.795296447415784",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.271935695850885"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7623300153275867",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.91665702052321"
         },
         {
           "http://example.com/terms#name": "Kezeweide",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.33313105660958",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.434437260077374"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3332554968862933",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.992108088204986"
         },
         {
           "http://example.com/terms#name": "Kezelberg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5739967825689187",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.180868049493434"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6105967716432996",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.57831315908823"
         },
         {
           "http://example.com/terms#name": "Kezelfort",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.914505328161499",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.451117592508574"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0510387233323297",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.88254064475266"
         }
       ],
       "total_children_count": 5,
@@ -100,17 +88,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment778.jsonld#23440"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment778.jsonld#81186"
+          ]
+        }
+      ]
     },
     {
       "token_string": "weide",
       "triples": [
         {
           "http://example.com/terms#name": "Kezeweide",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.33313105660958",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.434437260077374"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3332554968862933",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.992108088204986"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment778.jsonld#23438",
         "@type": "tree:Node"
@@ -118,8 +121,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Kezeweide",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.33313105660958",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.434437260077374"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3332554968862933",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.992108088204986"
         }
       ],
       "total_children_count": 0,
@@ -135,17 +138,19 @@
       ],
       "triples_metadata": [
         "Kezeweide"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "straat",
       "triples": [
         {
           "http://example.com/terms#name": "Kezelbergstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.795296447415784",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.271935695850885"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7623300153275867",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.91665702052321"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment778.jsonld#81187",
         "@type": "tree:Node"
@@ -153,8 +158,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Kezelbergstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.795296447415784",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.271935695850885"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7623300153275867",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.91665702052321"
         }
       ],
       "total_children_count": 0,
@@ -170,33 +175,22 @@
       ],
       "triples_metadata": [
         "Kezelbergstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "l",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment778.jsonld#81187",
-              "@type": "tree:Node",
-              "token_string": "berg"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment778.jsonld#81188",
-              "@type": "tree:Node",
-              "token_string": "fort"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "berg": [
+          "778",
+          "81187"
+        ],
+        "fort": [
+          "778",
+          "81188"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment778.jsonld#23438",
         "@type": "tree:Node"
@@ -204,18 +198,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Kezelbergstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.795296447415784",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.271935695850885"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7623300153275867",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.91665702052321"
         },
         {
           "http://example.com/terms#name": "Kezelberg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5739967825689187",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.180868049493434"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6105967716432996",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.57831315908823"
         },
         {
           "http://example.com/terms#name": "Kezelfort",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.914505328161499",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.451117592508574"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0510387233323297",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.88254064475266"
         }
       ],
       "total_children_count": 3,
@@ -241,29 +235,37 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment778.jsonld#81187"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment778.jsonld#81188"
+          ]
+        }
+      ]
     },
     {
       "token_string": "berg",
       "triples": [
         {
           "http://example.com/terms#name": "Kezelberg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5739967825689187",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.180868049493434"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6105967716432996",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.57831315908823"
         }
       ],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment778.jsonld#48029",
-              "@type": "tree:Node",
-              "token_string": "straat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "straat": [
+          "778",
+          "48029"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment778.jsonld#81186",
         "@type": "tree:Node"
@@ -271,13 +273,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Kezelbergstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.795296447415784",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.271935695850885"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7623300153275867",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.91665702052321"
         },
         {
           "http://example.com/terms#name": "Kezelberg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5739967825689187",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.180868049493434"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6105967716432996",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.57831315908823"
         }
       ],
       "total_children_count": 1,
@@ -299,6 +301,14 @@
       ],
       "triples_metadata": [
         "Kezelberg"
+      ],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment778.jsonld#48029"
+          ]
+        }
       ]
     },
     {
@@ -306,10 +316,11 @@
       "triples": [
         {
           "http://example.com/terms#name": "Kezelfort",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.914505328161499",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.451117592508574"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0510387233323297",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.88254064475266"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment778.jsonld#81186",
         "@type": "tree:Node"
@@ -317,8 +328,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Kezelfort",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.914505328161499",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.451117592508574"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0510387233323297",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.88254064475266"
         }
       ],
       "total_children_count": 0,
@@ -334,7 +345,8 @@
       ],
       "triples_metadata": [
         "Kezelfort"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

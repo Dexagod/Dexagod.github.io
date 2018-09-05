@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "es ",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5687.jsonld#157512",
-              "@type": "tree:Node",
-              "token_string": "Amis de la Nature"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5687.jsonld#157513",
-              "@type": "tree:Node",
-              "token_string": "Eclos"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5687.jsonld#157514",
-              "@type": "tree:Node",
-              "token_string": "Fonzays"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "Amis de la Nature": [
+          "5687",
+          "157512"
+        ],
+        "Eclos": [
+          "5687",
+          "157513"
+        ],
+        "Fonzays": [
+          "5687",
+          "157514"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment5808.jsonld#157508",
         "@type": "tree:Node"
@@ -62,18 +44,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Camping les Amis de la Nature",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.106730177826263",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.34540198070644"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6655120438818796",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.34671203550228"
         },
         {
           "http://example.com/terms#name": "Camping les Eclos",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6261563857461043",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.1364117519815"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5596163505789145",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.00895195933943"
         },
         {
           "http://example.com/terms#name": "Camping les Fonzays",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.560521377140608",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.17264377606856"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0110903329919223",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.61765705306407"
         }
       ],
       "total_children_count": 3,
@@ -99,17 +81,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5687.jsonld#157512"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5687.jsonld#157513"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5687.jsonld#157514"
+          ]
+        }
+      ]
     },
     {
       "token_string": "Amis de la Nature",
       "triples": [
         {
           "http://example.com/terms#name": "Camping les Amis de la Nature",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.106730177826263",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.34540198070644"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6655120438818796",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.34671203550228"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5687.jsonld#157511",
         "@type": "tree:Node"
@@ -117,8 +120,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Camping les Amis de la Nature",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.106730177826263",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.34540198070644"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6655120438818796",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.34671203550228"
         }
       ],
       "total_children_count": 0,
@@ -134,17 +137,19 @@
       ],
       "triples_metadata": [
         "Camping les Amis de la Nature"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "Eclos",
       "triples": [
         {
           "http://example.com/terms#name": "Camping les Eclos",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6261563857461043",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.1364117519815"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5596163505789145",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.00895195933943"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5687.jsonld#157511",
         "@type": "tree:Node"
@@ -152,8 +157,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Camping les Eclos",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6261563857461043",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.1364117519815"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5596163505789145",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.00895195933943"
         }
       ],
       "total_children_count": 0,
@@ -169,17 +174,19 @@
       ],
       "triples_metadata": [
         "Camping les Eclos"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "Fonzays",
       "triples": [
         {
           "http://example.com/terms#name": "Camping les Fonzays",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.560521377140608",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.17264377606856"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0110903329919223",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.61765705306407"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5687.jsonld#157511",
         "@type": "tree:Node"
@@ -187,8 +194,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Camping les Fonzays",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.560521377140608",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.17264377606856"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0110903329919223",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.61765705306407"
         }
       ],
       "total_children_count": 0,
@@ -204,7 +211,8 @@
       ],
       "triples_metadata": [
         "Camping les Fonzays"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

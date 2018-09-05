@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "p",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6101.jsonld#170107",
-              "@type": "tree:Node",
-              "token_string": "illon"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6101.jsonld#170108",
-              "@type": "tree:Node",
-              "token_string": "e"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "illon": [
+          "6101",
+          "170107"
+        ],
+        "e": [
+          "6101",
+          "170108"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4232.jsonld#106990",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue du Papillon",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.125476755741561",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.00654807450847"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8601247076468037",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.13528971113762"
         },
         {
           "http://example.com/terms#name": "Rue du Pape",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.288217978486311",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.295334204224496"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6182975478705974",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.60268465348712"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6101.jsonld#170107"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6101.jsonld#170108"
+          ]
+        }
+      ]
     },
     {
       "token_string": "illon",
       "triples": [
         {
           "http://example.com/terms#name": "Rue du Papillon",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.125476755741561",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.00654807450847"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8601247076468037",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.13528971113762"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6101.jsonld#170106",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue du Papillon",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.125476755741561",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.00654807450847"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8601247076468037",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.13528971113762"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Rue du Papillon"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "e",
       "triples": [
         {
           "http://example.com/terms#name": "Rue du Pape",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.288217978486311",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.295334204224496"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6182975478705974",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.60268465348712"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6101.jsonld#170106",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue du Pape",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.288217978486311",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.295334204224496"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6182975478705974",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.60268465348712"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Rue du Pape"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

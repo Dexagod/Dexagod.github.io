@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "F",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6359.jsonld#129808",
-              "@type": "tree:Node",
-              "token_string": "erme du Grand Sart"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6359.jsonld#129809",
-              "@type": "tree:Node",
-              "token_string": "ontaine Belle Jeannette"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "erme du Grand Sart": [
+          "6359",
+          "129808"
+        ],
+        "ontaine Belle Jeannette": [
+          "6359",
+          "129809"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment1322.jsonld#33447",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "R Ferme du Grand Sart",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2078604521944736",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.95351728016298"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.411469666849433",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.65211128548277"
         },
         {
           "http://example.com/terms#name": "R Fontaine Belle Jeannette",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2269650954100557",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.62709122942947"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.121370468731666",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.794910662678184"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6359.jsonld#129808"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6359.jsonld#129809"
+          ]
+        }
+      ]
     },
     {
       "token_string": "erme du Grand Sart",
       "triples": [
         {
           "http://example.com/terms#name": "R Ferme du Grand Sart",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2078604521944736",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.95351728016298"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.411469666849433",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.65211128548277"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6359.jsonld#129807",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "R Ferme du Grand Sart",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2078604521944736",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.95351728016298"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.411469666849433",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.65211128548277"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "R Ferme du Grand Sart"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "ontaine Belle Jeannette",
       "triples": [
         {
           "http://example.com/terms#name": "R Fontaine Belle Jeannette",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2269650954100557",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.62709122942947"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.121370468731666",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.794910662678184"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6359.jsonld#129807",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "R Fontaine Belle Jeannette",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2269650954100557",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.62709122942947"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.121370468731666",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.794910662678184"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "R Fontaine Belle Jeannette"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

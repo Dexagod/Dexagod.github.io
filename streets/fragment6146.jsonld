@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "t",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6146.jsonld#158067",
-              "@type": "tree:Node",
-              "token_string": "'Pays"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6146.jsonld#158068",
-              "@type": "tree:Node",
-              "token_string": "oufè"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "'Pays": [
+          "6146",
+          "158067"
+        ],
+        "oufè": [
+          "6146",
+          "158068"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4682.jsonld#106273",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue du Mat'Pays",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9759925634876456",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.437917233207905"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5636853043537453",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.16154023490581"
         },
         {
           "http://example.com/terms#name": "Rue du Matoufè",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.906167246482598",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.1430371877411"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2044412617296816",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.00808218102216"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6146.jsonld#158067"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6146.jsonld#158068"
+          ]
+        }
+      ]
     },
     {
       "token_string": "'Pays",
       "triples": [
         {
           "http://example.com/terms#name": "Rue du Mat'Pays",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9759925634876456",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.437917233207905"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5636853043537453",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.16154023490581"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6146.jsonld#158066",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue du Mat'Pays",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9759925634876456",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.437917233207905"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5636853043537453",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.16154023490581"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Rue du Mat'Pays"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "oufè",
       "triples": [
         {
           "http://example.com/terms#name": "Rue du Matoufè",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.906167246482598",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.1430371877411"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2044412617296816",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.00808218102216"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6146.jsonld#158066",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue du Matoufè",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.906167246482598",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.1430371877411"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2044412617296816",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.00808218102216"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Rue du Matoufè"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

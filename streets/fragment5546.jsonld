@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "è",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5546.jsonld#164869",
-              "@type": "tree:Node",
-              "token_string": "heux"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5546.jsonld#164870",
-              "@type": "tree:Node",
-              "token_string": "gnîres"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "heux": [
+          "5546",
+          "164869"
+        ],
+        "gnîres": [
+          "5546",
+          "164870"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment3795.jsonld#105304",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue des Tèheux",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2363346568585003",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.88598814360886"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.35898979893974",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.19334899065876"
         },
         {
           "http://example.com/terms#name": "Rue des Tègnîres",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1162301497283647",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.54162597866789"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.603257603992249",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.405008663944535"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5546.jsonld#164869"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5546.jsonld#164870"
+          ]
+        }
+      ]
     },
     {
       "token_string": "heux",
       "triples": [
         {
           "http://example.com/terms#name": "Rue des Tèheux",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2363346568585003",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.88598814360886"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.35898979893974",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.19334899065876"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5546.jsonld#164868",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue des Tèheux",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2363346568585003",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.88598814360886"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.35898979893974",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.19334899065876"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Rue des Tèheux"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "gnîres",
       "triples": [
         {
           "http://example.com/terms#name": "Rue des Tègnîres",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1162301497283647",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.54162597866789"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.603257603992249",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.405008663944535"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5546.jsonld#164868",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue des Tègnîres",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1162301497283647",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.54162597866789"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.603257603992249",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.405008663944535"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Rue des Tègnîres"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

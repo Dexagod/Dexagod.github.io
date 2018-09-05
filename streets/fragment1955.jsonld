@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "van ",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1955.jsonld#41862",
-              "@type": "tree:Node",
-              "token_string": "Hobokenstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1955.jsonld#41863",
-              "@type": "tree:Node",
-              "token_string": "Reysschootlaan"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1955.jsonld#63408",
-              "@type": "tree:Node",
-              "token_string": "Maldereplein"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "Hobokenstraat": [
+          "1955",
+          "41862"
+        ],
+        "Reysschootlaan": [
+          "1955",
+          "41863"
+        ],
+        "Maldereplein": [
+          "1955",
+          "63408"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment1578.jsonld#14063",
         "@type": "tree:Node"
@@ -62,18 +44,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Pieter van Hobokenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.583219095741428",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.6846908943032"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2847263130341284",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.11707681508288"
         },
         {
           "http://example.com/terms#name": "Pieter van Reysschootlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7153114769189237",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.3056602487825"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.277940085793382",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.45231006860076"
         },
         {
           "http://example.com/terms#name": "Pieter van Maldereplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.056908913166969",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.63441908354761"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.604205091385685",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.88850982109933"
         }
       ],
       "total_children_count": 3,
@@ -99,17 +81,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1955.jsonld#41862"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1955.jsonld#41863"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1955.jsonld#63408"
+          ]
+        }
+      ]
     },
     {
       "token_string": "Hobokenstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Pieter van Hobokenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.583219095741428",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.6846908943032"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2847263130341284",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.11707681508288"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1955.jsonld#41861",
         "@type": "tree:Node"
@@ -117,8 +120,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Pieter van Hobokenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.583219095741428",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.6846908943032"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2847263130341284",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.11707681508288"
         }
       ],
       "total_children_count": 0,
@@ -134,17 +137,19 @@
       ],
       "triples_metadata": [
         "Pieter van Hobokenstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "Reysschootlaan",
       "triples": [
         {
           "http://example.com/terms#name": "Pieter van Reysschootlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7153114769189237",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.3056602487825"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.277940085793382",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.45231006860076"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1955.jsonld#41861",
         "@type": "tree:Node"
@@ -152,8 +157,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Pieter van Reysschootlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7153114769189237",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.3056602487825"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.277940085793382",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.45231006860076"
         }
       ],
       "total_children_count": 0,
@@ -169,17 +174,19 @@
       ],
       "triples_metadata": [
         "Pieter van Reysschootlaan"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "Maldereplein",
       "triples": [
         {
           "http://example.com/terms#name": "Pieter van Maldereplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.056908913166969",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.63441908354761"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.604205091385685",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.88850982109933"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1955.jsonld#41861",
         "@type": "tree:Node"
@@ -187,8 +194,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Pieter van Maldereplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.056908913166969",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.63441908354761"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.604205091385685",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.88850982109933"
         }
       ],
       "total_children_count": 0,
@@ -204,7 +211,8 @@
       ],
       "triples_metadata": [
         "Pieter van Maldereplein"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

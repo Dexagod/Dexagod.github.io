@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "p",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment702.jsonld#34671",
-              "@type": "tree:Node",
-              "token_string": "enrooisedijk"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment702.jsonld#34672",
-              "@type": "tree:Node",
-              "token_string": "svoordestraat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "enrooisedijk": [
+          "702",
+          "34671"
+        ],
+        "svoordestraat": [
+          "702",
+          "34672"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment290.jsonld#190",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Ipenrooisedijk",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9020435968542126",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.704709270004074"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5813736260605213",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.23218360748731"
         },
         {
           "http://example.com/terms#name": "Ipsvoordestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1127552036249044",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.678798219310444"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0366046950278895",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.69612000602041"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment702.jsonld#34671"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment702.jsonld#34672"
+          ]
+        }
+      ]
     },
     {
       "token_string": "enrooisedijk",
       "triples": [
         {
           "http://example.com/terms#name": "Ipenrooisedijk",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9020435968542126",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.704709270004074"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5813736260605213",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.23218360748731"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment702.jsonld#34670",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Ipenrooisedijk",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9020435968542126",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.704709270004074"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5813736260605213",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.23218360748731"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Ipenrooisedijk"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "svoordestraat",
       "triples": [
         {
           "http://example.com/terms#name": "Ipsvoordestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1127552036249044",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.678798219310444"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0366046950278895",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.69612000602041"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment702.jsonld#34670",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Ipsvoordestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1127552036249044",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.678798219310444"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0366046950278895",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.69612000602041"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Ipsvoordestraat"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "us",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6521.jsonld#81901",
-              "@type": "tree:Node",
-              "token_string": "hoeksken"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6521.jsonld#81902",
-              "@type": "tree:Node",
-              "token_string": "dreef"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "hoeksken": [
+          "6521",
+          "81901"
+        ],
+        "dreef": [
+          "6521",
+          "81902"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment328.jsonld#3284",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Dorushoeksken",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.876514618708516",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.27243490825017"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.33438067678209",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.46607491444233"
         },
         {
           "http://example.com/terms#name": "Dorusdreef",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.698726743545461",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.27223693078431"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0407085063172037",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.9208133324865"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6521.jsonld#81901"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6521.jsonld#81902"
+          ]
+        }
+      ]
     },
     {
       "token_string": "hoeksken",
       "triples": [
         {
           "http://example.com/terms#name": "Dorushoeksken",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.876514618708516",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.27243490825017"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.33438067678209",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.46607491444233"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6521.jsonld#81900",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Dorushoeksken",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.876514618708516",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.27243490825017"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.33438067678209",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.46607491444233"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Dorushoeksken"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "dreef",
       "triples": [
         {
           "http://example.com/terms#name": "Dorusdreef",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.698726743545461",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.27223693078431"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0407085063172037",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.9208133324865"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6521.jsonld#81900",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Dorusdreef",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.698726743545461",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.27223693078431"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0407085063172037",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.9208133324865"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Dorusdreef"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -25,32 +25,20 @@
       "triples": [
         {
           "http://example.com/terms#name": "Montigny",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0858605277399977",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.832367647361046"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.825589828364292",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.122867761394154"
         }
       ],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5641.jsonld#82322",
-              "@type": "tree:Node",
-              "token_string": "straat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5641.jsonld#82323",
-              "@type": "tree:Node",
-              "token_string": "plein"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "straat": [
+          "5641",
+          "82322"
+        ],
+        "plein": [
+          "5641",
+          "82323"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment3283.jsonld#6253",
         "@type": "tree:Node"
@@ -58,18 +46,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Montignystraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5257117633553543",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.30326247003865"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1373070864508787",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.18817800228283"
         },
         {
           "http://example.com/terms#name": "Montignyplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.330903981707067",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.81002771021937"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5797401233861765",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.3213184552979"
         },
         {
           "http://example.com/terms#name": "Montigny",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0858605277399977",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.832367647361046"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.825589828364292",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.122867761394154"
         }
       ],
       "total_children_count": 2,
@@ -97,6 +85,20 @@
       ],
       "triples_metadata": [
         "Montigny"
+      ],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5641.jsonld#82322"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5641.jsonld#82323"
+          ]
+        }
       ]
     },
     {
@@ -104,10 +106,11 @@
       "triples": [
         {
           "http://example.com/terms#name": "Montignystraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5257117633553543",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.30326247003865"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1373070864508787",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.18817800228283"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5641.jsonld#82321",
         "@type": "tree:Node"
@@ -115,8 +118,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Montignystraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5257117633553543",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.30326247003865"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1373070864508787",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.18817800228283"
         }
       ],
       "total_children_count": 0,
@@ -132,17 +135,19 @@
       ],
       "triples_metadata": [
         "Montignystraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "plein",
       "triples": [
         {
           "http://example.com/terms#name": "Montignyplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.330903981707067",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.81002771021937"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5797401233861765",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.3213184552979"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5641.jsonld#82321",
         "@type": "tree:Node"
@@ -150,8 +155,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Montignyplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.330903981707067",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.81002771021937"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5797401233861765",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.3213184552979"
         }
       ],
       "total_children_count": 0,
@@ -167,7 +172,8 @@
       ],
       "triples_metadata": [
         "Montignyplein"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

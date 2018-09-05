@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "y",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1717.jsonld#50898",
-              "@type": "tree:Node",
-              "token_string": "genbaan"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1717.jsonld#50899",
-              "@type": "tree:Node",
-              "token_string": "setterstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1717.jsonld#66378",
-              "@type": "tree:Node",
-              "token_string": "enstraat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "genbaan": [
+          "1717",
+          "50898"
+        ],
+        "setterstraat": [
+          "1717",
+          "50899"
+        ],
+        "enstraat": [
+          "1717",
+          "66378"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment325.jsonld#312",
         "@type": "tree:Node"
@@ -62,18 +44,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Neygenbaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.818761217998632",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.31543227340454"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5339040126169414",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.08176849183246"
         },
         {
           "http://example.com/terms#name": "Neysetterstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2757363424250663",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.44068010468705"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.814928328962335",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.607366304463596"
         },
         {
           "http://example.com/terms#name": "Neyenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0154486867433405",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.65917919305099"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.682063141332308",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.273133664442184"
         }
       ],
       "total_children_count": 3,
@@ -99,17 +81,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1717.jsonld#50898"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1717.jsonld#50899"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment1717.jsonld#66378"
+          ]
+        }
+      ]
     },
     {
       "token_string": "genbaan",
       "triples": [
         {
           "http://example.com/terms#name": "Neygenbaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.818761217998632",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.31543227340454"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5339040126169414",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.08176849183246"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1717.jsonld#50897",
         "@type": "tree:Node"
@@ -117,8 +120,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Neygenbaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.818761217998632",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.31543227340454"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5339040126169414",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.08176849183246"
         }
       ],
       "total_children_count": 0,
@@ -134,17 +137,19 @@
       ],
       "triples_metadata": [
         "Neygenbaan"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "setterstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Neysetterstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2757363424250663",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.44068010468705"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.814928328962335",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.607366304463596"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1717.jsonld#50897",
         "@type": "tree:Node"
@@ -152,8 +157,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Neysetterstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2757363424250663",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.44068010468705"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.814928328962335",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.607366304463596"
         }
       ],
       "total_children_count": 0,
@@ -169,17 +174,19 @@
       ],
       "triples_metadata": [
         "Neysetterstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "enstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Neyenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0154486867433405",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.65917919305099"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.682063141332308",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.273133664442184"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1717.jsonld#50897",
         "@type": "tree:Node"
@@ -187,8 +194,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Neyenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0154486867433405",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.65917919305099"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.682063141332308",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.273133664442184"
         }
       ],
       "total_children_count": 0,
@@ -204,7 +211,8 @@
       ],
       "triples_metadata": [
         "Neyenstraat"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "J",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2483.jsonld#71446",
-              "@type": "tree:Node",
-              "token_string": "anssenslaan"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2483.jsonld#86352",
-              "@type": "tree:Node",
-              "token_string": "o"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "anssenslaan": [
+          "2483",
+          "71446"
+        ],
+        "o": [
+          "2483",
+          "86352"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment1985.jsonld#2848",
         "@type": "tree:Node"
@@ -52,23 +40,23 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Frans Janssenslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.536671667675906",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.124511273224805"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9347846916197318",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.14552357439012"
         },
         {
           "http://example.com/terms#name": "Frans Jozef De Gronckelstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.031582015330623",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.60926906750913"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1074960197325896",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.534690480477984"
         },
         {
           "http://example.com/terms#name": "Frans Jozef Blieckstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.62206707355477",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.76950502231935"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.156693728114233",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.05229337179467"
         },
         {
           "http://example.com/terms#name": "Frans Jochemsplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3618637308166273",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.961049719390935"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4328645843397725",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.84327534574329"
         }
       ],
       "total_children_count": 6,
@@ -100,17 +88,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2483.jsonld#71446"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2483.jsonld#86352"
+          ]
+        }
+      ]
     },
     {
       "token_string": "anssenslaan",
       "triples": [
         {
           "http://example.com/terms#name": "Frans Janssenslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.536671667675906",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.124511273224805"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9347846916197318",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.14552357439012"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2483.jsonld#71445",
         "@type": "tree:Node"
@@ -118,8 +121,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Frans Janssenslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.536671667675906",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.124511273224805"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9347846916197318",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.14552357439012"
         }
       ],
       "total_children_count": 0,
@@ -135,17 +138,19 @@
       ],
       "triples_metadata": [
         "Frans Janssenslaan"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "De Gronckelstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Frans Jozef De Gronckelstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.031582015330623",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.60926906750913"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1074960197325896",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.534690480477984"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2483.jsonld#86353",
         "@type": "tree:Node"
@@ -153,8 +158,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Frans Jozef De Gronckelstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.031582015330623",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.60926906750913"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1074960197325896",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.534690480477984"
         }
       ],
       "total_children_count": 0,
@@ -170,17 +175,19 @@
       ],
       "triples_metadata": [
         "Frans Jozef De Gronckelstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "Blieckstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Frans Jozef Blieckstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.62206707355477",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.76950502231935"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.156693728114233",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.05229337179467"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2483.jsonld#86353",
         "@type": "tree:Node"
@@ -188,8 +195,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Frans Jozef Blieckstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.62206707355477",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.76950502231935"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.156693728114233",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.05229337179467"
         }
       ],
       "total_children_count": 0,
@@ -205,33 +212,22 @@
       ],
       "triples_metadata": [
         "Frans Jozef Blieckstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "o",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2483.jsonld#86353",
-              "@type": "tree:Node",
-              "token_string": "zef "
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2483.jsonld#86354",
-              "@type": "tree:Node",
-              "token_string": "chemsplein"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "zef ": [
+          "2483",
+          "86353"
+        ],
+        "chemsplein": [
+          "2483",
+          "86354"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment2483.jsonld#71445",
         "@type": "tree:Node"
@@ -239,18 +235,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Frans Jozef De Gronckelstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.031582015330623",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.60926906750913"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1074960197325896",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.534690480477984"
         },
         {
           "http://example.com/terms#name": "Frans Jozef Blieckstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.62206707355477",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.76950502231935"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.156693728114233",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.05229337179467"
         },
         {
           "http://example.com/terms#name": "Frans Jochemsplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3618637308166273",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.961049719390935"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4328645843397725",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.84327534574329"
         }
       ],
       "total_children_count": 4,
@@ -276,33 +272,35 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
-    },
-    {
-      "token_string": "zef ",
-      "triples": [],
-      "children": [
+      "triples_metadata": [],
+      "childlist": [
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment2483.jsonld#80386",
-              "@type": "tree:Node",
-              "token_string": "De Gronckelstraat"
-            }
+            "/streets/fragment2483.jsonld#86353"
           ]
         },
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment2483.jsonld#80387",
-              "@type": "tree:Node",
-              "token_string": "Blieckstraat"
-            }
+            "/streets/fragment2483.jsonld#86354"
           ]
         }
-      ],
+      ]
+    },
+    {
+      "token_string": "zef ",
+      "triples": [],
+      "children": {
+        "De Gronckelstraat": [
+          "2483",
+          "80386"
+        ],
+        "Blieckstraat": [
+          "2483",
+          "80387"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment2483.jsonld#86352",
         "@type": "tree:Node"
@@ -310,13 +308,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Frans Jozef De Gronckelstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.031582015330623",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.60926906750913"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1074960197325896",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.534690480477984"
         },
         {
           "http://example.com/terms#name": "Frans Jozef Blieckstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.62206707355477",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.76950502231935"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.156693728114233",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.05229337179467"
         }
       ],
       "total_children_count": 2,
@@ -336,17 +334,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2483.jsonld#80386"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2483.jsonld#80387"
+          ]
+        }
+      ]
     },
     {
       "token_string": "chemsplein",
       "triples": [
         {
           "http://example.com/terms#name": "Frans Jochemsplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3618637308166273",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.961049719390935"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4328645843397725",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.84327534574329"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2483.jsonld#86352",
         "@type": "tree:Node"
@@ -354,8 +367,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Frans Jochemsplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3618637308166273",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.961049719390935"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4328645843397725",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.84327534574329"
         }
       ],
       "total_children_count": 0,
@@ -371,7 +384,8 @@
       ],
       "triples_metadata": [
         "Frans Jochemsplein"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "-",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6491.jsonld#11246",
-              "@type": "tree:Node",
-              "token_string": "Van de Perrestraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6491.jsonld#11247",
-              "@type": "tree:Node",
-              "token_string": "Peetersstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6491.jsonld#69374",
-              "@type": "tree:Node",
-              "token_string": "Sanodreef"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "Van de Perrestraat": [
+          "6491",
+          "11246"
+        ],
+        "Peetersstraat": [
+          "6491",
+          "11247"
+        ],
+        "Sanodreef": [
+          "6491",
+          "69374"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment190.jsonld#690",
         "@type": "tree:Node"
@@ -62,18 +44,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Dr-Van de Perrestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.791658678681633",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.23096524852579"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7285120173338937",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.0556944936896"
         },
         {
           "http://example.com/terms#name": "Dr-Peetersstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4821485559942595",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.58118497419797"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2081284314623257",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.452153657638384"
         },
         {
           "http://example.com/terms#name": "Dr-Sanodreef",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.823731655488743",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.7651257778945"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.568490576941066",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.765917421590515"
         }
       ],
       "total_children_count": 3,
@@ -99,17 +81,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6491.jsonld#11246"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6491.jsonld#11247"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6491.jsonld#69374"
+          ]
+        }
+      ]
     },
     {
       "token_string": "Van de Perrestraat",
       "triples": [
         {
           "http://example.com/terms#name": "Dr-Van de Perrestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.791658678681633",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.23096524852579"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7285120173338937",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.0556944936896"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6491.jsonld#11245",
         "@type": "tree:Node"
@@ -117,8 +120,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Dr-Van de Perrestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.791658678681633",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.23096524852579"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7285120173338937",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.0556944936896"
         }
       ],
       "total_children_count": 0,
@@ -134,17 +137,19 @@
       ],
       "triples_metadata": [
         "Dr-Van de Perrestraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "Peetersstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Dr-Peetersstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4821485559942595",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.58118497419797"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2081284314623257",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.452153657638384"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6491.jsonld#11245",
         "@type": "tree:Node"
@@ -152,8 +157,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Dr-Peetersstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4821485559942595",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.58118497419797"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2081284314623257",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.452153657638384"
         }
       ],
       "total_children_count": 0,
@@ -169,17 +174,19 @@
       ],
       "triples_metadata": [
         "Dr-Peetersstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "Sanodreef",
       "triples": [
         {
           "http://example.com/terms#name": "Dr-Sanodreef",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.823731655488743",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.7651257778945"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.568490576941066",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.765917421590515"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6491.jsonld#11245",
         "@type": "tree:Node"
@@ -187,8 +194,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Dr-Sanodreef",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.823731655488743",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.7651257778945"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.568490576941066",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.765917421590515"
         }
       ],
       "total_children_count": 0,
@@ -204,7 +211,8 @@
       ],
       "triples_metadata": [
         "Dr-Sanodreef"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

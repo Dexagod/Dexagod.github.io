@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "S",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2906.jsonld#39614",
-              "@type": "tree:Node",
-              "token_string": "oetemanslaan"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2906.jsonld#84784",
-              "@type": "tree:Node",
-              "token_string": "tynenstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2906.jsonld#90355",
-              "@type": "tree:Node",
-              "token_string": "c"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "oetemanslaan": [
+          "2906",
+          "39614"
+        ],
+        "tynenstraat": [
+          "2906",
+          "84784"
+        ],
+        "c": [
+          "2906",
+          "90355"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment2932.jsonld#26554",
         "@type": "tree:Node"
@@ -62,23 +44,23 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Léon Soetemanslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1345660854086863",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.38479661032703"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.728926865737864",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.43594899941826"
         },
         {
           "http://example.com/terms#name": "Léon Schreursvest",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4695129731076606",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.089325546368016"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2662550286161944",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.6451524824014"
         },
         {
           "http://example.com/terms#name": "Léon Stynenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5469316045649855",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.99021461212347"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.950598845100924",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.048768070730894"
         },
         {
           "http://example.com/terms#name": "Léon Scampartstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4728376897989457",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.402582326086346"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4638893051994017",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.97203813364265"
         }
       ],
       "total_children_count": 5,
@@ -110,17 +92,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2906.jsonld#39614"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2906.jsonld#84784"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2906.jsonld#90355"
+          ]
+        }
+      ]
     },
     {
       "token_string": "oetemanslaan",
       "triples": [
         {
           "http://example.com/terms#name": "Léon Soetemanslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1345660854086863",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.38479661032703"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.728926865737864",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.43594899941826"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2906.jsonld#39613",
         "@type": "tree:Node"
@@ -128,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Léon Soetemanslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1345660854086863",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.38479661032703"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.728926865737864",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.43594899941826"
         }
       ],
       "total_children_count": 0,
@@ -145,17 +148,19 @@
       ],
       "triples_metadata": [
         "Léon Soetemanslaan"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "tynenstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Léon Stynenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5469316045649855",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.99021461212347"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.950598845100924",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.048768070730894"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2906.jsonld#39613",
         "@type": "tree:Node"
@@ -163,8 +168,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Léon Stynenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5469316045649855",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.99021461212347"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.950598845100924",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.048768070730894"
         }
       ],
       "total_children_count": 0,
@@ -180,33 +185,22 @@
       ],
       "triples_metadata": [
         "Léon Stynenstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "c",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2906.jsonld#90356",
-              "@type": "tree:Node",
-              "token_string": "hreursvest"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2906.jsonld#90357",
-              "@type": "tree:Node",
-              "token_string": "ampartstraat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "hreursvest": [
+          "2906",
+          "90356"
+        ],
+        "ampartstraat": [
+          "2906",
+          "90357"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment2906.jsonld#39613",
         "@type": "tree:Node"
@@ -214,13 +208,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Léon Schreursvest",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4695129731076606",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.089325546368016"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2662550286161944",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.6451524824014"
         },
         {
           "http://example.com/terms#name": "Léon Scampartstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4728376897989457",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.402582326086346"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4638893051994017",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.97203813364265"
         }
       ],
       "total_children_count": 2,
@@ -240,17 +234,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2906.jsonld#90356"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2906.jsonld#90357"
+          ]
+        }
+      ]
     },
     {
       "token_string": "hreursvest",
       "triples": [
         {
           "http://example.com/terms#name": "Léon Schreursvest",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4695129731076606",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.089325546368016"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2662550286161944",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.6451524824014"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2906.jsonld#90355",
         "@type": "tree:Node"
@@ -258,8 +267,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Léon Schreursvest",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4695129731076606",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.089325546368016"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2662550286161944",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.6451524824014"
         }
       ],
       "total_children_count": 0,
@@ -275,17 +284,19 @@
       ],
       "triples_metadata": [
         "Léon Schreursvest"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "ampartstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Léon Scampartstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4728376897989457",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.402582326086346"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4638893051994017",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.97203813364265"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2906.jsonld#90355",
         "@type": "tree:Node"
@@ -293,8 +304,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Léon Scampartstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4728376897989457",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.402582326086346"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4638893051994017",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.97203813364265"
         }
       ],
       "total_children_count": 0,
@@ -310,7 +321,8 @@
       ],
       "triples_metadata": [
         "Léon Scampartstraat"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

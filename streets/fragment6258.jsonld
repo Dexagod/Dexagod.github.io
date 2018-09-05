@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "Ré",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6258.jsonld#138665",
-              "@type": "tree:Node",
-              "token_string": "sistants"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6258.jsonld#138666",
-              "@type": "tree:Node",
-              "token_string": "collets"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "sistants": [
+          "6258",
+          "138665"
+        ],
+        "collets": [
+          "6258",
+          "138666"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4060.jsonld#105748",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Place des Résistants",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.359384676339042",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.69664370662212"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.003984160504933",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.38762991893357"
         },
         {
           "http://example.com/terms#name": "Place des Récollets",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0999777935467945",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.88834992499075"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0893062110217744",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.9898127633133"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6258.jsonld#138665"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6258.jsonld#138666"
+          ]
+        }
+      ]
     },
     {
       "token_string": "sistants",
       "triples": [
         {
           "http://example.com/terms#name": "Place des Résistants",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.359384676339042",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.69664370662212"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.003984160504933",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.38762991893357"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6258.jsonld#138664",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Place des Résistants",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.359384676339042",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.69664370662212"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.003984160504933",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.38762991893357"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Place des Résistants"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "collets",
       "triples": [
         {
           "http://example.com/terms#name": "Place des Récollets",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0999777935467945",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.88834992499075"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0893062110217744",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.9898127633133"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6258.jsonld#138664",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Place des Récollets",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0999777935467945",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.88834992499075"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0893062110217744",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.9898127633133"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Place des Récollets"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

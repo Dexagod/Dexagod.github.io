@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "t",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5660.jsonld#134732",
-              "@type": "tree:Node",
-              "token_string": "hiegem"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5660.jsonld#139408",
-              "@type": "tree:Node",
-              "token_string": "our de l'Eglise"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5660.jsonld#173419",
-              "@type": "tree:Node",
-              "token_string": "r"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "hiegem": [
+          "5660",
+          "134732"
+        ],
+        "our de l'Eglise": [
+          "5660",
+          "139408"
+        ],
+        "r": [
+          "5660",
+          "173419"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4273.jsonld#109422",
         "@type": "tree:Node"
@@ -62,23 +44,23 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Autribu",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7427007698718695",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.15049440993484"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.902396758428431",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.37290684271151"
         },
         {
           "http://example.com/terms#name": "Rue Authiegem",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.726125327233086",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.364135970460396"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0022652209509597",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.30477107189326"
         },
         {
           "http://example.com/terms#name": "Rue Autour de l'Eglise",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8276625636997657",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.746423105877014"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.348589474537499",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.10478057716252"
         },
         {
           "http://example.com/terms#name": "Rue Autre-Côté-de-l'Eau",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.841858054302844",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.98488646387678"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5161477865961746",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.98486893961627"
         }
       ],
       "total_children_count": 5,
@@ -110,17 +92,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5660.jsonld#134732"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5660.jsonld#139408"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5660.jsonld#173419"
+          ]
+        }
+      ]
     },
     {
       "token_string": "hiegem",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Authiegem",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.726125327233086",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.364135970460396"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0022652209509597",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.30477107189326"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5660.jsonld#134730",
         "@type": "tree:Node"
@@ -128,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Authiegem",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.726125327233086",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.364135970460396"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0022652209509597",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.30477107189326"
         }
       ],
       "total_children_count": 0,
@@ -145,17 +148,19 @@
       ],
       "triples_metadata": [
         "Rue Authiegem"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "our de l'Eglise",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Autour de l'Eglise",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8276625636997657",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.746423105877014"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.348589474537499",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.10478057716252"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5660.jsonld#134730",
         "@type": "tree:Node"
@@ -163,8 +168,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Autour de l'Eglise",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8276625636997657",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.746423105877014"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.348589474537499",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.10478057716252"
         }
       ],
       "total_children_count": 0,
@@ -180,33 +185,22 @@
       ],
       "triples_metadata": [
         "Rue Autour de l'Eglise"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "r",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5660.jsonld#173420",
-              "@type": "tree:Node",
-              "token_string": "ibu"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5660.jsonld#173421",
-              "@type": "tree:Node",
-              "token_string": "e-Côté-de-l'Eau"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "ibu": [
+          "5660",
+          "173420"
+        ],
+        "e-Côté-de-l'Eau": [
+          "5660",
+          "173421"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment5660.jsonld#134730",
         "@type": "tree:Node"
@@ -214,13 +208,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Autribu",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7427007698718695",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.15049440993484"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.902396758428431",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.37290684271151"
         },
         {
           "http://example.com/terms#name": "Rue Autre-Côté-de-l'Eau",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.841858054302844",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.98488646387678"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5161477865961746",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.98486893961627"
         }
       ],
       "total_children_count": 2,
@@ -240,17 +234,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5660.jsonld#173420"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5660.jsonld#173421"
+          ]
+        }
+      ]
     },
     {
       "token_string": "ibu",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Autribu",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7427007698718695",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.15049440993484"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.902396758428431",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.37290684271151"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5660.jsonld#173419",
         "@type": "tree:Node"
@@ -258,8 +267,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Autribu",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7427007698718695",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.15049440993484"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.902396758428431",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.37290684271151"
         }
       ],
       "total_children_count": 0,
@@ -275,17 +284,19 @@
       ],
       "triples_metadata": [
         "Rue Autribu"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "e-Côté-de-l'Eau",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Autre-Côté-de-l'Eau",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.841858054302844",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.98488646387678"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5161477865961746",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.98486893961627"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5660.jsonld#173419",
         "@type": "tree:Node"
@@ -293,8 +304,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Autre-Côté-de-l'Eau",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.841858054302844",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.98488646387678"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5161477865961746",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.98486893961627"
         }
       ],
       "total_children_count": 0,
@@ -310,7 +321,8 @@
       ],
       "triples_metadata": [
         "Rue Autre-Côté-de-l'Eau"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

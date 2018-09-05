@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "bry",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3412.jsonld#50433",
-              "@type": "tree:Node",
-              "token_string": "straat (Lode)"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3412.jsonld#50434",
-              "@type": "tree:Node",
-              "token_string": "laan"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "straat (Lode)": [
+          "3412",
+          "50433"
+        ],
+        "laan": [
+          "3412",
+          "50434"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment2205.jsonld#6584",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Sobrystraat (Lode)",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.358858149330571",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.41410950823761"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2447986394806896",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.106693744884595"
         },
         {
           "http://example.com/terms#name": "Sobrylaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4635768838109344",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.30676043836716"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7189485948813257",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.517836876778276"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3412.jsonld#50433"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment3412.jsonld#50434"
+          ]
+        }
+      ]
     },
     {
       "token_string": "straat (Lode)",
       "triples": [
         {
           "http://example.com/terms#name": "Sobrystraat (Lode)",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.358858149330571",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.41410950823761"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2447986394806896",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.106693744884595"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3412.jsonld#50432",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Sobrystraat (Lode)",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.358858149330571",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.41410950823761"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2447986394806896",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.106693744884595"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Sobrystraat (Lode)"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "laan",
       "triples": [
         {
           "http://example.com/terms#name": "Sobrylaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4635768838109344",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.30676043836716"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7189485948813257",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.517836876778276"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3412.jsonld#50432",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Sobrylaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4635768838109344",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.30676043836716"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7189485948813257",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.517836876778276"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Sobrylaan"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

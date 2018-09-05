@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -25,10 +25,11 @@
       "triples": [
         {
           "http://example.com/terms#name": "Place du Tram",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.130893919229867",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.448269701109346"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8406607677648723",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.400193430174696"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4807.jsonld#122603",
         "@type": "tree:Node"
@@ -36,8 +37,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Place du Tram",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.130893919229867",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.448269701109346"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8406607677648723",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.400193430174696"
         }
       ],
       "total_children_count": 0,
@@ -53,17 +54,19 @@
       ],
       "triples_metadata": [
         "Place du Tram"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "nsvaal",
       "triples": [
         {
           "http://example.com/terms#name": "Place du Transvaal",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.113764219261479",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.88683640875766"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8902814245335136",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.835480870673514"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4807.jsonld#122603",
         "@type": "tree:Node"
@@ -71,8 +74,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Place du Transvaal",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.113764219261479",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.88683640875766"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8902814245335136",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.835480870673514"
         }
       ],
       "total_children_count": 0,
@@ -88,33 +91,22 @@
       ],
       "triples_metadata": [
         "Place du Transvaal"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "a",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4807.jsonld#118143",
-              "@type": "tree:Node",
-              "token_string": "m"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4807.jsonld#118144",
-              "@type": "tree:Node",
-              "token_string": "nsvaal"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "m": [
+          "4807",
+          "118143"
+        ],
+        "nsvaal": [
+          "4807",
+          "118144"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4807.jsonld#138286",
         "@type": "tree:Node"
@@ -122,13 +114,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Place du Tram",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.130893919229867",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.448269701109346"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8406607677648723",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.400193430174696"
         },
         {
           "http://example.com/terms#name": "Place du Transvaal",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.113764219261479",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.88683640875766"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8902814245335136",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.835480870673514"
         }
       ],
       "total_children_count": 2,
@@ -148,17 +140,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4807.jsonld#118143"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4807.jsonld#118144"
+          ]
+        }
+      ]
     },
     {
       "token_string": "y",
       "triples": [
         {
           "http://example.com/terms#name": "Place du Try",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.954982752919945",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.775525807626344"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.165266598713192",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.703185593635"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4807.jsonld#138286",
         "@type": "tree:Node"
@@ -166,8 +173,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Place du Try",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.954982752919945",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.775525807626344"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.165266598713192",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.703185593635"
         }
       ],
       "total_children_count": 0,
@@ -183,63 +190,34 @@
       ],
       "triples_metadata": [
         "Place du Try"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "T",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4807.jsonld#138286",
-              "@type": "tree:Node",
-              "token_string": "r"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4807.jsonld#140640",
-              "@type": "tree:Node",
-              "token_string": "i"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4807.jsonld#168326",
-              "@type": "tree:Node",
-              "token_string": "erminus"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4807.jsonld#168327",
-              "@type": "tree:Node",
-              "token_string": "héâtre"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4807.jsonld#172713",
-              "@type": "tree:Node",
-              "token_string": "omb"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "r": [
+          "4807",
+          "138286"
+        ],
+        "i": [
+          "4807",
+          "140640"
+        ],
+        "erminus": [
+          "4807",
+          "168326"
+        ],
+        "héâtre": [
+          "4807",
+          "168327"
+        ],
+        "omb": [
+          "4807",
+          "172713"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4643.jsonld#105073",
         "@type": "tree:Node"
@@ -247,123 +225,123 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Place du Tram",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.130893919229867",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.448269701109346"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8406607677648723",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.400193430174696"
         },
         {
           "http://example.com/terms#name": "Place du Transvaal",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.113764219261479",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.88683640875766"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8902814245335136",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.835480870673514"
         },
         {
           "http://example.com/terms#name": "Place du Tribunal",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.257208487300901",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.239459389505306"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5362744385833693",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.18575795184139"
         },
         {
           "http://example.com/terms#name": "Place du Tilleul",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.881597830434673",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.68574884835962"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.258646234771084",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.7282187868541"
         },
         {
           "http://example.com/terms#name": "Place du Tilleul",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8411053817698946",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.37192079129206"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.01959221336717",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.77912589510553"
         },
         {
           "http://example.com/terms#name": "Place du Tilleul",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8411053817698946",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.37192079129206"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.01959221336717",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.77912589510553"
         },
         {
           "http://example.com/terms#name": "Place du Tilleul",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8411053817698946",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.37192079129206"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.01959221336717",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.77912589510553"
         },
         {
           "http://example.com/terms#name": "Place du Tilleul",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.971582108625135",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.581533825632675"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.980359123350794",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.73099969709565"
         },
         {
           "http://example.com/terms#name": "Place du Tilleul",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.971582108625135",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.581533825632675"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.980359123350794",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.73099969709565"
         },
         {
           "http://example.com/terms#name": "Place du Tilleul",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3973646751860542",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.68991674222094"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6475790552093064",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.56842173158653"
         },
         {
           "http://example.com/terms#name": "Place du Tilleul",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7551718502920743",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.20186519568056"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7226826444254812",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.70979054145583"
         },
         {
           "http://example.com/terms#name": "Place du Tilleul",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.426464294493628",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.43582402951574"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.931858533356354",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.45953369943831"
         },
         {
           "http://example.com/terms#name": "Place du Tilleul",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.906822407677457",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.41697797705068"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0321693638162164",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.04074371649101"
         },
         {
           "http://example.com/terms#name": "Place du Tilleul",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.66112449855732",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.03973801694868"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8252342215962716",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.77515434616042"
         },
         {
           "http://example.com/terms#name": "Place du Tige",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.695934805137109",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.15357762032936"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.787916054202562",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.11016813801835"
         },
         {
           "http://example.com/terms#name": "Place du Tige",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4609285252981676",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.12785485444191"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.50152087428134",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.579708519745445"
         },
         {
           "http://example.com/terms#name": "Place du Tige",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4609285252981676",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.12785485444191"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.50152087428134",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.579708519745445"
         },
         {
           "http://example.com/terms#name": "Place du Tige",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4609285252981676",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.12785485444191"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.50152087428134",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.579708519745445"
         },
         {
           "http://example.com/terms#name": "Place du Tige",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4609285252981676",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.12785485444191"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.50152087428134",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.579708519745445"
         },
         {
           "http://example.com/terms#name": "Place du Tombeux",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4611150720016814",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.31900235364765"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0358009024971837",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.127853056127414"
         },
         {
           "http://example.com/terms#name": "Place du Terminus",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2477052594036198",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.43770615073217"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.566050594181536",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.273894879088324"
         },
         {
           "http://example.com/terms#name": "Place du Théâtre",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.204069433789423",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.91410713950894"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8972024075898757",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.76252799988414"
         },
         {
           "http://example.com/terms#name": "Place du Tombois",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2934804485945754",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.57383784202398"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2134040789269362",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.18262688576291"
         },
         {
           "http://example.com/terms#name": "Place du Treizième de Ligne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5571399448762633",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.66318730543827"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8736061589732196",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.26829616618362"
         }
       ],
       "total_children_count": 18,
@@ -445,53 +423,61 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4807.jsonld#138286"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4807.jsonld#140640"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4807.jsonld#168326"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4807.jsonld#168327"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4807.jsonld#172713"
+          ]
+        }
+      ]
     },
     {
       "token_string": "r",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4807.jsonld#122603",
-              "@type": "tree:Node",
-              "token_string": "a"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4807.jsonld#122604",
-              "@type": "tree:Node",
-              "token_string": "y"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4618.jsonld#123200",
-              "@type": "tree:Node",
-              "token_string": "i"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4807.jsonld#174814",
-              "@type": "tree:Node",
-              "token_string": "eizième de Ligne"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "a": [
+          "4807",
+          "122603"
+        ],
+        "y": [
+          "4807",
+          "122604"
+        ],
+        "i": [
+          "4618",
+          "123200"
+        ],
+        "eizième de Ligne": [
+          "4807",
+          "174814"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4807.jsonld#138285",
         "@type": "tree:Node"
@@ -499,38 +485,38 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Place du Tram",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.130893919229867",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.448269701109346"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8406607677648723",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.400193430174696"
         },
         {
           "http://example.com/terms#name": "Place du Transvaal",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.113764219261479",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.88683640875766"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8902814245335136",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.835480870673514"
         },
         {
           "http://example.com/terms#name": "Place du Try",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.954982752919945",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.775525807626344"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.165266598713192",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.703185593635"
         },
         {
           "http://example.com/terms#name": "Place du Tribunal",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.257208487300901",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.239459389505306"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5362744385833693",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.18575795184139"
         },
         {
           "http://example.com/terms#name": "Place du Trichon",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.338943648193701",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.5408085894406"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8824346234532845",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.30659781831766"
         },
         {
           "http://example.com/terms#name": "Place du Trieu",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3458653095096316",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.56915597932135"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2854142847800745",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.448639434074074"
         },
         {
           "http://example.com/terms#name": "Place du Treizième de Ligne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5571399448762633",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.66318730543827"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8736061589732196",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.26829616618362"
         }
       ],
       "total_children_count": 9,
@@ -580,33 +566,47 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
-    },
-    {
-      "token_string": "i",
-      "triples": [],
-      "children": [
+      "triples_metadata": [],
+      "childlist": [
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment4807.jsonld#140641",
-              "@type": "tree:Node",
-              "token_string": "lleul"
-            }
+            "/streets/fragment4807.jsonld#122603"
           ]
         },
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment4807.jsonld#140642",
-              "@type": "tree:Node",
-              "token_string": "ge"
-            }
+            "/streets/fragment4807.jsonld#122604"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4618.jsonld#123200"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4807.jsonld#174814"
           ]
         }
-      ],
+      ]
+    },
+    {
+      "token_string": "i",
+      "triples": [],
+      "children": {
+        "lleul": [
+          "4807",
+          "140641"
+        ],
+        "ge": [
+          "4807",
+          "140642"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4807.jsonld#138285",
         "@type": "tree:Node"
@@ -614,83 +614,83 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Place du Tilleul",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.881597830434673",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.68574884835962"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.258646234771084",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.7282187868541"
         },
         {
           "http://example.com/terms#name": "Place du Tilleul",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8411053817698946",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.37192079129206"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.01959221336717",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.77912589510553"
         },
         {
           "http://example.com/terms#name": "Place du Tilleul",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8411053817698946",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.37192079129206"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.01959221336717",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.77912589510553"
         },
         {
           "http://example.com/terms#name": "Place du Tilleul",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8411053817698946",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.37192079129206"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.01959221336717",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.77912589510553"
         },
         {
           "http://example.com/terms#name": "Place du Tilleul",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.971582108625135",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.581533825632675"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.980359123350794",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.73099969709565"
         },
         {
           "http://example.com/terms#name": "Place du Tilleul",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.971582108625135",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.581533825632675"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.980359123350794",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.73099969709565"
         },
         {
           "http://example.com/terms#name": "Place du Tilleul",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3973646751860542",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.68991674222094"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6475790552093064",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.56842173158653"
         },
         {
           "http://example.com/terms#name": "Place du Tilleul",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7551718502920743",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.20186519568056"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7226826444254812",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.70979054145583"
         },
         {
           "http://example.com/terms#name": "Place du Tilleul",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.426464294493628",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.43582402951574"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.931858533356354",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.45953369943831"
         },
         {
           "http://example.com/terms#name": "Place du Tilleul",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.906822407677457",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.41697797705068"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0321693638162164",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.04074371649101"
         },
         {
           "http://example.com/terms#name": "Place du Tilleul",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.66112449855732",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.03973801694868"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8252342215962716",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.77515434616042"
         },
         {
           "http://example.com/terms#name": "Place du Tige",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.695934805137109",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.15357762032936"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.787916054202562",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.11016813801835"
         },
         {
           "http://example.com/terms#name": "Place du Tige",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4609285252981676",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.12785485444191"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.50152087428134",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.579708519745445"
         },
         {
           "http://example.com/terms#name": "Place du Tige",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4609285252981676",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.12785485444191"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.50152087428134",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.579708519745445"
         },
         {
           "http://example.com/terms#name": "Place du Tige",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4609285252981676",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.12785485444191"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.50152087428134",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.579708519745445"
         },
         {
           "http://example.com/terms#name": "Place du Tige",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4609285252981676",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.12785485444191"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.50152087428134",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.579708519745445"
         }
       ],
       "total_children_count": 2,
@@ -724,67 +724,82 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4807.jsonld#140641"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4807.jsonld#140642"
+          ]
+        }
+      ]
     },
     {
       "token_string": "lleul",
       "triples": [
         {
           "http://example.com/terms#name": "Place du Tilleul",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.881597830434673",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.68574884835962"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.258646234771084",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.7282187868541"
         },
         {
           "http://example.com/terms#name": "Place du Tilleul",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8411053817698946",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.37192079129206"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.01959221336717",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.77912589510553"
         },
         {
           "http://example.com/terms#name": "Place du Tilleul",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8411053817698946",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.37192079129206"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.01959221336717",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.77912589510553"
         },
         {
           "http://example.com/terms#name": "Place du Tilleul",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8411053817698946",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.37192079129206"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.01959221336717",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.77912589510553"
         },
         {
           "http://example.com/terms#name": "Place du Tilleul",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.971582108625135",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.581533825632675"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.980359123350794",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.73099969709565"
         },
         {
           "http://example.com/terms#name": "Place du Tilleul",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.971582108625135",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.581533825632675"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.980359123350794",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.73099969709565"
         },
         {
           "http://example.com/terms#name": "Place du Tilleul",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3973646751860542",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.68991674222094"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6475790552093064",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.56842173158653"
         },
         {
           "http://example.com/terms#name": "Place du Tilleul",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7551718502920743",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.20186519568056"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7226826444254812",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.70979054145583"
         },
         {
           "http://example.com/terms#name": "Place du Tilleul",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.426464294493628",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.43582402951574"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.931858533356354",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.45953369943831"
         },
         {
           "http://example.com/terms#name": "Place du Tilleul",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.906822407677457",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.41697797705068"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0321693638162164",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.04074371649101"
         },
         {
           "http://example.com/terms#name": "Place du Tilleul",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.66112449855732",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.03973801694868"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8252342215962716",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.77515434616042"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4807.jsonld#140640",
         "@type": "tree:Node"
@@ -792,58 +807,58 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Place du Tilleul",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.881597830434673",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.68574884835962"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.258646234771084",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.7282187868541"
         },
         {
           "http://example.com/terms#name": "Place du Tilleul",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8411053817698946",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.37192079129206"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.01959221336717",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.77912589510553"
         },
         {
           "http://example.com/terms#name": "Place du Tilleul",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8411053817698946",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.37192079129206"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.01959221336717",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.77912589510553"
         },
         {
           "http://example.com/terms#name": "Place du Tilleul",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8411053817698946",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.37192079129206"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.01959221336717",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.77912589510553"
         },
         {
           "http://example.com/terms#name": "Place du Tilleul",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.971582108625135",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.581533825632675"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.980359123350794",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.73099969709565"
         },
         {
           "http://example.com/terms#name": "Place du Tilleul",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.971582108625135",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.581533825632675"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.980359123350794",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.73099969709565"
         },
         {
           "http://example.com/terms#name": "Place du Tilleul",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3973646751860542",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.68991674222094"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6475790552093064",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.56842173158653"
         },
         {
           "http://example.com/terms#name": "Place du Tilleul",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7551718502920743",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.20186519568056"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7226826444254812",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.70979054145583"
         },
         {
           "http://example.com/terms#name": "Place du Tilleul",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.426464294493628",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.43582402951574"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.931858533356354",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.45953369943831"
         },
         {
           "http://example.com/terms#name": "Place du Tilleul",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.906822407677457",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.41697797705068"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0321693638162164",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.04074371649101"
         },
         {
           "http://example.com/terms#name": "Place du Tilleul",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.66112449855732",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.03973801694868"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8252342215962716",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.77515434616042"
         }
       ],
       "total_children_count": 0,
@@ -879,37 +894,39 @@
         "Place du Tilleul",
         "Place du Tilleul",
         "Place du Tilleul"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "ge",
       "triples": [
         {
           "http://example.com/terms#name": "Place du Tige",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.695934805137109",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.15357762032936"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.787916054202562",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.11016813801835"
         },
         {
           "http://example.com/terms#name": "Place du Tige",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4609285252981676",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.12785485444191"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.50152087428134",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.579708519745445"
         },
         {
           "http://example.com/terms#name": "Place du Tige",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4609285252981676",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.12785485444191"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.50152087428134",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.579708519745445"
         },
         {
           "http://example.com/terms#name": "Place du Tige",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4609285252981676",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.12785485444191"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.50152087428134",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.579708519745445"
         },
         {
           "http://example.com/terms#name": "Place du Tige",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4609285252981676",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.12785485444191"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.50152087428134",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.579708519745445"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4807.jsonld#140640",
         "@type": "tree:Node"
@@ -917,28 +934,28 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Place du Tige",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.695934805137109",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.15357762032936"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.787916054202562",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.11016813801835"
         },
         {
           "http://example.com/terms#name": "Place du Tige",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4609285252981676",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.12785485444191"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.50152087428134",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.579708519745445"
         },
         {
           "http://example.com/terms#name": "Place du Tige",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4609285252981676",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.12785485444191"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.50152087428134",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.579708519745445"
         },
         {
           "http://example.com/terms#name": "Place du Tige",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4609285252981676",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.12785485444191"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.50152087428134",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.579708519745445"
         },
         {
           "http://example.com/terms#name": "Place du Tige",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4609285252981676",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.12785485444191"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.50152087428134",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.579708519745445"
         }
       ],
       "total_children_count": 0,
@@ -962,17 +979,19 @@
         "Place du Tige",
         "Place du Tige",
         "Place du Tige"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "erminus",
       "triples": [
         {
           "http://example.com/terms#name": "Place du Terminus",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2477052594036198",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.43770615073217"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.566050594181536",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.273894879088324"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4807.jsonld#138285",
         "@type": "tree:Node"
@@ -980,8 +999,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Place du Terminus",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2477052594036198",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.43770615073217"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.566050594181536",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.273894879088324"
         }
       ],
       "total_children_count": 0,
@@ -997,17 +1016,19 @@
       ],
       "triples_metadata": [
         "Place du Terminus"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "héâtre",
       "triples": [
         {
           "http://example.com/terms#name": "Place du Théâtre",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.204069433789423",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.91410713950894"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8972024075898757",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.76252799988414"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4807.jsonld#138285",
         "@type": "tree:Node"
@@ -1015,8 +1036,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Place du Théâtre",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.204069433789423",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.91410713950894"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8972024075898757",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.76252799988414"
         }
       ],
       "total_children_count": 0,
@@ -1032,33 +1053,22 @@
       ],
       "triples_metadata": [
         "Place du Théâtre"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "omb",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4807.jsonld#172714",
-              "@type": "tree:Node",
-              "token_string": "eux"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4807.jsonld#172715",
-              "@type": "tree:Node",
-              "token_string": "ois"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "eux": [
+          "4807",
+          "172714"
+        ],
+        "ois": [
+          "4807",
+          "172715"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4807.jsonld#138285",
         "@type": "tree:Node"
@@ -1066,13 +1076,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Place du Tombeux",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4611150720016814",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.31900235364765"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0358009024971837",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.127853056127414"
         },
         {
           "http://example.com/terms#name": "Place du Tombois",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2934804485945754",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.57383784202398"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2134040789269362",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.18262688576291"
         }
       ],
       "total_children_count": 2,
@@ -1092,17 +1102,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4807.jsonld#172714"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4807.jsonld#172715"
+          ]
+        }
+      ]
     },
     {
       "token_string": "eux",
       "triples": [
         {
           "http://example.com/terms#name": "Place du Tombeux",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4611150720016814",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.31900235364765"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0358009024971837",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.127853056127414"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4807.jsonld#172713",
         "@type": "tree:Node"
@@ -1110,8 +1135,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Place du Tombeux",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4611150720016814",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.31900235364765"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0358009024971837",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.127853056127414"
         }
       ],
       "total_children_count": 0,
@@ -1127,17 +1152,19 @@
       ],
       "triples_metadata": [
         "Place du Tombeux"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "ois",
       "triples": [
         {
           "http://example.com/terms#name": "Place du Tombois",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2934804485945754",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.57383784202398"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2134040789269362",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.18262688576291"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4807.jsonld#172713",
         "@type": "tree:Node"
@@ -1145,8 +1172,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Place du Tombois",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2934804485945754",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.57383784202398"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2134040789269362",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.18262688576291"
         }
       ],
       "total_children_count": 0,
@@ -1162,17 +1189,19 @@
       ],
       "triples_metadata": [
         "Place du Tombois"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "eizième de Ligne",
       "triples": [
         {
           "http://example.com/terms#name": "Place du Treizième de Ligne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5571399448762633",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.66318730543827"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8736061589732196",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.26829616618362"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4807.jsonld#138286",
         "@type": "tree:Node"
@@ -1180,8 +1209,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Place du Treizième de Ligne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5571399448762633",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.66318730543827"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8736061589732196",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.26829616618362"
         }
       ],
       "total_children_count": 0,
@@ -1197,7 +1226,8 @@
       ],
       "triples_metadata": [
         "Place du Treizième de Ligne"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

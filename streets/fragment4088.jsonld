@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -25,10 +25,11 @@
       "triples": [
         {
           "http://example.com/terms#name": "Chemin des Prés-du-Meunier",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.675518790290448",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.39307817294338"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2706043926029644",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.12109493265159"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4088.jsonld#125391",
         "@type": "tree:Node"
@@ -36,8 +37,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Chemin des Prés-du-Meunier",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.675518790290448",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.39307817294338"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2706043926029644",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.12109493265159"
         }
       ],
       "total_children_count": 0,
@@ -53,17 +54,19 @@
       ],
       "triples_metadata": [
         "Chemin des Prés-du-Meunier"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "'Hellembroux",
       "triples": [
         {
           "http://example.com/terms#name": "Chemin des Prés d'Hellembroux",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0838338805645957",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.43315006452206"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5677236398156627",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.39568705989003"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4088.jsonld#130510",
         "@type": "tree:Node"
@@ -71,8 +74,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Chemin des Prés d'Hellembroux",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0838338805645957",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.43315006452206"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5677236398156627",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.39568705989003"
         }
       ],
       "total_children_count": 0,
@@ -88,33 +91,22 @@
       ],
       "triples_metadata": [
         "Chemin des Prés d'Hellembroux"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "e",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4088.jsonld#123583",
-              "@type": "tree:Node",
-              "token_string": " Sartiau"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4088.jsonld#123584",
-              "@type": "tree:Node",
-              "token_string": "s Fostys"
-            }
-          ]
-        }
-      ],
+      "children": {
+        " Sartiau": [
+          "4088",
+          "123583"
+        ],
+        "s Fostys": [
+          "4088",
+          "123584"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4088.jsonld#130510",
         "@type": "tree:Node"
@@ -122,13 +114,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Chemin des Prés de Sartiau",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7411119911378563",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.96150851338286"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1937481348718584",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.318926733305574"
         },
         {
           "http://example.com/terms#name": "Chemin des Prés des Fostys",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5218968585480277",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.46243719888384"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9730566421392917",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.9422155808018"
         }
       ],
       "total_children_count": 2,
@@ -148,17 +140,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4088.jsonld#123583"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4088.jsonld#123584"
+          ]
+        }
+      ]
     },
     {
       "token_string": " Sartiau",
       "triples": [
         {
           "http://example.com/terms#name": "Chemin des Prés de Sartiau",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7411119911378563",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.96150851338286"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1937481348718584",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.318926733305574"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4088.jsonld#123582",
         "@type": "tree:Node"
@@ -166,8 +173,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Chemin des Prés de Sartiau",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7411119911378563",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.96150851338286"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1937481348718584",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.318926733305574"
         }
       ],
       "total_children_count": 0,
@@ -183,17 +190,19 @@
       ],
       "triples_metadata": [
         "Chemin des Prés de Sartiau"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "s Fostys",
       "triples": [
         {
           "http://example.com/terms#name": "Chemin des Prés des Fostys",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5218968585480277",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.46243719888384"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9730566421392917",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.9422155808018"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4088.jsonld#123582",
         "@type": "tree:Node"
@@ -201,8 +210,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Chemin des Prés des Fostys",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5218968585480277",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.46243719888384"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9730566421392917",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.9422155808018"
         }
       ],
       "total_children_count": 0,
@@ -218,33 +227,22 @@
       ],
       "triples_metadata": [
         "Chemin des Prés des Fostys"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "é",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4088.jsonld#125391",
-              "@type": "tree:Node",
-              "token_string": "s"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4088.jsonld#125392",
-              "@type": "tree:Node",
-              "token_string": "elles"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "s": [
+          "4088",
+          "125391"
+        ],
+        "elles": [
+          "4088",
+          "125392"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4741.jsonld#112898",
         "@type": "tree:Node"
@@ -252,93 +250,93 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Chemin des Prés",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.657237936802973",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.74675713849709"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.212611562691683",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.340552393866794"
         },
         {
           "http://example.com/terms#name": "Chemin des Prés",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4026100629616294",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.474765665846014"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0488399261991104",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.77067332344206"
         },
         {
           "http://example.com/terms#name": "Chemin des Prés",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4026100629616294",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.474765665846014"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0488399261991104",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.77067332344206"
         },
         {
           "http://example.com/terms#name": "Chemin des Prés",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4026100629616294",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.474765665846014"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0488399261991104",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.77067332344206"
         },
         {
           "http://example.com/terms#name": "Chemin des Prés",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8846581989576805",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.437490534857055"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8772908906912478",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.63173317823085"
         },
         {
           "http://example.com/terms#name": "Chemin des Prés",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8846581989576805",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.437490534857055"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8772908906912478",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.63173317823085"
         },
         {
           "http://example.com/terms#name": "Chemin des Prés",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.646155846392127",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.17852518815034"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4405836540414514",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.16527647827321"
         },
         {
           "http://example.com/terms#name": "Chemin des Prés",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1135643296277817",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.93141874885817"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5498468216692607",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.58061558889747"
         },
         {
           "http://example.com/terms#name": "Chemin des Prés",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.516738104815987",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.437168523684974"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5432485951041586",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.3750215324851"
         },
         {
           "http://example.com/terms#name": "Chemin des Prés",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4136483564926814",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.49201557367813"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.400552800415502",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.192194399373875"
         },
         {
           "http://example.com/terms#name": "Chemin des Prés",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.126409647749264",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.02247641167561"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.545302941842663",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.07671976638839"
         },
         {
           "http://example.com/terms#name": "Chemin des Prés d'Hellembroux",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0838338805645957",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.43315006452206"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5677236398156627",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.39568705989003"
         },
         {
           "http://example.com/terms#name": "Chemin des Prés-du-Meunier",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.675518790290448",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.39307817294338"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2706043926029644",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.12109493265159"
         },
         {
           "http://example.com/terms#name": "Chemin des Prés de Sartiau",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7411119911378563",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.96150851338286"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1937481348718584",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.318926733305574"
         },
         {
           "http://example.com/terms#name": "Chemin des Prés des Fostys",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5218968585480277",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.46243719888384"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9730566421392917",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.9422155808018"
         },
         {
           "http://example.com/terms#name": "Chemin des Préelles",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9580378307333235",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.29736879542566"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.593529696826648",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.6506451264283"
         },
         {
           "http://example.com/terms#name": "Chemin des Prés á Canons",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6205839151805743",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.28491737318242"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0801292237866202",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.46227500401193"
         },
         {
           "http://example.com/terms#name": "Chemin des Prés Masotte",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0479275330865447",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.17783487390872"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.378943579644253",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.18619305778401"
         }
       ],
       "total_children_count": 11,
@@ -404,89 +402,91 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4088.jsonld#125391"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4088.jsonld#125392"
+          ]
+        }
+      ]
     },
     {
       "token_string": "s",
       "triples": [
         {
           "http://example.com/terms#name": "Chemin des Prés",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.657237936802973",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.74675713849709"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.212611562691683",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.340552393866794"
         },
         {
           "http://example.com/terms#name": "Chemin des Prés",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4026100629616294",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.474765665846014"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0488399261991104",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.77067332344206"
         },
         {
           "http://example.com/terms#name": "Chemin des Prés",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4026100629616294",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.474765665846014"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0488399261991104",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.77067332344206"
         },
         {
           "http://example.com/terms#name": "Chemin des Prés",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4026100629616294",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.474765665846014"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0488399261991104",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.77067332344206"
         },
         {
           "http://example.com/terms#name": "Chemin des Prés",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8846581989576805",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.437490534857055"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8772908906912478",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.63173317823085"
         },
         {
           "http://example.com/terms#name": "Chemin des Prés",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8846581989576805",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.437490534857055"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8772908906912478",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.63173317823085"
         },
         {
           "http://example.com/terms#name": "Chemin des Prés",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.646155846392127",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.17852518815034"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4405836540414514",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.16527647827321"
         },
         {
           "http://example.com/terms#name": "Chemin des Prés",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1135643296277817",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.93141874885817"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5498468216692607",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.58061558889747"
         },
         {
           "http://example.com/terms#name": "Chemin des Prés",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.516738104815987",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.437168523684974"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5432485951041586",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.3750215324851"
         },
         {
           "http://example.com/terms#name": "Chemin des Prés",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4136483564926814",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.49201557367813"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.400552800415502",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.192194399373875"
         },
         {
           "http://example.com/terms#name": "Chemin des Prés",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.126409647749264",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.02247641167561"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.545302941842663",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.07671976638839"
         }
       ],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4088.jsonld#114981",
-              "@type": "tree:Node",
-              "token_string": "-du-Meunier"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4088.jsonld#130509",
-              "@type": "tree:Node",
-              "token_string": " "
-            }
-          ]
-        }
-      ],
+      "children": {
+        "-du-Meunier": [
+          "4088",
+          "114981"
+        ],
+        " ": [
+          "4088",
+          "130509"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4088.jsonld#125390",
         "@type": "tree:Node"
@@ -494,88 +494,88 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Chemin des Prés",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.657237936802973",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.74675713849709"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.212611562691683",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.340552393866794"
         },
         {
           "http://example.com/terms#name": "Chemin des Prés",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4026100629616294",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.474765665846014"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0488399261991104",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.77067332344206"
         },
         {
           "http://example.com/terms#name": "Chemin des Prés",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4026100629616294",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.474765665846014"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0488399261991104",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.77067332344206"
         },
         {
           "http://example.com/terms#name": "Chemin des Prés",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4026100629616294",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.474765665846014"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0488399261991104",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.77067332344206"
         },
         {
           "http://example.com/terms#name": "Chemin des Prés",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8846581989576805",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.437490534857055"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8772908906912478",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.63173317823085"
         },
         {
           "http://example.com/terms#name": "Chemin des Prés",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8846581989576805",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.437490534857055"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8772908906912478",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.63173317823085"
         },
         {
           "http://example.com/terms#name": "Chemin des Prés",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.646155846392127",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.17852518815034"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4405836540414514",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.16527647827321"
         },
         {
           "http://example.com/terms#name": "Chemin des Prés",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1135643296277817",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.93141874885817"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5498468216692607",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.58061558889747"
         },
         {
           "http://example.com/terms#name": "Chemin des Prés",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.516738104815987",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.437168523684974"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5432485951041586",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.3750215324851"
         },
         {
           "http://example.com/terms#name": "Chemin des Prés",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4136483564926814",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.49201557367813"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.400552800415502",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.192194399373875"
         },
         {
           "http://example.com/terms#name": "Chemin des Prés",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.126409647749264",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.02247641167561"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.545302941842663",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.07671976638839"
         },
         {
           "http://example.com/terms#name": "Chemin des Prés d'Hellembroux",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0838338805645957",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.43315006452206"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5677236398156627",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.39568705989003"
         },
         {
           "http://example.com/terms#name": "Chemin des Prés-du-Meunier",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.675518790290448",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.39307817294338"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2706043926029644",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.12109493265159"
         },
         {
           "http://example.com/terms#name": "Chemin des Prés de Sartiau",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7411119911378563",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.96150851338286"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1937481348718584",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.318926733305574"
         },
         {
           "http://example.com/terms#name": "Chemin des Prés des Fostys",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5218968585480277",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.46243719888384"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9730566421392917",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.9422155808018"
         },
         {
           "http://example.com/terms#name": "Chemin des Prés á Canons",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6205839151805743",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.28491737318242"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0801292237866202",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.46227500401193"
         },
         {
           "http://example.com/terms#name": "Chemin des Prés Masotte",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0479275330865447",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.17783487390872"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.378943579644253",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.18619305778401"
         }
       ],
       "total_children_count": 9,
@@ -647,6 +647,20 @@
         "Chemin des Prés",
         "Chemin des Prés",
         "Chemin des Prés"
+      ],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4088.jsonld#114981"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4088.jsonld#130509"
+          ]
+        }
       ]
     },
     {
@@ -654,10 +668,11 @@
       "triples": [
         {
           "http://example.com/terms#name": "Chemin des Préelles",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9580378307333235",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.29736879542566"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.593529696826648",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.6506451264283"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4088.jsonld#125390",
         "@type": "tree:Node"
@@ -665,8 +680,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Chemin des Préelles",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9580378307333235",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.29736879542566"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.593529696826648",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.6506451264283"
         }
       ],
       "total_children_count": 0,
@@ -682,43 +697,26 @@
       ],
       "triples_metadata": [
         "Chemin des Préelles"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": " ",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4088.jsonld#130510",
-              "@type": "tree:Node",
-              "token_string": "d"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4088.jsonld#130511",
-              "@type": "tree:Node",
-              "token_string": "á Canons"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4088.jsonld#176254",
-              "@type": "tree:Node",
-              "token_string": "Masotte"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "d": [
+          "4088",
+          "130510"
+        ],
+        "á Canons": [
+          "4088",
+          "130511"
+        ],
+        "Masotte": [
+          "4088",
+          "176254"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4088.jsonld#125391",
         "@type": "tree:Node"
@@ -726,28 +724,28 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Chemin des Prés d'Hellembroux",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0838338805645957",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.43315006452206"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5677236398156627",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.39568705989003"
         },
         {
           "http://example.com/terms#name": "Chemin des Prés de Sartiau",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7411119911378563",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.96150851338286"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1937481348718584",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.318926733305574"
         },
         {
           "http://example.com/terms#name": "Chemin des Prés des Fostys",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5218968585480277",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.46243719888384"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9730566421392917",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.9422155808018"
         },
         {
           "http://example.com/terms#name": "Chemin des Prés á Canons",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6205839151805743",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.28491737318242"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0801292237866202",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.46227500401193"
         },
         {
           "http://example.com/terms#name": "Chemin des Prés Masotte",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0479275330865447",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.17783487390872"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.378943579644253",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.18619305778401"
         }
       ],
       "total_children_count": 7,
@@ -785,33 +783,41 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
-    },
-    {
-      "token_string": "d",
-      "triples": [],
-      "children": [
+      "triples_metadata": [],
+      "childlist": [
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment4088.jsonld#115455",
-              "@type": "tree:Node",
-              "token_string": "'Hellembroux"
-            }
+            "/streets/fragment4088.jsonld#130510"
           ]
         },
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
-            {
-              "@id": "/streets/fragment4088.jsonld#123582",
-              "@type": "tree:Node",
-              "token_string": "e"
-            }
+            "/streets/fragment4088.jsonld#130511"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4088.jsonld#176254"
           ]
         }
-      ],
+      ]
+    },
+    {
+      "token_string": "d",
+      "triples": [],
+      "children": {
+        "'Hellembroux": [
+          "4088",
+          "115455"
+        ],
+        "e": [
+          "4088",
+          "123582"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4088.jsonld#130509",
         "@type": "tree:Node"
@@ -819,18 +825,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Chemin des Prés d'Hellembroux",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0838338805645957",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.43315006452206"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5677236398156627",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.39568705989003"
         },
         {
           "http://example.com/terms#name": "Chemin des Prés de Sartiau",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7411119911378563",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.96150851338286"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1937481348718584",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.318926733305574"
         },
         {
           "http://example.com/terms#name": "Chemin des Prés des Fostys",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5218968585480277",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.46243719888384"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9730566421392917",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.9422155808018"
         }
       ],
       "total_children_count": 4,
@@ -856,17 +862,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4088.jsonld#115455"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4088.jsonld#123582"
+          ]
+        }
+      ]
     },
     {
       "token_string": "á Canons",
       "triples": [
         {
           "http://example.com/terms#name": "Chemin des Prés á Canons",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6205839151805743",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.28491737318242"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0801292237866202",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.46227500401193"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4088.jsonld#130509",
         "@type": "tree:Node"
@@ -874,8 +895,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Chemin des Prés á Canons",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6205839151805743",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.28491737318242"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0801292237866202",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.46227500401193"
         }
       ],
       "total_children_count": 0,
@@ -891,17 +912,19 @@
       ],
       "triples_metadata": [
         "Chemin des Prés á Canons"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "Masotte",
       "triples": [
         {
           "http://example.com/terms#name": "Chemin des Prés Masotte",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0479275330865447",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.17783487390872"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.378943579644253",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.18619305778401"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4088.jsonld#130509",
         "@type": "tree:Node"
@@ -909,8 +932,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Chemin des Prés Masotte",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0479275330865447",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.17783487390872"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.378943579644253",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.18619305778401"
         }
       ],
       "total_children_count": 0,
@@ -926,7 +949,8 @@
       ],
       "triples_metadata": [
         "Chemin des Prés Masotte"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

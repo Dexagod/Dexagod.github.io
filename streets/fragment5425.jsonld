@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "m",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5425.jsonld#153601",
-              "@type": "tree:Node",
-              "token_string": "ierstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5425.jsonld#153602",
-              "@type": "tree:Node",
-              "token_string": "e"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "ierstraat": [
+          "5425",
+          "153601"
+        ],
+        "e": [
+          "5425",
+          "153602"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4707.jsonld#477",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Brumierstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.839958768053084",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.174209927698435"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3508692862730847",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.75578953415091"
         },
         {
           "http://example.com/terms#name": "Brume",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7696654389442905",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.45491680688093"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.620866483718626",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.64234990913375"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5425.jsonld#153601"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment5425.jsonld#153602"
+          ]
+        }
+      ]
     },
     {
       "token_string": "ierstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Brumierstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.839958768053084",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.174209927698435"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3508692862730847",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.75578953415091"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5425.jsonld#153600",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Brumierstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.839958768053084",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.174209927698435"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3508692862730847",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.75578953415091"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Brumierstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "e",
       "triples": [
         {
           "http://example.com/terms#name": "Brume",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7696654389442905",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.45491680688093"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.620866483718626",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.64234990913375"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5425.jsonld#153600",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Brume",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7696654389442905",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.45491680688093"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.620866483718626",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.64234990913375"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Brume"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

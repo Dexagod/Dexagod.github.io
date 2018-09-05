@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "v",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4820.jsonld#161518",
-              "@type": "tree:Node",
-              "token_string": "eiestraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4820.jsonld#161519",
-              "@type": "tree:Node",
-              "token_string": "al"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "eiestraat": [
+          "4820",
+          "161518"
+        ],
+        "al": [
+          "4820",
+          "161519"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment275.jsonld#3921",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Orveiestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.89104313419999",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.36672232180166"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.724293159121118",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.90357159779437"
         },
         {
           "http://example.com/terms#name": "Orval",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1646679876744543",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.033329536906116"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0021151209630124",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.802956411827196"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4820.jsonld#161518"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment4820.jsonld#161519"
+          ]
+        }
+      ]
     },
     {
       "token_string": "eiestraat",
       "triples": [
         {
           "http://example.com/terms#name": "Orveiestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.89104313419999",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.36672232180166"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.724293159121118",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.90357159779437"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4820.jsonld#161517",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Orveiestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.89104313419999",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.36672232180166"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.724293159121118",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.90357159779437"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Orveiestraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "al",
       "triples": [
         {
           "http://example.com/terms#name": "Orval",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1646679876744543",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.033329536906116"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0021151209630124",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.802956411827196"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4820.jsonld#161517",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Orval",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1646679876744543",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.033329536906116"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0021151209630124",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.802956411827196"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Orval"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

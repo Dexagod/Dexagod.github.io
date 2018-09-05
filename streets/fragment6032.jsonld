@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,38 +23,20 @@
     {
       "token_string": "t",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6032.jsonld#82127",
-              "@type": "tree:Node",
-              "token_string": "rudeveld"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6032.jsonld#82128",
-              "@type": "tree:Node",
-              "token_string": "y Corihof"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6032.jsonld#181359",
-              "@type": "tree:Node",
-              "token_string": "-Noël-Strasse"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "rudeveld": [
+          "6032",
+          "82127"
+        ],
+        "y Corihof": [
+          "6032",
+          "82128"
+        ],
+        "-Noël-Strasse": [
+          "6032",
+          "181359"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment614.jsonld#1913",
         "@type": "tree:Node"
@@ -62,18 +44,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Gertrudeveld",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0644271648726984",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.83909738779869"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8380856854859533",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.61719688933172"
         },
         {
           "http://example.com/terms#name": "Gerty Corihof",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.140769724930493",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.44793886044478"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2634780692971312",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.843376291097485"
         },
         {
           "http://example.com/terms#name": "Gert-Noël-Strasse",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.945435620949441",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.300512387820795"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1896738817548873",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.710289334664026"
         }
       ],
       "total_children_count": 3,
@@ -99,17 +81,38 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6032.jsonld#82127"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6032.jsonld#82128"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6032.jsonld#181359"
+          ]
+        }
+      ]
     },
     {
       "token_string": "rudeveld",
       "triples": [
         {
           "http://example.com/terms#name": "Gertrudeveld",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0644271648726984",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.83909738779869"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8380856854859533",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.61719688933172"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6032.jsonld#82126",
         "@type": "tree:Node"
@@ -117,8 +120,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Gertrudeveld",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0644271648726984",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.83909738779869"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8380856854859533",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.61719688933172"
         }
       ],
       "total_children_count": 0,
@@ -134,17 +137,19 @@
       ],
       "triples_metadata": [
         "Gertrudeveld"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "y Corihof",
       "triples": [
         {
           "http://example.com/terms#name": "Gerty Corihof",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.140769724930493",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.44793886044478"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2634780692971312",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.843376291097485"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6032.jsonld#82126",
         "@type": "tree:Node"
@@ -152,8 +157,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Gerty Corihof",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.140769724930493",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.44793886044478"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2634780692971312",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.843376291097485"
         }
       ],
       "total_children_count": 0,
@@ -169,17 +174,19 @@
       ],
       "triples_metadata": [
         "Gerty Corihof"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "-Noël-Strasse",
       "triples": [
         {
           "http://example.com/terms#name": "Gert-Noël-Strasse",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.945435620949441",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.300512387820795"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1896738817548873",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.710289334664026"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6032.jsonld#82126",
         "@type": "tree:Node"
@@ -187,8 +194,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Gert-Noël-Strasse",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.945435620949441",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.300512387820795"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1896738817548873",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.710289334664026"
         }
       ],
       "total_children_count": 0,
@@ -204,7 +211,8 @@
       ],
       "triples_metadata": [
         "Gert-Noël-Strasse"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

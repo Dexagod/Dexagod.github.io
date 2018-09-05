@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "v",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2599.jsonld#62449",
-              "@type": "tree:Node",
-              "token_string": "enne"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2599.jsonld#62450",
-              "@type": "tree:Node",
-              "token_string": "oort"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "enne": [
+          "2599",
+          "62449"
+        ],
+        "oort": [
+          "2599",
+          "62450"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment445.jsonld#3882",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Veldvenne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.414715839219278",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.64347142209778"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.693386515577723",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.385458451166244"
         },
         {
           "http://example.com/terms#name": "Veldvoort",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8884598023642436",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.32124579432127"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.476305212910108",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.32868941902233"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2599.jsonld#62449"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2599.jsonld#62450"
+          ]
+        }
+      ]
     },
     {
       "token_string": "enne",
       "triples": [
         {
           "http://example.com/terms#name": "Veldvenne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.414715839219278",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.64347142209778"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.693386515577723",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.385458451166244"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2599.jsonld#62448",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Veldvenne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.414715839219278",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.64347142209778"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.693386515577723",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.385458451166244"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Veldvenne"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "oort",
       "triples": [
         {
           "http://example.com/terms#name": "Veldvoort",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8884598023642436",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.32124579432127"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.476305212910108",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.32868941902233"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2599.jsonld#62448",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Veldvoort",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8884598023642436",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.32124579432127"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.476305212910108",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.32868941902233"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Veldvoort"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "W",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2955.jsonld#36868",
-              "@type": "tree:Node",
-              "token_string": "illemsstraat"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2955.jsonld#36869",
-              "@type": "tree:Node",
-              "token_string": "alter Meesstraat"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "illemsstraat": [
+          "2955",
+          "36868"
+        ],
+        "alter Meesstraat": [
+          "2955",
+          "36869"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment2426.jsonld#27963",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Dokter Willemsstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4616436265466493",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.250463517612324"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3708458216609123",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.51567085801192"
         },
         {
           "http://example.com/terms#name": "Dokter Walter Meesstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.39907947788533",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.20086797425168"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.408338268888168",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.75709599897657"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2955.jsonld#36868"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment2955.jsonld#36869"
+          ]
+        }
+      ]
     },
     {
       "token_string": "illemsstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Dokter Willemsstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4616436265466493",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.250463517612324"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3708458216609123",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.51567085801192"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2955.jsonld#36867",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Dokter Willemsstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4616436265466493",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.250463517612324"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3708458216609123",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.51567085801192"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Dokter Willemsstraat"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "alter Meesstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Dokter Walter Meesstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.39907947788533",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.20086797425168"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.408338268888168",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.75709599897657"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2955.jsonld#36867",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Dokter Walter Meesstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.39907947788533",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.20086797425168"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.408338268888168",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.75709599897657"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Dokter Walter Meesstraat"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

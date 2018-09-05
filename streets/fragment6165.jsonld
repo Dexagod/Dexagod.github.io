@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "ign",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6165.jsonld#153070",
-              "@type": "tree:Node",
-              "token_string": "e d'Or"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6165.jsonld#153071",
-              "@type": "tree:Node",
-              "token_string": "age"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "e d'Or": [
+          "6165",
+          "153070"
+        ],
+        "age": [
+          "6165",
+          "153071"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment4233.jsonld#107512",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue du Peigne d'Or",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8515725148593747",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.04235235744233"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6751815658366107",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.816924437465545"
         },
         {
           "http://example.com/terms#name": "Rue du Peignage",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.372097452894879",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.42981038511304"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4613355068678793",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.68597882223554"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6165.jsonld#153070"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment6165.jsonld#153071"
+          ]
+        }
+      ]
     },
     {
       "token_string": "e d'Or",
       "triples": [
         {
           "http://example.com/terms#name": "Rue du Peigne d'Or",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8515725148593747",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.04235235744233"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6751815658366107",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.816924437465545"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6165.jsonld#153069",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue du Peigne d'Or",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8515725148593747",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.04235235744233"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6751815658366107",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.816924437465545"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Rue du Peigne d'Or"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "age",
       "triples": [
         {
           "http://example.com/terms#name": "Rue du Peignage",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.372097452894879",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.42981038511304"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4613355068678793",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.68597882223554"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6165.jsonld#153069",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue du Peignage",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.372097452894879",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.42981038511304"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4613355068678793",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.68597882223554"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Rue du Peignage"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

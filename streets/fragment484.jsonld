@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "children": "tree:hasChildRelation",
+    "childlist": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,28 +23,16 @@
     {
       "token_string": "fel",
       "triples": [],
-      "children": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment484.jsonld#71697",
-              "@type": "tree:Node",
-              "token_string": "terweg"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment484.jsonld#71698",
-              "@type": "tree:Node",
-              "token_string": "derberg"
-            }
-          ]
-        }
-      ],
+      "children": {
+        "terweg": [
+          "484",
+          "71697"
+        ],
+        "derberg": [
+          "484",
+          "71698"
+        ]
+      },
       "parent_node": {
         "@id": "/streets/fragment63.jsonld#43",
         "@type": "tree:Node"
@@ -52,13 +40,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Lafelterweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.788182047766649",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.37094077693476"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.115320619695275",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.36165351313259"
         },
         {
           "http://example.com/terms#name": "Lafelderberg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0235700769528595",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.64759403623386"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6983977000760357",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.96900424961997"
         }
       ],
       "total_children_count": 2,
@@ -78,17 +66,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": []
+      "triples_metadata": [],
+      "childlist": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment484.jsonld#71697"
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            "/streets/fragment484.jsonld#71698"
+          ]
+        }
+      ]
     },
     {
       "token_string": "terweg",
       "triples": [
         {
           "http://example.com/terms#name": "Lafelterweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.788182047766649",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.37094077693476"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.115320619695275",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.36165351313259"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment484.jsonld#71696",
         "@type": "tree:Node"
@@ -96,8 +99,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Lafelterweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.788182047766649",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.37094077693476"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.115320619695275",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.36165351313259"
         }
       ],
       "total_children_count": 0,
@@ -113,17 +116,19 @@
       ],
       "triples_metadata": [
         "Lafelterweg"
-      ]
+      ],
+      "childlist": []
     },
     {
       "token_string": "derberg",
       "triples": [
         {
           "http://example.com/terms#name": "Lafelderberg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0235700769528595",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.64759403623386"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6983977000760357",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.96900424961997"
         }
       ],
+      "children": {},
       "parent_node": {
         "@id": "/streets/fragment484.jsonld#71696",
         "@type": "tree:Node"
@@ -131,8 +136,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Lafelderberg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0235700769528595",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.64759403623386"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6983977000760357",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.96900424961997"
         }
       ],
       "total_children_count": 0,
@@ -148,7 +153,8 @@
       ],
       "triples_metadata": [
         "Lafelderberg"
-      ]
+      ],
+      "childlist": []
     }
   ]
 }

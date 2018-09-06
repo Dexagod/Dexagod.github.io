@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,16 +23,28 @@
     {
       "token_string": "me",
       "triples": [],
-      "children": {
-        "rsumstraat": [
-          "3127",
-          "26053"
-        ],
-        "erslaan": [
-          "3127",
-          "26054"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment3127.jsonld#26053",
+              "@type": "tree:Node",
+              "token_string": "rsumstraat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment3127.jsonld#26054",
+              "@type": "tree:Node",
+              "token_string": "erslaan"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment719.jsonld#5621",
         "@type": "tree:Node"
@@ -40,13 +52,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Walmersumstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5764144884454607",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.77700468477579"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0170735245711797",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.23933602477581"
         },
         {
           "http://example.com/terms#name": "Walmeerslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.366340802952546",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.39520648072881"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7946566728785567",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.5194255002132"
         }
       ],
       "total_children_count": 2,
@@ -66,36 +78,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3127.jsonld#26053"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3127.jsonld#26054"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "rsumstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Walmersumstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5764144884454607",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.77700468477579"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0170735245711797",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.23933602477581"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3127.jsonld#26052",
         "@type": "tree:Node"
@@ -103,8 +96,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Walmersumstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5764144884454607",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.77700468477579"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0170735245711797",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.23933602477581"
         }
       ],
       "total_children_count": 0,
@@ -120,19 +113,17 @@
       ],
       "triples_metadata": [
         "Walmersumstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "erslaan",
       "triples": [
         {
           "http://example.com/terms#name": "Walmeerslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.366340802952546",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.39520648072881"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7946566728785567",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.5194255002132"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3127.jsonld#26052",
         "@type": "tree:Node"
@@ -140,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Walmeerslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.366340802952546",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.39520648072881"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7946566728785567",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.5194255002132"
         }
       ],
       "total_children_count": 0,
@@ -157,8 +148,7 @@
       ],
       "triples_metadata": [
         "Walmeerslaan"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

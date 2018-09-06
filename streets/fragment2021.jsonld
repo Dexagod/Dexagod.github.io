@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,16 +23,28 @@
     {
       "token_string": "p",
       "triples": [],
-      "children": {
-        "straat": [
-          "2021",
-          "47937"
-        ],
-        "e": [
-          "2020",
-          "87097"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2021.jsonld#47937",
+              "@type": "tree:Node",
+              "token_string": "straat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2020.jsonld#87097",
+              "@type": "tree:Node",
+              "token_string": "e"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment3190.jsonld#38213",
         "@type": "tree:Node"
@@ -40,28 +52,28 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Wimpel",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7034289403724574",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.25686532335267"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0508149809538585",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.26308578009552"
         },
         {
           "http://example.com/terms#name": "Wimpstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.867857039288419",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.316916572120235"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.313578021567846",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.29579419639741"
         },
         {
           "http://example.com/terms#name": "Wimpelstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6236490121387583",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.515641516838635"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.555751843791422",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.16826041763627"
         },
         {
           "http://example.com/terms#name": "Wimpebrug",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3797820431306644",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.888439498041166"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1314930935675176",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.25049976460403"
         },
         {
           "http://example.com/terms#name": "Wimpelbergstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9962041647461897",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.97892994863634"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.559152048635485",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.45274849457043"
         }
       ],
       "total_children_count": 6,
@@ -99,36 +111,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2021.jsonld#47937"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2020.jsonld#87097"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "straat",
       "triples": [
         {
           "http://example.com/terms#name": "Wimpstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.867857039288419",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.316916572120235"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.313578021567846",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.29579419639741"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2021.jsonld#47935",
         "@type": "tree:Node"
@@ -136,8 +129,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Wimpstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.867857039288419",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.316916572120235"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.313578021567846",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.29579419639741"
         }
       ],
       "total_children_count": 0,
@@ -153,8 +146,7 @@
       ],
       "triples_metadata": [
         "Wimpstraat"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

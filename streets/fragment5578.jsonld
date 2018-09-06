@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,16 +23,28 @@
     {
       "token_string": "t",
       "triples": [],
-      "children": {
-        "rieux": [
-          "5578",
-          "140247"
-        ],
-        "teresse": [
-          "5578",
-          "140248"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment5578.jsonld#140247",
+              "@type": "tree:Node",
+              "token_string": "rieux"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment5578.jsonld#140248",
+              "@type": "tree:Node",
+              "token_string": "teresse"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment4342.jsonld#105111",
         "@type": "tree:Node"
@@ -40,13 +52,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Botrieux",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7812816465346586",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.73623071030946"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.033761459349467",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.828662027814204"
         },
         {
           "http://example.com/terms#name": "Rue Botteresse",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.831435222662892",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.438131332323636"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6867780028974644",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.67643091880715"
         }
       ],
       "total_children_count": 2,
@@ -66,36 +78,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5578.jsonld#140247"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5578.jsonld#140248"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "rieux",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Botrieux",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7812816465346586",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.73623071030946"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.033761459349467",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.828662027814204"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5578.jsonld#140246",
         "@type": "tree:Node"
@@ -103,8 +96,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Botrieux",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7812816465346586",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.73623071030946"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.033761459349467",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.828662027814204"
         }
       ],
       "total_children_count": 0,
@@ -120,19 +113,17 @@
       ],
       "triples_metadata": [
         "Rue Botrieux"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "teresse",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Botteresse",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.831435222662892",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.438131332323636"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6867780028974644",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.67643091880715"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5578.jsonld#140246",
         "@type": "tree:Node"
@@ -140,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Botteresse",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.831435222662892",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.438131332323636"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6867780028974644",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.67643091880715"
         }
       ],
       "total_children_count": 0,
@@ -157,8 +148,7 @@
       ],
       "triples_metadata": [
         "Rue Botteresse"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -25,20 +25,32 @@
       "triples": [
         {
           "http://example.com/terms#name": "Holt",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2103076176332586",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.9052508037799"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6377579555859114",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.353408087050866"
         }
       ],
-      "children": {
-        "straat": [
-          "2285",
-          "16103"
-        ],
-        "appelteer": [
-          "2285",
-          "65406"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2285.jsonld#16103",
+              "@type": "tree:Node",
+              "token_string": "straat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2285.jsonld#65406",
+              "@type": "tree:Node",
+              "token_string": "appelteer"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment40.jsonld#2141",
         "@type": "tree:Node"
@@ -46,18 +58,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Holtstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7561361136688904",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.09069258412972"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3935666364726735",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.474095701967876"
         },
         {
           "http://example.com/terms#name": "Holt",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2103076176332586",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.9052508037799"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6377579555859114",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.353408087050866"
         },
         {
           "http://example.com/terms#name": "Holtappelteer",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8273634929505347",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.113631819034744"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.158038771221003",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.12530212611555"
         }
       ],
       "total_children_count": 2,
@@ -85,24 +97,6 @@
       ],
       "triples_metadata": [
         "Holt"
-      ],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2285.jsonld#16103"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2285.jsonld#65406"
-            }
-          ]
-        }
       ]
     },
     {
@@ -110,11 +104,10 @@
       "triples": [
         {
           "http://example.com/terms#name": "Holtstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7561361136688904",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.09069258412972"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3935666364726735",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.474095701967876"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2285.jsonld#16102",
         "@type": "tree:Node"
@@ -122,8 +115,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Holtstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7561361136688904",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.09069258412972"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3935666364726735",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.474095701967876"
         }
       ],
       "total_children_count": 0,
@@ -139,19 +132,17 @@
       ],
       "triples_metadata": [
         "Holtstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "appelteer",
       "triples": [
         {
           "http://example.com/terms#name": "Holtappelteer",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8273634929505347",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.113631819034744"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.158038771221003",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.12530212611555"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2285.jsonld#16102",
         "@type": "tree:Node"
@@ -159,8 +150,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Holtappelteer",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8273634929505347",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.113631819034744"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.158038771221003",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.12530212611555"
         }
       ],
       "total_children_count": 0,
@@ -176,8 +167,7 @@
       ],
       "triples_metadata": [
         "Holtappelteer"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -25,11 +25,10 @@
       "triples": [
         {
           "http://example.com/terms#name": "Miraeusstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8482903919602314",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.114259769153385"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4667687176986615",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.53466262476097"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2901.jsonld#84030",
         "@type": "tree:Node"
@@ -37,8 +36,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Miraeusstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8482903919602314",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.114259769153385"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4667687176986615",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.53466262476097"
         }
       ],
       "total_children_count": 0,
@@ -54,19 +53,17 @@
       ],
       "triples_metadata": [
         "Miraeusstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "kelstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Mirakelstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3626498481397062",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.79969623135255"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.515309554612491",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.95874801500162"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2901.jsonld#84030",
         "@type": "tree:Node"
@@ -74,8 +71,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Mirakelstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3626498481397062",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.79969623135255"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.515309554612491",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.95874801500162"
         }
       ],
       "total_children_count": 0,
@@ -91,22 +88,33 @@
       ],
       "triples_metadata": [
         "Mirakelstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "bellen",
       "triples": [],
-      "children": {
-        "laan": [
-          "2901",
-          "73055"
-        ],
-        "s": [
-          "2901",
-          "93412"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2901.jsonld#73055",
+              "@type": "tree:Node",
+              "token_string": "laan"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2901.jsonld#93412",
+              "@type": "tree:Node",
+              "token_string": "s"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment2901.jsonld#84030",
         "@type": "tree:Node"
@@ -114,18 +122,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Mirabellenlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.544905169873437",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.10453154664286"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.923951944098139",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.448861926431974"
         },
         {
           "http://example.com/terms#name": "Mirabellenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9103706690665594",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.41349186807136"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9993794071079543",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.83621094744687"
         },
         {
           "http://example.com/terms#name": "Mirabellensquare",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6516544245081217",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.08779373674674"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7809598077666333",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.46335293146373"
         }
       ],
       "total_children_count": 4,
@@ -151,36 +159,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2901.jsonld#73055"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2901.jsonld#93412"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "laan",
       "triples": [
         {
           "http://example.com/terms#name": "Mirabellenlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.544905169873437",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.10453154664286"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.923951944098139",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.448861926431974"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2901.jsonld#73054",
         "@type": "tree:Node"
@@ -188,8 +177,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Mirabellenlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.544905169873437",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.10453154664286"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.923951944098139",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.448861926431974"
         }
       ],
       "total_children_count": 0,
@@ -205,30 +194,53 @@
       ],
       "triples_metadata": [
         "Mirabellenlaan"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "r",
       "triples": [],
-      "children": {
-        "a": [
-          "2901",
-          "84030"
-        ],
-        "iam Makebaplein": [
-          "2901",
-          "84345"
-        ],
-        "te": [
-          "2901",
-          "92221"
-        ],
-        "feld": [
-          "2901",
-          "179732"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2901.jsonld#84030",
+              "@type": "tree:Node",
+              "token_string": "a"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2901.jsonld#84345",
+              "@type": "tree:Node",
+              "token_string": "iam Makebaplein"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2901.jsonld#92221",
+              "@type": "tree:Node",
+              "token_string": "te"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2901.jsonld#179732",
+              "@type": "tree:Node",
+              "token_string": "feld"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment139.jsonld#1184",
         "@type": "tree:Node"
@@ -236,53 +248,53 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Mirabellenlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.544905169873437",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.10453154664286"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.923951944098139",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.448861926431974"
         },
         {
           "http://example.com/terms#name": "Miraeusstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8482903919602314",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.114259769153385"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4667687176986615",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.53466262476097"
         },
         {
           "http://example.com/terms#name": "Mirakelstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3626498481397062",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.79969623135255"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.515309554612491",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.95874801500162"
         },
         {
           "http://example.com/terms#name": "Mirabellenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9103706690665594",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.41349186807136"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9993794071079543",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.83621094744687"
         },
         {
           "http://example.com/terms#name": "Miramarlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.832024991653993",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.14045206955121"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.239670497103858",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.56796469025158"
         },
         {
           "http://example.com/terms#name": "Mirabellensquare",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6516544245081217",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.08779373674674"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7809598077666333",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.46335293146373"
         },
         {
           "http://example.com/terms#name": "Miranze",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4352001003501367",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.57608215460264"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.26514664356976",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.28934984724369"
         },
         {
           "http://example.com/terms#name": "Mirfeld",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4752937652922546",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.669300030964976"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.077495528748002",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.76592793983414"
         },
         {
           "http://example.com/terms#name": "Mirfelderbusch",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0076882158608926",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.93972718122537"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6597821188363144",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.6714492937069"
         },
         {
           "http://example.com/terms#name": "Mirfelder Busch",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3322504313190673",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.61561408972657"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.576805148369876",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.39885231666865"
         }
       ],
       "total_children_count": 18,
@@ -350,67 +362,63 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2901.jsonld#84030"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2901.jsonld#84345"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2901.jsonld#92221"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2901.jsonld#179732"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "a",
       "triples": [],
-      "children": {
-        "eusstraat": [
-          "2901",
-          "29485"
-        ],
-        "kelstraat": [
-          "2901",
-          "41104"
-        ],
-        "bellen": [
-          "2901",
-          "73054"
-        ],
-        "marlaan": [
-          "2901",
-          "89496"
-        ],
-        "nze": [
-          "2901",
-          "150368"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2901.jsonld#29485",
+              "@type": "tree:Node",
+              "token_string": "eusstraat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2901.jsonld#41104",
+              "@type": "tree:Node",
+              "token_string": "kelstraat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2901.jsonld#73054",
+              "@type": "tree:Node",
+              "token_string": "bellen"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2901.jsonld#89496",
+              "@type": "tree:Node",
+              "token_string": "marlaan"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2901.jsonld#150368",
+              "@type": "tree:Node",
+              "token_string": "nze"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment2901.jsonld#84029",
         "@type": "tree:Node"
@@ -418,38 +426,38 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Mirabellenlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.544905169873437",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.10453154664286"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.923951944098139",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.448861926431974"
         },
         {
           "http://example.com/terms#name": "Miraeusstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8482903919602314",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.114259769153385"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4667687176986615",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.53466262476097"
         },
         {
           "http://example.com/terms#name": "Mirakelstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3626498481397062",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.79969623135255"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.515309554612491",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.95874801500162"
         },
         {
           "http://example.com/terms#name": "Mirabellenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9103706690665594",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.41349186807136"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9993794071079543",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.83621094744687"
         },
         {
           "http://example.com/terms#name": "Miramarlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.832024991653993",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.14045206955121"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.239670497103858",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.56796469025158"
         },
         {
           "http://example.com/terms#name": "Mirabellensquare",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6516544245081217",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.08779373674674"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7809598077666333",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.46335293146373"
         },
         {
           "http://example.com/terms#name": "Miranze",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4352001003501367",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.57608215460264"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.26514664356976",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.28934984724369"
         }
       ],
       "total_children_count": 9,
@@ -499,60 +507,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2901.jsonld#29485"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2901.jsonld#41104"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2901.jsonld#73054"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2901.jsonld#89496"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2901.jsonld#150368"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "iam Makebaplein",
       "triples": [
         {
           "http://example.com/terms#name": "Miriam Makebaplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3126381279586288",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.16356860393426"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5950067564045978",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.48685405375744"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2901.jsonld#84029",
         "@type": "tree:Node"
@@ -560,8 +525,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Miriam Makebaplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3126381279586288",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.16356860393426"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5950067564045978",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.48685405375744"
         }
       ],
       "total_children_count": 0,
@@ -577,19 +542,17 @@
       ],
       "triples_metadata": [
         "Miriam Makebaplein"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "marlaan",
       "triples": [
         {
           "http://example.com/terms#name": "Miramarlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.832024991653993",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.14045206955121"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.239670497103858",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.56796469025158"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2901.jsonld#84030",
         "@type": "tree:Node"
@@ -597,8 +560,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Miramarlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.832024991653993",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.14045206955121"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.239670497103858",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.56796469025158"
         }
       ],
       "total_children_count": 0,
@@ -614,22 +577,33 @@
       ],
       "triples_metadata": [
         "Miramarlaan"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "te",
       "triples": [],
-      "children": {
-        "straat": [
-          "2901",
-          "92222"
-        ],
-        "nlaan": [
-          "2901",
-          "92223"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2901.jsonld#92222",
+              "@type": "tree:Node",
+              "token_string": "straat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2901.jsonld#92223",
+              "@type": "tree:Node",
+              "token_string": "nlaan"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment2901.jsonld#84029",
         "@type": "tree:Node"
@@ -637,13 +611,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Mirtestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2873703292204812",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.91151743362098"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.310735177327491",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.13548412635613"
         },
         {
           "http://example.com/terms#name": "Mirtenlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9117908866849236",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.79064212018565"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3137174003581813",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.031211326911176"
         }
       ],
       "total_children_count": 2,
@@ -663,36 +637,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2901.jsonld#92222"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2901.jsonld#92223"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "straat",
       "triples": [
         {
           "http://example.com/terms#name": "Mirtestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2873703292204812",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.91151743362098"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.310735177327491",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.13548412635613"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2901.jsonld#92221",
         "@type": "tree:Node"
@@ -700,8 +655,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Mirtestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2873703292204812",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.91151743362098"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.310735177327491",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.13548412635613"
         }
       ],
       "total_children_count": 0,
@@ -717,19 +672,17 @@
       ],
       "triples_metadata": [
         "Mirtestraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "nlaan",
       "triples": [
         {
           "http://example.com/terms#name": "Mirtenlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9117908866849236",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.79064212018565"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3137174003581813",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.031211326911176"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2901.jsonld#92221",
         "@type": "tree:Node"
@@ -737,8 +690,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Mirtenlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9117908866849236",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.79064212018565"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3137174003581813",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.031211326911176"
         }
       ],
       "total_children_count": 0,
@@ -754,22 +707,33 @@
       ],
       "triples_metadata": [
         "Mirtenlaan"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "s",
       "triples": [],
-      "children": {
-        "traat": [
-          "2901",
-          "93413"
-        ],
-        "quare": [
-          "2901",
-          "93414"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2901.jsonld#93413",
+              "@type": "tree:Node",
+              "token_string": "traat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2901.jsonld#93414",
+              "@type": "tree:Node",
+              "token_string": "quare"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment2901.jsonld#73054",
         "@type": "tree:Node"
@@ -777,13 +741,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Mirabellenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9103706690665594",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.41349186807136"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9993794071079543",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.83621094744687"
         },
         {
           "http://example.com/terms#name": "Mirabellensquare",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6516544245081217",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.08779373674674"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7809598077666333",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.46335293146373"
         }
       ],
       "total_children_count": 2,
@@ -803,36 +767,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2901.jsonld#93413"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2901.jsonld#93414"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "traat",
       "triples": [
         {
           "http://example.com/terms#name": "Mirabellenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9103706690665594",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.41349186807136"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9993794071079543",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.83621094744687"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2901.jsonld#93412",
         "@type": "tree:Node"
@@ -840,8 +785,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Mirabellenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9103706690665594",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.41349186807136"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9993794071079543",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.83621094744687"
         }
       ],
       "total_children_count": 0,
@@ -857,19 +802,17 @@
       ],
       "triples_metadata": [
         "Mirabellenstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "quare",
       "triples": [
         {
           "http://example.com/terms#name": "Mirabellensquare",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6516544245081217",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.08779373674674"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7809598077666333",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.46335293146373"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2901.jsonld#93412",
         "@type": "tree:Node"
@@ -877,8 +820,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Mirabellensquare",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6516544245081217",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.08779373674674"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7809598077666333",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.46335293146373"
         }
       ],
       "total_children_count": 0,
@@ -894,19 +837,17 @@
       ],
       "triples_metadata": [
         "Mirabellensquare"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "nze",
       "triples": [
         {
           "http://example.com/terms#name": "Miranze",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4352001003501367",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.57608215460264"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.26514664356976",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.28934984724369"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2901.jsonld#84030",
         "@type": "tree:Node"
@@ -914,8 +855,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Miranze",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4352001003501367",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.57608215460264"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.26514664356976",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.28934984724369"
         }
       ],
       "total_children_count": 0,
@@ -931,24 +872,29 @@
       ],
       "triples_metadata": [
         "Miranze"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "feld",
       "triples": [
         {
           "http://example.com/terms#name": "Mirfeld",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4752937652922546",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.669300030964976"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.077495528748002",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.76592793983414"
         }
       ],
-      "children": {
-        "er": [
-          "2901",
-          "181745"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2901.jsonld#181745",
+              "@type": "tree:Node",
+              "token_string": "er"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment2901.jsonld#84029",
         "@type": "tree:Node"
@@ -956,18 +902,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Mirfeld",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4752937652922546",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.669300030964976"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.077495528748002",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.76592793983414"
         },
         {
           "http://example.com/terms#name": "Mirfelderbusch",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0076882158608926",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.93972718122537"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6597821188363144",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.6714492937069"
         },
         {
           "http://example.com/terms#name": "Mirfelder Busch",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3322504313190673",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.61561408972657"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.576805148369876",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.39885231666865"
         }
       ],
       "total_children_count": 3,
@@ -995,31 +941,33 @@
       ],
       "triples_metadata": [
         "Mirfeld"
-      ],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2901.jsonld#181745"
-            }
-          ]
-        }
       ]
     },
     {
       "token_string": "er",
       "triples": [],
-      "children": {
-        "busch": [
-          "2901",
-          "181746"
-        ],
-        " Busch": [
-          "2901",
-          "181747"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2901.jsonld#181746",
+              "@type": "tree:Node",
+              "token_string": "busch"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2901.jsonld#181747",
+              "@type": "tree:Node",
+              "token_string": " Busch"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment2901.jsonld#179732",
         "@type": "tree:Node"
@@ -1027,13 +975,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Mirfelderbusch",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0076882158608926",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.93972718122537"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6597821188363144",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.6714492937069"
         },
         {
           "http://example.com/terms#name": "Mirfelder Busch",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3322504313190673",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.61561408972657"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.576805148369876",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.39885231666865"
         }
       ],
       "total_children_count": 2,
@@ -1053,36 +1001,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2901.jsonld#181746"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2901.jsonld#181747"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "busch",
       "triples": [
         {
           "http://example.com/terms#name": "Mirfelderbusch",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0076882158608926",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.93972718122537"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6597821188363144",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.6714492937069"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2901.jsonld#181745",
         "@type": "tree:Node"
@@ -1090,8 +1019,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Mirfelderbusch",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0076882158608926",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.93972718122537"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6597821188363144",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.6714492937069"
         }
       ],
       "total_children_count": 0,
@@ -1107,19 +1036,17 @@
       ],
       "triples_metadata": [
         "Mirfelderbusch"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": " Busch",
       "triples": [
         {
           "http://example.com/terms#name": "Mirfelder Busch",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3322504313190673",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.61561408972657"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.576805148369876",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.39885231666865"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2901.jsonld#181745",
         "@type": "tree:Node"
@@ -1127,8 +1054,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Mirfelder Busch",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3322504313190673",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.61561408972657"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.576805148369876",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.39885231666865"
         }
       ],
       "total_children_count": 0,
@@ -1144,8 +1071,7 @@
       ],
       "triples_metadata": [
         "Mirfelder Busch"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

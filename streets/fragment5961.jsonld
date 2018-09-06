@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,16 +23,28 @@
     {
       "token_string": "La",
       "triples": [],
-      "children": {
-        " Fragne": [
-          "5961",
-          "165172"
-        ],
-        "irbois": [
-          "5961",
-          "165173"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment5961.jsonld#165172",
+              "@type": "tree:Node",
+              "token_string": " Fragne"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment5961.jsonld#165173",
+              "@type": "tree:Node",
+              "token_string": "irbois"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment4020.jsonld#108789",
         "@type": "tree:Node"
@@ -40,13 +52,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Allée de La Fragne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.964529891849019",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.83453382801729"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6189593247762364",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.30990555300924"
         },
         {
           "http://example.com/terms#name": "Allée de Lairbois",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.775888224015321",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.262736700646165"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.46852872784527",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.89342882296362"
         }
       ],
       "total_children_count": 2,
@@ -66,36 +78,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5961.jsonld#165172"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5961.jsonld#165173"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": " Fragne",
       "triples": [
         {
           "http://example.com/terms#name": "Allée de La Fragne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.964529891849019",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.83453382801729"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6189593247762364",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.30990555300924"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5961.jsonld#165171",
         "@type": "tree:Node"
@@ -103,8 +96,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Allée de La Fragne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.964529891849019",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.83453382801729"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6189593247762364",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.30990555300924"
         }
       ],
       "total_children_count": 0,
@@ -120,19 +113,17 @@
       ],
       "triples_metadata": [
         "Allée de La Fragne"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "irbois",
       "triples": [
         {
           "http://example.com/terms#name": "Allée de Lairbois",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.775888224015321",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.262736700646165"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.46852872784527",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.89342882296362"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5961.jsonld#165171",
         "@type": "tree:Node"
@@ -140,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Allée de Lairbois",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.775888224015321",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.262736700646165"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.46852872784527",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.89342882296362"
         }
       ],
       "total_children_count": 0,
@@ -157,8 +148,7 @@
       ],
       "triples_metadata": [
         "Allée de Lairbois"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

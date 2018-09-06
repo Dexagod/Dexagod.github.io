@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,16 +23,28 @@
     {
       "token_string": "ti",
       "triples": [],
-      "children": {
-        "nnes": [
-          "5256",
-          "110535"
-        ],
-        "ssart": [
-          "5256",
-          "110536"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment5256.jsonld#110535",
+              "@type": "tree:Node",
+              "token_string": "nnes"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment5256.jsonld#110536",
+              "@type": "tree:Node",
+              "token_string": "ssart"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment5256.jsonld#112540",
         "@type": "tree:Node"
@@ -40,13 +52,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue de Gentinnes",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6893178379447504",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.377383950867646"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.325410638272633",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.89908319868776"
         },
         {
           "http://example.com/terms#name": "Rue de Gentissart",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8909540383821675",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.31094788822605"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9048406635398436",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.02283668939629"
         }
       ],
       "total_children_count": 2,
@@ -66,36 +78,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5256.jsonld#110535"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5256.jsonld#110536"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "nnes",
       "triples": [
         {
           "http://example.com/terms#name": "Rue de Gentinnes",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6893178379447504",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.377383950867646"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.325410638272633",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.89908319868776"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5256.jsonld#110534",
         "@type": "tree:Node"
@@ -103,8 +96,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue de Gentinnes",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6893178379447504",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.377383950867646"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.325410638272633",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.89908319868776"
         }
       ],
       "total_children_count": 0,
@@ -120,19 +113,17 @@
       ],
       "triples_metadata": [
         "Rue de Gentinnes"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "ssart",
       "triples": [
         {
           "http://example.com/terms#name": "Rue de Gentissart",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8909540383821675",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.31094788822605"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9048406635398436",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.02283668939629"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5256.jsonld#110534",
         "@type": "tree:Node"
@@ -140,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue de Gentissart",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8909540383821675",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.31094788822605"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9048406635398436",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.02283668939629"
         }
       ],
       "total_children_count": 0,
@@ -157,50 +148,103 @@
       ],
       "triples_metadata": [
         "Rue de Gentissart"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "e",
       "triples": [],
-      "children": {
-        "n": [
-          "5256",
-          "112540"
-        ],
-        "r": [
-          "5256",
-          "159330"
-        ],
-        "dinne": [
-          "5256",
-          "159492"
-        ],
-        "m": [
-          "5256",
-          "164056"
-        ],
-        "vrinne": [
-          "5256",
-          "165950"
-        ],
-        "sves": [
-          "5256",
-          "167280"
-        ],
-        "l": [
-          "5256",
-          "168640"
-        ],
-        "ugnet": [
-          "5256",
-          "168644"
-        ],
-        "er": [
-          "5256",
-          "178223"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment5256.jsonld#112540",
+              "@type": "tree:Node",
+              "token_string": "n"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment5256.jsonld#159330",
+              "@type": "tree:Node",
+              "token_string": "r"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment5256.jsonld#159492",
+              "@type": "tree:Node",
+              "token_string": "dinne"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment5256.jsonld#164056",
+              "@type": "tree:Node",
+              "token_string": "m"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment5256.jsonld#165950",
+              "@type": "tree:Node",
+              "token_string": "vrinne"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment5256.jsonld#167280",
+              "@type": "tree:Node",
+              "token_string": "sves"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment5256.jsonld#168640",
+              "@type": "tree:Node",
+              "token_string": "l"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment5256.jsonld#168644",
+              "@type": "tree:Node",
+              "token_string": "ugnet"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment5256.jsonld#178223",
+              "@type": "tree:Node",
+              "token_string": "er"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment3980.jsonld#104296",
         "@type": "tree:Node"
@@ -208,113 +252,113 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue de Gembloux",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9030050288140696",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.81955942215522"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6966611149323954",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.14433998330002"
         },
         {
           "http://example.com/terms#name": "Rue de Gembloux",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.243699413924881",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.57868927166126"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0888069907493714",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.01876822694651"
         },
         {
           "http://example.com/terms#name": "Rue de Gembloux",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.243699413924881",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.57868927166126"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0888069907493714",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.01876822694651"
         },
         {
           "http://example.com/terms#name": "Rue de Gembloux",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.243699413924881",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.57868927166126"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0888069907493714",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.01876822694651"
         },
         {
           "http://example.com/terms#name": "Rue de Gembloux",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.243699413924881",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.57868927166126"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0888069907493714",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.01876822694651"
         },
         {
           "http://example.com/terms#name": "Rue de Gembloux",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8273051551923976",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.38104213585449"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8839289861155604",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.7668842562266"
         },
         {
           "http://example.com/terms#name": "Rue de Gembloux",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.20543322121153",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.05162735433014"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1416660748037764",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.49680481949408"
         },
         {
           "http://example.com/terms#name": "Rue de Gelée",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2771009944303886",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.804429128282635"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.213830384402675",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.41767063981256"
         },
         {
           "http://example.com/terms#name": "Rue de Genal",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1524464476439866",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.34030286581724"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4730870374338765",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.14033619822226"
         },
         {
           "http://example.com/terms#name": "Rue de Gedinne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.722199185809669",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.90508998058767"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2551870271187933",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.468826481324925"
         },
         {
           "http://example.com/terms#name": "Rue de Gedinne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8139164461137414",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.70535667777127"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4898959315069407",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.35024585677518"
         },
         {
           "http://example.com/terms#name": "Rue de Gedinne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8139164461137414",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.70535667777127"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4898959315069407",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.35024585677518"
         },
         {
           "http://example.com/terms#name": "Rue de Gedinne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8139164461137414",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.70535667777127"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4898959315069407",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.35024585677518"
         },
         {
           "http://example.com/terms#name": "Rue de Gedinne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8139164461137414",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.70535667777127"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4898959315069407",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.35024585677518"
         },
         {
           "http://example.com/terms#name": "Rue de Gedinne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7056097122681777",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.244346168006494"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3247010741807923",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.86265960191766"
         },
         {
           "http://example.com/terms#name": "Rue de Gedinne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7441977727304527",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.7721243710868"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6827615553178084",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.26079326362419"
         },
         {
           "http://example.com/terms#name": "Rue de Gembes",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.302465542842086",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.34060219147855"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.229174181524334",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.05799234627058"
         },
         {
           "http://example.com/terms#name": "Rue de Gemenne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3353453806866704",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.82726205413396"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9703912700971817",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.84140282129196"
         },
         {
           "http://example.com/terms#name": "Rue de Gemeroye",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6093653870615494",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.985526251358856"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.824240501490645",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.390182200725235"
         },
         {
           "http://example.com/terms#name": "Rue de Gemine",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6494463583306067",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.9036673252112"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7874551061384314",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.94860112165793"
         },
         {
           "http://example.com/terms#name": "Rue de Gelbressée",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3004345097715317",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.14760852105845"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.349093217778555",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.51060269283321"
         },
         {
           "http://example.com/terms#name": "Rue de Geer",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2223121956733927",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.520674486135775"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8541829390695965",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.86597587138095"
         }
       ],
       "total_children_count": 36,
@@ -394,107 +438,63 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5256.jsonld#112540"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5256.jsonld#159330"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5256.jsonld#159492"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5256.jsonld#164056"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5256.jsonld#165950"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5256.jsonld#167280"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5256.jsonld#168640"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5256.jsonld#168644"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5256.jsonld#178223"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "n",
       "triples": [],
-      "children": {
-        "ti": [
-          "5256",
-          "110534"
-        ],
-        "v": [
-          "5256",
-          "113293"
-        ],
-        "l": [
-          "5256",
-          "124459"
-        ],
-        "al": [
-          "5256",
-          "157950"
-        ],
-        "dron": [
-          "5256",
-          "163595"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment5256.jsonld#110534",
+              "@type": "tree:Node",
+              "token_string": "ti"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment5256.jsonld#113293",
+              "@type": "tree:Node",
+              "token_string": "v"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment5256.jsonld#124459",
+              "@type": "tree:Node",
+              "token_string": "l"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment5256.jsonld#157950",
+              "@type": "tree:Node",
+              "token_string": "al"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment5256.jsonld#163595",
+              "@type": "tree:Node",
+              "token_string": "dron"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment5256.jsonld#112539",
         "@type": "tree:Node"
@@ -502,118 +502,118 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue de Genval",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6253735132084555",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.05412525410023"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5956236217991298",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.123432887024556"
         },
         {
           "http://example.com/terms#name": "Rue de Genval",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.895900465315897",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.76665834297404"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1691682596451467",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.69538853521799"
         },
         {
           "http://example.com/terms#name": "Rue de Genval",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.895900465315897",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.76665834297404"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1691682596451467",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.69538853521799"
         },
         {
           "http://example.com/terms#name": "Rue de Genval",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.895900465315897",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.76665834297404"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1691682596451467",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.69538853521799"
         },
         {
           "http://example.com/terms#name": "Rue de Genval",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0959920457062338",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.741420251844765"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.223581339985093",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.682370496572226"
         },
         {
           "http://example.com/terms#name": "Rue de Genval",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0959920457062338",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.741420251844765"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.223581339985093",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.682370496572226"
         },
         {
           "http://example.com/terms#name": "Rue de Genval",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1293992076100294",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.985567132297035"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8563264485053934",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.46886648295267"
         },
         {
           "http://example.com/terms#name": "Rue de Gentinnes",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6893178379447504",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.377383950867646"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.325410638272633",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.89908319868776"
         },
         {
           "http://example.com/terms#name": "Rue de Gentissart",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8909540383821675",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.31094788822605"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9048406635398436",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.02283668939629"
         },
         {
           "http://example.com/terms#name": "Rue de Genleau",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8079793994576954",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.055008545645286"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5783521793491877",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.06335553297208"
         },
         {
           "http://example.com/terms#name": "Rue de Genville",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.350170695138131",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.45402776174049"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.510788328562473",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.797242957031955"
         },
         {
           "http://example.com/terms#name": "Rue de Genly",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7955068715291906",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.484213147735616"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8324997772761495",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.27617129813775"
         },
         {
           "http://example.com/terms#name": "Rue de Genly",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0158432129388935",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.950305829114164"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6238182360913687",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.52403059176675"
         },
         {
           "http://example.com/terms#name": "Rue de Genly",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0158432129388935",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.950305829114164"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6238182360913687",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.52403059176675"
         },
         {
           "http://example.com/terms#name": "Rue de Genly",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0158432129388935",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.950305829114164"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6238182360913687",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.52403059176675"
         },
         {
           "http://example.com/terms#name": "Rue de Genly",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0158432129388935",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.950305829114164"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6238182360913687",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.52403059176675"
         },
         {
           "http://example.com/terms#name": "Rue de Genly",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0158432129388935",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.950305829114164"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6238182360913687",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.52403059176675"
         },
         {
           "http://example.com/terms#name": "Rue de Genal",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1524464476439866",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.34030286581724"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4730870374338765",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.14033619822226"
         },
         {
           "http://example.com/terms#name": "Rue de Gendron",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.305032958789497",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.99618309261536"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7422450698096696",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.61166137461298"
         },
         {
           "http://example.com/terms#name": "Rue de Gendron",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9166929330954963",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.08380533602439"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.374750013511086",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.84311697797451"
         },
         {
           "http://example.com/terms#name": "Rue de Gendron",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9166929330954963",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.08380533602439"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.374750013511086",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.84311697797451"
         },
         {
           "http://example.com/terms#name": "Rue de Gendron",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9166929330954963",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.08380533602439"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.374750013511086",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.84311697797451"
         },
         {
           "http://example.com/terms#name": "Rue de Gendron",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9166929330954963",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.08380533602439"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.374750013511086",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.84311697797451"
         }
       ],
       "total_children_count": 11,
@@ -684,63 +684,33 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5256.jsonld#110534"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5256.jsonld#113293"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5256.jsonld#124459"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5256.jsonld#157950"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5256.jsonld#163595"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "v",
       "triples": [],
-      "children": {
-        "al": [
-          "5256",
-          "113294"
-        ],
-        "ille": [
-          "5256",
-          "113295"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment5256.jsonld#113294",
+              "@type": "tree:Node",
+              "token_string": "al"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment5256.jsonld#113295",
+              "@type": "tree:Node",
+              "token_string": "ille"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment5256.jsonld#112540",
         "@type": "tree:Node"
@@ -748,43 +718,43 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue de Genval",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6253735132084555",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.05412525410023"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5956236217991298",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.123432887024556"
         },
         {
           "http://example.com/terms#name": "Rue de Genval",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.895900465315897",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.76665834297404"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1691682596451467",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.69538853521799"
         },
         {
           "http://example.com/terms#name": "Rue de Genval",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.895900465315897",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.76665834297404"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1691682596451467",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.69538853521799"
         },
         {
           "http://example.com/terms#name": "Rue de Genval",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.895900465315897",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.76665834297404"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1691682596451467",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.69538853521799"
         },
         {
           "http://example.com/terms#name": "Rue de Genval",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0959920457062338",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.741420251844765"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.223581339985093",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.682370496572226"
         },
         {
           "http://example.com/terms#name": "Rue de Genval",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0959920457062338",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.741420251844765"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.223581339985093",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.682370496572226"
         },
         {
           "http://example.com/terms#name": "Rue de Genval",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1293992076100294",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.985567132297035"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8563264485053934",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.46886648295267"
         },
         {
           "http://example.com/terms#name": "Rue de Genville",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.350170695138131",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.45402776174049"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.510788328562473",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.797242957031955"
         }
       ],
       "total_children_count": 2,
@@ -810,66 +780,47 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5256.jsonld#113294"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5256.jsonld#113295"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "al",
       "triples": [
         {
           "http://example.com/terms#name": "Rue de Genval",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6253735132084555",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.05412525410023"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5956236217991298",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.123432887024556"
         },
         {
           "http://example.com/terms#name": "Rue de Genval",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.895900465315897",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.76665834297404"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1691682596451467",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.69538853521799"
         },
         {
           "http://example.com/terms#name": "Rue de Genval",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.895900465315897",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.76665834297404"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1691682596451467",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.69538853521799"
         },
         {
           "http://example.com/terms#name": "Rue de Genval",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.895900465315897",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.76665834297404"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1691682596451467",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.69538853521799"
         },
         {
           "http://example.com/terms#name": "Rue de Genval",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0959920457062338",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.741420251844765"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.223581339985093",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.682370496572226"
         },
         {
           "http://example.com/terms#name": "Rue de Genval",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0959920457062338",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.741420251844765"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.223581339985093",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.682370496572226"
         },
         {
           "http://example.com/terms#name": "Rue de Genval",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1293992076100294",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.985567132297035"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8563264485053934",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.46886648295267"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5256.jsonld#113293",
         "@type": "tree:Node"
@@ -877,38 +828,38 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue de Genval",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6253735132084555",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.05412525410023"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5956236217991298",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.123432887024556"
         },
         {
           "http://example.com/terms#name": "Rue de Genval",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.895900465315897",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.76665834297404"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1691682596451467",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.69538853521799"
         },
         {
           "http://example.com/terms#name": "Rue de Genval",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.895900465315897",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.76665834297404"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1691682596451467",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.69538853521799"
         },
         {
           "http://example.com/terms#name": "Rue de Genval",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.895900465315897",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.76665834297404"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1691682596451467",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.69538853521799"
         },
         {
           "http://example.com/terms#name": "Rue de Genval",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0959920457062338",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.741420251844765"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.223581339985093",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.682370496572226"
         },
         {
           "http://example.com/terms#name": "Rue de Genval",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0959920457062338",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.741420251844765"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.223581339985093",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.682370496572226"
         },
         {
           "http://example.com/terms#name": "Rue de Genval",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1293992076100294",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.985567132297035"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8563264485053934",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.46886648295267"
         }
       ],
       "total_children_count": 0,
@@ -936,19 +887,17 @@
         "Rue de Genval",
         "Rue de Genval",
         "Rue de Genval"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "ille",
       "triples": [
         {
           "http://example.com/terms#name": "Rue de Genville",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.350170695138131",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.45402776174049"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.510788328562473",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.797242957031955"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5256.jsonld#113293",
         "@type": "tree:Node"
@@ -956,8 +905,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue de Genville",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.350170695138131",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.45402776174049"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.510788328562473",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.797242957031955"
         }
       ],
       "total_children_count": 0,
@@ -973,22 +922,33 @@
       ],
       "triples_metadata": [
         "Rue de Genville"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "l",
       "triples": [],
-      "children": {
-        "eau": [
-          "5256",
-          "124460"
-        ],
-        "y": [
-          "5256",
-          "124461"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment5256.jsonld#124460",
+              "@type": "tree:Node",
+              "token_string": "eau"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment5256.jsonld#124461",
+              "@type": "tree:Node",
+              "token_string": "y"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment5256.jsonld#112540",
         "@type": "tree:Node"
@@ -996,38 +956,38 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue de Genleau",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8079793994576954",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.055008545645286"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5783521793491877",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.06335553297208"
         },
         {
           "http://example.com/terms#name": "Rue de Genly",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7955068715291906",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.484213147735616"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8324997772761495",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.27617129813775"
         },
         {
           "http://example.com/terms#name": "Rue de Genly",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0158432129388935",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.950305829114164"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6238182360913687",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.52403059176675"
         },
         {
           "http://example.com/terms#name": "Rue de Genly",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0158432129388935",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.950305829114164"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6238182360913687",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.52403059176675"
         },
         {
           "http://example.com/terms#name": "Rue de Genly",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0158432129388935",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.950305829114164"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6238182360913687",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.52403059176675"
         },
         {
           "http://example.com/terms#name": "Rue de Genly",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0158432129388935",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.950305829114164"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6238182360913687",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.52403059176675"
         },
         {
           "http://example.com/terms#name": "Rue de Genly",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0158432129388935",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.950305829114164"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6238182360913687",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.52403059176675"
         }
       ],
       "total_children_count": 2,
@@ -1052,36 +1012,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5256.jsonld#124460"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5256.jsonld#124461"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "eau",
       "triples": [
         {
           "http://example.com/terms#name": "Rue de Genleau",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8079793994576954",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.055008545645286"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5783521793491877",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.06335553297208"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5256.jsonld#124459",
         "@type": "tree:Node"
@@ -1089,8 +1030,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue de Genleau",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8079793994576954",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.055008545645286"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5783521793491877",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.06335553297208"
         }
       ],
       "total_children_count": 0,
@@ -1106,44 +1047,42 @@
       ],
       "triples_metadata": [
         "Rue de Genleau"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "y",
       "triples": [
         {
           "http://example.com/terms#name": "Rue de Genly",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7955068715291906",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.484213147735616"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8324997772761495",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.27617129813775"
         },
         {
           "http://example.com/terms#name": "Rue de Genly",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0158432129388935",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.950305829114164"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6238182360913687",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.52403059176675"
         },
         {
           "http://example.com/terms#name": "Rue de Genly",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0158432129388935",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.950305829114164"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6238182360913687",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.52403059176675"
         },
         {
           "http://example.com/terms#name": "Rue de Genly",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0158432129388935",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.950305829114164"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6238182360913687",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.52403059176675"
         },
         {
           "http://example.com/terms#name": "Rue de Genly",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0158432129388935",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.950305829114164"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6238182360913687",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.52403059176675"
         },
         {
           "http://example.com/terms#name": "Rue de Genly",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0158432129388935",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.950305829114164"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6238182360913687",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.52403059176675"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5256.jsonld#124459",
         "@type": "tree:Node"
@@ -1151,33 +1090,33 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue de Genly",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7955068715291906",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.484213147735616"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8324997772761495",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.27617129813775"
         },
         {
           "http://example.com/terms#name": "Rue de Genly",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0158432129388935",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.950305829114164"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6238182360913687",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.52403059176675"
         },
         {
           "http://example.com/terms#name": "Rue de Genly",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0158432129388935",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.950305829114164"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6238182360913687",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.52403059176675"
         },
         {
           "http://example.com/terms#name": "Rue de Genly",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0158432129388935",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.950305829114164"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6238182360913687",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.52403059176675"
         },
         {
           "http://example.com/terms#name": "Rue de Genly",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0158432129388935",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.950305829114164"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6238182360913687",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.52403059176675"
         },
         {
           "http://example.com/terms#name": "Rue de Genly",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0158432129388935",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.950305829114164"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6238182360913687",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.52403059176675"
         }
       ],
       "total_children_count": 0,
@@ -1203,19 +1142,17 @@
         "Rue de Genly",
         "Rue de Genly",
         "Rue de Genly"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "al",
       "triples": [
         {
           "http://example.com/terms#name": "Rue de Genal",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1524464476439866",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.34030286581724"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4730870374338765",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.14033619822226"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5256.jsonld#112540",
         "@type": "tree:Node"
@@ -1223,8 +1160,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue de Genal",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1524464476439866",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.34030286581724"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4730870374338765",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.14033619822226"
         }
       ],
       "total_children_count": 0,
@@ -1240,34 +1177,63 @@
       ],
       "triples_metadata": [
         "Rue de Genal"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "r",
       "triples": [],
-      "children": {
-        "nissart": [
-          "5256",
-          "159331"
-        ],
-        "pinnes": [
-          "5256",
-          "172414"
-        ],
-        "limpont": [
-          "5256",
-          "173093"
-        ],
-        "m": [
-          "5256",
-          "178017"
-        ],
-        "henne": [
-          "5256",
-          "178733"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment5256.jsonld#159331",
+              "@type": "tree:Node",
+              "token_string": "nissart"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment5256.jsonld#172414",
+              "@type": "tree:Node",
+              "token_string": "pinnes"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment5256.jsonld#173093",
+              "@type": "tree:Node",
+              "token_string": "limpont"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment5256.jsonld#178017",
+              "@type": "tree:Node",
+              "token_string": "m"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment5256.jsonld#178733",
+              "@type": "tree:Node",
+              "token_string": "henne"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment5256.jsonld#112539",
         "@type": "tree:Node"
@@ -1275,48 +1241,48 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue de Gernissart",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.612478305848796",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.53902548649977"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3069853605711352",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.54453664806634"
         },
         {
           "http://example.com/terms#name": "Rue de Germauchamps",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.703490302240369",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.30151528182434"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3109184589815723",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.456430671745736"
         },
         {
           "http://example.com/terms#name": "Rue de Gerpinnes",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7727915859427354",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.15766399687915"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.065210519837169",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.57986638613368"
         },
         {
           "http://example.com/terms#name": "Rue de Gerpinnes",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1558861964130163",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.873350242480065"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.429437704824486",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.07247331588703"
         },
         {
           "http://example.com/terms#name": "Rue de Gerpinnes",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1558861964130163",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.873350242480065"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.429437704824486",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.07247331588703"
         },
         {
           "http://example.com/terms#name": "Rue de Gerpinnes",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1558861964130163",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.873350242480065"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.429437704824486",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.07247331588703"
         },
         {
           "http://example.com/terms#name": "Rue de Gerlimpont",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7295489963668835",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.06321305051524"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0857347131329282",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.293233368684064"
         },
         {
           "http://example.com/terms#name": "Rue de Germepré",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6569317036357476",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.244802015694844"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.079778251560546",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.9747714553939"
         },
         {
           "http://example.com/terms#name": "Rue de Gerhenne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.334332442204793",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.23119142454432"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9089713594927655",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.185786321496686"
         }
       ],
       "total_children_count": 7,
@@ -1363,60 +1329,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5256.jsonld#159331"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5256.jsonld#172414"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5256.jsonld#173093"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5256.jsonld#178017"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5256.jsonld#178733"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "nissart",
       "triples": [
         {
           "http://example.com/terms#name": "Rue de Gernissart",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.612478305848796",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.53902548649977"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3069853605711352",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.54453664806634"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5256.jsonld#159330",
         "@type": "tree:Node"
@@ -1424,8 +1347,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue de Gernissart",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.612478305848796",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.53902548649977"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3069853605711352",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.54453664806634"
         }
       ],
       "total_children_count": 0,
@@ -1441,49 +1364,47 @@
       ],
       "triples_metadata": [
         "Rue de Gernissart"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "dinne",
       "triples": [
         {
           "http://example.com/terms#name": "Rue de Gedinne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.722199185809669",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.90508998058767"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2551870271187933",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.468826481324925"
         },
         {
           "http://example.com/terms#name": "Rue de Gedinne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8139164461137414",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.70535667777127"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4898959315069407",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.35024585677518"
         },
         {
           "http://example.com/terms#name": "Rue de Gedinne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8139164461137414",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.70535667777127"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4898959315069407",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.35024585677518"
         },
         {
           "http://example.com/terms#name": "Rue de Gedinne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8139164461137414",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.70535667777127"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4898959315069407",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.35024585677518"
         },
         {
           "http://example.com/terms#name": "Rue de Gedinne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8139164461137414",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.70535667777127"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4898959315069407",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.35024585677518"
         },
         {
           "http://example.com/terms#name": "Rue de Gedinne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7056097122681777",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.244346168006494"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3247010741807923",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.86265960191766"
         },
         {
           "http://example.com/terms#name": "Rue de Gedinne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7441977727304527",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.7721243710868"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6827615553178084",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.26079326362419"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5256.jsonld#112539",
         "@type": "tree:Node"
@@ -1491,38 +1412,38 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue de Gedinne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.722199185809669",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.90508998058767"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2551870271187933",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.468826481324925"
         },
         {
           "http://example.com/terms#name": "Rue de Gedinne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8139164461137414",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.70535667777127"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4898959315069407",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.35024585677518"
         },
         {
           "http://example.com/terms#name": "Rue de Gedinne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8139164461137414",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.70535667777127"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4898959315069407",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.35024585677518"
         },
         {
           "http://example.com/terms#name": "Rue de Gedinne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8139164461137414",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.70535667777127"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4898959315069407",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.35024585677518"
         },
         {
           "http://example.com/terms#name": "Rue de Gedinne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8139164461137414",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.70535667777127"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4898959315069407",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.35024585677518"
         },
         {
           "http://example.com/terms#name": "Rue de Gedinne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7056097122681777",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.244346168006494"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3247010741807923",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.86265960191766"
         },
         {
           "http://example.com/terms#name": "Rue de Gedinne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7441977727304527",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.7721243710868"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6827615553178084",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.26079326362419"
         }
       ],
       "total_children_count": 0,
@@ -1550,49 +1471,47 @@
         "Rue de Gedinne",
         "Rue de Gedinne",
         "Rue de Gedinne"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "loux",
       "triples": [
         {
           "http://example.com/terms#name": "Rue de Gembloux",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9030050288140696",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.81955942215522"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6966611149323954",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.14433998330002"
         },
         {
           "http://example.com/terms#name": "Rue de Gembloux",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.243699413924881",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.57868927166126"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0888069907493714",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.01876822694651"
         },
         {
           "http://example.com/terms#name": "Rue de Gembloux",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.243699413924881",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.57868927166126"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0888069907493714",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.01876822694651"
         },
         {
           "http://example.com/terms#name": "Rue de Gembloux",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.243699413924881",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.57868927166126"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0888069907493714",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.01876822694651"
         },
         {
           "http://example.com/terms#name": "Rue de Gembloux",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.243699413924881",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.57868927166126"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0888069907493714",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.01876822694651"
         },
         {
           "http://example.com/terms#name": "Rue de Gembloux",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8273051551923976",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.38104213585449"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8839289861155604",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.7668842562266"
         },
         {
           "http://example.com/terms#name": "Rue de Gembloux",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.20543322121153",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.05162735433014"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1416660748037764",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.49680481949408"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5256.jsonld#164057",
         "@type": "tree:Node"
@@ -1600,38 +1519,38 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue de Gembloux",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9030050288140696",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.81955942215522"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6966611149323954",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.14433998330002"
         },
         {
           "http://example.com/terms#name": "Rue de Gembloux",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.243699413924881",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.57868927166126"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0888069907493714",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.01876822694651"
         },
         {
           "http://example.com/terms#name": "Rue de Gembloux",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.243699413924881",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.57868927166126"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0888069907493714",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.01876822694651"
         },
         {
           "http://example.com/terms#name": "Rue de Gembloux",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.243699413924881",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.57868927166126"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0888069907493714",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.01876822694651"
         },
         {
           "http://example.com/terms#name": "Rue de Gembloux",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.243699413924881",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.57868927166126"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0888069907493714",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.01876822694651"
         },
         {
           "http://example.com/terms#name": "Rue de Gembloux",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8273051551923976",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.38104213585449"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8839289861155604",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.7668842562266"
         },
         {
           "http://example.com/terms#name": "Rue de Gembloux",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.20543322121153",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.05162735433014"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1416660748037764",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.49680481949408"
         }
       ],
       "total_children_count": 0,
@@ -1659,19 +1578,17 @@
         "Rue de Gembloux",
         "Rue de Gembloux",
         "Rue de Gembloux"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "es",
       "triples": [
         {
           "http://example.com/terms#name": "Rue de Gembes",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.302465542842086",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.34060219147855"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.229174181524334",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.05799234627058"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5256.jsonld#164057",
         "@type": "tree:Node"
@@ -1679,8 +1596,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue de Gembes",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.302465542842086",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.34060219147855"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.229174181524334",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.05799234627058"
         }
       ],
       "total_children_count": 0,
@@ -1696,39 +1613,37 @@
       ],
       "triples_metadata": [
         "Rue de Gembes"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "dron",
       "triples": [
         {
           "http://example.com/terms#name": "Rue de Gendron",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.305032958789497",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.99618309261536"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7422450698096696",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.61166137461298"
         },
         {
           "http://example.com/terms#name": "Rue de Gendron",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9166929330954963",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.08380533602439"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.374750013511086",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.84311697797451"
         },
         {
           "http://example.com/terms#name": "Rue de Gendron",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9166929330954963",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.08380533602439"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.374750013511086",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.84311697797451"
         },
         {
           "http://example.com/terms#name": "Rue de Gendron",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9166929330954963",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.08380533602439"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.374750013511086",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.84311697797451"
         },
         {
           "http://example.com/terms#name": "Rue de Gendron",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9166929330954963",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.08380533602439"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.374750013511086",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.84311697797451"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5256.jsonld#112540",
         "@type": "tree:Node"
@@ -1736,28 +1651,28 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue de Gendron",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.305032958789497",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.99618309261536"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7422450698096696",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.61166137461298"
         },
         {
           "http://example.com/terms#name": "Rue de Gendron",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9166929330954963",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.08380533602439"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.374750013511086",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.84311697797451"
         },
         {
           "http://example.com/terms#name": "Rue de Gendron",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9166929330954963",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.08380533602439"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.374750013511086",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.84311697797451"
         },
         {
           "http://example.com/terms#name": "Rue de Gendron",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9166929330954963",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.08380533602439"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.374750013511086",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.84311697797451"
         },
         {
           "http://example.com/terms#name": "Rue de Gendron",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9166929330954963",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.08380533602439"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.374750013511086",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.84311697797451"
         }
       ],
       "total_children_count": 0,
@@ -1781,26 +1696,43 @@
         "Rue de Gendron",
         "Rue de Gendron",
         "Rue de Gendron"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "m",
       "triples": [],
-      "children": {
-        "b": [
-          "5256",
-          "164057"
-        ],
-        "e": [
-          "5256",
-          "164776"
-        ],
-        "ine": [
-          "5256",
-          "165949"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment5256.jsonld#164057",
+              "@type": "tree:Node",
+              "token_string": "b"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment5256.jsonld#164776",
+              "@type": "tree:Node",
+              "token_string": "e"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment5256.jsonld#165949",
+              "@type": "tree:Node",
+              "token_string": "ine"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment5256.jsonld#112539",
         "@type": "tree:Node"
@@ -1808,58 +1740,58 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue de Gembloux",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9030050288140696",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.81955942215522"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6966611149323954",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.14433998330002"
         },
         {
           "http://example.com/terms#name": "Rue de Gembloux",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.243699413924881",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.57868927166126"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0888069907493714",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.01876822694651"
         },
         {
           "http://example.com/terms#name": "Rue de Gembloux",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.243699413924881",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.57868927166126"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0888069907493714",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.01876822694651"
         },
         {
           "http://example.com/terms#name": "Rue de Gembloux",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.243699413924881",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.57868927166126"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0888069907493714",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.01876822694651"
         },
         {
           "http://example.com/terms#name": "Rue de Gembloux",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.243699413924881",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.57868927166126"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0888069907493714",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.01876822694651"
         },
         {
           "http://example.com/terms#name": "Rue de Gembloux",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8273051551923976",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.38104213585449"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8839289861155604",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.7668842562266"
         },
         {
           "http://example.com/terms#name": "Rue de Gembloux",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.20543322121153",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.05162735433014"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1416660748037764",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.49680481949408"
         },
         {
           "http://example.com/terms#name": "Rue de Gembes",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.302465542842086",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.34060219147855"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.229174181524334",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.05799234627058"
         },
         {
           "http://example.com/terms#name": "Rue de Gemenne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3353453806866704",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.82726205413396"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9703912700971817",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.84140282129196"
         },
         {
           "http://example.com/terms#name": "Rue de Gemeroye",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6093653870615494",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.985526251358856"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.824240501490645",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.390182200725235"
         },
         {
           "http://example.com/terms#name": "Rue de Gemine",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6494463583306067",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.9036673252112"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7874551061384314",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.94860112165793"
         }
       ],
       "total_children_count": 7,
@@ -1903,47 +1835,33 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5256.jsonld#164057"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5256.jsonld#164776"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5256.jsonld#165949"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "b",
       "triples": [],
-      "children": {
-        "loux": [
-          "5256",
-          "162877"
-        ],
-        "es": [
-          "5256",
-          "162878"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment5256.jsonld#162877",
+              "@type": "tree:Node",
+              "token_string": "loux"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment5256.jsonld#162878",
+              "@type": "tree:Node",
+              "token_string": "es"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment5256.jsonld#164056",
         "@type": "tree:Node"
@@ -1951,43 +1869,43 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue de Gembloux",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9030050288140696",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.81955942215522"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6966611149323954",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.14433998330002"
         },
         {
           "http://example.com/terms#name": "Rue de Gembloux",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.243699413924881",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.57868927166126"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0888069907493714",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.01876822694651"
         },
         {
           "http://example.com/terms#name": "Rue de Gembloux",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.243699413924881",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.57868927166126"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0888069907493714",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.01876822694651"
         },
         {
           "http://example.com/terms#name": "Rue de Gembloux",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.243699413924881",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.57868927166126"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0888069907493714",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.01876822694651"
         },
         {
           "http://example.com/terms#name": "Rue de Gembloux",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.243699413924881",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.57868927166126"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0888069907493714",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.01876822694651"
         },
         {
           "http://example.com/terms#name": "Rue de Gembloux",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8273051551923976",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.38104213585449"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8839289861155604",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.7668842562266"
         },
         {
           "http://example.com/terms#name": "Rue de Gembloux",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.20543322121153",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.05162735433014"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1416660748037764",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.49680481949408"
         },
         {
           "http://example.com/terms#name": "Rue de Gembes",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.302465542842086",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.34060219147855"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.229174181524334",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.05799234627058"
         }
       ],
       "total_children_count": 2,
@@ -2013,13 +1931,19 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
+      "triples_metadata": []
+    },
+    {
+      "token_string": "e",
+      "triples": [],
+      "children": [
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
             {
-              "@id": "/streets/fragment5256.jsonld#162877"
+              "@id": "/streets/fragment5256.jsonld#164777",
+              "@type": "tree:Node",
+              "token_string": "nne"
             }
           ]
         },
@@ -2027,25 +1951,13 @@
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
             {
-              "@id": "/streets/fragment5256.jsonld#162878"
+              "@id": "/streets/fragment5256.jsonld#164778",
+              "@type": "tree:Node",
+              "token_string": "roye"
             }
           ]
         }
-      ]
-    },
-    {
-      "token_string": "e",
-      "triples": [],
-      "children": {
-        "nne": [
-          "5256",
-          "164777"
-        ],
-        "roye": [
-          "5256",
-          "164778"
-        ]
-      },
+      ],
       "parent_node": {
         "@id": "/streets/fragment5256.jsonld#164056",
         "@type": "tree:Node"
@@ -2053,13 +1965,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue de Gemenne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3353453806866704",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.82726205413396"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9703912700971817",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.84140282129196"
         },
         {
           "http://example.com/terms#name": "Rue de Gemeroye",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6093653870615494",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.985526251358856"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.824240501490645",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.390182200725235"
         }
       ],
       "total_children_count": 2,
@@ -2079,36 +1991,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5256.jsonld#164777"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5256.jsonld#164778"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "nne",
       "triples": [
         {
           "http://example.com/terms#name": "Rue de Gemenne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3353453806866704",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.82726205413396"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9703912700971817",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.84140282129196"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5256.jsonld#164776",
         "@type": "tree:Node"
@@ -2116,8 +2009,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue de Gemenne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3353453806866704",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.82726205413396"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9703912700971817",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.84140282129196"
         }
       ],
       "total_children_count": 0,
@@ -2133,19 +2026,17 @@
       ],
       "triples_metadata": [
         "Rue de Gemenne"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "roye",
       "triples": [
         {
           "http://example.com/terms#name": "Rue de Gemeroye",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6093653870615494",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.985526251358856"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.824240501490645",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.390182200725235"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5256.jsonld#164776",
         "@type": "tree:Node"
@@ -2153,8 +2044,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue de Gemeroye",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6093653870615494",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.985526251358856"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.824240501490645",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.390182200725235"
         }
       ],
       "total_children_count": 0,
@@ -2170,19 +2061,17 @@
       ],
       "triples_metadata": [
         "Rue de Gemeroye"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "ine",
       "triples": [
         {
           "http://example.com/terms#name": "Rue de Gemine",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6494463583306067",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.9036673252112"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7874551061384314",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.94860112165793"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5256.jsonld#164056",
         "@type": "tree:Node"
@@ -2190,8 +2079,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue de Gemine",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6494463583306067",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.9036673252112"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7874551061384314",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.94860112165793"
         }
       ],
       "total_children_count": 0,
@@ -2207,19 +2096,17 @@
       ],
       "triples_metadata": [
         "Rue de Gemine"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "vrinne",
       "triples": [
         {
           "http://example.com/terms#name": "Rue de Gevrinne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.945982259927113",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.35542196158286"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.139990614064508",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.75893557503653"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5256.jsonld#112539",
         "@type": "tree:Node"
@@ -2227,8 +2114,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue de Gevrinne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.945982259927113",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.35542196158286"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.139990614064508",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.75893557503653"
         }
       ],
       "total_children_count": 0,
@@ -2244,39 +2131,37 @@
       ],
       "triples_metadata": [
         "Rue de Gevrinne"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "sves",
       "triples": [
         {
           "http://example.com/terms#name": "Rue de Gesves",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.374733085640684",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.76426731641613"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.184563261766427",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.43046573658354"
         },
         {
           "http://example.com/terms#name": "Rue de Gesves",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1648972347779507",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.844598100222086"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7262392986749417",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.841799675279994"
         },
         {
           "http://example.com/terms#name": "Rue de Gesves",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1648972347779507",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.844598100222086"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7262392986749417",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.841799675279994"
         },
         {
           "http://example.com/terms#name": "Rue de Gesves",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.863791676922325",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.3859262734108"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.013171337819294",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.5207506145401"
         },
         {
           "http://example.com/terms#name": "Rue de Gesves",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.863791676922325",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.3859262734108"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.013171337819294",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.5207506145401"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5256.jsonld#112539",
         "@type": "tree:Node"
@@ -2284,28 +2169,28 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue de Gesves",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.374733085640684",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.76426731641613"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.184563261766427",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.43046573658354"
         },
         {
           "http://example.com/terms#name": "Rue de Gesves",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1648972347779507",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.844598100222086"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7262392986749417",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.841799675279994"
         },
         {
           "http://example.com/terms#name": "Rue de Gesves",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1648972347779507",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.844598100222086"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7262392986749417",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.841799675279994"
         },
         {
           "http://example.com/terms#name": "Rue de Gesves",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.863791676922325",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.3859262734108"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.013171337819294",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.5207506145401"
         },
         {
           "http://example.com/terms#name": "Rue de Gesves",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.863791676922325",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.3859262734108"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.013171337819294",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.5207506145401"
         }
       ],
       "total_children_count": 0,
@@ -2329,22 +2214,33 @@
         "Rue de Gesves",
         "Rue de Gesves",
         "Rue de Gesves"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "l",
       "triples": [],
-      "children": {
-        "ée": [
-          "5256",
-          "168641"
-        ],
-        "bressée": [
-          "5256",
-          "168642"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment5256.jsonld#168641",
+              "@type": "tree:Node",
+              "token_string": "ée"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment5256.jsonld#168642",
+              "@type": "tree:Node",
+              "token_string": "bressée"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment5256.jsonld#112539",
         "@type": "tree:Node"
@@ -2352,13 +2248,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue de Gelée",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2771009944303886",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.804429128282635"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.213830384402675",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.41767063981256"
         },
         {
           "http://example.com/terms#name": "Rue de Gelbressée",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3004345097715317",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.14760852105845"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.349093217778555",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.51060269283321"
         }
       ],
       "total_children_count": 2,
@@ -2378,36 +2274,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5256.jsonld#168641"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5256.jsonld#168642"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "ée",
       "triples": [
         {
           "http://example.com/terms#name": "Rue de Gelée",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2771009944303886",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.804429128282635"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.213830384402675",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.41767063981256"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5256.jsonld#168640",
         "@type": "tree:Node"
@@ -2415,8 +2292,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue de Gelée",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2771009944303886",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.804429128282635"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.213830384402675",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.41767063981256"
         }
       ],
       "total_children_count": 0,
@@ -2432,19 +2309,17 @@
       ],
       "triples_metadata": [
         "Rue de Gelée"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "bressée",
       "triples": [
         {
           "http://example.com/terms#name": "Rue de Gelbressée",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3004345097715317",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.14760852105845"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.349093217778555",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.51060269283321"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5256.jsonld#168640",
         "@type": "tree:Node"
@@ -2452,8 +2327,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue de Gelbressée",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3004345097715317",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.14760852105845"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.349093217778555",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.51060269283321"
         }
       ],
       "total_children_count": 0,
@@ -2469,19 +2344,17 @@
       ],
       "triples_metadata": [
         "Rue de Gelbressée"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "ugnet",
       "triples": [
         {
           "http://example.com/terms#name": "Rue de Geugnet",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.811244254352889",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.69551782452899"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.469735384069741",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.472070922870635"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5256.jsonld#112539",
         "@type": "tree:Node"
@@ -2489,8 +2362,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue de Geugnet",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.811244254352889",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.69551782452899"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.469735384069741",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.472070922870635"
         }
       ],
       "total_children_count": 0,
@@ -2506,34 +2379,32 @@
       ],
       "triples_metadata": [
         "Rue de Geugnet"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "pinnes",
       "triples": [
         {
           "http://example.com/terms#name": "Rue de Gerpinnes",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7727915859427354",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.15766399687915"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.065210519837169",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.57986638613368"
         },
         {
           "http://example.com/terms#name": "Rue de Gerpinnes",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1558861964130163",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.873350242480065"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.429437704824486",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.07247331588703"
         },
         {
           "http://example.com/terms#name": "Rue de Gerpinnes",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1558861964130163",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.873350242480065"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.429437704824486",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.07247331588703"
         },
         {
           "http://example.com/terms#name": "Rue de Gerpinnes",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1558861964130163",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.873350242480065"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.429437704824486",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.07247331588703"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5256.jsonld#159330",
         "@type": "tree:Node"
@@ -2541,23 +2412,23 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue de Gerpinnes",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7727915859427354",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.15766399687915"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.065210519837169",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.57986638613368"
         },
         {
           "http://example.com/terms#name": "Rue de Gerpinnes",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1558861964130163",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.873350242480065"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.429437704824486",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.07247331588703"
         },
         {
           "http://example.com/terms#name": "Rue de Gerpinnes",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1558861964130163",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.873350242480065"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.429437704824486",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.07247331588703"
         },
         {
           "http://example.com/terms#name": "Rue de Gerpinnes",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1558861964130163",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.873350242480065"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.429437704824486",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.07247331588703"
         }
       ],
       "total_children_count": 0,
@@ -2579,19 +2450,17 @@
         "Rue de Gerpinnes",
         "Rue de Gerpinnes",
         "Rue de Gerpinnes"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "limpont",
       "triples": [
         {
           "http://example.com/terms#name": "Rue de Gerlimpont",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7295489963668835",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.06321305051524"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0857347131329282",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.293233368684064"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5256.jsonld#159330",
         "@type": "tree:Node"
@@ -2599,8 +2468,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue de Gerlimpont",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7295489963668835",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.06321305051524"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0857347131329282",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.293233368684064"
         }
       ],
       "total_children_count": 0,
@@ -2616,22 +2485,33 @@
       ],
       "triples_metadata": [
         "Rue de Gerlimpont"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "m",
       "triples": [],
-      "children": {
-        "auchamps": [
-          "5256",
-          "178018"
-        ],
-        "epré": [
-          "5256",
-          "178019"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment5256.jsonld#178018",
+              "@type": "tree:Node",
+              "token_string": "auchamps"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment5256.jsonld#178019",
+              "@type": "tree:Node",
+              "token_string": "epré"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment5256.jsonld#159330",
         "@type": "tree:Node"
@@ -2639,13 +2519,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue de Germauchamps",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.703490302240369",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.30151528182434"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3109184589815723",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.456430671745736"
         },
         {
           "http://example.com/terms#name": "Rue de Germepré",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6569317036357476",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.244802015694844"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.079778251560546",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.9747714553939"
         }
       ],
       "total_children_count": 2,
@@ -2665,36 +2545,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5256.jsonld#178018"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5256.jsonld#178019"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "auchamps",
       "triples": [
         {
           "http://example.com/terms#name": "Rue de Germauchamps",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.703490302240369",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.30151528182434"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3109184589815723",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.456430671745736"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5256.jsonld#178017",
         "@type": "tree:Node"
@@ -2702,8 +2563,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue de Germauchamps",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.703490302240369",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.30151528182434"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3109184589815723",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.456430671745736"
         }
       ],
       "total_children_count": 0,
@@ -2719,19 +2580,17 @@
       ],
       "triples_metadata": [
         "Rue de Germauchamps"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "epré",
       "triples": [
         {
           "http://example.com/terms#name": "Rue de Germepré",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6569317036357476",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.244802015694844"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.079778251560546",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.9747714553939"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5256.jsonld#178017",
         "@type": "tree:Node"
@@ -2739,8 +2598,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue de Germepré",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6569317036357476",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.244802015694844"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.079778251560546",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.9747714553939"
         }
       ],
       "total_children_count": 0,
@@ -2756,19 +2615,17 @@
       ],
       "triples_metadata": [
         "Rue de Germepré"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "er",
       "triples": [
         {
           "http://example.com/terms#name": "Rue de Geer",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2223121956733927",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.520674486135775"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8541829390695965",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.86597587138095"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5256.jsonld#112539",
         "@type": "tree:Node"
@@ -2776,8 +2633,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue de Geer",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2223121956733927",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.520674486135775"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8541829390695965",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.86597587138095"
         }
       ],
       "total_children_count": 0,
@@ -2793,19 +2650,17 @@
       ],
       "triples_metadata": [
         "Rue de Geer"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "henne",
       "triples": [
         {
           "http://example.com/terms#name": "Rue de Gerhenne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.334332442204793",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.23119142454432"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9089713594927655",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.185786321496686"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5256.jsonld#159330",
         "@type": "tree:Node"
@@ -2813,8 +2668,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue de Gerhenne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.334332442204793",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.23119142454432"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9089713594927655",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.185786321496686"
         }
       ],
       "total_children_count": 0,
@@ -2830,8 +2685,7 @@
       ],
       "triples_metadata": [
         "Rue de Gerhenne"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

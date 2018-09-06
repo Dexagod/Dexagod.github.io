@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,16 +23,28 @@
     {
       "token_string": "K",
       "triples": [],
-      "children": {
-        "erselaersstraat": [
-          "1577",
-          "78554"
-        ],
-        "ruyfhooftstraat": [
-          "1577",
-          "78555"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1577.jsonld#78554",
+              "@type": "tree:Node",
+              "token_string": "erselaersstraat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1577.jsonld#78555",
+              "@type": "tree:Node",
+              "token_string": "ruyfhooftstraat"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment1029.jsonld#12277",
         "@type": "tree:Node"
@@ -40,13 +52,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Pastoor Kerselaersstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.901725083300642",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.664995755954735"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.900960900053429",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.33056825691687"
         },
         {
           "http://example.com/terms#name": "Pastoor Kruyfhooftstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.420771433326223",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.41694996048393"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4164090088045866",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.45523278033001"
         }
       ],
       "total_children_count": 2,
@@ -66,36 +78,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1577.jsonld#78554"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1577.jsonld#78555"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "erselaersstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Pastoor Kerselaersstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.901725083300642",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.664995755954735"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.900960900053429",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.33056825691687"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1577.jsonld#78553",
         "@type": "tree:Node"
@@ -103,8 +96,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Pastoor Kerselaersstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.901725083300642",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.664995755954735"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.900960900053429",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.33056825691687"
         }
       ],
       "total_children_count": 0,
@@ -120,19 +113,17 @@
       ],
       "triples_metadata": [
         "Pastoor Kerselaersstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "ruyfhooftstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Pastoor Kruyfhooftstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.420771433326223",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.41694996048393"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4164090088045866",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.45523278033001"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1577.jsonld#78553",
         "@type": "tree:Node"
@@ -140,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Pastoor Kruyfhooftstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.420771433326223",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.41694996048393"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4164090088045866",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.45523278033001"
         }
       ],
       "total_children_count": 0,
@@ -157,8 +148,7 @@
       ],
       "triples_metadata": [
         "Pastoor Kruyfhooftstraat"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

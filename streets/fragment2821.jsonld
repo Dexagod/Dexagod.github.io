@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,16 +23,28 @@
     {
       "token_string": "k",
       "triples": [],
-      "children": {
-        "entapstraat": [
-          "2821",
-          "64600"
-        ],
-        "driesstraat": [
-          "2821",
-          "64601"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2821.jsonld#64600",
+              "@type": "tree:Node",
+              "token_string": "entapstraat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2821.jsonld#64601",
+              "@type": "tree:Node",
+              "token_string": "driesstraat"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment144.jsonld#1409",
         "@type": "tree:Node"
@@ -40,13 +52,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Korkentapstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.275640231407442",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.60252828484858"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.781262333424166",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.70335878154249"
         },
         {
           "http://example.com/terms#name": "Korkdriesstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6479877061902544",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.870964572171594"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.274233432234594",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.001201376427666"
         }
       ],
       "total_children_count": 2,
@@ -66,36 +78,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2821.jsonld#64600"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2821.jsonld#64601"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "entapstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Korkentapstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.275640231407442",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.60252828484858"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.781262333424166",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.70335878154249"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2821.jsonld#64599",
         "@type": "tree:Node"
@@ -103,8 +96,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Korkentapstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.275640231407442",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.60252828484858"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.781262333424166",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.70335878154249"
         }
       ],
       "total_children_count": 0,
@@ -120,19 +113,17 @@
       ],
       "triples_metadata": [
         "Korkentapstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "driesstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Korkdriesstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6479877061902544",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.870964572171594"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.274233432234594",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.001201376427666"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2821.jsonld#64599",
         "@type": "tree:Node"
@@ -140,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Korkdriesstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6479877061902544",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.870964572171594"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.274233432234594",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.001201376427666"
         }
       ],
       "total_children_count": 0,
@@ -157,8 +148,7 @@
       ],
       "triples_metadata": [
         "Korkdriesstraat"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

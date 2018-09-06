@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,16 +23,28 @@
     {
       "token_string": "c",
       "triples": [],
-      "children": {
-        "ooman": [
-          "4982",
-          "112130"
-        ],
-        "hamps": [
-          "4982",
-          "112131"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment4982.jsonld#112130",
+              "@type": "tree:Node",
+              "token_string": "ooman"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment4982.jsonld#112131",
+              "@type": "tree:Node",
+              "token_string": "hamps"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment4982.jsonld#121633",
         "@type": "tree:Node"
@@ -40,13 +52,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Joseph Decooman",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5027352640763993",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.06045646634672"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5163110778007067",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.49241071778115"
         },
         {
           "http://example.com/terms#name": "Rue Joseph Dechamps",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.758487781254884",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.93150868587789"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3905091559875693",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.72591519710196"
         }
       ],
       "total_children_count": 2,
@@ -66,36 +78,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4982.jsonld#112130"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4982.jsonld#112131"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "ooman",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Joseph Decooman",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5027352640763993",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.06045646634672"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5163110778007067",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.49241071778115"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4982.jsonld#112129",
         "@type": "tree:Node"
@@ -103,8 +96,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Joseph Decooman",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5027352640763993",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.06045646634672"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5163110778007067",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.49241071778115"
         }
       ],
       "total_children_count": 0,
@@ -120,19 +113,17 @@
       ],
       "triples_metadata": [
         "Rue Joseph Decooman"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "hamps",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Joseph Dechamps",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.758487781254884",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.93150868587789"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3905091559875693",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.72591519710196"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4982.jsonld#112129",
         "@type": "tree:Node"
@@ -140,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Joseph Dechamps",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.758487781254884",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.93150868587789"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3905091559875693",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.72591519710196"
         }
       ],
       "total_children_count": 0,
@@ -157,42 +148,83 @@
       ],
       "triples_metadata": [
         "Rue Joseph Dechamps"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "e",
       "triples": [],
-      "children": {
-        "c": [
-          "4982",
-          "112129"
-        ],
-        "l": [
-          "4981",
-          "126505"
-        ],
-        "s": [
-          "4982",
-          "127103"
-        ],
-        "jardin": [
-          "4982",
-          "140562"
-        ],
-        "thier": [
-          "4982",
-          "140723"
-        ],
-        "flandre": [
-          "4982",
-          "141912"
-        ],
-        "b": [
-          "4982",
-          "169396"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment4982.jsonld#112129",
+              "@type": "tree:Node",
+              "token_string": "c"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment4981.jsonld#126505",
+              "@type": "tree:Node",
+              "token_string": "l"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment4982.jsonld#127103",
+              "@type": "tree:Node",
+              "token_string": "s"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment4982.jsonld#140562",
+              "@type": "tree:Node",
+              "token_string": "jardin"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment4982.jsonld#140723",
+              "@type": "tree:Node",
+              "token_string": "thier"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment4982.jsonld#141912",
+              "@type": "tree:Node",
+              "token_string": "flandre"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment4982.jsonld#169396",
+              "@type": "tree:Node",
+              "token_string": "b"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment5027.jsonld#121632",
         "@type": "tree:Node"
@@ -200,88 +232,88 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Joseph Delforge",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2325300325491044",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.53828087795988"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4662042523217145",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.91267244424309"
         },
         {
           "http://example.com/terms#name": "Rue Joseph Decooman",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5027352640763993",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.06045646634672"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5163110778007067",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.49241071778115"
         },
         {
           "http://example.com/terms#name": "Rue Joseph Dechamps",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.758487781254884",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.93150868587789"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3905091559875693",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.72591519710196"
         },
         {
           "http://example.com/terms#name": "Rue Joseph Delsaut",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9400043903432365",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.04146603563203"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2698642171263628",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.61443770684826"
         },
         {
           "http://example.com/terms#name": "Rue Joseph Delhalle",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8226768723397138",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.70113217353986"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.529224147982573",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.41932237010021"
         },
         {
           "http://example.com/terms#name": "Rue Joseph Dejardin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.807237618177876",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.03609942101991"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4233346850505413",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.706953221814885"
         },
         {
           "http://example.com/terms#name": "Rue Joseph Dejardin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.389561766754345",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.03834969171321"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9828784635594348",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.908231540946666"
         },
         {
           "http://example.com/terms#name": "Rue Joseph Dejardin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.389561766754345",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.03834969171321"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9828784635594348",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.908231540946666"
         },
         {
           "http://example.com/terms#name": "Rue Joseph Dejardin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.389561766754345",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.03834969171321"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9828784635594348",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.908231540946666"
         },
         {
           "http://example.com/terms#name": "Rue Joseph Dejardin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.389561766754345",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.03834969171321"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9828784635594348",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.908231540946666"
         },
         {
           "http://example.com/terms#name": "Rue Joseph Dejardin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8383097260107815",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.411409282493686"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6733351351590104",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.19072744339085"
         },
         {
           "http://example.com/terms#name": "Rue Joseph Dejardin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9395884816042983",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.64062872180494"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5211567368321814",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.823692814241056"
         },
         {
           "http://example.com/terms#name": "Rue Joseph Dejardin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0756455991569416",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.68144219519716"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6112059039072917",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.81677054910444"
         },
         {
           "http://example.com/terms#name": "Rue Joseph Delmotte",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4304103844595475",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.27938552726188"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.157813016033557",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.13361202997576"
         },
         {
           "http://example.com/terms#name": "Rue Joseph Deflandre",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7242834146451056",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.676109532747304"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.344408715277834",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.719391157241"
         },
         {
           "http://example.com/terms#name": "Rue Joseph Debruche",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.15182147209647",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.72032174930495"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1830540526416944",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.60365456604317"
         },
         {
           "http://example.com/terms#name": "Rue Joseph Debehogne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.043940559469415",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.92139754080342"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.676326198539351",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.757907756578845"
         }
       ],
       "total_children_count": 17,
@@ -356,79 +388,33 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4982.jsonld#112129"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4981.jsonld#126505"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4982.jsonld#127103"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4982.jsonld#140562"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4982.jsonld#140723"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4982.jsonld#141912"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4982.jsonld#169396"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "s",
       "triples": [],
-      "children": {
-        "met": [
-          "4982",
-          "127104"
-        ],
-        "camps": [
-          "4982",
-          "127105"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment4982.jsonld#127104",
+              "@type": "tree:Node",
+              "token_string": "met"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment4982.jsonld#127105",
+              "@type": "tree:Node",
+              "token_string": "camps"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment4982.jsonld#121633",
         "@type": "tree:Node"
@@ -436,13 +422,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Joseph Desmet",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2965204516413826",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.13302128957525"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9465759083297436",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.329469090911694"
         },
         {
           "http://example.com/terms#name": "Rue Joseph Descamps",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.366277268390044",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.17781925870419"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2149966276068134",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.856993340235384"
         }
       ],
       "total_children_count": 2,
@@ -462,36 +448,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4982.jsonld#127104"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4982.jsonld#127105"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "met",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Joseph Desmet",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2965204516413826",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.13302128957525"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9465759083297436",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.329469090911694"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4982.jsonld#127103",
         "@type": "tree:Node"
@@ -499,8 +466,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Joseph Desmet",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2965204516413826",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.13302128957525"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9465759083297436",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.329469090911694"
         }
       ],
       "total_children_count": 0,
@@ -516,19 +483,17 @@
       ],
       "triples_metadata": [
         "Rue Joseph Desmet"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "camps",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Joseph Descamps",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.366277268390044",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.17781925870419"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2149966276068134",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.856993340235384"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4982.jsonld#127103",
         "@type": "tree:Node"
@@ -536,8 +501,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Joseph Descamps",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.366277268390044",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.17781925870419"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2149966276068134",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.856993340235384"
         }
       ],
       "total_children_count": 0,
@@ -553,54 +518,52 @@
       ],
       "triples_metadata": [
         "Rue Joseph Descamps"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "jardin",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Joseph Dejardin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.807237618177876",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.03609942101991"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4233346850505413",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.706953221814885"
         },
         {
           "http://example.com/terms#name": "Rue Joseph Dejardin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.389561766754345",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.03834969171321"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9828784635594348",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.908231540946666"
         },
         {
           "http://example.com/terms#name": "Rue Joseph Dejardin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.389561766754345",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.03834969171321"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9828784635594348",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.908231540946666"
         },
         {
           "http://example.com/terms#name": "Rue Joseph Dejardin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.389561766754345",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.03834969171321"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9828784635594348",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.908231540946666"
         },
         {
           "http://example.com/terms#name": "Rue Joseph Dejardin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.389561766754345",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.03834969171321"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9828784635594348",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.908231540946666"
         },
         {
           "http://example.com/terms#name": "Rue Joseph Dejardin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8383097260107815",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.411409282493686"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6733351351590104",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.19072744339085"
         },
         {
           "http://example.com/terms#name": "Rue Joseph Dejardin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9395884816042983",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.64062872180494"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5211567368321814",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.823692814241056"
         },
         {
           "http://example.com/terms#name": "Rue Joseph Dejardin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0756455991569416",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.68144219519716"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6112059039072917",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.81677054910444"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4982.jsonld#121633",
         "@type": "tree:Node"
@@ -608,43 +571,43 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Joseph Dejardin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.807237618177876",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.03609942101991"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4233346850505413",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.706953221814885"
         },
         {
           "http://example.com/terms#name": "Rue Joseph Dejardin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.389561766754345",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.03834969171321"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9828784635594348",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.908231540946666"
         },
         {
           "http://example.com/terms#name": "Rue Joseph Dejardin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.389561766754345",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.03834969171321"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9828784635594348",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.908231540946666"
         },
         {
           "http://example.com/terms#name": "Rue Joseph Dejardin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.389561766754345",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.03834969171321"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9828784635594348",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.908231540946666"
         },
         {
           "http://example.com/terms#name": "Rue Joseph Dejardin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.389561766754345",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.03834969171321"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9828784635594348",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.908231540946666"
         },
         {
           "http://example.com/terms#name": "Rue Joseph Dejardin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8383097260107815",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.411409282493686"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6733351351590104",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.19072744339085"
         },
         {
           "http://example.com/terms#name": "Rue Joseph Dejardin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9395884816042983",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.64062872180494"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5211567368321814",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.823692814241056"
         },
         {
           "http://example.com/terms#name": "Rue Joseph Dejardin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0756455991569416",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.68144219519716"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6112059039072917",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.81677054910444"
         }
       ],
       "total_children_count": 0,
@@ -674,29 +637,27 @@
         "Rue Joseph Dejardin",
         "Rue Joseph Dejardin",
         "Rue Joseph Dejardin"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "thier",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Joseph Dethier",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5676399082057912",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.44230071411409"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9800249401177274",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.778260364437955"
         },
         {
           "http://example.com/terms#name": "Rue Joseph Dethier",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6252945330250874",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.42652785795026"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.592355440157396",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.34831663495999"
         },
         {
           "http://example.com/terms#name": "Rue Joseph Dethier",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6252945330250874",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.42652785795026"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.592355440157396",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.34831663495999"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4982.jsonld#121633",
         "@type": "tree:Node"
@@ -704,18 +665,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Joseph Dethier",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5676399082057912",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.44230071411409"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9800249401177274",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.778260364437955"
         },
         {
           "http://example.com/terms#name": "Rue Joseph Dethier",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6252945330250874",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.42652785795026"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.592355440157396",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.34831663495999"
         },
         {
           "http://example.com/terms#name": "Rue Joseph Dethier",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6252945330250874",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.42652785795026"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.592355440157396",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.34831663495999"
         }
       ],
       "total_children_count": 0,
@@ -735,19 +696,17 @@
         "Rue Joseph Dethier",
         "Rue Joseph Dethier",
         "Rue Joseph Dethier"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "flandre",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Joseph Deflandre",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7242834146451056",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.676109532747304"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.344408715277834",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.719391157241"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4982.jsonld#121633",
         "@type": "tree:Node"
@@ -755,8 +714,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Joseph Deflandre",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7242834146451056",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.676109532747304"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.344408715277834",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.719391157241"
         }
       ],
       "total_children_count": 0,
@@ -772,22 +731,33 @@
       ],
       "triples_metadata": [
         "Rue Joseph Deflandre"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "b",
       "triples": [],
-      "children": {
-        "ruche": [
-          "4982",
-          "169397"
-        ],
-        "ehogne": [
-          "4982",
-          "169398"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment4982.jsonld#169397",
+              "@type": "tree:Node",
+              "token_string": "ruche"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment4982.jsonld#169398",
+              "@type": "tree:Node",
+              "token_string": "ehogne"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment4982.jsonld#121633",
         "@type": "tree:Node"
@@ -795,13 +765,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Joseph Debruche",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.15182147209647",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.72032174930495"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1830540526416944",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.60365456604317"
         },
         {
           "http://example.com/terms#name": "Rue Joseph Debehogne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.043940559469415",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.92139754080342"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.676326198539351",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.757907756578845"
         }
       ],
       "total_children_count": 2,
@@ -821,36 +791,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4982.jsonld#169397"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4982.jsonld#169398"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "ruche",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Joseph Debruche",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.15182147209647",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.72032174930495"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1830540526416944",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.60365456604317"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4982.jsonld#169396",
         "@type": "tree:Node"
@@ -858,8 +809,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Joseph Debruche",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.15182147209647",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.72032174930495"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1830540526416944",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.60365456604317"
         }
       ],
       "total_children_count": 0,
@@ -875,19 +826,17 @@
       ],
       "triples_metadata": [
         "Rue Joseph Debruche"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "ehogne",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Joseph Debehogne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.043940559469415",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.92139754080342"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.676326198539351",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.757907756578845"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4982.jsonld#169396",
         "@type": "tree:Node"
@@ -895,8 +844,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Joseph Debehogne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.043940559469415",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.92139754080342"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.676326198539351",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.757907756578845"
         }
       ],
       "total_children_count": 0,
@@ -912,8 +861,7 @@
       ],
       "triples_metadata": [
         "Rue Joseph Debehogne"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,16 +23,28 @@
     {
       "token_string": "y Helderenberg",
       "triples": [],
-      "children": {
-        "straat": [
-          "6031",
-          "80103"
-        ],
-        "laan": [
-          "6031",
-          "80104"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment6031.jsonld#80103",
+              "@type": "tree:Node",
+              "token_string": "straat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment6031.jsonld#80104",
+              "@type": "tree:Node",
+              "token_string": "laan"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment614.jsonld#1913",
         "@type": "tree:Node"
@@ -40,13 +52,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Gery Helderenbergstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8522894191182218",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.70265702335641"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8685700997043164",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.76203822036363"
         },
         {
           "http://example.com/terms#name": "Gery Helderenberglaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9948383623907833",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.51653615785606"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4456010419972674",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.26081444849525"
         }
       ],
       "total_children_count": 2,
@@ -66,36 +78,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6031.jsonld#80103"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6031.jsonld#80104"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "straat",
       "triples": [
         {
           "http://example.com/terms#name": "Gery Helderenbergstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8522894191182218",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.70265702335641"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8685700997043164",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.76203822036363"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6031.jsonld#80102",
         "@type": "tree:Node"
@@ -103,8 +96,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Gery Helderenbergstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8522894191182218",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.70265702335641"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8685700997043164",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.76203822036363"
         }
       ],
       "total_children_count": 0,
@@ -120,19 +113,17 @@
       ],
       "triples_metadata": [
         "Gery Helderenbergstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "laan",
       "triples": [
         {
           "http://example.com/terms#name": "Gery Helderenberglaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9948383623907833",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.51653615785606"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4456010419972674",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.26081444849525"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6031.jsonld#80102",
         "@type": "tree:Node"
@@ -140,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Gery Helderenberglaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9948383623907833",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.51653615785606"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4456010419972674",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.26081444849525"
         }
       ],
       "total_children_count": 0,
@@ -157,8 +148,7 @@
       ],
       "triples_metadata": [
         "Gery Helderenberglaan"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

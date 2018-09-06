@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,20 +23,38 @@
     {
       "token_string": "e",
       "triples": [],
-      "children": {
-        "straat": [
-          "2738",
-          "32189"
-        ],
-        "veld": [
-          "2738",
-          "32190"
-        ],
-        "-Dorp": [
-          "2738",
-          "78627"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2738.jsonld#32189",
+              "@type": "tree:Node",
+              "token_string": "straat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2738.jsonld#32190",
+              "@type": "tree:Node",
+              "token_string": "veld"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2738.jsonld#78627",
+              "@type": "tree:Node",
+              "token_string": "-Dorp"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment2800.jsonld#8864",
         "@type": "tree:Node"
@@ -44,18 +62,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Hofstadestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6850748941603095",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.737366981977644"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3179721530167123",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.42841985818989"
         },
         {
           "http://example.com/terms#name": "Hofstadeveld",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.865219708576312",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.496498609145"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.222273896867083",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.87910650195596"
         },
         {
           "http://example.com/terms#name": "Hofstade-Dorp",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8491335871272834",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.51510498415185"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7362500539111507",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.74631479362404"
         }
       ],
       "total_children_count": 3,
@@ -81,44 +99,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2738.jsonld#32189"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2738.jsonld#32190"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2738.jsonld#78627"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "straat",
       "triples": [
         {
           "http://example.com/terms#name": "Hofstadestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6850748941603095",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.737366981977644"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3179721530167123",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.42841985818989"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2738.jsonld#32188",
         "@type": "tree:Node"
@@ -126,8 +117,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Hofstadestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6850748941603095",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.737366981977644"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3179721530167123",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.42841985818989"
         }
       ],
       "total_children_count": 0,
@@ -143,19 +134,17 @@
       ],
       "triples_metadata": [
         "Hofstadestraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "veld",
       "triples": [
         {
           "http://example.com/terms#name": "Hofstadeveld",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.865219708576312",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.496498609145"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.222273896867083",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.87910650195596"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2738.jsonld#32188",
         "@type": "tree:Node"
@@ -163,8 +152,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Hofstadeveld",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.865219708576312",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.496498609145"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.222273896867083",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.87910650195596"
         }
       ],
       "total_children_count": 0,
@@ -180,19 +169,17 @@
       ],
       "triples_metadata": [
         "Hofstadeveld"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "-Dorp",
       "triples": [
         {
           "http://example.com/terms#name": "Hofstade-Dorp",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8491335871272834",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.51510498415185"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7362500539111507",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.74631479362404"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2738.jsonld#32188",
         "@type": "tree:Node"
@@ -200,8 +187,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Hofstade-Dorp",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8491335871272834",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.51510498415185"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7362500539111507",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.74631479362404"
         }
       ],
       "total_children_count": 0,
@@ -217,8 +204,7 @@
       ],
       "triples_metadata": [
         "Hofstade-Dorp"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

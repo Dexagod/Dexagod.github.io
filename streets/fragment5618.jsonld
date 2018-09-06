@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,16 +23,28 @@
     {
       "token_string": "p",
       "triples": [],
-      "children": {
-        "pershovenstraat": [
-          "5618",
-          "102819"
-        ],
-        "sweg": [
-          "5618",
-          "102820"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment5618.jsonld#102819",
+              "@type": "tree:Node",
+              "token_string": "pershovenstraat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment5618.jsonld#102820",
+              "@type": "tree:Node",
+              "token_string": "sweg"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment690.jsonld#957",
         "@type": "tree:Node"
@@ -40,13 +52,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Gippershovenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.39943058709531",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.572310324415774"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.83260866241283",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.59384467640505"
         },
         {
           "http://example.com/terms#name": "Gipsweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.944557957440988",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.97004362057116"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6484276976453027",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.0771975420318"
         }
       ],
       "total_children_count": 2,
@@ -66,36 +78,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5618.jsonld#102819"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5618.jsonld#102820"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "pershovenstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Gippershovenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.39943058709531",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.572310324415774"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.83260866241283",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.59384467640505"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5618.jsonld#102818",
         "@type": "tree:Node"
@@ -103,8 +96,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Gippershovenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.39943058709531",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.572310324415774"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.83260866241283",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.59384467640505"
         }
       ],
       "total_children_count": 0,
@@ -120,19 +113,17 @@
       ],
       "triples_metadata": [
         "Gippershovenstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "sweg",
       "triples": [
         {
           "http://example.com/terms#name": "Gipsweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.944557957440988",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.97004362057116"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6484276976453027",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.0771975420318"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5618.jsonld#102818",
         "@type": "tree:Node"
@@ -140,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Gipsweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.944557957440988",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.97004362057116"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6484276976453027",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.0771975420318"
         }
       ],
       "total_children_count": 0,
@@ -157,8 +148,7 @@
       ],
       "triples_metadata": [
         "Gipsweg"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

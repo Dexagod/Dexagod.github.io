@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,20 +23,38 @@
     {
       "token_string": "l",
       "triples": [],
-      "children": {
-        "cordestraat": [
-          "3403",
-          "92164"
-        ],
-        "haizestraat": [
-          "3403",
-          "92165"
-        ],
-        "ombaerdeplein": [
-          "3403",
-          "95868"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment3403.jsonld#92164",
+              "@type": "tree:Node",
+              "token_string": "cordestraat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment3403.jsonld#92165",
+              "@type": "tree:Node",
+              "token_string": "haizestraat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment3403.jsonld#95868",
+              "@type": "tree:Node",
+              "token_string": "ombaerdeplein"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment352.jsonld#48578",
         "@type": "tree:Node"
@@ -44,18 +62,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Jules Delcordestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1324620985012475",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.303088550917465"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4636047828105583",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.54136734846686"
         },
         {
           "http://example.com/terms#name": "Jules Delhaizestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7609933883666047",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.392720590713516"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6872243022862405",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.66298563986557"
         },
         {
           "http://example.com/terms#name": "Jules Delombaerdeplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0749453714069337",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.67593635570556"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.443340013553171",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.29516219331203"
         }
       ],
       "total_children_count": 3,
@@ -81,44 +99,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3403.jsonld#92164"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3403.jsonld#92165"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3403.jsonld#95868"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "cordestraat",
       "triples": [
         {
           "http://example.com/terms#name": "Jules Delcordestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1324620985012475",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.303088550917465"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4636047828105583",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.54136734846686"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3403.jsonld#92163",
         "@type": "tree:Node"
@@ -126,8 +117,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Jules Delcordestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1324620985012475",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.303088550917465"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4636047828105583",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.54136734846686"
         }
       ],
       "total_children_count": 0,
@@ -143,19 +134,17 @@
       ],
       "triples_metadata": [
         "Jules Delcordestraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "haizestraat",
       "triples": [
         {
           "http://example.com/terms#name": "Jules Delhaizestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7609933883666047",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.392720590713516"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6872243022862405",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.66298563986557"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3403.jsonld#92163",
         "@type": "tree:Node"
@@ -163,8 +152,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Jules Delhaizestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7609933883666047",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.392720590713516"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6872243022862405",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.66298563986557"
         }
       ],
       "total_children_count": 0,
@@ -180,19 +169,17 @@
       ],
       "triples_metadata": [
         "Jules Delhaizestraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "ombaerdeplein",
       "triples": [
         {
           "http://example.com/terms#name": "Jules Delombaerdeplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0749453714069337",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.67593635570556"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.443340013553171",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.29516219331203"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3403.jsonld#92163",
         "@type": "tree:Node"
@@ -200,8 +187,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Jules Delombaerdeplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0749453714069337",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.67593635570556"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.443340013553171",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.29516219331203"
         }
       ],
       "total_children_count": 0,
@@ -217,8 +204,7 @@
       ],
       "triples_metadata": [
         "Jules Delombaerdeplein"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

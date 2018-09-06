@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,16 +23,28 @@
     {
       "token_string": "j",
       "triples": [],
-      "children": {
-        "oy Van Deurenstraat": [
-          "111",
-          "9662"
-        ],
-        "uin": [
-          "111",
-          "49934"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment111.jsonld#9662",
+              "@type": "tree:Node",
+              "token_string": "oy Van Deurenstraat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment111.jsonld#49934",
+              "@type": "tree:Node",
+              "token_string": "uin"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment50.jsonld#228",
         "@type": "tree:Node"
@@ -40,23 +52,23 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Ajoy Van Deurenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0001475558137614",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.22505627056239"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2077731527488793",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.49339276675902"
         },
         {
           "http://example.com/terms#name": "Ajuinlei",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.736278228021871",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.59077143324617"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.164822248977391",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.093511259032375"
         },
         {
           "http://example.com/terms#name": "Ajuinmarktstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2177533046146163",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.5384957277117"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.809497760679329",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.579444043639455"
         },
         {
           "http://example.com/terms#name": "Ajuinenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4340876465499286",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.855210783694396"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.099784786684042",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.50731181562806"
         }
       ],
       "total_children_count": 5,
@@ -88,36 +100,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment111.jsonld#9662"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment111.jsonld#49934"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "oy Van Deurenstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Ajoy Van Deurenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0001475558137614",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.22505627056239"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2077731527488793",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.49339276675902"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment111.jsonld#9661",
         "@type": "tree:Node"
@@ -125,8 +118,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Ajoy Van Deurenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0001475558137614",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.22505627056239"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2077731527488793",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.49339276675902"
         }
       ],
       "total_children_count": 0,
@@ -142,26 +135,43 @@
       ],
       "triples_metadata": [
         "Ajoy Van Deurenstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "uin",
       "triples": [],
-      "children": {
-        "lei": [
-          "111",
-          "49935"
-        ],
-        "marktstraat": [
-          "111",
-          "49936"
-        ],
-        "enstraat": [
-          "111",
-          "81392"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment111.jsonld#49935",
+              "@type": "tree:Node",
+              "token_string": "lei"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment111.jsonld#49936",
+              "@type": "tree:Node",
+              "token_string": "marktstraat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment111.jsonld#81392",
+              "@type": "tree:Node",
+              "token_string": "enstraat"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment111.jsonld#9661",
         "@type": "tree:Node"
@@ -169,18 +179,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Ajuinlei",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.736278228021871",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.59077143324617"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.164822248977391",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.093511259032375"
         },
         {
           "http://example.com/terms#name": "Ajuinmarktstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2177533046146163",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.5384957277117"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.809497760679329",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.579444043639455"
         },
         {
           "http://example.com/terms#name": "Ajuinenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4340876465499286",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.855210783694396"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.099784786684042",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.50731181562806"
         }
       ],
       "total_children_count": 3,
@@ -206,44 +216,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment111.jsonld#49935"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment111.jsonld#49936"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment111.jsonld#81392"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "lei",
       "triples": [
         {
           "http://example.com/terms#name": "Ajuinlei",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.736278228021871",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.59077143324617"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.164822248977391",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.093511259032375"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment111.jsonld#49934",
         "@type": "tree:Node"
@@ -251,8 +234,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Ajuinlei",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.736278228021871",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.59077143324617"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.164822248977391",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.093511259032375"
         }
       ],
       "total_children_count": 0,
@@ -268,19 +251,17 @@
       ],
       "triples_metadata": [
         "Ajuinlei"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "marktstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Ajuinmarktstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2177533046146163",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.5384957277117"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.809497760679329",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.579444043639455"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment111.jsonld#49934",
         "@type": "tree:Node"
@@ -288,8 +269,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Ajuinmarktstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2177533046146163",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.5384957277117"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.809497760679329",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.579444043639455"
         }
       ],
       "total_children_count": 0,
@@ -305,19 +286,17 @@
       ],
       "triples_metadata": [
         "Ajuinmarktstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "enstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Ajuinenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4340876465499286",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.855210783694396"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.099784786684042",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.50731181562806"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment111.jsonld#49934",
         "@type": "tree:Node"
@@ -325,8 +304,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Ajuinenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4340876465499286",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.855210783694396"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.099784786684042",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.50731181562806"
         }
       ],
       "total_children_count": 0,
@@ -342,8 +321,7 @@
       ],
       "triples_metadata": [
         "Ajuinenstraat"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

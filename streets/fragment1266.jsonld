@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -25,11 +25,10 @@
       "triples": [
         {
           "http://example.com/terms#name": "Marmotlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.782742202134471",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.13584812391506"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.935112170541957",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.725979041007115"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1266.jsonld#98133",
         "@type": "tree:Node"
@@ -37,8 +36,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Marmotlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.782742202134471",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.13584812391506"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.935112170541957",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.725979041007115"
         }
       ],
       "total_children_count": 0,
@@ -54,19 +53,17 @@
       ],
       "triples_metadata": [
         "Marmotlaan"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "straat",
       "triples": [
         {
           "http://example.com/terms#name": "Marmotstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.975015512156023",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.634833342665694"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.771925232458867",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.08723830229235"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1266.jsonld#98133",
         "@type": "tree:Node"
@@ -74,8 +71,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Marmotstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.975015512156023",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.634833342665694"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.771925232458867",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.08723830229235"
         }
       ],
       "total_children_count": 0,
@@ -91,22 +88,33 @@
       ],
       "triples_metadata": [
         "Marmotstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "mo",
       "triples": [],
-      "children": {
-        "t": [
-          "1266",
-          "98133"
-        ],
-        "usetsstraat": [
-          "1266",
-          "98134"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1266.jsonld#98133",
+              "@type": "tree:Node",
+              "token_string": "t"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1266.jsonld#98134",
+              "@type": "tree:Node",
+              "token_string": "usetsstraat"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment492.jsonld#903",
         "@type": "tree:Node"
@@ -114,18 +122,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Marmotlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.782742202134471",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.13584812391506"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.935112170541957",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.725979041007115"
         },
         {
           "http://example.com/terms#name": "Marmotstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.975015512156023",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.634833342665694"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.771925232458867",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.08723830229235"
         },
         {
           "http://example.com/terms#name": "Marmousetsstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2029048760963548",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.483267861117135"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.444210887600159",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.73800114504169"
         }
       ],
       "total_children_count": 4,
@@ -151,13 +159,19 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
+      "triples_metadata": []
+    },
+    {
+      "token_string": "t",
+      "triples": [],
+      "children": [
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
             {
-              "@id": "/streets/fragment1266.jsonld#98133"
+              "@id": "/streets/fragment1266.jsonld#72346",
+              "@type": "tree:Node",
+              "token_string": "laan"
             }
           ]
         },
@@ -165,25 +179,13 @@
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
             {
-              "@id": "/streets/fragment1266.jsonld#98134"
+              "@id": "/streets/fragment1266.jsonld#72347",
+              "@type": "tree:Node",
+              "token_string": "straat"
             }
           ]
         }
-      ]
-    },
-    {
-      "token_string": "t",
-      "triples": [],
-      "children": {
-        "laan": [
-          "1266",
-          "72346"
-        ],
-        "straat": [
-          "1266",
-          "72347"
-        ]
-      },
+      ],
       "parent_node": {
         "@id": "/streets/fragment1266.jsonld#98132",
         "@type": "tree:Node"
@@ -191,13 +193,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Marmotlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.782742202134471",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.13584812391506"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.935112170541957",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.725979041007115"
         },
         {
           "http://example.com/terms#name": "Marmotstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.975015512156023",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.634833342665694"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.771925232458867",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.08723830229235"
         }
       ],
       "total_children_count": 2,
@@ -217,36 +219,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1266.jsonld#72346"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1266.jsonld#72347"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "usetsstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Marmousetsstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2029048760963548",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.483267861117135"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.444210887600159",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.73800114504169"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1266.jsonld#98132",
         "@type": "tree:Node"
@@ -254,8 +237,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Marmousetsstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2029048760963548",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.483267861117135"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.444210887600159",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.73800114504169"
         }
       ],
       "total_children_count": 0,
@@ -271,8 +254,7 @@
       ],
       "triples_metadata": [
         "Marmousetsstraat"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

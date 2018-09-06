@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,16 +23,28 @@
     {
       "token_string": "drecht",
       "triples": [],
-      "children": {
-        "laan": [
-          "6520",
-          "81169"
-        ],
-        "straat": [
-          "6520",
-          "81170"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment6520.jsonld#81169",
+              "@type": "tree:Node",
+              "token_string": "laan"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment6520.jsonld#81170",
+              "@type": "tree:Node",
+              "token_string": "straat"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment328.jsonld#3284",
         "@type": "tree:Node"
@@ -40,13 +52,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Dordrechtlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0757526617634574",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.3185554620989"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1147307783297045",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.019321498862226"
         },
         {
           "http://example.com/terms#name": "Dordrechtstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.669734500757719",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.44293297048512"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5440592309634003",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.16809813293515"
         }
       ],
       "total_children_count": 2,
@@ -66,36 +78,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6520.jsonld#81169"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6520.jsonld#81170"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "laan",
       "triples": [
         {
           "http://example.com/terms#name": "Dordrechtlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0757526617634574",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.3185554620989"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1147307783297045",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.019321498862226"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6520.jsonld#81168",
         "@type": "tree:Node"
@@ -103,8 +96,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Dordrechtlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0757526617634574",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.3185554620989"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1147307783297045",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.019321498862226"
         }
       ],
       "total_children_count": 0,
@@ -120,19 +113,17 @@
       ],
       "triples_metadata": [
         "Dordrechtlaan"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "straat",
       "triples": [
         {
           "http://example.com/terms#name": "Dordrechtstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.669734500757719",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.44293297048512"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5440592309634003",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.16809813293515"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6520.jsonld#81168",
         "@type": "tree:Node"
@@ -140,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Dordrechtstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.669734500757719",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.44293297048512"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5440592309634003",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.16809813293515"
         }
       ],
       "total_children_count": 0,
@@ -157,8 +148,7 @@
       ],
       "triples_metadata": [
         "Dordrechtstraat"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

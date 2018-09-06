@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,16 +23,28 @@
     {
       "token_string": "H",
       "triples": [],
-      "children": {
-        "eymansstraat": [
-          "3629",
-          "101067"
-        ],
-        "ayetsquare": [
-          "3629",
-          "101068"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment3629.jsonld#101067",
+              "@type": "tree:Node",
+              "token_string": "eymansstraat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment3629.jsonld#101068",
+              "@type": "tree:Node",
+              "token_string": "ayetsquare"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment2226.jsonld#16136",
         "@type": "tree:Node"
@@ -40,13 +52,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Jean Heymansstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0417633612517667",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.2322788094482"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1030414136939855",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.67054502018719"
         },
         {
           "http://example.com/terms#name": "Jean Hayetsquare",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7110012037848388",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.30673870282693"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2524442529436848",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.1174162100013"
         }
       ],
       "total_children_count": 2,
@@ -66,36 +78,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3629.jsonld#101067"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3629.jsonld#101068"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "eymansstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Jean Heymansstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0417633612517667",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.2322788094482"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1030414136939855",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.67054502018719"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3629.jsonld#101066",
         "@type": "tree:Node"
@@ -103,8 +96,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Jean Heymansstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0417633612517667",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.2322788094482"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1030414136939855",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.67054502018719"
         }
       ],
       "total_children_count": 0,
@@ -120,19 +113,17 @@
       ],
       "triples_metadata": [
         "Jean Heymansstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "ayetsquare",
       "triples": [
         {
           "http://example.com/terms#name": "Jean Hayetsquare",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7110012037848388",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.30673870282693"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2524442529436848",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.1174162100013"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3629.jsonld#101066",
         "@type": "tree:Node"
@@ -140,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Jean Hayetsquare",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7110012037848388",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.30673870282693"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2524442529436848",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.1174162100013"
         }
       ],
       "total_children_count": 0,
@@ -157,8 +148,7 @@
       ],
       "triples_metadata": [
         "Jean Hayetsquare"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

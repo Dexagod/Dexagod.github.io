@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,16 +23,28 @@
     {
       "token_string": "a",
       "triples": [],
-      "children": {
-        "ndstraat": [
-          "2295",
-          "58823"
-        ],
-        "kenstraat": [
-          "2295",
-          "58824"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2295.jsonld#58823",
+              "@type": "tree:Node",
+              "token_string": "ndstraat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2295.jsonld#58824",
+              "@type": "tree:Node",
+              "token_string": "kenstraat"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment40.jsonld#2141",
         "@type": "tree:Node"
@@ -40,13 +52,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Holandstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.766085764428343",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.154684029388115"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7856954542623735",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.600152146476496"
         },
         {
           "http://example.com/terms#name": "Holakenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.614610005140835",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.535226042580426"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9496495142453294",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.49200609548678"
         }
       ],
       "total_children_count": 2,
@@ -66,36 +78,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2295.jsonld#58823"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2295.jsonld#58824"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "ndstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Holandstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.766085764428343",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.154684029388115"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7856954542623735",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.600152146476496"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2295.jsonld#58822",
         "@type": "tree:Node"
@@ -103,8 +96,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Holandstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.766085764428343",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.154684029388115"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7856954542623735",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.600152146476496"
         }
       ],
       "total_children_count": 0,
@@ -120,19 +113,17 @@
       ],
       "triples_metadata": [
         "Holandstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "kenstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Holakenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.614610005140835",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.535226042580426"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9496495142453294",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.49200609548678"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2295.jsonld#58822",
         "@type": "tree:Node"
@@ -140,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Holakenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.614610005140835",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.535226042580426"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9496495142453294",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.49200609548678"
         }
       ],
       "total_children_count": 0,
@@ -157,8 +148,7 @@
       ],
       "triples_metadata": [
         "Holakenstraat"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

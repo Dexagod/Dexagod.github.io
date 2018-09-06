@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,16 +23,28 @@
     {
       "token_string": "w",
       "triples": [],
-      "children": {
-        "ald Delbaerestraat": [
-          "5456",
-          "152355"
-        ],
-        "eréville": [
-          "5456",
-          "152356"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment5456.jsonld#152355",
+              "@type": "tree:Node",
+              "token_string": "ald Delbaerestraat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment5456.jsonld#152356",
+              "@type": "tree:Node",
+              "token_string": "eréville"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment17.jsonld#294",
         "@type": "tree:Node"
@@ -40,13 +52,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Ewald Delbaerestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.74651767327126",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.15345872021549"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.842531318700265",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.488312495042884"
         },
         {
           "http://example.com/terms#name": "Eweréville",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.458676993392553",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.73316944939031"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1017079341716807",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.61673124586005"
         }
       ],
       "total_children_count": 2,
@@ -66,36 +78,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5456.jsonld#152355"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5456.jsonld#152356"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "ald Delbaerestraat",
       "triples": [
         {
           "http://example.com/terms#name": "Ewald Delbaerestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.74651767327126",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.15345872021549"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.842531318700265",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.488312495042884"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5456.jsonld#152354",
         "@type": "tree:Node"
@@ -103,8 +96,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Ewald Delbaerestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.74651767327126",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.15345872021549"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.842531318700265",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.488312495042884"
         }
       ],
       "total_children_count": 0,
@@ -120,19 +113,17 @@
       ],
       "triples_metadata": [
         "Ewald Delbaerestraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "eréville",
       "triples": [
         {
           "http://example.com/terms#name": "Eweréville",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.458676993392553",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.73316944939031"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1017079341716807",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.61673124586005"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5456.jsonld#152354",
         "@type": "tree:Node"
@@ -140,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Eweréville",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.458676993392553",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.73316944939031"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1017079341716807",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.61673124586005"
         }
       ],
       "total_children_count": 0,
@@ -157,8 +148,7 @@
       ],
       "triples_metadata": [
         "Eweréville"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

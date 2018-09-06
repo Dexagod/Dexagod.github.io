@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,20 +23,38 @@
     {
       "token_string": "A",
       "triples": [],
-      "children": {
-        "driaensenlaan": [
-          "2307",
-          "82430"
-        ],
-        "ertsstraat": [
-          "2307",
-          "82431"
-        ],
-        "bdon Heyselaan": [
-          "2307",
-          "83931"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2307.jsonld#82430",
+              "@type": "tree:Node",
+              "token_string": "driaensenlaan"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2307.jsonld#82431",
+              "@type": "tree:Node",
+              "token_string": "ertsstraat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2307.jsonld#83931",
+              "@type": "tree:Node",
+              "token_string": "bdon Heyselaan"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment782.jsonld#7749",
         "@type": "tree:Node"
@@ -44,18 +62,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Burgemeester Adriaensenlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6219790234572016",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.35627152897767"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6024491850773974",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.922285785502126"
         },
         {
           "http://example.com/terms#name": "Burgemeester Aertsstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1415883228304398",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.32707660868521"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4269574941894576",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.191862763838486"
         },
         {
           "http://example.com/terms#name": "Burgemeester Abdon Heyselaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.271894506136011",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.42037578728317"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.820841870137246",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.444736762149326"
         }
       ],
       "total_children_count": 3,
@@ -81,44 +99,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2307.jsonld#82430"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2307.jsonld#82431"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2307.jsonld#83931"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "driaensenlaan",
       "triples": [
         {
           "http://example.com/terms#name": "Burgemeester Adriaensenlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6219790234572016",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.35627152897767"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6024491850773974",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.922285785502126"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2307.jsonld#82429",
         "@type": "tree:Node"
@@ -126,8 +117,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Burgemeester Adriaensenlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6219790234572016",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.35627152897767"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6024491850773974",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.922285785502126"
         }
       ],
       "total_children_count": 0,
@@ -143,19 +134,17 @@
       ],
       "triples_metadata": [
         "Burgemeester Adriaensenlaan"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "ertsstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Burgemeester Aertsstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1415883228304398",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.32707660868521"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4269574941894576",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.191862763838486"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2307.jsonld#82429",
         "@type": "tree:Node"
@@ -163,8 +152,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Burgemeester Aertsstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1415883228304398",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.32707660868521"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4269574941894576",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.191862763838486"
         }
       ],
       "total_children_count": 0,
@@ -180,19 +169,17 @@
       ],
       "triples_metadata": [
         "Burgemeester Aertsstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "bdon Heyselaan",
       "triples": [
         {
           "http://example.com/terms#name": "Burgemeester Abdon Heyselaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.271894506136011",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.42037578728317"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.820841870137246",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.444736762149326"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2307.jsonld#82429",
         "@type": "tree:Node"
@@ -200,8 +187,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Burgemeester Abdon Heyselaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.271894506136011",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.42037578728317"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.820841870137246",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.444736762149326"
         }
       ],
       "total_children_count": 0,
@@ -217,8 +204,7 @@
       ],
       "triples_metadata": [
         "Burgemeester Abdon Heyselaan"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

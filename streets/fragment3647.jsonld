@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,16 +23,28 @@
     {
       "token_string": "T",
       "triples": [],
-      "children": {
-        "urcksinstraat": [
-          "3647",
-          "68307"
-        ],
-        "razensterstraat": [
-          "3647",
-          "68308"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment3647.jsonld#68307",
+              "@type": "tree:Node",
+              "token_string": "urcksinstraat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment3647.jsonld#68308",
+              "@type": "tree:Node",
+              "token_string": "razensterstraat"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment2729.jsonld#5779",
         "@type": "tree:Node"
@@ -40,13 +52,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Paul Turcksinstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.693675525978884",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.51495871234689"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6794403282110735",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.011020957069874"
         },
         {
           "http://example.com/terms#name": "Paul Trazensterstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1932836223405103",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.044236236809255"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.534217710740416",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.643607736931344"
         }
       ],
       "total_children_count": 2,
@@ -66,36 +78,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3647.jsonld#68307"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3647.jsonld#68308"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "urcksinstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Paul Turcksinstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.693675525978884",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.51495871234689"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6794403282110735",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.011020957069874"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3647.jsonld#68306",
         "@type": "tree:Node"
@@ -103,8 +96,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Paul Turcksinstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.693675525978884",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.51495871234689"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6794403282110735",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.011020957069874"
         }
       ],
       "total_children_count": 0,
@@ -120,19 +113,17 @@
       ],
       "triples_metadata": [
         "Paul Turcksinstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "razensterstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Paul Trazensterstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1932836223405103",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.044236236809255"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.534217710740416",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.643607736931344"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3647.jsonld#68306",
         "@type": "tree:Node"
@@ -140,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Paul Trazensterstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1932836223405103",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.044236236809255"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.534217710740416",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.643607736931344"
         }
       ],
       "total_children_count": 0,
@@ -157,8 +148,7 @@
       ],
       "triples_metadata": [
         "Paul Trazensterstraat"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,16 +23,28 @@
     {
       "token_string": "x",
       "triples": [],
-      "children": {
-        "donkstraat": [
-          "278",
-          "28609"
-        ],
-        "fordstraat": [
-          "278",
-          "28610"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment278.jsonld#28609",
+              "@type": "tree:Node",
+              "token_string": "donkstraat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment278.jsonld#28610",
+              "@type": "tree:Node",
+              "token_string": "fordstraat"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment3.jsonld#242",
         "@type": "tree:Node"
@@ -40,13 +52,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Oxdonkstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2309339092785425",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.74160355010339"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.992999496178415",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.03710113268079"
         },
         {
           "http://example.com/terms#name": "Oxfordstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7654146560153237",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.001827258830744"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1297502951489427",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.23423523802144"
         }
       ],
       "total_children_count": 2,
@@ -66,36 +78,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment278.jsonld#28609"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment278.jsonld#28610"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "donkstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Oxdonkstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2309339092785425",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.74160355010339"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.992999496178415",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.03710113268079"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment278.jsonld#28608",
         "@type": "tree:Node"
@@ -103,8 +96,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Oxdonkstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2309339092785425",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.74160355010339"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.992999496178415",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.03710113268079"
         }
       ],
       "total_children_count": 0,
@@ -120,19 +113,17 @@
       ],
       "triples_metadata": [
         "Oxdonkstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "fordstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Oxfordstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7654146560153237",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.001827258830744"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1297502951489427",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.23423523802144"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment278.jsonld#28608",
         "@type": "tree:Node"
@@ -140,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Oxfordstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7654146560153237",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.001827258830744"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1297502951489427",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.23423523802144"
         }
       ],
       "total_children_count": 0,
@@ -157,8 +148,7 @@
       ],
       "triples_metadata": [
         "Oxfordstraat"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

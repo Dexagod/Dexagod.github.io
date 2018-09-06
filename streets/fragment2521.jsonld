@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,20 +23,38 @@
     {
       "token_string": "O",
       "triples": [],
-      "children": {
-        "verlaar": [
-          "2521",
-          "33470"
-        ],
-        "elenstraat": [
-          "2521",
-          "33471"
-        ],
-        "pperstraat": [
-          "2521",
-          "38740"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2521.jsonld#33470",
+              "@type": "tree:Node",
+              "token_string": "verlaar"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2521.jsonld#33471",
+              "@type": "tree:Node",
+              "token_string": "elenstraat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2521.jsonld#38740",
+              "@type": "tree:Node",
+              "token_string": "pperstraat"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment338.jsonld#8314",
         "@type": "tree:Node"
@@ -44,18 +62,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Klein Overlaar",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0631000002289763",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.88972551155902"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3684128539051867",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.12924169482033"
         },
         {
           "http://example.com/terms#name": "Klein Oelenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5699198264583276",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.00205763330256"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5564964169709388",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.93780487882711"
         },
         {
           "http://example.com/terms#name": "Klein Opperstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5088838673375635",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.283018885486456"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.972273930099792",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.0109464090492"
         }
       ],
       "total_children_count": 3,
@@ -81,44 +99,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2521.jsonld#33470"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2521.jsonld#33471"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2521.jsonld#38740"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "verlaar",
       "triples": [
         {
           "http://example.com/terms#name": "Klein Overlaar",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0631000002289763",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.88972551155902"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3684128539051867",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.12924169482033"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2521.jsonld#33469",
         "@type": "tree:Node"
@@ -126,8 +117,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Klein Overlaar",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0631000002289763",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.88972551155902"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3684128539051867",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.12924169482033"
         }
       ],
       "total_children_count": 0,
@@ -143,19 +134,17 @@
       ],
       "triples_metadata": [
         "Klein Overlaar"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "elenstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Klein Oelenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5699198264583276",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.00205763330256"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5564964169709388",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.93780487882711"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2521.jsonld#33469",
         "@type": "tree:Node"
@@ -163,8 +152,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Klein Oelenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5699198264583276",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.00205763330256"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5564964169709388",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.93780487882711"
         }
       ],
       "total_children_count": 0,
@@ -180,19 +169,17 @@
       ],
       "triples_metadata": [
         "Klein Oelenstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "pperstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Klein Opperstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5088838673375635",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.283018885486456"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.972273930099792",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.0109464090492"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2521.jsonld#33469",
         "@type": "tree:Node"
@@ -200,8 +187,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Klein Opperstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5088838673375635",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.283018885486456"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.972273930099792",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.0109464090492"
         }
       ],
       "total_children_count": 0,
@@ -217,8 +204,7 @@
       ],
       "triples_metadata": [
         "Klein Opperstraat"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

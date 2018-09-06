@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,16 +23,28 @@
     {
       "token_string": "c",
       "triples": [],
-      "children": {
-        "ourtstraat": [
-          "3140",
-          "87896"
-        ],
-        "kiers": [
-          "3140",
-          "88321"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment3140.jsonld#87896",
+              "@type": "tree:Node",
+              "token_string": "ourtstraat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment3140.jsonld#88321",
+              "@type": "tree:Node",
+              "token_string": "kiers"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment719.jsonld#5621",
         "@type": "tree:Node"
@@ -40,23 +52,23 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Walckierstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.606176422671287",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.27338913169967"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1420061117458853",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.831623055067446"
         },
         {
           "http://example.com/terms#name": "Walcourtstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.840048574353891",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.92887747820235"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1854364376078976",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.957514397846644"
         },
         {
           "http://example.com/terms#name": "Walckierslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.462892548464053",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.565000185541365"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2855382360892067",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.38374429918759"
         },
         {
           "http://example.com/terms#name": "Walckiersstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1509310708912057",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.192119824004884"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5635955316543333",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.07299066605074"
         }
       ],
       "total_children_count": 5,
@@ -88,36 +100,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3140.jsonld#87896"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3140.jsonld#88321"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "ourtstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Walcourtstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.840048574353891",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.92887747820235"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1854364376078976",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.957514397846644"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3140.jsonld#87894",
         "@type": "tree:Node"
@@ -125,8 +118,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Walcourtstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.840048574353891",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.92887747820235"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1854364376078976",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.957514397846644"
         }
       ],
       "total_children_count": 0,
@@ -142,26 +135,43 @@
       ],
       "triples_metadata": [
         "Walcourtstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "kiers",
       "triples": [],
-      "children": {
-        "traat": [
-          "3140",
-          "88322"
-        ],
-        "laan": [
-          "3140",
-          "88323"
-        ],
-        "straat": [
-          "3140",
-          "93088"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment3140.jsonld#88322",
+              "@type": "tree:Node",
+              "token_string": "traat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment3140.jsonld#88323",
+              "@type": "tree:Node",
+              "token_string": "laan"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment3140.jsonld#93088",
+              "@type": "tree:Node",
+              "token_string": "straat"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment3140.jsonld#87894",
         "@type": "tree:Node"
@@ -169,18 +179,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Walckierstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.606176422671287",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.27338913169967"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1420061117458853",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.831623055067446"
         },
         {
           "http://example.com/terms#name": "Walckierslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.462892548464053",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.565000185541365"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2855382360892067",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.38374429918759"
         },
         {
           "http://example.com/terms#name": "Walckiersstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1509310708912057",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.192119824004884"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5635955316543333",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.07299066605074"
         }
       ],
       "total_children_count": 3,
@@ -206,44 +216,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3140.jsonld#88322"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3140.jsonld#88323"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3140.jsonld#93088"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "traat",
       "triples": [
         {
           "http://example.com/terms#name": "Walckierstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.606176422671287",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.27338913169967"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1420061117458853",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.831623055067446"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3140.jsonld#88321",
         "@type": "tree:Node"
@@ -251,8 +234,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Walckierstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.606176422671287",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.27338913169967"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1420061117458853",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.831623055067446"
         }
       ],
       "total_children_count": 0,
@@ -268,19 +251,17 @@
       ],
       "triples_metadata": [
         "Walckierstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "laan",
       "triples": [
         {
           "http://example.com/terms#name": "Walckierslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.462892548464053",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.565000185541365"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2855382360892067",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.38374429918759"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3140.jsonld#88321",
         "@type": "tree:Node"
@@ -288,8 +269,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Walckierslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.462892548464053",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.565000185541365"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2855382360892067",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.38374429918759"
         }
       ],
       "total_children_count": 0,
@@ -305,19 +286,17 @@
       ],
       "triples_metadata": [
         "Walckierslaan"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "straat",
       "triples": [
         {
           "http://example.com/terms#name": "Walckiersstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1509310708912057",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.192119824004884"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5635955316543333",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.07299066605074"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3140.jsonld#88321",
         "@type": "tree:Node"
@@ -325,8 +304,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Walckiersstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1509310708912057",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.192119824004884"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5635955316543333",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.07299066605074"
         }
       ],
       "total_children_count": 0,
@@ -342,8 +321,7 @@
       ],
       "triples_metadata": [
         "Walckiersstraat"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

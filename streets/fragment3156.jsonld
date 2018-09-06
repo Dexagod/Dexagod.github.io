@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,16 +23,28 @@
     {
       "token_string": "W",
       "triples": [],
-      "children": {
-        "outersstraat": [
-          "3156",
-          "31831"
-        ],
-        "esterlinckstraat": [
-          "3156",
-          "31832"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment3156.jsonld#31831",
+              "@type": "tree:Node",
+              "token_string": "outersstraat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment3156.jsonld#31832",
+              "@type": "tree:Node",
+              "token_string": "esterlinckstraat"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment847.jsonld#2131",
         "@type": "tree:Node"
@@ -40,13 +52,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Albert Woutersstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.181128218873134",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.386125041919115"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.704528986573758",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.65712752041941"
         },
         {
           "http://example.com/terms#name": "Albert Westerlinckstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4161292646826884",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.52316769472147"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.207337167307233",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.148724097390364"
         }
       ],
       "total_children_count": 2,
@@ -66,36 +78,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3156.jsonld#31831"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3156.jsonld#31832"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "outersstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Albert Woutersstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.181128218873134",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.386125041919115"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.704528986573758",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.65712752041941"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3156.jsonld#31830",
         "@type": "tree:Node"
@@ -103,8 +96,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Albert Woutersstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.181128218873134",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.386125041919115"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.704528986573758",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.65712752041941"
         }
       ],
       "total_children_count": 0,
@@ -120,19 +113,17 @@
       ],
       "triples_metadata": [
         "Albert Woutersstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "esterlinckstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Albert Westerlinckstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4161292646826884",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.52316769472147"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.207337167307233",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.148724097390364"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3156.jsonld#31830",
         "@type": "tree:Node"
@@ -140,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Albert Westerlinckstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4161292646826884",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.52316769472147"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.207337167307233",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.148724097390364"
         }
       ],
       "total_children_count": 0,
@@ -157,8 +148,7 @@
       ],
       "triples_metadata": [
         "Albert Westerlinckstraat"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

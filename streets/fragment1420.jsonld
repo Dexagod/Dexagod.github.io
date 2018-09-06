@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -25,21 +25,20 @@
       "triples": [
         {
           "http://example.com/terms#name": "Kleine Ommegangweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.94082074021232",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.94792803681782"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2529879000518327",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.68173759033551"
         },
         {
           "http://example.com/terms#name": "Kleine Ommegangweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3698884866594656",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.83299115415146"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6507255990415586",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.2125360221393"
         },
         {
           "http://example.com/terms#name": "Kleine Ommegangweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3698884866594656",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.83299115415146"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6507255990415586",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.2125360221393"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1420.jsonld#67861",
         "@type": "tree:Node"
@@ -47,18 +46,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Kleine Ommegangweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.94082074021232",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.94792803681782"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2529879000518327",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.68173759033551"
         },
         {
           "http://example.com/terms#name": "Kleine Ommegangweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3698884866594656",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.83299115415146"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6507255990415586",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.2125360221393"
         },
         {
           "http://example.com/terms#name": "Kleine Ommegangweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3698884866594656",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.83299115415146"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6507255990415586",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.2125360221393"
         }
       ],
       "total_children_count": 0,
@@ -78,19 +77,17 @@
         "Kleine Ommegangweg",
         "Kleine Ommegangweg",
         "Kleine Ommegangweg"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "straat",
       "triples": [
         {
           "http://example.com/terms#name": "Kleine Omstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.959898652291126",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.17405303746201"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6598943355599114",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.230634809416124"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1420.jsonld#67861",
         "@type": "tree:Node"
@@ -98,8 +95,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Kleine Omstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.959898652291126",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.17405303746201"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6598943355599114",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.230634809416124"
         }
       ],
       "total_children_count": 0,
@@ -115,22 +112,33 @@
       ],
       "triples_metadata": [
         "Kleine Omstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "O",
       "triples": [],
-      "children": {
-        "m": [
-          "1420",
-          "67861"
-        ],
-        "ost": [
-          "1420",
-          "83482"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1420.jsonld#67861",
+              "@type": "tree:Node",
+              "token_string": "m"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1420.jsonld#83482",
+              "@type": "tree:Node",
+              "token_string": "ost"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment392.jsonld#10551",
         "@type": "tree:Node"
@@ -138,33 +146,33 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Kleine Ommegangweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.94082074021232",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.94792803681782"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2529879000518327",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.68173759033551"
         },
         {
           "http://example.com/terms#name": "Kleine Ommegangweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3698884866594656",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.83299115415146"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6507255990415586",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.2125360221393"
         },
         {
           "http://example.com/terms#name": "Kleine Ommegangweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3698884866594656",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.83299115415146"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6507255990415586",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.2125360221393"
         },
         {
           "http://example.com/terms#name": "Kleine Omstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.959898652291126",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.17405303746201"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6598943355599114",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.230634809416124"
         },
         {
           "http://example.com/terms#name": "Kleine Oostwegel",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7047240853565366",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.02402527246021"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1408107460049535",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.844369774861185"
         },
         {
           "http://example.com/terms#name": "Kleine Oostkouter",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.822823846509086",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.685093072063324"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5195446495244944",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.15460225769777"
         }
       ],
       "total_children_count": 6,
@@ -198,13 +206,19 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
+      "triples_metadata": []
+    },
+    {
+      "token_string": "m",
+      "triples": [],
+      "children": [
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
             {
-              "@id": "/streets/fragment1420.jsonld#67861"
+              "@id": "/streets/fragment1420.jsonld#45328",
+              "@type": "tree:Node",
+              "token_string": "megangweg"
             }
           ]
         },
@@ -212,25 +226,13 @@
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
             {
-              "@id": "/streets/fragment1420.jsonld#83482"
+              "@id": "/streets/fragment1420.jsonld#45329",
+              "@type": "tree:Node",
+              "token_string": "straat"
             }
           ]
         }
-      ]
-    },
-    {
-      "token_string": "m",
-      "triples": [],
-      "children": {
-        "megangweg": [
-          "1420",
-          "45328"
-        ],
-        "straat": [
-          "1420",
-          "45329"
-        ]
-      },
+      ],
       "parent_node": {
         "@id": "/streets/fragment1420.jsonld#67860",
         "@type": "tree:Node"
@@ -238,23 +240,23 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Kleine Ommegangweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.94082074021232",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.94792803681782"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2529879000518327",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.68173759033551"
         },
         {
           "http://example.com/terms#name": "Kleine Ommegangweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3698884866594656",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.83299115415146"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6507255990415586",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.2125360221393"
         },
         {
           "http://example.com/terms#name": "Kleine Ommegangweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3698884866594656",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.83299115415146"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6507255990415586",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.2125360221393"
         },
         {
           "http://example.com/terms#name": "Kleine Omstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.959898652291126",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.17405303746201"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6598943355599114",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.230634809416124"
         }
       ],
       "total_children_count": 2,
@@ -276,13 +278,19 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
+      "triples_metadata": []
+    },
+    {
+      "token_string": "ost",
+      "triples": [],
+      "children": [
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
             {
-              "@id": "/streets/fragment1420.jsonld#45328"
+              "@id": "/streets/fragment1420.jsonld#83483",
+              "@type": "tree:Node",
+              "token_string": "wegel"
             }
           ]
         },
@@ -290,25 +298,13 @@
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
             {
-              "@id": "/streets/fragment1420.jsonld#45329"
+              "@id": "/streets/fragment1420.jsonld#83484",
+              "@type": "tree:Node",
+              "token_string": "kouter"
             }
           ]
         }
-      ]
-    },
-    {
-      "token_string": "ost",
-      "triples": [],
-      "children": {
-        "wegel": [
-          "1420",
-          "83483"
-        ],
-        "kouter": [
-          "1420",
-          "83484"
-        ]
-      },
+      ],
       "parent_node": {
         "@id": "/streets/fragment1420.jsonld#67860",
         "@type": "tree:Node"
@@ -316,13 +312,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Kleine Oostwegel",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7047240853565366",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.02402527246021"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1408107460049535",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.844369774861185"
         },
         {
           "http://example.com/terms#name": "Kleine Oostkouter",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.822823846509086",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.685093072063324"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5195446495244944",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.15460225769777"
         }
       ],
       "total_children_count": 2,
@@ -342,36 +338,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1420.jsonld#83483"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1420.jsonld#83484"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "wegel",
       "triples": [
         {
           "http://example.com/terms#name": "Kleine Oostwegel",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7047240853565366",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.02402527246021"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1408107460049535",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.844369774861185"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1420.jsonld#83482",
         "@type": "tree:Node"
@@ -379,8 +356,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Kleine Oostwegel",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7047240853565366",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.02402527246021"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1408107460049535",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.844369774861185"
         }
       ],
       "total_children_count": 0,
@@ -396,19 +373,17 @@
       ],
       "triples_metadata": [
         "Kleine Oostwegel"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "kouter",
       "triples": [
         {
           "http://example.com/terms#name": "Kleine Oostkouter",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.822823846509086",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.685093072063324"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5195446495244944",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.15460225769777"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1420.jsonld#83482",
         "@type": "tree:Node"
@@ -416,8 +391,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Kleine Oostkouter",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.822823846509086",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.685093072063324"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5195446495244944",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.15460225769777"
         }
       ],
       "total_children_count": 0,
@@ -433,8 +408,7 @@
       ],
       "triples_metadata": [
         "Kleine Oostkouter"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

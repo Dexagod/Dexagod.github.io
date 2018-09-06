@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,16 +23,28 @@
     {
       "token_string": "ph",
       "triples": [],
-      "children": {
-        "ie Van Akenstraat": [
-          "3416",
-          "93535"
-        ],
-        "oraslaan": [
-          "3416",
-          "93536"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment3416.jsonld#93535",
+              "@type": "tree:Node",
+              "token_string": "ie Van Akenstraat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment3416.jsonld#93536",
+              "@type": "tree:Node",
+              "token_string": "oraslaan"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment2205.jsonld#6584",
         "@type": "tree:Node"
@@ -40,13 +52,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Sophie Van Akenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2568901405834443",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.07577656926715"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1760052320655308",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.246117700324554"
         },
         {
           "http://example.com/terms#name": "Sophoraslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.211313512448883",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.67492051850201"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.972885575007676",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.63634605187415"
         }
       ],
       "total_children_count": 2,
@@ -66,36 +78,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3416.jsonld#93535"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3416.jsonld#93536"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "ie Van Akenstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Sophie Van Akenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2568901405834443",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.07577656926715"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1760052320655308",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.246117700324554"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3416.jsonld#93534",
         "@type": "tree:Node"
@@ -103,8 +96,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Sophie Van Akenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2568901405834443",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.07577656926715"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1760052320655308",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.246117700324554"
         }
       ],
       "total_children_count": 0,
@@ -120,19 +113,17 @@
       ],
       "triples_metadata": [
         "Sophie Van Akenstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "oraslaan",
       "triples": [
         {
           "http://example.com/terms#name": "Sophoraslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.211313512448883",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.67492051850201"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.972885575007676",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.63634605187415"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3416.jsonld#93534",
         "@type": "tree:Node"
@@ -140,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Sophoraslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.211313512448883",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.67492051850201"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.972885575007676",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.63634605187415"
         }
       ],
       "total_children_count": 0,
@@ -157,8 +148,7 @@
       ],
       "triples_metadata": [
         "Sophoraslaan"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -25,16 +25,22 @@
       "triples": [
         {
           "http://example.com/terms#name": "Schrijberg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.827111440838024",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.18263623911112"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6518074557071665",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.6062573119261"
         }
       ],
-      "children": {
-        "straat": [
-          "1019",
-          "30766"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1019.jsonld#30766",
+              "@type": "tree:Node",
+              "token_string": "straat"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment1020.jsonld#19833",
         "@type": "tree:Node"
@@ -42,13 +48,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Schrijberg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.827111440838024",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.18263623911112"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6518074557071665",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.6062573119261"
         },
         {
           "http://example.com/terms#name": "Schrijbergstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.775039303293524",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.12875033271396"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2955958211836838",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.95309020431743"
         }
       ],
       "total_children_count": 1,
@@ -70,16 +76,6 @@
       ],
       "triples_metadata": [
         "Schrijberg"
-      ],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1019.jsonld#30766"
-            }
-          ]
-        }
       ]
     },
     {
@@ -87,11 +83,10 @@
       "triples": [
         {
           "http://example.com/terms#name": "Schrijbergstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.775039303293524",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.12875033271396"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2955958211836838",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.95309020431743"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1019.jsonld#19835",
         "@type": "tree:Node"
@@ -99,8 +94,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Schrijbergstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.775039303293524",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.12875033271396"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2955958211836838",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.95309020431743"
         }
       ],
       "total_children_count": 0,
@@ -116,8 +111,7 @@
       ],
       "triples_metadata": [
         "Schrijbergstraat"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,20 +23,38 @@
     {
       "token_string": "van ",
       "triples": [],
-      "children": {
-        "Park": [
-          "3196",
-          "60699"
-        ],
-        "Roosenberglaan": [
-          "3196",
-          "60700"
-        ],
-        "Dieleghemstraat": [
-          "3196",
-          "91568"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment3196.jsonld#60699",
+              "@type": "tree:Node",
+              "token_string": "Park"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment3196.jsonld#60700",
+              "@type": "tree:Node",
+              "token_string": "Roosenberglaan"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment3196.jsonld#91568",
+              "@type": "tree:Node",
+              "token_string": "Dieleghemstraat"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment106.jsonld#55801",
         "@type": "tree:Node"
@@ -44,18 +62,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Abdij van Park",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0562516326473816",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.93613983090998"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.238062045035426",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.143552984543035"
         },
         {
           "http://example.com/terms#name": "Abdij van Roosenberglaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.366988424057822",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.65058319925794"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6221763500256663",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.470878727869945"
         },
         {
           "http://example.com/terms#name": "Abdij van Dieleghemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.965649243130176",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.69514682826247"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5493903869685566",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.51351602840946"
         }
       ],
       "total_children_count": 3,
@@ -81,44 +99,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3196.jsonld#60699"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3196.jsonld#60700"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3196.jsonld#91568"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "Park",
       "triples": [
         {
           "http://example.com/terms#name": "Abdij van Park",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0562516326473816",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.93613983090998"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.238062045035426",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.143552984543035"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3196.jsonld#60698",
         "@type": "tree:Node"
@@ -126,8 +117,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Abdij van Park",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0562516326473816",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.93613983090998"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.238062045035426",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.143552984543035"
         }
       ],
       "total_children_count": 0,
@@ -143,19 +134,17 @@
       ],
       "triples_metadata": [
         "Abdij van Park"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "Roosenberglaan",
       "triples": [
         {
           "http://example.com/terms#name": "Abdij van Roosenberglaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.366988424057822",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.65058319925794"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6221763500256663",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.470878727869945"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3196.jsonld#60698",
         "@type": "tree:Node"
@@ -163,8 +152,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Abdij van Roosenberglaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.366988424057822",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.65058319925794"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6221763500256663",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.470878727869945"
         }
       ],
       "total_children_count": 0,
@@ -180,19 +169,17 @@
       ],
       "triples_metadata": [
         "Abdij van Roosenberglaan"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "Dieleghemstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Abdij van Dieleghemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.965649243130176",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.69514682826247"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5493903869685566",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.51351602840946"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3196.jsonld#60698",
         "@type": "tree:Node"
@@ -200,8 +187,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Abdij van Dieleghemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.965649243130176",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.69514682826247"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5493903869685566",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.51351602840946"
         }
       ],
       "total_children_count": 0,
@@ -217,8 +204,7 @@
       ],
       "triples_metadata": [
         "Abdij van Dieleghemstraat"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

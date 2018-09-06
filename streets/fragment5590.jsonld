@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,20 +23,38 @@
     {
       "token_string": "La",
       "triples": [],
-      "children": {
-        "mbertsstraat": [
-          "5590",
-          "67550"
-        ],
-        "pidestraat": [
-          "5590",
-          "67551"
-        ],
-        " Fache": [
-          "5590",
-          "155706"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment5590.jsonld#67550",
+              "@type": "tree:Node",
+              "token_string": "mbertsstraat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment5590.jsonld#67551",
+              "@type": "tree:Node",
+              "token_string": "pidestraat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment5590.jsonld#155706",
+              "@type": "tree:Node",
+              "token_string": " Fache"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment114.jsonld#9143",
         "@type": "tree:Node"
@@ -44,18 +62,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "A Lambertsstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7014320047702944",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.49860130975792"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.794329373918345",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.30202473644064"
         },
         {
           "http://example.com/terms#name": "A Lapidestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.01358708301075",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.66884316804836"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5436964067946524",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.05196868261117"
         },
         {
           "http://example.com/terms#name": "A La Fache",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9460425791970395",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.401201104225294"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.554389055818634",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.30711086150845"
         }
       ],
       "total_children_count": 3,
@@ -81,44 +99,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5590.jsonld#67550"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5590.jsonld#67551"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5590.jsonld#155706"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "mbertsstraat",
       "triples": [
         {
           "http://example.com/terms#name": "A Lambertsstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7014320047702944",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.49860130975792"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.794329373918345",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.30202473644064"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5590.jsonld#67549",
         "@type": "tree:Node"
@@ -126,8 +117,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "A Lambertsstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7014320047702944",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.49860130975792"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.794329373918345",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.30202473644064"
         }
       ],
       "total_children_count": 0,
@@ -143,19 +134,17 @@
       ],
       "triples_metadata": [
         "A Lambertsstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "pidestraat",
       "triples": [
         {
           "http://example.com/terms#name": "A Lapidestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.01358708301075",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.66884316804836"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5436964067946524",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.05196868261117"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5590.jsonld#67549",
         "@type": "tree:Node"
@@ -163,8 +152,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "A Lapidestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.01358708301075",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.66884316804836"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5436964067946524",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.05196868261117"
         }
       ],
       "total_children_count": 0,
@@ -180,19 +169,17 @@
       ],
       "triples_metadata": [
         "A Lapidestraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": " Fache",
       "triples": [
         {
           "http://example.com/terms#name": "A La Fache",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9460425791970395",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.401201104225294"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.554389055818634",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.30711086150845"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5590.jsonld#67549",
         "@type": "tree:Node"
@@ -200,8 +187,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "A La Fache",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9460425791970395",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.401201104225294"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.554389055818634",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.30711086150845"
         }
       ],
       "total_children_count": 0,
@@ -217,8 +204,7 @@
       ],
       "triples_metadata": [
         "A La Fache"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,20 +23,38 @@
     {
       "token_string": "k",
       "triples": [],
-      "children": {
-        "loosterstraat": [
-          "3529",
-          "56710"
-        ],
-        "erkhofstraat": [
-          "3529",
-          "56711"
-        ],
-        "raaglaan": [
-          "3529",
-          "93711"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment3529.jsonld#56710",
+              "@type": "tree:Node",
+              "token_string": "loosterstraat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment3529.jsonld#56711",
+              "@type": "tree:Node",
+              "token_string": "erkhofstraat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment3529.jsonld#93711",
+              "@type": "tree:Node",
+              "token_string": "raaglaan"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment2091.jsonld#5369",
         "@type": "tree:Node"
@@ -44,18 +62,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Groenkloosterstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5313249571798226",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.812698767919684"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5418402725022955",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.05247464774804"
         },
         {
           "http://example.com/terms#name": "Groenkerkhofstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8652812252634168",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.310068743301024"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.392107623203617",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.47352015937321"
         },
         {
           "http://example.com/terms#name": "Groenkraaglaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.02547352174246",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.81593764924658"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.075502784935613",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.49101923866099"
         }
       ],
       "total_children_count": 3,
@@ -81,44 +99,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3529.jsonld#56710"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3529.jsonld#56711"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3529.jsonld#93711"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "loosterstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Groenkloosterstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5313249571798226",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.812698767919684"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5418402725022955",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.05247464774804"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3529.jsonld#56709",
         "@type": "tree:Node"
@@ -126,8 +117,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Groenkloosterstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5313249571798226",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.812698767919684"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5418402725022955",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.05247464774804"
         }
       ],
       "total_children_count": 0,
@@ -143,19 +134,17 @@
       ],
       "triples_metadata": [
         "Groenkloosterstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "erkhofstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Groenkerkhofstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8652812252634168",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.310068743301024"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.392107623203617",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.47352015937321"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3529.jsonld#56709",
         "@type": "tree:Node"
@@ -163,8 +152,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Groenkerkhofstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8652812252634168",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.310068743301024"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.392107623203617",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.47352015937321"
         }
       ],
       "total_children_count": 0,
@@ -180,19 +169,17 @@
       ],
       "triples_metadata": [
         "Groenkerkhofstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "raaglaan",
       "triples": [
         {
           "http://example.com/terms#name": "Groenkraaglaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.02547352174246",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.81593764924658"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.075502784935613",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.49101923866099"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3529.jsonld#56709",
         "@type": "tree:Node"
@@ -200,8 +187,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Groenkraaglaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.02547352174246",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.81593764924658"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.075502784935613",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.49101923866099"
         }
       ],
       "total_children_count": 0,
@@ -217,8 +204,7 @@
       ],
       "triples_metadata": [
         "Groenkraaglaan"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

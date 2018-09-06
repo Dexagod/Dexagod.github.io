@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,20 +23,38 @@
     {
       "token_string": "ze",
       "triples": [],
-      "children": {
-        "nbroekstraat": [
-          "2162",
-          "77381"
-        ],
-        "straat": [
-          "2162",
-          "77382"
-        ],
-        "kouterdreef": [
-          "2162",
-          "77813"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2162.jsonld#77381",
+              "@type": "tree:Node",
+              "token_string": "nbroekstraat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2162.jsonld#77382",
+              "@type": "tree:Node",
+              "token_string": "straat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2162.jsonld#77813",
+              "@type": "tree:Node",
+              "token_string": "kouterdreef"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment589.jsonld#784",
         "@type": "tree:Node"
@@ -44,18 +62,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Hoezenbroekstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3423428779582727",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.47663924992644"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7598466559200903",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.03976927459789"
         },
         {
           "http://example.com/terms#name": "Hoezestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5225585620571827",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.37494375996577"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.157617698373737",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.43822576647802"
         },
         {
           "http://example.com/terms#name": "Hoezekouterdreef",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8987713297168423",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.659143711253385"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.600254214936791",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.849231697907356"
         }
       ],
       "total_children_count": 3,
@@ -81,44 +99,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2162.jsonld#77381"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2162.jsonld#77382"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2162.jsonld#77813"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "nbroekstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Hoezenbroekstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3423428779582727",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.47663924992644"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7598466559200903",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.03976927459789"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2162.jsonld#77380",
         "@type": "tree:Node"
@@ -126,8 +117,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Hoezenbroekstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3423428779582727",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.47663924992644"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7598466559200903",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.03976927459789"
         }
       ],
       "total_children_count": 0,
@@ -143,19 +134,17 @@
       ],
       "triples_metadata": [
         "Hoezenbroekstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "straat",
       "triples": [
         {
           "http://example.com/terms#name": "Hoezestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5225585620571827",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.37494375996577"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.157617698373737",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.43822576647802"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2162.jsonld#77380",
         "@type": "tree:Node"
@@ -163,8 +152,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Hoezestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5225585620571827",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.37494375996577"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.157617698373737",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.43822576647802"
         }
       ],
       "total_children_count": 0,
@@ -180,19 +169,17 @@
       ],
       "triples_metadata": [
         "Hoezestraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "kouterdreef",
       "triples": [
         {
           "http://example.com/terms#name": "Hoezekouterdreef",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8987713297168423",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.659143711253385"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.600254214936791",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.849231697907356"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2162.jsonld#77380",
         "@type": "tree:Node"
@@ -200,8 +187,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Hoezekouterdreef",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8987713297168423",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.659143711253385"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.600254214936791",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.849231697907356"
         }
       ],
       "total_children_count": 0,
@@ -217,8 +204,7 @@
       ],
       "triples_metadata": [
         "Hoezekouterdreef"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

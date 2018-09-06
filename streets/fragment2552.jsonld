@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,16 +23,28 @@
     {
       "token_string": "k",
       "triples": [],
-      "children": {
-        "asstraat": [
-          "2552",
-          "28097"
-        ],
-        "erstraat": [
-          "2552",
-          "28098"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2552.jsonld#28097",
+              "@type": "tree:Node",
+              "token_string": "asstraat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2552.jsonld#28098",
+              "@type": "tree:Node",
+              "token_string": "erstraat"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment237.jsonld#66",
         "@type": "tree:Node"
@@ -40,13 +52,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Lukasstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.080950977582902",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.82948144630625"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.697524579325865",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.99064285188171"
         },
         {
           "http://example.com/terms#name": "Lukerstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5501832288041495",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.19286121670706"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.004691366440732",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.75948235891876"
         }
       ],
       "total_children_count": 2,
@@ -66,36 +78,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2552.jsonld#28097"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2552.jsonld#28098"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "asstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Lukasstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.080950977582902",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.82948144630625"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.697524579325865",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.99064285188171"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2552.jsonld#28096",
         "@type": "tree:Node"
@@ -103,8 +96,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Lukasstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.080950977582902",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.82948144630625"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.697524579325865",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.99064285188171"
         }
       ],
       "total_children_count": 0,
@@ -120,19 +113,17 @@
       ],
       "triples_metadata": [
         "Lukasstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "erstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Lukerstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5501832288041495",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.19286121670706"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.004691366440732",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.75948235891876"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2552.jsonld#28096",
         "@type": "tree:Node"
@@ -140,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Lukerstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5501832288041495",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.19286121670706"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.004691366440732",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.75948235891876"
         }
       ],
       "total_children_count": 0,
@@ -157,8 +148,7 @@
       ],
       "triples_metadata": [
         "Lukerstraat"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

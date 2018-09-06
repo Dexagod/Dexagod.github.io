@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,16 +23,28 @@
     {
       "token_string": "G",
       "triples": [],
-      "children": {
-        "asthuisstraat": [
-          "1333",
-          "43128"
-        ],
-        "racht": [
-          "1333",
-          "43129"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1333.jsonld#43128",
+              "@type": "tree:Node",
+              "token_string": "asthuisstraat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1333.jsonld#43129",
+              "@type": "tree:Node",
+              "token_string": "racht"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment643.jsonld#63",
         "@type": "tree:Node"
@@ -40,18 +52,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Lange Gasthuisstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4483917392434495",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.172208254654386"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.083248599717656",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.794472529881354"
         },
         {
           "http://example.com/terms#name": "Lange Gracht",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.330387332746363",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.18382308518713"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8941304335694564",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.488728742100335"
         },
         {
           "http://example.com/terms#name": "Lange Grachtstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2641066460600596",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.624763374636224"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2679917378448105",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.65557094853067"
         }
       ],
       "total_children_count": 3,
@@ -77,36 +89,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1333.jsonld#43128"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1333.jsonld#43129"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "asthuisstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Lange Gasthuisstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4483917392434495",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.172208254654386"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.083248599717656",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.794472529881354"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1333.jsonld#43127",
         "@type": "tree:Node"
@@ -114,8 +107,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Lange Gasthuisstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4483917392434495",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.172208254654386"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.083248599717656",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.794472529881354"
         }
       ],
       "total_children_count": 0,
@@ -131,24 +124,29 @@
       ],
       "triples_metadata": [
         "Lange Gasthuisstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "racht",
       "triples": [
         {
           "http://example.com/terms#name": "Lange Gracht",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.330387332746363",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.18382308518713"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8941304335694564",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.488728742100335"
         }
       ],
-      "children": {
-        "straat": [
-          "1333",
-          "59661"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1333.jsonld#59661",
+              "@type": "tree:Node",
+              "token_string": "straat"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment1333.jsonld#43127",
         "@type": "tree:Node"
@@ -156,13 +154,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Lange Gracht",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.330387332746363",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.18382308518713"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8941304335694564",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.488728742100335"
         },
         {
           "http://example.com/terms#name": "Lange Grachtstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2641066460600596",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.624763374636224"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2679917378448105",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.65557094853067"
         }
       ],
       "total_children_count": 1,
@@ -184,16 +182,6 @@
       ],
       "triples_metadata": [
         "Lange Gracht"
-      ],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1333.jsonld#59661"
-            }
-          ]
-        }
       ]
     },
     {
@@ -201,11 +189,10 @@
       "triples": [
         {
           "http://example.com/terms#name": "Lange Grachtstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2641066460600596",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.624763374636224"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2679917378448105",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.65557094853067"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1333.jsonld#43129",
         "@type": "tree:Node"
@@ -213,8 +200,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Lange Grachtstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2641066460600596",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.624763374636224"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2679917378448105",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.65557094853067"
         }
       ],
       "total_children_count": 0,
@@ -230,8 +217,7 @@
       ],
       "triples_metadata": [
         "Lange Grachtstraat"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

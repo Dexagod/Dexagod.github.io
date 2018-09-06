@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,16 +23,28 @@
     {
       "token_string": "i",
       "triples": [],
-      "children": {
-        "sstraat": [
-          "2293",
-          "52289"
-        ],
-        "daystraat": [
-          "2293",
-          "52290"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2293.jsonld#52289",
+              "@type": "tree:Node",
+              "token_string": "sstraat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2293.jsonld#52290",
+              "@type": "tree:Node",
+              "token_string": "daystraat"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment40.jsonld#2141",
         "@type": "tree:Node"
@@ -40,13 +52,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Holisstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.268126628366563",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.06186228876071"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.547358791300015",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.453461894998526"
         },
         {
           "http://example.com/terms#name": "Holidaystraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3903431712225025",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.889061052279544"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4008951692324967",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.385801272853676"
         }
       ],
       "total_children_count": 2,
@@ -66,36 +78,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2293.jsonld#52289"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2293.jsonld#52290"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "sstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Holisstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.268126628366563",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.06186228876071"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.547358791300015",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.453461894998526"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2293.jsonld#52288",
         "@type": "tree:Node"
@@ -103,8 +96,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Holisstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.268126628366563",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.06186228876071"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.547358791300015",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.453461894998526"
         }
       ],
       "total_children_count": 0,
@@ -120,19 +113,17 @@
       ],
       "triples_metadata": [
         "Holisstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "daystraat",
       "triples": [
         {
           "http://example.com/terms#name": "Holidaystraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3903431712225025",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.889061052279544"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4008951692324967",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.385801272853676"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2293.jsonld#52288",
         "@type": "tree:Node"
@@ -140,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Holidaystraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3903431712225025",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.889061052279544"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4008951692324967",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.385801272853676"
         }
       ],
       "total_children_count": 0,
@@ -157,8 +148,7 @@
       ],
       "triples_metadata": [
         "Holidaystraat"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,16 +23,28 @@
     {
       "token_string": "i",
       "triples": [],
-      "children": {
-        "estraat": [
-          "2924",
-          "87032"
-        ],
-        "straat": [
-          "2924",
-          "87033"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2924.jsonld#87032",
+              "@type": "tree:Node",
+              "token_string": "estraat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2924.jsonld#87033",
+              "@type": "tree:Node",
+              "token_string": "straat"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment167.jsonld#1546",
         "@type": "tree:Node"
@@ -40,13 +52,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Paaiestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8536735918407756",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.65813969951781"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.093120005381691",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.819037907996396"
         },
         {
           "http://example.com/terms#name": "Paaistraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2904125111771996",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.83292540154891"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.66793581974126",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.80891227105647"
         }
       ],
       "total_children_count": 2,
@@ -66,36 +78,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2924.jsonld#87032"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2924.jsonld#87033"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "estraat",
       "triples": [
         {
           "http://example.com/terms#name": "Paaiestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8536735918407756",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.65813969951781"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.093120005381691",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.819037907996396"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2924.jsonld#87031",
         "@type": "tree:Node"
@@ -103,8 +96,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Paaiestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8536735918407756",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.65813969951781"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.093120005381691",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.819037907996396"
         }
       ],
       "total_children_count": 0,
@@ -120,19 +113,17 @@
       ],
       "triples_metadata": [
         "Paaiestraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "straat",
       "triples": [
         {
           "http://example.com/terms#name": "Paaistraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2904125111771996",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.83292540154891"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.66793581974126",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.80891227105647"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2924.jsonld#87031",
         "@type": "tree:Node"
@@ -140,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Paaistraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2904125111771996",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.83292540154891"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.66793581974126",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.80891227105647"
         }
       ],
       "total_children_count": 0,
@@ -157,8 +148,7 @@
       ],
       "triples_metadata": [
         "Paaistraat"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

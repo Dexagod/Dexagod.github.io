@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,20 +23,38 @@
     {
       "token_string": "nk",
       "triples": [],
-      "children": {
-        "straat": [
-          "2512",
-          "63539"
-        ],
-        "weg": [
-          "2512",
-          "63540"
-        ],
-        "bos": [
-          "2512",
-          "69915"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2512.jsonld#63539",
+              "@type": "tree:Node",
+              "token_string": "straat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2512.jsonld#63540",
+              "@type": "tree:Node",
+              "token_string": "weg"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2512.jsonld#69915",
+              "@type": "tree:Node",
+              "token_string": "bos"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment2597.jsonld#39106",
         "@type": "tree:Node"
@@ -44,18 +62,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Veldonkstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.44455518853109",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.26216963854355"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6265924925654156",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.31496885902981"
         },
         {
           "http://example.com/terms#name": "Veldonkweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8996739821025215",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.810305361350025"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9517309800804146",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.46368609787459"
         },
         {
           "http://example.com/terms#name": "Veldonkbos",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.763974072751367",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.28654097446886"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4356775636598385",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.82659153644518"
         }
       ],
       "total_children_count": 3,
@@ -81,44 +99,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2512.jsonld#63539"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2512.jsonld#63540"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2512.jsonld#69915"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "straat",
       "triples": [
         {
           "http://example.com/terms#name": "Veldonkstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.44455518853109",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.26216963854355"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6265924925654156",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.31496885902981"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2512.jsonld#63538",
         "@type": "tree:Node"
@@ -126,8 +117,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Veldonkstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.44455518853109",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.26216963854355"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6265924925654156",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.31496885902981"
         }
       ],
       "total_children_count": 0,
@@ -143,19 +134,17 @@
       ],
       "triples_metadata": [
         "Veldonkstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "weg",
       "triples": [
         {
           "http://example.com/terms#name": "Veldonkweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8996739821025215",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.810305361350025"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9517309800804146",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.46368609787459"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2512.jsonld#63538",
         "@type": "tree:Node"
@@ -163,8 +152,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Veldonkweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8996739821025215",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.810305361350025"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9517309800804146",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.46368609787459"
         }
       ],
       "total_children_count": 0,
@@ -180,19 +169,17 @@
       ],
       "triples_metadata": [
         "Veldonkweg"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "bos",
       "triples": [
         {
           "http://example.com/terms#name": "Veldonkbos",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.763974072751367",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.28654097446886"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4356775636598385",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.82659153644518"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2512.jsonld#63538",
         "@type": "tree:Node"
@@ -200,8 +187,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Veldonkbos",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.763974072751367",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.28654097446886"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4356775636598385",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.82659153644518"
         }
       ],
       "total_children_count": 0,
@@ -217,8 +204,7 @@
       ],
       "triples_metadata": [
         "Veldonkbos"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

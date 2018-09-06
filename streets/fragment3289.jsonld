@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,16 +23,28 @@
     {
       "token_string": "e",
       "triples": [],
-      "children": {
-        "rikstraat": [
-          "3289",
-          "67030"
-        ],
-        "nweg": [
-          "3289",
-          "67031"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment3289.jsonld#67030",
+              "@type": "tree:Node",
+              "token_string": "rikstraat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment3289.jsonld#67031",
+              "@type": "tree:Node",
+              "token_string": "nweg"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment657.jsonld#2276",
         "@type": "tree:Node"
@@ -40,13 +52,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Monerikstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.047322367039197",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.00305444046919"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.047615355293801",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.5925787140367"
         },
         {
           "http://example.com/terms#name": "Monenweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.314735687261357",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.339235156567575"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.581809875993055",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.16102350948247"
         }
       ],
       "total_children_count": 2,
@@ -66,36 +78,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3289.jsonld#67030"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3289.jsonld#67031"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "rikstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Monerikstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.047322367039197",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.00305444046919"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.047615355293801",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.5925787140367"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3289.jsonld#67029",
         "@type": "tree:Node"
@@ -103,8 +96,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Monerikstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.047322367039197",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.00305444046919"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.047615355293801",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.5925787140367"
         }
       ],
       "total_children_count": 0,
@@ -120,19 +113,17 @@
       ],
       "triples_metadata": [
         "Monerikstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "nweg",
       "triples": [
         {
           "http://example.com/terms#name": "Monenweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.314735687261357",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.339235156567575"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.581809875993055",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.16102350948247"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3289.jsonld#67029",
         "@type": "tree:Node"
@@ -140,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Monenweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.314735687261357",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.339235156567575"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.581809875993055",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.16102350948247"
         }
       ],
       "total_children_count": 0,
@@ -157,8 +148,7 @@
       ],
       "triples_metadata": [
         "Monenweg"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

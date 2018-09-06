@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,16 +23,28 @@
     {
       "token_string": "A",
       "triples": [],
-      "children": {
-        "N MAERLANTSTRAAT": [
-          "4147",
-          "100079"
-        ],
-        "EREBEKE": [
-          "4147",
-          "100080"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment4147.jsonld#100079",
+              "@type": "tree:Node",
+              "token_string": "N MAERLANTSTRAAT"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment4147.jsonld#100080",
+              "@type": "tree:Node",
+              "token_string": "EREBEKE"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment19.jsonld#97",
         "@type": "tree:Node"
@@ -40,13 +52,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "VAN MAERLANTSTRAAT",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.060317078684671",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.93636568463391"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9387484373431767",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.93451938226531"
         },
         {
           "http://example.com/terms#name": "VAEREBEKE",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.498921533274662",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.27684139063399"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.01171519622196",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.331275859087356"
         }
       ],
       "total_children_count": 2,
@@ -66,36 +78,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4147.jsonld#100079"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4147.jsonld#100080"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "N MAERLANTSTRAAT",
       "triples": [
         {
           "http://example.com/terms#name": "VAN MAERLANTSTRAAT",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.060317078684671",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.93636568463391"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9387484373431767",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.93451938226531"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4147.jsonld#100078",
         "@type": "tree:Node"
@@ -103,8 +96,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "VAN MAERLANTSTRAAT",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.060317078684671",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.93636568463391"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9387484373431767",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.93451938226531"
         }
       ],
       "total_children_count": 0,
@@ -120,19 +113,17 @@
       ],
       "triples_metadata": [
         "VAN MAERLANTSTRAAT"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "EREBEKE",
       "triples": [
         {
           "http://example.com/terms#name": "VAEREBEKE",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.498921533274662",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.27684139063399"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.01171519622196",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.331275859087356"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4147.jsonld#100078",
         "@type": "tree:Node"
@@ -140,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "VAEREBEKE",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.498921533274662",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.27684139063399"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.01171519622196",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.331275859087356"
         }
       ],
       "total_children_count": 0,
@@ -157,8 +148,7 @@
       ],
       "triples_metadata": [
         "VAEREBEKE"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

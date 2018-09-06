@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -25,20 +25,32 @@
       "triples": [
         {
           "http://example.com/terms#name": "Den Bos",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1227793186552018",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.72048870504149"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5676716048525017",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.147617258699064"
         }
       ],
-      "children": {
-        "berg": [
-          "2867",
-          "83265"
-        ],
-        "chsingel": [
-          "2867",
-          "95061"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2867.jsonld#83265",
+              "@type": "tree:Node",
+              "token_string": "berg"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2867.jsonld#95061",
+              "@type": "tree:Node",
+              "token_string": "chsingel"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment2868.jsonld#46766",
         "@type": "tree:Node"
@@ -46,18 +58,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Den Bos",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1227793186552018",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.72048870504149"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5676716048525017",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.147617258699064"
         },
         {
           "http://example.com/terms#name": "Den Bosberg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.196577008212269",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.17228154477904"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.30285279956776",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.53995655510525"
         },
         {
           "http://example.com/terms#name": "Den Boschsingel",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3524118975656267",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.670589235264465"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.236833578506611",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.06251070278995"
         }
       ],
       "total_children_count": 2,
@@ -85,24 +97,6 @@
       ],
       "triples_metadata": [
         "Den Bos"
-      ],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2867.jsonld#83265"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2867.jsonld#95061"
-            }
-          ]
-        }
       ]
     },
     {
@@ -110,11 +104,10 @@
       "triples": [
         {
           "http://example.com/terms#name": "Den Bosberg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.196577008212269",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.17228154477904"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.30285279956776",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.53995655510525"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2867.jsonld#46767",
         "@type": "tree:Node"
@@ -122,8 +115,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Den Bosberg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.196577008212269",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.17228154477904"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.30285279956776",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.53995655510525"
         }
       ],
       "total_children_count": 0,
@@ -139,19 +132,17 @@
       ],
       "triples_metadata": [
         "Den Bosberg"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "chsingel",
       "triples": [
         {
           "http://example.com/terms#name": "Den Boschsingel",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3524118975656267",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.670589235264465"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.236833578506611",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.06251070278995"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2867.jsonld#46767",
         "@type": "tree:Node"
@@ -159,8 +150,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Den Boschsingel",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3524118975656267",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.670589235264465"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.236833578506611",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.06251070278995"
         }
       ],
       "total_children_count": 0,
@@ -176,8 +167,7 @@
       ],
       "triples_metadata": [
         "Den Boschsingel"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

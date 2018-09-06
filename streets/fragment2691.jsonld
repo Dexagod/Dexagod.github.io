@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,16 +23,28 @@
     {
       "token_string": "y",
       "triples": [],
-      "children": {
-        "erstraat": [
-          "2691",
-          "83126"
-        ],
-        "aerde": [
-          "2691",
-          "83127"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2691.jsonld#83126",
+              "@type": "tree:Node",
+              "token_string": "erstraat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2691.jsonld#83127",
+              "@type": "tree:Node",
+              "token_string": "aerde"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment581.jsonld#2102",
         "@type": "tree:Node"
@@ -40,13 +52,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rooyerstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1418175582472574",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.64774643657359"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3759201512292862",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.92230050858988"
         },
         {
           "http://example.com/terms#name": "Rooyaerde",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.667199991298154",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.18903009839219"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0484020051545233",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.728444170228705"
         }
       ],
       "total_children_count": 2,
@@ -66,36 +78,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2691.jsonld#83126"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2691.jsonld#83127"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "erstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Rooyerstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1418175582472574",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.64774643657359"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3759201512292862",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.92230050858988"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2691.jsonld#83125",
         "@type": "tree:Node"
@@ -103,8 +96,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rooyerstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1418175582472574",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.64774643657359"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3759201512292862",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.92230050858988"
         }
       ],
       "total_children_count": 0,
@@ -120,19 +113,17 @@
       ],
       "triples_metadata": [
         "Rooyerstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "aerde",
       "triples": [
         {
           "http://example.com/terms#name": "Rooyaerde",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.667199991298154",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.18903009839219"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0484020051545233",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.728444170228705"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2691.jsonld#83125",
         "@type": "tree:Node"
@@ -140,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rooyaerde",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.667199991298154",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.18903009839219"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0484020051545233",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.728444170228705"
         }
       ],
       "total_children_count": 0,
@@ -157,8 +148,7 @@
       ],
       "triples_metadata": [
         "Rooyaerde"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

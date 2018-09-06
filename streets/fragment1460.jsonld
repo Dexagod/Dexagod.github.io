@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,16 +23,28 @@
     {
       "token_string": "öperatie",
       "triples": [],
-      "children": {
-        "laan": [
-          "1460",
-          "97475"
-        ],
-        "straat": [
-          "1460",
-          "97476"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1460.jsonld#97475",
+              "@type": "tree:Node",
+              "token_string": "laan"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1460.jsonld#97476",
+              "@type": "tree:Node",
+              "token_string": "straat"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment44.jsonld#1035",
         "@type": "tree:Node"
@@ -40,13 +52,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Coöperatielaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.137938405171925",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.848100899114776"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.476726308958132",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.015991392140116"
         },
         {
           "http://example.com/terms#name": "Coöperatiestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.951173649004657",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.53144377234793"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.84335074476465",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.69299464557992"
         }
       ],
       "total_children_count": 2,
@@ -66,36 +78,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1460.jsonld#97475"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1460.jsonld#97476"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "laan",
       "triples": [
         {
           "http://example.com/terms#name": "Coöperatielaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.137938405171925",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.848100899114776"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.476726308958132",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.015991392140116"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1460.jsonld#97474",
         "@type": "tree:Node"
@@ -103,8 +96,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Coöperatielaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.137938405171925",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.848100899114776"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.476726308958132",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.015991392140116"
         }
       ],
       "total_children_count": 0,
@@ -120,19 +113,17 @@
       ],
       "triples_metadata": [
         "Coöperatielaan"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "straat",
       "triples": [
         {
           "http://example.com/terms#name": "Coöperatiestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.951173649004657",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.53144377234793"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.84335074476465",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.69299464557992"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1460.jsonld#97474",
         "@type": "tree:Node"
@@ -140,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Coöperatiestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.951173649004657",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.53144377234793"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.84335074476465",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.69299464557992"
         }
       ],
       "total_children_count": 0,
@@ -157,8 +148,7 @@
       ],
       "triples_metadata": [
         "Coöperatiestraat"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

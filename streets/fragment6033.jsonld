@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -25,11 +25,10 @@
       "triples": [
         {
           "http://example.com/terms#name": "Gerdingerpoort",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.283239029649624",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.272619445655124"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2649499788384366",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.48505055855951"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6033.jsonld#85434",
         "@type": "tree:Node"
@@ -37,8 +36,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Gerdingerpoort",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.283239029649624",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.272619445655124"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2649499788384366",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.48505055855951"
         }
       ],
       "total_children_count": 0,
@@ -54,19 +53,17 @@
       ],
       "triples_metadata": [
         "Gerdingerpoort"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "straat",
       "triples": [
         {
           "http://example.com/terms#name": "Gerdingerstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.388159305401084",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.73564762220463"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1511078347239527",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.51841506464476"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6033.jsonld#85434",
         "@type": "tree:Node"
@@ -74,8 +71,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Gerdingerstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.388159305401084",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.73564762220463"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1511078347239527",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.51841506464476"
         }
       ],
       "total_children_count": 0,
@@ -91,22 +88,33 @@
       ],
       "triples_metadata": [
         "Gerdingerstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "d",
       "triples": [],
-      "children": {
-        "inger": [
-          "6033",
-          "85434"
-        ],
-        "apark": [
-          "6033",
-          "85435"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment6033.jsonld#85434",
+              "@type": "tree:Node",
+              "token_string": "inger"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment6033.jsonld#85435",
+              "@type": "tree:Node",
+              "token_string": "apark"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment614.jsonld#1913",
         "@type": "tree:Node"
@@ -114,18 +122,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Gerdingerpoort",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.283239029649624",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.272619445655124"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2649499788384366",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.48505055855951"
         },
         {
           "http://example.com/terms#name": "Gerdingerstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.388159305401084",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.73564762220463"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1511078347239527",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.51841506464476"
         },
         {
           "http://example.com/terms#name": "Gerdapark",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0208196790441972",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.24108748709797"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7158387861168483",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.619685646584074"
         }
       ],
       "total_children_count": 4,
@@ -151,13 +159,19 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
+      "triples_metadata": []
+    },
+    {
+      "token_string": "inger",
+      "triples": [],
+      "children": [
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
             {
-              "@id": "/streets/fragment6033.jsonld#85434"
+              "@id": "/streets/fragment6033.jsonld#41508",
+              "@type": "tree:Node",
+              "token_string": "poort"
             }
           ]
         },
@@ -165,25 +179,13 @@
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
             {
-              "@id": "/streets/fragment6033.jsonld#85435"
+              "@id": "/streets/fragment6033.jsonld#41509",
+              "@type": "tree:Node",
+              "token_string": "straat"
             }
           ]
         }
-      ]
-    },
-    {
-      "token_string": "inger",
-      "triples": [],
-      "children": {
-        "poort": [
-          "6033",
-          "41508"
-        ],
-        "straat": [
-          "6033",
-          "41509"
-        ]
-      },
+      ],
       "parent_node": {
         "@id": "/streets/fragment6033.jsonld#85433",
         "@type": "tree:Node"
@@ -191,13 +193,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Gerdingerpoort",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.283239029649624",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.272619445655124"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2649499788384366",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.48505055855951"
         },
         {
           "http://example.com/terms#name": "Gerdingerstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.388159305401084",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.73564762220463"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1511078347239527",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.51841506464476"
         }
       ],
       "total_children_count": 2,
@@ -217,36 +219,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6033.jsonld#41508"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6033.jsonld#41509"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "apark",
       "triples": [
         {
           "http://example.com/terms#name": "Gerdapark",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0208196790441972",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.24108748709797"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7158387861168483",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.619685646584074"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6033.jsonld#85433",
         "@type": "tree:Node"
@@ -254,8 +237,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Gerdapark",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0208196790441972",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.24108748709797"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7158387861168483",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.619685646584074"
         }
       ],
       "total_children_count": 0,
@@ -271,8 +254,7 @@
       ],
       "triples_metadata": [
         "Gerdapark"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

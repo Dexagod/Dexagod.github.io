@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,16 +23,28 @@
     {
       "token_string": "ze",
       "triples": [],
-      "children": {
-        "nstraat": [
-          "6026",
-          "34575"
-        ],
-        "vien": [
-          "6026",
-          "34576"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment6026.jsonld#34575",
+              "@type": "tree:Node",
+              "token_string": "nstraat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment6026.jsonld#34576",
+              "@type": "tree:Node",
+              "token_string": "vien"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment614.jsonld#1913",
         "@type": "tree:Node"
@@ -40,13 +52,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Gerzenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8692623287391585",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.20703702585241"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.859279622872609",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.06223564766415"
         },
         {
           "http://example.com/terms#name": "Gerzevien",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5275729656138437",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.45653777406582"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8018214328578845",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.54711397831622"
         }
       ],
       "total_children_count": 2,
@@ -66,36 +78,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6026.jsonld#34575"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6026.jsonld#34576"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "nstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Gerzenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8692623287391585",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.20703702585241"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.859279622872609",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.06223564766415"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6026.jsonld#34574",
         "@type": "tree:Node"
@@ -103,8 +96,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Gerzenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8692623287391585",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.20703702585241"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.859279622872609",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.06223564766415"
         }
       ],
       "total_children_count": 0,
@@ -120,19 +113,17 @@
       ],
       "triples_metadata": [
         "Gerzenstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "vien",
       "triples": [
         {
           "http://example.com/terms#name": "Gerzevien",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5275729656138437",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.45653777406582"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8018214328578845",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.54711397831622"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6026.jsonld#34574",
         "@type": "tree:Node"
@@ -140,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Gerzevien",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5275729656138437",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.45653777406582"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8018214328578845",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.54711397831622"
         }
       ],
       "total_children_count": 0,
@@ -157,8 +148,7 @@
       ],
       "triples_metadata": [
         "Gerzevien"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

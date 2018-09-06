@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -25,11 +25,10 @@
       "triples": [
         {
           "http://example.com/terms#name": "Ruggeveldstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.127801943594195",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.4533477573314"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1844141691957213",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.417862765611254"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3482.jsonld#13967",
         "@type": "tree:Node"
@@ -37,8 +36,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Ruggeveldstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.127801943594195",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.4533477573314"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1844141691957213",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.417862765611254"
         }
       ],
       "total_children_count": 0,
@@ -54,19 +53,17 @@
       ],
       "triples_metadata": [
         "Ruggeveldstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "laan",
       "triples": [
         {
           "http://example.com/terms#name": "Ruggeveldlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0669899432923513",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.37651254307743"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.184033424380562",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.31278390751598"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3482.jsonld#13967",
         "@type": "tree:Node"
@@ -74,8 +71,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Ruggeveldlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0669899432923513",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.37651254307743"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.184033424380562",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.31278390751598"
         }
       ],
       "total_children_count": 0,
@@ -91,22 +88,33 @@
       ],
       "triples_metadata": [
         "Ruggeveldlaan"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "veld",
       "triples": [],
-      "children": {
-        "straat": [
-          "3482",
-          "8843"
-        ],
-        "laan": [
-          "3482",
-          "8844"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment3482.jsonld#8843",
+              "@type": "tree:Node",
+              "token_string": "straat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment3482.jsonld#8844",
+              "@type": "tree:Node",
+              "token_string": "laan"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment3482.jsonld#102790",
         "@type": "tree:Node"
@@ -114,13 +122,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Ruggeveldstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.127801943594195",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.4533477573314"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1844141691957213",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.417862765611254"
         },
         {
           "http://example.com/terms#name": "Ruggeveldlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0669899432923513",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.37651254307743"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.184033424380562",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.31278390751598"
         }
       ],
       "total_children_count": 2,
@@ -140,36 +148,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3482.jsonld#8843"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3482.jsonld#8844"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "straat",
       "triples": [
         {
           "http://example.com/terms#name": "Ruggestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.086666102528655",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.75309672952528"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4460279469316406",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.85381023433438"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3482.jsonld#102790",
         "@type": "tree:Node"
@@ -177,8 +166,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Ruggestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.086666102528655",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.75309672952528"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4460279469316406",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.85381023433438"
         }
       ],
       "total_children_count": 0,
@@ -194,19 +183,17 @@
       ],
       "triples_metadata": [
         "Ruggestraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "kouterweg",
       "triples": [
         {
           "http://example.com/terms#name": "Ruggekouterweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3306858952668086",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.54886988424903"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2399291796676626",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.870953623750424"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3482.jsonld#102790",
         "@type": "tree:Node"
@@ -214,8 +201,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Ruggekouterweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3306858952668086",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.54886988424903"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2399291796676626",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.870953623750424"
         }
       ],
       "total_children_count": 0,
@@ -231,19 +218,17 @@
       ],
       "triples_metadata": [
         "Ruggekouterweg"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "rweg",
       "triples": [
         {
           "http://example.com/terms#name": "Ruggerweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.756007229011271",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.8793838626575"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7072082862768063",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.19093870169443"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3482.jsonld#102790",
         "@type": "tree:Node"
@@ -251,8 +236,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Ruggerweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.756007229011271",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.8793838626575"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7072082862768063",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.19093870169443"
         }
       ],
       "total_children_count": 0,
@@ -268,22 +253,33 @@
       ],
       "triples_metadata": [
         "Ruggerweg"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "b",
       "triples": [],
-      "children": {
-        "eekstraat": [
-          "3482",
-          "102235"
-        ],
-        "roodstraatje": [
-          "3482",
-          "102236"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment3482.jsonld#102235",
+              "@type": "tree:Node",
+              "token_string": "eekstraat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment3482.jsonld#102236",
+              "@type": "tree:Node",
+              "token_string": "roodstraatje"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment3482.jsonld#102790",
         "@type": "tree:Node"
@@ -291,28 +287,28 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Ruggebeekstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4109141968589425",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.30556652653148"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8636600057878154",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.770122389574134"
         },
         {
           "http://example.com/terms#name": "Ruggebeekstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8746771997530236",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.67762247527467"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4928652351875957",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.29994519802464"
         },
         {
           "http://example.com/terms#name": "Ruggebeekstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8746771997530236",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.67762247527467"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4928652351875957",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.29994519802464"
         },
         {
           "http://example.com/terms#name": "Ruggebeekstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8746771997530236",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.67762247527467"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4928652351875957",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.29994519802464"
         },
         {
           "http://example.com/terms#name": "Ruggebroodstraatje",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.57210536071094",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.16376519234985"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7080582649357927",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.45065594576383"
         }
       ],
       "total_children_count": 2,
@@ -335,51 +331,32 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3482.jsonld#102235"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3482.jsonld#102236"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "eekstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Ruggebeekstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4109141968589425",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.30556652653148"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8636600057878154",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.770122389574134"
         },
         {
           "http://example.com/terms#name": "Ruggebeekstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8746771997530236",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.67762247527467"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4928652351875957",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.29994519802464"
         },
         {
           "http://example.com/terms#name": "Ruggebeekstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8746771997530236",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.67762247527467"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4928652351875957",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.29994519802464"
         },
         {
           "http://example.com/terms#name": "Ruggebeekstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8746771997530236",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.67762247527467"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4928652351875957",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.29994519802464"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3482.jsonld#102234",
         "@type": "tree:Node"
@@ -387,23 +364,23 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Ruggebeekstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4109141968589425",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.30556652653148"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8636600057878154",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.770122389574134"
         },
         {
           "http://example.com/terms#name": "Ruggebeekstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8746771997530236",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.67762247527467"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4928652351875957",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.29994519802464"
         },
         {
           "http://example.com/terms#name": "Ruggebeekstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8746771997530236",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.67762247527467"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4928652351875957",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.29994519802464"
         },
         {
           "http://example.com/terms#name": "Ruggebeekstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8746771997530236",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.67762247527467"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4928652351875957",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.29994519802464"
         }
       ],
       "total_children_count": 0,
@@ -425,19 +402,17 @@
         "Ruggebeekstraat",
         "Ruggebeekstraat",
         "Ruggebeekstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "roodstraatje",
       "triples": [
         {
           "http://example.com/terms#name": "Ruggebroodstraatje",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.57210536071094",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.16376519234985"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7080582649357927",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.45065594576383"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3482.jsonld#102234",
         "@type": "tree:Node"
@@ -445,8 +420,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Ruggebroodstraatje",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.57210536071094",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.16376519234985"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7080582649357927",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.45065594576383"
         }
       ],
       "total_children_count": 0,
@@ -462,22 +437,33 @@
       ],
       "triples_metadata": [
         "Ruggebroodstraatje"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "g",
       "triples": [],
-      "children": {
-        "ge": [
-          "3482",
-          "102790"
-        ],
-        "bylaan": [
-          "3482",
-          "102791"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment3482.jsonld#102790",
+              "@type": "tree:Node",
+              "token_string": "ge"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment3482.jsonld#102791",
+              "@type": "tree:Node",
+              "token_string": "bylaan"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment228.jsonld#755",
         "@type": "tree:Node"
@@ -485,58 +471,58 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Ruggeveldstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.127801943594195",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.4533477573314"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1844141691957213",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.417862765611254"
         },
         {
           "http://example.com/terms#name": "Ruggeveldlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0669899432923513",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.37651254307743"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.184033424380562",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.31278390751598"
         },
         {
           "http://example.com/terms#name": "Ruggestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.086666102528655",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.75309672952528"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4460279469316406",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.85381023433438"
         },
         {
           "http://example.com/terms#name": "Ruggebeekstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4109141968589425",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.30556652653148"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8636600057878154",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.770122389574134"
         },
         {
           "http://example.com/terms#name": "Ruggebeekstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8746771997530236",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.67762247527467"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4928652351875957",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.29994519802464"
         },
         {
           "http://example.com/terms#name": "Ruggebeekstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8746771997530236",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.67762247527467"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4928652351875957",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.29994519802464"
         },
         {
           "http://example.com/terms#name": "Ruggebeekstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8746771997530236",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.67762247527467"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4928652351875957",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.29994519802464"
         },
         {
           "http://example.com/terms#name": "Ruggekouterweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3306858952668086",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.54886988424903"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2399291796676626",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.870953623750424"
         },
         {
           "http://example.com/terms#name": "Ruggerweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.756007229011271",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.8793838626575"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7072082862768063",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.19093870169443"
         },
         {
           "http://example.com/terms#name": "Ruggebroodstraatje",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.57210536071094",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.16376519234985"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7080582649357927",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.45065594576383"
         },
         {
           "http://example.com/terms#name": "Rugbylaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.37756870941527",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.379802449203694"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.027950505199961",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.543446230483"
         }
       ],
       "total_children_count": 11,
@@ -595,13 +581,19 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
+      "triples_metadata": []
+    },
+    {
+      "token_string": "ge",
+      "triples": [],
+      "children": [
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
             {
-              "@id": "/streets/fragment3482.jsonld#102790"
+              "@id": "/streets/fragment3482.jsonld#13967",
+              "@type": "tree:Node",
+              "token_string": "veld"
             }
           ]
         },
@@ -609,37 +601,43 @@
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
             {
-              "@id": "/streets/fragment3482.jsonld#102791"
+              "@id": "/streets/fragment3482.jsonld#13968",
+              "@type": "tree:Node",
+              "token_string": "straat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment3482.jsonld#71747",
+              "@type": "tree:Node",
+              "token_string": "kouterweg"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment3482.jsonld#99551",
+              "@type": "tree:Node",
+              "token_string": "rweg"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment3482.jsonld#102234",
+              "@type": "tree:Node",
+              "token_string": "b"
             }
           ]
         }
-      ]
-    },
-    {
-      "token_string": "ge",
-      "triples": [],
-      "children": {
-        "veld": [
-          "3482",
-          "13967"
-        ],
-        "straat": [
-          "3482",
-          "13968"
-        ],
-        "kouterweg": [
-          "3482",
-          "71747"
-        ],
-        "rweg": [
-          "3482",
-          "99551"
-        ],
-        "b": [
-          "3482",
-          "102234"
-        ]
-      },
+      ],
       "parent_node": {
         "@id": "/streets/fragment3482.jsonld#102789",
         "@type": "tree:Node"
@@ -647,53 +645,53 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Ruggeveldstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.127801943594195",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.4533477573314"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1844141691957213",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.417862765611254"
         },
         {
           "http://example.com/terms#name": "Ruggeveldlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0669899432923513",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.37651254307743"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.184033424380562",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.31278390751598"
         },
         {
           "http://example.com/terms#name": "Ruggestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.086666102528655",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.75309672952528"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4460279469316406",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.85381023433438"
         },
         {
           "http://example.com/terms#name": "Ruggebeekstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4109141968589425",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.30556652653148"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8636600057878154",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.770122389574134"
         },
         {
           "http://example.com/terms#name": "Ruggebeekstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8746771997530236",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.67762247527467"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4928652351875957",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.29994519802464"
         },
         {
           "http://example.com/terms#name": "Ruggebeekstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8746771997530236",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.67762247527467"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4928652351875957",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.29994519802464"
         },
         {
           "http://example.com/terms#name": "Ruggebeekstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8746771997530236",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.67762247527467"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4928652351875957",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.29994519802464"
         },
         {
           "http://example.com/terms#name": "Ruggekouterweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3306858952668086",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.54886988424903"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2399291796676626",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.870953623750424"
         },
         {
           "http://example.com/terms#name": "Ruggerweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.756007229011271",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.8793838626575"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7072082862768063",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.19093870169443"
         },
         {
           "http://example.com/terms#name": "Ruggebroodstraatje",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.57210536071094",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.16376519234985"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7080582649357927",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.45065594576383"
         }
       ],
       "total_children_count": 9,
@@ -746,60 +744,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3482.jsonld#13967"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3482.jsonld#13968"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3482.jsonld#71747"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3482.jsonld#99551"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3482.jsonld#102234"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "bylaan",
       "triples": [
         {
           "http://example.com/terms#name": "Rugbylaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.37756870941527",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.379802449203694"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.027950505199961",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.543446230483"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3482.jsonld#102789",
         "@type": "tree:Node"
@@ -807,8 +762,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rugbylaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.37756870941527",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.379802449203694"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.027950505199961",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.543446230483"
         }
       ],
       "total_children_count": 0,
@@ -824,8 +779,7 @@
       ],
       "triples_metadata": [
         "Rugbylaan"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,16 +23,28 @@
     {
       "token_string": "i",
       "triples": [],
-      "children": {
-        "ngwijk": [
-          "2112",
-          "51540"
-        ],
-        "austraat": [
-          "2112",
-          "51541"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2112.jsonld#51540",
+              "@type": "tree:Node",
+              "token_string": "ngwijk"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2112.jsonld#51541",
+              "@type": "tree:Node",
+              "token_string": "austraat"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment247.jsonld#742",
         "@type": "tree:Node"
@@ -40,13 +52,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Boringwijk",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.866148689481606",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.44390507564032"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5618488371613766",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.37732985243195"
         },
         {
           "http://example.com/terms#name": "Boriaustraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.294289017683038",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.34867451687852"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6872274268492986",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.438732488665075"
         }
       ],
       "total_children_count": 2,
@@ -66,36 +78,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2112.jsonld#51540"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2112.jsonld#51541"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "ngwijk",
       "triples": [
         {
           "http://example.com/terms#name": "Boringwijk",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.866148689481606",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.44390507564032"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5618488371613766",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.37732985243195"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2112.jsonld#51539",
         "@type": "tree:Node"
@@ -103,8 +96,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Boringwijk",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.866148689481606",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.44390507564032"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5618488371613766",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.37732985243195"
         }
       ],
       "total_children_count": 0,
@@ -120,19 +113,17 @@
       ],
       "triples_metadata": [
         "Boringwijk"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "austraat",
       "triples": [
         {
           "http://example.com/terms#name": "Boriaustraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.294289017683038",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.34867451687852"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6872274268492986",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.438732488665075"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2112.jsonld#51539",
         "@type": "tree:Node"
@@ -140,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Boriaustraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.294289017683038",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.34867451687852"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6872274268492986",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.438732488665075"
         }
       ],
       "total_children_count": 0,
@@ -157,8 +148,7 @@
       ],
       "triples_metadata": [
         "Boriaustraat"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

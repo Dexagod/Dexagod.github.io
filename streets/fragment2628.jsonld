@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,16 +23,28 @@
     {
       "token_string": "d",
       "triples": [],
-      "children": {
-        "reef": [
-          "2628",
-          "153700"
-        ],
-        "erbusch": [
-          "2628",
-          "153701"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2628.jsonld#153700",
+              "@type": "tree:Node",
+              "token_string": "reef"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2628.jsonld#153701",
+              "@type": "tree:Node",
+              "token_string": "erbusch"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment248.jsonld#235",
         "@type": "tree:Node"
@@ -40,13 +52,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Beldreef",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1518764139025826",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.72122494772961"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2924064970251092",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.93514665278156"
         },
         {
           "http://example.com/terms#name": "Belderbusch",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3634361812599805",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.267314446955986"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7349200546672754",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.54870874730363"
         }
       ],
       "total_children_count": 2,
@@ -66,36 +78,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2628.jsonld#153700"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2628.jsonld#153701"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "reef",
       "triples": [
         {
           "http://example.com/terms#name": "Beldreef",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1518764139025826",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.72122494772961"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2924064970251092",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.93514665278156"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2628.jsonld#153699",
         "@type": "tree:Node"
@@ -103,8 +96,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Beldreef",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1518764139025826",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.72122494772961"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2924064970251092",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.93514665278156"
         }
       ],
       "total_children_count": 0,
@@ -120,19 +113,17 @@
       ],
       "triples_metadata": [
         "Beldreef"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "erbusch",
       "triples": [
         {
           "http://example.com/terms#name": "Belderbusch",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3634361812599805",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.267314446955986"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7349200546672754",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.54870874730363"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2628.jsonld#153699",
         "@type": "tree:Node"
@@ -140,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Belderbusch",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3634361812599805",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.267314446955986"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7349200546672754",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.54870874730363"
         }
       ],
       "total_children_count": 0,
@@ -157,8 +148,7 @@
       ],
       "triples_metadata": [
         "Belderbusch"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

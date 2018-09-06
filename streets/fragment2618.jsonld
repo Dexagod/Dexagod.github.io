@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,16 +23,28 @@
     {
       "token_string": "paire",
       "triples": [],
-      "children": {
-        "straat": [
-          "2618",
-          "85340"
-        ],
-        "plein": [
-          "2618",
-          "85341"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2618.jsonld#85340",
+              "@type": "tree:Node",
+              "token_string": "straat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2618.jsonld#85341",
+              "@type": "tree:Node",
+              "token_string": "plein"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment248.jsonld#235",
         "@type": "tree:Node"
@@ -40,13 +52,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Belpairestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.955945223255048",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.81718434847162"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.303749959650909",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.168864170164646"
         },
         {
           "http://example.com/terms#name": "Belpaireplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.408460753276641",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.93945995414641"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.87473840698043",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.87093219861055"
         }
       ],
       "total_children_count": 2,
@@ -66,36 +78,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2618.jsonld#85340"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2618.jsonld#85341"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "straat",
       "triples": [
         {
           "http://example.com/terms#name": "Belpairestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.955945223255048",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.81718434847162"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.303749959650909",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.168864170164646"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2618.jsonld#85339",
         "@type": "tree:Node"
@@ -103,8 +96,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Belpairestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.955945223255048",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.81718434847162"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.303749959650909",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.168864170164646"
         }
       ],
       "total_children_count": 0,
@@ -120,19 +113,17 @@
       ],
       "triples_metadata": [
         "Belpairestraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "plein",
       "triples": [
         {
           "http://example.com/terms#name": "Belpaireplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.408460753276641",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.93945995414641"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.87473840698043",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.87093219861055"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2618.jsonld#85339",
         "@type": "tree:Node"
@@ -140,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Belpaireplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.408460753276641",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.93945995414641"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.87473840698043",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.87093219861055"
         }
       ],
       "total_children_count": 0,
@@ -157,8 +148,7 @@
       ],
       "triples_metadata": [
         "Belpaireplein"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,16 +23,28 @@
     {
       "token_string": "E",
       "triples": [],
-      "children": {
-        "RENSTRAAT": [
-          "5730",
-          "100053"
-        ],
-        "ERSESTRAAT": [
-          "5730",
-          "100054"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment5730.jsonld#100053",
+              "@type": "tree:Node",
+              "token_string": "RENSTRAAT"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment5730.jsonld#100054",
+              "@type": "tree:Node",
+              "token_string": "ERSESTRAAT"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment13.jsonld#56",
         "@type": "tree:Node"
@@ -40,13 +52,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "MERENSTRAAT",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1643194791470566",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.40322552986433"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.117727681064241",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.46886797517445"
         },
         {
           "http://example.com/terms#name": "MEERSESTRAAT",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6604726836147576",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.426663223146896"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9772435851451116",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.8095141988655"
         }
       ],
       "total_children_count": 2,
@@ -66,36 +78,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5730.jsonld#100053"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5730.jsonld#100054"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "RENSTRAAT",
       "triples": [
         {
           "http://example.com/terms#name": "MERENSTRAAT",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1643194791470566",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.40322552986433"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.117727681064241",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.46886797517445"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5730.jsonld#100052",
         "@type": "tree:Node"
@@ -103,8 +96,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "MERENSTRAAT",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1643194791470566",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.40322552986433"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.117727681064241",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.46886797517445"
         }
       ],
       "total_children_count": 0,
@@ -120,19 +113,17 @@
       ],
       "triples_metadata": [
         "MERENSTRAAT"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "ERSESTRAAT",
       "triples": [
         {
           "http://example.com/terms#name": "MEERSESTRAAT",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6604726836147576",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.426663223146896"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9772435851451116",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.8095141988655"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5730.jsonld#100052",
         "@type": "tree:Node"
@@ -140,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "MEERSESTRAAT",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6604726836147576",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.426663223146896"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9772435851451116",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.8095141988655"
         }
       ],
       "total_children_count": 0,
@@ -157,8 +148,7 @@
       ],
       "triples_metadata": [
         "MEERSESTRAAT"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

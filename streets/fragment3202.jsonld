@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,20 +23,38 @@
     {
       "token_string": "o",
       "triples": [],
-      "children": {
-        "nckestraat": [
-          "3202",
-          "88161"
-        ],
-        "mbaertstraat": [
-          "3202",
-          "88162"
-        ],
-        "ossensstraat": [
-          "3202",
-          "91742"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment3202.jsonld#88161",
+              "@type": "tree:Node",
+              "token_string": "nckestraat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment3202.jsonld#88162",
+              "@type": "tree:Node",
+              "token_string": "mbaertstraat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment3202.jsonld#91742",
+              "@type": "tree:Node",
+              "token_string": "ossensstraat"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment3336.jsonld#87517",
         "@type": "tree:Node"
@@ -44,18 +62,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Joseph Lonckestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.999876578997373",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.64292249219271"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2204441742402623",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.46530995465058"
         },
         {
           "http://example.com/terms#name": "Joseph Lombaertstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.236961582066811",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.76911762038964"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.651266555853612",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.94206177841064"
         },
         {
           "http://example.com/terms#name": "Joseph Loossensstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7616451772535404",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.022091680746854"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.450881964938056",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.736934782367"
         }
       ],
       "total_children_count": 3,
@@ -81,44 +99,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3202.jsonld#88161"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3202.jsonld#88162"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3202.jsonld#91742"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "nckestraat",
       "triples": [
         {
           "http://example.com/terms#name": "Joseph Lonckestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.999876578997373",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.64292249219271"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2204441742402623",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.46530995465058"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3202.jsonld#88160",
         "@type": "tree:Node"
@@ -126,8 +117,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Joseph Lonckestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.999876578997373",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.64292249219271"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2204441742402623",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.46530995465058"
         }
       ],
       "total_children_count": 0,
@@ -143,19 +134,17 @@
       ],
       "triples_metadata": [
         "Joseph Lonckestraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "mbaertstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Joseph Lombaertstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.236961582066811",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.76911762038964"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.651266555853612",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.94206177841064"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3202.jsonld#88160",
         "@type": "tree:Node"
@@ -163,8 +152,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Joseph Lombaertstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.236961582066811",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.76911762038964"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.651266555853612",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.94206177841064"
         }
       ],
       "total_children_count": 0,
@@ -180,19 +169,17 @@
       ],
       "triples_metadata": [
         "Joseph Lombaertstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "ossensstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Joseph Loossensstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7616451772535404",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.022091680746854"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.450881964938056",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.736934782367"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3202.jsonld#88160",
         "@type": "tree:Node"
@@ -200,8 +187,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Joseph Loossensstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7616451772535404",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.022091680746854"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.450881964938056",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.736934782367"
         }
       ],
       "total_children_count": 0,
@@ -217,8 +204,7 @@
       ],
       "triples_metadata": [
         "Joseph Loossensstraat"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

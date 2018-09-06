@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,16 +23,28 @@
     {
       "token_string": "p",
       "triples": [],
-      "children": {
-        "aumestraat": [
-          "1007",
-          "30523"
-        ],
-        "tist De Donderstraat": [
-          "1007",
-          "30524"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1007.jsonld#30523",
+              "@type": "tree:Node",
+              "token_string": "aumestraat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1007.jsonld#30524",
+              "@type": "tree:Node",
+              "token_string": "tist De Donderstraat"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment27.jsonld#467",
         "@type": "tree:Node"
@@ -40,13 +52,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Bapaumestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6137720281350316",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.43418065474828"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1063422122376014",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.9085767293781"
         },
         {
           "http://example.com/terms#name": "Baptist De Donderstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.345618854377989",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.465448304444884"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.789668226290803",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.068350748600196"
         }
       ],
       "total_children_count": 2,
@@ -66,36 +78,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1007.jsonld#30523"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1007.jsonld#30524"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "aumestraat",
       "triples": [
         {
           "http://example.com/terms#name": "Bapaumestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6137720281350316",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.43418065474828"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1063422122376014",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.9085767293781"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1007.jsonld#30522",
         "@type": "tree:Node"
@@ -103,8 +96,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Bapaumestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6137720281350316",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.43418065474828"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1063422122376014",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.9085767293781"
         }
       ],
       "total_children_count": 0,
@@ -120,19 +113,17 @@
       ],
       "triples_metadata": [
         "Bapaumestraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "tist De Donderstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Baptist De Donderstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.345618854377989",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.465448304444884"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.789668226290803",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.068350748600196"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1007.jsonld#30522",
         "@type": "tree:Node"
@@ -140,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Baptist De Donderstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.345618854377989",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.465448304444884"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.789668226290803",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.068350748600196"
         }
       ],
       "total_children_count": 0,
@@ -157,8 +148,7 @@
       ],
       "triples_metadata": [
         "Baptist De Donderstraat"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

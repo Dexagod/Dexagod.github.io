@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,16 +23,28 @@
     {
       "token_string": "p",
       "triples": [],
-      "children": {
-        "rovinciënplein": [
-          "3258",
-          "90046"
-        ],
-        "ondengang": [
-          "3258",
-          "90047"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment3258.jsonld#90046",
+              "@type": "tree:Node",
+              "token_string": "rovinciënplein"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment3258.jsonld#90047",
+              "@type": "tree:Node",
+              "token_string": "ondengang"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment2824.jsonld#33922",
         "@type": "tree:Node"
@@ -40,13 +52,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Vierprovinciënplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6581948798756216",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.90355850351368"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1735513735266365",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.55072434362039"
         },
         {
           "http://example.com/terms#name": "Vierpondengang",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.379563610011059",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.56165856542155"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.484289124115234",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.46889294963101"
         }
       ],
       "total_children_count": 2,
@@ -66,36 +78,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3258.jsonld#90046"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3258.jsonld#90047"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "rovinciënplein",
       "triples": [
         {
           "http://example.com/terms#name": "Vierprovinciënplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6581948798756216",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.90355850351368"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1735513735266365",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.55072434362039"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3258.jsonld#90045",
         "@type": "tree:Node"
@@ -103,8 +96,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Vierprovinciënplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6581948798756216",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.90355850351368"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1735513735266365",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.55072434362039"
         }
       ],
       "total_children_count": 0,
@@ -120,19 +113,17 @@
       ],
       "triples_metadata": [
         "Vierprovinciënplein"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "ondengang",
       "triples": [
         {
           "http://example.com/terms#name": "Vierpondengang",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.379563610011059",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.56165856542155"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.484289124115234",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.46889294963101"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3258.jsonld#90045",
         "@type": "tree:Node"
@@ -140,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Vierpondengang",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.379563610011059",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.56165856542155"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.484289124115234",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.46889294963101"
         }
       ],
       "total_children_count": 0,
@@ -157,8 +148,7 @@
       ],
       "triples_metadata": [
         "Vierpondengang"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,20 +23,38 @@
     {
       "token_string": "a",
       "triples": [],
-      "children": {
-        "rtinestraat": [
-          "3635",
-          "93373"
-        ],
-        "straat": [
-          "3635",
-          "93374"
-        ],
-        "nterveldweg": [
-          "3635",
-          "102255"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment3635.jsonld#93373",
+              "@type": "tree:Node",
+              "token_string": "rtinestraat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment3635.jsonld#93374",
+              "@type": "tree:Node",
+              "token_string": "straat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment3635.jsonld#102255",
+              "@type": "tree:Node",
+              "token_string": "nterveldweg"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment476.jsonld#1403",
         "@type": "tree:Node"
@@ -44,18 +62,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Lamartinestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3825920752469347",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.2911565251946"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.656868144297695",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.34097874867683"
         },
         {
           "http://example.com/terms#name": "Lamastraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.368946026728476",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.45192324201631"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4520525058781524",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.19890663167392"
         },
         {
           "http://example.com/terms#name": "Lamanterveldweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.80984650404464",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.59172774516462"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.763090498201522",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.17180004834413"
         }
       ],
       "total_children_count": 3,
@@ -81,44 +99,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3635.jsonld#93373"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3635.jsonld#93374"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3635.jsonld#102255"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "rtinestraat",
       "triples": [
         {
           "http://example.com/terms#name": "Lamartinestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3825920752469347",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.2911565251946"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.656868144297695",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.34097874867683"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3635.jsonld#93372",
         "@type": "tree:Node"
@@ -126,8 +117,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Lamartinestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3825920752469347",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.2911565251946"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.656868144297695",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.34097874867683"
         }
       ],
       "total_children_count": 0,
@@ -143,19 +134,17 @@
       ],
       "triples_metadata": [
         "Lamartinestraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "straat",
       "triples": [
         {
           "http://example.com/terms#name": "Lamastraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.368946026728476",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.45192324201631"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4520525058781524",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.19890663167392"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3635.jsonld#93372",
         "@type": "tree:Node"
@@ -163,8 +152,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Lamastraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.368946026728476",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.45192324201631"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4520525058781524",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.19890663167392"
         }
       ],
       "total_children_count": 0,
@@ -180,19 +169,17 @@
       ],
       "triples_metadata": [
         "Lamastraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "nterveldweg",
       "triples": [
         {
           "http://example.com/terms#name": "Lamanterveldweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.80984650404464",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.59172774516462"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.763090498201522",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.17180004834413"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3635.jsonld#93372",
         "@type": "tree:Node"
@@ -200,8 +187,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Lamanterveldweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.80984650404464",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.59172774516462"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.763090498201522",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.17180004834413"
         }
       ],
       "total_children_count": 0,
@@ -217,8 +204,7 @@
       ],
       "triples_metadata": [
         "Lamanterveldweg"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

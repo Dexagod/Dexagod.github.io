@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -25,11 +25,10 @@
       "triples": [
         {
           "http://example.com/terms#name": "Quai Ferdinand Nicolaï",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.824473651254196",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.601199664562124"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9549112599181795",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.488765380350394"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6240.jsonld#175721",
         "@type": "tree:Node"
@@ -37,8 +36,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Quai Ferdinand Nicolaï",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.824473651254196",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.601199664562124"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9549112599181795",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.488765380350394"
         }
       ],
       "total_children_count": 0,
@@ -54,19 +53,17 @@
       ],
       "triples_metadata": [
         "Quai Ferdinand Nicolaï"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "Courtois",
       "triples": [
         {
           "http://example.com/terms#name": "Quai Ferdinand Courtois",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6669489047507597",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.3486705570983"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.823065730620377",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.75851288590799"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6240.jsonld#175721",
         "@type": "tree:Node"
@@ -74,8 +71,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Quai Ferdinand Courtois",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6669489047507597",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.3486705570983"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.823065730620377",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.75851288590799"
         }
       ],
       "total_children_count": 0,
@@ -91,22 +88,33 @@
       ],
       "triples_metadata": [
         "Quai Ferdinand Courtois"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "F",
       "triples": [],
-      "children": {
-        "erdinand ": [
-          "6240",
-          "175721"
-        ],
-        "ranche Garenne": [
-          "6240",
-          "175722"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment6240.jsonld#175721",
+              "@type": "tree:Node",
+              "token_string": "erdinand "
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment6240.jsonld#175722",
+              "@type": "tree:Node",
+              "token_string": "ranche Garenne"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment4778.jsonld#109901",
         "@type": "tree:Node"
@@ -114,18 +122,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Quai Ferdinand Nicolaï",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.824473651254196",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.601199664562124"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9549112599181795",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.488765380350394"
         },
         {
           "http://example.com/terms#name": "Quai Ferdinand Courtois",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6669489047507597",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.3486705570983"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.823065730620377",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.75851288590799"
         },
         {
           "http://example.com/terms#name": "Quai Franche Garenne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.162845711229037",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.83985032513633"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.188111801421727",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.396795192983866"
         }
       ],
       "total_children_count": 4,
@@ -151,13 +159,19 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
+      "triples_metadata": []
+    },
+    {
+      "token_string": "erdinand ",
+      "triples": [],
+      "children": [
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
             {
-              "@id": "/streets/fragment6240.jsonld#175721"
+              "@id": "/streets/fragment6240.jsonld#168411",
+              "@type": "tree:Node",
+              "token_string": "Nicolaï"
             }
           ]
         },
@@ -165,25 +179,13 @@
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
             {
-              "@id": "/streets/fragment6240.jsonld#175722"
+              "@id": "/streets/fragment6240.jsonld#168412",
+              "@type": "tree:Node",
+              "token_string": "Courtois"
             }
           ]
         }
-      ]
-    },
-    {
-      "token_string": "erdinand ",
-      "triples": [],
-      "children": {
-        "Nicolaï": [
-          "6240",
-          "168411"
-        ],
-        "Courtois": [
-          "6240",
-          "168412"
-        ]
-      },
+      ],
       "parent_node": {
         "@id": "/streets/fragment6240.jsonld#175720",
         "@type": "tree:Node"
@@ -191,13 +193,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Quai Ferdinand Nicolaï",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.824473651254196",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.601199664562124"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9549112599181795",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.488765380350394"
         },
         {
           "http://example.com/terms#name": "Quai Ferdinand Courtois",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6669489047507597",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.3486705570983"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.823065730620377",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.75851288590799"
         }
       ],
       "total_children_count": 2,
@@ -217,36 +219,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6240.jsonld#168411"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6240.jsonld#168412"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "ranche Garenne",
       "triples": [
         {
           "http://example.com/terms#name": "Quai Franche Garenne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.162845711229037",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.83985032513633"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.188111801421727",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.396795192983866"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6240.jsonld#175720",
         "@type": "tree:Node"
@@ -254,8 +237,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Quai Franche Garenne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.162845711229037",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.83985032513633"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.188111801421727",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.396795192983866"
         }
       ],
       "total_children_count": 0,
@@ -271,8 +254,7 @@
       ],
       "triples_metadata": [
         "Quai Franche Garenne"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

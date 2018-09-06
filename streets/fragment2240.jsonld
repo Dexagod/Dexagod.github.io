@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -25,20 +25,32 @@
       "triples": [
         {
           "http://example.com/terms#name": "Boesdaal",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.297688223501707",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.04984788040514"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5272346002497135",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.14396695864626"
         }
       ],
-      "children": {
-        "veldweg": [
-          "2240",
-          "62694"
-        ],
-        "laan": [
-          "2240",
-          "63920"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2240.jsonld#62694",
+              "@type": "tree:Node",
+              "token_string": "veldweg"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2240.jsonld#63920",
+              "@type": "tree:Node",
+              "token_string": "laan"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment327.jsonld#27976",
         "@type": "tree:Node"
@@ -46,18 +58,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Boesdaalveldweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8612652307198894",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.69843915477304"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2367686602834516",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.97585955625389"
         },
         {
           "http://example.com/terms#name": "Boesdaal",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.297688223501707",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.04984788040514"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5272346002497135",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.14396695864626"
         },
         {
           "http://example.com/terms#name": "Boesdaallaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.30022697670112",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.212543285970234"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9288982537794697",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.491424580389065"
         }
       ],
       "total_children_count": 2,
@@ -85,24 +97,6 @@
       ],
       "triples_metadata": [
         "Boesdaal"
-      ],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2240.jsonld#62694"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2240.jsonld#63920"
-            }
-          ]
-        }
       ]
     },
     {
@@ -110,11 +104,10 @@
       "triples": [
         {
           "http://example.com/terms#name": "Boesdaalveldweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8612652307198894",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.69843915477304"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2367686602834516",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.97585955625389"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2240.jsonld#62693",
         "@type": "tree:Node"
@@ -122,8 +115,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Boesdaalveldweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8612652307198894",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.69843915477304"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2367686602834516",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.97585955625389"
         }
       ],
       "total_children_count": 0,
@@ -139,19 +132,17 @@
       ],
       "triples_metadata": [
         "Boesdaalveldweg"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "laan",
       "triples": [
         {
           "http://example.com/terms#name": "Boesdaallaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.30022697670112",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.212543285970234"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9288982537794697",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.491424580389065"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2240.jsonld#62693",
         "@type": "tree:Node"
@@ -159,8 +150,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Boesdaallaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.30022697670112",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.212543285970234"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9288982537794697",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.491424580389065"
         }
       ],
       "total_children_count": 0,
@@ -176,8 +167,7 @@
       ],
       "triples_metadata": [
         "Boesdaallaan"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

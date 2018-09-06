@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,16 +23,28 @@
     {
       "token_string": "and",
       "triples": [],
-      "children": {
-        "ersplantsoen": [
-          "1915",
-          "93675"
-        ],
-        "straat": [
-          "1915",
-          "93676"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1915.jsonld#93675",
+              "@type": "tree:Node",
+              "token_string": "ersplantsoen"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1915.jsonld#93676",
+              "@type": "tree:Node",
+              "token_string": "straat"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment100.jsonld#798",
         "@type": "tree:Node"
@@ -40,13 +52,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Elandersplantsoen",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.208403954939664",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.40690685459015"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2422303389177367",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.49768694961074"
         },
         {
           "http://example.com/terms#name": "Elandstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.799271304923667",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.87529174543424"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.236117526624395",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.12597801190148"
         }
       ],
       "total_children_count": 2,
@@ -66,36 +78,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1915.jsonld#93675"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1915.jsonld#93676"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "ersplantsoen",
       "triples": [
         {
           "http://example.com/terms#name": "Elandersplantsoen",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.208403954939664",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.40690685459015"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2422303389177367",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.49768694961074"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1915.jsonld#93674",
         "@type": "tree:Node"
@@ -103,8 +96,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Elandersplantsoen",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.208403954939664",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.40690685459015"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2422303389177367",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.49768694961074"
         }
       ],
       "total_children_count": 0,
@@ -120,19 +113,17 @@
       ],
       "triples_metadata": [
         "Elandersplantsoen"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "straat",
       "triples": [
         {
           "http://example.com/terms#name": "Elandstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.799271304923667",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.87529174543424"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.236117526624395",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.12597801190148"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1915.jsonld#93674",
         "@type": "tree:Node"
@@ -140,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Elandstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.799271304923667",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.87529174543424"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.236117526624395",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.12597801190148"
         }
       ],
       "total_children_count": 0,
@@ -157,8 +148,7 @@
       ],
       "triples_metadata": [
         "Elandstraat"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

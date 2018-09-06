@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,16 +23,28 @@
     {
       "token_string": "fa",
       "triples": [],
-      "children": {
-        "zantjesstraat": [
-          "3567",
-          "100159"
-        ],
-        "briekpad": [
-          "3567",
-          "100160"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment3567.jsonld#100159",
+              "@type": "tree:Node",
+              "token_string": "zantjesstraat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment3567.jsonld#100160",
+              "@type": "tree:Node",
+              "token_string": "briekpad"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment2237.jsonld#22470",
         "@type": "tree:Node"
@@ -40,13 +52,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Blauwfazantjesstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1175341809057673",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.33681549247273"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.495220036969002",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.79444883687669"
         },
         {
           "http://example.com/terms#name": "Blauwfabriekpad",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.086041721993792",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.12582018937526"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2296175189311023",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.12571976027362"
         }
       ],
       "total_children_count": 2,
@@ -66,36 +78,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3567.jsonld#100159"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3567.jsonld#100160"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "zantjesstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Blauwfazantjesstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1175341809057673",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.33681549247273"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.495220036969002",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.79444883687669"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3567.jsonld#100158",
         "@type": "tree:Node"
@@ -103,8 +96,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Blauwfazantjesstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1175341809057673",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.33681549247273"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.495220036969002",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.79444883687669"
         }
       ],
       "total_children_count": 0,
@@ -120,19 +113,17 @@
       ],
       "triples_metadata": [
         "Blauwfazantjesstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "briekpad",
       "triples": [
         {
           "http://example.com/terms#name": "Blauwfabriekpad",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.086041721993792",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.12582018937526"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2296175189311023",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.12571976027362"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3567.jsonld#100158",
         "@type": "tree:Node"
@@ -140,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Blauwfabriekpad",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.086041721993792",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.12582018937526"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2296175189311023",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.12571976027362"
         }
       ],
       "total_children_count": 0,
@@ -157,8 +148,7 @@
       ],
       "triples_metadata": [
         "Blauwfabriekpad"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

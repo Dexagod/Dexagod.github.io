@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,16 +23,28 @@
     {
       "token_string": "P",
       "triples": [],
-      "children": {
-        "ontstraat": [
-          "2998",
-          "45791"
-        ],
-        "rinsstraat": [
-          "2998",
-          "45792"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2998.jsonld#45791",
+              "@type": "tree:Node",
+              "token_string": "ontstraat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2998.jsonld#45792",
+              "@type": "tree:Node",
+              "token_string": "rinsstraat"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment180.jsonld#5073",
         "@type": "tree:Node"
@@ -40,13 +52,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nieuwe Pontstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.468985907977027",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.4620743830912"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.356276862090457",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.46708129748047"
         },
         {
           "http://example.com/terms#name": "Nieuwe Prinsstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3596934831940612",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.77950586739386"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1774950129603496",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.821525648906004"
         }
       ],
       "total_children_count": 2,
@@ -66,36 +78,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2998.jsonld#45791"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2998.jsonld#45792"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "ontstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Nieuwe Pontstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.468985907977027",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.4620743830912"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.356276862090457",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.46708129748047"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2998.jsonld#45790",
         "@type": "tree:Node"
@@ -103,8 +96,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nieuwe Pontstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.468985907977027",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.4620743830912"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.356276862090457",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.46708129748047"
         }
       ],
       "total_children_count": 0,
@@ -120,19 +113,17 @@
       ],
       "triples_metadata": [
         "Nieuwe Pontstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "rinsstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Nieuwe Prinsstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3596934831940612",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.77950586739386"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1774950129603496",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.821525648906004"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2998.jsonld#45790",
         "@type": "tree:Node"
@@ -140,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nieuwe Prinsstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3596934831940612",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.77950586739386"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1774950129603496",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.821525648906004"
         }
       ],
       "total_children_count": 0,
@@ -157,8 +148,7 @@
       ],
       "triples_metadata": [
         "Nieuwe Prinsstraat"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

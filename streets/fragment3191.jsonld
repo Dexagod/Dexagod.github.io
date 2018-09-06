@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,16 +23,28 @@
     {
       "token_string": "hite",
       "triples": [],
-      "children": {
-        "-Châteaustraat": [
-          "3191",
-          "94713"
-        ],
-        " Starplein": [
-          "3191",
-          "94714"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment3191.jsonld#94713",
+              "@type": "tree:Node",
+              "token_string": "-Châteaustraat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment3191.jsonld#94714",
+              "@type": "tree:Node",
+              "token_string": " Starplein"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment8.jsonld#29",
         "@type": "tree:Node"
@@ -40,13 +52,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "White-Châteaustraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1952566159059597",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.01119893859126"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7458972834274396",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.57174467639217"
         },
         {
           "http://example.com/terms#name": "White Starplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6261424181744037",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.81684352194318"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1348980278727625",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.92023783537376"
         }
       ],
       "total_children_count": 2,
@@ -66,36 +78,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3191.jsonld#94713"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3191.jsonld#94714"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "-Châteaustraat",
       "triples": [
         {
           "http://example.com/terms#name": "White-Châteaustraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1952566159059597",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.01119893859126"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7458972834274396",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.57174467639217"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3191.jsonld#94712",
         "@type": "tree:Node"
@@ -103,8 +96,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "White-Châteaustraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1952566159059597",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.01119893859126"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7458972834274396",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.57174467639217"
         }
       ],
       "total_children_count": 0,
@@ -120,19 +113,17 @@
       ],
       "triples_metadata": [
         "White-Châteaustraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": " Starplein",
       "triples": [
         {
           "http://example.com/terms#name": "White Starplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6261424181744037",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.81684352194318"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1348980278727625",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.92023783537376"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3191.jsonld#94712",
         "@type": "tree:Node"
@@ -140,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "White Starplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6261424181744037",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.81684352194318"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1348980278727625",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.92023783537376"
         }
       ],
       "total_children_count": 0,
@@ -157,8 +148,7 @@
       ],
       "triples_metadata": [
         "White Starplein"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

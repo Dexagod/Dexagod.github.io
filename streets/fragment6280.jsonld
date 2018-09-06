@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,16 +23,28 @@
     {
       "token_string": "Ha",
       "triples": [],
-      "children": {
-        "yard": [
-          "6280",
-          "158869"
-        ],
-        "botte": [
-          "6280",
-          "158870"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment6280.jsonld#158869",
+              "@type": "tree:Node",
+              "token_string": "yard"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment6280.jsonld#158870",
+              "@type": "tree:Node",
+              "token_string": "botte"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment4884.jsonld#134465",
         "@type": "tree:Node"
@@ -40,13 +52,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Voie Hayard",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.607936912025316",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.777256726357706"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8218362489174065",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.551005356534674"
         },
         {
           "http://example.com/terms#name": "Voie Habotte",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2275444114320178",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.58018753417128"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6884850172460646",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.24232172624007"
         }
       ],
       "total_children_count": 2,
@@ -66,36 +78,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6280.jsonld#158869"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6280.jsonld#158870"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "yard",
       "triples": [
         {
           "http://example.com/terms#name": "Voie Hayard",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.607936912025316",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.777256726357706"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8218362489174065",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.551005356534674"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6280.jsonld#158868",
         "@type": "tree:Node"
@@ -103,8 +96,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Voie Hayard",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.607936912025316",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.777256726357706"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8218362489174065",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.551005356534674"
         }
       ],
       "total_children_count": 0,
@@ -120,19 +113,17 @@
       ],
       "triples_metadata": [
         "Voie Hayard"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "botte",
       "triples": [
         {
           "http://example.com/terms#name": "Voie Habotte",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2275444114320178",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.58018753417128"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6884850172460646",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.24232172624007"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6280.jsonld#158868",
         "@type": "tree:Node"
@@ -140,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Voie Habotte",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2275444114320178",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.58018753417128"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6884850172460646",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.24232172624007"
         }
       ],
       "total_children_count": 0,
@@ -157,8 +148,7 @@
       ],
       "triples_metadata": [
         "Voie Habotte"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

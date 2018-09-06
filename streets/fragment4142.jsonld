@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,16 +23,28 @@
     {
       "token_string": "y",
       "triples": [],
-      "children": {
-        "vestraat": [
-          "4142",
-          "180461"
-        ],
-        "llgasse": [
-          "4142",
-          "180462"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment4142.jsonld#180461",
+              "@type": "tree:Node",
+              "token_string": "vestraat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment4142.jsonld#180462",
+              "@type": "tree:Node",
+              "token_string": "llgasse"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment19.jsonld#97",
         "@type": "tree:Node"
@@ -40,13 +52,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Vyvestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2875017159647886",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.20360369353842"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.840191494510349",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.094788970821206"
         },
         {
           "http://example.com/terms#name": "Vyllgasse",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.461659285274464",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.985037369308344"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2328181255827704",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.906859515966886"
         }
       ],
       "total_children_count": 2,
@@ -66,36 +78,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4142.jsonld#180461"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4142.jsonld#180462"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "vestraat",
       "triples": [
         {
           "http://example.com/terms#name": "Vyvestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2875017159647886",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.20360369353842"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.840191494510349",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.094788970821206"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4142.jsonld#180460",
         "@type": "tree:Node"
@@ -103,8 +96,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Vyvestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2875017159647886",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.20360369353842"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.840191494510349",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.094788970821206"
         }
       ],
       "total_children_count": 0,
@@ -120,19 +113,17 @@
       ],
       "triples_metadata": [
         "Vyvestraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "llgasse",
       "triples": [
         {
           "http://example.com/terms#name": "Vyllgasse",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.461659285274464",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.985037369308344"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2328181255827704",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.906859515966886"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4142.jsonld#180460",
         "@type": "tree:Node"
@@ -140,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Vyllgasse",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.461659285274464",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.985037369308344"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2328181255827704",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.906859515966886"
         }
       ],
       "total_children_count": 0,
@@ -157,8 +148,7 @@
       ],
       "triples_metadata": [
         "Vyllgasse"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

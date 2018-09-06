@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,16 +23,28 @@
     {
       "token_string": "F",
       "triples": [],
-      "children": {
-        " De Naeyerstraat": [
-          "898",
-          "58993"
-        ],
-        "l Robberechtstraat": [
-          "898",
-          "58994"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment898.jsonld#58993",
+              "@type": "tree:Node",
+              "token_string": " De Naeyerstraat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment898.jsonld#58994",
+              "@type": "tree:Node",
+              "token_string": "l Robberechtstraat"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment2.jsonld#129",
         "@type": "tree:Node"
@@ -40,13 +52,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "PF De Naeyerstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.153501558544526",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.77148019616856"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5920561867894314",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.30085358074576"
         },
         {
           "http://example.com/terms#name": "PFl Robberechtstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.45444335682224",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.928128879102445"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.026688606881675",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.22166603777355"
         }
       ],
       "total_children_count": 2,
@@ -66,36 +78,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment898.jsonld#58993"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment898.jsonld#58994"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": " De Naeyerstraat",
       "triples": [
         {
           "http://example.com/terms#name": "PF De Naeyerstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.153501558544526",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.77148019616856"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5920561867894314",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.30085358074576"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment898.jsonld#58992",
         "@type": "tree:Node"
@@ -103,8 +96,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "PF De Naeyerstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.153501558544526",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.77148019616856"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5920561867894314",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.30085358074576"
         }
       ],
       "total_children_count": 0,
@@ -120,19 +113,17 @@
       ],
       "triples_metadata": [
         "PF De Naeyerstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "l Robberechtstraat",
       "triples": [
         {
           "http://example.com/terms#name": "PFl Robberechtstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.45444335682224",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.928128879102445"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.026688606881675",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.22166603777355"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment898.jsonld#58992",
         "@type": "tree:Node"
@@ -140,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "PFl Robberechtstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.45444335682224",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.928128879102445"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.026688606881675",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.22166603777355"
         }
       ],
       "total_children_count": 0,
@@ -157,8 +148,7 @@
       ],
       "triples_metadata": [
         "PFl Robberechtstraat"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

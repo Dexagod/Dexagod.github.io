@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,16 +23,28 @@
     {
       "token_string": "A",
       "triples": [],
-      "children": {
-        "driaan Martenslaan": [
-          "6498",
-          "63552"
-        ],
-        " Van Baelenstraat": [
-          "6498",
-          "63553"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment6498.jsonld#63552",
+              "@type": "tree:Node",
+              "token_string": "driaan Martenslaan"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment6498.jsonld#63553",
+              "@type": "tree:Node",
+              "token_string": " Van Baelenstraat"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment190.jsonld#690",
         "@type": "tree:Node"
@@ -40,13 +52,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "DrAdriaan Martenslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.956127929285312",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.27687989264548"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1934593245737655",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.93232884143555"
         },
         {
           "http://example.com/terms#name": "DrA Van Baelenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9369969955639386",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.498598947894045"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2230692066298277",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.699968315754546"
         }
       ],
       "total_children_count": 2,
@@ -66,36 +78,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6498.jsonld#63552"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6498.jsonld#63553"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "driaan Martenslaan",
       "triples": [
         {
           "http://example.com/terms#name": "DrAdriaan Martenslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.956127929285312",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.27687989264548"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1934593245737655",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.93232884143555"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6498.jsonld#63551",
         "@type": "tree:Node"
@@ -103,8 +96,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "DrAdriaan Martenslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.956127929285312",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.27687989264548"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1934593245737655",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.93232884143555"
         }
       ],
       "total_children_count": 0,
@@ -120,19 +113,17 @@
       ],
       "triples_metadata": [
         "DrAdriaan Martenslaan"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": " Van Baelenstraat",
       "triples": [
         {
           "http://example.com/terms#name": "DrA Van Baelenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9369969955639386",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.498598947894045"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2230692066298277",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.699968315754546"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6498.jsonld#63551",
         "@type": "tree:Node"
@@ -140,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "DrA Van Baelenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9369969955639386",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.498598947894045"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2230692066298277",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.699968315754546"
         }
       ],
       "total_children_count": 0,
@@ -157,8 +148,7 @@
       ],
       "triples_metadata": [
         "DrA Van Baelenstraat"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

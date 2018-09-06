@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,16 +23,28 @@
     {
       "token_string": "t",
       "triples": [],
-      "children": {
-        "enbergstraat": [
-          "1140",
-          "181036"
-        ],
-        "leger": [
-          "1140",
-          "181037"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1140.jsonld#181036",
+              "@type": "tree:Node",
+              "token_string": "enbergstraat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1140.jsonld#181037",
+              "@type": "tree:Node",
+              "token_string": "leger"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment200.jsonld#330",
         "@type": "tree:Node"
@@ -40,13 +52,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Totenbergstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.512417441401321",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.87126939903272"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0475683909018216",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.627431737760034"
         },
         {
           "http://example.com/terms#name": "Totleger",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.96848408599673",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.727555265325456"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9655825294478237",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.343193371630434"
         }
       ],
       "total_children_count": 2,
@@ -66,36 +78,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1140.jsonld#181036"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1140.jsonld#181037"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "enbergstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Totenbergstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.512417441401321",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.87126939903272"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0475683909018216",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.627431737760034"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1140.jsonld#181035",
         "@type": "tree:Node"
@@ -103,8 +96,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Totenbergstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.512417441401321",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.87126939903272"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0475683909018216",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.627431737760034"
         }
       ],
       "total_children_count": 0,
@@ -120,19 +113,17 @@
       ],
       "triples_metadata": [
         "Totenbergstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "leger",
       "triples": [
         {
           "http://example.com/terms#name": "Totleger",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.96848408599673",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.727555265325456"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9655825294478237",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.343193371630434"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1140.jsonld#181035",
         "@type": "tree:Node"
@@ -140,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Totleger",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.96848408599673",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.727555265325456"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9655825294478237",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.343193371630434"
         }
       ],
       "total_children_count": 0,
@@ -157,8 +148,7 @@
       ],
       "triples_metadata": [
         "Totleger"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

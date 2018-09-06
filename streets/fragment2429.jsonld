@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,20 +23,38 @@
     {
       "token_string": "t",
       "triples": [],
-      "children": {
-        "erstraat": [
-          "2429",
-          "44771"
-        ],
-        "hemveld": [
-          "2429",
-          "65354"
-        ],
-        "grachtstraat": [
-          "2429",
-          "68467"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2429.jsonld#44771",
+              "@type": "tree:Node",
+              "token_string": "erstraat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2429.jsonld#65354",
+              "@type": "tree:Node",
+              "token_string": "hemveld"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2429.jsonld#68467",
+              "@type": "tree:Node",
+              "token_string": "grachtstraat"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment4137.jsonld#10499",
         "@type": "tree:Node"
@@ -44,23 +62,23 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Vloethemveldstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.113884429838078",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.655852667035084"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1337349693870578",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.97830419205021"
         },
         {
           "http://example.com/terms#name": "Vloeterstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8542029660400723",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.10913919197579"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.44281254947106",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.792777602397145"
         },
         {
           "http://example.com/terms#name": "Vloethemveld",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.051422293751449",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.11546802083069"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5657837741121643",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.451950116130924"
         },
         {
           "http://example.com/terms#name": "Vloetgrachtstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.386790898132133",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.96980140992912"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.205091724042829",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.968345842525416"
         }
       ],
       "total_children_count": 4,
@@ -92,44 +110,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2429.jsonld#44771"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2429.jsonld#65354"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2429.jsonld#68467"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "erstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Vloeterstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8542029660400723",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.10913919197579"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.44281254947106",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.792777602397145"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2429.jsonld#44769",
         "@type": "tree:Node"
@@ -137,8 +128,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Vloeterstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8542029660400723",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.10913919197579"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.44281254947106",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.792777602397145"
         }
       ],
       "total_children_count": 0,
@@ -154,24 +145,29 @@
       ],
       "triples_metadata": [
         "Vloeterstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "hemveld",
       "triples": [
         {
           "http://example.com/terms#name": "Vloethemveld",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.051422293751449",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.11546802083069"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5657837741121643",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.451950116130924"
         }
       ],
-      "children": {
-        "straat": [
-          "2429",
-          "65355"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2429.jsonld#65355",
+              "@type": "tree:Node",
+              "token_string": "straat"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment2429.jsonld#44769",
         "@type": "tree:Node"
@@ -179,13 +175,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Vloethemveldstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.113884429838078",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.655852667035084"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1337349693870578",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.97830419205021"
         },
         {
           "http://example.com/terms#name": "Vloethemveld",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.051422293751449",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.11546802083069"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5657837741121643",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.451950116130924"
         }
       ],
       "total_children_count": 1,
@@ -207,16 +203,6 @@
       ],
       "triples_metadata": [
         "Vloethemveld"
-      ],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2429.jsonld#65355"
-            }
-          ]
-        }
       ]
     },
     {
@@ -224,11 +210,10 @@
       "triples": [
         {
           "http://example.com/terms#name": "Vloethemveldstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.113884429838078",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.655852667035084"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1337349693870578",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.97830419205021"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2429.jsonld#65354",
         "@type": "tree:Node"
@@ -236,8 +221,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Vloethemveldstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.113884429838078",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.655852667035084"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1337349693870578",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.97830419205021"
         }
       ],
       "total_children_count": 0,
@@ -253,19 +238,17 @@
       ],
       "triples_metadata": [
         "Vloethemveldstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "grachtstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Vloetgrachtstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.386790898132133",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.96980140992912"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.205091724042829",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.968345842525416"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2429.jsonld#44769",
         "@type": "tree:Node"
@@ -273,8 +256,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Vloetgrachtstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.386790898132133",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.96980140992912"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.205091724042829",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.968345842525416"
         }
       ],
       "total_children_count": 0,
@@ -290,8 +273,7 @@
       ],
       "triples_metadata": [
         "Vloetgrachtstraat"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

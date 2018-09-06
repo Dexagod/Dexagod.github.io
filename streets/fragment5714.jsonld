@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,16 +23,28 @@
     {
       "token_string": "t",
       "triples": [],
-      "children": {
-        "egemstraat": [
-          "5714",
-          "155685"
-        ],
-        "tert": [
-          "5714",
-          "155686"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment5714.jsonld#155685",
+              "@type": "tree:Node",
+              "token_string": "egemstraat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment5714.jsonld#155686",
+              "@type": "tree:Node",
+              "token_string": "tert"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment152.jsonld#2599",
         "@type": "tree:Node"
@@ -40,13 +52,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Tategemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.867380285068927",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.24984881660035"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2832732165139817",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.424302050783176"
         },
         {
           "http://example.com/terms#name": "Tattert",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.695898588028295",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.41846939825691"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1022261574674577",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.639484047475136"
         }
       ],
       "total_children_count": 2,
@@ -66,36 +78,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5714.jsonld#155685"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5714.jsonld#155686"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "egemstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Tategemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.867380285068927",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.24984881660035"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2832732165139817",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.424302050783176"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5714.jsonld#155684",
         "@type": "tree:Node"
@@ -103,8 +96,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Tategemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.867380285068927",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.24984881660035"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2832732165139817",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.424302050783176"
         }
       ],
       "total_children_count": 0,
@@ -120,19 +113,17 @@
       ],
       "triples_metadata": [
         "Tategemstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "tert",
       "triples": [
         {
           "http://example.com/terms#name": "Tattert",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.695898588028295",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.41846939825691"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1022261574674577",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.639484047475136"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5714.jsonld#155684",
         "@type": "tree:Node"
@@ -140,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Tattert",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.695898588028295",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.41846939825691"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1022261574674577",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.639484047475136"
         }
       ],
       "total_children_count": 0,
@@ -157,8 +148,7 @@
       ],
       "triples_metadata": [
         "Tattert"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

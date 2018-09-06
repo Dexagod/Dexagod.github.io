@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -25,11 +25,10 @@
       "triples": [
         {
           "http://example.com/terms#name": "Montjoyestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.268156191066845",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.20638676282392"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.194496055308442",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.70313408775675"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5648.jsonld#140886",
         "@type": "tree:Node"
@@ -37,8 +36,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Montjoyestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.268156191066845",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.20638676282392"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.194496055308442",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.70313408775675"
         }
       ],
       "total_children_count": 0,
@@ -54,19 +53,17 @@
       ],
       "triples_metadata": [
         "Montjoyestraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "ielaan",
       "triples": [
         {
           "http://example.com/terms#name": "Montjoielaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.054427835475368",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.934811855354305"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0037863826991726",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.530552324544026"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5648.jsonld#140886",
         "@type": "tree:Node"
@@ -74,8 +71,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Montjoielaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.054427835475368",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.934811855354305"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0037863826991726",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.530552324544026"
         }
       ],
       "total_children_count": 0,
@@ -91,22 +88,33 @@
       ],
       "triples_metadata": [
         "Montjoielaan"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "j",
       "triples": [],
-      "children": {
-        "o": [
-          "5648",
-          "140886"
-        ],
-        "ardin": [
-          "5648",
-          "140887"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment5648.jsonld#140886",
+              "@type": "tree:Node",
+              "token_string": "o"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment5648.jsonld#140887",
+              "@type": "tree:Node",
+              "token_string": "ardin"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment3283.jsonld#6253",
         "@type": "tree:Node"
@@ -114,18 +122,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Montjoyestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.268156191066845",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.20638676282392"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.194496055308442",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.70313408775675"
         },
         {
           "http://example.com/terms#name": "Montjoielaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.054427835475368",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.934811855354305"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0037863826991726",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.530552324544026"
         },
         {
           "http://example.com/terms#name": "Montjardin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.744088111400502",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.4422474045612"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6440025626339265",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.59986087785516"
         }
       ],
       "total_children_count": 4,
@@ -151,13 +159,19 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
+      "triples_metadata": []
+    },
+    {
+      "token_string": "o",
+      "triples": [],
+      "children": [
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
             {
-              "@id": "/streets/fragment5648.jsonld#140886"
+              "@id": "/streets/fragment5648.jsonld#93423",
+              "@type": "tree:Node",
+              "token_string": "yestraat"
             }
           ]
         },
@@ -165,25 +179,13 @@
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
             {
-              "@id": "/streets/fragment5648.jsonld#140887"
+              "@id": "/streets/fragment5648.jsonld#93424",
+              "@type": "tree:Node",
+              "token_string": "ielaan"
             }
           ]
         }
-      ]
-    },
-    {
-      "token_string": "o",
-      "triples": [],
-      "children": {
-        "yestraat": [
-          "5648",
-          "93423"
-        ],
-        "ielaan": [
-          "5648",
-          "93424"
-        ]
-      },
+      ],
       "parent_node": {
         "@id": "/streets/fragment5648.jsonld#140885",
         "@type": "tree:Node"
@@ -191,13 +193,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Montjoyestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.268156191066845",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.20638676282392"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.194496055308442",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.70313408775675"
         },
         {
           "http://example.com/terms#name": "Montjoielaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.054427835475368",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.934811855354305"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0037863826991726",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.530552324544026"
         }
       ],
       "total_children_count": 2,
@@ -217,36 +219,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5648.jsonld#93423"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5648.jsonld#93424"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "ardin",
       "triples": [
         {
           "http://example.com/terms#name": "Montjardin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.744088111400502",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.4422474045612"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6440025626339265",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.59986087785516"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5648.jsonld#140885",
         "@type": "tree:Node"
@@ -254,8 +237,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Montjardin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.744088111400502",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.4422474045612"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6440025626339265",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.59986087785516"
         }
       ],
       "total_children_count": 0,
@@ -271,8 +254,7 @@
       ],
       "triples_metadata": [
         "Montjardin"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

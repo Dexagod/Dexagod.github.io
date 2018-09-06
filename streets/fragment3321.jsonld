@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,16 +23,28 @@
     {
       "token_string": "i",
       "triples": [],
-      "children": {
-        "erstraat": [
-          "3321",
-          "75693"
-        ],
-        "kstraat": [
-          "3321",
-          "75694"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment3321.jsonld#75693",
+              "@type": "tree:Node",
+              "token_string": "erstraat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment3321.jsonld#75694",
+              "@type": "tree:Node",
+              "token_string": "kstraat"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment161.jsonld#3488",
         "@type": "tree:Node"
@@ -40,13 +52,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Valierstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1690700229939437",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.1616166176145"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.781181934359455",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.17633156159848"
         },
         {
           "http://example.com/terms#name": "Valikstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0283304086020926",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.1983907744205"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.031650401688169",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.841118030883976"
         }
       ],
       "total_children_count": 2,
@@ -66,36 +78,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3321.jsonld#75693"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3321.jsonld#75694"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "erstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Valierstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1690700229939437",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.1616166176145"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.781181934359455",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.17633156159848"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3321.jsonld#75692",
         "@type": "tree:Node"
@@ -103,8 +96,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Valierstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1690700229939437",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.1616166176145"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.781181934359455",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.17633156159848"
         }
       ],
       "total_children_count": 0,
@@ -120,19 +113,17 @@
       ],
       "triples_metadata": [
         "Valierstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "kstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Valikstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0283304086020926",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.1983907744205"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.031650401688169",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.841118030883976"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3321.jsonld#75692",
         "@type": "tree:Node"
@@ -140,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Valikstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0283304086020926",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.1983907744205"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.031650401688169",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.841118030883976"
         }
       ],
       "total_children_count": 0,
@@ -157,8 +148,7 @@
       ],
       "triples_metadata": [
         "Valikstraat"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

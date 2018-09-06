@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,16 +23,28 @@
     {
       "token_string": "b",
       "triples": [],
-      "children": {
-        "a": [
-          "6110",
-          "145583"
-        ],
-        "ette": [
-          "6110",
-          "145584"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment6110.jsonld#145583",
+              "@type": "tree:Node",
+              "token_string": "a"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment6110.jsonld#145584",
+              "@type": "tree:Node",
+              "token_string": "ette"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment5105.jsonld#110018",
         "@type": "tree:Node"
@@ -40,13 +52,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Joba",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8941303701308096",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.72251371495194"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.119434463792971",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.817572540184784"
         },
         {
           "http://example.com/terms#name": "Rue Jobette",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2672855492883186",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.27071935661036"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.330714048947704",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.91198501051139"
         }
       ],
       "total_children_count": 2,
@@ -66,36 +78,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6110.jsonld#145583"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6110.jsonld#145584"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "a",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Joba",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8941303701308096",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.72251371495194"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.119434463792971",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.817572540184784"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6110.jsonld#145582",
         "@type": "tree:Node"
@@ -103,8 +96,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Joba",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8941303701308096",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.72251371495194"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.119434463792971",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.817572540184784"
         }
       ],
       "total_children_count": 0,
@@ -120,19 +113,17 @@
       ],
       "triples_metadata": [
         "Rue Joba"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "ette",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Jobette",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2672855492883186",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.27071935661036"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.330714048947704",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.91198501051139"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6110.jsonld#145582",
         "@type": "tree:Node"
@@ -140,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Jobette",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2672855492883186",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.27071935661036"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.330714048947704",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.91198501051139"
         }
       ],
       "total_children_count": 0,
@@ -157,8 +148,7 @@
       ],
       "triples_metadata": [
         "Rue Jobette"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

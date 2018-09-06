@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,16 +23,28 @@
     {
       "token_string": "v",
       "triples": [],
-      "children": {
-        "etstraat": [
-          "2364",
-          "168236"
-        ],
-        "inne": [
-          "2364",
-          "168237"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2364.jsonld#168236",
+              "@type": "tree:Node",
+              "token_string": "etstraat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2364.jsonld#168237",
+              "@type": "tree:Node",
+              "token_string": "inne"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment197.jsonld#1125",
         "@type": "tree:Node"
@@ -40,13 +52,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Navetstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3991415611116413",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.23686655667647"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.188232011094332",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.965492291924"
         },
         {
           "http://example.com/terms#name": "Navinne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8756476423609243",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.351132486886804"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7918144321483367",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.09923834174166"
         }
       ],
       "total_children_count": 2,
@@ -66,36 +78,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2364.jsonld#168236"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2364.jsonld#168237"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "etstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Navetstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3991415611116413",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.23686655667647"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.188232011094332",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.965492291924"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2364.jsonld#168235",
         "@type": "tree:Node"
@@ -103,8 +96,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Navetstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3991415611116413",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.23686655667647"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.188232011094332",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.965492291924"
         }
       ],
       "total_children_count": 0,
@@ -120,19 +113,17 @@
       ],
       "triples_metadata": [
         "Navetstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "inne",
       "triples": [
         {
           "http://example.com/terms#name": "Navinne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8756476423609243",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.351132486886804"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7918144321483367",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.09923834174166"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2364.jsonld#168235",
         "@type": "tree:Node"
@@ -140,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Navinne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8756476423609243",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.351132486886804"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7918144321483367",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.09923834174166"
         }
       ],
       "total_children_count": 0,
@@ -157,8 +148,7 @@
       ],
       "triples_metadata": [
         "Navinne"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

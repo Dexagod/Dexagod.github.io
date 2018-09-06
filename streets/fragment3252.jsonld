@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,16 +23,28 @@
     {
       "token_string": "m",
       "triples": [],
-      "children": {
-        "aartlaan": [
-          "3252",
-          "55450"
-        ],
-        "olenstraat": [
-          "3252",
-          "55451"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment3252.jsonld#55450",
+              "@type": "tree:Node",
+              "token_string": "aartlaan"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment3252.jsonld#55451",
+              "@type": "tree:Node",
+              "token_string": "olenstraat"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment2824.jsonld#33922",
         "@type": "tree:Node"
@@ -40,13 +52,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Viermaartlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3437671127134725",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.986384377412186"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0286683930629557",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.39803567836413"
         },
         {
           "http://example.com/terms#name": "Viermolenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.227205328300465",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.97471476668059"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.858733544682848",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.83383525493938"
         }
       ],
       "total_children_count": 2,
@@ -66,36 +78,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3252.jsonld#55450"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3252.jsonld#55451"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "aartlaan",
       "triples": [
         {
           "http://example.com/terms#name": "Viermaartlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3437671127134725",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.986384377412186"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0286683930629557",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.39803567836413"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3252.jsonld#55449",
         "@type": "tree:Node"
@@ -103,8 +96,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Viermaartlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3437671127134725",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.986384377412186"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0286683930629557",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.39803567836413"
         }
       ],
       "total_children_count": 0,
@@ -120,19 +113,17 @@
       ],
       "triples_metadata": [
         "Viermaartlaan"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "olenstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Viermolenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.227205328300465",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.97471476668059"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.858733544682848",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.83383525493938"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3252.jsonld#55449",
         "@type": "tree:Node"
@@ -140,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Viermolenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.227205328300465",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.97471476668059"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.858733544682848",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.83383525493938"
         }
       ],
       "total_children_count": 0,
@@ -157,8 +148,7 @@
       ],
       "triples_metadata": [
         "Viermolenstraat"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

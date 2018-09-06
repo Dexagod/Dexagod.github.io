@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,16 +23,28 @@
     {
       "token_string": "st",
       "triples": [],
-      "children": {
-        "eenweg": [
-          "1419",
-          "78915"
-        ],
-        "raat": [
-          "1419",
-          "78916"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1419.jsonld#78915",
+              "@type": "tree:Node",
+              "token_string": "eenweg"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1419.jsonld#78916",
+              "@type": "tree:Node",
+              "token_string": "raat"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment392.jsonld#10551",
         "@type": "tree:Node"
@@ -40,13 +52,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Kleine steenweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.517563312174158",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.39429617756703"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9850226797735457",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.84165167118355"
         },
         {
           "http://example.com/terms#name": "Kleine straat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.611005041706366",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.80272593092679"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0935954179354197",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.31984666543165"
         }
       ],
       "total_children_count": 2,
@@ -66,36 +78,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1419.jsonld#78915"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1419.jsonld#78916"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "eenweg",
       "triples": [
         {
           "http://example.com/terms#name": "Kleine steenweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.517563312174158",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.39429617756703"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9850226797735457",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.84165167118355"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1419.jsonld#78914",
         "@type": "tree:Node"
@@ -103,8 +96,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Kleine steenweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.517563312174158",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.39429617756703"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9850226797735457",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.84165167118355"
         }
       ],
       "total_children_count": 0,
@@ -120,19 +113,17 @@
       ],
       "triples_metadata": [
         "Kleine steenweg"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "raat",
       "triples": [
         {
           "http://example.com/terms#name": "Kleine straat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.611005041706366",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.80272593092679"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0935954179354197",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.31984666543165"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1419.jsonld#78914",
         "@type": "tree:Node"
@@ -140,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Kleine straat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.611005041706366",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.80272593092679"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0935954179354197",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.31984666543165"
         }
       ],
       "total_children_count": 0,
@@ -157,8 +148,7 @@
       ],
       "triples_metadata": [
         "Kleine straat"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,16 +23,28 @@
     {
       "token_string": "D",
       "triples": [],
-      "children": {
-        "'Hooghelaan": [
-          "6502",
-          "93205"
-        ],
-        "ecrolylaan": [
-          "6502",
-          "93206"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment6502.jsonld#93205",
+              "@type": "tree:Node",
+              "token_string": "'Hooghelaan"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment6502.jsonld#93206",
+              "@type": "tree:Node",
+              "token_string": "ecrolylaan"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment190.jsonld#690",
         "@type": "tree:Node"
@@ -40,13 +52,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "DrD'Hooghelaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.146780059597263",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.497919912097935"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.045573514631665",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.88538898198996"
         },
         {
           "http://example.com/terms#name": "DrDecrolylaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.537368425028575",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.71089231154324"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.72381444797191",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.60891442889198"
         }
       ],
       "total_children_count": 2,
@@ -66,36 +78,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6502.jsonld#93205"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6502.jsonld#93206"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "'Hooghelaan",
       "triples": [
         {
           "http://example.com/terms#name": "DrD'Hooghelaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.146780059597263",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.497919912097935"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.045573514631665",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.88538898198996"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6502.jsonld#93204",
         "@type": "tree:Node"
@@ -103,8 +96,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "DrD'Hooghelaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.146780059597263",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.497919912097935"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.045573514631665",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.88538898198996"
         }
       ],
       "total_children_count": 0,
@@ -120,19 +113,17 @@
       ],
       "triples_metadata": [
         "DrD'Hooghelaan"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "ecrolylaan",
       "triples": [
         {
           "http://example.com/terms#name": "DrDecrolylaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.537368425028575",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.71089231154324"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.72381444797191",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.60891442889198"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6502.jsonld#93204",
         "@type": "tree:Node"
@@ -140,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "DrDecrolylaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.537368425028575",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.71089231154324"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.72381444797191",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.60891442889198"
         }
       ],
       "total_children_count": 0,
@@ -157,8 +148,7 @@
       ],
       "triples_metadata": [
         "DrDecrolylaan"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

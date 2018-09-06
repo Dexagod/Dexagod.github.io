@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -25,11 +25,10 @@
       "triples": [
         {
           "http://example.com/terms#name": "Vècquéepassage",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.695281419094974",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.95177747239652"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.450324679814886",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.338412051133815"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4146.jsonld#94299",
         "@type": "tree:Node"
@@ -37,8 +36,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Vècquéepassage",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.695281419094974",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.95177747239652"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.450324679814886",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.338412051133815"
         }
       ],
       "total_children_count": 0,
@@ -54,19 +53,17 @@
       ],
       "triples_metadata": [
         "Vècquéepassage"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "lein",
       "triples": [
         {
           "http://example.com/terms#name": "Vècquéeplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.160741308624757",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.94610054798876"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4807314207795357",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.086782334216274"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4146.jsonld#94299",
         "@type": "tree:Node"
@@ -74,8 +71,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Vècquéeplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.160741308624757",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.94610054798876"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4807314207795357",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.086782334216274"
         }
       ],
       "total_children_count": 0,
@@ -91,22 +88,33 @@
       ],
       "triples_metadata": [
         "Vècquéeplein"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "ècquée",
       "triples": [],
-      "children": {
-        "p": [
-          "4146",
-          "94299"
-        ],
-        "straat": [
-          "4146",
-          "94300"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment4146.jsonld#94299",
+              "@type": "tree:Node",
+              "token_string": "p"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment4146.jsonld#94300",
+              "@type": "tree:Node",
+              "token_string": "straat"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment19.jsonld#97",
         "@type": "tree:Node"
@@ -114,18 +122,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Vècquéepassage",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.695281419094974",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.95177747239652"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.450324679814886",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.338412051133815"
         },
         {
           "http://example.com/terms#name": "Vècquéeplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.160741308624757",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.94610054798876"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4807314207795357",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.086782334216274"
         },
         {
           "http://example.com/terms#name": "Vècquéestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5293450671505133",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.206071696916396"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0093572623217217",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.227932475499394"
         }
       ],
       "total_children_count": 4,
@@ -151,13 +159,19 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
+      "triples_metadata": []
+    },
+    {
+      "token_string": "p",
+      "triples": [],
+      "children": [
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
             {
-              "@id": "/streets/fragment4146.jsonld#94299"
+              "@id": "/streets/fragment4146.jsonld#94296",
+              "@type": "tree:Node",
+              "token_string": "assage"
             }
           ]
         },
@@ -165,25 +179,13 @@
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
             {
-              "@id": "/streets/fragment4146.jsonld#94300"
+              "@id": "/streets/fragment4146.jsonld#94297",
+              "@type": "tree:Node",
+              "token_string": "lein"
             }
           ]
         }
-      ]
-    },
-    {
-      "token_string": "p",
-      "triples": [],
-      "children": {
-        "assage": [
-          "4146",
-          "94296"
-        ],
-        "lein": [
-          "4146",
-          "94297"
-        ]
-      },
+      ],
       "parent_node": {
         "@id": "/streets/fragment4146.jsonld#94298",
         "@type": "tree:Node"
@@ -191,13 +193,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Vècquéepassage",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.695281419094974",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.95177747239652"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.450324679814886",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.338412051133815"
         },
         {
           "http://example.com/terms#name": "Vècquéeplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.160741308624757",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.94610054798876"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4807314207795357",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.086782334216274"
         }
       ],
       "total_children_count": 2,
@@ -217,36 +219,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4146.jsonld#94296"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4146.jsonld#94297"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "straat",
       "triples": [
         {
           "http://example.com/terms#name": "Vècquéestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5293450671505133",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.206071696916396"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0093572623217217",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.227932475499394"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4146.jsonld#94298",
         "@type": "tree:Node"
@@ -254,8 +237,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Vècquéestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5293450671505133",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.206071696916396"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0093572623217217",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.227932475499394"
         }
       ],
       "total_children_count": 0,
@@ -271,8 +254,7 @@
       ],
       "triples_metadata": [
         "Vècquéestraat"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

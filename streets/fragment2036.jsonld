@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,16 +23,28 @@
     {
       "token_string": "jes",
       "triples": [],
-      "children": {
-        "laan": [
-          "2036",
-          "61215"
-        ],
-        "straat": [
-          "2036",
-          "61216"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2036.jsonld#61215",
+              "@type": "tree:Node",
+              "token_string": "laan"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2036.jsonld#61216",
+              "@type": "tree:Node",
+              "token_string": "straat"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment887.jsonld#1010",
         "@type": "tree:Node"
@@ -40,13 +52,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Bosjeslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.610036895956315",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.68623560471687"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4985352530822342",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.29886857037126"
         },
         {
           "http://example.com/terms#name": "Bosjesstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.436187554740978",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.66705510381771"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5940269216993035",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.32161069699386"
         }
       ],
       "total_children_count": 2,
@@ -66,36 +78,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2036.jsonld#61215"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2036.jsonld#61216"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "laan",
       "triples": [
         {
           "http://example.com/terms#name": "Bosjeslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.610036895956315",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.68623560471687"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4985352530822342",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.29886857037126"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2036.jsonld#61214",
         "@type": "tree:Node"
@@ -103,8 +96,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Bosjeslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.610036895956315",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.68623560471687"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4985352530822342",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.29886857037126"
         }
       ],
       "total_children_count": 0,
@@ -120,19 +113,17 @@
       ],
       "triples_metadata": [
         "Bosjeslaan"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "straat",
       "triples": [
         {
           "http://example.com/terms#name": "Bosjesstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.436187554740978",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.66705510381771"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5940269216993035",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.32161069699386"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2036.jsonld#61214",
         "@type": "tree:Node"
@@ -140,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Bosjesstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.436187554740978",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.66705510381771"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5940269216993035",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.32161069699386"
         }
       ],
       "total_children_count": 0,
@@ -157,8 +148,7 @@
       ],
       "triples_metadata": [
         "Bosjesstraat"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

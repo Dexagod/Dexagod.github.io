@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,16 +23,28 @@
     {
       "token_string": "R",
       "triples": [],
-      "children": {
-        "olleweg": [
-          "2993",
-          "96072"
-        ],
-        "ijksweg": [
-          "2993",
-          "96073"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2993.jsonld#96072",
+              "@type": "tree:Node",
+              "token_string": "olleweg"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2993.jsonld#96073",
+              "@type": "tree:Node",
+              "token_string": "ijksweg"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment180.jsonld#5073",
         "@type": "tree:Node"
@@ -40,13 +52,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nieuwe Rolleweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0088223888654313",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.687323257083335"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6881123031115046",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.52193948205915"
         },
         {
           "http://example.com/terms#name": "Nieuwe Rijksweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.408095546404902",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.577638099106636"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4254084834300045",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.16710211734784"
         }
       ],
       "total_children_count": 2,
@@ -66,36 +78,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2993.jsonld#96072"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2993.jsonld#96073"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "olleweg",
       "triples": [
         {
           "http://example.com/terms#name": "Nieuwe Rolleweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0088223888654313",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.687323257083335"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6881123031115046",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.52193948205915"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2993.jsonld#96071",
         "@type": "tree:Node"
@@ -103,8 +96,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nieuwe Rolleweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0088223888654313",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.687323257083335"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6881123031115046",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.52193948205915"
         }
       ],
       "total_children_count": 0,
@@ -120,19 +113,17 @@
       ],
       "triples_metadata": [
         "Nieuwe Rolleweg"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "ijksweg",
       "triples": [
         {
           "http://example.com/terms#name": "Nieuwe Rijksweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.408095546404902",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.577638099106636"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4254084834300045",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.16710211734784"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2993.jsonld#96071",
         "@type": "tree:Node"
@@ -140,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Nieuwe Rijksweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.408095546404902",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.577638099106636"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4254084834300045",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.16710211734784"
         }
       ],
       "total_children_count": 0,
@@ -157,8 +148,7 @@
       ],
       "triples_metadata": [
         "Nieuwe Rijksweg"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

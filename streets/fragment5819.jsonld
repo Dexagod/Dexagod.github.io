@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -25,16 +25,22 @@
       "triples": [
         {
           "http://example.com/terms#name": "Wideumont",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.671691641004785",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.218838919675655"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6688346889338583",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.158145125111616"
         }
       ],
-      "children": {
-        "-": [
-          "5819",
-          "161215"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment5819.jsonld#161215",
+              "@type": "tree:Node",
+              "token_string": "-"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment3190.jsonld#161211",
         "@type": "tree:Node"
@@ -42,18 +48,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Wideumont",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.671691641004785",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.218838919675655"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6688346889338583",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.158145125111616"
         },
         {
           "http://example.com/terms#name": "Wideumont-Station",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.588754680439867",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.95362661784858"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.049670577770815",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.41018330819515"
         },
         {
           "http://example.com/terms#name": "Wideumont-Village",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2044278556067662",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.812522852565884"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3680092628687666",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.97201142237708"
         }
       ],
       "total_children_count": 3,
@@ -81,31 +87,33 @@
       ],
       "triples_metadata": [
         "Wideumont"
-      ],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5819.jsonld#161215"
-            }
-          ]
-        }
       ]
     },
     {
       "token_string": "-",
       "triples": [],
-      "children": {
-        "Station": [
-          "5819",
-          "161216"
-        ],
-        "Village": [
-          "5819",
-          "161217"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment5819.jsonld#161216",
+              "@type": "tree:Node",
+              "token_string": "Station"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment5819.jsonld#161217",
+              "@type": "tree:Node",
+              "token_string": "Village"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment5819.jsonld#161213",
         "@type": "tree:Node"
@@ -113,13 +121,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Wideumont-Station",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.588754680439867",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.95362661784858"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.049670577770815",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.41018330819515"
         },
         {
           "http://example.com/terms#name": "Wideumont-Village",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2044278556067662",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.812522852565884"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3680092628687666",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.97201142237708"
         }
       ],
       "total_children_count": 2,
@@ -139,36 +147,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5819.jsonld#161216"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5819.jsonld#161217"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "Station",
       "triples": [
         {
           "http://example.com/terms#name": "Wideumont-Station",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.588754680439867",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.95362661784858"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.049670577770815",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.41018330819515"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5819.jsonld#161215",
         "@type": "tree:Node"
@@ -176,8 +165,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Wideumont-Station",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.588754680439867",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.95362661784858"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.049670577770815",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.41018330819515"
         }
       ],
       "total_children_count": 0,
@@ -193,19 +182,17 @@
       ],
       "triples_metadata": [
         "Wideumont-Station"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "Village",
       "triples": [
         {
           "http://example.com/terms#name": "Wideumont-Village",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2044278556067662",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.812522852565884"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3680092628687666",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.97201142237708"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5819.jsonld#161215",
         "@type": "tree:Node"
@@ -213,8 +200,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Wideumont-Village",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2044278556067662",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.812522852565884"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3680092628687666",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.97201142237708"
         }
       ],
       "total_children_count": 0,
@@ -230,8 +217,7 @@
       ],
       "triples_metadata": [
         "Wideumont-Village"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,16 +23,28 @@
     {
       "token_string": "Qu",
       "triples": [],
-      "children": {
-        "irinuslaan": [
-          "1699",
-          "98383"
-        ],
-        "entinstraat": [
-          "1699",
-          "98384"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1699.jsonld#98383",
+              "@type": "tree:Node",
+              "token_string": "irinuslaan"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1699.jsonld#98384",
+              "@type": "tree:Node",
+              "token_string": "entinstraat"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment195.jsonld#1752",
         "@type": "tree:Node"
@@ -40,13 +52,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Sint Quirinuslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3141565195607896",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.38539757993524"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1813557606766856",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.38826056703983"
         },
         {
           "http://example.com/terms#name": "Sint Quentinstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5713563450298094",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.010264477602014"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0736004212745565",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.68091266552672"
         }
       ],
       "total_children_count": 2,
@@ -66,36 +78,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1699.jsonld#98383"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1699.jsonld#98384"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "irinuslaan",
       "triples": [
         {
           "http://example.com/terms#name": "Sint Quirinuslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3141565195607896",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.38539757993524"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1813557606766856",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.38826056703983"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1699.jsonld#98382",
         "@type": "tree:Node"
@@ -103,8 +96,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Sint Quirinuslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3141565195607896",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.38539757993524"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1813557606766856",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.38826056703983"
         }
       ],
       "total_children_count": 0,
@@ -120,19 +113,17 @@
       ],
       "triples_metadata": [
         "Sint Quirinuslaan"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "entinstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Sint Quentinstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5713563450298094",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.010264477602014"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0736004212745565",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.68091266552672"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1699.jsonld#98382",
         "@type": "tree:Node"
@@ -140,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Sint Quentinstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5713563450298094",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.010264477602014"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0736004212745565",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.68091266552672"
         }
       ],
       "total_children_count": 0,
@@ -157,8 +148,7 @@
       ],
       "triples_metadata": [
         "Sint Quentinstraat"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

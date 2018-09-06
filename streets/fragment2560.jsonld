@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -25,16 +25,22 @@
       "triples": [
         {
           "http://example.com/terms#name": "Eikelenberg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.973915248521319",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.46345763066612"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8766692497033066",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.53985105413553"
         }
       ],
-      "children": {
-        "straat": [
-          "2560",
-          "71519"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2560.jsonld#71519",
+              "@type": "tree:Node",
+              "token_string": "straat"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment133.jsonld#49145",
         "@type": "tree:Node"
@@ -42,13 +48,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Eikelenberg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.973915248521319",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.46345763066612"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8766692497033066",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.53985105413553"
         },
         {
           "http://example.com/terms#name": "Eikelenbergstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7279785102102876",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.571520829850265"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0157812866046023",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.59133112273927"
         }
       ],
       "total_children_count": 1,
@@ -70,16 +76,6 @@
       ],
       "triples_metadata": [
         "Eikelenberg"
-      ],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2560.jsonld#71519"
-            }
-          ]
-        }
       ]
     },
     {
@@ -87,11 +83,10 @@
       "triples": [
         {
           "http://example.com/terms#name": "Eikelenbergstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7279785102102876",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.571520829850265"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0157812866046023",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.59133112273927"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2560.jsonld#49146",
         "@type": "tree:Node"
@@ -99,8 +94,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Eikelenbergstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7279785102102876",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.571520829850265"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0157812866046023",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.59133112273927"
         }
       ],
       "total_children_count": 0,
@@ -116,8 +111,7 @@
       ],
       "triples_metadata": [
         "Eikelenbergstraat"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

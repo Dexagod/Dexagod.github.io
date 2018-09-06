@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,16 +23,28 @@
     {
       "token_string": "A S",
       "triples": [],
-      "children": {
-        "chockaertstraat": [
-          "2936",
-          "60944"
-        ],
-        "luysstraat": [
-          "2936",
-          "60945"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2936.jsonld#60944",
+              "@type": "tree:Node",
+              "token_string": "chockaertstraat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2936.jsonld#60945",
+              "@type": "tree:Node",
+              "token_string": "luysstraat"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment10.jsonld#42",
         "@type": "tree:Node"
@@ -40,13 +52,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "LA Schockaertstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.178401829302223",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.40255267481658"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5543078933243355",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.577771138147504"
         },
         {
           "http://example.com/terms#name": "LA Sluysstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.483851482875172",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.41320928703785"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7599708930817792",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.31371863929518"
         }
       ],
       "total_children_count": 2,
@@ -66,36 +78,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2936.jsonld#60944"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2936.jsonld#60945"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "chockaertstraat",
       "triples": [
         {
           "http://example.com/terms#name": "LA Schockaertstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.178401829302223",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.40255267481658"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5543078933243355",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.577771138147504"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2936.jsonld#60943",
         "@type": "tree:Node"
@@ -103,8 +96,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "LA Schockaertstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.178401829302223",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.40255267481658"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5543078933243355",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.577771138147504"
         }
       ],
       "total_children_count": 0,
@@ -120,19 +113,17 @@
       ],
       "triples_metadata": [
         "LA Schockaertstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "luysstraat",
       "triples": [
         {
           "http://example.com/terms#name": "LA Sluysstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.483851482875172",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.41320928703785"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7599708930817792",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.31371863929518"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2936.jsonld#60943",
         "@type": "tree:Node"
@@ -140,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "LA Sluysstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.483851482875172",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.41320928703785"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7599708930817792",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.31371863929518"
         }
       ],
       "total_children_count": 0,
@@ -157,8 +148,7 @@
       ],
       "triples_metadata": [
         "LA Sluysstraat"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

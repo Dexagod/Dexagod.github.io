@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,16 +23,28 @@
     {
       "token_string": "ff",
       "triples": [],
-      "children": {
-        "erstraat": [
-          "3364",
-          "46599"
-        ],
-        "rouw": [
-          "3364",
-          "58484"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment3364.jsonld#46599",
+              "@type": "tree:Node",
+              "token_string": "erstraat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment3364.jsonld#58484",
+              "@type": "tree:Node",
+              "token_string": "rouw"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment374.jsonld#3146",
         "@type": "tree:Node"
@@ -40,23 +52,23 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Jufferstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8851028919892165",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.09455525857178"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.627007389739368",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.36605009131036"
         },
         {
           "http://example.com/terms#name": "Juffrouw Lamotestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.096323707892583",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.94971028888393"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.845730446622266",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.11097448056137"
         },
         {
           "http://example.com/terms#name": "Juffrouwkensveld",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.881875836815206",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.91449622785702"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.07931173247946",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.30983579920041"
         },
         {
           "http://example.com/terms#name": "Juffrouwenweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.371607227925121",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.89676422629872"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8474578827396413",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.26005238901138"
         }
       ],
       "total_children_count": 5,
@@ -88,36 +100,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3364.jsonld#46599"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3364.jsonld#58484"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "erstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Jufferstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8851028919892165",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.09455525857178"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.627007389739368",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.36605009131036"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3364.jsonld#46598",
         "@type": "tree:Node"
@@ -125,8 +118,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Jufferstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8851028919892165",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.09455525857178"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.627007389739368",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.36605009131036"
         }
       ],
       "total_children_count": 0,
@@ -142,26 +135,43 @@
       ],
       "triples_metadata": [
         "Jufferstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "rouw",
       "triples": [],
-      "children": {
-        " Lamotestraat": [
-          "3364",
-          "58485"
-        ],
-        "kensveld": [
-          "3364",
-          "58486"
-        ],
-        "enweg": [
-          "3364",
-          "99603"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment3364.jsonld#58485",
+              "@type": "tree:Node",
+              "token_string": " Lamotestraat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment3364.jsonld#58486",
+              "@type": "tree:Node",
+              "token_string": "kensveld"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment3364.jsonld#99603",
+              "@type": "tree:Node",
+              "token_string": "enweg"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment3364.jsonld#46598",
         "@type": "tree:Node"
@@ -169,18 +179,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Juffrouw Lamotestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.096323707892583",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.94971028888393"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.845730446622266",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.11097448056137"
         },
         {
           "http://example.com/terms#name": "Juffrouwkensveld",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.881875836815206",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.91449622785702"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.07931173247946",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.30983579920041"
         },
         {
           "http://example.com/terms#name": "Juffrouwenweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.371607227925121",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.89676422629872"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8474578827396413",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.26005238901138"
         }
       ],
       "total_children_count": 3,
@@ -206,44 +216,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3364.jsonld#58485"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3364.jsonld#58486"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3364.jsonld#99603"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": " Lamotestraat",
       "triples": [
         {
           "http://example.com/terms#name": "Juffrouw Lamotestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.096323707892583",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.94971028888393"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.845730446622266",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.11097448056137"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3364.jsonld#58484",
         "@type": "tree:Node"
@@ -251,8 +234,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Juffrouw Lamotestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.096323707892583",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.94971028888393"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.845730446622266",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.11097448056137"
         }
       ],
       "total_children_count": 0,
@@ -268,19 +251,17 @@
       ],
       "triples_metadata": [
         "Juffrouw Lamotestraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "kensveld",
       "triples": [
         {
           "http://example.com/terms#name": "Juffrouwkensveld",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.881875836815206",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.91449622785702"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.07931173247946",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.30983579920041"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3364.jsonld#58484",
         "@type": "tree:Node"
@@ -288,8 +269,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Juffrouwkensveld",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.881875836815206",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.91449622785702"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.07931173247946",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.30983579920041"
         }
       ],
       "total_children_count": 0,
@@ -305,19 +286,17 @@
       ],
       "triples_metadata": [
         "Juffrouwkensveld"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "enweg",
       "triples": [
         {
           "http://example.com/terms#name": "Juffrouwenweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.371607227925121",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.89676422629872"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8474578827396413",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.26005238901138"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3364.jsonld#58484",
         "@type": "tree:Node"
@@ -325,8 +304,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Juffrouwenweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.371607227925121",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.89676422629872"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8474578827396413",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.26005238901138"
         }
       ],
       "total_children_count": 0,
@@ -342,8 +321,7 @@
       ],
       "triples_metadata": [
         "Juffrouwenweg"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

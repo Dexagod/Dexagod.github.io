@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -25,11 +25,10 @@
       "triples": [
         {
           "http://example.com/terms#name": "Sentier nr68",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.46266349100493",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.17739953259286"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.959462030559899",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.87304232070667"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4525.jsonld#133635",
         "@type": "tree:Node"
@@ -37,8 +36,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Sentier nr68",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.46266349100493",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.17739953259286"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.959462030559899",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.87304232070667"
         }
       ],
       "total_children_count": 0,
@@ -54,19 +53,17 @@
       ],
       "triples_metadata": [
         "Sentier nr68"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "88",
       "triples": [
         {
           "http://example.com/terms#name": "Sentier nr88",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.892191222109626",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.43649515781982"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4428669825221814",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.93954576658282"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4525.jsonld#133635",
         "@type": "tree:Node"
@@ -74,8 +71,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Sentier nr88",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.892191222109626",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.43649515781982"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4428669825221814",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.93954576658282"
         }
       ],
       "total_children_count": 0,
@@ -91,22 +88,33 @@
       ],
       "triples_metadata": [
         "Sentier nr88"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "n",
       "triples": [],
-      "children": {
-        "r": [
-          "4525",
-          "133635"
-        ],
-        "o 60": [
-          "4525",
-          "133636"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment4525.jsonld#133635",
+              "@type": "tree:Node",
+              "token_string": "r"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment4525.jsonld#133636",
+              "@type": "tree:Node",
+              "token_string": "o 60"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment3746.jsonld#157605",
         "@type": "tree:Node"
@@ -114,18 +122,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Sentier nr68",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.46266349100493",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.17739953259286"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.959462030559899",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.87304232070667"
         },
         {
           "http://example.com/terms#name": "Sentier nr88",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.892191222109626",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.43649515781982"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4428669825221814",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.93954576658282"
         },
         {
           "http://example.com/terms#name": "Sentier no 60",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.422271923350044",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.259466549306566"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.672659140332563",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.085521831277546"
         }
       ],
       "total_children_count": 4,
@@ -151,13 +159,19 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
+      "triples_metadata": []
+    },
+    {
+      "token_string": "r",
+      "triples": [],
+      "children": [
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
             {
-              "@id": "/streets/fragment4525.jsonld#133635"
+              "@id": "/streets/fragment4525.jsonld#120303",
+              "@type": "tree:Node",
+              "token_string": "68"
             }
           ]
         },
@@ -165,25 +179,13 @@
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
             {
-              "@id": "/streets/fragment4525.jsonld#133636"
+              "@id": "/streets/fragment4525.jsonld#120304",
+              "@type": "tree:Node",
+              "token_string": "88"
             }
           ]
         }
-      ]
-    },
-    {
-      "token_string": "r",
-      "triples": [],
-      "children": {
-        "68": [
-          "4525",
-          "120303"
-        ],
-        "88": [
-          "4525",
-          "120304"
-        ]
-      },
+      ],
       "parent_node": {
         "@id": "/streets/fragment4525.jsonld#133634",
         "@type": "tree:Node"
@@ -191,13 +193,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Sentier nr68",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.46266349100493",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.17739953259286"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.959462030559899",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.87304232070667"
         },
         {
           "http://example.com/terms#name": "Sentier nr88",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.892191222109626",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.43649515781982"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4428669825221814",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.93954576658282"
         }
       ],
       "total_children_count": 2,
@@ -217,36 +219,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4525.jsonld#120303"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4525.jsonld#120304"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "o 60",
       "triples": [
         {
           "http://example.com/terms#name": "Sentier no 60",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.422271923350044",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.259466549306566"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.672659140332563",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.085521831277546"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4525.jsonld#133634",
         "@type": "tree:Node"
@@ -254,8 +237,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Sentier no 60",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.422271923350044",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.259466549306566"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.672659140332563",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.085521831277546"
         }
       ],
       "total_children_count": 0,
@@ -271,8 +254,7 @@
       ],
       "triples_metadata": [
         "Sentier no 60"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

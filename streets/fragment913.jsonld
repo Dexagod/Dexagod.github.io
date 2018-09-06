@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,16 +23,28 @@
     {
       "token_string": "allieerden",
       "triples": [],
-      "children": {
-        "straat": [
-          "913",
-          "97215"
-        ],
-        "laan": [
-          "913",
-          "97216"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment913.jsonld#97215",
+              "@type": "tree:Node",
+              "token_string": "straat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment913.jsonld#97216",
+              "@type": "tree:Node",
+              "token_string": "laan"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment135.jsonld#202",
         "@type": "tree:Node"
@@ -40,13 +52,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Geallieerdenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4888626941367233",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.5619417023056"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1276610033176353",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.78648879243281"
         },
         {
           "http://example.com/terms#name": "Geallieerdenlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3677657000201666",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.974393235179406"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.727379443912869",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.25456473505652"
         }
       ],
       "total_children_count": 2,
@@ -66,36 +78,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment913.jsonld#97215"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment913.jsonld#97216"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "straat",
       "triples": [
         {
           "http://example.com/terms#name": "Geallieerdenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4888626941367233",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.5619417023056"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1276610033176353",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.78648879243281"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment913.jsonld#97214",
         "@type": "tree:Node"
@@ -103,8 +96,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Geallieerdenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4888626941367233",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.5619417023056"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1276610033176353",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.78648879243281"
         }
       ],
       "total_children_count": 0,
@@ -120,19 +113,17 @@
       ],
       "triples_metadata": [
         "Geallieerdenstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "laan",
       "triples": [
         {
           "http://example.com/terms#name": "Geallieerdenlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3677657000201666",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.974393235179406"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.727379443912869",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.25456473505652"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment913.jsonld#97214",
         "@type": "tree:Node"
@@ -140,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Geallieerdenlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3677657000201666",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.974393235179406"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.727379443912869",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.25456473505652"
         }
       ],
       "total_children_count": 0,
@@ -157,8 +148,7 @@
       ],
       "triples_metadata": [
         "Geallieerdenlaan"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

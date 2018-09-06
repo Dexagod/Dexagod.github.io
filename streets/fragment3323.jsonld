@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,16 +23,28 @@
     {
       "token_string": "deren",
       "triples": [],
-      "children": {
-        "straat": [
-          "3323",
-          "101447"
-        ],
-        "plein": [
-          "3323",
-          "101448"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment3323.jsonld#101447",
+              "@type": "tree:Node",
+              "token_string": "straat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment3323.jsonld#101448",
+              "@type": "tree:Node",
+              "token_string": "plein"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment161.jsonld#3488",
         "@type": "tree:Node"
@@ -40,13 +52,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Valderenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.734734034450627",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.547224116946445"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.326523626020904",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.00985944347063"
         },
         {
           "http://example.com/terms#name": "Valderenplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5966079739544488",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.769359470874925"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2078534045693186",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.9475669730872"
         }
       ],
       "total_children_count": 2,
@@ -66,36 +78,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3323.jsonld#101447"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3323.jsonld#101448"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "straat",
       "triples": [
         {
           "http://example.com/terms#name": "Valderenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.734734034450627",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.547224116946445"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.326523626020904",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.00985944347063"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3323.jsonld#101446",
         "@type": "tree:Node"
@@ -103,8 +96,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Valderenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.734734034450627",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.547224116946445"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.326523626020904",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.00985944347063"
         }
       ],
       "total_children_count": 0,
@@ -120,19 +113,17 @@
       ],
       "triples_metadata": [
         "Valderenstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "plein",
       "triples": [
         {
           "http://example.com/terms#name": "Valderenplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5966079739544488",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.769359470874925"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2078534045693186",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.9475669730872"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3323.jsonld#101446",
         "@type": "tree:Node"
@@ -140,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Valderenplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5966079739544488",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.769359470874925"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2078534045693186",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.9475669730872"
         }
       ],
       "total_children_count": 0,
@@ -157,8 +148,7 @@
       ],
       "triples_metadata": [
         "Valderenplein"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

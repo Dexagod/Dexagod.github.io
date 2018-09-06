@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,16 +23,28 @@
     {
       "token_string": "t",
       "triples": [],
-      "children": {
-        "Cormeaulaan": [
-          "2934",
-          "42485"
-        ],
-        " ": [
-          "2934",
-          "53705"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2934.jsonld#42485",
+              "@type": "tree:Node",
+              "token_string": "Cormeaulaan"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2934.jsonld#53705",
+              "@type": "tree:Node",
+              "token_string": " "
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment10.jsonld#42",
         "@type": "tree:Node"
@@ -40,28 +52,28 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "LtCormeaulaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9890983757215257",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.16510829618745"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.404114714877189",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.46971483256541"
         },
         {
           "http://example.com/terms#name": "Lt Philippartstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6708348081497513",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.749921430150586"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7151994960133945",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.64932988010164"
         },
         {
           "http://example.com/terms#name": "Lt Graffplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2706243835944546",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.242013335775475"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7671629765134043",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.4132045784891"
         },
         {
           "http://example.com/terms#name": "Lt L Emmerechtsplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4134420554607945",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.78841259043459"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.301217629053321",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.93379179249918"
         },
         {
           "http://example.com/terms#name": "Lt J De Windestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.098932129341815",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.04689232728953"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.251221947087017",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.22859502692874"
         }
       ],
       "total_children_count": 6,
@@ -99,36 +111,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2934.jsonld#42485"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2934.jsonld#53705"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "Cormeaulaan",
       "triples": [
         {
           "http://example.com/terms#name": "LtCormeaulaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9890983757215257",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.16510829618745"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.404114714877189",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.46971483256541"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2934.jsonld#42484",
         "@type": "tree:Node"
@@ -136,8 +129,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "LtCormeaulaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9890983757215257",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.16510829618745"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.404114714877189",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.46971483256541"
         }
       ],
       "total_children_count": 0,
@@ -153,30 +146,53 @@
       ],
       "triples_metadata": [
         "LtCormeaulaan"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": " ",
       "triples": [],
-      "children": {
-        "Philippartstraat": [
-          "2934",
-          "53706"
-        ],
-        "Graffplein": [
-          "2934",
-          "53707"
-        ],
-        "L Emmerechtsplein": [
-          "2934",
-          "66777"
-        ],
-        "J De Windestraat": [
-          "2934",
-          "81000"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2934.jsonld#53706",
+              "@type": "tree:Node",
+              "token_string": "Philippartstraat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2934.jsonld#53707",
+              "@type": "tree:Node",
+              "token_string": "Graffplein"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2934.jsonld#66777",
+              "@type": "tree:Node",
+              "token_string": "L Emmerechtsplein"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2934.jsonld#81000",
+              "@type": "tree:Node",
+              "token_string": "J De Windestraat"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment2934.jsonld#42484",
         "@type": "tree:Node"
@@ -184,23 +200,23 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Lt Philippartstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6708348081497513",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.749921430150586"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7151994960133945",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.64932988010164"
         },
         {
           "http://example.com/terms#name": "Lt Graffplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2706243835944546",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.242013335775475"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7671629765134043",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.4132045784891"
         },
         {
           "http://example.com/terms#name": "Lt L Emmerechtsplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4134420554607945",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.78841259043459"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.301217629053321",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.93379179249918"
         },
         {
           "http://example.com/terms#name": "Lt J De Windestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.098932129341815",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.04689232728953"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.251221947087017",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.22859502692874"
         }
       ],
       "total_children_count": 4,
@@ -232,52 +248,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2934.jsonld#53706"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2934.jsonld#53707"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2934.jsonld#66777"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2934.jsonld#81000"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "Philippartstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Lt Philippartstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6708348081497513",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.749921430150586"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7151994960133945",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.64932988010164"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2934.jsonld#53705",
         "@type": "tree:Node"
@@ -285,8 +266,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Lt Philippartstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6708348081497513",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.749921430150586"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7151994960133945",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.64932988010164"
         }
       ],
       "total_children_count": 0,
@@ -302,19 +283,17 @@
       ],
       "triples_metadata": [
         "Lt Philippartstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "Graffplein",
       "triples": [
         {
           "http://example.com/terms#name": "Lt Graffplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2706243835944546",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.242013335775475"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7671629765134043",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.4132045784891"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2934.jsonld#53705",
         "@type": "tree:Node"
@@ -322,8 +301,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Lt Graffplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2706243835944546",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.242013335775475"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7671629765134043",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.4132045784891"
         }
       ],
       "total_children_count": 0,
@@ -339,19 +318,17 @@
       ],
       "triples_metadata": [
         "Lt Graffplein"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "L Emmerechtsplein",
       "triples": [
         {
           "http://example.com/terms#name": "Lt L Emmerechtsplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4134420554607945",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.78841259043459"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.301217629053321",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.93379179249918"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2934.jsonld#53705",
         "@type": "tree:Node"
@@ -359,8 +336,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Lt L Emmerechtsplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4134420554607945",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.78841259043459"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.301217629053321",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.93379179249918"
         }
       ],
       "total_children_count": 0,
@@ -376,19 +353,17 @@
       ],
       "triples_metadata": [
         "Lt L Emmerechtsplein"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "J De Windestraat",
       "triples": [
         {
           "http://example.com/terms#name": "Lt J De Windestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.098932129341815",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.04689232728953"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.251221947087017",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.22859502692874"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2934.jsonld#53705",
         "@type": "tree:Node"
@@ -396,8 +371,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Lt J De Windestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.098932129341815",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.04689232728953"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.251221947087017",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.22859502692874"
         }
       ],
       "total_children_count": 0,
@@ -413,8 +388,7 @@
       ],
       "triples_metadata": [
         "Lt J De Windestraat"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

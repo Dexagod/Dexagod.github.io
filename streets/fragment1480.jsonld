@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,16 +23,28 @@
     {
       "token_string": "vi",
       "triples": [],
-      "children": {
-        "nzestraat": [
-          "1480",
-          "69913"
-        ],
-        "llpark": [
-          "1480",
-          "69914"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1480.jsonld#69913",
+              "@type": "tree:Node",
+              "token_string": "nzestraat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1480.jsonld#69914",
+              "@type": "tree:Node",
+              "token_string": "llpark"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment1320.jsonld#653",
         "@type": "tree:Node"
@@ -40,13 +52,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Revinzestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9763618971323185",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.22450642661322"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5253079156093112",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.8117444819078"
         },
         {
           "http://example.com/terms#name": "Revillpark",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1624040649699183",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.135666458227234"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1360795929969325",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.38867407949829"
         }
       ],
       "total_children_count": 2,
@@ -66,36 +78,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1480.jsonld#69913"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1480.jsonld#69914"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "nzestraat",
       "triples": [
         {
           "http://example.com/terms#name": "Revinzestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9763618971323185",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.22450642661322"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5253079156093112",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.8117444819078"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1480.jsonld#69912",
         "@type": "tree:Node"
@@ -103,8 +96,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Revinzestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9763618971323185",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.22450642661322"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5253079156093112",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.8117444819078"
         }
       ],
       "total_children_count": 0,
@@ -120,19 +113,17 @@
       ],
       "triples_metadata": [
         "Revinzestraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "llpark",
       "triples": [
         {
           "http://example.com/terms#name": "Revillpark",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1624040649699183",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.135666458227234"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1360795929969325",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.38867407949829"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1480.jsonld#69912",
         "@type": "tree:Node"
@@ -140,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Revillpark",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1624040649699183",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.135666458227234"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1360795929969325",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.38867407949829"
         }
       ],
       "total_children_count": 0,
@@ -157,8 +148,7 @@
       ],
       "triples_metadata": [
         "Revillpark"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

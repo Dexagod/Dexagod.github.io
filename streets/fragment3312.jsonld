@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -25,11 +25,10 @@
       "triples": [
         {
           "http://example.com/terms#name": "Tillegemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.193939211370825",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.51509700682073"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.983233034830006",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.48112194601432"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3312.jsonld#75237",
         "@type": "tree:Node"
@@ -37,8 +36,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Tillegemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.193939211370825",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.51509700682073"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.983233034830006",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.48112194601432"
         }
       ],
       "total_children_count": 0,
@@ -54,19 +53,17 @@
       ],
       "triples_metadata": [
         "Tillegemstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "park",
       "triples": [
         {
           "http://example.com/terms#name": "Tillegempark",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1638619724295385",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.15341344799495"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.991880550786223",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.161067026332866"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3312.jsonld#75237",
         "@type": "tree:Node"
@@ -74,8 +71,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Tillegempark",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1638619724295385",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.15341344799495"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.991880550786223",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.161067026332866"
         }
       ],
       "total_children_count": 0,
@@ -91,22 +88,33 @@
       ],
       "triples_metadata": [
         "Tillegempark"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "gem",
       "triples": [],
-      "children": {
-        "straat": [
-          "3312",
-          "70733"
-        ],
-        "park": [
-          "3312",
-          "70734"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment3312.jsonld#70733",
+              "@type": "tree:Node",
+              "token_string": "straat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment3312.jsonld#70734",
+              "@type": "tree:Node",
+              "token_string": "park"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment3312.jsonld#150694",
         "@type": "tree:Node"
@@ -114,13 +122,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Tillegemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.193939211370825",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.51509700682073"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.983233034830006",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.48112194601432"
         },
         {
           "http://example.com/terms#name": "Tillegempark",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1638619724295385",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.15341344799495"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.991880550786223",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.161067026332866"
         }
       ],
       "total_children_count": 2,
@@ -140,36 +148,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3312.jsonld#70733"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3312.jsonld#70734"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "rweg",
       "triples": [
         {
           "http://example.com/terms#name": "Tillerweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.340735065628689",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.37240498168749"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3948636552815223",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.20981046100947"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3312.jsonld#150694",
         "@type": "tree:Node"
@@ -177,8 +166,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Tillerweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.340735065628689",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.37240498168749"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3948636552815223",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.20981046100947"
         }
       ],
       "total_children_count": 0,
@@ -194,19 +183,17 @@
       ],
       "triples_metadata": [
         "Tillerweg"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "nsblok",
       "triples": [
         {
           "http://example.com/terms#name": "Tillensblok",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8751152001067677",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.91269461859828"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4128353094985067",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.9117087487356"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3312.jsonld#150694",
         "@type": "tree:Node"
@@ -214,8 +201,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Tillensblok",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8751152001067677",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.91269461859828"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4128353094985067",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.9117087487356"
         }
       ],
       "total_children_count": 0,
@@ -231,22 +218,33 @@
       ],
       "triples_metadata": [
         "Tillensblok"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "l",
       "triples": [],
-      "children": {
-        "e": [
-          "3312",
-          "150694"
-        ],
-        "o": [
-          "3312",
-          "150695"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment3312.jsonld#150694",
+              "@type": "tree:Node",
+              "token_string": "e"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment3312.jsonld#150695",
+              "@type": "tree:Node",
+              "token_string": "o"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment3548.jsonld#22769",
         "@type": "tree:Node"
@@ -254,68 +252,68 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Tillegemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.193939211370825",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.51509700682073"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.983233034830006",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.48112194601432"
         },
         {
           "http://example.com/terms#name": "Tillegempark",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1638619724295385",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.15341344799495"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.991880550786223",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.161067026332866"
         },
         {
           "http://example.com/terms#name": "Tillerweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.340735065628689",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.37240498168749"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3948636552815223",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.20981046100947"
         },
         {
           "http://example.com/terms#name": "Tillensblok",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8751152001067677",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.91269461859828"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4128353094985067",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.9117087487356"
         },
         {
           "http://example.com/terms#name": "Tilleul des Lognards",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1796950081069655",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.86221770763054"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2585481329559216",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.14117316927616"
         },
         {
           "http://example.com/terms#name": "Tillo",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.062025365627648",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.925908870223886"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3435447227867727",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.88777190524482"
         },
         {
           "http://example.com/terms#name": "Tilleul",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.31325794847752",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.411156406852605"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4395696158019406",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.24625510575923"
         },
         {
           "http://example.com/terms#name": "Tilleul",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.362018777926389",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.61469496536392"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1060497053433442",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.13937973881827"
         },
         {
           "http://example.com/terms#name": "Tilleul",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.362018777926389",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.61469496536392"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1060497053433442",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.13937973881827"
         },
         {
           "http://example.com/terms#name": "Tilleul",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.362018777926389",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.61469496536392"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1060497053433442",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.13937973881827"
         },
         {
           "http://example.com/terms#name": "Tilleul",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.362018777926389",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.61469496536392"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1060497053433442",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.13937973881827"
         },
         {
           "http://example.com/terms#name": "Tilleul",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.362018777926389",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.61469496536392"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1060497053433442",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.13937973881827"
         },
         {
           "http://example.com/terms#name": "Tillet",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.972018713878524",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.17235315486479"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4602868428827422",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.0732494131658"
         }
       ],
       "total_children_count": 10,
@@ -376,13 +374,19 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
+      "triples_metadata": []
+    },
+    {
+      "token_string": "e",
+      "triples": [],
+      "children": [
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
             {
-              "@id": "/streets/fragment3312.jsonld#150694"
+              "@id": "/streets/fragment3312.jsonld#75237",
+              "@type": "tree:Node",
+              "token_string": "gem"
             }
           ]
         },
@@ -390,37 +394,43 @@
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
             {
-              "@id": "/streets/fragment3312.jsonld#150695"
+              "@id": "/streets/fragment3312.jsonld#75238",
+              "@type": "tree:Node",
+              "token_string": "rweg"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment3312.jsonld#93554",
+              "@type": "tree:Node",
+              "token_string": "nsblok"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment3312.jsonld#151015",
+              "@type": "tree:Node",
+              "token_string": "ul"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment3312.jsonld#156860",
+              "@type": "tree:Node",
+              "token_string": "t"
             }
           ]
         }
-      ]
-    },
-    {
-      "token_string": "e",
-      "triples": [],
-      "children": {
-        "gem": [
-          "3312",
-          "75237"
-        ],
-        "rweg": [
-          "3312",
-          "75238"
-        ],
-        "nsblok": [
-          "3312",
-          "93554"
-        ],
-        "ul": [
-          "3312",
-          "151015"
-        ],
-        "t": [
-          "3312",
-          "156860"
-        ]
-      },
+      ],
       "parent_node": {
         "@id": "/streets/fragment3312.jsonld#150693",
         "@type": "tree:Node"
@@ -428,63 +438,63 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Tillegemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.193939211370825",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.51509700682073"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.983233034830006",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.48112194601432"
         },
         {
           "http://example.com/terms#name": "Tillegempark",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1638619724295385",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.15341344799495"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.991880550786223",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.161067026332866"
         },
         {
           "http://example.com/terms#name": "Tillerweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.340735065628689",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.37240498168749"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3948636552815223",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.20981046100947"
         },
         {
           "http://example.com/terms#name": "Tillensblok",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8751152001067677",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.91269461859828"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4128353094985067",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.9117087487356"
         },
         {
           "http://example.com/terms#name": "Tilleul des Lognards",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1796950081069655",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.86221770763054"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2585481329559216",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.14117316927616"
         },
         {
           "http://example.com/terms#name": "Tilleul",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.31325794847752",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.411156406852605"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4395696158019406",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.24625510575923"
         },
         {
           "http://example.com/terms#name": "Tilleul",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.362018777926389",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.61469496536392"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1060497053433442",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.13937973881827"
         },
         {
           "http://example.com/terms#name": "Tilleul",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.362018777926389",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.61469496536392"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1060497053433442",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.13937973881827"
         },
         {
           "http://example.com/terms#name": "Tilleul",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.362018777926389",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.61469496536392"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1060497053433442",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.13937973881827"
         },
         {
           "http://example.com/terms#name": "Tilleul",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.362018777926389",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.61469496536392"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1060497053433442",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.13937973881827"
         },
         {
           "http://example.com/terms#name": "Tilleul",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.362018777926389",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.61469496536392"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1060497053433442",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.13937973881827"
         },
         {
           "http://example.com/terms#name": "Tillet",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.972018713878524",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.17235315486479"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4602868428827422",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.0732494131658"
         }
       ],
       "total_children_count": 8,
@@ -539,60 +549,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3312.jsonld#75237"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3312.jsonld#75238"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3312.jsonld#93554"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3312.jsonld#151015"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3312.jsonld#156860"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "o",
       "triples": [
         {
           "http://example.com/terms#name": "Tillo",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.062025365627648",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.925908870223886"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3435447227867727",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.88777190524482"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3312.jsonld#150693",
         "@type": "tree:Node"
@@ -600,8 +567,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Tillo",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.062025365627648",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.925908870223886"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3435447227867727",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.88777190524482"
         }
       ],
       "total_children_count": 0,
@@ -617,49 +584,54 @@
       ],
       "triples_metadata": [
         "Tillo"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "ul",
       "triples": [
         {
           "http://example.com/terms#name": "Tilleul",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.31325794847752",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.411156406852605"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4395696158019406",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.24625510575923"
         },
         {
           "http://example.com/terms#name": "Tilleul",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.362018777926389",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.61469496536392"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1060497053433442",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.13937973881827"
         },
         {
           "http://example.com/terms#name": "Tilleul",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.362018777926389",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.61469496536392"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1060497053433442",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.13937973881827"
         },
         {
           "http://example.com/terms#name": "Tilleul",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.362018777926389",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.61469496536392"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1060497053433442",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.13937973881827"
         },
         {
           "http://example.com/terms#name": "Tilleul",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.362018777926389",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.61469496536392"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1060497053433442",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.13937973881827"
         },
         {
           "http://example.com/terms#name": "Tilleul",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.362018777926389",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.61469496536392"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1060497053433442",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.13937973881827"
         }
       ],
-      "children": {
-        " des Lognards": [
-          "3312",
-          "151016"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment3312.jsonld#151016",
+              "@type": "tree:Node",
+              "token_string": " des Lognards"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment3312.jsonld#150694",
         "@type": "tree:Node"
@@ -667,38 +639,38 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Tilleul des Lognards",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1796950081069655",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.86221770763054"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2585481329559216",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.14117316927616"
         },
         {
           "http://example.com/terms#name": "Tilleul",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.31325794847752",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.411156406852605"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4395696158019406",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.24625510575923"
         },
         {
           "http://example.com/terms#name": "Tilleul",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.362018777926389",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.61469496536392"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1060497053433442",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.13937973881827"
         },
         {
           "http://example.com/terms#name": "Tilleul",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.362018777926389",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.61469496536392"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1060497053433442",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.13937973881827"
         },
         {
           "http://example.com/terms#name": "Tilleul",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.362018777926389",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.61469496536392"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1060497053433442",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.13937973881827"
         },
         {
           "http://example.com/terms#name": "Tilleul",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.362018777926389",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.61469496536392"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1060497053433442",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.13937973881827"
         },
         {
           "http://example.com/terms#name": "Tilleul",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.362018777926389",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.61469496536392"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1060497053433442",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.13937973881827"
         }
       ],
       "total_children_count": 1,
@@ -730,16 +702,6 @@
         "Tilleul",
         "Tilleul",
         "Tilleul"
-      ],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3312.jsonld#151016"
-            }
-          ]
-        }
       ]
     },
     {
@@ -747,11 +709,10 @@
       "triples": [
         {
           "http://example.com/terms#name": "Tilleul des Lognards",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1796950081069655",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.86221770763054"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2585481329559216",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.14117316927616"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3312.jsonld#151015",
         "@type": "tree:Node"
@@ -759,8 +720,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Tilleul des Lognards",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1796950081069655",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.86221770763054"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2585481329559216",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.14117316927616"
         }
       ],
       "total_children_count": 0,
@@ -776,19 +737,17 @@
       ],
       "triples_metadata": [
         "Tilleul des Lognards"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "t",
       "triples": [
         {
           "http://example.com/terms#name": "Tillet",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.972018713878524",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.17235315486479"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4602868428827422",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.0732494131658"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3312.jsonld#150694",
         "@type": "tree:Node"
@@ -796,8 +755,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Tillet",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.972018713878524",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.17235315486479"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4602868428827422",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.0732494131658"
         }
       ],
       "total_children_count": 0,
@@ -813,8 +772,7 @@
       ],
       "triples_metadata": [
         "Tillet"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

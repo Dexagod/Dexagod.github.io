@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,16 +23,28 @@
     {
       "token_string": "Ieper",
       "triples": [],
-      "children": {
-        "straat": [
-          "1103",
-          "33714"
-        ],
-        "baan": [
-          "1103",
-          "33715"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1103.jsonld#33714",
+              "@type": "tree:Node",
+              "token_string": "straat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1103.jsonld#33715",
+              "@type": "tree:Node",
+              "token_string": "baan"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment340.jsonld#2836",
         "@type": "tree:Node"
@@ -40,13 +52,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Grote Ieperstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3148483935483157",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.671163445746316"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9490981327629537",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.46383047794745"
         },
         {
           "http://example.com/terms#name": "Grote Ieperbaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.81985955722186",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.89416549663106"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.536895791876873",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.264652606238826"
         }
       ],
       "total_children_count": 2,
@@ -66,36 +78,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1103.jsonld#33714"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1103.jsonld#33715"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "straat",
       "triples": [
         {
           "http://example.com/terms#name": "Grote Ieperstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3148483935483157",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.671163445746316"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9490981327629537",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.46383047794745"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1103.jsonld#33713",
         "@type": "tree:Node"
@@ -103,8 +96,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Grote Ieperstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3148483935483157",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.671163445746316"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9490981327629537",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.46383047794745"
         }
       ],
       "total_children_count": 0,
@@ -120,19 +113,17 @@
       ],
       "triples_metadata": [
         "Grote Ieperstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "baan",
       "triples": [
         {
           "http://example.com/terms#name": "Grote Ieperbaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.81985955722186",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.89416549663106"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.536895791876873",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.264652606238826"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1103.jsonld#33713",
         "@type": "tree:Node"
@@ -140,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Grote Ieperbaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.81985955722186",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.89416549663106"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.536895791876873",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.264652606238826"
         }
       ],
       "total_children_count": 0,
@@ -157,8 +148,7 @@
       ],
       "triples_metadata": [
         "Grote Ieperbaan"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

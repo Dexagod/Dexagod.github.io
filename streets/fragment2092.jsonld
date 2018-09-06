@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -25,16 +25,22 @@
       "triples": [
         {
           "http://example.com/terms#name": "Adelberg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0180254129209927",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.80982987646721"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9708774826892292",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.14184715274825"
         }
       ],
-      "children": {
-        "park": [
-          "2092",
-          "24646"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2092.jsonld#24646",
+              "@type": "tree:Node",
+              "token_string": "park"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment2092.jsonld#41217",
         "@type": "tree:Node"
@@ -42,13 +48,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Adelbergpark",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9807979587666935",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.467771870757005"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.387758512032936",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.50299969977303"
         },
         {
           "http://example.com/terms#name": "Adelberg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0180254129209927",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.80982987646721"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9708774826892292",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.14184715274825"
         }
       ],
       "total_children_count": 1,
@@ -70,16 +76,6 @@
       ],
       "triples_metadata": [
         "Adelberg"
-      ],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2092.jsonld#24646"
-            }
-          ]
-        }
       ]
     },
     {
@@ -87,11 +83,10 @@
       "triples": [
         {
           "http://example.com/terms#name": "Adelbergpark",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9807979587666935",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.467771870757005"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.387758512032936",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.50299969977303"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2092.jsonld#24645",
         "@type": "tree:Node"
@@ -99,8 +94,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Adelbergpark",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9807979587666935",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.467771870757005"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.387758512032936",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.50299969977303"
         }
       ],
       "total_children_count": 0,
@@ -116,30 +111,53 @@
       ],
       "triples_metadata": [
         "Adelbergpark"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "l",
       "triples": [],
-      "children": {
-        "ber": [
-          "2092",
-          "41217"
-        ],
-        "a": [
-          "2092",
-          "43154"
-        ],
-        "son Vermanderstraat": [
-          "2092",
-          "59306"
-        ],
-        "h": [
-          "2092",
-          "74245"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2092.jsonld#41217",
+              "@type": "tree:Node",
+              "token_string": "ber"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2092.jsonld#43154",
+              "@type": "tree:Node",
+              "token_string": "a"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2092.jsonld#59306",
+              "@type": "tree:Node",
+              "token_string": "son Vermanderstraat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2092.jsonld#74245",
+              "@type": "tree:Node",
+              "token_string": "h"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment1282.jsonld#31865",
         "@type": "tree:Node"
@@ -147,83 +165,83 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Adelbert Kennisplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6312227430127906",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.298545984500684"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2351169202125973",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.40597863140887"
         },
         {
           "http://example.com/terms#name": "Adelbergpark",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9807979587666935",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.467771870757005"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.387758512032936",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.50299969977303"
         },
         {
           "http://example.com/terms#name": "Adelberg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0180254129209927",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.80982987646721"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9708774826892292",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.14184715274825"
         },
         {
           "http://example.com/terms#name": "Adelaarsstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.862976467016078",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.79403679037179"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.654024068114092",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.49819672932412"
         },
         {
           "http://example.com/terms#name": "Adelardstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8789419816657094",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.74083733219424"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.797824125555241",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.055156988369625"
         },
         {
           "http://example.com/terms#name": "Adelaarstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.54839713533431",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.293054746579934"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.456889256756402",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.53674343893625"
         },
         {
           "http://example.com/terms#name": "Adelaarstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.199009046599542",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.4642969057198"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9131775792326957",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.91222431915645"
         },
         {
           "http://example.com/terms#name": "Adelaarstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.199009046599542",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.4642969057198"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9131775792326957",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.91222431915645"
         },
         {
           "http://example.com/terms#name": "Adelaarstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.199009046599542",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.4642969057198"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9131775792326957",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.91222431915645"
         },
         {
           "http://example.com/terms#name": "Adelaarstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.199009046599542",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.4642969057198"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9131775792326957",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.91222431915645"
         },
         {
           "http://example.com/terms#name": "Adelaarstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.199009046599542",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.4642969057198"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9131775792326957",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.91222431915645"
         },
         {
           "http://example.com/terms#name": "Adelaarstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.195793223950242",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.10347571090255"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5331033930836693",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.56372343308519"
         },
         {
           "http://example.com/terms#name": "Adelardusstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.163433365292999",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.13338996487106"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.693250199635936",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.75941391382099"
         },
         {
           "http://example.com/terms#name": "Adelhardweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0402533828217533",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.84825762278437"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9205743667921324",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.582801402124026"
         },
         {
           "http://example.com/terms#name": "Adelheid",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.440906200455256",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.59609122176817"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.346558269279891",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.5654847952941"
         },
         {
           "http://example.com/terms#name": "Adelbert Feldheimlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.792612717003923",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.485191418983455"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8177540082689627",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.49004658385175"
         }
       ],
       "total_children_count": 17,
@@ -297,55 +315,33 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2092.jsonld#41217"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2092.jsonld#43154"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2092.jsonld#59306"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2092.jsonld#74245"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "ber",
       "triples": [],
-      "children": {
-        "g": [
-          "2092",
-          "24645"
-        ],
-        "t ": [
-          "2092",
-          "79759"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2092.jsonld#24645",
+              "@type": "tree:Node",
+              "token_string": "g"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2092.jsonld#79759",
+              "@type": "tree:Node",
+              "token_string": "t "
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment2092.jsonld#41216",
         "@type": "tree:Node"
@@ -353,23 +349,23 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Adelbert Kennisplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6312227430127906",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.298545984500684"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2351169202125973",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.40597863140887"
         },
         {
           "http://example.com/terms#name": "Adelbergpark",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9807979587666935",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.467771870757005"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.387758512032936",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.50299969977303"
         },
         {
           "http://example.com/terms#name": "Adelberg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0180254129209927",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.80982987646721"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9708774826892292",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.14184715274825"
         },
         {
           "http://example.com/terms#name": "Adelbert Feldheimlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.792612717003923",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.485191418983455"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8177540082689627",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.49004658385175"
         }
       ],
       "total_children_count": 5,
@@ -401,13 +397,19 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
+      "triples_metadata": []
+    },
+    {
+      "token_string": "a",
+      "triples": [],
+      "children": [
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
             {
-              "@id": "/streets/fragment2092.jsonld#24645"
+              "@id": "/streets/fragment2092.jsonld#47610",
+              "@type": "tree:Node",
+              "token_string": "ars"
             }
           ]
         },
@@ -415,25 +417,13 @@
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
             {
-              "@id": "/streets/fragment2092.jsonld#79759"
+              "@id": "/streets/fragment2092.jsonld#53349",
+              "@type": "tree:Node",
+              "token_string": "rd"
             }
           ]
         }
-      ]
-    },
-    {
-      "token_string": "a",
-      "triples": [],
-      "children": {
-        "ars": [
-          "2092",
-          "47610"
-        ],
-        "rd": [
-          "2092",
-          "53349"
-        ]
-      },
+      ],
       "parent_node": {
         "@id": "/streets/fragment2092.jsonld#41216",
         "@type": "tree:Node"
@@ -441,53 +431,53 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Adelaarsstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.862976467016078",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.79403679037179"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.654024068114092",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.49819672932412"
         },
         {
           "http://example.com/terms#name": "Adelardstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8789419816657094",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.74083733219424"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.797824125555241",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.055156988369625"
         },
         {
           "http://example.com/terms#name": "Adelaarstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.54839713533431",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.293054746579934"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.456889256756402",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.53674343893625"
         },
         {
           "http://example.com/terms#name": "Adelaarstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.199009046599542",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.4642969057198"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9131775792326957",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.91222431915645"
         },
         {
           "http://example.com/terms#name": "Adelaarstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.199009046599542",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.4642969057198"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9131775792326957",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.91222431915645"
         },
         {
           "http://example.com/terms#name": "Adelaarstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.199009046599542",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.4642969057198"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9131775792326957",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.91222431915645"
         },
         {
           "http://example.com/terms#name": "Adelaarstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.199009046599542",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.4642969057198"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9131775792326957",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.91222431915645"
         },
         {
           "http://example.com/terms#name": "Adelaarstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.199009046599542",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.4642969057198"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9131775792326957",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.91222431915645"
         },
         {
           "http://example.com/terms#name": "Adelaarstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.195793223950242",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.10347571090255"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5331033930836693",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.56372343308519"
         },
         {
           "http://example.com/terms#name": "Adelardusstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.163433365292999",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.13338996487106"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.693250199635936",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.75941391382099"
         }
       ],
       "total_children_count": 6,
@@ -525,13 +515,19 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
+      "triples_metadata": []
+    },
+    {
+      "token_string": "ars",
+      "triples": [],
+      "children": [
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
             {
-              "@id": "/streets/fragment2092.jsonld#47610"
+              "@id": "/streets/fragment2092.jsonld#47611",
+              "@type": "tree:Node",
+              "token_string": "straat"
             }
           ]
         },
@@ -539,25 +535,13 @@
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
             {
-              "@id": "/streets/fragment2092.jsonld#53349"
+              "@id": "/streets/fragment2092.jsonld#47612",
+              "@type": "tree:Node",
+              "token_string": "traat"
             }
           ]
         }
-      ]
-    },
-    {
-      "token_string": "ars",
-      "triples": [],
-      "children": {
-        "straat": [
-          "2092",
-          "47611"
-        ],
-        "traat": [
-          "2092",
-          "47612"
-        ]
-      },
+      ],
       "parent_node": {
         "@id": "/streets/fragment2092.jsonld#43154",
         "@type": "tree:Node"
@@ -565,43 +549,43 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Adelaarsstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.862976467016078",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.79403679037179"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.654024068114092",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.49819672932412"
         },
         {
           "http://example.com/terms#name": "Adelaarstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.54839713533431",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.293054746579934"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.456889256756402",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.53674343893625"
         },
         {
           "http://example.com/terms#name": "Adelaarstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.199009046599542",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.4642969057198"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9131775792326957",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.91222431915645"
         },
         {
           "http://example.com/terms#name": "Adelaarstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.199009046599542",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.4642969057198"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9131775792326957",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.91222431915645"
         },
         {
           "http://example.com/terms#name": "Adelaarstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.199009046599542",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.4642969057198"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9131775792326957",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.91222431915645"
         },
         {
           "http://example.com/terms#name": "Adelaarstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.199009046599542",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.4642969057198"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9131775792326957",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.91222431915645"
         },
         {
           "http://example.com/terms#name": "Adelaarstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.199009046599542",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.4642969057198"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9131775792326957",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.91222431915645"
         },
         {
           "http://example.com/terms#name": "Adelaarstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.195793223950242",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.10347571090255"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5331033930836693",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.56372343308519"
         }
       ],
       "total_children_count": 2,
@@ -627,36 +611,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2092.jsonld#47611"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2092.jsonld#47612"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "straat",
       "triples": [
         {
           "http://example.com/terms#name": "Adelaarsstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.862976467016078",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.79403679037179"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.654024068114092",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.49819672932412"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2092.jsonld#47610",
         "@type": "tree:Node"
@@ -664,8 +629,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Adelaarsstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.862976467016078",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.79403679037179"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.654024068114092",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.49819672932412"
         }
       ],
       "total_children_count": 0,
@@ -681,49 +646,47 @@
       ],
       "triples_metadata": [
         "Adelaarsstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "traat",
       "triples": [
         {
           "http://example.com/terms#name": "Adelaarstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.54839713533431",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.293054746579934"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.456889256756402",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.53674343893625"
         },
         {
           "http://example.com/terms#name": "Adelaarstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.199009046599542",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.4642969057198"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9131775792326957",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.91222431915645"
         },
         {
           "http://example.com/terms#name": "Adelaarstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.199009046599542",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.4642969057198"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9131775792326957",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.91222431915645"
         },
         {
           "http://example.com/terms#name": "Adelaarstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.199009046599542",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.4642969057198"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9131775792326957",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.91222431915645"
         },
         {
           "http://example.com/terms#name": "Adelaarstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.199009046599542",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.4642969057198"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9131775792326957",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.91222431915645"
         },
         {
           "http://example.com/terms#name": "Adelaarstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.199009046599542",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.4642969057198"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9131775792326957",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.91222431915645"
         },
         {
           "http://example.com/terms#name": "Adelaarstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.195793223950242",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.10347571090255"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5331033930836693",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.56372343308519"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2092.jsonld#47610",
         "@type": "tree:Node"
@@ -731,38 +694,38 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Adelaarstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.54839713533431",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.293054746579934"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.456889256756402",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.53674343893625"
         },
         {
           "http://example.com/terms#name": "Adelaarstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.199009046599542",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.4642969057198"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9131775792326957",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.91222431915645"
         },
         {
           "http://example.com/terms#name": "Adelaarstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.199009046599542",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.4642969057198"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9131775792326957",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.91222431915645"
         },
         {
           "http://example.com/terms#name": "Adelaarstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.199009046599542",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.4642969057198"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9131775792326957",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.91222431915645"
         },
         {
           "http://example.com/terms#name": "Adelaarstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.199009046599542",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.4642969057198"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9131775792326957",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.91222431915645"
         },
         {
           "http://example.com/terms#name": "Adelaarstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.199009046599542",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.4642969057198"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9131775792326957",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.91222431915645"
         },
         {
           "http://example.com/terms#name": "Adelaarstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.195793223950242",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.10347571090255"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5331033930836693",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.56372343308519"
         }
       ],
       "total_children_count": 0,
@@ -790,22 +753,33 @@
         "Adelaarstraat",
         "Adelaarstraat",
         "Adelaarstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "rd",
       "triples": [],
-      "children": {
-        "straat": [
-          "2092",
-          "53350"
-        ],
-        "usstraat": [
-          "2092",
-          "53351"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2092.jsonld#53350",
+              "@type": "tree:Node",
+              "token_string": "straat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2092.jsonld#53351",
+              "@type": "tree:Node",
+              "token_string": "usstraat"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment2092.jsonld#43154",
         "@type": "tree:Node"
@@ -813,13 +787,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Adelardstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8789419816657094",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.74083733219424"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.797824125555241",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.055156988369625"
         },
         {
           "http://example.com/terms#name": "Adelardusstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.163433365292999",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.13338996487106"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.693250199635936",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.75941391382099"
         }
       ],
       "total_children_count": 2,
@@ -839,36 +813,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2092.jsonld#53350"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2092.jsonld#53351"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "straat",
       "triples": [
         {
           "http://example.com/terms#name": "Adelardstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8789419816657094",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.74083733219424"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.797824125555241",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.055156988369625"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2092.jsonld#53349",
         "@type": "tree:Node"
@@ -876,8 +831,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Adelardstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8789419816657094",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.74083733219424"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.797824125555241",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.055156988369625"
         }
       ],
       "total_children_count": 0,
@@ -893,19 +848,17 @@
       ],
       "triples_metadata": [
         "Adelardstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "usstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Adelardusstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.163433365292999",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.13338996487106"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.693250199635936",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.75941391382099"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2092.jsonld#53349",
         "@type": "tree:Node"
@@ -913,8 +866,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Adelardusstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.163433365292999",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.13338996487106"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.693250199635936",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.75941391382099"
         }
       ],
       "total_children_count": 0,
@@ -930,19 +883,17 @@
       ],
       "triples_metadata": [
         "Adelardusstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "son Vermanderstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Adelson Vermanderstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.970260620293788",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.935938349592995"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9917942645719724",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.727975503099444"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2092.jsonld#41216",
         "@type": "tree:Node"
@@ -950,8 +901,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Adelson Vermanderstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.970260620293788",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.935938349592995"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9917942645719724",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.727975503099444"
         }
       ],
       "total_children_count": 0,
@@ -967,22 +918,33 @@
       ],
       "triples_metadata": [
         "Adelson Vermanderstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "h",
       "triples": [],
-      "children": {
-        "ardweg": [
-          "2092",
-          "74246"
-        ],
-        "eid": [
-          "2092",
-          "74247"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2092.jsonld#74246",
+              "@type": "tree:Node",
+              "token_string": "ardweg"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2092.jsonld#74247",
+              "@type": "tree:Node",
+              "token_string": "eid"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment2092.jsonld#41216",
         "@type": "tree:Node"
@@ -990,13 +952,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Adelhardweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0402533828217533",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.84825762278437"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9205743667921324",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.582801402124026"
         },
         {
           "http://example.com/terms#name": "Adelheid",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.440906200455256",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.59609122176817"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.346558269279891",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.5654847952941"
         }
       ],
       "total_children_count": 2,
@@ -1016,36 +978,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2092.jsonld#74246"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2092.jsonld#74247"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "ardweg",
       "triples": [
         {
           "http://example.com/terms#name": "Adelhardweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0402533828217533",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.84825762278437"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9205743667921324",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.582801402124026"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2092.jsonld#74245",
         "@type": "tree:Node"
@@ -1053,8 +996,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Adelhardweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0402533828217533",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.84825762278437"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9205743667921324",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.582801402124026"
         }
       ],
       "total_children_count": 0,
@@ -1070,19 +1013,17 @@
       ],
       "triples_metadata": [
         "Adelhardweg"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "eid",
       "triples": [
         {
           "http://example.com/terms#name": "Adelheid",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.440906200455256",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.59609122176817"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.346558269279891",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.5654847952941"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2092.jsonld#74245",
         "@type": "tree:Node"
@@ -1090,8 +1031,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Adelheid",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.440906200455256",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.59609122176817"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.346558269279891",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.5654847952941"
         }
       ],
       "total_children_count": 0,
@@ -1107,22 +1048,33 @@
       ],
       "triples_metadata": [
         "Adelheid"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "t ",
       "triples": [],
-      "children": {
-        "Kennisplein": [
-          "2092",
-          "79760"
-        ],
-        "Feldheimlaan": [
-          "2092",
-          "79761"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2092.jsonld#79760",
+              "@type": "tree:Node",
+              "token_string": "Kennisplein"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2092.jsonld#79761",
+              "@type": "tree:Node",
+              "token_string": "Feldheimlaan"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment2092.jsonld#41217",
         "@type": "tree:Node"
@@ -1130,13 +1082,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Adelbert Kennisplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6312227430127906",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.298545984500684"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2351169202125973",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.40597863140887"
         },
         {
           "http://example.com/terms#name": "Adelbert Feldheimlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.792612717003923",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.485191418983455"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8177540082689627",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.49004658385175"
         }
       ],
       "total_children_count": 2,
@@ -1156,36 +1108,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2092.jsonld#79760"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2092.jsonld#79761"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "Kennisplein",
       "triples": [
         {
           "http://example.com/terms#name": "Adelbert Kennisplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6312227430127906",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.298545984500684"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2351169202125973",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.40597863140887"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2092.jsonld#79759",
         "@type": "tree:Node"
@@ -1193,8 +1126,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Adelbert Kennisplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6312227430127906",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.298545984500684"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2351169202125973",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.40597863140887"
         }
       ],
       "total_children_count": 0,
@@ -1210,19 +1143,17 @@
       ],
       "triples_metadata": [
         "Adelbert Kennisplein"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "Feldheimlaan",
       "triples": [
         {
           "http://example.com/terms#name": "Adelbert Feldheimlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.792612717003923",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.485191418983455"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8177540082689627",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.49004658385175"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2092.jsonld#79759",
         "@type": "tree:Node"
@@ -1230,8 +1161,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Adelbert Feldheimlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.792612717003923",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.485191418983455"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8177540082689627",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.49004658385175"
         }
       ],
       "total_children_count": 0,
@@ -1247,8 +1178,7 @@
       ],
       "triples_metadata": [
         "Adelbert Feldheimlaan"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

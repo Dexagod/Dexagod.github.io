@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,20 +23,38 @@
     {
       "token_string": "e",
       "triples": [],
-      "children": {
-        "ckerstraat": [
-          "1123",
-          "24237"
-        ],
-        "l": [
-          "1123",
-          "24238"
-        ],
-        "kt": [
-          "1123",
-          "34138"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1123.jsonld#24237",
+              "@type": "tree:Node",
+              "token_string": "ckerstraat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1123.jsonld#24238",
+              "@type": "tree:Node",
+              "token_string": "l"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1123.jsonld#34138",
+              "@type": "tree:Node",
+              "token_string": "kt"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment2046.jsonld#11966",
         "@type": "tree:Node"
@@ -44,23 +62,23 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "De Deckerstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5188073852493593",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.47873769771654"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9484861768157367",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.5690234463709"
         },
         {
           "http://example.com/terms#name": "De Del",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9269324079954835",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.99813786043437"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.923997642562818",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.765672216622875"
         },
         {
           "http://example.com/terms#name": "De Dellekens",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9320332769445043",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.83135810194525"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5672011723882493",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.64453758520776"
         },
         {
           "http://example.com/terms#name": "De Dekt",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0039934438517273",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.61109894296627"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5495632506270267",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.26126941342752"
         }
       ],
       "total_children_count": 4,
@@ -92,44 +110,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1123.jsonld#24237"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1123.jsonld#24238"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1123.jsonld#34138"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "ckerstraat",
       "triples": [
         {
           "http://example.com/terms#name": "De Deckerstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5188073852493593",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.47873769771654"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9484861768157367",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.5690234463709"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1123.jsonld#24236",
         "@type": "tree:Node"
@@ -137,8 +128,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "De Deckerstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5188073852493593",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.47873769771654"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9484861768157367",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.5690234463709"
         }
       ],
       "total_children_count": 0,
@@ -154,24 +145,29 @@
       ],
       "triples_metadata": [
         "De Deckerstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "l",
       "triples": [
         {
           "http://example.com/terms#name": "De Del",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9269324079954835",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.99813786043437"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.923997642562818",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.765672216622875"
         }
       ],
-      "children": {
-        "lekens": [
-          "1123",
-          "27702"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1123.jsonld#27702",
+              "@type": "tree:Node",
+              "token_string": "lekens"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment1123.jsonld#24236",
         "@type": "tree:Node"
@@ -179,13 +175,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "De Del",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9269324079954835",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.99813786043437"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.923997642562818",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.765672216622875"
         },
         {
           "http://example.com/terms#name": "De Dellekens",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9320332769445043",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.83135810194525"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5672011723882493",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.64453758520776"
         }
       ],
       "total_children_count": 1,
@@ -207,16 +203,6 @@
       ],
       "triples_metadata": [
         "De Del"
-      ],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1123.jsonld#27702"
-            }
-          ]
-        }
       ]
     },
     {
@@ -224,11 +210,10 @@
       "triples": [
         {
           "http://example.com/terms#name": "De Dellekens",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9320332769445043",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.83135810194525"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5672011723882493",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.64453758520776"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1123.jsonld#24238",
         "@type": "tree:Node"
@@ -236,8 +221,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "De Dellekens",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9320332769445043",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.83135810194525"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5672011723882493",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.64453758520776"
         }
       ],
       "total_children_count": 0,
@@ -253,19 +238,17 @@
       ],
       "triples_metadata": [
         "De Dellekens"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "kt",
       "triples": [
         {
           "http://example.com/terms#name": "De Dekt",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0039934438517273",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.61109894296627"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5495632506270267",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.26126941342752"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1123.jsonld#24236",
         "@type": "tree:Node"
@@ -273,8 +256,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "De Dekt",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0039934438517273",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.61109894296627"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5495632506270267",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.26126941342752"
         }
       ],
       "total_children_count": 0,
@@ -290,8 +273,7 @@
       ],
       "triples_metadata": [
         "De Dekt"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

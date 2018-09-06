@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -25,11 +25,10 @@
       "triples": [
         {
           "http://example.com/terms#name": "Brouckhof-Oost",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.203257740148076",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.97184640492161"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3125434207812305",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.67568789979321"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1959.jsonld#49678",
         "@type": "tree:Node"
@@ -37,8 +36,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Brouckhof-Oost",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.203257740148076",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.97184640492161"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3125434207812305",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.67568789979321"
         }
       ],
       "total_children_count": 0,
@@ -54,19 +53,17 @@
       ],
       "triples_metadata": [
         "Brouckhof-Oost"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "Noord",
       "triples": [
         {
           "http://example.com/terms#name": "Brouckhof-Noord",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.149541124556442",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.542668389466655"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6504130453690435",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.80981608183933"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1959.jsonld#49678",
         "@type": "tree:Node"
@@ -74,8 +71,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Brouckhof-Noord",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.149541124556442",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.542668389466655"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6504130453690435",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.80981608183933"
         }
       ],
       "total_children_count": 0,
@@ -91,26 +88,43 @@
       ],
       "triples_metadata": [
         "Brouckhof-Noord"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "hof-",
       "triples": [],
-      "children": {
-        "Oost": [
-          "1959",
-          "47278"
-        ],
-        "Noord": [
-          "1959",
-          "47279"
-        ],
-        "Zuid": [
-          "1959",
-          "55570"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1959.jsonld#47278",
+              "@type": "tree:Node",
+              "token_string": "Oost"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1959.jsonld#47279",
+              "@type": "tree:Node",
+              "token_string": "Noord"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1959.jsonld#55570",
+              "@type": "tree:Node",
+              "token_string": "Zuid"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment348.jsonld#152700",
         "@type": "tree:Node"
@@ -118,18 +132,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Brouckhof-Oost",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.203257740148076",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.97184640492161"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3125434207812305",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.67568789979321"
         },
         {
           "http://example.com/terms#name": "Brouckhof-Noord",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.149541124556442",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.542668389466655"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6504130453690435",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.80981608183933"
         },
         {
           "http://example.com/terms#name": "Brouckhof-Zuid",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.962007448612062",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.73610478717136"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.96702024430276",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.676482332789426"
         }
       ],
       "total_children_count": 3,
@@ -155,44 +169,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1959.jsonld#47278"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1959.jsonld#47279"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1959.jsonld#55570"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "Zuid",
       "triples": [
         {
           "http://example.com/terms#name": "Brouckhof-Zuid",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.962007448612062",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.73610478717136"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.96702024430276",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.676482332789426"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1959.jsonld#49678",
         "@type": "tree:Node"
@@ -200,8 +187,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Brouckhof-Zuid",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.962007448612062",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.73610478717136"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.96702024430276",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.676482332789426"
         }
       ],
       "total_children_count": 0,
@@ -217,8 +204,7 @@
       ],
       "triples_metadata": [
         "Brouckhof-Zuid"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

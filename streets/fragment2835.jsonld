@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,16 +23,28 @@
     {
       "token_string": "em",
       "triples": [],
-      "children": {
-        "straat": [
-          "2835",
-          "57776"
-        ],
-        "poort": [
-          "2835",
-          "57777"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2835.jsonld#57776",
+              "@type": "tree:Node",
+              "token_string": "straat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2835.jsonld#57777",
+              "@type": "tree:Node",
+              "token_string": "poort"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment2835.jsonld#58204",
         "@type": "tree:Node"
@@ -40,13 +52,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Graethemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.58526533324558",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.747865849791864"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2508199666142135",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.95639276983054"
         },
         {
           "http://example.com/terms#name": "Graethempoort",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.28884918739881",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.39774216203155"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.603364861255194",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.56019349638066"
         }
       ],
       "total_children_count": 2,
@@ -66,36 +78,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2835.jsonld#57776"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2835.jsonld#57777"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "straat",
       "triples": [
         {
           "http://example.com/terms#name": "Graethemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.58526533324558",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.747865849791864"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2508199666142135",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.95639276983054"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2835.jsonld#57775",
         "@type": "tree:Node"
@@ -103,8 +96,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Graethemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.58526533324558",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.747865849791864"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2508199666142135",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.95639276983054"
         }
       ],
       "total_children_count": 0,
@@ -120,19 +113,17 @@
       ],
       "triples_metadata": [
         "Graethemstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "poort",
       "triples": [
         {
           "http://example.com/terms#name": "Graethempoort",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.28884918739881",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.39774216203155"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.603364861255194",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.56019349638066"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2835.jsonld#57775",
         "@type": "tree:Node"
@@ -140,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Graethempoort",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.28884918739881",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.39774216203155"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.603364861255194",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.56019349638066"
         }
       ],
       "total_children_count": 0,
@@ -157,28 +148,39 @@
       ],
       "triples_metadata": [
         "Graethempoort"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "h",
       "triples": [
         {
           "http://example.com/terms#name": "Graeth",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.755237712800381",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.065836503805315"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4704900629199606",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.88835468827709"
         }
       ],
-      "children": {
-        "em": [
-          "2835",
-          "57775"
-        ],
-        "molen": [
-          "2835",
-          "82247"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2835.jsonld#57775",
+              "@type": "tree:Node",
+              "token_string": "em"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2835.jsonld#82247",
+              "@type": "tree:Node",
+              "token_string": "molen"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment440.jsonld#58203",
         "@type": "tree:Node"
@@ -186,23 +188,23 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Graeth",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.755237712800381",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.065836503805315"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4704900629199606",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.88835468827709"
         },
         {
           "http://example.com/terms#name": "Graethemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.58526533324558",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.747865849791864"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2508199666142135",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.95639276983054"
         },
         {
           "http://example.com/terms#name": "Graethempoort",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.28884918739881",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.39774216203155"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.603364861255194",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.56019349638066"
         },
         {
           "http://example.com/terms#name": "Graethmolen",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4702530396178606",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.91015957703411"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0204287412605377",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.615016032502034"
         }
       ],
       "total_children_count": 4,
@@ -236,24 +238,6 @@
       ],
       "triples_metadata": [
         "Graeth"
-      ],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2835.jsonld#57775"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2835.jsonld#82247"
-            }
-          ]
-        }
       ]
     },
     {
@@ -261,11 +245,10 @@
       "triples": [
         {
           "http://example.com/terms#name": "Graethmolen",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4702530396178606",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.91015957703411"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0204287412605377",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.615016032502034"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2835.jsonld#58204",
         "@type": "tree:Node"
@@ -273,8 +256,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Graethmolen",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4702530396178606",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.91015957703411"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0204287412605377",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.615016032502034"
         }
       ],
       "total_children_count": 0,
@@ -290,8 +273,7 @@
       ],
       "triples_metadata": [
         "Graethmolen"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

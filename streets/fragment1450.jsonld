@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,16 +23,28 @@
     {
       "token_string": "k",
       "triples": [],
-      "children": {
-        "aardstraat": [
-          "1450",
-          "43627"
-        ],
-        "e": [
-          "1450",
-          "45729"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1450.jsonld#43627",
+              "@type": "tree:Node",
+              "token_string": "aardstraat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1450.jsonld#45729",
+              "@type": "tree:Node",
+              "token_string": "e"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment529.jsonld#355",
         "@type": "tree:Node"
@@ -40,23 +52,23 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Stakaardstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5622072894620542",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.90184522294569"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0319451852191084",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.660973710742"
         },
         {
           "http://example.com/terms#name": "Stakeberg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1434537416777197",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.210860885643775"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.894269925024235",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.949874591683304"
         },
         {
           "http://example.com/terms#name": "Stakendijke",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0183119623705275",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.50895030698156"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9531110641947884",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.45085185285243"
         },
         {
           "http://example.com/terms#name": "Staketselstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.777166259515557",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.757266070520174"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.397375567056",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.6116357537079"
         }
       ],
       "total_children_count": 5,
@@ -88,36 +100,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1450.jsonld#43627"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1450.jsonld#45729"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "aardstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Stakaardstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5622072894620542",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.90184522294569"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0319451852191084",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.660973710742"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1450.jsonld#43626",
         "@type": "tree:Node"
@@ -125,8 +118,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Stakaardstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5622072894620542",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.90184522294569"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0319451852191084",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.660973710742"
         }
       ],
       "total_children_count": 0,
@@ -142,26 +135,43 @@
       ],
       "triples_metadata": [
         "Stakaardstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "e",
       "triples": [],
-      "children": {
-        "berg": [
-          "1450",
-          "45730"
-        ],
-        "ndijke": [
-          "1450",
-          "45731"
-        ],
-        "tselstraat": [
-          "1450",
-          "96028"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1450.jsonld#45730",
+              "@type": "tree:Node",
+              "token_string": "berg"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1450.jsonld#45731",
+              "@type": "tree:Node",
+              "token_string": "ndijke"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1450.jsonld#96028",
+              "@type": "tree:Node",
+              "token_string": "tselstraat"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment1450.jsonld#43626",
         "@type": "tree:Node"
@@ -169,18 +179,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Stakeberg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1434537416777197",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.210860885643775"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.894269925024235",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.949874591683304"
         },
         {
           "http://example.com/terms#name": "Stakendijke",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0183119623705275",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.50895030698156"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9531110641947884",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.45085185285243"
         },
         {
           "http://example.com/terms#name": "Staketselstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.777166259515557",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.757266070520174"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.397375567056",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.6116357537079"
         }
       ],
       "total_children_count": 3,
@@ -206,44 +216,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1450.jsonld#45730"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1450.jsonld#45731"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1450.jsonld#96028"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "berg",
       "triples": [
         {
           "http://example.com/terms#name": "Stakeberg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1434537416777197",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.210860885643775"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.894269925024235",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.949874591683304"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1450.jsonld#45729",
         "@type": "tree:Node"
@@ -251,8 +234,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Stakeberg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1434537416777197",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.210860885643775"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.894269925024235",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.949874591683304"
         }
       ],
       "total_children_count": 0,
@@ -268,19 +251,17 @@
       ],
       "triples_metadata": [
         "Stakeberg"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "ndijke",
       "triples": [
         {
           "http://example.com/terms#name": "Stakendijke",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0183119623705275",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.50895030698156"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9531110641947884",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.45085185285243"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1450.jsonld#45729",
         "@type": "tree:Node"
@@ -288,8 +269,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Stakendijke",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0183119623705275",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.50895030698156"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9531110641947884",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.45085185285243"
         }
       ],
       "total_children_count": 0,
@@ -305,19 +286,17 @@
       ],
       "triples_metadata": [
         "Stakendijke"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "tselstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Staketselstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.777166259515557",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.757266070520174"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.397375567056",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.6116357537079"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1450.jsonld#45729",
         "@type": "tree:Node"
@@ -325,8 +304,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Staketselstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.777166259515557",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.757266070520174"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.397375567056",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.6116357537079"
         }
       ],
       "total_children_count": 0,
@@ -342,8 +321,7 @@
       ],
       "triples_metadata": [
         "Staketselstraat"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

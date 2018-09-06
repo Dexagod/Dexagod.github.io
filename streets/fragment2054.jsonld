@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -25,20 +25,32 @@
       "triples": [
         {
           "http://example.com/terms#name": "Eester",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.588957539172624",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.38738896522392"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6054229407112706",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.0764705475757"
         }
       ],
-      "children": {
-        "straat": [
-          "2054",
-          "58020"
-        ],
-        "bos": [
-          "2054",
-          "71320"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2054.jsonld#58020",
+              "@type": "tree:Node",
+              "token_string": "straat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2054.jsonld#71320",
+              "@type": "tree:Node",
+              "token_string": "bos"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment2055.jsonld#50248",
         "@type": "tree:Node"
@@ -46,18 +58,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Eester",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.588957539172624",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.38738896522392"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6054229407112706",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.0764705475757"
         },
         {
           "http://example.com/terms#name": "Eesterstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3898322487036654",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.584566924405635"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.462260436204915",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.00009082818805"
         },
         {
           "http://example.com/terms#name": "Eesterbos",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7775487708175",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.01658914584683"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.240200021919196",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.75877378840281"
         }
       ],
       "total_children_count": 2,
@@ -85,24 +97,6 @@
       ],
       "triples_metadata": [
         "Eester"
-      ],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2054.jsonld#58020"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2054.jsonld#71320"
-            }
-          ]
-        }
       ]
     },
     {
@@ -110,11 +104,10 @@
       "triples": [
         {
           "http://example.com/terms#name": "Eesterstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3898322487036654",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.584566924405635"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.462260436204915",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.00009082818805"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2054.jsonld#50250",
         "@type": "tree:Node"
@@ -122,8 +115,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Eesterstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3898322487036654",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.584566924405635"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.462260436204915",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.00009082818805"
         }
       ],
       "total_children_count": 0,
@@ -139,19 +132,17 @@
       ],
       "triples_metadata": [
         "Eesterstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "bos",
       "triples": [
         {
           "http://example.com/terms#name": "Eesterbos",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7775487708175",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.01658914584683"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.240200021919196",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.75877378840281"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2054.jsonld#50250",
         "@type": "tree:Node"
@@ -159,8 +150,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Eesterbos",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7775487708175",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.01658914584683"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.240200021919196",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.75877378840281"
         }
       ],
       "total_children_count": 0,
@@ -176,8 +167,7 @@
       ],
       "triples_metadata": [
         "Eesterbos"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

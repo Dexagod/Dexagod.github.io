@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,16 +23,28 @@
     {
       "token_string": "t",
       "triples": [],
-      "children": {
-        "ombestraat": [
-          "2109",
-          "77050"
-        ],
-        "ier": [
-          "2109",
-          "88657"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2109.jsonld#77050",
+              "@type": "tree:Node",
+              "token_string": "ombestraat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2109.jsonld#88657",
+              "@type": "tree:Node",
+              "token_string": "ier"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment247.jsonld#742",
         "@type": "tree:Node"
@@ -40,28 +52,28 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Bortierlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.002396054645541",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.36890990141318"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3015905249087383",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.84800920057642"
         },
         {
           "http://example.com/terms#name": "Bortierlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6916194362091836",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.713190243027015"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0658731002312476",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.829125363624556"
         },
         {
           "http://example.com/terms#name": "Bortierlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6916194362091836",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.713190243027015"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0658731002312476",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.829125363624556"
         },
         {
           "http://example.com/terms#name": "Bortombestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7073269536687037",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.16455099956656"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8687477786336077",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.482596345184106"
         },
         {
           "http://example.com/terms#name": "Bortiergalerij",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8975786758778828",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.01699952555591"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.804129947475545",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.68358705674922"
         }
       ],
       "total_children_count": 4,
@@ -89,36 +101,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2109.jsonld#77050"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2109.jsonld#88657"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "ombestraat",
       "triples": [
         {
           "http://example.com/terms#name": "Bortombestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7073269536687037",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.16455099956656"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8687477786336077",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.482596345184106"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2109.jsonld#77048",
         "@type": "tree:Node"
@@ -126,8 +119,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Bortombestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7073269536687037",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.16455099956656"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8687477786336077",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.482596345184106"
         }
       ],
       "total_children_count": 0,
@@ -143,22 +136,33 @@
       ],
       "triples_metadata": [
         "Bortombestraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "ier",
       "triples": [],
-      "children": {
-        "laan": [
-          "2109",
-          "88658"
-        ],
-        "galerij": [
-          "2109",
-          "88659"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2109.jsonld#88658",
+              "@type": "tree:Node",
+              "token_string": "laan"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2109.jsonld#88659",
+              "@type": "tree:Node",
+              "token_string": "galerij"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment2109.jsonld#77048",
         "@type": "tree:Node"
@@ -166,23 +170,23 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Bortierlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.002396054645541",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.36890990141318"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3015905249087383",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.84800920057642"
         },
         {
           "http://example.com/terms#name": "Bortierlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6916194362091836",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.713190243027015"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0658731002312476",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.829125363624556"
         },
         {
           "http://example.com/terms#name": "Bortierlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6916194362091836",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.713190243027015"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0658731002312476",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.829125363624556"
         },
         {
           "http://example.com/terms#name": "Bortiergalerij",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8975786758778828",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.01699952555591"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.804129947475545",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.68358705674922"
         }
       ],
       "total_children_count": 2,
@@ -204,46 +208,27 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2109.jsonld#88658"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2109.jsonld#88659"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "laan",
       "triples": [
         {
           "http://example.com/terms#name": "Bortierlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.002396054645541",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.36890990141318"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3015905249087383",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.84800920057642"
         },
         {
           "http://example.com/terms#name": "Bortierlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6916194362091836",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.713190243027015"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0658731002312476",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.829125363624556"
         },
         {
           "http://example.com/terms#name": "Bortierlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6916194362091836",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.713190243027015"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0658731002312476",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.829125363624556"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2109.jsonld#88657",
         "@type": "tree:Node"
@@ -251,18 +236,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Bortierlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.002396054645541",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.36890990141318"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3015905249087383",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.84800920057642"
         },
         {
           "http://example.com/terms#name": "Bortierlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6916194362091836",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.713190243027015"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0658731002312476",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.829125363624556"
         },
         {
           "http://example.com/terms#name": "Bortierlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6916194362091836",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.713190243027015"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0658731002312476",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.829125363624556"
         }
       ],
       "total_children_count": 0,
@@ -282,19 +267,17 @@
         "Bortierlaan",
         "Bortierlaan",
         "Bortierlaan"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "galerij",
       "triples": [
         {
           "http://example.com/terms#name": "Bortiergalerij",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8975786758778828",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.01699952555591"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.804129947475545",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.68358705674922"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2109.jsonld#88657",
         "@type": "tree:Node"
@@ -302,8 +285,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Bortiergalerij",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8975786758778828",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.01699952555591"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.804129947475545",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.68358705674922"
         }
       ],
       "total_children_count": 0,
@@ -319,8 +302,7 @@
       ],
       "triples_metadata": [
         "Bortiergalerij"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

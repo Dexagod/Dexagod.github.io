@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,16 +23,28 @@
     {
       "token_string": "m",
       "triples": [],
-      "children": {
-        "ierstraat": [
-          "3354",
-          "103937"
-        ],
-        "olenpad": [
-          "3354",
-          "103938"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment3354.jsonld#103937",
+              "@type": "tree:Node",
+              "token_string": "ierstraat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment3354.jsonld#103938",
+              "@type": "tree:Node",
+              "token_string": "olenpad"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment2575.jsonld#20312",
         "@type": "tree:Node"
@@ -40,13 +52,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Hogemierstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9417056075926644",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.64845643517524"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0674142797474544",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.52641944679349"
         },
         {
           "http://example.com/terms#name": "Hogemolenpad",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.593869641852172",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.84573176653961"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0852074352693455",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.54089223378102"
         }
       ],
       "total_children_count": 2,
@@ -66,36 +78,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3354.jsonld#103937"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3354.jsonld#103938"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "ierstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Hogemierstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9417056075926644",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.64845643517524"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0674142797474544",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.52641944679349"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3354.jsonld#103936",
         "@type": "tree:Node"
@@ -103,8 +96,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Hogemierstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9417056075926644",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.64845643517524"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0674142797474544",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.52641944679349"
         }
       ],
       "total_children_count": 0,
@@ -120,19 +113,17 @@
       ],
       "triples_metadata": [
         "Hogemierstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "olenpad",
       "triples": [
         {
           "http://example.com/terms#name": "Hogemolenpad",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.593869641852172",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.84573176653961"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0852074352693455",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.54089223378102"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3354.jsonld#103936",
         "@type": "tree:Node"
@@ -140,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Hogemolenpad",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.593869641852172",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.84573176653961"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0852074352693455",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.54089223378102"
         }
       ],
       "total_children_count": 0,
@@ -157,8 +148,7 @@
       ],
       "triples_metadata": [
         "Hogemolenpad"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -25,16 +25,22 @@
       "triples": [
         {
           "http://example.com/terms#name": "Le-Moulin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.132090821977081",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.76009026010326"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2825825427334165",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.20204700707788"
         }
       ],
-      "children": {
-        "-de": [
-          "6125",
-          "172685"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment6125.jsonld#172685",
+              "@type": "tree:Node",
+              "token_string": "-de"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment6126.jsonld#171911",
         "@type": "tree:Node"
@@ -42,18 +48,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Le-Moulin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.132090821977081",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.76009026010326"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2825825427334165",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.20204700707788"
         },
         {
           "http://example.com/terms#name": "Le-Moulin-des-Bois",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4686234836680496",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.84417093699564"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1072150858195413",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.0081907541843"
         },
         {
           "http://example.com/terms#name": "Le-Moulin-de-Sart-en-Fagne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9235884737611086",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.04622831529666"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5195420396226034",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.88738605831407"
         }
       ],
       "total_children_count": 3,
@@ -81,31 +87,33 @@
       ],
       "triples_metadata": [
         "Le-Moulin"
-      ],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6125.jsonld#172685"
-            }
-          ]
-        }
       ]
     },
     {
       "token_string": "-de",
       "triples": [],
-      "children": {
-        "s-Bois": [
-          "6125",
-          "172686"
-        ],
-        "-Sart-en-Fagne": [
-          "6125",
-          "172687"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment6125.jsonld#172686",
+              "@type": "tree:Node",
+              "token_string": "s-Bois"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment6125.jsonld#172687",
+              "@type": "tree:Node",
+              "token_string": "-Sart-en-Fagne"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment6125.jsonld#171913",
         "@type": "tree:Node"
@@ -113,13 +121,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Le-Moulin-des-Bois",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4686234836680496",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.84417093699564"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1072150858195413",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.0081907541843"
         },
         {
           "http://example.com/terms#name": "Le-Moulin-de-Sart-en-Fagne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9235884737611086",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.04622831529666"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5195420396226034",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.88738605831407"
         }
       ],
       "total_children_count": 2,
@@ -139,36 +147,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6125.jsonld#172686"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6125.jsonld#172687"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "s-Bois",
       "triples": [
         {
           "http://example.com/terms#name": "Le-Moulin-des-Bois",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4686234836680496",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.84417093699564"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1072150858195413",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.0081907541843"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6125.jsonld#172685",
         "@type": "tree:Node"
@@ -176,8 +165,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Le-Moulin-des-Bois",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4686234836680496",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.84417093699564"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1072150858195413",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.0081907541843"
         }
       ],
       "total_children_count": 0,
@@ -193,19 +182,17 @@
       ],
       "triples_metadata": [
         "Le-Moulin-des-Bois"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "-Sart-en-Fagne",
       "triples": [
         {
           "http://example.com/terms#name": "Le-Moulin-de-Sart-en-Fagne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9235884737611086",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.04622831529666"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5195420396226034",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.88738605831407"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6125.jsonld#172685",
         "@type": "tree:Node"
@@ -213,8 +200,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Le-Moulin-de-Sart-en-Fagne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9235884737611086",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.04622831529666"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5195420396226034",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.88738605831407"
         }
       ],
       "total_children_count": 0,
@@ -230,8 +217,7 @@
       ],
       "triples_metadata": [
         "Le-Moulin-de-Sart-en-Fagne"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

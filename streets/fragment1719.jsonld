@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -25,16 +25,22 @@
       "triples": [
         {
           "http://example.com/terms#name": "Blauwhoef",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.444315091627721",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.93797988424269"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4704703281491507",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.58215993321284"
         }
       ],
-      "children": {
-        "straat": [
-          "1719",
-          "51442"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1719.jsonld#51442",
+              "@type": "tree:Node",
+              "token_string": "straat"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment3558.jsonld#46131",
         "@type": "tree:Node"
@@ -42,13 +48,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Blauwhoef",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.444315091627721",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.93797988424269"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4704703281491507",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.58215993321284"
         },
         {
           "http://example.com/terms#name": "Blauwhoefstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.264520369433567",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.42515478364833"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4177718682532623",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.503730026816534"
         }
       ],
       "total_children_count": 1,
@@ -70,16 +76,6 @@
       ],
       "triples_metadata": [
         "Blauwhoef"
-      ],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1719.jsonld#51442"
-            }
-          ]
-        }
       ]
     },
     {
@@ -87,11 +83,10 @@
       "triples": [
         {
           "http://example.com/terms#name": "Blauwhoefstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.264520369433567",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.42515478364833"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4177718682532623",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.503730026816534"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1719.jsonld#46132",
         "@type": "tree:Node"
@@ -99,8 +94,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Blauwhoefstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.264520369433567",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.42515478364833"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4177718682532623",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.503730026816534"
         }
       ],
       "total_children_count": 0,
@@ -116,8 +111,7 @@
       ],
       "triples_metadata": [
         "Blauwhoefstraat"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

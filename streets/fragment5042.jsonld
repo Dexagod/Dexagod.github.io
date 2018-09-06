@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -25,16 +25,22 @@
       "triples": [
         {
           "http://example.com/terms#name": "Heidje",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.787495171896673",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.81881778187287"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6881708199412295",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.35658766317421"
         }
       ],
-      "children": {
-        "sstraat": [
-          "5042",
-          "75245"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment5042.jsonld#75245",
+              "@type": "tree:Node",
+              "token_string": "sstraat"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment574.jsonld#15509",
         "@type": "tree:Node"
@@ -42,13 +48,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Heidje",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.787495171896673",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.81881778187287"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6881708199412295",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.35658766317421"
         },
         {
           "http://example.com/terms#name": "Heidjesstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2196130514760823",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.68899734417592"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.915194041252557",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.386591278666415"
         }
       ],
       "total_children_count": 1,
@@ -70,16 +76,6 @@
       ],
       "triples_metadata": [
         "Heidje"
-      ],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5042.jsonld#75245"
-            }
-          ]
-        }
       ]
     },
     {
@@ -87,11 +83,10 @@
       "triples": [
         {
           "http://example.com/terms#name": "Heidjesstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2196130514760823",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.68899734417592"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.915194041252557",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.386591278666415"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5042.jsonld#69083",
         "@type": "tree:Node"
@@ -99,8 +94,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Heidjesstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2196130514760823",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.68899734417592"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.915194041252557",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.386591278666415"
         }
       ],
       "total_children_count": 0,
@@ -116,8 +111,7 @@
       ],
       "triples_metadata": [
         "Heidjesstraat"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

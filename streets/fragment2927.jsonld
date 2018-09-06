@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -25,20 +25,32 @@
       "triples": [
         {
           "http://example.com/terms#name": "Keizel",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.773020248113262",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.71094003269281"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3136449969458623",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.10641625168962"
         }
       ],
-      "children": {
-        "bergstraat": [
-          "2927",
-          "85060"
-        ],
-        "aarstraat": [
-          "2927",
-          "95694"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2927.jsonld#85060",
+              "@type": "tree:Node",
+              "token_string": "bergstraat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2927.jsonld#95694",
+              "@type": "tree:Node",
+              "token_string": "aarstraat"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment770.jsonld#35163",
         "@type": "tree:Node"
@@ -46,18 +58,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Keizel",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.773020248113262",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.71094003269281"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3136449969458623",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.10641625168962"
         },
         {
           "http://example.com/terms#name": "Keizelbergstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2042543646500414",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.91381892601829"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3084638861460514",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.906212788844066"
         },
         {
           "http://example.com/terms#name": "Keizelaarstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.217316213048774",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.9997970265003"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4288845055597164",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.831129109635434"
         }
       ],
       "total_children_count": 2,
@@ -85,24 +97,6 @@
       ],
       "triples_metadata": [
         "Keizel"
-      ],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2927.jsonld#85060"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2927.jsonld#95694"
-            }
-          ]
-        }
       ]
     },
     {
@@ -110,11 +104,10 @@
       "triples": [
         {
           "http://example.com/terms#name": "Keizelbergstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2042543646500414",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.91381892601829"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3084638861460514",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.906212788844066"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2927.jsonld#35165",
         "@type": "tree:Node"
@@ -122,8 +115,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Keizelbergstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2042543646500414",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.91381892601829"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3084638861460514",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.906212788844066"
         }
       ],
       "total_children_count": 0,
@@ -139,19 +132,17 @@
       ],
       "triples_metadata": [
         "Keizelbergstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "aarstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Keizelaarstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.217316213048774",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.9997970265003"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4288845055597164",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.831129109635434"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2927.jsonld#35165",
         "@type": "tree:Node"
@@ -159,8 +150,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Keizelaarstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.217316213048774",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.9997970265003"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4288845055597164",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.831129109635434"
         }
       ],
       "total_children_count": 0,
@@ -176,8 +167,7 @@
       ],
       "triples_metadata": [
         "Keizelaarstraat"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

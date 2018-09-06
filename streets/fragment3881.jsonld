@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,16 +23,28 @@
     {
       "token_string": "2",
       "triples": [],
-      "children": {
-        "-Sociétés-Nationales": [
-          "3881",
-          "109197"
-        ],
-        " ": [
-          "3881",
-          "170523"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment3881.jsonld#109197",
+              "@type": "tree:Node",
+              "token_string": "-Sociétés-Nationales"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment3881.jsonld#170523",
+              "@type": "tree:Node",
+              "token_string": " "
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment3744.jsonld#178523",
         "@type": "tree:Node"
@@ -40,23 +52,23 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue des 2 Places",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.29489686113339",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.82449055764588"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4577957817532847",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.48671450964812"
         },
         {
           "http://example.com/terms#name": "Rue des 2-Sociétés-Nationales",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.169661925425535",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.66011219095653"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.252525050152494",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.80851588596006"
         },
         {
           "http://example.com/terms#name": "Rue des 2 Auvelais",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9927461244525184",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.89957505313275"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0198686490284907",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.56395586791219"
         },
         {
           "http://example.com/terms#name": "Rue des 2 Puissances",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.098870832177041",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.93127872462227"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2201878616081525",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.81684931504132"
         }
       ],
       "total_children_count": 6,
@@ -88,36 +100,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3881.jsonld#109197"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3881.jsonld#170523"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "-Sociétés-Nationales",
       "triples": [
         {
           "http://example.com/terms#name": "Rue des 2-Sociétés-Nationales",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.169661925425535",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.66011219095653"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.252525050152494",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.80851588596006"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3881.jsonld#109195",
         "@type": "tree:Node"
@@ -125,8 +118,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue des 2-Sociétés-Nationales",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.169661925425535",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.66011219095653"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.252525050152494",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.80851588596006"
         }
       ],
       "total_children_count": 0,
@@ -142,22 +135,33 @@
       ],
       "triples_metadata": [
         "Rue des 2-Sociétés-Nationales"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": " ",
       "triples": [],
-      "children": {
-        "Auvelais": [
-          "3881",
-          "170525"
-        ],
-        "P": [
-          "3881",
-          "170526"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment3881.jsonld#170525",
+              "@type": "tree:Node",
+              "token_string": "Auvelais"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment3881.jsonld#170526",
+              "@type": "tree:Node",
+              "token_string": "P"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment3881.jsonld#109195",
         "@type": "tree:Node"
@@ -165,18 +169,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue des 2 Places",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.29489686113339",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.82449055764588"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4577957817532847",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.48671450964812"
         },
         {
           "http://example.com/terms#name": "Rue des 2 Auvelais",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9927461244525184",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.89957505313275"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0198686490284907",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.56395586791219"
         },
         {
           "http://example.com/terms#name": "Rue des 2 Puissances",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.098870832177041",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.93127872462227"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2201878616081525",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.81684931504132"
         }
       ],
       "total_children_count": 4,
@@ -202,36 +206,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3881.jsonld#170525"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3881.jsonld#170526"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "Auvelais",
       "triples": [
         {
           "http://example.com/terms#name": "Rue des 2 Auvelais",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9927461244525184",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.89957505313275"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0198686490284907",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.56395586791219"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3881.jsonld#170523",
         "@type": "tree:Node"
@@ -239,8 +224,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue des 2 Auvelais",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9927461244525184",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.89957505313275"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0198686490284907",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.56395586791219"
         }
       ],
       "total_children_count": 0,
@@ -256,22 +241,33 @@
       ],
       "triples_metadata": [
         "Rue des 2 Auvelais"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "P",
       "triples": [],
-      "children": {
-        "laces": [
-          "3881",
-          "170527"
-        ],
-        "uissances": [
-          "3881",
-          "170528"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment3881.jsonld#170527",
+              "@type": "tree:Node",
+              "token_string": "laces"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment3881.jsonld#170528",
+              "@type": "tree:Node",
+              "token_string": "uissances"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment3881.jsonld#170523",
         "@type": "tree:Node"
@@ -279,13 +275,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue des 2 Places",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.29489686113339",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.82449055764588"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4577957817532847",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.48671450964812"
         },
         {
           "http://example.com/terms#name": "Rue des 2 Puissances",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.098870832177041",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.93127872462227"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2201878616081525",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.81684931504132"
         }
       ],
       "total_children_count": 2,
@@ -305,36 +301,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3881.jsonld#170527"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3881.jsonld#170528"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "laces",
       "triples": [
         {
           "http://example.com/terms#name": "Rue des 2 Places",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.29489686113339",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.82449055764588"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4577957817532847",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.48671450964812"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3881.jsonld#170526",
         "@type": "tree:Node"
@@ -342,8 +319,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue des 2 Places",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.29489686113339",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.82449055764588"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4577957817532847",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.48671450964812"
         }
       ],
       "total_children_count": 0,
@@ -359,19 +336,17 @@
       ],
       "triples_metadata": [
         "Rue des 2 Places"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "uissances",
       "triples": [
         {
           "http://example.com/terms#name": "Rue des 2 Puissances",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.098870832177041",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.93127872462227"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2201878616081525",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.81684931504132"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3881.jsonld#170526",
         "@type": "tree:Node"
@@ -379,8 +354,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue des 2 Puissances",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.098870832177041",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.93127872462227"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2201878616081525",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.81684931504132"
         }
       ],
       "total_children_count": 0,
@@ -396,8 +371,7 @@
       ],
       "triples_metadata": [
         "Rue des 2 Puissances"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

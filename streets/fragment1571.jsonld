@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,16 +23,28 @@
     {
       "token_string": "T",
       "triples": [],
-      "children": {
-        "ermotestraat": [
-          "1571",
-          "34245"
-        ],
-        "ilemansstraat": [
-          "1571",
-          "34246"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1571.jsonld#34245",
+              "@type": "tree:Node",
+              "token_string": "ermotestraat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1571.jsonld#34246",
+              "@type": "tree:Node",
+              "token_string": "ilemansstraat"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment1029.jsonld#12277",
         "@type": "tree:Node"
@@ -40,13 +52,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Pastoor Termotestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8982348018993753",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.20122529084111"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3720141227455978",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.64313674598827"
         },
         {
           "http://example.com/terms#name": "Pastoor Tilemansstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.441809100692609",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.01515929541543"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.529863526796901",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.236688632364775"
         }
       ],
       "total_children_count": 2,
@@ -66,36 +78,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1571.jsonld#34245"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1571.jsonld#34246"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "ermotestraat",
       "triples": [
         {
           "http://example.com/terms#name": "Pastoor Termotestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8982348018993753",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.20122529084111"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3720141227455978",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.64313674598827"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1571.jsonld#34244",
         "@type": "tree:Node"
@@ -103,8 +96,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Pastoor Termotestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8982348018993753",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.20122529084111"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3720141227455978",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.64313674598827"
         }
       ],
       "total_children_count": 0,
@@ -120,19 +113,17 @@
       ],
       "triples_metadata": [
         "Pastoor Termotestraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "ilemansstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Pastoor Tilemansstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.441809100692609",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.01515929541543"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.529863526796901",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.236688632364775"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1571.jsonld#34244",
         "@type": "tree:Node"
@@ -140,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Pastoor Tilemansstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.441809100692609",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.01515929541543"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.529863526796901",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.236688632364775"
         }
       ],
       "total_children_count": 0,
@@ -157,8 +148,7 @@
       ],
       "triples_metadata": [
         "Pastoor Tilemansstraat"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -25,11 +25,10 @@
       "triples": [
         {
           "http://example.com/terms#name": "Rue Commandant Ramoisiaux",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6224061199747926",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.07826775961292"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0856114573777185",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.683688108546015"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5335.jsonld#165552",
         "@type": "tree:Node"
@@ -37,8 +36,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Commandant Ramoisiaux",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6224061199747926",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.07826775961292"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0856114573777185",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.683688108546015"
         }
       ],
       "total_children_count": 0,
@@ -54,19 +53,17 @@
       ],
       "triples_metadata": [
         "Rue Commandant Ramoisiaux"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "Lemaire",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Commandant Lemaire",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.493652611334648",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.19293627163376"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0145542118038353",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.31525431870559"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5335.jsonld#165552",
         "@type": "tree:Node"
@@ -74,8 +71,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Commandant Lemaire",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.493652611334648",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.19293627163376"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0145542118038353",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.31525431870559"
         }
       ],
       "total_children_count": 0,
@@ -91,22 +88,33 @@
       ],
       "triples_metadata": [
         "Rue Commandant Lemaire"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "C",
       "triples": [],
-      "children": {
-        "huillet": [
-          "5335",
-          "135228"
-        ],
-        "alonne": [
-          "5335",
-          "135229"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment5335.jsonld#135228",
+              "@type": "tree:Node",
+              "token_string": "huillet"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment5335.jsonld#135229",
+              "@type": "tree:Node",
+              "token_string": "alonne"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment5335.jsonld#165552",
         "@type": "tree:Node"
@@ -114,13 +122,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Commandant Chuillet",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.444669931016942",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.67911677354759"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5170958513281376",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.98964103278577"
         },
         {
           "http://example.com/terms#name": "Rue Commandant Calonne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4924212549160067",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.45383136699599"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.641831821529757",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.251577092214234"
         }
       ],
       "total_children_count": 2,
@@ -140,36 +148,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5335.jsonld#135228"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5335.jsonld#135229"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "huillet",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Commandant Chuillet",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.444669931016942",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.67911677354759"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5170958513281376",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.98964103278577"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5335.jsonld#135227",
         "@type": "tree:Node"
@@ -177,8 +166,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Commandant Chuillet",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.444669931016942",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.67911677354759"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5170958513281376",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.98964103278577"
         }
       ],
       "total_children_count": 0,
@@ -194,19 +183,17 @@
       ],
       "triples_metadata": [
         "Rue Commandant Chuillet"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "alonne",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Commandant Calonne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4924212549160067",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.45383136699599"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.641831821529757",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.251577092214234"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5335.jsonld#135227",
         "@type": "tree:Node"
@@ -214,8 +201,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Commandant Calonne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4924212549160067",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.45383136699599"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.641831821529757",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.251577092214234"
         }
       ],
       "total_children_count": 0,
@@ -231,44 +218,42 @@
       ],
       "triples_metadata": [
         "Rue Commandant Calonne"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "Naessens",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Commandant Naessens",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1633511940893193",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.46403017861208"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5462656668091976",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.174728218086045"
         },
         {
           "http://example.com/terms#name": "Rue Commandant Naessens",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4326156464472697",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.03566422303404"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5096928922013",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.30108973072868"
         },
         {
           "http://example.com/terms#name": "Rue Commandant Naessens",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4326156464472697",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.03566422303404"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5096928922013",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.30108973072868"
         },
         {
           "http://example.com/terms#name": "Rue Commandant Naessens",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4326156464472697",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.03566422303404"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5096928922013",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.30108973072868"
         },
         {
           "http://example.com/terms#name": "Rue Commandant Naessens",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4326156464472697",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.03566422303404"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5096928922013",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.30108973072868"
         },
         {
           "http://example.com/terms#name": "Rue Commandant Naessens",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4326156464472697",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.03566422303404"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5096928922013",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.30108973072868"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5335.jsonld#165552",
         "@type": "tree:Node"
@@ -276,33 +261,33 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Commandant Naessens",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1633511940893193",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.46403017861208"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5462656668091976",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.174728218086045"
         },
         {
           "http://example.com/terms#name": "Rue Commandant Naessens",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4326156464472697",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.03566422303404"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5096928922013",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.30108973072868"
         },
         {
           "http://example.com/terms#name": "Rue Commandant Naessens",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4326156464472697",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.03566422303404"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5096928922013",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.30108973072868"
         },
         {
           "http://example.com/terms#name": "Rue Commandant Naessens",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4326156464472697",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.03566422303404"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5096928922013",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.30108973072868"
         },
         {
           "http://example.com/terms#name": "Rue Commandant Naessens",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4326156464472697",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.03566422303404"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5096928922013",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.30108973072868"
         },
         {
           "http://example.com/terms#name": "Rue Commandant Naessens",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4326156464472697",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.03566422303404"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5096928922013",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.30108973072868"
         }
       ],
       "total_children_count": 0,
@@ -328,19 +313,17 @@
         "Rue Commandant Naessens",
         "Rue Commandant Naessens",
         "Rue Commandant Naessens"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "Duchêne",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Commandant Duchêne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1314167868221654",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.70370025378236"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8616473016829436",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.30263688979642"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5335.jsonld#165552",
         "@type": "tree:Node"
@@ -348,8 +331,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Commandant Duchêne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1314167868221654",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.70370025378236"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8616473016829436",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.30263688979642"
         }
       ],
       "total_children_count": 0,
@@ -365,19 +348,17 @@
       ],
       "triples_metadata": [
         "Rue Commandant Duchêne"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "de Menten",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Commandant de Menten",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.522965814283852",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.54279467271678"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3686278120195543",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.33664704122068"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5335.jsonld#165552",
         "@type": "tree:Node"
@@ -385,8 +366,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Commandant de Menten",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.522965814283852",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.54279467271678"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3686278120195543",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.33664704122068"
         }
       ],
       "total_children_count": 0,
@@ -402,22 +383,33 @@
       ],
       "triples_metadata": [
         "Rue Commandant de Menten"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "andant",
       "triples": [],
-      "children": {
-        " ": [
-          "5335",
-          "165552"
-        ],
-        "-": [
-          "5335",
-          "172030"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment5335.jsonld#165552",
+              "@type": "tree:Node",
+              "token_string": " "
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment5335.jsonld#172030",
+              "@type": "tree:Node",
+              "token_string": "-"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment6044.jsonld#121819",
         "@type": "tree:Node"
@@ -425,78 +417,78 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Commandant Chuillet",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.444669931016942",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.67911677354759"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5170958513281376",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.98964103278577"
         },
         {
           "http://example.com/terms#name": "Rue Commandant Ramoisiaux",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6224061199747926",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.07826775961292"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0856114573777185",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.683688108546015"
         },
         {
           "http://example.com/terms#name": "Rue Commandant Lemaire",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.493652611334648",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.19293627163376"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0145542118038353",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.31525431870559"
         },
         {
           "http://example.com/terms#name": "Rue Commandant Calonne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4924212549160067",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.45383136699599"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.641831821529757",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.251577092214234"
         },
         {
           "http://example.com/terms#name": "Rue Commandant Naessens",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1633511940893193",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.46403017861208"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5462656668091976",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.174728218086045"
         },
         {
           "http://example.com/terms#name": "Rue Commandant Naessens",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4326156464472697",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.03566422303404"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5096928922013",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.30108973072868"
         },
         {
           "http://example.com/terms#name": "Rue Commandant Naessens",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4326156464472697",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.03566422303404"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5096928922013",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.30108973072868"
         },
         {
           "http://example.com/terms#name": "Rue Commandant Naessens",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4326156464472697",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.03566422303404"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5096928922013",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.30108973072868"
         },
         {
           "http://example.com/terms#name": "Rue Commandant Naessens",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4326156464472697",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.03566422303404"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5096928922013",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.30108973072868"
         },
         {
           "http://example.com/terms#name": "Rue Commandant Naessens",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4326156464472697",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.03566422303404"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5096928922013",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.30108973072868"
         },
         {
           "http://example.com/terms#name": "Rue Commandant Duchêne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1314167868221654",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.70370025378236"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8616473016829436",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.30263688979642"
         },
         {
           "http://example.com/terms#name": "Rue Commandant de Menten",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.522965814283852",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.54279467271678"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3686278120195543",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.33664704122068"
         },
         {
           "http://example.com/terms#name": "Rue Commandant Materne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7624014073213066",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.79210945892899"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.968673102320997",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.10274318314942"
         },
         {
           "http://example.com/terms#name": "Rue Commandant Tilot",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2082390084062102",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.74852195707381"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4201785054427",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.68206542174449"
         },
         {
           "http://example.com/terms#name": "Rue Commandant-Alliot",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.800885321258111",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.98099467072784"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.092118324346314",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.67456576814348"
         }
       ],
       "total_children_count": 14,
@@ -569,13 +561,19 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
+      "triples_metadata": []
+    },
+    {
+      "token_string": " ",
+      "triples": [],
+      "children": [
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
             {
-              "@id": "/streets/fragment5335.jsonld#165552"
+              "@id": "/streets/fragment5335.jsonld#113270",
+              "@type": "tree:Node",
+              "token_string": "Ramoisiaux"
             }
           ]
         },
@@ -583,49 +581,73 @@
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
             {
-              "@id": "/streets/fragment5335.jsonld#172030"
+              "@id": "/streets/fragment5335.jsonld#125866",
+              "@type": "tree:Node",
+              "token_string": "Lemaire"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment5335.jsonld#135227",
+              "@type": "tree:Node",
+              "token_string": "C"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment5335.jsonld#140426",
+              "@type": "tree:Node",
+              "token_string": "Naessens"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment5335.jsonld#142729",
+              "@type": "tree:Node",
+              "token_string": "Duchêne"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment5335.jsonld#149581",
+              "@type": "tree:Node",
+              "token_string": "de Menten"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment5335.jsonld#168595",
+              "@type": "tree:Node",
+              "token_string": "Materne"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment5335.jsonld#168596",
+              "@type": "tree:Node",
+              "token_string": "Tilot"
             }
           ]
         }
-      ]
-    },
-    {
-      "token_string": " ",
-      "triples": [],
-      "children": {
-        "Ramoisiaux": [
-          "5335",
-          "113270"
-        ],
-        "Lemaire": [
-          "5335",
-          "125866"
-        ],
-        "C": [
-          "5335",
-          "135227"
-        ],
-        "Naessens": [
-          "5335",
-          "140426"
-        ],
-        "Duchêne": [
-          "5335",
-          "142729"
-        ],
-        "de Menten": [
-          "5335",
-          "149581"
-        ],
-        "Materne": [
-          "5335",
-          "168595"
-        ],
-        "Tilot": [
-          "5335",
-          "168596"
-        ]
-      },
+      ],
       "parent_node": {
         "@id": "/streets/fragment5335.jsonld#165551",
         "@type": "tree:Node"
@@ -633,73 +655,73 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Commandant Chuillet",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.444669931016942",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.67911677354759"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5170958513281376",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.98964103278577"
         },
         {
           "http://example.com/terms#name": "Rue Commandant Ramoisiaux",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6224061199747926",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.07826775961292"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0856114573777185",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.683688108546015"
         },
         {
           "http://example.com/terms#name": "Rue Commandant Lemaire",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.493652611334648",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.19293627163376"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0145542118038353",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.31525431870559"
         },
         {
           "http://example.com/terms#name": "Rue Commandant Calonne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4924212549160067",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.45383136699599"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.641831821529757",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.251577092214234"
         },
         {
           "http://example.com/terms#name": "Rue Commandant Naessens",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1633511940893193",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.46403017861208"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5462656668091976",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.174728218086045"
         },
         {
           "http://example.com/terms#name": "Rue Commandant Naessens",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4326156464472697",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.03566422303404"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5096928922013",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.30108973072868"
         },
         {
           "http://example.com/terms#name": "Rue Commandant Naessens",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4326156464472697",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.03566422303404"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5096928922013",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.30108973072868"
         },
         {
           "http://example.com/terms#name": "Rue Commandant Naessens",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4326156464472697",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.03566422303404"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5096928922013",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.30108973072868"
         },
         {
           "http://example.com/terms#name": "Rue Commandant Naessens",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4326156464472697",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.03566422303404"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5096928922013",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.30108973072868"
         },
         {
           "http://example.com/terms#name": "Rue Commandant Naessens",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4326156464472697",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.03566422303404"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5096928922013",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.30108973072868"
         },
         {
           "http://example.com/terms#name": "Rue Commandant Duchêne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1314167868221654",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.70370025378236"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8616473016829436",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.30263688979642"
         },
         {
           "http://example.com/terms#name": "Rue Commandant de Menten",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.522965814283852",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.54279467271678"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3686278120195543",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.33664704122068"
         },
         {
           "http://example.com/terms#name": "Rue Commandant Materne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7624014073213066",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.79210945892899"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.968673102320997",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.10274318314942"
         },
         {
           "http://example.com/terms#name": "Rue Commandant Tilot",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2082390084062102",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.74852195707381"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4201785054427",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.68206542174449"
         }
       ],
       "total_children_count": 10,
@@ -766,84 +788,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5335.jsonld#113270"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5335.jsonld#125866"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5335.jsonld#135227"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5335.jsonld#140426"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5335.jsonld#142729"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5335.jsonld#149581"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5335.jsonld#168595"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5335.jsonld#168596"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "Materne",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Commandant Materne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7624014073213066",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.79210945892899"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.968673102320997",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.10274318314942"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5335.jsonld#165552",
         "@type": "tree:Node"
@@ -851,8 +806,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Commandant Materne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7624014073213066",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.79210945892899"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.968673102320997",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.10274318314942"
         }
       ],
       "total_children_count": 0,
@@ -868,19 +823,17 @@
       ],
       "triples_metadata": [
         "Rue Commandant Materne"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "Tilot",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Commandant Tilot",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2082390084062102",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.74852195707381"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4201785054427",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.68206542174449"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5335.jsonld#165552",
         "@type": "tree:Node"
@@ -888,8 +841,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Commandant Tilot",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2082390084062102",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.74852195707381"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4201785054427",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.68206542174449"
         }
       ],
       "total_children_count": 0,
@@ -905,22 +858,33 @@
       ],
       "triples_metadata": [
         "Rue Commandant Tilot"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "-",
       "triples": [],
-      "children": {
-        "Royon": [
-          "5335",
-          "172031"
-        ],
-        "Alliot": [
-          "5335",
-          "172032"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment5335.jsonld#172031",
+              "@type": "tree:Node",
+              "token_string": "Royon"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment5335.jsonld#172032",
+              "@type": "tree:Node",
+              "token_string": "Alliot"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment5335.jsonld#165551",
         "@type": "tree:Node"
@@ -928,13 +892,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Commandant-Royon",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.058183669974881",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.67166121348983"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.003237422161261",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.80598275524724"
         },
         {
           "http://example.com/terms#name": "Rue Commandant-Alliot",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.800885321258111",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.98099467072784"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.092118324346314",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.67456576814348"
         }
       ],
       "total_children_count": 2,
@@ -954,36 +918,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5335.jsonld#172031"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment5335.jsonld#172032"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "Royon",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Commandant-Royon",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.058183669974881",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.67166121348983"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.003237422161261",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.80598275524724"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5335.jsonld#172030",
         "@type": "tree:Node"
@@ -991,8 +936,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Commandant-Royon",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.058183669974881",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.67166121348983"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.003237422161261",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.80598275524724"
         }
       ],
       "total_children_count": 0,
@@ -1008,19 +953,17 @@
       ],
       "triples_metadata": [
         "Rue Commandant-Royon"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "Alliot",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Commandant-Alliot",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.800885321258111",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.98099467072784"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.092118324346314",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.67456576814348"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment5335.jsonld#172030",
         "@type": "tree:Node"
@@ -1028,8 +971,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Commandant-Alliot",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.800885321258111",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.98099467072784"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.092118324346314",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.67456576814348"
         }
       ],
       "total_children_count": 0,
@@ -1045,8 +988,7 @@
       ],
       "triples_metadata": [
         "Rue Commandant-Alliot"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

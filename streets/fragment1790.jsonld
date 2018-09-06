@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,16 +23,28 @@
     {
       "token_string": "g",
       "triples": [],
-      "children": {
-        "hermansstraat": [
-          "1790",
-          "79018"
-        ],
-        "astraat": [
-          "1790",
-          "79019"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1790.jsonld#79018",
+              "@type": "tree:Node",
+              "token_string": "hermansstraat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1790.jsonld#79019",
+              "@type": "tree:Node",
+              "token_string": "astraat"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment75.jsonld#1483",
         "@type": "tree:Node"
@@ -40,13 +52,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Saghermansstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.302385103940118",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.537690209774155"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7906883641177553",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.5587932397638"
         },
         {
           "http://example.com/terms#name": "Sagastraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.106873716579043",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.17260706194741"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.313810193524675",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.6888199584197"
         }
       ],
       "total_children_count": 2,
@@ -66,36 +78,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1790.jsonld#79018"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1790.jsonld#79019"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "hermansstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Saghermansstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.302385103940118",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.537690209774155"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7906883641177553",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.5587932397638"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1790.jsonld#79017",
         "@type": "tree:Node"
@@ -103,8 +96,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Saghermansstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.302385103940118",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.537690209774155"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7906883641177553",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.5587932397638"
         }
       ],
       "total_children_count": 0,
@@ -120,19 +113,17 @@
       ],
       "triples_metadata": [
         "Saghermansstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "astraat",
       "triples": [
         {
           "http://example.com/terms#name": "Sagastraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.106873716579043",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.17260706194741"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.313810193524675",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.6888199584197"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1790.jsonld#79017",
         "@type": "tree:Node"
@@ -140,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Sagastraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.106873716579043",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.17260706194741"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.313810193524675",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.6888199584197"
         }
       ],
       "total_children_count": 0,
@@ -157,8 +148,7 @@
       ],
       "triples_metadata": [
         "Sagastraat"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,20 +23,38 @@
     {
       "token_string": "b",
       "triples": [],
-      "children": {
-        "ekestraat": [
-          "3483",
-          "2314"
-        ],
-        "beke": [
-          "3483",
-          "2315"
-        ],
-        "lonecstraat": [
-          "3483",
-          "7143"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment3483.jsonld#2314",
+              "@type": "tree:Node",
+              "token_string": "ekestraat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment3483.jsonld#2315",
+              "@type": "tree:Node",
+              "token_string": "beke"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment3483.jsonld#7143",
+              "@type": "tree:Node",
+              "token_string": "lonecstraat"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment191.jsonld#929",
         "@type": "tree:Node"
@@ -44,23 +62,23 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Jabekestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9280524315386174",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.34844903675243"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4792625082679343",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.71120483733065"
         },
         {
           "http://example.com/terms#name": "Jabbeke",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.971816014659827",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.09114235657233"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.546156554529373",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.299050147131844"
         },
         {
           "http://example.com/terms#name": "Jablonecstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0034250247570053",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.83429987565001"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4772916033521546",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.021477687911954"
         },
         {
           "http://example.com/terms#name": "Jabbekestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3224310471090917",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.79413212130337"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6495782599373143",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.532521654004796"
         }
       ],
       "total_children_count": 4,
@@ -92,44 +110,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3483.jsonld#2314"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3483.jsonld#2315"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3483.jsonld#7143"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "ekestraat",
       "triples": [
         {
           "http://example.com/terms#name": "Jabekestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9280524315386174",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.34844903675243"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4792625082679343",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.71120483733065"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3483.jsonld#2313",
         "@type": "tree:Node"
@@ -137,8 +128,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Jabekestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9280524315386174",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.34844903675243"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4792625082679343",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.71120483733065"
         }
       ],
       "total_children_count": 0,
@@ -154,24 +145,29 @@
       ],
       "triples_metadata": [
         "Jabekestraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "beke",
       "triples": [
         {
           "http://example.com/terms#name": "Jabbeke",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.971816014659827",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.09114235657233"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.546156554529373",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.299050147131844"
         }
       ],
-      "children": {
-        "straat": [
-          "3483",
-          "63849"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment3483.jsonld#63849",
+              "@type": "tree:Node",
+              "token_string": "straat"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment3483.jsonld#2313",
         "@type": "tree:Node"
@@ -179,13 +175,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Jabbeke",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.971816014659827",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.09114235657233"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.546156554529373",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.299050147131844"
         },
         {
           "http://example.com/terms#name": "Jabbekestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3224310471090917",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.79413212130337"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6495782599373143",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.532521654004796"
         }
       ],
       "total_children_count": 1,
@@ -207,16 +203,6 @@
       ],
       "triples_metadata": [
         "Jabbeke"
-      ],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3483.jsonld#63849"
-            }
-          ]
-        }
       ]
     },
     {
@@ -224,11 +210,10 @@
       "triples": [
         {
           "http://example.com/terms#name": "Jablonecstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0034250247570053",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.83429987565001"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4772916033521546",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.021477687911954"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3483.jsonld#2313",
         "@type": "tree:Node"
@@ -236,8 +221,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Jablonecstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0034250247570053",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.83429987565001"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4772916033521546",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.021477687911954"
         }
       ],
       "total_children_count": 0,
@@ -253,19 +238,17 @@
       ],
       "triples_metadata": [
         "Jablonecstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "straat",
       "triples": [
         {
           "http://example.com/terms#name": "Jabbekestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3224310471090917",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.79413212130337"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6495782599373143",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.532521654004796"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3483.jsonld#2315",
         "@type": "tree:Node"
@@ -273,8 +256,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Jabbekestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3224310471090917",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.79413212130337"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6495782599373143",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.532521654004796"
         }
       ],
       "total_children_count": 0,
@@ -290,8 +273,7 @@
       ],
       "triples_metadata": [
         "Jabbekestraat"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

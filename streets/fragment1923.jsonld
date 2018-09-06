@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -25,16 +25,22 @@
       "triples": [
         {
           "http://example.com/terms#name": "Elyzeese Velden",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0460911948754745",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.27755953682116"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9785645574685837",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.53990244705777"
         }
       ],
-      "children": {
-        "straat": [
-          "1923",
-          "91282"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1923.jsonld#91282",
+              "@type": "tree:Node",
+              "token_string": "straat"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment100.jsonld#798",
         "@type": "tree:Node"
@@ -42,13 +48,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Elyzeese Velden",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0460911948754745",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.27755953682116"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9785645574685837",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.53990244705777"
         },
         {
           "http://example.com/terms#name": "Elyzeese Veldenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.203933608283887",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.7637260797563"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5510737508565775",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.51493591704523"
         }
       ],
       "total_children_count": 1,
@@ -70,16 +76,6 @@
       ],
       "triples_metadata": [
         "Elyzeese Velden"
-      ],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1923.jsonld#91282"
-            }
-          ]
-        }
       ]
     },
     {
@@ -87,11 +83,10 @@
       "triples": [
         {
           "http://example.com/terms#name": "Elyzeese Veldenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.203933608283887",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.7637260797563"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5510737508565775",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.51493591704523"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1923.jsonld#48912",
         "@type": "tree:Node"
@@ -99,8 +94,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Elyzeese Veldenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.203933608283887",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.7637260797563"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5510737508565775",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.51493591704523"
         }
       ],
       "total_children_count": 0,
@@ -116,8 +111,7 @@
       ],
       "triples_metadata": [
         "Elyzeese Veldenstraat"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -25,11 +25,10 @@
       "triples": [
         {
           "http://example.com/terms#name": "Dottenijseweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2657224164149374",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.163516159084516"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.46697651911304",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.66272401682364"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2127.jsonld#97239",
         "@type": "tree:Node"
@@ -37,8 +36,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Dottenijseweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2657224164149374",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.163516159084516"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.46697651911304",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.66272401682364"
         }
       ],
       "total_children_count": 0,
@@ -54,19 +53,17 @@
       ],
       "triples_metadata": [
         "Dottenijseweg"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "straat",
       "triples": [
         {
           "http://example.com/terms#name": "Dottenijsestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2477541096290916",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.63566831968852"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.547833703431492",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.83368739389933"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2127.jsonld#97239",
         "@type": "tree:Node"
@@ -74,8 +71,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Dottenijsestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2477541096290916",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.63566831968852"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.547833703431492",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.83368739389933"
         }
       ],
       "total_children_count": 0,
@@ -91,19 +88,17 @@
       ],
       "triples_metadata": [
         "Dottenijsestraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "straat",
       "triples": [
         {
           "http://example.com/terms#name": "Dottestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8282448790164514",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.74100872008218"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1127552758872454",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.20163123880924"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2127.jsonld#74931",
         "@type": "tree:Node"
@@ -111,8 +106,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Dottestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8282448790164514",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.74100872008218"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1127552758872454",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.20163123880924"
         }
       ],
       "total_children_count": 0,
@@ -128,28 +123,39 @@
       ],
       "triples_metadata": [
         "Dottestraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "rbloem",
       "triples": [
         {
           "http://example.com/terms#name": "Dotterbloem",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9422616930760266",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.47547356795205"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4168718016137314",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.20798313543655"
         }
       ],
-      "children": {
-        "straat": [
-          "2127",
-          "72387"
-        ],
-        "weg": [
-          "2127",
-          "77144"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2127.jsonld#72387",
+              "@type": "tree:Node",
+              "token_string": "straat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2127.jsonld#77144",
+              "@type": "tree:Node",
+              "token_string": "weg"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment2127.jsonld#74931",
         "@type": "tree:Node"
@@ -157,53 +163,53 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Dotterbloemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.227755792560847",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.08067348055549"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7861030573298793",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.320865888068404"
         },
         {
           "http://example.com/terms#name": "Dotterbloemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.026195542228061",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.64936252518162"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6078397693317243",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.063881049745426"
         },
         {
           "http://example.com/terms#name": "Dotterbloemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.026195542228061",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.64936252518162"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6078397693317243",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.063881049745426"
         },
         {
           "http://example.com/terms#name": "Dotterbloemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.026195542228061",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.64936252518162"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6078397693317243",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.063881049745426"
         },
         {
           "http://example.com/terms#name": "Dotterbloemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3803310116137166",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.3889073082138"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0468911794090445",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.03433426417201"
         },
         {
           "http://example.com/terms#name": "Dotterbloemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3803310116137166",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.3889073082138"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0468911794090445",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.03433426417201"
         },
         {
           "http://example.com/terms#name": "Dotterbloemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5050227739686366",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.58936533707734"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.627312756472494",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.73010789912794"
         },
         {
           "http://example.com/terms#name": "Dotterbloemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5764541327323713",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.5236066832506"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0779932954299025",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.67088337171905"
         },
         {
           "http://example.com/terms#name": "Dotterbloem",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9422616930760266",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.47547356795205"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4168718016137314",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.20798313543655"
         },
         {
           "http://example.com/terms#name": "Dotterbloemweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8113403162774766",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.6981940023638"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4488046758663233",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.82166244561309"
         }
       ],
       "total_children_count": 2,
@@ -238,24 +244,6 @@
       ],
       "triples_metadata": [
         "Dotterbloem"
-      ],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2127.jsonld#72387"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2127.jsonld#77144"
-            }
-          ]
-        }
       ]
     },
     {
@@ -263,46 +251,45 @@
       "triples": [
         {
           "http://example.com/terms#name": "Dotterbloemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.227755792560847",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.08067348055549"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7861030573298793",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.320865888068404"
         },
         {
           "http://example.com/terms#name": "Dotterbloemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.026195542228061",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.64936252518162"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6078397693317243",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.063881049745426"
         },
         {
           "http://example.com/terms#name": "Dotterbloemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.026195542228061",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.64936252518162"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6078397693317243",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.063881049745426"
         },
         {
           "http://example.com/terms#name": "Dotterbloemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.026195542228061",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.64936252518162"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6078397693317243",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.063881049745426"
         },
         {
           "http://example.com/terms#name": "Dotterbloemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3803310116137166",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.3889073082138"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0468911794090445",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.03433426417201"
         },
         {
           "http://example.com/terms#name": "Dotterbloemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3803310116137166",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.3889073082138"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0468911794090445",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.03433426417201"
         },
         {
           "http://example.com/terms#name": "Dotterbloemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5050227739686366",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.58936533707734"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.627312756472494",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.73010789912794"
         },
         {
           "http://example.com/terms#name": "Dotterbloemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5764541327323713",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.5236066832506"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0779932954299025",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.67088337171905"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2127.jsonld#72386",
         "@type": "tree:Node"
@@ -310,43 +297,43 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Dotterbloemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.227755792560847",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.08067348055549"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7861030573298793",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.320865888068404"
         },
         {
           "http://example.com/terms#name": "Dotterbloemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.026195542228061",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.64936252518162"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6078397693317243",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.063881049745426"
         },
         {
           "http://example.com/terms#name": "Dotterbloemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.026195542228061",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.64936252518162"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6078397693317243",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.063881049745426"
         },
         {
           "http://example.com/terms#name": "Dotterbloemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.026195542228061",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.64936252518162"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6078397693317243",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.063881049745426"
         },
         {
           "http://example.com/terms#name": "Dotterbloemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3803310116137166",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.3889073082138"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0468911794090445",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.03433426417201"
         },
         {
           "http://example.com/terms#name": "Dotterbloemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3803310116137166",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.3889073082138"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0468911794090445",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.03433426417201"
         },
         {
           "http://example.com/terms#name": "Dotterbloemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5050227739686366",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.58936533707734"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.627312756472494",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.73010789912794"
         },
         {
           "http://example.com/terms#name": "Dotterbloemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5764541327323713",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.5236066832506"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0779932954299025",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.67088337171905"
         }
       ],
       "total_children_count": 0,
@@ -376,22 +363,33 @@
         "Dotterbloemstraat",
         "Dotterbloemstraat",
         "Dotterbloemstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "t",
       "triples": [],
-      "children": {
-        "te": [
-          "2127",
-          "74931"
-        ],
-        "ermontstraat": [
-          "2127",
-          "74932"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2127.jsonld#74931",
+              "@type": "tree:Node",
+              "token_string": "te"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2127.jsonld#74932",
+              "@type": "tree:Node",
+              "token_string": "ermontstraat"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment474.jsonld#451",
         "@type": "tree:Node"
@@ -399,88 +397,88 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Dotterbloemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.227755792560847",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.08067348055549"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7861030573298793",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.320865888068404"
         },
         {
           "http://example.com/terms#name": "Dotterbloemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.026195542228061",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.64936252518162"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6078397693317243",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.063881049745426"
         },
         {
           "http://example.com/terms#name": "Dotterbloemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.026195542228061",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.64936252518162"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6078397693317243",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.063881049745426"
         },
         {
           "http://example.com/terms#name": "Dotterbloemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.026195542228061",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.64936252518162"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6078397693317243",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.063881049745426"
         },
         {
           "http://example.com/terms#name": "Dotterbloemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3803310116137166",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.3889073082138"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0468911794090445",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.03433426417201"
         },
         {
           "http://example.com/terms#name": "Dotterbloemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3803310116137166",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.3889073082138"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0468911794090445",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.03433426417201"
         },
         {
           "http://example.com/terms#name": "Dotterbloemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5050227739686366",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.58936533707734"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.627312756472494",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.73010789912794"
         },
         {
           "http://example.com/terms#name": "Dotterbloemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5764541327323713",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.5236066832506"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0779932954299025",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.67088337171905"
         },
         {
           "http://example.com/terms#name": "Dottenijseweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2657224164149374",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.163516159084516"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.46697651911304",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.66272401682364"
         },
         {
           "http://example.com/terms#name": "Dottenijsestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2477541096290916",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.63566831968852"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.547833703431492",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.83368739389933"
         },
         {
           "http://example.com/terms#name": "Dotterbloem",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9422616930760266",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.47547356795205"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4168718016137314",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.20798313543655"
         },
         {
           "http://example.com/terms#name": "Dotermontstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6629168597983606",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.07047872235295"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.507567884203455",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.87123043340911"
         },
         {
           "http://example.com/terms#name": "Dotterbloemweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8113403162774766",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.6981940023638"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4488046758663233",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.82166244561309"
         },
         {
           "http://example.com/terms#name": "Dottenijssteenweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7210808558578097",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.006611587423315"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.347041480428472",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.34456468386403"
         },
         {
           "http://example.com/terms#name": "Dottenijsstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2317935457233995",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.07306960888503"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5679724692616013",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.01478055425663"
         },
         {
           "http://example.com/terms#name": "Dottenijse Haardstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.367277724442245",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.938966328519314"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0025248497209107",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.060685726472485"
         },
         {
           "http://example.com/terms#name": "Dottenijslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.711973090922572",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.024626861536625"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.214815944231952",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.480772102574775"
         }
       ],
       "total_children_count": 15,
@@ -555,13 +553,19 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
+      "triples_metadata": []
+    },
+    {
+      "token_string": "te",
+      "triples": [],
+      "children": [
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
             {
-              "@id": "/streets/fragment2127.jsonld#74931"
+              "@id": "/streets/fragment2127.jsonld#33908",
+              "@type": "tree:Node",
+              "token_string": "straat"
             }
           ]
         },
@@ -569,29 +573,23 @@
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
             {
-              "@id": "/streets/fragment2127.jsonld#74932"
+              "@id": "/streets/fragment2127.jsonld#72386",
+              "@type": "tree:Node",
+              "token_string": "rbloem"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2127.jsonld#97238",
+              "@type": "tree:Node",
+              "token_string": "nijs"
             }
           ]
         }
-      ]
-    },
-    {
-      "token_string": "te",
-      "triples": [],
-      "children": {
-        "straat": [
-          "2127",
-          "33908"
-        ],
-        "rbloem": [
-          "2127",
-          "72386"
-        ],
-        "nijs": [
-          "2127",
-          "97238"
-        ]
-      },
+      ],
       "parent_node": {
         "@id": "/streets/fragment2127.jsonld#74930",
         "@type": "tree:Node"
@@ -599,88 +597,88 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Dotterbloemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.227755792560847",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.08067348055549"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7861030573298793",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.320865888068404"
         },
         {
           "http://example.com/terms#name": "Dotterbloemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.026195542228061",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.64936252518162"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6078397693317243",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.063881049745426"
         },
         {
           "http://example.com/terms#name": "Dotterbloemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.026195542228061",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.64936252518162"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6078397693317243",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.063881049745426"
         },
         {
           "http://example.com/terms#name": "Dotterbloemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.026195542228061",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.64936252518162"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6078397693317243",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.063881049745426"
         },
         {
           "http://example.com/terms#name": "Dotterbloemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3803310116137166",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.3889073082138"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0468911794090445",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.03433426417201"
         },
         {
           "http://example.com/terms#name": "Dotterbloemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3803310116137166",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.3889073082138"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0468911794090445",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.03433426417201"
         },
         {
           "http://example.com/terms#name": "Dotterbloemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5050227739686366",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.58936533707734"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.627312756472494",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.73010789912794"
         },
         {
           "http://example.com/terms#name": "Dotterbloemstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5764541327323713",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.5236066832506"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0779932954299025",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.67088337171905"
         },
         {
           "http://example.com/terms#name": "Dottenijseweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2657224164149374",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.163516159084516"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.46697651911304",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.66272401682364"
         },
         {
           "http://example.com/terms#name": "Dottenijsestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2477541096290916",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.63566831968852"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.547833703431492",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.83368739389933"
         },
         {
           "http://example.com/terms#name": "Dottestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8282448790164514",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.74100872008218"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1127552758872454",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.20163123880924"
         },
         {
           "http://example.com/terms#name": "Dotterbloem",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9422616930760266",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.47547356795205"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4168718016137314",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.20798313543655"
         },
         {
           "http://example.com/terms#name": "Dotterbloemweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8113403162774766",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.6981940023638"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4488046758663233",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.82166244561309"
         },
         {
           "http://example.com/terms#name": "Dottenijssteenweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7210808558578097",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.006611587423315"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.347041480428472",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.34456468386403"
         },
         {
           "http://example.com/terms#name": "Dottenijsstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2317935457233995",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.07306960888503"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5679724692616013",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.01478055425663"
         },
         {
           "http://example.com/terms#name": "Dottenijse Haardstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.367277724442245",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.938966328519314"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0025248497209107",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.060685726472485"
         },
         {
           "http://example.com/terms#name": "Dottenijslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.711973090922572",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.024626861536625"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.214815944231952",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.480772102574775"
         }
       ],
       "total_children_count": 13,
@@ -755,44 +753,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2127.jsonld#33908"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2127.jsonld#72386"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2127.jsonld#97238"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "ermontstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Dotermontstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6629168597983606",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.07047872235295"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.507567884203455",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.87123043340911"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2127.jsonld#74930",
         "@type": "tree:Node"
@@ -800,8 +771,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Dotermontstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6629168597983606",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.07047872235295"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.507567884203455",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.87123043340911"
         }
       ],
       "total_children_count": 0,
@@ -817,19 +788,17 @@
       ],
       "triples_metadata": [
         "Dotermontstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "weg",
       "triples": [
         {
           "http://example.com/terms#name": "Dotterbloemweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8113403162774766",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.6981940023638"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4488046758663233",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.82166244561309"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2127.jsonld#72386",
         "@type": "tree:Node"
@@ -837,8 +806,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Dotterbloemweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8113403162774766",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.6981940023638"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4488046758663233",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.82166244561309"
         }
       ],
       "total_children_count": 0,
@@ -854,26 +823,43 @@
       ],
       "triples_metadata": [
         "Dotterbloemweg"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "nijs",
       "triples": [],
-      "children": {
-        "e": [
-          "2127",
-          "97239"
-        ],
-        "st": [
-          "2127",
-          "97481"
-        ],
-        "laan": [
-          "2127",
-          "97903"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2127.jsonld#97239",
+              "@type": "tree:Node",
+              "token_string": "e"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2127.jsonld#97481",
+              "@type": "tree:Node",
+              "token_string": "st"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2127.jsonld#97903",
+              "@type": "tree:Node",
+              "token_string": "laan"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment2127.jsonld#74931",
         "@type": "tree:Node"
@@ -881,33 +867,33 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Dottenijseweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2657224164149374",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.163516159084516"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.46697651911304",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.66272401682364"
         },
         {
           "http://example.com/terms#name": "Dottenijsestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2477541096290916",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.63566831968852"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.547833703431492",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.83368739389933"
         },
         {
           "http://example.com/terms#name": "Dottenijssteenweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7210808558578097",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.006611587423315"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.347041480428472",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.34456468386403"
         },
         {
           "http://example.com/terms#name": "Dottenijsstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2317935457233995",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.07306960888503"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5679724692616013",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.01478055425663"
         },
         {
           "http://example.com/terms#name": "Dottenijse Haardstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.367277724442245",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.938966328519314"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0025248497209107",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.060685726472485"
         },
         {
           "http://example.com/terms#name": "Dottenijslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.711973090922572",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.024626861536625"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.214815944231952",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.480772102574775"
         }
       ],
       "total_children_count": 8,
@@ -951,51 +937,43 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2127.jsonld#97239"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2127.jsonld#97481"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2127.jsonld#97903"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "e",
       "triples": [],
-      "children": {
-        "weg": [
-          "2127",
-          "32581"
-        ],
-        "straat": [
-          "2127",
-          "32582"
-        ],
-        " Haardstraat": [
-          "2127",
-          "97690"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2127.jsonld#32581",
+              "@type": "tree:Node",
+              "token_string": "weg"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2127.jsonld#32582",
+              "@type": "tree:Node",
+              "token_string": "straat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2127.jsonld#97690",
+              "@type": "tree:Node",
+              "token_string": " Haardstraat"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment2127.jsonld#97238",
         "@type": "tree:Node"
@@ -1003,18 +981,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Dottenijseweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2657224164149374",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.163516159084516"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.46697651911304",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.66272401682364"
         },
         {
           "http://example.com/terms#name": "Dottenijsestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2477541096290916",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.63566831968852"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.547833703431492",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.83368739389933"
         },
         {
           "http://example.com/terms#name": "Dottenijse Haardstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.367277724442245",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.938966328519314"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0025248497209107",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.060685726472485"
         }
       ],
       "total_children_count": 3,
@@ -1040,47 +1018,33 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2127.jsonld#32581"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2127.jsonld#32582"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2127.jsonld#97690"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "st",
       "triples": [],
-      "children": {
-        "eenweg": [
-          "2127",
-          "97482"
-        ],
-        "raat": [
-          "2127",
-          "97483"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2127.jsonld#97482",
+              "@type": "tree:Node",
+              "token_string": "eenweg"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2127.jsonld#97483",
+              "@type": "tree:Node",
+              "token_string": "raat"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment2127.jsonld#97238",
         "@type": "tree:Node"
@@ -1088,13 +1052,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Dottenijssteenweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7210808558578097",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.006611587423315"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.347041480428472",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.34456468386403"
         },
         {
           "http://example.com/terms#name": "Dottenijsstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2317935457233995",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.07306960888503"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5679724692616013",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.01478055425663"
         }
       ],
       "total_children_count": 2,
@@ -1114,36 +1078,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2127.jsonld#97482"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2127.jsonld#97483"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "eenweg",
       "triples": [
         {
           "http://example.com/terms#name": "Dottenijssteenweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7210808558578097",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.006611587423315"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.347041480428472",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.34456468386403"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2127.jsonld#97481",
         "@type": "tree:Node"
@@ -1151,8 +1096,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Dottenijssteenweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7210808558578097",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.006611587423315"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.347041480428472",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.34456468386403"
         }
       ],
       "total_children_count": 0,
@@ -1168,19 +1113,17 @@
       ],
       "triples_metadata": [
         "Dottenijssteenweg"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "raat",
       "triples": [
         {
           "http://example.com/terms#name": "Dottenijsstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2317935457233995",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.07306960888503"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5679724692616013",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.01478055425663"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2127.jsonld#97481",
         "@type": "tree:Node"
@@ -1188,8 +1131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Dottenijsstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2317935457233995",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.07306960888503"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5679724692616013",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.01478055425663"
         }
       ],
       "total_children_count": 0,
@@ -1205,19 +1148,17 @@
       ],
       "triples_metadata": [
         "Dottenijsstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": " Haardstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Dottenijse Haardstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.367277724442245",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.938966328519314"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0025248497209107",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.060685726472485"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2127.jsonld#97239",
         "@type": "tree:Node"
@@ -1225,8 +1166,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Dottenijse Haardstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.367277724442245",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.938966328519314"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0025248497209107",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.060685726472485"
         }
       ],
       "total_children_count": 0,
@@ -1242,19 +1183,17 @@
       ],
       "triples_metadata": [
         "Dottenijse Haardstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "laan",
       "triples": [
         {
           "http://example.com/terms#name": "Dottenijslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.711973090922572",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.024626861536625"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.214815944231952",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.480772102574775"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2127.jsonld#97238",
         "@type": "tree:Node"
@@ -1262,8 +1201,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Dottenijslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.711973090922572",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.024626861536625"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.214815944231952",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.480772102574775"
         }
       ],
       "total_children_count": 0,
@@ -1279,8 +1218,7 @@
       ],
       "triples_metadata": [
         "Dottenijslaan"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

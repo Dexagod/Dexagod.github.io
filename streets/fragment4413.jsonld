@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -25,11 +25,10 @@
       "triples": [
         {
           "http://example.com/terms#name": "Square de la Cité",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.364156287908365",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.24732341269956"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0076334628271626",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.422710012983515"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4413.jsonld#123008",
         "@type": "tree:Node"
@@ -37,8 +36,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Square de la Cité",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.364156287908365",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.24732341269956"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0076334628271626",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.422710012983515"
         }
       ],
       "total_children_count": 0,
@@ -54,19 +53,17 @@
       ],
       "triples_metadata": [
         "Square de la Cité"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "Gare",
       "triples": [
         {
           "http://example.com/terms#name": "Square de la Gare",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.037874710246535",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.36486398324682"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2097361182596327",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.50021305656734"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4413.jsonld#123008",
         "@type": "tree:Node"
@@ -74,8 +71,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Square de la Gare",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.037874710246535",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.36486398324682"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2097361182596327",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.50021305656734"
         }
       ],
       "total_children_count": 0,
@@ -91,19 +88,17 @@
       ],
       "triples_metadata": [
         "Square de la Gare"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "Wallonie",
       "triples": [
         {
           "http://example.com/terms#name": "Square de la Wallonie",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8526818571077768",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.870691000091874"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.30724867568425",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.34499277774581"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4413.jsonld#123008",
         "@type": "tree:Node"
@@ -111,8 +106,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Square de la Wallonie",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8526818571077768",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.870691000091874"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.30724867568425",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.34499277774581"
         }
       ],
       "total_children_count": 0,
@@ -128,24 +123,29 @@
       ],
       "triples_metadata": [
         "Square de la Wallonie"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "Paix",
       "triples": [
         {
           "http://example.com/terms#name": "Square de la Paix",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2131809336195176",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.9231619865371"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.420247148175441",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.733013989171745"
         }
       ],
-      "children": {
-        "-d'Angleur": [
-          "4413",
-          "146170"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment4413.jsonld#146170",
+              "@type": "tree:Node",
+              "token_string": "-d'Angleur"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment4413.jsonld#123008",
         "@type": "tree:Node"
@@ -153,13 +153,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Square de la Paix",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2131809336195176",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.9231619865371"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.420247148175441",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.733013989171745"
         },
         {
           "http://example.com/terms#name": "Square de la Paix-d'Angleur",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2042580438949027",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.084481667627074"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.231634917234521",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.680003782627296"
         }
       ],
       "total_children_count": 1,
@@ -181,59 +181,103 @@
       ],
       "triples_metadata": [
         "Square de la Paix"
-      ],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4413.jsonld#146170"
-            }
-          ]
-        }
       ]
     },
     {
       "token_string": "a ",
       "triples": [],
-      "children": {
-        "Cité": [
-          "4413",
-          "112291"
-        ],
-        "Gare": [
-          "4413",
-          "121745"
-        ],
-        "Wallonie": [
-          "4413",
-          "121746"
-        ],
-        "Paix": [
-          "4413",
-          "122569"
-        ],
-        "Fontaine": [
-          "4413",
-          "124700"
-        ],
-        "R": [
-          "4413",
-          "140212"
-        ],
-        "L": [
-          "4413",
-          "155545"
-        ],
-        "B": [
-          "4413",
-          "163714"
-        ],
-        "Demi-Lune": [
-          "4413",
-          "178903"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment4413.jsonld#112291",
+              "@type": "tree:Node",
+              "token_string": "Cité"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment4413.jsonld#121745",
+              "@type": "tree:Node",
+              "token_string": "Gare"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment4413.jsonld#121746",
+              "@type": "tree:Node",
+              "token_string": "Wallonie"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment4413.jsonld#122569",
+              "@type": "tree:Node",
+              "token_string": "Paix"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment4413.jsonld#124700",
+              "@type": "tree:Node",
+              "token_string": "Fontaine"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment4413.jsonld#140212",
+              "@type": "tree:Node",
+              "token_string": "R"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment4413.jsonld#155545",
+              "@type": "tree:Node",
+              "token_string": "L"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment4413.jsonld#163714",
+              "@type": "tree:Node",
+              "token_string": "B"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment4413.jsonld#178903",
+              "@type": "tree:Node",
+              "token_string": "Demi-Lune"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment5217.jsonld#123007",
         "@type": "tree:Node"
@@ -241,108 +285,108 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Square de la Liberté",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.91535321806729",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.83682418605004"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1492445948340273",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.77450224796478"
         },
         {
           "http://example.com/terms#name": "Square de la Liberté",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.117740825127612",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.83099860785253"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.556400504241135",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.79449385972253"
         },
         {
           "http://example.com/terms#name": "Square de la Liberté",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.117740825127612",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.83099860785253"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.556400504241135",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.79449385972253"
         },
         {
           "http://example.com/terms#name": "Square de la Liberté",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.117740825127612",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.83099860785253"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.556400504241135",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.79449385972253"
         },
         {
           "http://example.com/terms#name": "Square de la Liberté",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.117740825127612",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.83099860785253"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.556400504241135",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.79449385972253"
         },
         {
           "http://example.com/terms#name": "Square de la Liberté",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.117740825127612",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.83099860785253"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.556400504241135",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.79449385972253"
         },
         {
           "http://example.com/terms#name": "Square de la Liberté",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5907868204422324",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.86648544820175"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5287095649511224",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.9159553226713"
         },
         {
           "http://example.com/terms#name": "Square de la Cité",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.364156287908365",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.24732341269956"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0076334628271626",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.422710012983515"
         },
         {
           "http://example.com/terms#name": "Square de la Gare",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.037874710246535",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.36486398324682"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2097361182596327",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.50021305656734"
         },
         {
           "http://example.com/terms#name": "Square de la Fontaine",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6987956123195747",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.842872544565225"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.79329196601641",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.98350871659842"
         },
         {
           "http://example.com/terms#name": "Square de la Libération",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.226753650326641",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.93580074158764"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6719727621124503",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.15635483019103"
         },
         {
           "http://example.com/terms#name": "Square de la Libération",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1147546103866364",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.31994957975554"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.80904014905171",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.71390672178415"
         },
         {
           "http://example.com/terms#name": "Square de la Libération",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1147546103866364",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.31994957975554"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.80904014905171",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.71390672178415"
         },
         {
           "http://example.com/terms#name": "Square de la Libération",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1147546103866364",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.31994957975554"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.80904014905171",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.71390672178415"
         },
         {
           "http://example.com/terms#name": "Square de la Libération",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1147546103866364",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.31994957975554"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.80904014905171",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.71390672178415"
         },
         {
           "http://example.com/terms#name": "Square de la Libération",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1147546103866364",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.31994957975554"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.80904014905171",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.71390672178415"
         },
         {
           "http://example.com/terms#name": "Square de la Boverie",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.391168491510301",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.48886863946651"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7813435007850753",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.82293640310826"
         },
         {
           "http://example.com/terms#name": "Square de la Lys",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.074164055660024",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.290118713179105"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3852454193984443",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.85203478122318"
         },
         {
           "http://example.com/terms#name": "Square de la Brigade Piron",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3148006659083054",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.507233810783994"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1948396589952646",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.35561379315643"
         },
         {
           "http://example.com/terms#name": "Square de la Lasne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.842342380516134",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.20647669484403"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4093837583739988",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.67506609510001"
         },
         {
           "http://example.com/terms#name": "Square de la Demi-Lune",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3543291889173257",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.21244645007381"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7641516181313697",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.41097975842878"
         }
       ],
       "total_children_count": 20,
@@ -421,92 +465,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4413.jsonld#112291"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4413.jsonld#121745"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4413.jsonld#121746"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4413.jsonld#122569"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4413.jsonld#124700"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4413.jsonld#140212"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4413.jsonld#155545"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4413.jsonld#163714"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4413.jsonld#178903"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "Fontaine",
       "triples": [
         {
           "http://example.com/terms#name": "Square de la Fontaine",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6987956123195747",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.842872544565225"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.79329196601641",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.98350871659842"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4413.jsonld#123008",
         "@type": "tree:Node"
@@ -514,8 +483,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Square de la Fontaine",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6987956123195747",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.842872544565225"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.79329196601641",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.98350871659842"
         }
       ],
       "total_children_count": 0,
@@ -531,26 +500,43 @@
       ],
       "triples_metadata": [
         "Square de la Fontaine"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "R",
       "triples": [],
-      "children": {
-        "ésistance": [
-          "4413",
-          "140213"
-        ],
-        "ose": [
-          "4413",
-          "140214"
-        ],
-        "enaissance": [
-          "4413",
-          "169695"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment4413.jsonld#140213",
+              "@type": "tree:Node",
+              "token_string": "ésistance"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment4413.jsonld#140214",
+              "@type": "tree:Node",
+              "token_string": "ose"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment4413.jsonld#169695",
+              "@type": "tree:Node",
+              "token_string": "enaissance"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment4413.jsonld#123008",
         "@type": "tree:Node"
@@ -558,48 +544,48 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Square de la Résistance",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.27677027537661",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.65306671792397"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8430707496574708",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.43359302600505"
         },
         {
           "http://example.com/terms#name": "Square de la Résistance",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6631767438103084",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.38702131799457"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.661132495795457",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.99660364041566"
         },
         {
           "http://example.com/terms#name": "Square de la Résistance",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6631767438103084",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.38702131799457"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.661132495795457",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.99660364041566"
         },
         {
           "http://example.com/terms#name": "Square de la Résistance",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6631767438103084",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.38702131799457"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.661132495795457",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.99660364041566"
         },
         {
           "http://example.com/terms#name": "Square de la Résistance",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6631767438103084",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.38702131799457"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.661132495795457",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.99660364041566"
         },
         {
           "http://example.com/terms#name": "Square de la Résistance",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6631767438103084",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.38702131799457"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.661132495795457",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.99660364041566"
         },
         {
           "http://example.com/terms#name": "Square de la Résistance",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.838695374704097",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.7291837850177"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1593256557167084",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.31406875803736"
         },
         {
           "http://example.com/terms#name": "Square de la Rose",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.234522631346413",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.81534440544129"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.931504797484068",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.71836073110241"
         },
         {
           "http://example.com/terms#name": "Square de la Renaissance",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6024903545545395",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.13541237323632"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2528331367064145",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.62160694675253"
         }
       ],
       "total_children_count": 3,
@@ -631,74 +617,47 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4413.jsonld#140213"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4413.jsonld#140214"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4413.jsonld#169695"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "ésistance",
       "triples": [
         {
           "http://example.com/terms#name": "Square de la Résistance",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.27677027537661",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.65306671792397"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8430707496574708",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.43359302600505"
         },
         {
           "http://example.com/terms#name": "Square de la Résistance",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6631767438103084",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.38702131799457"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.661132495795457",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.99660364041566"
         },
         {
           "http://example.com/terms#name": "Square de la Résistance",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6631767438103084",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.38702131799457"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.661132495795457",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.99660364041566"
         },
         {
           "http://example.com/terms#name": "Square de la Résistance",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6631767438103084",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.38702131799457"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.661132495795457",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.99660364041566"
         },
         {
           "http://example.com/terms#name": "Square de la Résistance",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6631767438103084",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.38702131799457"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.661132495795457",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.99660364041566"
         },
         {
           "http://example.com/terms#name": "Square de la Résistance",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6631767438103084",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.38702131799457"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.661132495795457",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.99660364041566"
         },
         {
           "http://example.com/terms#name": "Square de la Résistance",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.838695374704097",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.7291837850177"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1593256557167084",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.31406875803736"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4413.jsonld#140212",
         "@type": "tree:Node"
@@ -706,38 +665,38 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Square de la Résistance",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.27677027537661",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.65306671792397"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8430707496574708",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.43359302600505"
         },
         {
           "http://example.com/terms#name": "Square de la Résistance",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6631767438103084",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.38702131799457"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.661132495795457",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.99660364041566"
         },
         {
           "http://example.com/terms#name": "Square de la Résistance",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6631767438103084",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.38702131799457"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.661132495795457",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.99660364041566"
         },
         {
           "http://example.com/terms#name": "Square de la Résistance",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6631767438103084",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.38702131799457"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.661132495795457",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.99660364041566"
         },
         {
           "http://example.com/terms#name": "Square de la Résistance",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6631767438103084",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.38702131799457"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.661132495795457",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.99660364041566"
         },
         {
           "http://example.com/terms#name": "Square de la Résistance",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6631767438103084",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.38702131799457"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.661132495795457",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.99660364041566"
         },
         {
           "http://example.com/terms#name": "Square de la Résistance",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.838695374704097",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.7291837850177"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1593256557167084",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.31406875803736"
         }
       ],
       "total_children_count": 0,
@@ -765,19 +724,17 @@
         "Square de la Résistance",
         "Square de la Résistance",
         "Square de la Résistance"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "ose",
       "triples": [
         {
           "http://example.com/terms#name": "Square de la Rose",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.234522631346413",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.81534440544129"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.931504797484068",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.71836073110241"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4413.jsonld#140212",
         "@type": "tree:Node"
@@ -785,8 +742,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Square de la Rose",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.234522631346413",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.81534440544129"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.931504797484068",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.71836073110241"
         }
       ],
       "total_children_count": 0,
@@ -802,49 +759,47 @@
       ],
       "triples_metadata": [
         "Square de la Rose"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "erté",
       "triples": [
         {
           "http://example.com/terms#name": "Square de la Liberté",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.91535321806729",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.83682418605004"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1492445948340273",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.77450224796478"
         },
         {
           "http://example.com/terms#name": "Square de la Liberté",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.117740825127612",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.83099860785253"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.556400504241135",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.79449385972253"
         },
         {
           "http://example.com/terms#name": "Square de la Liberté",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.117740825127612",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.83099860785253"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.556400504241135",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.79449385972253"
         },
         {
           "http://example.com/terms#name": "Square de la Liberté",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.117740825127612",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.83099860785253"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.556400504241135",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.79449385972253"
         },
         {
           "http://example.com/terms#name": "Square de la Liberté",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.117740825127612",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.83099860785253"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.556400504241135",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.79449385972253"
         },
         {
           "http://example.com/terms#name": "Square de la Liberté",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.117740825127612",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.83099860785253"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.556400504241135",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.79449385972253"
         },
         {
           "http://example.com/terms#name": "Square de la Liberté",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5907868204422324",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.86648544820175"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5287095649511224",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.9159553226713"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4413.jsonld#155546",
         "@type": "tree:Node"
@@ -852,38 +807,38 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Square de la Liberté",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.91535321806729",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.83682418605004"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1492445948340273",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.77450224796478"
         },
         {
           "http://example.com/terms#name": "Square de la Liberté",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.117740825127612",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.83099860785253"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.556400504241135",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.79449385972253"
         },
         {
           "http://example.com/terms#name": "Square de la Liberté",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.117740825127612",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.83099860785253"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.556400504241135",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.79449385972253"
         },
         {
           "http://example.com/terms#name": "Square de la Liberté",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.117740825127612",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.83099860785253"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.556400504241135",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.79449385972253"
         },
         {
           "http://example.com/terms#name": "Square de la Liberté",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.117740825127612",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.83099860785253"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.556400504241135",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.79449385972253"
         },
         {
           "http://example.com/terms#name": "Square de la Liberté",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.117740825127612",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.83099860785253"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.556400504241135",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.79449385972253"
         },
         {
           "http://example.com/terms#name": "Square de la Liberté",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5907868204422324",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.86648544820175"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5287095649511224",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.9159553226713"
         }
       ],
       "total_children_count": 0,
@@ -911,44 +866,42 @@
         "Square de la Liberté",
         "Square de la Liberté",
         "Square de la Liberté"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "ération",
       "triples": [
         {
           "http://example.com/terms#name": "Square de la Libération",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.226753650326641",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.93580074158764"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6719727621124503",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.15635483019103"
         },
         {
           "http://example.com/terms#name": "Square de la Libération",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1147546103866364",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.31994957975554"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.80904014905171",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.71390672178415"
         },
         {
           "http://example.com/terms#name": "Square de la Libération",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1147546103866364",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.31994957975554"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.80904014905171",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.71390672178415"
         },
         {
           "http://example.com/terms#name": "Square de la Libération",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1147546103866364",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.31994957975554"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.80904014905171",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.71390672178415"
         },
         {
           "http://example.com/terms#name": "Square de la Libération",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1147546103866364",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.31994957975554"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.80904014905171",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.71390672178415"
         },
         {
           "http://example.com/terms#name": "Square de la Libération",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1147546103866364",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.31994957975554"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.80904014905171",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.71390672178415"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4413.jsonld#155546",
         "@type": "tree:Node"
@@ -956,33 +909,33 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Square de la Libération",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.226753650326641",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.93580074158764"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6719727621124503",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.15635483019103"
         },
         {
           "http://example.com/terms#name": "Square de la Libération",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1147546103866364",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.31994957975554"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.80904014905171",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.71390672178415"
         },
         {
           "http://example.com/terms#name": "Square de la Libération",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1147546103866364",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.31994957975554"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.80904014905171",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.71390672178415"
         },
         {
           "http://example.com/terms#name": "Square de la Libération",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1147546103866364",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.31994957975554"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.80904014905171",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.71390672178415"
         },
         {
           "http://example.com/terms#name": "Square de la Libération",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1147546103866364",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.31994957975554"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.80904014905171",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.71390672178415"
         },
         {
           "http://example.com/terms#name": "Square de la Libération",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1147546103866364",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.31994957975554"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.80904014905171",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.71390672178415"
         }
       ],
       "total_children_count": 0,
@@ -1008,19 +961,17 @@
         "Square de la Libération",
         "Square de la Libération",
         "Square de la Libération"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "-d'Angleur",
       "triples": [
         {
           "http://example.com/terms#name": "Square de la Paix-d'Angleur",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2042580438949027",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.084481667627074"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.231634917234521",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.680003782627296"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4413.jsonld#122569",
         "@type": "tree:Node"
@@ -1028,8 +979,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Square de la Paix-d'Angleur",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2042580438949027",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.084481667627074"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.231634917234521",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.680003782627296"
         }
       ],
       "total_children_count": 0,
@@ -1045,26 +996,43 @@
       ],
       "triples_metadata": [
         "Square de la Paix-d'Angleur"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "L",
       "triples": [],
-      "children": {
-        "ib": [
-          "4413",
-          "155546"
-        ],
-        "ys": [
-          "4413",
-          "155547"
-        ],
-        "asne": [
-          "4413",
-          "178724"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment4413.jsonld#155546",
+              "@type": "tree:Node",
+              "token_string": "ib"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment4413.jsonld#155547",
+              "@type": "tree:Node",
+              "token_string": "ys"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment4413.jsonld#178724",
+              "@type": "tree:Node",
+              "token_string": "asne"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment4413.jsonld#123008",
         "@type": "tree:Node"
@@ -1072,78 +1040,78 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Square de la Liberté",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.91535321806729",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.83682418605004"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1492445948340273",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.77450224796478"
         },
         {
           "http://example.com/terms#name": "Square de la Liberté",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.117740825127612",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.83099860785253"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.556400504241135",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.79449385972253"
         },
         {
           "http://example.com/terms#name": "Square de la Liberté",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.117740825127612",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.83099860785253"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.556400504241135",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.79449385972253"
         },
         {
           "http://example.com/terms#name": "Square de la Liberté",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.117740825127612",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.83099860785253"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.556400504241135",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.79449385972253"
         },
         {
           "http://example.com/terms#name": "Square de la Liberté",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.117740825127612",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.83099860785253"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.556400504241135",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.79449385972253"
         },
         {
           "http://example.com/terms#name": "Square de la Liberté",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.117740825127612",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.83099860785253"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.556400504241135",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.79449385972253"
         },
         {
           "http://example.com/terms#name": "Square de la Liberté",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5907868204422324",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.86648544820175"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5287095649511224",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.9159553226713"
         },
         {
           "http://example.com/terms#name": "Square de la Libération",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.226753650326641",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.93580074158764"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6719727621124503",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.15635483019103"
         },
         {
           "http://example.com/terms#name": "Square de la Libération",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1147546103866364",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.31994957975554"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.80904014905171",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.71390672178415"
         },
         {
           "http://example.com/terms#name": "Square de la Libération",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1147546103866364",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.31994957975554"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.80904014905171",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.71390672178415"
         },
         {
           "http://example.com/terms#name": "Square de la Libération",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1147546103866364",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.31994957975554"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.80904014905171",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.71390672178415"
         },
         {
           "http://example.com/terms#name": "Square de la Libération",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1147546103866364",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.31994957975554"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.80904014905171",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.71390672178415"
         },
         {
           "http://example.com/terms#name": "Square de la Libération",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1147546103866364",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.31994957975554"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.80904014905171",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.71390672178415"
         },
         {
           "http://example.com/terms#name": "Square de la Lys",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.074164055660024",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.290118713179105"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3852454193984443",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.85203478122318"
         },
         {
           "http://example.com/terms#name": "Square de la Lasne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.842342380516134",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.20647669484403"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4093837583739988",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.67506609510001"
         }
       ],
       "total_children_count": 5,
@@ -1186,47 +1154,33 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4413.jsonld#155546"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4413.jsonld#155547"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4413.jsonld#178724"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "ib",
       "triples": [],
-      "children": {
-        "erté": [
-          "4413",
-          "141550"
-        ],
-        "ération": [
-          "4413",
-          "141551"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment4413.jsonld#141550",
+              "@type": "tree:Node",
+              "token_string": "erté"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment4413.jsonld#141551",
+              "@type": "tree:Node",
+              "token_string": "ération"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment4413.jsonld#155545",
         "@type": "tree:Node"
@@ -1234,68 +1188,68 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Square de la Liberté",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.91535321806729",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.83682418605004"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1492445948340273",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.77450224796478"
         },
         {
           "http://example.com/terms#name": "Square de la Liberté",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.117740825127612",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.83099860785253"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.556400504241135",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.79449385972253"
         },
         {
           "http://example.com/terms#name": "Square de la Liberté",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.117740825127612",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.83099860785253"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.556400504241135",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.79449385972253"
         },
         {
           "http://example.com/terms#name": "Square de la Liberté",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.117740825127612",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.83099860785253"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.556400504241135",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.79449385972253"
         },
         {
           "http://example.com/terms#name": "Square de la Liberté",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.117740825127612",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.83099860785253"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.556400504241135",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.79449385972253"
         },
         {
           "http://example.com/terms#name": "Square de la Liberté",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.117740825127612",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.83099860785253"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.556400504241135",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.79449385972253"
         },
         {
           "http://example.com/terms#name": "Square de la Liberté",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5907868204422324",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.86648544820175"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5287095649511224",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.9159553226713"
         },
         {
           "http://example.com/terms#name": "Square de la Libération",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.226753650326641",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.93580074158764"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6719727621124503",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.15635483019103"
         },
         {
           "http://example.com/terms#name": "Square de la Libération",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1147546103866364",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.31994957975554"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.80904014905171",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.71390672178415"
         },
         {
           "http://example.com/terms#name": "Square de la Libération",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1147546103866364",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.31994957975554"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.80904014905171",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.71390672178415"
         },
         {
           "http://example.com/terms#name": "Square de la Libération",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1147546103866364",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.31994957975554"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.80904014905171",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.71390672178415"
         },
         {
           "http://example.com/terms#name": "Square de la Libération",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1147546103866364",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.31994957975554"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.80904014905171",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.71390672178415"
         },
         {
           "http://example.com/terms#name": "Square de la Libération",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1147546103866364",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.31994957975554"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.80904014905171",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.71390672178415"
         }
       ],
       "total_children_count": 2,
@@ -1326,36 +1280,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4413.jsonld#141550"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4413.jsonld#141551"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "ys",
       "triples": [
         {
           "http://example.com/terms#name": "Square de la Lys",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.074164055660024",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.290118713179105"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3852454193984443",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.85203478122318"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4413.jsonld#155545",
         "@type": "tree:Node"
@@ -1363,8 +1298,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Square de la Lys",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.074164055660024",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.290118713179105"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3852454193984443",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.85203478122318"
         }
       ],
       "total_children_count": 0,
@@ -1380,22 +1315,33 @@
       ],
       "triples_metadata": [
         "Square de la Lys"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "B",
       "triples": [],
-      "children": {
-        "overie": [
-          "4413",
-          "163715"
-        ],
-        "rigade Piron": [
-          "4413",
-          "163716"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment4413.jsonld#163715",
+              "@type": "tree:Node",
+              "token_string": "overie"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment4413.jsonld#163716",
+              "@type": "tree:Node",
+              "token_string": "rigade Piron"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment4413.jsonld#123008",
         "@type": "tree:Node"
@@ -1403,13 +1349,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Square de la Boverie",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.391168491510301",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.48886863946651"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7813435007850753",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.82293640310826"
         },
         {
           "http://example.com/terms#name": "Square de la Brigade Piron",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3148006659083054",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.507233810783994"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1948396589952646",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.35561379315643"
         }
       ],
       "total_children_count": 2,
@@ -1429,36 +1375,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4413.jsonld#163715"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4413.jsonld#163716"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "overie",
       "triples": [
         {
           "http://example.com/terms#name": "Square de la Boverie",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.391168491510301",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.48886863946651"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7813435007850753",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.82293640310826"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4413.jsonld#163714",
         "@type": "tree:Node"
@@ -1466,8 +1393,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Square de la Boverie",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.391168491510301",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.48886863946651"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7813435007850753",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.82293640310826"
         }
       ],
       "total_children_count": 0,
@@ -1483,19 +1410,17 @@
       ],
       "triples_metadata": [
         "Square de la Boverie"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "rigade Piron",
       "triples": [
         {
           "http://example.com/terms#name": "Square de la Brigade Piron",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3148006659083054",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.507233810783994"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1948396589952646",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.35561379315643"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4413.jsonld#163714",
         "@type": "tree:Node"
@@ -1503,8 +1428,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Square de la Brigade Piron",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3148006659083054",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.507233810783994"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1948396589952646",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.35561379315643"
         }
       ],
       "total_children_count": 0,
@@ -1520,19 +1445,17 @@
       ],
       "triples_metadata": [
         "Square de la Brigade Piron"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "enaissance",
       "triples": [
         {
           "http://example.com/terms#name": "Square de la Renaissance",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6024903545545395",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.13541237323632"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2528331367064145",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.62160694675253"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4413.jsonld#140212",
         "@type": "tree:Node"
@@ -1540,8 +1463,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Square de la Renaissance",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6024903545545395",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.13541237323632"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2528331367064145",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.62160694675253"
         }
       ],
       "total_children_count": 0,
@@ -1557,19 +1480,17 @@
       ],
       "triples_metadata": [
         "Square de la Renaissance"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "asne",
       "triples": [
         {
           "http://example.com/terms#name": "Square de la Lasne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.842342380516134",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.20647669484403"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4093837583739988",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.67506609510001"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4413.jsonld#155545",
         "@type": "tree:Node"
@@ -1577,8 +1498,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Square de la Lasne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.842342380516134",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.20647669484403"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4093837583739988",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.67506609510001"
         }
       ],
       "total_children_count": 0,
@@ -1594,19 +1515,17 @@
       ],
       "triples_metadata": [
         "Square de la Lasne"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "Demi-Lune",
       "triples": [
         {
           "http://example.com/terms#name": "Square de la Demi-Lune",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3543291889173257",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.21244645007381"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7641516181313697",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.41097975842878"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4413.jsonld#123008",
         "@type": "tree:Node"
@@ -1614,8 +1533,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Square de la Demi-Lune",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3543291889173257",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.21244645007381"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7641516181313697",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.41097975842878"
         }
       ],
       "total_children_count": 0,
@@ -1631,8 +1550,7 @@
       ],
       "triples_metadata": [
         "Square de la Demi-Lune"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,16 +23,28 @@
     {
       "token_string": "ff",
       "triples": [],
-      "children": {
-        "onstraat": [
-          "4467",
-          "153704"
-        ],
-        "ereth": [
-          "4467",
-          "153705"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment4467.jsonld#153704",
+              "@type": "tree:Node",
+              "token_string": "onstraat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment4467.jsonld#153705",
+              "@type": "tree:Node",
+              "token_string": "ereth"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment24.jsonld#24",
         "@type": "tree:Node"
@@ -40,13 +52,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Boffonstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.868616752956249",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.242762696257046"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.234920612945339",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.353040106948065"
         },
         {
           "http://example.com/terms#name": "Boffereth",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.387046826476653",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.02155272103226"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0189057695592765",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.321945360755876"
         }
       ],
       "total_children_count": 2,
@@ -66,36 +78,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4467.jsonld#153704"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4467.jsonld#153705"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "onstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Boffonstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.868616752956249",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.242762696257046"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.234920612945339",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.353040106948065"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4467.jsonld#153703",
         "@type": "tree:Node"
@@ -103,8 +96,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Boffonstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.868616752956249",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.242762696257046"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.234920612945339",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.353040106948065"
         }
       ],
       "total_children_count": 0,
@@ -120,19 +113,17 @@
       ],
       "triples_metadata": [
         "Boffonstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "ereth",
       "triples": [
         {
           "http://example.com/terms#name": "Boffereth",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.387046826476653",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.02155272103226"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0189057695592765",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.321945360755876"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4467.jsonld#153703",
         "@type": "tree:Node"
@@ -140,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Boffereth",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.387046826476653",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.02155272103226"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0189057695592765",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.321945360755876"
         }
       ],
       "total_children_count": 0,
@@ -157,8 +148,7 @@
       ],
       "triples_metadata": [
         "Boffereth"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

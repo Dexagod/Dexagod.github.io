@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,16 +23,28 @@
     {
       "token_string": "E",
       "triples": [],
-      "children": {
-        "eckhoutstraat": [
-          "2856",
-          "47264"
-        ],
-        "ngelslaan": [
-          "2856",
-          "47265"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2856.jsonld#47264",
+              "@type": "tree:Node",
+              "token_string": "eckhoutstraat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2856.jsonld#47265",
+              "@type": "tree:Node",
+              "token_string": "ngelslaan"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment2411.jsonld#34590",
         "@type": "tree:Node"
@@ -40,13 +52,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Karel Eeckhoutstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0677360853774682",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.41532969426921"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.106113240338361",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.90475856114604"
         },
         {
           "http://example.com/terms#name": "Karel Engelslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.107336200905381",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.34305155491688"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.920063098962701",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.5934099776839"
         }
       ],
       "total_children_count": 2,
@@ -66,36 +78,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2856.jsonld#47264"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2856.jsonld#47265"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "eckhoutstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Karel Eeckhoutstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0677360853774682",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.41532969426921"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.106113240338361",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.90475856114604"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2856.jsonld#47263",
         "@type": "tree:Node"
@@ -103,8 +96,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Karel Eeckhoutstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0677360853774682",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.41532969426921"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.106113240338361",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.90475856114604"
         }
       ],
       "total_children_count": 0,
@@ -120,19 +113,17 @@
       ],
       "triples_metadata": [
         "Karel Eeckhoutstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "ngelslaan",
       "triples": [
         {
           "http://example.com/terms#name": "Karel Engelslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.107336200905381",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.34305155491688"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.920063098962701",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.5934099776839"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2856.jsonld#47263",
         "@type": "tree:Node"
@@ -140,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Karel Engelslaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.107336200905381",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.34305155491688"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.920063098962701",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.5934099776839"
         }
       ],
       "total_children_count": 0,
@@ -157,8 +148,7 @@
       ],
       "triples_metadata": [
         "Karel Engelslaan"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,20 +23,38 @@
     {
       "token_string": "u",
       "triples": [],
-      "children": {
-        "tereelstraat": [
-          "1505",
-          "19511"
-        ],
-        "denberghlaan": [
-          "1505",
-          "19512"
-        ],
-        "ckstraat": [
-          "1505",
-          "44377"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1505.jsonld#19511",
+              "@type": "tree:Node",
+              "token_string": "tereelstraat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1505.jsonld#19512",
+              "@type": "tree:Node",
+              "token_string": "denberghlaan"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1505.jsonld#44377",
+              "@type": "tree:Node",
+              "token_string": "ckstraat"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment1947.jsonld#25942",
         "@type": "tree:Node"
@@ -44,18 +62,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Pieter Coutereelstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1949233831560075",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.72982118505279"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1142728878173234",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.51747888615897"
         },
         {
           "http://example.com/terms#name": "Pieter Coudenberghlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.970478436858138",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.86974400887125"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1077362198325056",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.334536104363394"
         },
         {
           "http://example.com/terms#name": "Pieter Couckstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.598585440531562",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.922258145963404"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.139307288643965",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.11489315275266"
         }
       ],
       "total_children_count": 3,
@@ -81,44 +99,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1505.jsonld#19511"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1505.jsonld#19512"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1505.jsonld#44377"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "tereelstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Pieter Coutereelstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1949233831560075",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.72982118505279"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1142728878173234",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.51747888615897"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1505.jsonld#19510",
         "@type": "tree:Node"
@@ -126,8 +117,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Pieter Coutereelstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1949233831560075",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.72982118505279"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1142728878173234",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.51747888615897"
         }
       ],
       "total_children_count": 0,
@@ -143,19 +134,17 @@
       ],
       "triples_metadata": [
         "Pieter Coutereelstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "denberghlaan",
       "triples": [
         {
           "http://example.com/terms#name": "Pieter Coudenberghlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.970478436858138",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.86974400887125"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1077362198325056",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.334536104363394"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1505.jsonld#19510",
         "@type": "tree:Node"
@@ -163,8 +152,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Pieter Coudenberghlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.970478436858138",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.86974400887125"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1077362198325056",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.334536104363394"
         }
       ],
       "total_children_count": 0,
@@ -180,19 +169,17 @@
       ],
       "triples_metadata": [
         "Pieter Coudenberghlaan"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "ckstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Pieter Couckstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.598585440531562",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.922258145963404"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.139307288643965",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.11489315275266"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1505.jsonld#19510",
         "@type": "tree:Node"
@@ -200,8 +187,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Pieter Couckstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.598585440531562",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.922258145963404"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.139307288643965",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.11489315275266"
         }
       ],
       "total_children_count": 0,
@@ -217,8 +204,7 @@
       ],
       "triples_metadata": [
         "Pieter Couckstraat"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

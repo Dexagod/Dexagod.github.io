@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,16 +23,28 @@
     {
       "token_string": "pl",
       "triples": [],
-      "children": {
-        "eegstersstraat": [
-          "1735",
-          "90024"
-        ],
-        "ancke": [
-          "1735",
-          "95854"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1735.jsonld#90024",
+              "@type": "tree:Node",
+              "token_string": "eegstersstraat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1735.jsonld#95854",
+              "@type": "tree:Node",
+              "token_string": "ancke"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment682.jsonld#5144",
         "@type": "tree:Node"
@@ -40,18 +52,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Verpleegstersstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4647913555101617",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.032519298838515"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6424294887582005",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.764858092975786"
         },
         {
           "http://example.com/terms#name": "Verplanckengang",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.461204209844346",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.119393920244526"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.165661710553713",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.29423996481127"
         },
         {
           "http://example.com/terms#name": "Verplanckes Partje",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.826443244398872",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.232442285287604"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5181129575809797",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.6910810925837"
         }
       ],
       "total_children_count": 4,
@@ -77,36 +89,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1735.jsonld#90024"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1735.jsonld#95854"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "eegstersstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Verpleegstersstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4647913555101617",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.032519298838515"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6424294887582005",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.764858092975786"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1735.jsonld#90023",
         "@type": "tree:Node"
@@ -114,8 +107,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Verpleegstersstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4647913555101617",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.032519298838515"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6424294887582005",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.764858092975786"
         }
       ],
       "total_children_count": 0,
@@ -131,22 +124,33 @@
       ],
       "triples_metadata": [
         "Verpleegstersstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "ancke",
       "triples": [],
-      "children": {
-        "ngang": [
-          "1735",
-          "95855"
-        ],
-        "s Partje": [
-          "1735",
-          "95856"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1735.jsonld#95855",
+              "@type": "tree:Node",
+              "token_string": "ngang"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1735.jsonld#95856",
+              "@type": "tree:Node",
+              "token_string": "s Partje"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment1735.jsonld#90023",
         "@type": "tree:Node"
@@ -154,13 +158,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Verplanckengang",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.461204209844346",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.119393920244526"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.165661710553713",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.29423996481127"
         },
         {
           "http://example.com/terms#name": "Verplanckes Partje",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.826443244398872",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.232442285287604"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5181129575809797",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.6910810925837"
         }
       ],
       "total_children_count": 2,
@@ -180,36 +184,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1735.jsonld#95855"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1735.jsonld#95856"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "ngang",
       "triples": [
         {
           "http://example.com/terms#name": "Verplanckengang",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.461204209844346",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.119393920244526"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.165661710553713",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.29423996481127"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1735.jsonld#95854",
         "@type": "tree:Node"
@@ -217,8 +202,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Verplanckengang",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.461204209844346",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.119393920244526"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.165661710553713",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.29423996481127"
         }
       ],
       "total_children_count": 0,
@@ -234,19 +219,17 @@
       ],
       "triples_metadata": [
         "Verplanckengang"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "s Partje",
       "triples": [
         {
           "http://example.com/terms#name": "Verplanckes Partje",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.826443244398872",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.232442285287604"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5181129575809797",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.6910810925837"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1735.jsonld#95854",
         "@type": "tree:Node"
@@ -254,8 +237,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Verplanckes Partje",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.826443244398872",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.232442285287604"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5181129575809797",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.6910810925837"
         }
       ],
       "total_children_count": 0,
@@ -271,8 +254,7 @@
       ],
       "triples_metadata": [
         "Verplanckes Partje"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

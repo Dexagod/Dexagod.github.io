@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,16 +23,28 @@
     {
       "token_string": "uyc",
       "triples": [],
-      "children": {
-        "kx": [
-          "4325",
-          "110416"
-        ],
-        "x": [
-          "4325",
-          "110417"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment4325.jsonld#110416",
+              "@type": "tree:Node",
+              "token_string": "kx"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment4325.jsonld#110417",
+              "@type": "tree:Node",
+              "token_string": "x"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment4325.jsonld#110419",
         "@type": "tree:Node"
@@ -40,13 +52,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Raymond Luyckx",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3966272482675706",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.37971134269062"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.51931671510048",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.36417839161732"
         },
         {
           "http://example.com/terms#name": "Rue Raymond Luycx",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.115184045008779",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.33308575976025"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7940668627967327",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.494438422352616"
         }
       ],
       "total_children_count": 2,
@@ -66,36 +78,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4325.jsonld#110416"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4325.jsonld#110417"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "kx",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Raymond Luyckx",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3966272482675706",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.37971134269062"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.51931671510048",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.36417839161732"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4325.jsonld#110415",
         "@type": "tree:Node"
@@ -103,8 +96,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Raymond Luyckx",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3966272482675706",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.37971134269062"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.51931671510048",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.36417839161732"
         }
       ],
       "total_children_count": 0,
@@ -120,19 +113,17 @@
       ],
       "triples_metadata": [
         "Rue Raymond Luyckx"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "x",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Raymond Luycx",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.115184045008779",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.33308575976025"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7940668627967327",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.494438422352616"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4325.jsonld#110415",
         "@type": "tree:Node"
@@ -140,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Raymond Luycx",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.115184045008779",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.33308575976025"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7940668627967327",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.494438422352616"
         }
       ],
       "total_children_count": 0,
@@ -157,26 +148,43 @@
       ],
       "triples_metadata": [
         "Rue Raymond Luycx"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "L",
       "triples": [],
-      "children": {
-        "uyc": [
-          "4325",
-          "110415"
-        ],
-        "iénard": [
-          "4325",
-          "127456"
-        ],
-        "e": [
-          "4325",
-          "151654"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment4325.jsonld#110415",
+              "@type": "tree:Node",
+              "token_string": "uyc"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment4325.jsonld#127456",
+              "@type": "tree:Node",
+              "token_string": "iénard"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment4325.jsonld#151654",
+              "@type": "tree:Node",
+              "token_string": "e"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment4325.jsonld#145895",
         "@type": "tree:Node"
@@ -184,28 +192,28 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Raymond Lebleux",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.221744087273872",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.59882554891594"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.623396075716684",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.678869347481346"
         },
         {
           "http://example.com/terms#name": "Rue Raymond Luyckx",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3966272482675706",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.37971134269062"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.51931671510048",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.36417839161732"
         },
         {
           "http://example.com/terms#name": "Rue Raymond Luycx",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.115184045008779",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.33308575976025"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7940668627967327",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.494438422352616"
         },
         {
           "http://example.com/terms#name": "Rue Raymond Liénard",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.163504322359238",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.5819575045634"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.018225317020653",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.67189946031559"
         },
         {
           "http://example.com/terms#name": "Rue Raymond Legentil",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5871888889089334",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.262799895987605"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7033924774590994",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.10177355110723"
         }
       ],
       "total_children_count": 7,
@@ -243,44 +251,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4325.jsonld#110415"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4325.jsonld#127456"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4325.jsonld#151654"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "Jacques",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Raymond Jacques",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.277834082842498",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.00546306025428"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1303537977526994",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.39912086270371"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4325.jsonld#145895",
         "@type": "tree:Node"
@@ -288,8 +269,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Raymond Jacques",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.277834082842498",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.00546306025428"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1303537977526994",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.39912086270371"
         }
       ],
       "total_children_count": 0,
@@ -305,19 +286,17 @@
       ],
       "triples_metadata": [
         "Rue Raymond Jacques"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "iénard",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Raymond Liénard",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.163504322359238",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.5819575045634"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.018225317020653",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.67189946031559"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4325.jsonld#110419",
         "@type": "tree:Node"
@@ -325,8 +304,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Raymond Liénard",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.163504322359238",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.5819575045634"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.018225317020653",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.67189946031559"
         }
       ],
       "total_children_count": 0,
@@ -342,22 +321,33 @@
       ],
       "triples_metadata": [
         "Rue Raymond Liénard"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "C",
       "triples": [],
-      "children": {
-        "labecq": [
-          "4325",
-          "130125"
-        ],
-        "ordier": [
-          "4325",
-          "130126"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment4325.jsonld#130125",
+              "@type": "tree:Node",
+              "token_string": "labecq"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment4325.jsonld#130126",
+              "@type": "tree:Node",
+              "token_string": "ordier"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment4325.jsonld#145895",
         "@type": "tree:Node"
@@ -365,13 +355,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Raymond Clabecq",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4531154610071773",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.513788222047"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2186928075546772",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.24811590325963"
         },
         {
           "http://example.com/terms#name": "Rue Raymond Cordier",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.99420241399354",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.93005051434164"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4911970086950097",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.21669287629494"
         }
       ],
       "total_children_count": 2,
@@ -391,36 +381,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4325.jsonld#130125"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4325.jsonld#130126"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "labecq",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Raymond Clabecq",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4531154610071773",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.513788222047"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2186928075546772",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.24811590325963"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4325.jsonld#130124",
         "@type": "tree:Node"
@@ -428,8 +399,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Raymond Clabecq",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4531154610071773",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.513788222047"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2186928075546772",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.24811590325963"
         }
       ],
       "total_children_count": 0,
@@ -445,19 +416,17 @@
       ],
       "triples_metadata": [
         "Rue Raymond Clabecq"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "ordier",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Raymond Cordier",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.99420241399354",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.93005051434164"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4911970086950097",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.21669287629494"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4325.jsonld#130124",
         "@type": "tree:Node"
@@ -465,8 +434,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Raymond Cordier",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.99420241399354",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.93005051434164"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4911970086950097",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.21669287629494"
         }
       ],
       "total_children_count": 0,
@@ -482,22 +451,33 @@
       ],
       "triples_metadata": [
         "Rue Raymond Cordier"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "B",
       "triples": [],
-      "children": {
-        "rigode": [
-          "4325",
-          "140771"
-        ],
-        "auwin": [
-          "4325",
-          "140772"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment4325.jsonld#140771",
+              "@type": "tree:Node",
+              "token_string": "rigode"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment4325.jsonld#140772",
+              "@type": "tree:Node",
+              "token_string": "auwin"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment4325.jsonld#145895",
         "@type": "tree:Node"
@@ -505,13 +485,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Raymond Brigode",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.185491841867719",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.63613128957196"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9681855404242152",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.33168327654313"
         },
         {
           "http://example.com/terms#name": "Rue Raymond Bauwin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1395730423854618",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.940906081958275"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1184756280870727",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.50657583943919"
         }
       ],
       "total_children_count": 2,
@@ -531,36 +511,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4325.jsonld#140771"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4325.jsonld#140772"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "rigode",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Raymond Brigode",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.185491841867719",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.63613128957196"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9681855404242152",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.33168327654313"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4325.jsonld#140770",
         "@type": "tree:Node"
@@ -568,8 +529,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Raymond Brigode",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.185491841867719",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.63613128957196"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9681855404242152",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.33168327654313"
         }
       ],
       "total_children_count": 0,
@@ -585,19 +546,17 @@
       ],
       "triples_metadata": [
         "Rue Raymond Brigode"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "auwin",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Raymond Bauwin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1395730423854618",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.940906081958275"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1184756280870727",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.50657583943919"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4325.jsonld#140770",
         "@type": "tree:Node"
@@ -605,8 +564,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Raymond Bauwin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1395730423854618",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.940906081958275"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1184756280870727",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.50657583943919"
         }
       ],
       "total_children_count": 0,
@@ -622,28 +581,39 @@
       ],
       "triples_metadata": [
         "Rue Raymond Bauwin"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "ymond",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Raymond",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.547882396264644",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.425005160043185"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8432619199957667",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.09710339879463"
         }
       ],
-      "children": {
-        " ": [
-          "4325",
-          "145895"
-        ],
-        "-G": [
-          "4325",
-          "163990"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment4325.jsonld#145895",
+              "@type": "tree:Node",
+              "token_string": " "
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment4325.jsonld#163990",
+              "@type": "tree:Node",
+              "token_string": "-G"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment4838.jsonld#105509",
         "@type": "tree:Node"
@@ -651,53 +621,53 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Raymond Lebleux",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.221744087273872",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.59882554891594"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.623396075716684",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.678869347481346"
         },
         {
           "http://example.com/terms#name": "Rue Raymond Jacques",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.277834082842498",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.00546306025428"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1303537977526994",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.39912086270371"
         },
         {
           "http://example.com/terms#name": "Rue Raymond Clabecq",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4531154610071773",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.513788222047"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2186928075546772",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.24811590325963"
         },
         {
           "http://example.com/terms#name": "Rue Raymond Brigode",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.185491841867719",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.63613128957196"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9681855404242152",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.33168327654313"
         },
         {
           "http://example.com/terms#name": "Rue Raymond Cordier",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.99420241399354",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.93005051434164"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4911970086950097",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.21669287629494"
         },
         {
           "http://example.com/terms#name": "Rue Raymond Bauwin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1395730423854618",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.940906081958275"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1184756280870727",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.50657583943919"
         },
         {
           "http://example.com/terms#name": "Rue Raymond",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.547882396264644",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.425005160043185"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8432619199957667",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.09710339879463"
         },
         {
           "http://example.com/terms#name": "Rue Raymond Decelle",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0700052652629104",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.70275067161767"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5460791137269294",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.99190384191557"
         },
         {
           "http://example.com/terms#name": "Rue Raymond Gemine",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2131623819805624",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.64213687441927"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.602789496779785",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.178991939069235"
         },
         {
           "http://example.com/terms#name": "Rue Raymond Gustin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.497802211286933",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.015627703272926"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2590439595164953",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.70583057581136"
         }
       ],
       "total_children_count": 28,
@@ -767,13 +737,19 @@
       ],
       "triples_metadata": [
         "Rue Raymond"
-      ],
-      "childlist": [
+      ]
+    },
+    {
+      "token_string": " ",
+      "triples": [],
+      "children": [
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
             {
-              "@id": "/streets/fragment4325.jsonld#145895"
+              "@id": "/streets/fragment4325.jsonld#110419",
+              "@type": "tree:Node",
+              "token_string": "L"
             }
           ]
         },
@@ -781,53 +757,83 @@
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
             {
-              "@id": "/streets/fragment4325.jsonld#163990"
+              "@id": "/streets/fragment4325.jsonld#119904",
+              "@type": "tree:Node",
+              "token_string": "Jacques"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment4325.jsonld#130124",
+              "@type": "tree:Node",
+              "token_string": "C"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment4325.jsonld#140770",
+              "@type": "tree:Node",
+              "token_string": "B"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment4325.jsonld#154660",
+              "@type": "tree:Node",
+              "token_string": "P"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment4325.jsonld#169540",
+              "@type": "tree:Node",
+              "token_string": "Decelle"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment4325.jsonld#169542",
+              "@type": "tree:Node",
+              "token_string": "G"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment4325.jsonld#169545",
+              "@type": "tree:Node",
+              "token_string": "Museu"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment4325.jsonld#170200",
+              "@type": "tree:Node",
+              "token_string": "Noel"
             }
           ]
         }
-      ]
-    },
-    {
-      "token_string": " ",
-      "triples": [],
-      "children": {
-        "L": [
-          "4325",
-          "110419"
-        ],
-        "Jacques": [
-          "4325",
-          "119904"
-        ],
-        "C": [
-          "4325",
-          "130124"
-        ],
-        "B": [
-          "4325",
-          "140770"
-        ],
-        "P": [
-          "4325",
-          "154660"
-        ],
-        "Decelle": [
-          "4325",
-          "169540"
-        ],
-        "G": [
-          "4325",
-          "169542"
-        ],
-        "Museu": [
-          "4325",
-          "169545"
-        ],
-        "Noel": [
-          "4325",
-          "170200"
-        ]
-      },
+      ],
       "parent_node": {
         "@id": "/streets/fragment4325.jsonld#145894",
         "@type": "tree:Node"
@@ -835,53 +841,53 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Raymond Lebleux",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.221744087273872",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.59882554891594"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.623396075716684",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.678869347481346"
         },
         {
           "http://example.com/terms#name": "Rue Raymond Jacques",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.277834082842498",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.00546306025428"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1303537977526994",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.39912086270371"
         },
         {
           "http://example.com/terms#name": "Rue Raymond Clabecq",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4531154610071773",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.513788222047"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2186928075546772",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.24811590325963"
         },
         {
           "http://example.com/terms#name": "Rue Raymond Brigode",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.185491841867719",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.63613128957196"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9681855404242152",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.33168327654313"
         },
         {
           "http://example.com/terms#name": "Rue Raymond Cordier",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.99420241399354",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.93005051434164"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4911970086950097",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.21669287629494"
         },
         {
           "http://example.com/terms#name": "Rue Raymond Bauwin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1395730423854618",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.940906081958275"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1184756280870727",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.50657583943919"
         },
         {
           "http://example.com/terms#name": "Rue Raymond Legentil",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5871888889089334",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.262799895987605"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7033924774590994",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.10177355110723"
         },
         {
           "http://example.com/terms#name": "Rue Raymond Decelle",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0700052652629104",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.70275067161767"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5460791137269294",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.99190384191557"
         },
         {
           "http://example.com/terms#name": "Rue Raymond Gemine",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2131623819805624",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.64213687441927"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.602789496779785",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.178991939069235"
         },
         {
           "http://example.com/terms#name": "Rue Raymond Gustin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.497802211286933",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.015627703272926"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2590439595164953",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.70583057581136"
         }
       ],
       "total_children_count": 24,
@@ -949,95 +955,33 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4325.jsonld#110419"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4325.jsonld#119904"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4325.jsonld#130124"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4325.jsonld#140770"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4325.jsonld#154660"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4325.jsonld#169540"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4325.jsonld#169542"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4325.jsonld#169545"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4325.jsonld#170200"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "e",
       "triples": [],
-      "children": {
-        "bleux": [
-          "4325",
-          "151655"
-        ],
-        "gentil": [
-          "4325",
-          "151656"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment4325.jsonld#151655",
+              "@type": "tree:Node",
+              "token_string": "bleux"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment4325.jsonld#151656",
+              "@type": "tree:Node",
+              "token_string": "gentil"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment4325.jsonld#110419",
         "@type": "tree:Node"
@@ -1045,13 +989,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Raymond Lebleux",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.221744087273872",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.59882554891594"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.623396075716684",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.678869347481346"
         },
         {
           "http://example.com/terms#name": "Rue Raymond Legentil",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5871888889089334",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.262799895987605"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7033924774590994",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.10177355110723"
         }
       ],
       "total_children_count": 2,
@@ -1071,36 +1015,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4325.jsonld#151655"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4325.jsonld#151656"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "bleux",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Raymond Lebleux",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.221744087273872",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.59882554891594"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.623396075716684",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.678869347481346"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4325.jsonld#151654",
         "@type": "tree:Node"
@@ -1108,8 +1033,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Raymond Lebleux",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.221744087273872",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.59882554891594"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.623396075716684",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.678869347481346"
         }
       ],
       "total_children_count": 0,
@@ -1125,19 +1050,17 @@
       ],
       "triples_metadata": [
         "Rue Raymond Lebleux"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "gentil",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Raymond Legentil",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5871888889089334",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.262799895987605"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7033924774590994",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.10177355110723"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4325.jsonld#151654",
         "@type": "tree:Node"
@@ -1145,8 +1068,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Raymond Legentil",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5871888889089334",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.262799895987605"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7033924774590994",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.10177355110723"
         }
       ],
       "total_children_count": 0,
@@ -1162,22 +1085,33 @@
       ],
       "triples_metadata": [
         "Rue Raymond Legentil"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "P",
       "triples": [],
-      "children": {
-        "ieret": [
-          "4325",
-          "154661"
-        ],
-        "asleau": [
-          "4325",
-          "154662"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment4325.jsonld#154661",
+              "@type": "tree:Node",
+              "token_string": "ieret"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment4325.jsonld#154662",
+              "@type": "tree:Node",
+              "token_string": "asleau"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment4325.jsonld#145895",
         "@type": "tree:Node"
@@ -1185,13 +1119,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Raymond Pieret",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9866452054693937",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.88306728382445"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1480134403654496",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.053170992201025"
         },
         {
           "http://example.com/terms#name": "Rue Raymond Pasleau",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5702744073911",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.53979031296956"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2624962352758464",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.58874492907695"
         }
       ],
       "total_children_count": 2,
@@ -1211,36 +1145,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4325.jsonld#154661"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4325.jsonld#154662"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "ieret",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Raymond Pieret",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9866452054693937",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.88306728382445"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1480134403654496",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.053170992201025"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4325.jsonld#154660",
         "@type": "tree:Node"
@@ -1248,8 +1163,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Raymond Pieret",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9866452054693937",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.88306728382445"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1480134403654496",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.053170992201025"
         }
       ],
       "total_children_count": 0,
@@ -1265,19 +1180,17 @@
       ],
       "triples_metadata": [
         "Rue Raymond Pieret"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "asleau",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Raymond Pasleau",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5702744073911",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.53979031296956"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2624962352758464",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.58874492907695"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4325.jsonld#154660",
         "@type": "tree:Node"
@@ -1285,8 +1198,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Raymond Pasleau",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5702744073911",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.53979031296956"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2624962352758464",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.58874492907695"
         }
       ],
       "total_children_count": 0,
@@ -1302,22 +1215,33 @@
       ],
       "triples_metadata": [
         "Rue Raymond Pasleau"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "-G",
       "triples": [],
-      "children": {
-        "eenen": [
-          "4325",
-          "163991"
-        ],
-        "ridlet": [
-          "4325",
-          "163992"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment4325.jsonld#163991",
+              "@type": "tree:Node",
+              "token_string": "eenen"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment4325.jsonld#163992",
+              "@type": "tree:Node",
+              "token_string": "ridlet"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment4325.jsonld#145894",
         "@type": "tree:Node"
@@ -1325,13 +1249,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Raymond-Geenen",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0534361848528944",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.87757055121973"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9122812299106204",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.81357060714329"
         },
         {
           "http://example.com/terms#name": "Rue Raymond-Gridlet",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.779572025156865",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.31879319800491"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8140390600945704",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.3583827596489"
         }
       ],
       "total_children_count": 2,
@@ -1351,36 +1275,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4325.jsonld#163991"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4325.jsonld#163992"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "eenen",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Raymond-Geenen",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0534361848528944",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.87757055121973"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9122812299106204",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.81357060714329"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4325.jsonld#163990",
         "@type": "tree:Node"
@@ -1388,8 +1293,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Raymond-Geenen",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0534361848528944",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.87757055121973"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9122812299106204",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.81357060714329"
         }
       ],
       "total_children_count": 0,
@@ -1405,19 +1310,17 @@
       ],
       "triples_metadata": [
         "Rue Raymond-Geenen"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "ridlet",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Raymond-Gridlet",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.779572025156865",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.31879319800491"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8140390600945704",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.3583827596489"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4325.jsonld#163990",
         "@type": "tree:Node"
@@ -1425,8 +1328,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Raymond-Gridlet",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.779572025156865",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.31879319800491"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8140390600945704",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.3583827596489"
         }
       ],
       "total_children_count": 0,
@@ -1442,19 +1345,17 @@
       ],
       "triples_metadata": [
         "Rue Raymond-Gridlet"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "Decelle",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Raymond Decelle",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0700052652629104",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.70275067161767"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5460791137269294",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.99190384191557"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4325.jsonld#145895",
         "@type": "tree:Node"
@@ -1462,8 +1363,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Raymond Decelle",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0700052652629104",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.70275067161767"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5460791137269294",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.99190384191557"
         }
       ],
       "total_children_count": 0,
@@ -1479,22 +1380,33 @@
       ],
       "triples_metadata": [
         "Rue Raymond Decelle"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "G",
       "triples": [],
-      "children": {
-        "emine": [
-          "4325",
-          "169543"
-        ],
-        "ustin": [
-          "4325",
-          "169544"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment4325.jsonld#169543",
+              "@type": "tree:Node",
+              "token_string": "emine"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment4325.jsonld#169544",
+              "@type": "tree:Node",
+              "token_string": "ustin"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment4325.jsonld#145895",
         "@type": "tree:Node"
@@ -1502,13 +1414,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Raymond Gemine",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2131623819805624",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.64213687441927"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.602789496779785",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.178991939069235"
         },
         {
           "http://example.com/terms#name": "Rue Raymond Gustin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.497802211286933",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.015627703272926"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2590439595164953",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.70583057581136"
         }
       ],
       "total_children_count": 2,
@@ -1528,36 +1440,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4325.jsonld#169543"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment4325.jsonld#169544"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "emine",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Raymond Gemine",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2131623819805624",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.64213687441927"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.602789496779785",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.178991939069235"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4325.jsonld#169542",
         "@type": "tree:Node"
@@ -1565,8 +1458,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Raymond Gemine",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2131623819805624",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.64213687441927"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.602789496779785",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.178991939069235"
         }
       ],
       "total_children_count": 0,
@@ -1582,19 +1475,17 @@
       ],
       "triples_metadata": [
         "Rue Raymond Gemine"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "ustin",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Raymond Gustin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.497802211286933",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.015627703272926"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2590439595164953",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.70583057581136"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4325.jsonld#169542",
         "@type": "tree:Node"
@@ -1602,8 +1493,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Raymond Gustin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.497802211286933",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.015627703272926"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2590439595164953",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.70583057581136"
         }
       ],
       "total_children_count": 0,
@@ -1619,19 +1510,17 @@
       ],
       "triples_metadata": [
         "Rue Raymond Gustin"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "Museu",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Raymond Museu",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.339595344705251",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.41188096389081"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.272073671833521",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.98221197409978"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4325.jsonld#145895",
         "@type": "tree:Node"
@@ -1639,8 +1528,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Raymond Museu",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.339595344705251",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.41188096389081"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.272073671833521",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.98221197409978"
         }
       ],
       "total_children_count": 0,
@@ -1656,19 +1545,17 @@
       ],
       "triples_metadata": [
         "Rue Raymond Museu"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "Noel",
       "triples": [
         {
           "http://example.com/terms#name": "Rue Raymond Noel",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6268845108629333",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.74865565967674"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8368153078553227",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.77749203975976"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment4325.jsonld#145895",
         "@type": "tree:Node"
@@ -1676,8 +1563,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue Raymond Noel",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6268845108629333",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.74865565967674"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8368153078553227",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.77749203975976"
         }
       ],
       "total_children_count": 0,
@@ -1693,8 +1580,7 @@
       ],
       "triples_metadata": [
         "Rue Raymond Noel"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

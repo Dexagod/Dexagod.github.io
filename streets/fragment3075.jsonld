@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,16 +23,28 @@
     {
       "token_string": "jon",
       "triples": [],
-      "children": {
-        "ghekoer": [
-          "3075",
-          "92383"
-        ],
-        "ckerstraat": [
-          "3075",
-          "92384"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment3075.jsonld#92383",
+              "@type": "tree:Node",
+              "token_string": "ghekoer"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment3075.jsonld#92384",
+              "@type": "tree:Node",
+              "token_string": "ckerstraat"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment51.jsonld#198",
         "@type": "tree:Node"
@@ -40,13 +52,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Dejonghekoer",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2453310244028986",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.80756072830019"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.299544524076064",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.180260433809565"
         },
         {
           "http://example.com/terms#name": "Dejonckerstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6454278395495225",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.08739798937661"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.361224950659001",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.41070035386839"
         }
       ],
       "total_children_count": 2,
@@ -66,36 +78,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3075.jsonld#92383"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3075.jsonld#92384"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "ghekoer",
       "triples": [
         {
           "http://example.com/terms#name": "Dejonghekoer",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2453310244028986",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.80756072830019"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.299544524076064",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.180260433809565"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3075.jsonld#92382",
         "@type": "tree:Node"
@@ -103,8 +96,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Dejonghekoer",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2453310244028986",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.80756072830019"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.299544524076064",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.180260433809565"
         }
       ],
       "total_children_count": 0,
@@ -120,19 +113,17 @@
       ],
       "triples_metadata": [
         "Dejonghekoer"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "ckerstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Dejonckerstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6454278395495225",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.08739798937661"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.361224950659001",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.41070035386839"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3075.jsonld#92382",
         "@type": "tree:Node"
@@ -140,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Dejonckerstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6454278395495225",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.08739798937661"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.361224950659001",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.41070035386839"
         }
       ],
       "total_children_count": 0,
@@ -157,8 +148,7 @@
       ],
       "triples_metadata": [
         "Dejonckerstraat"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

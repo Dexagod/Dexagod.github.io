@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,16 +23,28 @@
     {
       "token_string": "T",
       "triples": [],
-      "children": {
-        "ram": [
-          "6402",
-          "113027"
-        ],
-        "ailleur de Pierre": [
-          "6402",
-          "113028"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment6402.jsonld#113027",
+              "@type": "tree:Node",
+              "token_string": "ram"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment6402.jsonld#113028",
+              "@type": "tree:Node",
+              "token_string": "ailleur de Pierre"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment6402.jsonld#116252",
         "@type": "tree:Node"
@@ -40,13 +52,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Quartier du Tram",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7718144801283735",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.9983249568874"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.416156114384169",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.83242726354162"
         },
         {
           "http://example.com/terms#name": "Quartier du Tailleur de Pierre",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8596386427365728",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.56616646180505"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7645160449941164",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.70902505931406"
         }
       ],
       "total_children_count": 2,
@@ -66,36 +78,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6402.jsonld#113027"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6402.jsonld#113028"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "ram",
       "triples": [
         {
           "http://example.com/terms#name": "Quartier du Tram",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7718144801283735",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.9983249568874"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.416156114384169",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.83242726354162"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6402.jsonld#113026",
         "@type": "tree:Node"
@@ -103,8 +96,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Quartier du Tram",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7718144801283735",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.9983249568874"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.416156114384169",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.83242726354162"
         }
       ],
       "total_children_count": 0,
@@ -120,19 +113,17 @@
       ],
       "triples_metadata": [
         "Quartier du Tram"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "ailleur de Pierre",
       "triples": [
         {
           "http://example.com/terms#name": "Quartier du Tailleur de Pierre",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8596386427365728",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.56616646180505"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7645160449941164",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.70902505931406"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6402.jsonld#113026",
         "@type": "tree:Node"
@@ -140,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Quartier du Tailleur de Pierre",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8596386427365728",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.56616646180505"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7645160449941164",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.70902505931406"
         }
       ],
       "total_children_count": 0,
@@ -157,54 +148,113 @@
       ],
       "triples_metadata": [
         "Quartier du Tailleur de Pierre"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "u ",
       "triples": [],
-      "children": {
-        "T": [
-          "6402",
-          "113026"
-        ],
-        "Grand Trieu": [
-          "6402",
-          "120488"
-        ],
-        "Roi": [
-          "6402",
-          "123406"
-        ],
-        "P": [
-          "6402",
-          "128752"
-        ],
-        "B": [
-          "6402",
-          "133404"
-        ],
-        "V": [
-          "6402",
-          "165045"
-        ],
-        "Château-d'eau": [
-          "6402",
-          "172369"
-        ],
-        "Hierdeau": [
-          "6402",
-          "172370"
-        ],
-        "M": [
-          "6402",
-          "178539"
-        ],
-        "Schiste": [
-          "6402",
-          "179139"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment6402.jsonld#113026",
+              "@type": "tree:Node",
+              "token_string": "T"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment6402.jsonld#120488",
+              "@type": "tree:Node",
+              "token_string": "Grand Trieu"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment6402.jsonld#123406",
+              "@type": "tree:Node",
+              "token_string": "Roi"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment6402.jsonld#128752",
+              "@type": "tree:Node",
+              "token_string": "P"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment6402.jsonld#133404",
+              "@type": "tree:Node",
+              "token_string": "B"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment6402.jsonld#165045",
+              "@type": "tree:Node",
+              "token_string": "V"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment6402.jsonld#172369",
+              "@type": "tree:Node",
+              "token_string": "Château-d'eau"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment6402.jsonld#172370",
+              "@type": "tree:Node",
+              "token_string": "Hierdeau"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment6402.jsonld#178539",
+              "@type": "tree:Node",
+              "token_string": "M"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment6402.jsonld#179139",
+              "@type": "tree:Node",
+              "token_string": "Schiste"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment4340.jsonld#116525",
         "@type": "tree:Node"
@@ -212,53 +262,53 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Quartier du Petit Baty",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9705496313162945",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.61470927291249"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.999101663218599",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.47377899603117"
         },
         {
           "http://example.com/terms#name": "Quartier du Grand Trieu",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5574916879219582",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.412407617581074"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.814487795815975",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.371086495100855"
         },
         {
           "http://example.com/terms#name": "Quartier du Bon Air",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2064241056177014",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.67885225846254"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4604951803679",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.24854099219538"
         },
         {
           "http://example.com/terms#name": "Quartier du Beffroi",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8968460581759485",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.351522833033094"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.565054068991004",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.25791570053035"
         },
         {
           "http://example.com/terms#name": "Quartier du Bois",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5702519791550027",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.79818496057996"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.632224979317173",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.439654270491175"
         },
         {
           "http://example.com/terms#name": "Quartier du Moulin Impérial",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.636435351950376",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.815538505082166"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5911756370210446",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.302327796721315"
         },
         {
           "http://example.com/terms#name": "Quartier du Château-d'eau",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9737197239535833",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.52506247969412"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9305227141230294",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.03529060369207"
         },
         {
           "http://example.com/terms#name": "Quartier du Hierdeau",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0110221293562267",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.01858632060609"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3766839041034777",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.81770667422025"
         },
         {
           "http://example.com/terms#name": "Quartier du Mayeur",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1995634245325073",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.285539368748495"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.227738101020561",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.86448641930623"
         },
         {
           "http://example.com/terms#name": "Quartier du Poncia",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0036032103873",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.686075898900825"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.519511031041669",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.32995805003016"
         }
       ],
       "total_children_count": 24,
@@ -326,100 +376,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6402.jsonld#113026"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6402.jsonld#120488"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6402.jsonld#123406"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6402.jsonld#128752"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6402.jsonld#133404"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6402.jsonld#165045"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6402.jsonld#172369"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6402.jsonld#172370"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6402.jsonld#178539"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6402.jsonld#179139"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "Grand Trieu",
       "triples": [
         {
           "http://example.com/terms#name": "Quartier du Grand Trieu",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5574916879219582",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.412407617581074"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.814487795815975",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.371086495100855"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6402.jsonld#116252",
         "@type": "tree:Node"
@@ -427,8 +394,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Quartier du Grand Trieu",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5574916879219582",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.412407617581074"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.814487795815975",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.371086495100855"
         }
       ],
       "total_children_count": 0,
@@ -444,19 +411,17 @@
       ],
       "triples_metadata": [
         "Quartier du Grand Trieu"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "Roi",
       "triples": [
         {
           "http://example.com/terms#name": "Quartier du Roi",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.042459273114978",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.135255822532635"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4005409298565445",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.23383759341845"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6402.jsonld#116252",
         "@type": "tree:Node"
@@ -464,8 +429,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Quartier du Roi",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.042459273114978",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.135255822532635"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4005409298565445",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.23383759341845"
         }
       ],
       "total_children_count": 0,
@@ -481,22 +446,33 @@
       ],
       "triples_metadata": [
         "Quartier du Roi"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "P",
       "triples": [],
-      "children": {
-        "etit Baty": [
-          "6402",
-          "128753"
-        ],
-        "on": [
-          "6402",
-          "179089"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment6402.jsonld#128753",
+              "@type": "tree:Node",
+              "token_string": "etit Baty"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment6402.jsonld#179089",
+              "@type": "tree:Node",
+              "token_string": "on"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment6402.jsonld#116252",
         "@type": "tree:Node"
@@ -504,18 +480,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Quartier du Petit Baty",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9705496313162945",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.61470927291249"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.999101663218599",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.47377899603117"
         },
         {
           "http://example.com/terms#name": "Quartier du Pont",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9628005743094343",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.51506248122509"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0567780933837403",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.14193630743129"
         },
         {
           "http://example.com/terms#name": "Quartier du Poncia",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0036032103873",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.686075898900825"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.519511031041669",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.32995805003016"
         }
       ],
       "total_children_count": 4,
@@ -541,36 +517,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6402.jsonld#128753"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6402.jsonld#179089"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "etit Baty",
       "triples": [
         {
           "http://example.com/terms#name": "Quartier du Petit Baty",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9705496313162945",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.61470927291249"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.999101663218599",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.47377899603117"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6402.jsonld#128752",
         "@type": "tree:Node"
@@ -578,8 +535,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Quartier du Petit Baty",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9705496313162945",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.61470927291249"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.999101663218599",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.47377899603117"
         }
       ],
       "total_children_count": 0,
@@ -595,22 +552,33 @@
       ],
       "triples_metadata": [
         "Quartier du Petit Baty"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "B",
       "triples": [],
-      "children": {
-        "effroi": [
-          "6402",
-          "133406"
-        ],
-        "o": [
-          "6402",
-          "146973"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment6402.jsonld#133406",
+              "@type": "tree:Node",
+              "token_string": "effroi"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment6402.jsonld#146973",
+              "@type": "tree:Node",
+              "token_string": "o"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment6402.jsonld#116252",
         "@type": "tree:Node"
@@ -618,18 +586,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Quartier du Bon Air",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2064241056177014",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.67885225846254"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4604951803679",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.24854099219538"
         },
         {
           "http://example.com/terms#name": "Quartier du Beffroi",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8968460581759485",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.351522833033094"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.565054068991004",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.25791570053035"
         },
         {
           "http://example.com/terms#name": "Quartier du Bois",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5702519791550027",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.79818496057996"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.632224979317173",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.439654270491175"
         }
       ],
       "total_children_count": 4,
@@ -655,36 +623,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6402.jsonld#133406"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6402.jsonld#146973"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "effroi",
       "triples": [
         {
           "http://example.com/terms#name": "Quartier du Beffroi",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8968460581759485",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.351522833033094"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.565054068991004",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.25791570053035"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6402.jsonld#133404",
         "@type": "tree:Node"
@@ -692,8 +641,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Quartier du Beffroi",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8968460581759485",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.351522833033094"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.565054068991004",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.25791570053035"
         }
       ],
       "total_children_count": 0,
@@ -709,22 +658,33 @@
       ],
       "triples_metadata": [
         "Quartier du Beffroi"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "o",
       "triples": [],
-      "children": {
-        "n Air": [
-          "6402",
-          "146974"
-        ],
-        "is": [
-          "6402",
-          "146975"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment6402.jsonld#146974",
+              "@type": "tree:Node",
+              "token_string": "n Air"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment6402.jsonld#146975",
+              "@type": "tree:Node",
+              "token_string": "is"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment6402.jsonld#133404",
         "@type": "tree:Node"
@@ -732,13 +692,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Quartier du Bon Air",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2064241056177014",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.67885225846254"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4604951803679",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.24854099219538"
         },
         {
           "http://example.com/terms#name": "Quartier du Bois",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5702519791550027",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.79818496057996"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.632224979317173",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.439654270491175"
         }
       ],
       "total_children_count": 2,
@@ -758,36 +718,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6402.jsonld#146974"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6402.jsonld#146975"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "n Air",
       "triples": [
         {
           "http://example.com/terms#name": "Quartier du Bon Air",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2064241056177014",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.67885225846254"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4604951803679",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.24854099219538"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6402.jsonld#146973",
         "@type": "tree:Node"
@@ -795,8 +736,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Quartier du Bon Air",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2064241056177014",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.67885225846254"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4604951803679",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.24854099219538"
         }
       ],
       "total_children_count": 0,
@@ -812,19 +753,17 @@
       ],
       "triples_metadata": [
         "Quartier du Bon Air"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "is",
       "triples": [
         {
           "http://example.com/terms#name": "Quartier du Bois",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5702519791550027",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.79818496057996"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.632224979317173",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.439654270491175"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6402.jsonld#146973",
         "@type": "tree:Node"
@@ -832,8 +771,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Quartier du Bois",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5702519791550027",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.79818496057996"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.632224979317173",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.439654270491175"
         }
       ],
       "total_children_count": 0,
@@ -849,22 +788,33 @@
       ],
       "triples_metadata": [
         "Quartier du Bois"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "V",
       "triples": [],
-      "children": {
-        "ieux Moulin": [
-          "6402",
-          "165046"
-        ],
-        "al de Somme": [
-          "6402",
-          "165047"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment6402.jsonld#165046",
+              "@type": "tree:Node",
+              "token_string": "ieux Moulin"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment6402.jsonld#165047",
+              "@type": "tree:Node",
+              "token_string": "al de Somme"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment6402.jsonld#116252",
         "@type": "tree:Node"
@@ -872,13 +822,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Quartier du Vieux Moulin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8298074312674046",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.084367591966064"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5462065794277198",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.77062111098656"
         },
         {
           "http://example.com/terms#name": "Quartier du Val de Somme",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3676170086914943",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.23188854544914"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0411968257043687",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.92640933285974"
         }
       ],
       "total_children_count": 2,
@@ -898,36 +848,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6402.jsonld#165046"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6402.jsonld#165047"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "ieux Moulin",
       "triples": [
         {
           "http://example.com/terms#name": "Quartier du Vieux Moulin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8298074312674046",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.084367591966064"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5462065794277198",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.77062111098656"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6402.jsonld#165045",
         "@type": "tree:Node"
@@ -935,8 +866,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Quartier du Vieux Moulin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8298074312674046",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.084367591966064"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5462065794277198",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.77062111098656"
         }
       ],
       "total_children_count": 0,
@@ -952,19 +883,17 @@
       ],
       "triples_metadata": [
         "Quartier du Vieux Moulin"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "al de Somme",
       "triples": [
         {
           "http://example.com/terms#name": "Quartier du Val de Somme",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3676170086914943",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.23188854544914"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0411968257043687",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.92640933285974"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6402.jsonld#165045",
         "@type": "tree:Node"
@@ -972,8 +901,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Quartier du Val de Somme",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3676170086914943",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.23188854544914"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0411968257043687",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.92640933285974"
         }
       ],
       "total_children_count": 0,
@@ -989,19 +918,17 @@
       ],
       "triples_metadata": [
         "Quartier du Val de Somme"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "Château-d'eau",
       "triples": [
         {
           "http://example.com/terms#name": "Quartier du Château-d'eau",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9737197239535833",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.52506247969412"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9305227141230294",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.03529060369207"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6402.jsonld#116252",
         "@type": "tree:Node"
@@ -1009,8 +936,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Quartier du Château-d'eau",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9737197239535833",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.52506247969412"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9305227141230294",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.03529060369207"
         }
       ],
       "total_children_count": 0,
@@ -1026,19 +953,17 @@
       ],
       "triples_metadata": [
         "Quartier du Château-d'eau"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "Hierdeau",
       "triples": [
         {
           "http://example.com/terms#name": "Quartier du Hierdeau",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0110221293562267",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.01858632060609"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3766839041034777",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.81770667422025"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6402.jsonld#116252",
         "@type": "tree:Node"
@@ -1046,8 +971,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Quartier du Hierdeau",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0110221293562267",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.01858632060609"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3766839041034777",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.81770667422025"
         }
       ],
       "total_children_count": 0,
@@ -1063,22 +988,33 @@
       ],
       "triples_metadata": [
         "Quartier du Hierdeau"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "M",
       "triples": [],
-      "children": {
-        "oulin Impérial": [
-          "6402",
-          "178540"
-        ],
-        "ayeur": [
-          "6402",
-          "178541"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment6402.jsonld#178540",
+              "@type": "tree:Node",
+              "token_string": "oulin Impérial"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment6402.jsonld#178541",
+              "@type": "tree:Node",
+              "token_string": "ayeur"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment6402.jsonld#116252",
         "@type": "tree:Node"
@@ -1086,13 +1022,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Quartier du Moulin Impérial",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.636435351950376",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.815538505082166"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5911756370210446",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.302327796721315"
         },
         {
           "http://example.com/terms#name": "Quartier du Mayeur",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1995634245325073",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.285539368748495"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.227738101020561",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.86448641930623"
         }
       ],
       "total_children_count": 2,
@@ -1112,36 +1048,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6402.jsonld#178540"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6402.jsonld#178541"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "oulin Impérial",
       "triples": [
         {
           "http://example.com/terms#name": "Quartier du Moulin Impérial",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.636435351950376",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.815538505082166"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5911756370210446",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.302327796721315"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6402.jsonld#178539",
         "@type": "tree:Node"
@@ -1149,8 +1066,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Quartier du Moulin Impérial",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.636435351950376",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.815538505082166"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5911756370210446",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.302327796721315"
         }
       ],
       "total_children_count": 0,
@@ -1166,19 +1083,17 @@
       ],
       "triples_metadata": [
         "Quartier du Moulin Impérial"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "ayeur",
       "triples": [
         {
           "http://example.com/terms#name": "Quartier du Mayeur",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1995634245325073",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.285539368748495"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.227738101020561",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.86448641930623"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6402.jsonld#178539",
         "@type": "tree:Node"
@@ -1186,8 +1101,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Quartier du Mayeur",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1995634245325073",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.285539368748495"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.227738101020561",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.86448641930623"
         }
       ],
       "total_children_count": 0,
@@ -1203,22 +1118,33 @@
       ],
       "triples_metadata": [
         "Quartier du Mayeur"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "on",
       "triples": [],
-      "children": {
-        "t": [
-          "6402",
-          "179090"
-        ],
-        "cia": [
-          "6402",
-          "179091"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment6402.jsonld#179090",
+              "@type": "tree:Node",
+              "token_string": "t"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment6402.jsonld#179091",
+              "@type": "tree:Node",
+              "token_string": "cia"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment6402.jsonld#128752",
         "@type": "tree:Node"
@@ -1226,13 +1152,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Quartier du Pont",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9628005743094343",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.51506248122509"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0567780933837403",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.14193630743129"
         },
         {
           "http://example.com/terms#name": "Quartier du Poncia",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0036032103873",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.686075898900825"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.519511031041669",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.32995805003016"
         }
       ],
       "total_children_count": 2,
@@ -1252,36 +1178,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6402.jsonld#179090"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6402.jsonld#179091"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "t",
       "triples": [
         {
           "http://example.com/terms#name": "Quartier du Pont",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9628005743094343",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.51506248122509"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0567780933837403",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.14193630743129"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6402.jsonld#179089",
         "@type": "tree:Node"
@@ -1289,8 +1196,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Quartier du Pont",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9628005743094343",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.51506248122509"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0567780933837403",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.14193630743129"
         }
       ],
       "total_children_count": 0,
@@ -1306,19 +1213,17 @@
       ],
       "triples_metadata": [
         "Quartier du Pont"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "cia",
       "triples": [
         {
           "http://example.com/terms#name": "Quartier du Poncia",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0036032103873",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.686075898900825"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.519511031041669",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.32995805003016"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6402.jsonld#179089",
         "@type": "tree:Node"
@@ -1326,8 +1231,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Quartier du Poncia",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0036032103873",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.686075898900825"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.519511031041669",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.32995805003016"
         }
       ],
       "total_children_count": 0,
@@ -1343,19 +1248,17 @@
       ],
       "triples_metadata": [
         "Quartier du Poncia"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "Schiste",
       "triples": [
         {
           "http://example.com/terms#name": "Quartier du Schiste",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9515331513244987",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.65629564516481"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6665487428255417",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.5426886203736"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6402.jsonld#116252",
         "@type": "tree:Node"
@@ -1363,8 +1266,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Quartier du Schiste",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9515331513244987",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.65629564516481"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6665487428255417",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.5426886203736"
         }
       ],
       "total_children_count": 0,
@@ -1380,8 +1283,7 @@
       ],
       "triples_metadata": [
         "Quartier du Schiste"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

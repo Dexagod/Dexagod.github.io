@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,16 +23,28 @@
     {
       "token_string": "Ger",
       "triples": [],
-      "children": {
-        "lachusstraat": [
-          "2069",
-          "67670"
-        ],
-        "trudisplein": [
-          "2069",
-          "67671"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2069.jsonld#67670",
+              "@type": "tree:Node",
+              "token_string": "lachusstraat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2069.jsonld#67671",
+              "@type": "tree:Node",
+              "token_string": "trudisplein"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment34.jsonld#254",
         "@type": "tree:Node"
@@ -40,13 +52,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "StGerlachusstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6292710678983013",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.592604927169376"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.052961523696942",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.230151542501304"
         },
         {
           "http://example.com/terms#name": "StGertrudisplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.206227771765383",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.808132612584224"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2266142121573553",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.851973814571146"
         }
       ],
       "total_children_count": 2,
@@ -66,36 +78,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2069.jsonld#67670"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2069.jsonld#67671"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "lachusstraat",
       "triples": [
         {
           "http://example.com/terms#name": "StGerlachusstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6292710678983013",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.592604927169376"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.052961523696942",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.230151542501304"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2069.jsonld#67669",
         "@type": "tree:Node"
@@ -103,8 +96,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "StGerlachusstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6292710678983013",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.592604927169376"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.052961523696942",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.230151542501304"
         }
       ],
       "total_children_count": 0,
@@ -120,19 +113,17 @@
       ],
       "triples_metadata": [
         "StGerlachusstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "trudisplein",
       "triples": [
         {
           "http://example.com/terms#name": "StGertrudisplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.206227771765383",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.808132612584224"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2266142121573553",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.851973814571146"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2069.jsonld#67669",
         "@type": "tree:Node"
@@ -140,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "StGertrudisplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.206227771765383",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.808132612584224"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2266142121573553",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.851973814571146"
         }
       ],
       "total_children_count": 0,
@@ -157,8 +148,7 @@
       ],
       "triples_metadata": [
         "StGertrudisplein"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

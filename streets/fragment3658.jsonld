@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,16 +23,28 @@
     {
       "token_string": "O",
       "triples": [],
-      "children": {
-        "rbanpromenade": [
-          "3658",
-          "101064"
-        ],
-        "oghedreef": [
-          "3658",
-          "101065"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment3658.jsonld#101064",
+              "@type": "tree:Node",
+              "token_string": "rbanpromenade"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment3658.jsonld#101065",
+              "@type": "tree:Node",
+              "token_string": "oghedreef"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment2729.jsonld#5779",
         "@type": "tree:Node"
@@ -40,13 +52,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Paul Orbanpromenade",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6988458792255337",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.3330279667473"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.35173370864913",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.722748558381504"
         },
         {
           "http://example.com/terms#name": "Paul Ooghedreef",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4618793923727478",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.27295151194555"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7414362975871565",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.612049589813864"
         }
       ],
       "total_children_count": 2,
@@ -66,36 +78,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3658.jsonld#101064"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3658.jsonld#101065"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "rbanpromenade",
       "triples": [
         {
           "http://example.com/terms#name": "Paul Orbanpromenade",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6988458792255337",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.3330279667473"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.35173370864913",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.722748558381504"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3658.jsonld#101063",
         "@type": "tree:Node"
@@ -103,8 +96,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Paul Orbanpromenade",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6988458792255337",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.3330279667473"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.35173370864913",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.722748558381504"
         }
       ],
       "total_children_count": 0,
@@ -120,19 +113,17 @@
       ],
       "triples_metadata": [
         "Paul Orbanpromenade"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "oghedreef",
       "triples": [
         {
           "http://example.com/terms#name": "Paul Ooghedreef",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4618793923727478",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.27295151194555"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7414362975871565",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.612049589813864"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3658.jsonld#101063",
         "@type": "tree:Node"
@@ -140,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Paul Ooghedreef",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4618793923727478",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.27295151194555"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7414362975871565",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.612049589813864"
         }
       ],
       "total_children_count": 0,
@@ -157,8 +148,7 @@
       ],
       "triples_metadata": [
         "Paul Ooghedreef"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,16 +23,28 @@
     {
       "token_string": "m",
       "triples": [],
-      "children": {
-        "on Plaisir": [
-          "6424",
-          "170637"
-        ],
-        "a Campagne": [
-          "6424",
-          "170638"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment6424.jsonld#170637",
+              "@type": "tree:Node",
+              "token_string": "on Plaisir"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment6424.jsonld#170638",
+              "@type": "tree:Node",
+              "token_string": "a Campagne"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment3707.jsonld#100698",
         "@type": "tree:Node"
@@ -40,13 +52,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue mon Plaisir",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.212463948657115",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.98217175222789"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9935450991665205",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.11968394717498"
         },
         {
           "http://example.com/terms#name": "Rue ma Campagne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3076881608692164",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.34902382971302"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9643044837604746",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.596817846784944"
         }
       ],
       "total_children_count": 2,
@@ -66,36 +78,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6424.jsonld#170637"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment6424.jsonld#170638"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "on Plaisir",
       "triples": [
         {
           "http://example.com/terms#name": "Rue mon Plaisir",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.212463948657115",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.98217175222789"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9935450991665205",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.11968394717498"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6424.jsonld#170636",
         "@type": "tree:Node"
@@ -103,8 +96,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue mon Plaisir",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.212463948657115",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.98217175222789"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9935450991665205",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.11968394717498"
         }
       ],
       "total_children_count": 0,
@@ -120,19 +113,17 @@
       ],
       "triples_metadata": [
         "Rue mon Plaisir"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "a Campagne",
       "triples": [
         {
           "http://example.com/terms#name": "Rue ma Campagne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3076881608692164",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.34902382971302"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9643044837604746",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.596817846784944"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment6424.jsonld#170636",
         "@type": "tree:Node"
@@ -140,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rue ma Campagne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3076881608692164",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.34902382971302"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9643044837604746",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.596817846784944"
         }
       ],
       "total_children_count": 0,
@@ -157,8 +148,7 @@
       ],
       "triples_metadata": [
         "Rue ma Campagne"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

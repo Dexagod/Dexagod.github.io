@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,16 +23,28 @@
     {
       "token_string": "u",
       "triples": [],
-      "children": {
-        "werstraat": [
-          "3100",
-          "12381"
-        ],
-        "beekstraat": [
-          "3100",
-          "12382"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment3100.jsonld#12381",
+              "@type": "tree:Node",
+              "token_string": "werstraat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment3100.jsonld#12382",
+              "@type": "tree:Node",
+              "token_string": "beekstraat"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment640.jsonld#535",
         "@type": "tree:Node"
@@ -40,28 +52,28 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Zauwerstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2088970187377166",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.605787246337165"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.757975789994521",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.06528542618633"
         },
         {
           "http://example.com/terms#name": "Zaubeekstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.098692159210031",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.31829245993108"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0809237993589815",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.21737615966256"
         },
         {
           "http://example.com/terms#name": "Zaubeekstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.209555757964717",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.42459367742837"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.940077559650667",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.11438888118423"
         },
         {
           "http://example.com/terms#name": "Zaubeekstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.209555757964717",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.42459367742837"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.940077559650667",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.11438888118423"
         },
         {
           "http://example.com/terms#name": "Zaubeekstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.209555757964717",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.42459367742837"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.940077559650667",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.11438888118423"
         }
       ],
       "total_children_count": 2,
@@ -84,36 +96,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3100.jsonld#12381"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment3100.jsonld#12382"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "werstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Zauwerstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2088970187377166",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.605787246337165"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.757975789994521",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.06528542618633"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3100.jsonld#12380",
         "@type": "tree:Node"
@@ -121,8 +114,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Zauwerstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2088970187377166",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.605787246337165"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.757975789994521",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.06528542618633"
         }
       ],
       "total_children_count": 0,
@@ -138,34 +131,32 @@
       ],
       "triples_metadata": [
         "Zauwerstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "beekstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Zaubeekstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.098692159210031",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.31829245993108"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0809237993589815",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.21737615966256"
         },
         {
           "http://example.com/terms#name": "Zaubeekstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.209555757964717",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.42459367742837"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.940077559650667",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.11438888118423"
         },
         {
           "http://example.com/terms#name": "Zaubeekstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.209555757964717",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.42459367742837"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.940077559650667",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.11438888118423"
         },
         {
           "http://example.com/terms#name": "Zaubeekstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.209555757964717",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.42459367742837"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.940077559650667",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.11438888118423"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment3100.jsonld#12380",
         "@type": "tree:Node"
@@ -173,23 +164,23 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Zaubeekstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.098692159210031",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.31829245993108"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0809237993589815",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.21737615966256"
         },
         {
           "http://example.com/terms#name": "Zaubeekstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.209555757964717",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.42459367742837"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.940077559650667",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.11438888118423"
         },
         {
           "http://example.com/terms#name": "Zaubeekstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.209555757964717",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.42459367742837"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.940077559650667",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.11438888118423"
         },
         {
           "http://example.com/terms#name": "Zaubeekstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.209555757964717",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.42459367742837"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.940077559650667",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.11438888118423"
         }
       ],
       "total_children_count": 0,
@@ -211,8 +202,7 @@
         "Zaubeekstraat",
         "Zaubeekstraat",
         "Zaubeekstraat"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

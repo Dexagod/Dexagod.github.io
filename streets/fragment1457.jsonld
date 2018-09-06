@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,16 +23,28 @@
     {
       "token_string": "x",
       "triples": [],
-      "children": {
-        "iestraat": [
-          "1457",
-          "86833"
-        ],
-        "straatje": [
-          "1457",
-          "86834"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1457.jsonld#86833",
+              "@type": "tree:Node",
+              "token_string": "iestraat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1457.jsonld#86834",
+              "@type": "tree:Node",
+              "token_string": "straatje"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment44.jsonld#1035",
         "@type": "tree:Node"
@@ -40,13 +52,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Coxiestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8599927414606814",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.057079525686255"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.599578699239188",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.88008134382781"
         },
         {
           "http://example.com/terms#name": "Coxstraatje",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2114086787661598",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.217560575923045"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.868259438551491",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.27265825164381"
         }
       ],
       "total_children_count": 2,
@@ -66,36 +78,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1457.jsonld#86833"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1457.jsonld#86834"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "iestraat",
       "triples": [
         {
           "http://example.com/terms#name": "Coxiestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8599927414606814",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.057079525686255"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.599578699239188",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.88008134382781"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1457.jsonld#86832",
         "@type": "tree:Node"
@@ -103,8 +96,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Coxiestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8599927414606814",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.057079525686255"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.599578699239188",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.88008134382781"
         }
       ],
       "total_children_count": 0,
@@ -120,19 +113,17 @@
       ],
       "triples_metadata": [
         "Coxiestraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "straatje",
       "triples": [
         {
           "http://example.com/terms#name": "Coxstraatje",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2114086787661598",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.217560575923045"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.868259438551491",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.27265825164381"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1457.jsonld#86832",
         "@type": "tree:Node"
@@ -140,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Coxstraatje",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2114086787661598",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.217560575923045"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.868259438551491",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.27265825164381"
         }
       ],
       "total_children_count": 0,
@@ -157,8 +148,7 @@
       ],
       "triples_metadata": [
         "Coxstraatje"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -25,21 +25,20 @@
       "triples": [
         {
           "http://example.com/terms#name": "Rakestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9026577881777254",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.931438836598694"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.991145478805611",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.07828719136306"
         },
         {
           "http://example.com/terms#name": "Rakestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5377914980320724",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.89261168749596"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1659741266897448",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.901159883040165"
         },
         {
           "http://example.com/terms#name": "Rakestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5377914980320724",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.89261168749596"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1659741266897448",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.901159883040165"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1871.jsonld#95911",
         "@type": "tree:Node"
@@ -47,18 +46,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rakestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9026577881777254",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.931438836598694"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.991145478805611",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.07828719136306"
         },
         {
           "http://example.com/terms#name": "Rakestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5377914980320724",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.89261168749596"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1659741266897448",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.901159883040165"
         },
         {
           "http://example.com/terms#name": "Rakestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5377914980320724",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.89261168749596"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1659741266897448",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.901159883040165"
         }
       ],
       "total_children_count": 0,
@@ -78,19 +77,17 @@
         "Rakestraat",
         "Rakestraat",
         "Rakestraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "rstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Rakerstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9413311423053607",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.252915681918594"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8787619382662326",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.78776316251769"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1871.jsonld#95911",
         "@type": "tree:Node"
@@ -98,8 +95,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rakerstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9413311423053607",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.252915681918594"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8787619382662326",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.78776316251769"
         }
       ],
       "total_children_count": 0,
@@ -115,22 +112,33 @@
       ],
       "triples_metadata": [
         "Rakerstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "t",
       "triples": [],
-      "children": {
-        "straat": [
-          "1871",
-          "94650"
-        ],
-        "laan": [
-          "1871",
-          "94651"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1871.jsonld#94650",
+              "@type": "tree:Node",
+              "token_string": "straat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1871.jsonld#94651",
+              "@type": "tree:Node",
+              "token_string": "laan"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment1871.jsonld#95911",
         "@type": "tree:Node"
@@ -138,38 +146,38 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Raketstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6885718063135227",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.82547060152106"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1504921062980933",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.641438292494826"
         },
         {
           "http://example.com/terms#name": "Raketstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0122734139137166",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.77096683313365"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2767957406942454",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.28004172266168"
         },
         {
           "http://example.com/terms#name": "Raketstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0122734139137166",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.77096683313365"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2767957406942454",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.28004172266168"
         },
         {
           "http://example.com/terms#name": "Raketstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0122734139137166",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.77096683313365"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2767957406942454",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.28004172266168"
         },
         {
           "http://example.com/terms#name": "Raketstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2173459103377673",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.21235529208814"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8329375585613272",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.14224222766505"
         },
         {
           "http://example.com/terms#name": "Raketstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2173459103377673",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.21235529208814"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8329375585613272",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.14224222766505"
         },
         {
           "http://example.com/terms#name": "Raketlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2261851533405053",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.77981082197597"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.022284239625577",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.361612714294914"
         }
       ],
       "total_children_count": 2,
@@ -194,61 +202,42 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1871.jsonld#94650"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1871.jsonld#94651"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "straat",
       "triples": [
         {
           "http://example.com/terms#name": "Raketstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6885718063135227",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.82547060152106"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1504921062980933",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.641438292494826"
         },
         {
           "http://example.com/terms#name": "Raketstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0122734139137166",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.77096683313365"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2767957406942454",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.28004172266168"
         },
         {
           "http://example.com/terms#name": "Raketstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0122734139137166",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.77096683313365"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2767957406942454",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.28004172266168"
         },
         {
           "http://example.com/terms#name": "Raketstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0122734139137166",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.77096683313365"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2767957406942454",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.28004172266168"
         },
         {
           "http://example.com/terms#name": "Raketstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2173459103377673",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.21235529208814"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8329375585613272",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.14224222766505"
         },
         {
           "http://example.com/terms#name": "Raketstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2173459103377673",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.21235529208814"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8329375585613272",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.14224222766505"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1871.jsonld#94649",
         "@type": "tree:Node"
@@ -256,33 +245,33 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Raketstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6885718063135227",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.82547060152106"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1504921062980933",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.641438292494826"
         },
         {
           "http://example.com/terms#name": "Raketstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0122734139137166",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.77096683313365"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2767957406942454",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.28004172266168"
         },
         {
           "http://example.com/terms#name": "Raketstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0122734139137166",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.77096683313365"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2767957406942454",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.28004172266168"
         },
         {
           "http://example.com/terms#name": "Raketstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0122734139137166",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.77096683313365"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2767957406942454",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.28004172266168"
         },
         {
           "http://example.com/terms#name": "Raketstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2173459103377673",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.21235529208814"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8329375585613272",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.14224222766505"
         },
         {
           "http://example.com/terms#name": "Raketstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2173459103377673",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.21235529208814"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8329375585613272",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.14224222766505"
         }
       ],
       "total_children_count": 0,
@@ -308,19 +297,17 @@
         "Raketstraat",
         "Raketstraat",
         "Raketstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "laan",
       "triples": [
         {
           "http://example.com/terms#name": "Raketlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2261851533405053",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.77981082197597"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.022284239625577",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.361612714294914"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1871.jsonld#94649",
         "@type": "tree:Node"
@@ -328,8 +315,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Raketlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2261851533405053",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.77981082197597"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.022284239625577",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.361612714294914"
         }
       ],
       "total_children_count": 0,
@@ -345,22 +332,33 @@
       ],
       "triples_metadata": [
         "Raketlaan"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "k",
       "triples": [],
-      "children": {
-        "e": [
-          "1871",
-          "95911"
-        ],
-        "ker": [
-          "1871",
-          "103551"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1871.jsonld#95911",
+              "@type": "tree:Node",
+              "token_string": "e"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1871.jsonld#103551",
+              "@type": "tree:Node",
+              "token_string": "ker"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment396.jsonld#493",
         "@type": "tree:Node"
@@ -368,68 +366,68 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rakestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9026577881777254",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.931438836598694"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.991145478805611",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.07828719136306"
         },
         {
           "http://example.com/terms#name": "Rakestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5377914980320724",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.89261168749596"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1659741266897448",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.901159883040165"
         },
         {
           "http://example.com/terms#name": "Rakestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5377914980320724",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.89261168749596"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1659741266897448",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.901159883040165"
         },
         {
           "http://example.com/terms#name": "Rakerstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9413311423053607",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.252915681918594"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8787619382662326",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.78776316251769"
         },
         {
           "http://example.com/terms#name": "Raketstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6885718063135227",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.82547060152106"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1504921062980933",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.641438292494826"
         },
         {
           "http://example.com/terms#name": "Raketstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0122734139137166",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.77096683313365"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2767957406942454",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.28004172266168"
         },
         {
           "http://example.com/terms#name": "Raketstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0122734139137166",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.77096683313365"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2767957406942454",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.28004172266168"
         },
         {
           "http://example.com/terms#name": "Raketstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0122734139137166",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.77096683313365"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2767957406942454",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.28004172266168"
         },
         {
           "http://example.com/terms#name": "Raketstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2173459103377673",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.21235529208814"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8329375585613272",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.14224222766505"
         },
         {
           "http://example.com/terms#name": "Raketstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2173459103377673",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.21235529208814"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8329375585613272",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.14224222766505"
         },
         {
           "http://example.com/terms#name": "Raketlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2261851533405053",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.77981082197597"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.022284239625577",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.361612714294914"
         },
         {
           "http://example.com/terms#name": "Rakkersnestpad",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.164136610004987",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.827577481805996"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.612077177543527",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.85189736631987"
         },
         {
           "http://example.com/terms#name": "Rakkerpad",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2764587423790856",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.806194639905144"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9854926394444457",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.42822338860324"
         }
       ],
       "total_children_count": 9,
@@ -480,13 +478,19 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
+      "triples_metadata": []
+    },
+    {
+      "token_string": "e",
+      "triples": [],
+      "children": [
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
             {
-              "@id": "/streets/fragment1871.jsonld#95911"
+              "@id": "/streets/fragment1871.jsonld#19925",
+              "@type": "tree:Node",
+              "token_string": "straat"
             }
           ]
         },
@@ -494,29 +498,23 @@
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
             {
-              "@id": "/streets/fragment1871.jsonld#103551"
+              "@id": "/streets/fragment1871.jsonld#19926",
+              "@type": "tree:Node",
+              "token_string": "rstraat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1871.jsonld#94649",
+              "@type": "tree:Node",
+              "token_string": "t"
             }
           ]
         }
-      ]
-    },
-    {
-      "token_string": "e",
-      "triples": [],
-      "children": {
-        "straat": [
-          "1871",
-          "19925"
-        ],
-        "rstraat": [
-          "1871",
-          "19926"
-        ],
-        "t": [
-          "1871",
-          "94649"
-        ]
-      },
+      ],
       "parent_node": {
         "@id": "/streets/fragment1871.jsonld#95910",
         "@type": "tree:Node"
@@ -524,58 +522,58 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rakestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9026577881777254",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.931438836598694"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.991145478805611",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.07828719136306"
         },
         {
           "http://example.com/terms#name": "Rakestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5377914980320724",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.89261168749596"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1659741266897448",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.901159883040165"
         },
         {
           "http://example.com/terms#name": "Rakestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5377914980320724",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.89261168749596"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1659741266897448",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.901159883040165"
         },
         {
           "http://example.com/terms#name": "Rakerstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9413311423053607",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.252915681918594"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8787619382662326",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.78776316251769"
         },
         {
           "http://example.com/terms#name": "Raketstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6885718063135227",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.82547060152106"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1504921062980933",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.641438292494826"
         },
         {
           "http://example.com/terms#name": "Raketstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0122734139137166",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.77096683313365"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2767957406942454",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.28004172266168"
         },
         {
           "http://example.com/terms#name": "Raketstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0122734139137166",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.77096683313365"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2767957406942454",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.28004172266168"
         },
         {
           "http://example.com/terms#name": "Raketstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0122734139137166",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.77096683313365"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2767957406942454",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.28004172266168"
         },
         {
           "http://example.com/terms#name": "Raketstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2173459103377673",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.21235529208814"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8329375585613272",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.14224222766505"
         },
         {
           "http://example.com/terms#name": "Raketstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2173459103377673",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.21235529208814"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8329375585613272",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.14224222766505"
         },
         {
           "http://example.com/terms#name": "Raketlaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2261851533405053",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.77981082197597"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.022284239625577",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.361612714294914"
         }
       ],
       "total_children_count": 5,
@@ -614,47 +612,33 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1871.jsonld#19925"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1871.jsonld#19926"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1871.jsonld#94649"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "ker",
       "triples": [],
-      "children": {
-        "snestpad": [
-          "1871",
-          "103552"
-        ],
-        "pad": [
-          "1871",
-          "103553"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1871.jsonld#103552",
+              "@type": "tree:Node",
+              "token_string": "snestpad"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1871.jsonld#103553",
+              "@type": "tree:Node",
+              "token_string": "pad"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment1871.jsonld#95910",
         "@type": "tree:Node"
@@ -662,13 +646,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rakkersnestpad",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.164136610004987",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.827577481805996"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.612077177543527",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.85189736631987"
         },
         {
           "http://example.com/terms#name": "Rakkerpad",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2764587423790856",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.806194639905144"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9854926394444457",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.42822338860324"
         }
       ],
       "total_children_count": 2,
@@ -688,36 +672,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1871.jsonld#103552"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1871.jsonld#103553"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "snestpad",
       "triples": [
         {
           "http://example.com/terms#name": "Rakkersnestpad",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.164136610004987",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.827577481805996"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.612077177543527",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.85189736631987"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1871.jsonld#103551",
         "@type": "tree:Node"
@@ -725,8 +690,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rakkersnestpad",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.164136610004987",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.827577481805996"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.612077177543527",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.85189736631987"
         }
       ],
       "total_children_count": 0,
@@ -742,19 +707,17 @@
       ],
       "triples_metadata": [
         "Rakkersnestpad"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "pad",
       "triples": [
         {
           "http://example.com/terms#name": "Rakkerpad",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2764587423790856",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.806194639905144"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9854926394444457",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.42822338860324"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1871.jsonld#103551",
         "@type": "tree:Node"
@@ -762,8 +725,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rakkerpad",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2764587423790856",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.806194639905144"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9854926394444457",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.42822338860324"
         }
       ],
       "total_children_count": 0,
@@ -779,8 +742,7 @@
       ],
       "triples_metadata": [
         "Rakkerpad"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

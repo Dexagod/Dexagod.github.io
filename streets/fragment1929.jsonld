@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,20 +23,38 @@
     {
       "token_string": "ht",
       "triples": [],
-      "children": {
-        "straat": [
-          "1929",
-          "36962"
-        ],
-        "hoevestraat": [
-          "1929",
-          "36963"
-        ],
-        "voetweg": [
-          "1929",
-          "55156"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1929.jsonld#36962",
+              "@type": "tree:Node",
+              "token_string": "straat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1929.jsonld#36963",
+              "@type": "tree:Node",
+              "token_string": "hoevestraat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1929.jsonld#55156",
+              "@type": "tree:Node",
+              "token_string": "voetweg"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment2102.jsonld#5744",
         "@type": "tree:Node"
@@ -44,18 +62,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Borghtstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.811981734446831",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.579766117394264"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.095187963829952",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.38561087686329"
         },
         {
           "http://example.com/terms#name": "Borghthoevestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0076407926779996",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.73181694733978"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.011346078139894",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.74417899646244"
         },
         {
           "http://example.com/terms#name": "Borghtvoetweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2864967549034274",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.9357305142067"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1790802107141074",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.189884752596896"
         }
       ],
       "total_children_count": 3,
@@ -81,44 +99,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1929.jsonld#36962"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1929.jsonld#36963"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1929.jsonld#55156"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "straat",
       "triples": [
         {
           "http://example.com/terms#name": "Borghtstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.811981734446831",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.579766117394264"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.095187963829952",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.38561087686329"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1929.jsonld#36961",
         "@type": "tree:Node"
@@ -126,8 +117,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Borghtstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.811981734446831",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.579766117394264"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.095187963829952",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.38561087686329"
         }
       ],
       "total_children_count": 0,
@@ -143,19 +134,17 @@
       ],
       "triples_metadata": [
         "Borghtstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "hoevestraat",
       "triples": [
         {
           "http://example.com/terms#name": "Borghthoevestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0076407926779996",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.73181694733978"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.011346078139894",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.74417899646244"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1929.jsonld#36961",
         "@type": "tree:Node"
@@ -163,8 +152,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Borghthoevestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0076407926779996",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.73181694733978"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.011346078139894",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.74417899646244"
         }
       ],
       "total_children_count": 0,
@@ -180,19 +169,17 @@
       ],
       "triples_metadata": [
         "Borghthoevestraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "voetweg",
       "triples": [
         {
           "http://example.com/terms#name": "Borghtvoetweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2864967549034274",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.9357305142067"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1790802107141074",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.189884752596896"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1929.jsonld#36961",
         "@type": "tree:Node"
@@ -200,8 +187,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Borghtvoetweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2864967549034274",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.9357305142067"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1790802107141074",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.189884752596896"
         }
       ],
       "total_children_count": 0,
@@ -217,8 +204,7 @@
       ],
       "triples_metadata": [
         "Borghtvoetweg"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

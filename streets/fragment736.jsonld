@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,16 +23,28 @@
     {
       "token_string": "l",
       "triples": [],
-      "children": {
-        "roheidestraat": [
-          "736",
-          "22097"
-        ],
-        "laarse": [
-          "736",
-          "30657"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment736.jsonld#22097",
+              "@type": "tree:Node",
+              "token_string": "roheidestraat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment736.jsonld#30657",
+              "@type": "tree:Node",
+              "token_string": "laarse"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment124.jsonld#429",
         "@type": "tree:Node"
@@ -40,23 +52,23 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rilroheidestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.740470465568262",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.09080519910342"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1446579659778444",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.04857093726807"
         },
         {
           "http://example.com/terms#name": "Rillaarseweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3155728551033685",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.91195917202742"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7348067509671217",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.70377402154969"
         },
         {
           "http://example.com/terms#name": "Rillaarsebaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1362251792113147",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.20464491970694"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2894920760769337",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.14625730454096"
         },
         {
           "http://example.com/terms#name": "Rillaarse Baan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6120367946567167",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.51691883534083"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.496179812265532",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.14159143546042"
         }
       ],
       "total_children_count": 5,
@@ -88,36 +100,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment736.jsonld#22097"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment736.jsonld#30657"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "roheidestraat",
       "triples": [
         {
           "http://example.com/terms#name": "Rilroheidestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.740470465568262",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.09080519910342"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1446579659778444",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.04857093726807"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment736.jsonld#22096",
         "@type": "tree:Node"
@@ -125,8 +118,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rilroheidestraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.740470465568262",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.09080519910342"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1446579659778444",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.04857093726807"
         }
       ],
       "total_children_count": 0,
@@ -142,26 +135,43 @@
       ],
       "triples_metadata": [
         "Rilroheidestraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "laarse",
       "triples": [],
-      "children": {
-        "weg": [
-          "736",
-          "30658"
-        ],
-        "baan": [
-          "736",
-          "30659"
-        ],
-        " Baan": [
-          "736",
-          "79343"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment736.jsonld#30658",
+              "@type": "tree:Node",
+              "token_string": "weg"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment736.jsonld#30659",
+              "@type": "tree:Node",
+              "token_string": "baan"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment736.jsonld#79343",
+              "@type": "tree:Node",
+              "token_string": " Baan"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment736.jsonld#22096",
         "@type": "tree:Node"
@@ -169,18 +179,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rillaarseweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3155728551033685",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.91195917202742"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7348067509671217",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.70377402154969"
         },
         {
           "http://example.com/terms#name": "Rillaarsebaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1362251792113147",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.20464491970694"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2894920760769337",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.14625730454096"
         },
         {
           "http://example.com/terms#name": "Rillaarse Baan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6120367946567167",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.51691883534083"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.496179812265532",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.14159143546042"
         }
       ],
       "total_children_count": 3,
@@ -206,44 +216,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment736.jsonld#30658"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment736.jsonld#30659"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment736.jsonld#79343"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "weg",
       "triples": [
         {
           "http://example.com/terms#name": "Rillaarseweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3155728551033685",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.91195917202742"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7348067509671217",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.70377402154969"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment736.jsonld#30657",
         "@type": "tree:Node"
@@ -251,8 +234,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rillaarseweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3155728551033685",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.91195917202742"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7348067509671217",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.70377402154969"
         }
       ],
       "total_children_count": 0,
@@ -268,19 +251,17 @@
       ],
       "triples_metadata": [
         "Rillaarseweg"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "baan",
       "triples": [
         {
           "http://example.com/terms#name": "Rillaarsebaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1362251792113147",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.20464491970694"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2894920760769337",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.14625730454096"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment736.jsonld#30657",
         "@type": "tree:Node"
@@ -288,8 +269,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rillaarsebaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1362251792113147",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.20464491970694"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2894920760769337",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.14625730454096"
         }
       ],
       "total_children_count": 0,
@@ -305,19 +286,17 @@
       ],
       "triples_metadata": [
         "Rillaarsebaan"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": " Baan",
       "triples": [
         {
           "http://example.com/terms#name": "Rillaarse Baan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6120367946567167",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.51691883534083"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.496179812265532",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.14159143546042"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment736.jsonld#30657",
         "@type": "tree:Node"
@@ -325,8 +304,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Rillaarse Baan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6120367946567167",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.51691883534083"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.496179812265532",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.14159143546042"
         }
       ],
       "total_children_count": 0,
@@ -342,8 +321,7 @@
       ],
       "triples_metadata": [
         "Rillaarse Baan"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

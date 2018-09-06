@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -25,16 +25,22 @@
       "triples": [
         {
           "http://example.com/terms#name": "Londerzeel",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8329591085192747",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.81024878466008"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8416940306241054",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.52860405645392"
         }
       ],
-      "children": {
-        "se": [
-          "1618",
-          "27569"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1618.jsonld#27569",
+              "@type": "tree:Node",
+              "token_string": "se"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment1618.jsonld#43436",
         "@type": "tree:Node"
@@ -42,18 +48,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Londerzeel",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8329591085192747",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.81024878466008"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8416940306241054",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.52860405645392"
         },
         {
           "http://example.com/terms#name": "Londerzeelseweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.594049080412378",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.92012774249532"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2291346789690585",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.333559008791504"
         },
         {
           "http://example.com/terms#name": "Londerzeelsesteenweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9724842543863277",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.20746738683549"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6745161376675233",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.61688488253748"
         }
       ],
       "total_children_count": 3,
@@ -81,31 +87,33 @@
       ],
       "triples_metadata": [
         "Londerzeel"
-      ],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1618.jsonld#27569"
-            }
-          ]
-        }
       ]
     },
     {
       "token_string": "se",
       "triples": [],
-      "children": {
-        "weg": [
-          "1618",
-          "27570"
-        ],
-        "steenweg": [
-          "1618",
-          "27571"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1618.jsonld#27570",
+              "@type": "tree:Node",
+              "token_string": "weg"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1618.jsonld#27571",
+              "@type": "tree:Node",
+              "token_string": "steenweg"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment1618.jsonld#19856",
         "@type": "tree:Node"
@@ -113,13 +121,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Londerzeelseweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.594049080412378",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.92012774249532"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2291346789690585",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.333559008791504"
         },
         {
           "http://example.com/terms#name": "Londerzeelsesteenweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9724842543863277",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.20746738683549"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6745161376675233",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.61688488253748"
         }
       ],
       "total_children_count": 2,
@@ -139,36 +147,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1618.jsonld#27570"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1618.jsonld#27571"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "weg",
       "triples": [
         {
           "http://example.com/terms#name": "Londerzeelseweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.594049080412378",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.92012774249532"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2291346789690585",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.333559008791504"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1618.jsonld#27569",
         "@type": "tree:Node"
@@ -176,8 +165,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Londerzeelseweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.594049080412378",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.92012774249532"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2291346789690585",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.333559008791504"
         }
       ],
       "total_children_count": 0,
@@ -193,19 +182,17 @@
       ],
       "triples_metadata": [
         "Londerzeelseweg"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "steenweg",
       "triples": [
         {
           "http://example.com/terms#name": "Londerzeelsesteenweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9724842543863277",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.20746738683549"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6745161376675233",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.61688488253748"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1618.jsonld#27569",
         "@type": "tree:Node"
@@ -213,8 +200,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Londerzeelsesteenweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9724842543863277",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.20746738683549"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6745161376675233",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.61688488253748"
         }
       ],
       "total_children_count": 0,
@@ -230,34 +217,63 @@
       ],
       "triples_metadata": [
         "Londerzeelsesteenweg"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "n",
       "triples": [],
-      "children": {
-        "de": [
-          "1618",
-          "43436"
-        ],
-        "g": [
-          "1618",
-          "60760"
-        ],
-        "c": [
-          "1618",
-          "65201"
-        ],
-        "kaplein": [
-          "1618",
-          "86223"
-        ],
-        "venweg": [
-          "1618",
-          "86856"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1618.jsonld#43436",
+              "@type": "tree:Node",
+              "token_string": "de"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1618.jsonld#60760",
+              "@type": "tree:Node",
+              "token_string": "g"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1618.jsonld#65201",
+              "@type": "tree:Node",
+              "token_string": "c"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1618.jsonld#86223",
+              "@type": "tree:Node",
+              "token_string": "kaplein"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1618.jsonld#86856",
+              "@type": "tree:Node",
+              "token_string": "venweg"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment37.jsonld#175",
         "@type": "tree:Node"
@@ -265,118 +281,118 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Londerzeel",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8329591085192747",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.81024878466008"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8416940306241054",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.52860405645392"
         },
         {
           "http://example.com/terms#name": "Londerzeelseweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.594049080412378",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.92012774249532"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2291346789690585",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.333559008791504"
         },
         {
           "http://example.com/terms#name": "Londenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.522828291359285",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.7368928048922"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.421222088089556",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.01736889368449"
         },
         {
           "http://example.com/terms#name": "Londenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.011197680115555",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.84390045274607"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.930416090239112",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.873065062320286"
         },
         {
           "http://example.com/terms#name": "Londenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.011197680115555",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.84390045274607"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.930416090239112",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.873065062320286"
         },
         {
           "http://example.com/terms#name": "Londenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.011197680115555",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.84390045274607"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.930416090239112",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.873065062320286"
         },
         {
           "http://example.com/terms#name": "Londenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.641307202502792",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.383024097417525"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.883004560681882",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.17437480236782"
         },
         {
           "http://example.com/terms#name": "Londenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.641307202502792",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.383024097417525"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.883004560681882",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.17437480236782"
         },
         {
           "http://example.com/terms#name": "Londenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.940001232561341",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.1114682042037"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.165539643653627",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.90454379015996"
         },
         {
           "http://example.com/terms#name": "Londenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3726826194135033",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.0990249545247"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3481191502250693",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.39971719292673"
         },
         {
           "http://example.com/terms#name": "Londenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.874843769947241",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.97791095975588"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6461075076622045",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.18699738405436"
         },
         {
           "http://example.com/terms#name": "Londenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.266677771223934",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.13769171207927"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.033598991973996",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.10175039578542"
         },
         {
           "http://example.com/terms#name": "Londerzeelsesteenweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9724842543863277",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.20746738683549"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6745161376675233",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.61688488253748"
         },
         {
           "http://example.com/terms#name": "Loncinstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.377272882696568",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.85507313104"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1241966010869318",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.54422607434131"
         },
         {
           "http://example.com/terms#name": "Loncinstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.140390033933191",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.936327176113146"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4225343103458927",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.34424983297452"
         },
         {
           "http://example.com/terms#name": "Loncinstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.140390033933191",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.936327176113146"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4225343103458927",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.34424983297452"
         },
         {
           "http://example.com/terms#name": "Loncinstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.140390033933191",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.936327176113146"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4225343103458927",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.34424983297452"
         },
         {
           "http://example.com/terms#name": "Loncinstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.140390033933191",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.936327176113146"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4225343103458927",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.34424983297452"
         },
         {
           "http://example.com/terms#name": "Loncke",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9493369093180877",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.365353014848075"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.347111615530654",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.490608130332916"
         },
         {
           "http://example.com/terms#name": "Londenbrug",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9435449332415518",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.960852758488755"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.620922249319636",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.99488356755046"
         },
         {
           "http://example.com/terms#name": "Londenplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.680541496834656",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.0973128860547"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.682426048066678",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.188663361068706"
         },
         {
           "http://example.com/terms#name": "Long Chemin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.140770711519746",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.17575441291141"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.971237274012425",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.28727007795158"
         },
         {
           "http://example.com/terms#name": "Long Pont",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.078798283757321",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.72486599105683"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7378474728906705",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.305072773350545"
         }
       ],
       "total_children_count": 39,
@@ -457,63 +473,33 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1618.jsonld#43436"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1618.jsonld#60760"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1618.jsonld#65201"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1618.jsonld#86223"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1618.jsonld#86856"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "de",
       "triples": [],
-      "children": {
-        "rzeel": [
-          "1618",
-          "19856"
-        ],
-        "n": [
-          "1618",
-          "86451"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1618.jsonld#19856",
+              "@type": "tree:Node",
+              "token_string": "rzeel"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1618.jsonld#86451",
+              "@type": "tree:Node",
+              "token_string": "n"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment1618.jsonld#43435",
         "@type": "tree:Node"
@@ -521,78 +507,78 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Londerzeel",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8329591085192747",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.81024878466008"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.8416940306241054",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.52860405645392"
         },
         {
           "http://example.com/terms#name": "Londerzeelseweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.594049080412378",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.92012774249532"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2291346789690585",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.333559008791504"
         },
         {
           "http://example.com/terms#name": "Londenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.522828291359285",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.7368928048922"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.421222088089556",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.01736889368449"
         },
         {
           "http://example.com/terms#name": "Londenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.011197680115555",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.84390045274607"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.930416090239112",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.873065062320286"
         },
         {
           "http://example.com/terms#name": "Londenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.011197680115555",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.84390045274607"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.930416090239112",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.873065062320286"
         },
         {
           "http://example.com/terms#name": "Londenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.011197680115555",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.84390045274607"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.930416090239112",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.873065062320286"
         },
         {
           "http://example.com/terms#name": "Londenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.641307202502792",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.383024097417525"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.883004560681882",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.17437480236782"
         },
         {
           "http://example.com/terms#name": "Londenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.641307202502792",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.383024097417525"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.883004560681882",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.17437480236782"
         },
         {
           "http://example.com/terms#name": "Londenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.940001232561341",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.1114682042037"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.165539643653627",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.90454379015996"
         },
         {
           "http://example.com/terms#name": "Londenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3726826194135033",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.0990249545247"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3481191502250693",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.39971719292673"
         },
         {
           "http://example.com/terms#name": "Londenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.874843769947241",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.97791095975588"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6461075076622045",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.18699738405436"
         },
         {
           "http://example.com/terms#name": "Londenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.266677771223934",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.13769171207927"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.033598991973996",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.10175039578542"
         },
         {
           "http://example.com/terms#name": "Londerzeelsesteenweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9724842543863277",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.20746738683549"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6745161376675233",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.61688488253748"
         },
         {
           "http://example.com/terms#name": "Londenbrug",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9435449332415518",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.960852758488755"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.620922249319636",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.99488356755046"
         },
         {
           "http://example.com/terms#name": "Londenplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.680541496834656",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.0973128860547"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.682426048066678",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.188663361068706"
         }
       ],
       "total_children_count": 8,
@@ -645,13 +631,19 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
+      "triples_metadata": []
+    },
+    {
+      "token_string": "g",
+      "triples": [],
+      "children": [
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
             {
-              "@id": "/streets/fragment1618.jsonld#19856"
+              "@id": "/streets/fragment1618.jsonld#60762",
+              "@type": "tree:Node",
+              "token_string": "pontstraat"
             }
           ]
         },
@@ -659,57 +651,93 @@
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
             {
-              "@id": "/streets/fragment1618.jsonld#86451"
+              "@id": "/streets/fragment1618.jsonld#89393",
+              "@type": "tree:Node",
+              "token_string": "champ"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1618.jsonld#97254",
+              "@type": "tree:Node",
+              "token_string": "-boutsteenweg"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1618.jsonld#99333",
+              "@type": "tree:Node",
+              "token_string": "astraat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1618.jsonld#129771",
+              "@type": "tree:Node",
+              "token_string": " "
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1618.jsonld#150358",
+              "@type": "tree:Node",
+              "token_string": "broux"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1618.jsonld#156084",
+              "@type": "tree:Node",
+              "token_string": "villy"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1618.jsonld#157087",
+              "@type": "tree:Node",
+              "token_string": "s Trixhes"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1618.jsonld#157088",
+              "@type": "tree:Node",
+              "token_string": "ue"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1618.jsonld#160219",
+              "@type": "tree:Node",
+              "token_string": "lier"
             }
           ]
         }
-      ]
-    },
-    {
-      "token_string": "g",
-      "triples": [],
-      "children": {
-        "pontstraat": [
-          "1618",
-          "60762"
-        ],
-        "champ": [
-          "1618",
-          "89393"
-        ],
-        "-boutsteenweg": [
-          "1618",
-          "97254"
-        ],
-        "astraat": [
-          "1618",
-          "99333"
-        ],
-        " ": [
-          "1618",
-          "129771"
-        ],
-        "broux": [
-          "1618",
-          "150358"
-        ],
-        "villy": [
-          "1618",
-          "156084"
-        ],
-        "s Trixhes": [
-          "1618",
-          "157087"
-        ],
-        "ue": [
-          "1618",
-          "157088"
-        ],
-        "lier": [
-          "1618",
-          "160219"
-        ]
-      },
+      ],
       "parent_node": {
         "@id": "/streets/fragment1618.jsonld#43435",
         "@type": "tree:Node"
@@ -717,93 +745,93 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Longchamplaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.762388918154835",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.19048142020642"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2298821642592945",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.93584037183714"
         },
         {
           "http://example.com/terms#name": "Longchamppad",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5957988320031973",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.399164533999645"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.751109021007132",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.451351217196404"
         },
         {
           "http://example.com/terms#name": "Long-boutsteenweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6368469353805835",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.23653578326051"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9959631999527625",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.724348607760284"
         },
         {
           "http://example.com/terms#name": "Longastraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0856494934362297",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.58734573948887"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7277144999615217",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.03908409390346"
         },
         {
           "http://example.com/terms#name": "Longastraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.283022205682838",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.10306762393776"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1322806731027035",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.89259902482647"
         },
         {
           "http://example.com/terms#name": "Longastraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.283022205682838",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.10306762393776"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1322806731027035",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.89259902482647"
         },
         {
           "http://example.com/terms#name": "Longastraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.283022205682838",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.10306762393776"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1322806731027035",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.89259902482647"
         },
         {
           "http://example.com/terms#name": "Long Chemin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.140770711519746",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.17575441291141"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.971237274012425",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.28727007795158"
         },
         {
           "http://example.com/terms#name": "Long Pont",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.078798283757321",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.72486599105683"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7378474728906705",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.305072773350545"
         },
         {
           "http://example.com/terms#name": "Long Thier",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.701172259043741",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.91846972917924"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.607631762168203",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.39297728190149"
         },
         {
           "http://example.com/terms#name": "Longchamps",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.10785440677373",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.76168132181554"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6347395788305565",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.58186532067184"
         },
         {
           "http://example.com/terms#name": "Longchamps",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.26306644826097",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.76385376732408"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4719351266975083",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.037440378761026"
         },
         {
           "http://example.com/terms#name": "Longchamps",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.26306644826097",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.76385376732408"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4719351266975083",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.037440378761026"
         },
         {
           "http://example.com/terms#name": "Longchamps",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.26306644826097",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.76385376732408"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4719351266975083",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.037440378761026"
         },
         {
           "http://example.com/terms#name": "Longchamps",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.26306644826097",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.76385376732408"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4719351266975083",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.037440378761026"
         },
         {
           "http://example.com/terms#name": "Longchamps",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5534234675801213",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.107358233270645"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8547228215808986",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.15550913063598"
         },
         {
           "http://example.com/terms#name": "Longbroux",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5278787702421335",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.31183996222963"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.333746029298489",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.13468504542926"
         },
         {
           "http://example.com/terms#name": "Longlier",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3370928620113873",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.85486243981917"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0342056947293514",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.95958831845291"
         }
       ],
       "total_children_count": 24,
@@ -879,100 +907,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1618.jsonld#60762"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1618.jsonld#89393"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1618.jsonld#97254"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1618.jsonld#99333"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1618.jsonld#129771"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1618.jsonld#150358"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1618.jsonld#156084"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1618.jsonld#157087"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1618.jsonld#157088"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1618.jsonld#160219"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "pontstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Longpontstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1099452830532393",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.45633283544759"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1331104321197745",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.00141134413342"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1618.jsonld#60760",
         "@type": "tree:Node"
@@ -980,8 +925,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Longpontstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1099452830532393",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.45633283544759"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1331104321197745",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.00141134413342"
         }
       ],
       "total_children_count": 0,
@@ -997,22 +942,33 @@
       ],
       "triples_metadata": [
         "Longpontstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "c",
       "triples": [],
-      "children": {
-        "instraat": [
-          "1618",
-          "65202"
-        ],
-        "ke": [
-          "1618",
-          "65203"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1618.jsonld#65202",
+              "@type": "tree:Node",
+              "token_string": "instraat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1618.jsonld#65203",
+              "@type": "tree:Node",
+              "token_string": "ke"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment1618.jsonld#43435",
         "@type": "tree:Node"
@@ -1020,33 +976,33 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Loncinstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.377272882696568",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.85507313104"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1241966010869318",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.54422607434131"
         },
         {
           "http://example.com/terms#name": "Loncinstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.140390033933191",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.936327176113146"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4225343103458927",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.34424983297452"
         },
         {
           "http://example.com/terms#name": "Loncinstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.140390033933191",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.936327176113146"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4225343103458927",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.34424983297452"
         },
         {
           "http://example.com/terms#name": "Loncinstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.140390033933191",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.936327176113146"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4225343103458927",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.34424983297452"
         },
         {
           "http://example.com/terms#name": "Loncinstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.140390033933191",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.936327176113146"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4225343103458927",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.34424983297452"
         },
         {
           "http://example.com/terms#name": "Loncke",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9493369093180877",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.365353014848075"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.347111615530654",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.490608130332916"
         }
       ],
       "total_children_count": 2,
@@ -1070,56 +1026,37 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1618.jsonld#65202"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1618.jsonld#65203"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "instraat",
       "triples": [
         {
           "http://example.com/terms#name": "Loncinstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.377272882696568",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.85507313104"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1241966010869318",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.54422607434131"
         },
         {
           "http://example.com/terms#name": "Loncinstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.140390033933191",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.936327176113146"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4225343103458927",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.34424983297452"
         },
         {
           "http://example.com/terms#name": "Loncinstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.140390033933191",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.936327176113146"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4225343103458927",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.34424983297452"
         },
         {
           "http://example.com/terms#name": "Loncinstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.140390033933191",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.936327176113146"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4225343103458927",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.34424983297452"
         },
         {
           "http://example.com/terms#name": "Loncinstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.140390033933191",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.936327176113146"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4225343103458927",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.34424983297452"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1618.jsonld#65201",
         "@type": "tree:Node"
@@ -1127,28 +1064,28 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Loncinstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.377272882696568",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.85507313104"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1241966010869318",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.54422607434131"
         },
         {
           "http://example.com/terms#name": "Loncinstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.140390033933191",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.936327176113146"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4225343103458927",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.34424983297452"
         },
         {
           "http://example.com/terms#name": "Loncinstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.140390033933191",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.936327176113146"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4225343103458927",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.34424983297452"
         },
         {
           "http://example.com/terms#name": "Loncinstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.140390033933191",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.936327176113146"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4225343103458927",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.34424983297452"
         },
         {
           "http://example.com/terms#name": "Loncinstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.140390033933191",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.936327176113146"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4225343103458927",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.34424983297452"
         }
       ],
       "total_children_count": 0,
@@ -1172,19 +1109,17 @@
         "Loncinstraat",
         "Loncinstraat",
         "Loncinstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "ke",
       "triples": [
         {
           "http://example.com/terms#name": "Loncke",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9493369093180877",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.365353014848075"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.347111615530654",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.490608130332916"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1618.jsonld#65201",
         "@type": "tree:Node"
@@ -1192,8 +1127,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Loncke",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9493369093180877",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.365353014848075"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.347111615530654",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.490608130332916"
         }
       ],
       "total_children_count": 0,
@@ -1209,19 +1144,17 @@
       ],
       "triples_metadata": [
         "Loncke"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "kaplein",
       "triples": [
         {
           "http://example.com/terms#name": "Lonkaplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7111712957841494",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.58431510614956"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4449701653997313",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.51897721696573"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1618.jsonld#43435",
         "@type": "tree:Node"
@@ -1229,8 +1162,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Lonkaplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7111712957841494",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.58431510614956"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4449701653997313",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.51897721696573"
         }
       ],
       "total_children_count": 0,
@@ -1246,26 +1179,43 @@
       ],
       "triples_metadata": [
         "Lonkaplein"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "n",
       "triples": [],
-      "children": {
-        "straat": [
-          "1618",
-          "86452"
-        ],
-        "brug": [
-          "1618",
-          "86453"
-        ],
-        "plein": [
-          "1618",
-          "91435"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1618.jsonld#86452",
+              "@type": "tree:Node",
+              "token_string": "straat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1618.jsonld#86453",
+              "@type": "tree:Node",
+              "token_string": "brug"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1618.jsonld#91435",
+              "@type": "tree:Node",
+              "token_string": "plein"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment1618.jsonld#43436",
         "@type": "tree:Node"
@@ -1273,63 +1223,63 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Londenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.522828291359285",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.7368928048922"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.421222088089556",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.01736889368449"
         },
         {
           "http://example.com/terms#name": "Londenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.011197680115555",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.84390045274607"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.930416090239112",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.873065062320286"
         },
         {
           "http://example.com/terms#name": "Londenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.011197680115555",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.84390045274607"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.930416090239112",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.873065062320286"
         },
         {
           "http://example.com/terms#name": "Londenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.011197680115555",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.84390045274607"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.930416090239112",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.873065062320286"
         },
         {
           "http://example.com/terms#name": "Londenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.641307202502792",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.383024097417525"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.883004560681882",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.17437480236782"
         },
         {
           "http://example.com/terms#name": "Londenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.641307202502792",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.383024097417525"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.883004560681882",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.17437480236782"
         },
         {
           "http://example.com/terms#name": "Londenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.940001232561341",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.1114682042037"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.165539643653627",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.90454379015996"
         },
         {
           "http://example.com/terms#name": "Londenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3726826194135033",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.0990249545247"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3481191502250693",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.39971719292673"
         },
         {
           "http://example.com/terms#name": "Londenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.874843769947241",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.97791095975588"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6461075076622045",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.18699738405436"
         },
         {
           "http://example.com/terms#name": "Londenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.266677771223934",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.13769171207927"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.033598991973996",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.10175039578542"
         },
         {
           "http://example.com/terms#name": "Londenbrug",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9435449332415518",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.960852758488755"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.620922249319636",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.99488356755046"
         },
         {
           "http://example.com/terms#name": "Londenplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.680541496834656",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.0973128860547"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.682426048066678",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.188663361068706"
         }
       ],
       "total_children_count": 3,
@@ -1364,89 +1314,62 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1618.jsonld#86452"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1618.jsonld#86453"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1618.jsonld#91435"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "straat",
       "triples": [
         {
           "http://example.com/terms#name": "Londenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.522828291359285",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.7368928048922"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.421222088089556",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.01736889368449"
         },
         {
           "http://example.com/terms#name": "Londenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.011197680115555",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.84390045274607"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.930416090239112",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.873065062320286"
         },
         {
           "http://example.com/terms#name": "Londenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.011197680115555",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.84390045274607"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.930416090239112",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.873065062320286"
         },
         {
           "http://example.com/terms#name": "Londenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.011197680115555",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.84390045274607"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.930416090239112",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.873065062320286"
         },
         {
           "http://example.com/terms#name": "Londenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.641307202502792",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.383024097417525"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.883004560681882",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.17437480236782"
         },
         {
           "http://example.com/terms#name": "Londenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.641307202502792",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.383024097417525"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.883004560681882",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.17437480236782"
         },
         {
           "http://example.com/terms#name": "Londenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.940001232561341",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.1114682042037"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.165539643653627",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.90454379015996"
         },
         {
           "http://example.com/terms#name": "Londenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3726826194135033",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.0990249545247"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3481191502250693",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.39971719292673"
         },
         {
           "http://example.com/terms#name": "Londenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.874843769947241",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.97791095975588"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6461075076622045",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.18699738405436"
         },
         {
           "http://example.com/terms#name": "Londenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.266677771223934",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.13769171207927"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.033598991973996",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.10175039578542"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1618.jsonld#86451",
         "@type": "tree:Node"
@@ -1454,53 +1377,53 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Londenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.522828291359285",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.7368928048922"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.421222088089556",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.01736889368449"
         },
         {
           "http://example.com/terms#name": "Londenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.011197680115555",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.84390045274607"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.930416090239112",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.873065062320286"
         },
         {
           "http://example.com/terms#name": "Londenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.011197680115555",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.84390045274607"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.930416090239112",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.873065062320286"
         },
         {
           "http://example.com/terms#name": "Londenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.011197680115555",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.84390045274607"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.930416090239112",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.873065062320286"
         },
         {
           "http://example.com/terms#name": "Londenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.641307202502792",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.383024097417525"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.883004560681882",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.17437480236782"
         },
         {
           "http://example.com/terms#name": "Londenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.641307202502792",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.383024097417525"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.883004560681882",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.17437480236782"
         },
         {
           "http://example.com/terms#name": "Londenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.940001232561341",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.1114682042037"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.165539643653627",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.90454379015996"
         },
         {
           "http://example.com/terms#name": "Londenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3726826194135033",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.0990249545247"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3481191502250693",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.39971719292673"
         },
         {
           "http://example.com/terms#name": "Londenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.874843769947241",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.97791095975588"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.6461075076622045",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.18699738405436"
         },
         {
           "http://example.com/terms#name": "Londenstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.266677771223934",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.13769171207927"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.033598991973996",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.10175039578542"
         }
       ],
       "total_children_count": 0,
@@ -1534,19 +1457,17 @@
         "Londenstraat",
         "Londenstraat",
         "Londenstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "brug",
       "triples": [
         {
           "http://example.com/terms#name": "Londenbrug",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9435449332415518",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.960852758488755"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.620922249319636",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.99488356755046"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1618.jsonld#86451",
         "@type": "tree:Node"
@@ -1554,8 +1475,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Londenbrug",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9435449332415518",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.960852758488755"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.620922249319636",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.99488356755046"
         }
       ],
       "total_children_count": 0,
@@ -1571,19 +1492,17 @@
       ],
       "triples_metadata": [
         "Londenbrug"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "venweg",
       "triples": [
         {
           "http://example.com/terms#name": "Lonvenweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4102344564334444",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.0060390637927"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.521612871647176",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.68088467197732"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1618.jsonld#43435",
         "@type": "tree:Node"
@@ -1591,8 +1510,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Lonvenweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4102344564334444",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.0060390637927"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.521612871647176",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.68088467197732"
         }
       ],
       "total_children_count": 0,
@@ -1608,26 +1527,43 @@
       ],
       "triples_metadata": [
         "Lonvenweg"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "champ",
       "triples": [],
-      "children": {
-        "laan": [
-          "1618",
-          "89394"
-        ],
-        "pad": [
-          "1618",
-          "89395"
-        ],
-        "s": [
-          "1618",
-          "142168"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1618.jsonld#89394",
+              "@type": "tree:Node",
+              "token_string": "laan"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1618.jsonld#89395",
+              "@type": "tree:Node",
+              "token_string": "pad"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1618.jsonld#142168",
+              "@type": "tree:Node",
+              "token_string": "s"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment1618.jsonld#60760",
         "@type": "tree:Node"
@@ -1635,43 +1571,43 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Longchamplaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.762388918154835",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.19048142020642"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2298821642592945",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.93584037183714"
         },
         {
           "http://example.com/terms#name": "Longchamppad",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5957988320031973",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.399164533999645"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.751109021007132",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.451351217196404"
         },
         {
           "http://example.com/terms#name": "Longchamps",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.10785440677373",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.76168132181554"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6347395788305565",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.58186532067184"
         },
         {
           "http://example.com/terms#name": "Longchamps",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.26306644826097",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.76385376732408"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4719351266975083",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.037440378761026"
         },
         {
           "http://example.com/terms#name": "Longchamps",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.26306644826097",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.76385376732408"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4719351266975083",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.037440378761026"
         },
         {
           "http://example.com/terms#name": "Longchamps",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.26306644826097",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.76385376732408"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4719351266975083",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.037440378761026"
         },
         {
           "http://example.com/terms#name": "Longchamps",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.26306644826097",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.76385376732408"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4719351266975083",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.037440378761026"
         },
         {
           "http://example.com/terms#name": "Longchamps",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5534234675801213",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.107358233270645"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8547228215808986",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.15550913063598"
         }
       ],
       "total_children_count": 3,
@@ -1702,44 +1638,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1618.jsonld#89394"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1618.jsonld#89395"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1618.jsonld#142168"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "laan",
       "triples": [
         {
           "http://example.com/terms#name": "Longchamplaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.762388918154835",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.19048142020642"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2298821642592945",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.93584037183714"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1618.jsonld#89393",
         "@type": "tree:Node"
@@ -1747,8 +1656,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Longchamplaan",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.762388918154835",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.19048142020642"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.2298821642592945",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.93584037183714"
         }
       ],
       "total_children_count": 0,
@@ -1764,19 +1673,17 @@
       ],
       "triples_metadata": [
         "Longchamplaan"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "pad",
       "triples": [
         {
           "http://example.com/terms#name": "Longchamppad",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5957988320031973",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.399164533999645"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.751109021007132",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.451351217196404"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1618.jsonld#89393",
         "@type": "tree:Node"
@@ -1784,8 +1691,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Longchamppad",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5957988320031973",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.399164533999645"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.751109021007132",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.451351217196404"
         }
       ],
       "total_children_count": 0,
@@ -1801,19 +1708,17 @@
       ],
       "triples_metadata": [
         "Longchamppad"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "plein",
       "triples": [
         {
           "http://example.com/terms#name": "Londenplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.680541496834656",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.0973128860547"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.682426048066678",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.188663361068706"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1618.jsonld#86451",
         "@type": "tree:Node"
@@ -1821,8 +1726,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Londenplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.680541496834656",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.0973128860547"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.682426048066678",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.188663361068706"
         }
       ],
       "total_children_count": 0,
@@ -1838,19 +1743,17 @@
       ],
       "triples_metadata": [
         "Londenplein"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "-boutsteenweg",
       "triples": [
         {
           "http://example.com/terms#name": "Long-boutsteenweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6368469353805835",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.23653578326051"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9959631999527625",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.724348607760284"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1618.jsonld#60760",
         "@type": "tree:Node"
@@ -1858,8 +1761,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Long-boutsteenweg",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6368469353805835",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.23653578326051"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9959631999527625",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.724348607760284"
         }
       ],
       "total_children_count": 0,
@@ -1875,34 +1778,32 @@
       ],
       "triples_metadata": [
         "Long-boutsteenweg"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "astraat",
       "triples": [
         {
           "http://example.com/terms#name": "Longastraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0856494934362297",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.58734573948887"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7277144999615217",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.03908409390346"
         },
         {
           "http://example.com/terms#name": "Longastraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.283022205682838",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.10306762393776"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1322806731027035",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.89259902482647"
         },
         {
           "http://example.com/terms#name": "Longastraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.283022205682838",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.10306762393776"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1322806731027035",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.89259902482647"
         },
         {
           "http://example.com/terms#name": "Longastraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.283022205682838",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.10306762393776"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1322806731027035",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.89259902482647"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1618.jsonld#60760",
         "@type": "tree:Node"
@@ -1910,23 +1811,23 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Longastraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0856494934362297",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.58734573948887"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.7277144999615217",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.03908409390346"
         },
         {
           "http://example.com/terms#name": "Longastraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.283022205682838",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.10306762393776"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1322806731027035",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.89259902482647"
         },
         {
           "http://example.com/terms#name": "Longastraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.283022205682838",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.10306762393776"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1322806731027035",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.89259902482647"
         },
         {
           "http://example.com/terms#name": "Longastraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.283022205682838",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.10306762393776"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1322806731027035",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.89259902482647"
         }
       ],
       "total_children_count": 0,
@@ -1948,26 +1849,43 @@
         "Longastraat",
         "Longastraat",
         "Longastraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": " ",
       "triples": [],
-      "children": {
-        "Chemin": [
-          "1618",
-          "129772"
-        ],
-        "Pont": [
-          "1618",
-          "129773"
-        ],
-        "Thier": [
-          "1618",
-          "141171"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1618.jsonld#129772",
+              "@type": "tree:Node",
+              "token_string": "Chemin"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1618.jsonld#129773",
+              "@type": "tree:Node",
+              "token_string": "Pont"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1618.jsonld#141171",
+              "@type": "tree:Node",
+              "token_string": "Thier"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment1618.jsonld#60760",
         "@type": "tree:Node"
@@ -1975,18 +1893,18 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Long Chemin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.140770711519746",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.17575441291141"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.971237274012425",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.28727007795158"
         },
         {
           "http://example.com/terms#name": "Long Pont",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.078798283757321",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.72486599105683"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7378474728906705",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.305072773350545"
         },
         {
           "http://example.com/terms#name": "Long Thier",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.701172259043741",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.91846972917924"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.607631762168203",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.39297728190149"
         }
       ],
       "total_children_count": 3,
@@ -2012,44 +1930,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1618.jsonld#129772"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1618.jsonld#129773"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1618.jsonld#141171"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "Chemin",
       "triples": [
         {
           "http://example.com/terms#name": "Long Chemin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.140770711519746",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.17575441291141"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.971237274012425",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.28727007795158"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1618.jsonld#129771",
         "@type": "tree:Node"
@@ -2057,8 +1948,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Long Chemin",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.140770711519746",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.17575441291141"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.971237274012425",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.28727007795158"
         }
       ],
       "total_children_count": 0,
@@ -2074,19 +1965,17 @@
       ],
       "triples_metadata": [
         "Long Chemin"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "Pont",
       "triples": [
         {
           "http://example.com/terms#name": "Long Pont",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.078798283757321",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.72486599105683"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7378474728906705",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.305072773350545"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1618.jsonld#129771",
         "@type": "tree:Node"
@@ -2094,8 +1983,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Long Pont",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.078798283757321",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.72486599105683"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.7378474728906705",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.305072773350545"
         }
       ],
       "total_children_count": 0,
@@ -2111,19 +2000,17 @@
       ],
       "triples_metadata": [
         "Long Pont"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "Borne",
       "triples": [
         {
           "http://example.com/terms#name": "Longue Borne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1049707051413367",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.96932628789913"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1147582553031357",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.15019157098596"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1618.jsonld#157089",
         "@type": "tree:Node"
@@ -2131,8 +2018,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Longue Borne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1049707051413367",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.96932628789913"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1147582553031357",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.15019157098596"
         }
       ],
       "total_children_count": 0,
@@ -2148,19 +2035,17 @@
       ],
       "triples_metadata": [
         "Longue Borne"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "Thier",
       "triples": [
         {
           "http://example.com/terms#name": "Long Thier",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.701172259043741",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.91846972917924"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.607631762168203",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.39297728190149"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1618.jsonld#129771",
         "@type": "tree:Node"
@@ -2168,8 +2053,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Long Thier",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.701172259043741",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.91846972917924"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.607631762168203",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.39297728190149"
         }
       ],
       "total_children_count": 0,
@@ -2185,44 +2070,42 @@
       ],
       "triples_metadata": [
         "Long Thier"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "s",
       "triples": [
         {
           "http://example.com/terms#name": "Longchamps",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.10785440677373",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.76168132181554"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6347395788305565",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.58186532067184"
         },
         {
           "http://example.com/terms#name": "Longchamps",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.26306644826097",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.76385376732408"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4719351266975083",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.037440378761026"
         },
         {
           "http://example.com/terms#name": "Longchamps",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.26306644826097",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.76385376732408"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4719351266975083",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.037440378761026"
         },
         {
           "http://example.com/terms#name": "Longchamps",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.26306644826097",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.76385376732408"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4719351266975083",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.037440378761026"
         },
         {
           "http://example.com/terms#name": "Longchamps",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.26306644826097",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.76385376732408"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4719351266975083",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.037440378761026"
         },
         {
           "http://example.com/terms#name": "Longchamps",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5534234675801213",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.107358233270645"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8547228215808986",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.15550913063598"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1618.jsonld#89393",
         "@type": "tree:Node"
@@ -2230,33 +2113,33 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Longchamps",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.10785440677373",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.76168132181554"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.6347395788305565",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.58186532067184"
         },
         {
           "http://example.com/terms#name": "Longchamps",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.26306644826097",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.76385376732408"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4719351266975083",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.037440378761026"
         },
         {
           "http://example.com/terms#name": "Longchamps",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.26306644826097",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.76385376732408"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4719351266975083",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.037440378761026"
         },
         {
           "http://example.com/terms#name": "Longchamps",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.26306644826097",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.76385376732408"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4719351266975083",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.037440378761026"
         },
         {
           "http://example.com/terms#name": "Longchamps",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.26306644826097",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.76385376732408"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.4719351266975083",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.037440378761026"
         },
         {
           "http://example.com/terms#name": "Longchamps",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.5534234675801213",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.107358233270645"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.8547228215808986",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.15550913063598"
         }
       ],
       "total_children_count": 0,
@@ -2282,19 +2165,17 @@
         "Longchamps",
         "Longchamps",
         "Longchamps"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "Voie",
       "triples": [
         {
           "http://example.com/terms#name": "Longue Voie",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1499472164905904",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.856141309987606"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.808213777278782",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.83125793109882"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1618.jsonld#157089",
         "@type": "tree:Node"
@@ -2302,8 +2183,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Longue Voie",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1499472164905904",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.856141309987606"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.808213777278782",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.83125793109882"
         }
       ],
       "total_children_count": 0,
@@ -2319,19 +2200,17 @@
       ],
       "triples_metadata": [
         "Longue Voie"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "broux",
       "triples": [
         {
           "http://example.com/terms#name": "Longbroux",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5278787702421335",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.31183996222963"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.333746029298489",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.13468504542926"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1618.jsonld#60760",
         "@type": "tree:Node"
@@ -2339,8 +2218,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Longbroux",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5278787702421335",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.31183996222963"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.333746029298489",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.13468504542926"
         }
       ],
       "total_children_count": 0,
@@ -2356,19 +2235,17 @@
       ],
       "triples_metadata": [
         "Longbroux"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "Haie",
       "triples": [
         {
           "http://example.com/terms#name": "Longue Haie",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.65596760624762",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.74269563258876"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2803393431983627",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.75034382381723"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1618.jsonld#157089",
         "@type": "tree:Node"
@@ -2376,8 +2253,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Longue Haie",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.65596760624762",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.74269563258876"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2803393431983627",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.75034382381723"
         }
       ],
       "total_children_count": 0,
@@ -2393,19 +2270,17 @@
       ],
       "triples_metadata": [
         "Longue Haie"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "villy",
       "triples": [
         {
           "http://example.com/terms#name": "Longvilly",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1941882090634066",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.995043320830085"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.101879009595201",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.972882025000814"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1618.jsonld#60760",
         "@type": "tree:Node"
@@ -2413,8 +2288,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Longvilly",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1941882090634066",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.995043320830085"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.101879009595201",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.972882025000814"
         }
       ],
       "total_children_count": 0,
@@ -2430,19 +2305,17 @@
       ],
       "triples_metadata": [
         "Longvilly"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "s Trixhes",
       "triples": [
         {
           "http://example.com/terms#name": "Longs Trixhes",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2516576836939763",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.38354264524291"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.440972748071439",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.18641558963678"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1618.jsonld#60760",
         "@type": "tree:Node"
@@ -2450,8 +2323,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Longs Trixhes",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2516576836939763",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.38354264524291"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.440972748071439",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.18641558963678"
         }
       ],
       "total_children_count": 0,
@@ -2467,22 +2340,33 @@
       ],
       "triples_metadata": [
         "Longs Trixhes"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "ue",
       "triples": [],
-      "children": {
-        " ": [
-          "1618",
-          "157089"
-        ],
-        "ville": [
-          "1618",
-          "157090"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1618.jsonld#157089",
+              "@type": "tree:Node",
+              "token_string": " "
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1618.jsonld#157090",
+              "@type": "tree:Node",
+              "token_string": "ville"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment1618.jsonld#60760",
         "@type": "tree:Node"
@@ -2490,33 +2374,33 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Longue Rue",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.185215314439428",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.15655717341663"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.934861936973427",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.01219902600495"
         },
         {
           "http://example.com/terms#name": "Longue Borne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1049707051413367",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.96932628789913"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1147582553031357",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.15019157098596"
         },
         {
           "http://example.com/terms#name": "Longue Voie",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1499472164905904",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.856141309987606"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.808213777278782",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.83125793109882"
         },
         {
           "http://example.com/terms#name": "Longue Haie",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.65596760624762",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.74269563258876"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2803393431983627",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.75034382381723"
         },
         {
           "http://example.com/terms#name": "Longueville",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.21847106135955",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.03935784032745"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.104870897721681",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.89363791366828"
         },
         {
           "http://example.com/terms#name": "Longue Roye",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.266089153377728",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.17912715151254"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5149313947086274",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.212004455213105"
         }
       ],
       "total_children_count": 8,
@@ -2560,13 +2444,19 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
+      "triples_metadata": []
+    },
+    {
+      "token_string": " ",
+      "triples": [],
+      "children": [
         {
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
             {
-              "@id": "/streets/fragment1618.jsonld#157089"
+              "@id": "/streets/fragment1618.jsonld#129776",
+              "@type": "tree:Node",
+              "token_string": "Borne"
             }
           ]
         },
@@ -2574,33 +2464,33 @@
           "@type": "tree:StringCompletesRelation",
           "tree:child": [
             {
-              "@id": "/streets/fragment1618.jsonld#157090"
+              "@id": "/streets/fragment1618.jsonld#147554",
+              "@type": "tree:Node",
+              "token_string": "Voie"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1618.jsonld#153916",
+              "@type": "tree:Node",
+              "token_string": "Haie"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1618.jsonld#165682",
+              "@type": "tree:Node",
+              "token_string": "R"
             }
           ]
         }
-      ]
-    },
-    {
-      "token_string": " ",
-      "triples": [],
-      "children": {
-        "Borne": [
-          "1618",
-          "129776"
-        ],
-        "Voie": [
-          "1618",
-          "147554"
-        ],
-        "Haie": [
-          "1618",
-          "153916"
-        ],
-        "R": [
-          "1618",
-          "165682"
-        ]
-      },
+      ],
       "parent_node": {
         "@id": "/streets/fragment1618.jsonld#157088",
         "@type": "tree:Node"
@@ -2608,28 +2498,28 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Longue Rue",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.185215314439428",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.15655717341663"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.934861936973427",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.01219902600495"
         },
         {
           "http://example.com/terms#name": "Longue Borne",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1049707051413367",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.96932628789913"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.1147582553031357",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.15019157098596"
         },
         {
           "http://example.com/terms#name": "Longue Voie",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1499472164905904",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.856141309987606"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.808213777278782",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.83125793109882"
         },
         {
           "http://example.com/terms#name": "Longue Haie",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.65596760624762",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.74269563258876"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.2803393431983627",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.75034382381723"
         },
         {
           "http://example.com/terms#name": "Longue Roye",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.266089153377728",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.17912715151254"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5149313947086274",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.212004455213105"
         }
       ],
       "total_children_count": 6,
@@ -2667,52 +2557,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1618.jsonld#129776"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1618.jsonld#147554"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1618.jsonld#153916"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1618.jsonld#165682"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "ville",
       "triples": [
         {
           "http://example.com/terms#name": "Longueville",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.21847106135955",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.03935784032745"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.104870897721681",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.89363791366828"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1618.jsonld#157088",
         "@type": "tree:Node"
@@ -2720,8 +2575,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Longueville",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.21847106135955",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.03935784032745"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.104870897721681",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.89363791366828"
         }
       ],
       "total_children_count": 0,
@@ -2737,19 +2592,17 @@
       ],
       "triples_metadata": [
         "Longueville"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "lier",
       "triples": [
         {
           "http://example.com/terms#name": "Longlier",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3370928620113873",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.85486243981917"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0342056947293514",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.95958831845291"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1618.jsonld#60760",
         "@type": "tree:Node"
@@ -2757,8 +2610,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Longlier",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.3370928620113873",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.85486243981917"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0342056947293514",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.95958831845291"
         }
       ],
       "total_children_count": 0,
@@ -2774,22 +2627,33 @@
       ],
       "triples_metadata": [
         "Longlier"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "R",
       "triples": [],
-      "children": {
-        "ue": [
-          "1618",
-          "165683"
-        ],
-        "oye": [
-          "1618",
-          "165684"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1618.jsonld#165683",
+              "@type": "tree:Node",
+              "token_string": "ue"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1618.jsonld#165684",
+              "@type": "tree:Node",
+              "token_string": "oye"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment1618.jsonld#157089",
         "@type": "tree:Node"
@@ -2797,13 +2661,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Longue Rue",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.185215314439428",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.15655717341663"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.934861936973427",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.01219902600495"
         },
         {
           "http://example.com/terms#name": "Longue Roye",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.266089153377728",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.17912715151254"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5149313947086274",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.212004455213105"
         }
       ],
       "total_children_count": 2,
@@ -2823,36 +2687,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1618.jsonld#165683"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1618.jsonld#165684"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "ue",
       "triples": [
         {
           "http://example.com/terms#name": "Longue Rue",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.185215314439428",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.15655717341663"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.934861936973427",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.01219902600495"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1618.jsonld#165682",
         "@type": "tree:Node"
@@ -2860,8 +2705,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Longue Rue",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.185215314439428",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.15655717341663"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.934861936973427",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.01219902600495"
         }
       ],
       "total_children_count": 0,
@@ -2877,19 +2722,17 @@
       ],
       "triples_metadata": [
         "Longue Rue"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "oye",
       "triples": [
         {
           "http://example.com/terms#name": "Longue Roye",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.266089153377728",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.17912715151254"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5149313947086274",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.212004455213105"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1618.jsonld#165682",
         "@type": "tree:Node"
@@ -2897,8 +2740,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Longue Roye",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.266089153377728",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.17912715151254"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.5149313947086274",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.212004455213105"
         }
       ],
       "total_children_count": 0,
@@ -2914,8 +2757,7 @@
       ],
       "triples_metadata": [
         "Longue Roye"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,16 +23,28 @@
     {
       "token_string": "D",
       "triples": [],
-      "children": {
-        "enijsplaats": [
-          "1700",
-          "98573"
-        ],
-        "onatusplein": [
-          "1700",
-          "98574"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1700.jsonld#98573",
+              "@type": "tree:Node",
+              "token_string": "enijsplaats"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment1700.jsonld#98574",
+              "@type": "tree:Node",
+              "token_string": "onatusplein"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment195.jsonld#1752",
         "@type": "tree:Node"
@@ -40,13 +52,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Sint Denijsplaats",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3460287920186325",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.69223490785869"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9941481393613043",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.963387740456554"
         },
         {
           "http://example.com/terms#name": "Sint Donatusplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1562612430842307",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.68645320475504"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4310694598587372",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.77917323292731"
         }
       ],
       "total_children_count": 2,
@@ -66,36 +78,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1700.jsonld#98573"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment1700.jsonld#98574"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "enijsplaats",
       "triples": [
         {
           "http://example.com/terms#name": "Sint Denijsplaats",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3460287920186325",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.69223490785869"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9941481393613043",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.963387740456554"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1700.jsonld#98572",
         "@type": "tree:Node"
@@ -103,8 +96,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Sint Denijsplaats",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.3460287920186325",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.69223490785869"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9941481393613043",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.963387740456554"
         }
       ],
       "total_children_count": 0,
@@ -120,19 +113,17 @@
       ],
       "triples_metadata": [
         "Sint Denijsplaats"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "onatusplein",
       "triples": [
         {
           "http://example.com/terms#name": "Sint Donatusplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1562612430842307",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.68645320475504"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4310694598587372",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.77917323292731"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment1700.jsonld#98572",
         "@type": "tree:Node"
@@ -140,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Sint Donatusplein",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1562612430842307",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.68645320475504"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.4310694598587372",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.77917323292731"
         }
       ],
       "total_children_count": 0,
@@ -157,8 +148,7 @@
       ],
       "triples_metadata": [
         "Sint Donatusplein"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

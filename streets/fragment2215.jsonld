@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,16 +23,28 @@
     {
       "token_string": "j",
       "triples": [],
-      "children": {
-        "ouwekapelstraat": [
-          "2215",
-          "76605"
-        ],
-        "auwel": [
-          "2215",
-          "76606"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2215.jsonld#76605",
+              "@type": "tree:Node",
+              "token_string": "ouwekapelstraat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2215.jsonld#76606",
+              "@type": "tree:Node",
+              "token_string": "auwel"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment14.jsonld#70",
         "@type": "tree:Node"
@@ -40,13 +52,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Sjouwekapelstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9318385136081377",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.87418851633127"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9647642988282197",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.06651690223081"
         },
         {
           "http://example.com/terms#name": "Sjauwel",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0898496040287213",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.11121562674147"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1980803066436505",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.18179153975384"
         }
       ],
       "total_children_count": 2,
@@ -66,36 +78,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2215.jsonld#76605"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2215.jsonld#76606"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "ouwekapelstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Sjouwekapelstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9318385136081377",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.87418851633127"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9647642988282197",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.06651690223081"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2215.jsonld#76604",
         "@type": "tree:Node"
@@ -103,8 +96,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Sjouwekapelstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9318385136081377",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.87418851633127"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.9647642988282197",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.06651690223081"
         }
       ],
       "total_children_count": 0,
@@ -120,19 +113,17 @@
       ],
       "triples_metadata": [
         "Sjouwekapelstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "auwel",
       "triples": [
         {
           "http://example.com/terms#name": "Sjauwel",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0898496040287213",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.11121562674147"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1980803066436505",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.18179153975384"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2215.jsonld#76604",
         "@type": "tree:Node"
@@ -140,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Sjauwel",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0898496040287213",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.11121562674147"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.1980803066436505",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.18179153975384"
         }
       ],
       "total_children_count": 0,
@@ -157,8 +148,7 @@
       ],
       "triples_metadata": [
         "Sjauwel"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

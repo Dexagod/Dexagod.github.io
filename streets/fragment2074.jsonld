@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,16 +23,28 @@
     {
       "token_string": "R",
       "triples": [],
-      "children": {
-        "ochusstraat": [
-          "2074",
-          "60537"
-        ],
-        "emigiusstraat": [
-          "2074",
-          "60538"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2074.jsonld#60537",
+              "@type": "tree:Node",
+              "token_string": "ochusstraat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2074.jsonld#60538",
+              "@type": "tree:Node",
+              "token_string": "emigiusstraat"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment34.jsonld#254",
         "@type": "tree:Node"
@@ -40,13 +52,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "StRochusstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.176898646692007",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.70326860213754"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9441646003962263",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.92942003711724"
         },
         {
           "http://example.com/terms#name": "StRemigiusstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.129189093062364",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.896102668902365"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0923503556500846",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.57502352786838"
         }
       ],
       "total_children_count": 2,
@@ -66,36 +78,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2074.jsonld#60537"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2074.jsonld#60538"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "ochusstraat",
       "triples": [
         {
           "http://example.com/terms#name": "StRochusstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.176898646692007",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.70326860213754"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9441646003962263",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.92942003711724"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2074.jsonld#60536",
         "@type": "tree:Node"
@@ -103,8 +96,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "StRochusstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.176898646692007",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.70326860213754"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.9441646003962263",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.92942003711724"
         }
       ],
       "total_children_count": 0,
@@ -120,19 +113,17 @@
       ],
       "triples_metadata": [
         "StRochusstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "emigiusstraat",
       "triples": [
         {
           "http://example.com/terms#name": "StRemigiusstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.129189093062364",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.896102668902365"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0923503556500846",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.57502352786838"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2074.jsonld#60536",
         "@type": "tree:Node"
@@ -140,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "StRemigiusstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.129189093062364",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.896102668902365"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.0923503556500846",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.57502352786838"
         }
       ],
       "total_children_count": 0,
@@ -157,8 +148,7 @@
       ],
       "triples_metadata": [
         "StRemigiusstraat"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }

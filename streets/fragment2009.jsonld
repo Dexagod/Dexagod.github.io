@@ -10,7 +10,7 @@
     "token_string": "tree:value",
     "triples": "hydra:member",
     "representation": "https://example.org/Triple#Representation",
-    "childlist": "tree:hasChildRelation",
+    "children": "tree:hasChildRelation",
     "parent_node": "tree:parent",
     "suggestions": "hydra:member",
     "score": "hydra:value",
@@ -23,16 +23,28 @@
     {
       "token_string": "F",
       "triples": [],
-      "children": {
-        "ortuinstraat": [
-          "2009",
-          "66239"
-        ],
-        "ranselei": [
-          "2009",
-          "66240"
-        ]
-      },
+      "children": [
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2009.jsonld#66239",
+              "@type": "tree:Node",
+              "token_string": "ortuinstraat"
+            }
+          ]
+        },
+        {
+          "@type": "tree:StringCompletesRelation",
+          "tree:child": [
+            {
+              "@id": "/streets/fragment2009.jsonld#66240",
+              "@type": "tree:Node",
+              "token_string": "ranselei"
+            }
+          ]
+        }
+      ],
       "parent_node": {
         "@id": "/streets/fragment46.jsonld#1102",
         "@type": "tree:Node"
@@ -40,13 +52,13 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Korte Fortuinstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.988346203961986",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.2865709527873"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.555749600025466",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.541639801309636"
         },
         {
           "http://example.com/terms#name": "Korte Franselei",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.405240864710476",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.89903698950114"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0569422146316496",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.50975958808395"
         }
       ],
       "total_children_count": 2,
@@ -66,36 +78,17 @@
           "score": 0
         }
       ],
-      "triples_metadata": [],
-      "childlist": [
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2009.jsonld#66239"
-            }
-          ]
-        },
-        {
-          "@type": "tree:StringCompletesRelation",
-          "tree:child": [
-            {
-              "@id": "/streets/fragment2009.jsonld#66240"
-            }
-          ]
-        }
-      ]
+      "triples_metadata": []
     },
     {
       "token_string": "ortuinstraat",
       "triples": [
         {
           "http://example.com/terms#name": "Korte Fortuinstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.988346203961986",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.2865709527873"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.555749600025466",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.541639801309636"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2009.jsonld#66238",
         "@type": "tree:Node"
@@ -103,8 +96,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Korte Fortuinstraat",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.988346203961986",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "50.2865709527873"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "3.555749600025466",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.541639801309636"
         }
       ],
       "total_children_count": 0,
@@ -120,19 +113,17 @@
       ],
       "triples_metadata": [
         "Korte Fortuinstraat"
-      ],
-      "childlist": []
+      ]
     },
     {
       "token_string": "ranselei",
       "triples": [
         {
           "http://example.com/terms#name": "Korte Franselei",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.405240864710476",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.89903698950114"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0569422146316496",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.50975958808395"
         }
       ],
-      "children": {},
       "parent_node": {
         "@id": "/streets/fragment2009.jsonld#66238",
         "@type": "tree:Node"
@@ -140,8 +131,8 @@
       "suggestions": [
         {
           "http://example.com/terms#name": "Korte Franselei",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.405240864710476",
-          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "52.89903698950114"
+          "http://www.w3.org/2003/01/geo/wgs84_pos#long": "2.0569422146316496",
+          "http://www.w3.org/2003/01/geo/wgs84_pos#lat": "51.50975958808395"
         }
       ],
       "total_children_count": 0,
@@ -157,8 +148,7 @@
       ],
       "triples_metadata": [
         "Korte Franselei"
-      ],
-      "childlist": []
+      ]
     }
   ]
 }
